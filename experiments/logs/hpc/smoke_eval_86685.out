@@ -1,0 +1,35 @@
+node hpc01.local, job 86685, Thu Oct 15 17:04:36 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:228: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11060). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /__w/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+2026-10-15 17:05:06,204 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 17:05:06,204 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 17:05:06,207 - whar-datasets - INFO - Hash is up to date
+2026-10-15 17:05:06,207 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 17:05:06,207 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 17:05:06,208 - whar-datasets - INFO - Hash is up to date
+2026-10-15 17:05:06,208 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 17:05:06,208 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 17:05:06,209 - whar-datasets - INFO - Hash is up to date
+2026-10-15 17:05:06,209 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 17:05:06,209 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 17:05:06,210 - whar-datasets - INFO - Hash is up to date
+2026-10-15 17:05:06,210 - whar-datasets - INFO - Loading windowing
+2026-10-15 17:05:06,219 - whar-datasets - INFO - Selecting activities
+2026-10-15 17:05:06,751 - whar-datasets - INFO - activity_ids from 0 to 26
+2026-10-15 17:05:06,751 - whar-datasets - INFO - subject_ids from 0 to 7
+2026-10-15 17:05:06,763 - whar-datasets - INFO - Running SamplingStep
+2026-10-15 17:05:06,763 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-15 17:05:06,765 - whar-datasets - INFO - Hash is up to date
+2026-10-15 17:05:06,765 - whar-datasets - INFO - Loading samples
+utd_mhad split 0: 1 runs
+2026-10-15 17:05:07,185 - whar-datasets - INFO - Running SamplingStep
+2026-10-15 17:05:07,185 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-15 17:05:07,186 - whar-datasets - INFO - Hash is up to date
+2026-10-15 17:05:07,186 - whar-datasets - INFO - Loading samples
+utd_mhad split 3: 1 runs
+{"model": "s4d", "status": "evaluated", "test_size": 113, "stored_test_size": 113, "macro_f1": 0.9147987365722656, "stored_macro_f1": 0.9147987365722656, "accuracy": 0.9380530714988708, "stored_accuracy": 0.9380530714988708, "params": 27675, "stored_params": 27675, "differs_from_init": true, "checkpoint_fingerprint_matches": true, "train_norm_mean_abs": 8.954100394475972e-07, "train_norm_std_dev": 5.364418029785156e-07}
+{"model": "lawnet_rec", "status": "evaluated", "test_size": 68, "stored_test_size": 68, "macro_f1": 0.7239270806312561, "stored_macro_f1": 0.7239270806312561, "accuracy": 0.9264705777168274, "stored_accuracy": 0.9264705777168274, "params": 27553, "stored_params": 27553, "differs_from_init": true, "checkpoint_fingerprint_matches": true, "train_norm_mean_abs": 2.5591373287170427e-07, "train_norm_std_dev": 7.152557373046875e-07}

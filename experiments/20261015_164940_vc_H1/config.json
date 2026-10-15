@@ -1,0 +1,10 @@
+{
+ "analysis": "H1",
+ "set": "S2",
+ "outcome": "macro_f1",
+ "extra_excluded": [],
+ "bootstrap": 1000,
+ "boot_seed": 20261015,
+ "level": 0.975,
+ "role": "confirmatory test of H1"
+}

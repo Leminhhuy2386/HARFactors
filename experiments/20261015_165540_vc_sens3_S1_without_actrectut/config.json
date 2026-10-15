@@ -1,0 +1,12 @@
+{
+ "analysis": "sens3_S1_without_actrectut",
+ "set": "S1",
+ "outcome": "macro_f1",
+ "extra_excluded": [
+  "actrectut_gestures"
+ ],
+ "bootstrap": 1000,
+ "boot_seed": 20261015,
+ "level": 0.975,
+ "role": "sensitivity 3"
+}

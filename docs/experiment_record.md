@@ -418,3 +418,59 @@ Run notes (no change to models, settings or analysis):
   - partial novelty: Ravì 2017, SELFY, Dong 2021;
   - development-set reuse;
   - Opportunity and WISDM losses.
+
+## HARFactors, 2026-10-15: the confirmatory analysis (stage 04)
+
+Every run below is in `experiments/LEDGER.md`, with START and END lines and a directory `experiments/<run_id>/`.
+No model was trained: every analysis reads the stored runs.
+
+### Configurations run
+
+| run_id | What | Set, outcome | Result |
+|---|---|---|---|
+| 20261015_164309_run_analyses | Exploratory aggregates regenerated with provenance (+ contrasts without daphnet) | S1, quoted table | identical to the imported files except line endings and last-digit floats (G1 rerun 2) |
+| 20261015_164940_vc_H1 | **H1, the confirmatory test** | S2, macro-F1 | R = 8.187 [2.847, 16.905], pi_P = 0.824 [0.640, 0.894]: **success** |
+| 20261015_164941_vc_sens4_S3_macro_f1 | Sensitivity 4 | S3, macro-F1 | R' = 0.208 [0.059, 0.355], pi_P = 0.172 |
+| (see ledger) vc_sens1_S2_balanced_accuracy | Sensitivity 1 | S2, balanced accuracy | R = 4.089 [2.046, 6.031], pi_P = 0.696 |
+| (see ledger) vc_sens2_S1_macro_f1, vc_sens2_S1_balanced_accuracy, vc_sens3_S1_without_actrectut | Sensitivities 2 and 3 | S1 | `results/metrics/confirmatory/` |
+
+All intervals are percentile 97.5 % intervals from 1,000 cluster-bootstrap resamples (seed 20261015). Every resample
+of every analysis converged, and none needed Powell's method.
+
+### Development before the seal
+
+The analysis code was developed on synthetic data (`tests/test_variance_components.py`, 8 tests) and on S1.
+- **Development runs** wrote nothing to `results/`:
+  - an S1 point fit and 16 resamples, stopped because the workers oversubscribed the node's cores;
+  - an S1 point fit and 32 resamples;
+  - two diagnostics, one timing sparse vs dense design matrices and one timing single resamples.
+- **Point estimates seen on S1 during development:**
+  - s2_P 66.2, s2_M 5.9, s2_MD 7.8, s2_MP 6.7, s2_e 17.6, so R = 3.26;
+  - development interval from 32 resamples: [1.52, 4.09].
+- **Seal.** G4 sealed the code at commit 761d6bd (`results/gates/G4_test_seal.json`). Afterwards S2 was read only by
+  the two pre-registered S2 analyses (`results/test_access.log`).
+
+### Deviations and decisions, with reasons
+
+1. **G1 tolerance changed after the first run.** It was "byte for byte" and became "identical modulo line endings,
+   JSON floats to relative 1e-9".
+   - Reason: the files were written on Windows (CRLF), and the PC's and the node's LAPACK differ in the last digits
+     of the OLS coefficients.
+   - All three G1 files are kept. Reported to the user.
+2. **Inclusion rule** (pre-registered) applied:
+   - daphnet is excluded from S1 and motion_sense from S2;
+   - their stored runs disagree on split sizes, so their split ids do not name the same test subjects across runs.
+   - The exploratory component contrasts pair models by split; on daphnet that pairing is not by person. They were
+     therefore repeated without daphnet (`results/metrics/contrasts_robustness/`), and the conclusions are unchanged.
+3. **Implementation choices that do not change the estimator:**
+   - dense variance-component design matrices (statsmodels `use_sparse=False`, the default; sparse was 3x slower with
+     identical estimates);
+   - one BLAS thread per bootstrap worker (`threadpoolctl`).
+4. **Prior reads of S2 declared in G4.** The imported exploratory `heldout_analysis` recomputed S2's per-dataset
+   means during the G1 reproduction checks. It computes no variance component.
+5. **No label-shuffle control** (`agents/05_verify.md` 3.5.3): it needs training, which the user ruled out.
+
+### Computational cost
+
+All analyses ran on CPU nodes (hpc01/02, Intel, 8-16 cores): the H1 bootstrap took 4 min 25 s and the S3 bootstrap
+47 s. The S1 bootstraps took about 40 min each with 8 workers.

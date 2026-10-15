@@ -1,0 +1,10 @@
+{
+ "analysis": "sens2_S1_macro_f1",
+ "set": "S1",
+ "outcome": "macro_f1",
+ "extra_excluded": [],
+ "bootstrap": 1000,
+ "boot_seed": 20261015,
+ "level": 0.975,
+ "role": "sensitivity 2"
+}

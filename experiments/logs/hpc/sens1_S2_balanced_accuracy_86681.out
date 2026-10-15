@@ -1,0 +1,22 @@
+node hpc01.local, job 86681, Thu Oct 15 16:55:36 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+# sens1_S2_balanced_accuracy: sensitivity 1
+
+Set S2, outcome balanced_accuracy (x 100), 828 runs, 7 datasets (pamap2, up_fall, uma_fall, usc_had, wear, uca_ehar, w_har), 69 splits. Excluded: motion_sense (split sizes disagree across runs (pre-registered inclusion rule)).
+
+REML (default optimizer), variance components (F1 points squared):
+
+| Component | Estimate | 97.5 % interval |
+|---|---|---|
+| M | 6.526 | [3.453, 10.255] |
+| MD | 4.445 | [3.423, 10.494] |
+| MP | 10.128 | [3.009, 15.727] |
+| P | 86.272 | [47.716, 105.734] |
+| e | 16.558 | [10.155, 25.184] |
+
+R = s2_P / (s2_M + s2_MD + s2_MP) = 4.089, 97.5 % interval [2.046, 6.031]
+pi_P = 0.696, 97.5 % interval [0.528, 0.762]
+Bootstrap: 1000 resamples, 1000 converged, 0 dropped (0.0 %), 0 refitted with Powell; seed 20261015.
+
+

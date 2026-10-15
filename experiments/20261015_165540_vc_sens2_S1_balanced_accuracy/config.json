@@ -1,0 +1,10 @@
+{
+ "analysis": "sens2_S1_balanced_accuracy",
+ "set": "S1",
+ "outcome": "balanced_accuracy",
+ "extra_excluded": [],
+ "bootstrap": 1000,
+ "boot_seed": 20261015,
+ "level": 0.975,
+ "role": "sensitivity 2"
+}

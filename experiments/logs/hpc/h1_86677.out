@@ -1,0 +1,23 @@
+node hpc02.local, job 86677, Thu Oct 15 16:49:39 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+# H1: confirmatory test of H1
+
+Set S2, outcome macro_f1 (x 100), 828 runs, 7 datasets (pamap2, up_fall, uma_fall, usc_had, wear, uca_ehar, w_har), 69 splits. Excluded: motion_sense (split sizes disagree across runs (pre-registered inclusion rule)).
+
+REML (default optimizer), variance components (F1 points squared):
+
+| Component | Estimate | 97.5 % interval |
+|---|---|---|
+| M | 4.774 | [2.533, 7.645] |
+| MD | 3.955 | [2.512, 9.070] |
+| MP | 6.864 | [2.512, 8.448] |
+| P | 127.659 | [49.145, 198.312] |
+| e | 11.667 | [9.162, 14.596] |
+
+R = s2_P / (s2_M + s2_MD + s2_MP) = 8.187, 97.5 % interval [2.847, 16.905]
+pi_P = 0.824, 97.5 % interval [0.640, 0.894]
+Bootstrap: 1000 resamples, 1000 converged, 0 dropped (0.0 %), 0 refitted with Powell; seed 20261015.
+
+**Pre-registered decision for H1: success.** Secondary criterion pi_P lower bound >= 0.40: met.
+

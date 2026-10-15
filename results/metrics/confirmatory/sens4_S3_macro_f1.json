@@ -1,0 +1,97 @@
+{
+ "analysis": "sens4_S3_macro_f1",
+ "role": "sensitivity 4",
+ "set": "S3",
+ "outcome": "macro_f1",
+ "run_id": "20261015_164941_vc_sens4_S3_macro_f1",
+ "inclusion": {
+  "utd_mhad": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "uci_har": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "unimib_shar": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "actrectut_gestures": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  }
+ },
+ "excluded": {},
+ "datasets": [
+  "utd_mhad",
+  "uci_har",
+  "unimib_shar",
+  "actrectut_gestures"
+ ],
+ "n_runs": 510,
+ "n_splits": 30,
+ "point": {
+  "converged": true,
+  "method": "default",
+  "components": {
+   "M": 100.16017293105875,
+   "MD": 50.994675476029656,
+   "P": 37.51626719672539,
+   "e": 29.170514057772074
+  },
+  "R": 0.20804764612097246,
+  "pi_P": 0.17221807996481855,
+  "R_definition": "s2_P / (s2_M + s2_MD + s2_e)"
+ },
+ "bootstrap": {
+  "resamples": 1000,
+  "converged": 1000,
+  "dropped": 0,
+  "dropped_share": 0.0,
+  "level": 0.975,
+  "R_interval": [
+   0.058756963846634466,
+   0.35515777801854104
+  ],
+  "pi_P_interval": [
+   0.0554961036250345,
+   0.2620784048199722
+  ],
+  "components_intervals": {
+   "P": [
+    11.623407690560962,
+    59.20336576580031
+   ],
+   "M": [
+    78.84323456940696,
+    122.37198560129197
+   ],
+   "MD": [
+    40.29206953646452,
+    81.66726098219466
+   ],
+   "e": [
+    13.199030675494098,
+    34.33712203828041
+   ]
+  },
+  "refit_with_powell": 0,
+  "seed": 20261015
+ },
+ "decision": null,
+ "per_dataset_split_means_sd": {
+  "actrectut_gestures": 3.971569618688632,
+  "uci_har": 3.303773901924809,
+  "unimib_shar": 5.751152155239139,
+  "utd_mhad": 9.322652912814354
+ }
+}

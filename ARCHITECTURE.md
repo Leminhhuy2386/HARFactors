@@ -5,28 +5,43 @@ Layout: `agents/00_project_structure.md`. Locations: `src/utils/paths.py`.
 ## Data flow
 
 ```
-experiments/whar_arena_v1/<model>/<dataset>/[seed-s/]split-XX.json      (2,460 runs used: 10 models × 10 datasets × 3 seeds)
-docs/sources/arena_extracted.json                                        (WHAR Arena paper, Figure 6: 30 datasets × 17 models)
-        │  src/evaluation/compare_arena.py (ours, ours_seed_mean, PAPER, dataset properties)
-        ▼
-src/evaluation/factor_analysis.py ──► results/metrics/factors/{data.json, summary.md}
-        │      variance decomposition (sums of squares over dataset, person = split, seed, model, interactions);
-        │      data factors over 30 datasets (Spearman, OLS on standardized properties); paired component contrasts
-        ▼
-src/visualization/build_factor_figures.py ──► figures/{variance, data_factors, data_corr, components_*, eval_noise,
-                                                        factor_map, ranking}.svg
+experiments/whar_arena_v1/<model>/<dataset>/[seed-s/]split-XX.json   stored runs (S1, S2 of docs/preregistration.md)
+experiments/external_har_paper_era/whar_arena_v1/...                 the 17 WHAR Arena models re-run (S3)
+experiments/checkpoints/<model>/<dataset>/seed-<s>/split-XX.pt       weights of the 10 population models
+docs/sources/arena_extracted.json                                    WHAR Arena paper, Figure 6 (quoted; docs/baselines_cited.json)
+        │
+        ├─ scripts/export_splits.py, build_data_records.py ─► data/processed/{harness_splits,splits,manifest}.json (G2)
+        │
+        ├─ scripts/run_confirmatory.py <analysis>   (src/evaluation/variance_components.py: REML + cluster bootstrap)
+        │        ─► results/metrics/confirmatory/<analysis>.{json,md}   H1 (S2) and the 4 pre-registered sensitivities
+        │
+        ├─ scripts/run_analyses.py   (exploratory, imported from Edge_SSM)
+        │        ─► results/metrics/{factors, contrasts_robustness, arena, synthesis, heldout, ...}
+        │
+        ├─ scripts/make_figures.py   (src/visualization/letter_figures.py, build_factor_figures.py)
+        │        ─► figures/fig0x_*.pdf, tables/tab01_*.{csv,tex}, results/{figure,table}_data/
+        │
+        └─ scripts/verify_results.py (scripts/evaluate.py: predictions from checkpoints; src/evaluation/reml_numpy.py)
+                 ─► experiments/<run_id>_verify_G5/, docs/verification_report.md, results/gates/G5_*.json
 ```
+
+Every computed result has a sibling `<name>.provenance.json` (`src/utils/provenance.py`). Every analysis run has
+`experiments/<run_id>/` and START/END lines in `experiments/LEDGER.md`. `scripts/audit.py` checks all of it.
 
 ## Modules
 
 | Path | Role |
 |---|---|
-| `src/evaluation/factor_analysis.py` | The main analysis of the letter |
-| `src/evaluation/compare_arena.py` | Access to our runs and the paper's table. Every analysis imports it |
-| `src/evaluation/synthesis.py`, `seeds_summary.py`, `p5_summary.py`, `vs_benchmark.py`, `heldout_analysis.py` | Per-dataset tables, seed summaries, head-to-head, held-out agreement |
-| `src/evaluation/person_probe.py`, `value_probe.py`, `error_analysis.py` | Probes of the person effect and of errors (`error_analysis` reads checkpoints from `experiments/checkpoints/`) |
-| `src/models/`, `src/training/run_whar.py`, `scripts/train.py`, `scripts/cloud/` | The run population's models and the paper-era harness, to add runs if needed |
-| `src/models/classical/` | Classical references (1-NN DTW, segment statistics + trees) |
-| `third_party/whar-*` | Pinned paper-era WHAR code. Never edit |
+| `src/data/sets.py` | The three run sets of the pre-registration (paths only) |
+| `src/evaluation/variance_components.py` | The pre-registered analysis: inclusion rule, REML fit, cluster bootstrap, decision (sealed at G4) |
+| `src/evaluation/reml_numpy.py` | An independent REML implementation and the model-label permutation control (verification) |
+| `src/evaluation/factor_analysis.py`, `contrasts_robustness.py` | Exploratory: sums-of-squares decomposition, data factors over 30 datasets, component contrasts (with and without daphnet) |
+| `src/evaluation/compare_arena.py` | Access to our runs and the paper's table; other analyses import it |
+| `src/evaluation/synthesis.py`, `seeds_summary.py`, `p5_summary.py`, `vs_benchmark.py`, `heldout_analysis.py` | Imported exploratory tables |
+| `src/visualization/letter_figures.py` | The manuscript's figures and table |
+| `src/utils/provenance.py` | Provenance records and ledger lines |
+| `src/models/`, `src/training/run_whar.py` | The population's models and the paper-era harness (inference for verification; no training in this project) |
+| `third_party/whar-*` | Pinned paper-era WHAR code (submodules at 144e006 / 9b65004 / 19b3019). Never edit |
 
-Run modules from the project root with `uv run python -m src.<area>.<module>`, or through `scripts/`.
+Run modules from the project root with `uv run python -m src.<area>.<module>`, or through `scripts/`. On the cluster:
+`source scripts/hpc/env.sh` and `scripts/hpc/submit.sh` (docs/hpc.md).

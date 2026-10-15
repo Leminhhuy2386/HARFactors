@@ -4970,3 +4970,12 @@ whar_arena_v1/vortexnet/utd_mhad/split-07 | IMPORT | fingerprint c98d3cdb212a | 
 2026-10-15 | NOTE | correction to the line above: 3,482 checkpoint files (.pt), not 3,486.
 20261015_164309_run_analyses | START | config 4e911ecafa6e | data 10383f130f63 | synthetic=false
 20261015_164309_run_analyses | END   | 28 files | 00:00:14 | status=completed
+20261015_164940_vc_H1 | START | config 3d8df5cd2320 | data 10383f130f63 | synthetic=false
+20261015_164941_vc_sens4_S3_macro_f1 | START | config bc36c884b900 | data 10383f130f63 | synthetic=false
+20261015_164941_vc_sens4_S3_macro_f1 | END   | R=0.208 [0.059, 0.355] | 00:00:47 | status=completed
+20261015_164940_vc_H1 | END   | R=8.187 [2.847, 16.905] decision=success | 00:04:25 | status=completed
+20261015_165540_vc_sens2_S1_balanced_accuracy | START | config 7a1fea165618 | data 10383f130f63 | synthetic=false
+20261015_165540_vc_sens3_S1_without_actrectut | START | config 11a0cdddd56a | data 10383f130f63 | synthetic=false
+20261015_165540_vc_sens2_S1_macro_f1 | START | config 08185e8c03f2 | data 10383f130f63 | synthetic=false
+20261015_165538_vc_sens1_S2_balanced_accuracy | START | config fe1fdbd7bf09 | data 10383f130f63 | synthetic=false
+20261015_165538_vc_sens1_S2_balanced_accuracy | END   | R=4.089 [2.046, 6.031] | 00:08:41 | status=completed

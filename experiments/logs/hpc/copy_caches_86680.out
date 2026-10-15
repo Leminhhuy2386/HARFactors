@@ -1,0 +1,5 @@
+node hpc01.local, job 86680, Thu Oct 15 16:50:36 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+29G	/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era
+COPY_DONE

@@ -1,0 +1,145 @@
+{
+ "analysis": "H1",
+ "role": "confirmatory test of H1",
+ "set": "S2",
+ "outcome": "macro_f1",
+ "run_id": "20261015_164940_vc_H1",
+ "inclusion": {
+  "pamap2": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "up_fall": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "uma_fall": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "usc_had": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "motion_sense": {
+   "included": false,
+   "splits_with_size_disagreement": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "wear": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "uca_ehar": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "w_har": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  }
+ },
+ "excluded": {
+  "motion_sense": "split sizes disagree across runs (pre-registered inclusion rule)"
+ },
+ "datasets": [
+  "pamap2",
+  "up_fall",
+  "uma_fall",
+  "usc_had",
+  "wear",
+  "uca_ehar",
+  "w_har"
+ ],
+ "n_runs": 828,
+ "n_splits": 69,
+ "point": {
+  "converged": true,
+  "method": "default",
+  "components": {
+   "M": 4.773939628028107,
+   "MD": 3.9554494789299777,
+   "MP": 6.864011549805682,
+   "P": 127.65871187628933,
+   "e": 11.667372312119944
+  },
+  "R": 8.186714026418368,
+  "pi_P": 0.8240326386566016,
+  "R_definition": "s2_P / (s2_M + s2_MD + s2_MP)"
+ },
+ "bootstrap": {
+  "resamples": 1000,
+  "converged": 1000,
+  "dropped": 0,
+  "dropped_share": 0.0,
+  "level": 0.975,
+  "R_interval": [
+   2.8472554215192187,
+   16.904802527728343
+  ],
+  "pi_P_interval": [
+   0.6398040369216047,
+   0.8940728400406195
+  ],
+  "components_intervals": {
+   "P": [
+    49.14539640520052,
+    198.31161619250642
+   ],
+   "M": [
+    2.5328928924653,
+    7.645147471015107
+   ],
+   "MD": [
+    2.51227568232287,
+    9.070211694689682
+   ],
+   "MP": [
+    2.5117128805669617,
+    8.4477855960547
+   ],
+   "e": [
+    9.162213881723156,
+    14.596058167837679
+   ]
+  },
+  "refit_with_powell": 0,
+  "seed": 20261015
+ },
+ "decision": "success",
+ "per_dataset_split_means_sd": {
+  "pamap2": 21.154791178527287,
+  "uca_ehar": 7.307167796533751,
+  "uma_fall": 13.129515104757969,
+  "up_fall": 8.293368213301417,
+  "usc_had": 10.010042724482515,
+  "w_har": 5.344181015908386,
+  "wear": 8.76387576305292
+ }
+}

@@ -1,0 +1,17 @@
+# sens4_S3_macro_f1: sensitivity 4
+
+Set S3, outcome macro_f1 (x 100), 510 runs, 4 datasets (utd_mhad, uci_har, unimib_shar, actrectut_gestures), 30 splits. Excluded: none.
+
+REML (default optimizer), variance components (F1 points squared):
+
+| Component | Estimate | 97.5 % interval |
+|---|---|---|
+| M | 100.160 | [78.843, 122.372] |
+| MD | 50.995 | [40.292, 81.667] |
+| P | 37.516 | [11.623, 59.203] |
+| e | 29.171 | [13.199, 34.337] |
+
+R = s2_P / (s2_M + s2_MD + s2_e) = 0.208, 97.5 % interval [0.059, 0.355]
+pi_P = 0.172, 97.5 % interval [0.055, 0.262]
+Bootstrap: 1000 resamples, 1000 converged, 0 dropped (0.0 %), 0 refitted with Powell; seed 20261015.
+
