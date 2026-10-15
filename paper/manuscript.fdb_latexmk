@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript"] 1792103294.63078 "manuscript.aux" "manuscript.bbl" "manuscript" 1792103295.80497 0
+["bibtex manuscript"] 1792103625.20251 "manuscript.aux" "manuscript.bbl" "manuscript" 1792103626.17579 0
   "./references.bib" 1792057439 9385 d69ab60d65ada64cbc8ab5edafb983b6 ""
   "/home/huy.leminh/texlive/2026/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "manuscript.aux" 1792103295 5021 e25b7678e801f05c1aac936f9e269bbf "pdflatex"
+  "manuscript.aux" 1792103625 5021 ec02c28320f5a2845035703fff76bc30 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1792103294.79717 "manuscript.tex" "manuscript.pdf" "manuscript" 1792103295.80563 0
+["pdflatex"] 1792103625.33172 "manuscript.tex" "manuscript.pdf" "manuscript" 1792103626.17629 0
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -106,10 +106,10 @@
   "/home/huy.leminh/texlive/2026/texmf.cnf" 1773313742.69006 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "figures/fig01_variance_components.pdf" 1792102101 15951 164baea39e17cbecb2df1b2a9138d9eb ""
   "figures/fig02_contrasts_channels.pdf" 1792102102 30739 9abc016fdb1ec10209c5d114570737cb ""
-  "manuscript.aux" 1792103295 5021 e25b7678e801f05c1aac936f9e269bbf "pdflatex"
-  "manuscript.bbl" 1792103294 6122 645e1a4a08cbaa211010f929ed975f01 "bibtex manuscript"
-  "manuscript.out" 1792103295 1789 de91caed98a0ce900cbd2453737006a5 "pdflatex"
-  "manuscript.tex" 1792103290 12185 2fa8182d0f95ac70350908006bcdba83 ""
+  "manuscript.aux" 1792103625 5021 ec02c28320f5a2845035703fff76bc30 "pdflatex"
+  "manuscript.bbl" 1792103625 6122 645e1a4a08cbaa211010f929ed975f01 "bibtex manuscript"
+  "manuscript.out" 1792103625 1789 de91caed98a0ce900cbd2453737006a5 "pdflatex"
+  "manuscript.tex" 1792103624 13142 a1d0bb75d71107dd6845b42eeda3be29 ""
   "tab01_variance_components.tex" 1792102102 652 e717c4cf5968f95c4401bdd7bb33ab68 ""
   (generated)
   "manuscript.aux"

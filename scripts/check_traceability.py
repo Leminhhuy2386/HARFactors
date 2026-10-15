@@ -39,7 +39,7 @@ def main() -> None:
             k += 1
         out = GATE.parent / f"G6_traceability_rerun{k}.json"
     values = json.loads((ROOT / "docs/summary_values.json").read_text())
-    ok, out = audit(ROOT)
+    ok, audit_out = audit(ROOT)
     with tempfile.TemporaryDirectory() as t:
         copy = Path(t) / "proj"
         shutil.copytree(ROOT, copy, ignore=shutil.ignore_patterns("checkpoints", ".venv", "third_party", "whar_arena_v1",
@@ -58,7 +58,7 @@ def main() -> None:
     gate = {"gate": "G6_traceability", "stage": "06_summary", "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "check": "every number in docs/summary.md re-derives from its artifact (scripts/audit.py --traceability)",
             "reference_value": None, "reference_source": "docs/summary_values.json, docs/artifact_index.md",
-            "observed_value": {"values": len(values), "audit_output": out.strip().splitlines(),
+            "observed_value": {"values": len(values), "audit_output": audit_out.strip().splitlines(),
                                "negative_control": {"tampering": "H1 s2_P edited by +10 % in a copy",
                                                     "untampered_passes": base_ok, "caught": base_ok and not tampered_ok,
                                                     "output": tampered_out.strip().splitlines()[:4]},

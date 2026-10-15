@@ -225,6 +225,10 @@ Claim → artifact → script. One row per value in docs/summary_values.json.
 | exploratory_ss.MD | 7.2 | results/metrics/factors/data.json | variance/ss/model x dataset | scripts/run_analyses.py (src.evaluation.heldout_analysis) |
 | exploratory_ss.MP | 10.9 | results/metrics/factors/data.json | variance/ss/model x person | scripts/run_analyses.py (src.evaluation.heldout_analysis) |
 | exploratory_ss.e | 14.2 | results/metrics/factors/data.json | variance/ss/seed | scripts/run_analyses.py (src.evaluation.heldout_analysis) |
+| runs.imported | 4950 | data/processed/manifest.json | entries | ? |
+| runs.S1 | 2460 | data/processed/splits.json | sets/S1/runs | ? |
+| runs.S2 | 948 | data/processed/splits.json | sets/S2/runs | ? |
+| runs.S3 | 510 | data/processed/splits.json | sets/S3/runs | ? |
 | subjects_per_split.min | 1 | data/processed/harness_splits.json | datasets | scripts/export_splits.py |
 | subjects_per_split.max | 4 | data/processed/harness_splits.json | datasets | scripts/export_splits.py |
 | g3.rf.utd_mhad.figure6 | 51.20 | results/gates/G3_baseline.json | observed_value/anchor_random_forest/0/figure6 | scripts/check_baseline_anchor.py |

@@ -49,13 +49,20 @@ S3's R is the conservative R′ = s2_P / (s2_M + s2_MD + s2_e) (one run per spli
 - G3: Random Forest re-run vs Figure 6: utd_mhad 51.20 vs 51.20, uci_har 84.69 vs 84.69, unimib_shar 44.49 vs 44.49, actrectut_gestures 41.89 vs 41.89.
 - G5 PASS: 408 runs re-executed from checkpoints (360 of them in S2), 373 equal to the stored metrics exactly.
 
-## 5. Limitations carried to the manuscript
+## 5. Excluded runs (agents/08_review.md, check 9)
+
+- The ledger imports 4950 WHAR-harness runs. The letter analyses S1 (2460 runs) and S2 (948 runs), and S3 (510 re-runs of the benchmark's models, in experiments/external_har_paper_era).
+- The other imported runs are Edge_SSM's development history: models outside the population, and training seeds 3-4 on UTD-MHAD for five models. The letter does not use them; some enter the imported exploratory aggregates (results/metrics/factors: the kill-set and sensor-grouping contrasts; synthesis, p5, seeds).
+- Excluded by the pre-registered inclusion rule: daphnet in S1 (S1 analyses use 2160 of 2460 runs) and motion_sense in S2 (H1 uses 828 of 948 runs).
+- Analysis runs in the ledger: development runs (none wrote to results/), crashed verification runs (recorded with status=crashed), and the G5 runs whose gates are kept (G5 FAIL, rerun1 FAIL, rerun2 PASS).
+
+## 6. Limitations carried to the manuscript
 
 - One protocol (WHAR Arena v1); 3 training seeds (template asks >= 5; user's decision); the 10 population models share one skeleton; the 30-dataset part re-analyses published single runs; data factors are correlational.
 - Re-execution covers the datasets with a cache on the cluster; runs without a checkpoint and datasets without a cache are verified by their stored records only (docs/verification_report.md).
 - The S2 per-dataset means were known before the pre-registration; no variance component of S2 was.
 - The manuscript was drafted with IEEEtran [journal,9pt] in place of IEEE_lsens.cls.
 
-## 6. Pre-registration outcome
+## 7. Pre-registration outcome
 
 H1: success. No deviation from docs/preregistration.md in the confirmatory analysis.

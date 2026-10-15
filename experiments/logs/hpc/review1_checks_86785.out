@@ -1,0 +1,11 @@
+node hpc02.local, job 86785, Fri Oct 16 05:33:10 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+values 239
+Traceback (most recent call last):
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/check_traceability.py", line 78, in <module>
+    main()
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/check_traceability.py", line 73, in main
+    out.write_text(json.dumps(gate, indent=1) + "\n")
+    ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'write_text'

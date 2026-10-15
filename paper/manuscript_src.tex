@@ -27,8 +27,9 @@ networks with three training seeds), the group of test subjects accounts for \va
 variance, \val{H1.R} times (97.5\,\% interval \val{H1.R_lo}--\val{H1.R_hi}) the variance of all network-related terms
 together, and the pre-registered criterion was met. The ordering also holds with a metric free of per-split
 ceilings and on the development datasets, where its interval includes 1 for that metric. It reverses across the
-benchmark's 17 heterogeneous published architectures, where the network dominates. Between comparable networks, the
-subjects a wearable study records bound what an accuracy difference can show.
+benchmark's 17 heterogeneous published architectures, where the network dominates. For comparable networks, the
+reported accuracy depends more on who is tested than on the network, so comparisons must be paired by split and report
+the spread across test subjects.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -173,7 +174,9 @@ recorded subjects the choice of network matters more.
 The analysis covers one protocol, and three seeds per run. The S1 and S2 networks share one skeleton, so their
 components are controlled but not independent designs. S2's means were known before the registration. The 30-dataset
 results re-analyse published single runs and are correlational, and subjects and channels co-vary across datasets.
-No network was trained for this letter, so no label-permutation control was run; the splits are subject-disjoint by
+The intervals resample test-subject groups and treat the networks as fixed: they say how precisely $R$ is known for
+these networks, not for networks in general, and S3 shows that another population of networks can reverse it. No
+network was trained for this letter, so no label-permutation control was run; the splits are subject-disjoint by
 construction and the normalisation is fitted on the training split, which we verified, but a leak through another
 path would not have been detected.
 

@@ -89,9 +89,14 @@ $R'=\sigma^2_P/(\sigma^2_M+\sigma^2_{MD}+\sigma^2_e)$ is reported.
 Component contrasts on S1 pair two networks by split, average the seeds, and summarise over datasets with a
 $t$-interval and a Wilcoxon test~\cite{wilcoxon1945individual,demsar2006statistical}. Over the benchmark's 30 datasets
 we regress the published single-run results on standardised dataset properties (ordinary least squares); these
-associations are correlational. For verification, test predictions were regenerated from 408
-checkpoints (360 of them in S2), 373 of which reproduced the stored metrics exactly; an independent
-REML implementation and negative controls (e.g.\ permuting network labels within cells) confirmed the analysis.
+associations are correlational, and their $p$-values are not corrected for multiplicity. For verification, the
+benchmark's Random Forest, re-run with our code, reproduces its published macro-F1 on four datasets (e.g.\
+84.69 against 84.69 on UCI-HAR); test predictions were regenerated from
+408 checkpoints, 373 of which reproduced the stored metrics exactly and all within two
+test windows; an independent REML implementation and negative controls (e.g.\ permuting network labels within cells)
+confirmed the analysis. The regenerated runs include 360 of the 828 confirmatory runs (the
+datasets cached on our cluster); the others, and one development dataset (DSADS) whose cache on the cluster does not
+reproduce the stored runs, enter on their stored records.
 
 \section{Results}
 \subsection{Confirmatory test}
@@ -154,19 +159,24 @@ training subjects go with a larger gap between the best and the median deep netw
 dataset is ($R^2=0.03$).
 
 \section{Discussion and Limitations}
-For comparable networks, the subjects a wearable study records decide more of its macro-F1 than the network does:
-the network-related variance on S2 is a fraction of the variance between test-subject groups, and a single seed adds
-noise of its own. A comparison between such networks therefore needs many subjects, paired evaluation on the same
-splits, several seeds, and a report of the spread across test subjects; a mean over a few splits cannot carry a gain
-of one or two points. The reversal on S3 bounds the claim: a weak baseline is told apart from a strong network
-easily, and the subject effect matters for choosing between designs that are already competitive. The exploratory
+Here ``comparable'' networks share one design and differ in single components, so that their dataset means differ
+by a few points. For such networks, who is tested decides more of a reported macro-F1 than which network is used.
+The variance between test-subject groups governs the absolute level, and with it every comparison made across
+studies, splits or subject groups. A comparison paired by split cancels it, but is then limited by the network
+$\times$ split interaction and the seed, which on S2 are as large as the network terms themselves (Table~\ref{tab:vc}).
+For a wearable sensing study this gives three rules. Record enough subjects to estimate the spread across test-subject
+groups, and report it. Compare networks paired on the same splits, never by means over different subjects. Average
+several training seeds. The reversal on S3 bounds the claim: a weak baseline is told apart from a strong network easily,
+and the subject effect matters when choosing between designs that are already competitive. The exploratory
 associations point at the sensing system: with many channels, hand-crafted features stay competitive, and with few
 recorded subjects the choice of network matters more.
 
 The analysis covers one protocol, and three seeds per run. The S1 and S2 networks share one skeleton, so their
-components are controlled but not independent designs; S2's means were known before the registration; the
-30-dataset results re-analyse published single runs and are correlational, and subjects and channels co-vary across
-datasets. Re-execution covered the datasets cached on our cluster; the remaining runs are verified by their records.
+components are controlled but not independent designs. S2's means were known before the registration. The 30-dataset
+results re-analyse published single runs and are correlational, and subjects and channels co-vary across datasets.
+No network was trained for this letter, so no label-permutation control was run; the splits are subject-disjoint by
+construction and the normalisation is fitted on the training split, which we verified, but a leak through another
+path would not have been detected.
 
 \section{Conclusion}
 Under a fixed person-disjoint protocol, who is tested accounts for most of the variance of macro-F1 among comparable

@@ -2885,6 +2885,56 @@
   "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
  },
  {
+  "id": "runs.imported",
+  "description": "stored WHAR-harness runs imported (experiments/whar_arena_v1)",
+  "artifact": "data/processed/manifest.json",
+  "path": [
+   "entries"
+  ],
+  "format": "count_runs",
+  "printed": "4950",
+  "produced_by": "?"
+ },
+ {
+  "id": "runs.S1",
+  "description": "runs in set S1",
+  "artifact": "data/processed/splits.json",
+  "path": [
+   "sets",
+   "S1",
+   "runs"
+  ],
+  "format": "d",
+  "printed": "2460",
+  "produced_by": "?"
+ },
+ {
+  "id": "runs.S2",
+  "description": "runs in set S2",
+  "artifact": "data/processed/splits.json",
+  "path": [
+   "sets",
+   "S2",
+   "runs"
+  ],
+  "format": "d",
+  "printed": "948",
+  "produced_by": "?"
+ },
+ {
+  "id": "runs.S3",
+  "description": "runs in set S3",
+  "artifact": "data/processed/splits.json",
+  "path": [
+   "sets",
+   "S3",
+   "runs"
+  ],
+  "format": "d",
+  "printed": "510",
+  "produced_by": "?"
+ },
+ {
   "id": "subjects_per_split.min",
   "description": "fewest test subjects in a split (13 cached datasets)",
   "artifact": "data/processed/harness_splits.json",
