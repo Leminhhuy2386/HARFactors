@@ -215,6 +215,8 @@ def _printed(entry: dict) -> str:
     """Re-derive a summary value from its artifact (independent of scripts/build_summary.py)."""
     art = json.loads((ROOT / entry["artifact"]).read_text())
     f = entry["format"]
+    if f == "count_runs":
+        return str(sum(k.startswith("experiments/whar_arena_v1/") for k in art["entries"]))
     if f in ("subj_min", "subj_max"):
         sizes = sorted(len(s["test_subjects"]) for ds in art["datasets"].values() for s in ds["splits"].values())
         return str(sizes[0] if f == "subj_min" else sizes[-1])
@@ -322,10 +324,33 @@ def check_manuscript() -> list[str]:
     return errs
 
 
+def check_authenticity() -> list[str]:
+    """The latest G5 gate PASSes with every negative control caught and no mismatch, its re-execution run exists, and
+    a fresh sample of checkpoints (other than --reproduce's) regenerates its stored predictions."""
+    gates = sorted((ROOT / "results/gates").glob("G5_results_authenticity*.json"),
+                   key=lambda q: int(q.stem.rsplit("rerun", 1)[1]) if "rerun" in q.stem else 0)
+    if not gates:
+        return ["no G5 gate"]
+    g = json.loads(gates[-1].read_text())
+    o = g["observed_value"]
+    errs = []
+    if g["verdict"] != "PASS":
+        errs.append(f"{gates[-1].name}: verdict {g['verdict']}")
+    errs += [f"negative control not caught: {r['tampering']}" for r in o["L5_negative_controls"] if not r["caught"]]
+    errs += [f"model-permutation control not caught: {r['set']}" for r in o["L5_model_permutation"] if not r["caught"]]
+    if o["L3_reexecution"]["mismatches"]:
+        errs.append(f"{len(o['L3_reexecution']['mismatches'])} re-execution mismatches in {gates[-1].name}")
+    for ev in g["evidence"]:
+        if ev.startswith("experiments/") and not (ROOT / ev).exists():
+            errs.append(f"G5 evidence missing: {ev}")
+    errs += check_reproduce(k=2, seed=20261016)
+    return errs
+
+
 CHECKS = {"provenance": check_provenance, "ledger": check_ledger, "data": check_data, "synthetic": check_synthetic,
           "recompute": check_recompute, "reproduce": check_reproduce, "seeds": check_seeds,
-          "traceability": check_traceability, "manuscript": check_manuscript}
-LATER = ["authenticity"]
+          "authenticity": check_authenticity, "traceability": check_traceability, "manuscript": check_manuscript}
+LATER: list[str] = []
 
 
 def main() -> None:

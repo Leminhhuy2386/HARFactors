@@ -88,6 +88,10 @@ def spec() -> list[dict]:
                      ("seed", "e")):
         add(f"exploratory_ss.{tag}", f"exploratory S1 sums of squares: {src}, share within a dataset (%)", ss,
             ["variance", "ss", src], "within_share")
+    add("runs.imported", "stored WHAR-harness runs imported (experiments/whar_arena_v1)", "data/processed/manifest.json",
+        ["entries"], "count_runs")
+    for name in ("S1", "S2", "S3"):
+        add(f"runs.{name}", f"runs in set {name}", "data/processed/splits.json", ["sets", name, "runs"], "d")
     hs = "data/processed/harness_splits.json"
     add("subjects_per_split.min", "fewest test subjects in a split (13 cached datasets)", hs, ["datasets"], "subj_min")
     add("subjects_per_split.max", "most test subjects in a split (13 cached datasets)", hs, ["datasets"], "subj_max")
@@ -110,6 +114,8 @@ def spec() -> list[dict]:
 
 def derive(entry: dict) -> str:
     art = json.loads((ROOT / entry["artifact"]).read_text())
+    if entry["format"] == "count_runs":
+        return str(sum(k.startswith("experiments/whar_arena_v1/") for k in art["entries"]))
     if entry["format"] in ("subj_min", "subj_max"):
         n = [len(sp["test_subjects"]) for d in art["datasets"].values() for sp in d["splits"].values()]
         return str(min(n) if entry["format"] == "subj_min" else max(n))
@@ -184,7 +190,18 @@ def write_summary(v: dict, values: list) -> None:
               for d in ["utd_mhad", "uci_har", "unimib_shar", "actrectut_gestures"]) + ".",
           f"- G5 {v['g5.verdict']}: {v['g5.reexecuted']} runs re-executed from checkpoints ({v['g5.s2']} of them in "
           f"S2), {v['g5.exact']} equal to the stored metrics exactly.", "",
-          "## 5. Limitations carried to the manuscript", "",
+          "## 5. Excluded runs (agents/08_review.md, check 9)", "",
+          f"- The ledger imports {v['runs.imported']} WHAR-harness runs. The letter analyses S1 ({v['runs.S1']} runs) and "
+          f"S2 ({v['runs.S2']} runs), and S3 ({v['runs.S3']} re-runs of the benchmark's models, in "
+          "experiments/external_har_paper_era).",
+          "- The other imported runs are Edge_SSM's development history: models outside the population, and training "
+          "seeds 3-4 on UTD-MHAD for five models. The letter does not use them; some enter the imported exploratory "
+          "aggregates (results/metrics/factors: the kill-set and sensor-grouping contrasts; synthesis, p5, seeds).",
+          f"- Excluded by the pre-registered inclusion rule: daphnet in S1 (S1 analyses use {v['sens2_S1_macro_f1.runs']} "
+          f"of {v['runs.S1']} runs) and motion_sense in S2 (H1 uses {v['H1.runs']} of {v['runs.S2']} runs).",
+          "- Analysis runs in the ledger: development runs (none wrote to results/), crashed verification runs "
+          "(recorded with status=crashed), and the G5 runs whose gates are kept (G5 FAIL, rerun1 FAIL, rerun2 PASS).", "",
+          "## 6. Limitations carried to the manuscript", "",
           "- One protocol (WHAR Arena v1); 3 training seeds (template asks >= 5; user's decision); the 10 population "
           "models share one skeleton; the 30-dataset part re-analyses published single runs; data factors are "
           "correlational.",
@@ -192,7 +209,7 @@ def write_summary(v: dict, values: list) -> None:
           "without a cache are verified by their stored records only (docs/verification_report.md).",
           "- The S2 per-dataset means were known before the pre-registration; no variance component of S2 was.",
           "- The manuscript was drafted with IEEEtran [journal,9pt] in place of IEEE_lsens.cls.", "",
-          "## 6. Pre-registration outcome", "",
+          "## 7. Pre-registration outcome", "",
           f"H1: {v['H1.decision']}. No deviation from docs/preregistration.md in the confirmatory analysis.", ""]
     (ROOT / "docs/summary.md").write_text("\n".join(L))
 

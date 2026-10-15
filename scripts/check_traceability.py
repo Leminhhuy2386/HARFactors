@@ -29,8 +29,15 @@ def audit(root: Path) -> tuple[bool, str]:
 
 
 def main() -> None:
-    if GATE.exists():
-        raise SystemExit("G6 exists: a re-run must get its own file and state why")
+    reason = sys.argv[1] if len(sys.argv) > 1 else None
+    out = GATE
+    if GATE.exists():  # never edit a gate file: a re-run gets its own name and states why
+        if not reason:
+            raise SystemExit("G6 exists: a re-run needs a reason (first argument)")
+        k = 1
+        while (GATE.parent / f"G6_traceability_rerun{k}.json").exists():
+            k += 1
+        out = GATE.parent / f"G6_traceability_rerun{k}.json"
     values = json.loads((ROOT / "docs/summary_values.json").read_text())
     ok, out = audit(ROOT)
     with tempfile.TemporaryDirectory() as t:
@@ -61,7 +68,9 @@ def main() -> None:
                          "scripts/audit.py", "scripts/check_traceability.py"],
             "notes": "The 30-dataset values derive from the WHAR Arena paper's published single runs (quoted numbers, "
                      "docs/baselines_cited.json) through results/metrics/factors/data.json."}
-    GATE.write_text(json.dumps(gate, indent=1) + "\n")
+    if reason:
+        gate["rerun_reason"] = reason
+    out.write_text(json.dumps(gate, indent=1) + "\n")
     print("G6", gate["verdict"], "values", len(values), "control caught", not tampered_ok, "no provenance", no_prov)
 
 
