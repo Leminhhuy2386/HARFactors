@@ -46,756 +46,756 @@
    "pamap2": {
     "params": 35265,
     "flops": 17515604,
-    "latency_ms": 11.754599865525961
+    "latency_ms": 10.999656282365322
    },
    "up_fall": {
     "params": 32065,
     "flops": 3236698,
-    "latency_ms": 9.208799805492163
+    "latency_ms": 8.63154511898756
    },
    "uma_fall": {
     "params": 33879,
     "flops": 33293454,
-    "latency_ms": 14.618200017139316
+    "latency_ms": 12.741402722895145
    },
    "usc_had": {
     "params": 26578,
     "flops": 14079330,
-    "latency_ms": 11.338999960571527
+    "latency_ms": 9.974620305001736
    },
    "motion_sense": {
     "params": 28222,
     "flops": 7328498,
-    "latency_ms": 10.013699997216463
+    "latency_ms": 9.472505189478397
    },
    "wear": {
     "params": 28260,
     "flops": 7206420,
-    "latency_ms": 9.962099837139249
+    "latency_ms": 9.455578401684761
    },
    "uca_ehar": {
     "params": 26610,
     "flops": 3528480,
-    "latency_ms": 8.926499867811799
+    "latency_ms": 8.261635899543762
    },
    "w_har": {
     "params": 26415,
     "flops": 35238246,
-    "latency_ms": 15.542899956926703
+    "latency_ms": 12.686006724834442
    }
   },
   "recstatnet": {
    "pamap2": {
     "params": 33269,
     "flops": 14837376,
-    "latency_ms": 7.493200013414025
+    "latency_ms": 6.087054498493671
    },
    "up_fall": {
     "params": 31459,
     "flops": 2938240,
-    "latency_ms": 5.005599930882454
+    "latency_ms": 4.7868359833955765
    },
    "uma_fall": {
     "params": 31215,
     "flops": 29157504,
-    "latency_ms": 10.587000055238605
+    "latency_ms": 8.1277871504426
    },
    "usc_had": {
     "params": 25476,
     "flops": 13942272,
-    "latency_ms": 7.376299938187003
+    "latency_ms": 6.051933392882347
    },
    "motion_sense": {
     "params": 27102,
     "flops": 7090176,
-    "latency_ms": 5.897399969398975
+    "latency_ms": 5.177422426640987
    },
    "wear": {
     "params": 26874,
     "flops": 7032576,
-    "latency_ms": 5.860400153324008
+    "latency_ms": 5.1057590171694756
    },
    "uca_ehar": {
     "params": 25644,
     "flops": 3492928,
-    "latency_ms": 5.053299944847822
+    "latency_ms": 4.647553898394108
    },
    "w_har": {
     "params": 25449,
     "flops": 34898944,
-    "latency_ms": 11.500299908220768
+    "latency_ms": 7.891213521361351
    }
   },
   "recurrencenet": {
    "pamap2": {
     "params": 25685,
     "flops": 14823232,
-    "latency_ms": 7.099600043147802
+    "latency_ms": 6.290849298238754
    },
    "up_fall": {
     "params": 25299,
     "flops": 2926784,
-    "latency_ms": 4.770299885421991
+    "latency_ms": 4.296374507248402
    },
    "uma_fall": {
     "params": 25335,
     "flops": 29146560,
-    "latency_ms": 9.993300074711442
+    "latency_ms": 7.430916652083397
    },
    "usc_had": {
     "params": 24180,
     "flops": 13939968,
-    "latency_ms": 7.15019996277988
+    "latency_ms": 5.782466381788254
    },
    "motion_sense": {
     "params": 24366,
     "flops": 7085184,
-    "latency_ms": 5.682599963620305
+    "latency_ms": 4.913348704576492
    },
    "wear": {
     "params": 24570,
     "flops": 7028352,
-    "latency_ms": 5.708100041374564
+    "latency_ms": 4.882601089775562
    },
    "uca_ehar": {
     "params": 24212,
     "flops": 3490368,
-    "latency_ms": 4.923900123685598
+    "latency_ms": 4.346253350377083
    },
    "w_har": {
     "params": 24113,
     "flops": 34896576,
-    "latency_ms": 11.404900113120675
+    "latency_ms": 8.36336612701416
    }
   },
   "s4d": {
    "pamap2": {
     "params": 29709,
     "flops": 13057664,
-    "latency_ms": 26.66760003194213
+    "latency_ms": 35.32528318464756
    },
    "up_fall": {
     "params": 28939,
     "flops": 2535808,
-    "latency_ms": 5.758100189268589
+    "latency_ms": 8.075293153524399
    },
    "uma_fall": {
     "params": 29007,
     "flops": 25115520,
-    "latency_ms": 55.453799897804856
+    "latency_ms": 69.76207531988621
    },
    "usc_had": {
     "params": 26700,
     "flops": 11291136,
-    "latency_ms": 27.706699911504984
+    "latency_ms": 35.616048611700535
    },
    "motion_sense": {
     "params": 27078,
     "flops": 5875968,
-    "latency_ms": 13.26950010843575
+    "latency_ms": 18.72218120843172
    },
    "wear": {
     "params": 27474,
     "flops": 5762304,
-    "latency_ms": 13.340699952095747
+    "latency_ms": 14.694930985569954
    },
    "uca_ehar": {
     "params": 26764,
     "flops": 2833536,
-    "latency_ms": 7.039499934762716
+    "latency_ms": 10.350610129535198
    },
    "w_har": {
     "params": 26569,
     "flops": 28321152,
-    "latency_ms": 65.79090002924204
+    "latency_ms": 87.07303367555141
    }
   },
   "CNN-HAR": {
    "pamap2": {
     "params": 434373,
     "flops": 229975200,
-    "latency_ms": 37.32290002517402
+    "latency_ms": 40.56308791041374
    },
    "up_fall": {
     "params": 353571,
     "flops": 27493600,
-    "latency_ms": 5.041300086304545
+    "latency_ms": 6.0693081468343735
    },
    "uma_fall": {
     "params": 331175,
     "flops": 356175600,
-    "latency_ms": 60.26699999347329
+    "latency_ms": 64.22642152756453
    },
    "usc_had": {
     "params": 65972,
     "flops": 26544000,
-    "latency_ms": 5.372100044041872
+    "latency_ms": 6.498120725154877
    },
    "motion_sense": {
     "params": 159566,
     "flops": 37405200,
-    "latency_ms": 6.70839985832572
+    "latency_ms": 7.815977558493614
    },
    "wear": {
     "params": 116378,
     "flops": 24948000,
-    "latency_ms": 4.809299949556589
+    "latency_ms": 5.835913121700287
    },
    "uca_ehar": {
     "params": 73972,
     "flops": 6205300,
-    "latency_ms": 1.7258001025766134
+    "latency_ms": 2.150636166334152
    },
    "w_har": {
     "params": 72769,
     "flops": 80491800,
-    "latency_ms": 15.405800193548203
+    "latency_ms": 17.9282883182168
    }
   },
   "TinyHAR": {
    "pamap2": {
     "params": 429934,
     "flops": 188449408,
-    "latency_ms": 14.845199882984161
+    "latency_ms": 14.484035782516003
    },
    "up_fall": {
     "params": 163564,
     "flops": 22279552,
-    "latency_ms": 2.446299884468317
+    "latency_ms": 2.5581931695342064
    },
    "uma_fall": {
     "params": 710640,
     "flops": 284421888,
-    "latency_ms": 28.838899917900562
+    "latency_ms": 26.525741443037987
    },
    "usc_had": {
     "params": 335661,
     "flops": 22808064,
-    "latency_ms": 11.491299839690328
+    "latency_ms": 10.663692839443684
    },
    "motion_sense": {
     "params": 208295,
     "flops": 29498752,
-    "latency_ms": 6.207700120285153
+    "latency_ms": 5.839413031935692
    },
    "wear": {
     "params": 196787,
     "flops": 19984384,
-    "latency_ms": 5.923199933022261
+    "latency_ms": 5.4837968200445175
    },
    "uca_ehar": {
     "params": 108333,
     "flops": 5339008,
-    "latency_ms": 2.5113001465797424
+    "latency_ms": 2.5573475286364555
    },
    "w_har": {
     "params": 800362,
     "flops": 67651392,
-    "latency_ms": 29.37989984638989
+    "latency_ms": 27.299133129417896
    }
   },
   "Triple-Cross-Attn": {
    "pamap2": {
     "params": 1978178,
     "flops": 376337360,
-    "latency_ms": 16.55700011178851
+    "latency_ms": 19.3840516731143
    },
    "up_fall": {
     "params": 365888,
     "flops": 42580048,
-    "latency_ms": 3.6172999534755945
+    "latency_ms": 4.290911369025707
    },
    "uma_fall": {
     "params": 3392580,
     "flops": 588432488,
-    "latency_ms": 26.4035000000149
+    "latency_ms": 31.107251532375813
    },
    "usc_had": {
     "params": 431937,
     "flops": 43622680,
-    "latency_ms": 3.7933001294732094
+    "latency_ms": 4.367878660559654
    },
    "motion_sense": {
     "params": 385851,
     "flops": 64970608,
-    "latency_ms": 4.147200146690011
+    "latency_ms": 4.842476919293404
    },
    "wear": {
     "params": 524103,
     "flops": 43725472,
-    "latency_ms": 3.53639991953969
+    "latency_ms": 4.216883331537247
    },
    "uca_ehar": {
     "params": 290625,
     "flops": 10663180,
-    "latency_ms": 2.08289991132915
+    "latency_ms": 2.177322283387184
    },
    "w_har": {
     "params": 683070,
     "flops": 133733576,
-    "latency_ms": 7.945300079882145
+    "latency_ms": 9.270960465073586
    }
   },
   "DANA": {
    "pamap2": {
     "params": 1966285,
     "flops": 1926915328,
-    "latency_ms": 40.53430003114045
+    "latency_ms": 35.150098614394665
    },
    "up_fall": {
     "params": 1638347,
     "flops": 311273216,
-    "latency_ms": 12.74190004914999
+    "latency_ms": 10.57431660592556
    },
    "uma_fall": {
     "params": 1540559,
     "flops": 2890371840,
-    "latency_ms": 58.91750007867813
+    "latency_ms": 48.57535008341074
    },
    "usc_had": {
     "params": 458828,
     "flops": 222339072,
-    "latency_ms": 6.105599924921989
+    "latency_ms": 5.3139254450798035
    },
    "motion_sense": {
     "params": 851270,
     "flops": 333505536,
-    "latency_ms": 9.065699996426702
+    "latency_ms": 7.891939952969551
    },
    "wear": {
     "params": 656210,
     "flops": 222340608,
-    "latency_ms": 6.3449000008404255
+    "latency_ms": 5.661931820213795
    },
    "uca_ehar": {
     "params": 491596,
     "flops": 64851072,
-    "latency_ms": 3.210800001397729
+    "latency_ms": 3.135835751891136
    },
    "w_har": {
     "params": 491209,
     "flops": 648482304,
-    "latency_ms": 14.536899980157614
+    "latency_ms": 11.258582584559917
    }
   },
   "TinierHAR": {
    "pamap2": {
     "params": 42844,
     "flops": 11187232,
-    "latency_ms": 7.442499976605177
+    "latency_ms": 8.732659742236137
    },
    "up_fall": {
     "params": 35098,
     "flops": 1816784,
-    "latency_ms": 2.539200009778142
+    "latency_ms": 2.9547084122896194
    },
    "uma_fall": {
     "params": 32926,
     "flops": 16898160,
-    "latency_ms": 13.025399995967746
+    "latency_ms": 13.231582939624786
    },
    "usc_had": {
     "params": 7483,
     "flops": 1499568,
-    "latency_ms": 5.64820016734302
+    "latency_ms": 5.3664324805140495
    },
    "motion_sense": {
     "params": 16501,
     "flops": 1990504,
-    "latency_ms": 3.591800108551979
+    "latency_ms": 3.9213839918375015
    },
    "wear": {
     "params": 12289,
     "flops": 1366576,
-    "latency_ms": 3.4690999891608953
+    "latency_ms": 3.921711817383766
    },
    "uca_ehar": {
     "params": 8251,
     "flops": 412746,
-    "latency_ms": 2.3085998836904764
+    "latency_ms": 2.759646624326706
    },
    "w_har": {
     "params": 8152,
     "flops": 4264220,
-    "latency_ms": 11.778400046750903
+    "latency_ms": 10.160344652831554
    }
   },
   "Attend+Discriminate": {
    "pamap2": {
     "params": 1503055,
     "flops": 3219339520,
-    "latency_ms": 102.58389986120164
+    "latency_ms": 93.28352194279432
    },
    "up_fall": {
     "params": 1257037,
     "flops": 418340608,
-    "latency_ms": 15.45739988796413
+    "latency_ms": 14.684794470667839
    },
    "uma_fall": {
     "params": 1183825,
     "flops": 4911766784,
-    "latency_ms": 188.88460006564856
+    "latency_ms": 170.85188161581755
    },
    "usc_had": {
     "params": 372430,
     "flops": 425553920,
-    "latency_ms": 66.15279987454414
+    "latency_ms": 56.473263539373875
    },
    "motion_sense": {
     "params": 666568,
     "flops": 535416320,
-    "latency_ms": 35.50489991903305
+    "latency_ms": 31.09885100275278
    },
    "wear": {
     "params": 520660,
     "flops": 367662080,
-    "latency_ms": 33.85940007865429
+    "latency_ms": 28.935179114341736
    },
    "uca_ehar": {
     "params": 397006,
     "flops": 103115904,
-    "latency_ms": 13.807600131258368
+    "latency_ms": 13.016114011406898
    },
    "w_har": {
     "params": 396619,
     "flops": 1242817536,
-    "latency_ms": 171.0377000272274
+    "latency_ms": 148.4443824738264
    }
   },
   "DynamicWHAR": {
    "pamap2": {
     "params": 5653638,
     "flops": 916201728,
-    "latency_ms": 15.110900159925222
+    "latency_ms": 18.355111591517925
    },
    "up_fall": {
     "params": 4660740,
     "flops": 563246336,
-    "latency_ms": 8.722200058400631
+    "latency_ms": 11.0313193872571
    },
    "uma_fall": {
     "params": 4387944,
     "flops": 537961728,
-    "latency_ms": 10.219400050118566
+    "latency_ms": 13.49729485809803
    },
    "usc_had": {
     "params": 1131525,
     "flops": 17115648,
-    "latency_ms": 1.1140999849885702
+    "latency_ms": 1.4998149126768112
    },
    "motion_sense": {
     "params": 2304399,
     "flops": 106075392,
-    "latency_ms": 2.714799949899316
+    "latency_ms": 3.4134844318032265
    },
    "wear": {
     "params": 1716123,
     "flops": 49671168,
-    "latency_ms": 1.706999959424138
+    "latency_ms": 2.026074565947056
    },
    "uca_ehar": {
     "params": 1220829,
     "flops": 17759552,
-    "latency_ms": 1.0438000317662954
+    "latency_ms": 1.5148939564824104
    },
    "w_har": {
     "params": 1247442,
     "flops": 30157184,
-    "latency_ms": 1.5187000390142202
+    "latency_ms": 2.3122653365135193
    }
   },
   "DeepConvLSTM-Attn": {
    "pamap2": {
     "params": 1982926,
     "flops": 1859450880,
-    "latency_ms": 46.84610012918711
+    "latency_ms": 43.6876704916358
    },
    "up_fall": {
     "params": 1654988,
     "flops": 250654208,
-    "latency_ms": 7.151399971917272
+    "latency_ms": 8.170869201421738
    },
    "uma_fall": {
     "params": 1557200,
     "flops": 2852017152,
-    "latency_ms": 66.6002999059856
+    "latency_ms": 54.573011584579945
    },
    "usc_had": {
     "params": 475469,
     "flops": 222822144,
-    "latency_ms": 8.786399848759174
+    "latency_ms": 7.3255859315395355
    },
    "motion_sense": {
     "params": 867911,
     "flops": 311309568,
-    "latency_ms": 8.124399930238724
+    "latency_ms": 6.908273324370384
    },
    "wear": {
     "params": 672851,
     "flops": 209007360,
-    "latency_ms": 6.427299929782748
+    "latency_ms": 5.394086241722107
    },
    "uca_ehar": {
     "params": 508237,
     "flops": 56426624,
-    "latency_ms": 3.106200136244297
+    "latency_ms": 2.6549706235527992
    },
    "w_har": {
     "params": 507850,
     "flops": 662349056,
-    "latency_ms": 23.16319989040494
+    "latency_ms": 18.220365047454834
    }
   },
   "MLP-HAR": {
    "pamap2": {
     "params": 2384005,
     "flops": 199496544,
-    "latency_ms": 4.15709987282753
+    "latency_ms": 3.5810135304927826
    },
    "up_fall": {
     "params": 1066835,
     "flops": 16945488,
-    "latency_ms": 1.4515998773276806
+    "latency_ms": 1.387348398566246
    },
    "uma_fall": {
     "params": 4074159,
     "flops": 379026648,
-    "latency_ms": 6.105100037530065
+    "latency_ms": 6.168742664158344
    },
    "usc_had": {
     "params": 823980,
     "flops": 11254464,
-    "latency_ms": 1.4059001114219427
+    "latency_ms": 1.3295896351337433
    },
    "motion_sense": {
     "params": 386622,
     "flops": 13812768,
-    "latency_ms": 1.1314998846501112
+    "latency_ms": 1.1852523311972618
    },
    "wear": {
     "params": 282162,
     "flops": 7718976,
-    "latency_ms": 1.0512000881135464
+    "latency_ms": 1.0624164715409279
    },
    "uca_ehar": {
     "params": 81336,
     "flops": 1235808,
-    "latency_ms": 0.884499866515398
+    "latency_ms": 0.8699232712388039
    },
    "w_har": {
     "params": 5042457,
     "flops": 75746664,
-    "latency_ms": 3.9053999353200197
+    "latency_ms": 4.599959589540958
    }
   },
   "DeepConvLSTM": {
    "pamap2": {
     "params": 1966285,
     "flops": 1850105088,
-    "latency_ms": 49.45449996739626
+    "latency_ms": 36.06552258133888
    },
    "up_fall": {
     "params": 1638347,
     "flops": 249234176,
-    "latency_ms": 7.119799964129925
+    "latency_ms": 5.854637362062931
    },
    "uma_fall": {
     "params": 1540559,
     "flops": 2832764160,
-    "latency_ms": 68.80769995041192
+    "latency_ms": 52.59657930582762
    },
    "usc_had": {
     "params": 458828,
     "flops": 213476352,
-    "latency_ms": 8.352499920874834
+    "latency_ms": 7.053985260426998
    },
    "motion_sense": {
     "params": 851270,
     "flops": 306917376,
-    "latency_ms": 7.046000100672245
+    "latency_ms": 6.649118848145008
    },
    "wear": {
     "params": 656210,
     "flops": 204615168,
-    "latency_ms": 6.063199834898114
+    "latency_ms": 5.145827308297157
    },
    "uca_ehar": {
     "params": 491596,
     "flops": 54511232,
-    "latency_ms": 2.8264999855309725
+    "latency_ms": 2.537907101213932
    },
    "w_har": {
     "params": 491209,
     "flops": 638142464,
-    "latency_ms": 21.313200006261468
+    "latency_ms": 17.18528103083372
    }
   },
   "MLP-Mixer": {
    "pamap2": {
     "params": 1547051,
     "flops": 1310996128,
-    "latency_ms": 77.55129993893206
+    "latency_ms": 20.401819609105587
    },
    "up_fall": {
     "params": 710873,
     "flops": 221701136,
-    "latency_ms": 13.888300163671374
+    "latency_ms": 5.266426131129265
    },
    "uma_fall": {
     "params": 2089109,
     "flops": 2016105840,
-    "latency_ms": 120.80969987437129
+    "latency_ms": 29.75973393768072
    },
    "usc_had": {
     "params": 695522,
     "flops": 200884272,
-    "latency_ms": 9.440700057893991
+    "latency_ms": 4.911927506327629
    },
    "motion_sense": {
     "params": 736028,
     "flops": 255018056,
-    "latency_ms": 15.278099803254008
+    "latency_ms": 5.678745917975903
    },
    "wear": {
     "params": 659144,
     "flops": 153257520,
-    "latency_ms": 10.217499919235706
+    "latency_ms": 4.282670095562935
    },
    "uca_ehar": {
     "params": 579938,
     "flops": 50986126,
-    "latency_ms": 4.326900001615286
+    "latency_ms": 2.905641682446003
    },
    "w_har": {
     "params": 928367,
     "flops": 504540812,
-    "latency_ms": 22.91300008073449
+    "latency_ms": 8.860340341925621
    }
   },
   "Guan-LSTM": {
    "pamap2": {
     "params": 847117,
     "flops": 1996800,
-    "latency_ms": 15.180099988356233
+    "latency_ms": 15.185443684458733
    },
    "up_fall": {
     "params": 836363,
     "flops": 337920,
-    "latency_ms": 3.663900075480342
+    "latency_ms": 3.824738785624504
    },
    "uma_fall": {
     "params": 834319,
     "flops": 4608000,
-    "latency_ms": 28.879799880087376
+    "latency_ms": 29.46575079113245
    },
    "usc_had": {
     "params": 799756,
     "flops": 1843200,
-    "latency_ms": 13.584800064563751
+    "latency_ms": 15.46214334666729
    },
    "motion_sense": {
     "params": 810502,
     "flops": 460800,
-    "latency_ms": 6.930300034582615
+    "latency_ms": 7.5876303017139435
    },
    "wear": {
     "params": 807442,
     "flops": 1382400,
-    "latency_ms": 7.092199986800551
+    "latency_ms": 8.182981051504612
    },
    "uca_ehar": {
     "params": 800780,
     "flops": 460800,
-    "latency_ms": 3.94099997356534
+    "latency_ms": 4.257095046341419
    },
    "w_har": {
     "params": 800009,
     "flops": 3456000,
-    "latency_ms": 35.42089997790754
+    "latency_ms": 39.17491342872381
    }
   },
   "DeepConvShallowLSTM": {
    "pamap2": {
     "params": 1908301,
     "flops": 3817615360,
-    "latency_ms": 57.670499896630645
+    "latency_ms": 61.83484476059675
    },
    "up_fall": {
     "params": 1580363,
     "flops": 343636480,
-    "latency_ms": 5.9715998359024525
+    "latency_ms": 6.8675195798277855
    },
    "uma_fall": {
     "params": 1482575,
     "flops": 6044117760,
-    "latency_ms": 85.0994000211358
+    "latency_ms": 69.3740751594305
    },
    "usc_had": {
     "params": 400844,
     "flops": 441192960,
-    "latency_ms": 6.997600197792053
+    "latency_ms": 6.120303645730019
    },
    "motion_sense": {
     "params": 793286,
     "flops": 587642880,
-    "latency_ms": 8.01529991440475
+    "latency_ms": 6.877881474792957
    },
    "wear": {
     "params": 598226,
     "flops": 392156160,
-    "latency_ms": 5.9183998964726925
+    "latency_ms": 4.852713085711002
    },
    "uca_ehar": {
     "params": 433612,
     "flops": 85904000,
-    "latency_ms": 1.979700056836009
+    "latency_ms": 2.011614851653576
    },
    "w_har": {
     "params": 433225,
     "flops": 1371422720,
-    "latency_ms": 21.432500099763274
+    "latency_ms": 16.390576027333736
    }
   },
   "SA-HAR": {
    "pamap2": {
     "params": 411982,
     "flops": 381941064,
-    "latency_ms": 11.301199905574322
+    "latency_ms": 9.426368400454521
    },
    "up_fall": {
     "params": 409456,
     "flops": 59962312,
-    "latency_ms": 2.4329000152647495
+    "latency_ms": 2.3796111345291138
    },
    "uma_fall": {
     "params": 411550,
     "flops": 926225160,
-    "latency_ms": 25.591899873688817
+    "latency_ms": 20.622228272259235
    },
    "usc_had": {
     "params": 405385,
     "flops": 343079040,
-    "latency_ms": 5.850400077179074
+    "latency_ms": 5.691410042345524
    },
    "motion_sense": {
     "params": 403411,
     "flops": 153568032,
-    "latency_ms": 3.2554001081734896
+    "latency_ms": 3.478415310382843
    },
    "wear": {
     "params": 409987,
     "flops": 151048224,
-    "latency_ms": 3.1588999554514885
+    "latency_ms": 3.3353781327605247
    },
    "uca_ehar": {
     "params": 405515,
     "flops": 68711040,
-    "latency_ms": 2.052400028333068
+    "latency_ms": 2.204672433435917
    },
    "w_har": {
     "params": 403712,
     "flops": 1205385864,
-    "latency_ms": 25.36400011740625
+    "latency_ms": 22.303097881376743
    }
   }
  }

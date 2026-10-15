@@ -1,0 +1,33 @@
+{
+ "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)",
+ "command": "python src.evaluation.contrasts_robustness",
+ "run_id": "20261016_050540_run_analyses",
+ "timestamp": "2026-10-16T05:08:15",
+ "duration_sec": 154.55,
+ "git_commit": "247b4bf-dirty",
+ "config_sha256": "3ca7acb2b562ae99a8ff0f10851415ee57d0a928c64925b0f5dbc21218bd257c",
+ "config": {
+  "steps": [
+   "src.evaluation.profile_models",
+   "src.evaluation.compare_arena",
+   "src.evaluation.synthesis",
+   "src.evaluation.factor_analysis",
+   "src.evaluation.heldout_analysis",
+   "src.evaluation.pareto",
+   "src.evaluation.pareto --heldout",
+   "src.evaluation.vs_benchmark",
+   "src.evaluation.seeds_summary",
+   "src.evaluation.p5_summary",
+   "src.evaluation.p5_summary recurrencenet",
+   "src.evaluation.contrasts_robustness"
+  ]
+ },
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "data/processed/manifest.json": "sha256:9352e9c400f1b9b54b4fd45206e57c594761c3c84d42a6b908f789bd335c1fd5",
+  "results/metrics/profile.json": "sha256:9534a51c6b6da4d03cf362f841de6023054ce3c8dfe6a523fe35ff57346fa7c7",
+  "src/evaluation/contrasts_robustness.py": "sha256:01e57609821883892f45525e97c3a1b18a0b2fc232e986203acdb0e1a481d2e4"
+ },
+ "output_sha256": "5402112ee4aecea4e63b3262bf8681e426da317bbd70a2d9258a74864d458c67",
+ "synthetic": false
+}

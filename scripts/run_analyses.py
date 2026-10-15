@@ -54,7 +54,11 @@ if __name__ == "__main__":
             print("==", mod, *args, flush=True)
             t0 = time.time() - 1
             sys.argv = [mod, *args]
-            runpy.run_module(mod, run_name="__main__")
+            try:
+                runpy.run_module(mod, run_name="__main__")
+            except SystemExit as e:  # some steps end with sys.exit(main()); only a non-zero code is a failure
+                if e.code not in (0, None):
+                    raise
             for name in [k for k in sys.modules if k.startswith("src.evaluation")]:
                 del sys.modules[name]  # the next step re-imports and so reads what this step wrote
             if record:

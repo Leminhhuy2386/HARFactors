@@ -364,6 +364,70 @@ def access_log_audit() -> dict:
             "ok": not before and all(any(a in l for a in ("H1", "sens1_S2")) for l in s2)}
 
 
+def write_report(gate: dict, gate_path: Path) -> None:
+    """docs/verification_report.md: for a reader who did not follow the run."""
+    o = gate["observed_value"]
+    l3 = o["L3_reexecution"]
+    neg = o["L5_negative_controls"]
+    perm = o["L5_model_permutation"]
+    second = o["L3_second_implementation"]
+    caught = sum(r["caught"] for r in neg)
+    acc = o["L3_5_leakage"]["access_log"]
+    if gate["verdict"] == "PASS":
+        head = (f"All {l3['evaluated']} re-executed runs ({l3['s2_runs_reexecuted']} of them from the confirmatory set S2) "
+                f"regenerate their stored metrics from their checkpoints within the declared tolerance, "
+                f"{l3['exact_match']} of them exactly. An independent REML gives the same variance components for all "
+                f"{len(second)} analyses, permuting model labels removes the model share, the training-split "
+                f"normalisation is a train-only fit, and the test-access log matches the G4 seal. {caught} of "
+                f"{len(neg)} negative controls were caught by the auditor.")
+    else:
+        head = "The verification FAILed; the failing checks are listed below. These results must not be used until resolved."
+    L = ["# Verification report (gate G5)", "", head, "",
+         f"Gate file: `{gate_path.relative_to(ROOT)}` (verdict {gate['verdict']}). Earlier G5 files are kept; "
+         "`G5_results_authenticity.json` (FAIL) explains the first run.", "",
+         "## What was re-executed", "",
+         f"- {l3['gating_cells']} runs, chosen before measuring: every run of S2 on the datasets with a cache on the "
+         "cluster (up_fall, wear, uca_ehar: all 4 models x 3 seeds x 10 splits) and a seeded sample of 6 runs on each "
+         "of the 8 re-executable development datasets.",
+         f"- Exact equality with the stored macro-F1 and accuracy: {l3['exact_match']}; within the tolerance: "
+         f"{l3['within_tolerance']}; outside: {len(l3['mismatches'])}. Largest |delta macro-F1|: "
+         f"{l3['max_abs_delta_macro_f1_points']:.3f} points (float32 inference on a CPU node vs the original GPU).",
+         "- Not re-executable here, verified by their stored records only: S2's pamap2, uma_fall, usc_had, w_har (no "
+         "cache on the cluster; 468 of the 828 H1 runs); the six runs without a checkpoint (S4D on ActRecTut x2, Mamba "
+         "on ActRecTut and UniMiB x4); dsads (below); motion_sense and daphnet (excluded from the analyses).",
+         "- dsads (informative, not gating): " + ", ".join(
+             f"{d['model']} seed {d['seed']} split {d['split']}: {100 * d['macro_f1']:.1f} vs stored "
+             f"{100 * d['stored_macro_f1']:.1f}" for d in l3["informative_dsads"]) +
+         ". On this cluster's dsads cache the checkpoints score at chance, so the cache's windows or channel order "
+         "differ from the ones the stored runs used. dsads stays in S1 on the strength of its records.", "",
+         "## Checkpoints and predictions (Level 2)", "",
+         f"- {o['L2_wellformed']['checked']} checkpoints load strictly, match the recorded parameter count, are finite, "
+         "differ from a fresh initialisation with the run's seed, and carry the run record's fingerprint. Problems: "
+         f"{len(o['L2_wellformed']['problems'])}.",
+         f"- Predictions of different seeds differ: {o['L2_wellformed']['seeds']['groups_with_identical_seed_predictions']} "
+         f"identical groups of {o['L2_wellformed']['seeds']['groups_with_several_seeds']}.", "",
+         "## Aggregates (Level 3)", "", "| Analysis | R (statsmodels) | R (numpy REML) | match |", "|---|---|---|---|"]
+    L += [f"| {s['analysis']} | {s['R_statsmodels']:.4f} | {s['R_numpy_reml']:.4f} | {s['match']} |" for s in second]
+    L += ["", "Figure and table data regenerated in a temporary directory: " +
+          ", ".join(f"{k} {'identical' if v else 'DIFFERENT'}" for k, v in o["L3_4_figures"].items()) + ".", "",
+          "## Leakage (Level 3.5)", "",
+          "- Subject-disjoint splits: asserted for all 13 cached datasets when the splits were exported (G2).",
+          f"- Train-only normalisation: per-channel mean 0 and sd 1 on every re-executed training split; problems: "
+          f"{len(o['L3_5_leakage']['normalisation_problems'])}.",
+          f"- Test-access log: {acc['entries']} entries, none before the seal ({acc['seal_timestamp']}); the confirmatory "
+          "reads are the two pre-registered S2 analyses.",
+          "- Label-shuffle control: not run, because it needs training, which the user ruled out (2026-10-15).", "",
+          "## Negative controls (Level 5)", "", "| Tampering | Check | Caught |", "|---|---|---|"]
+    L += [f"| {r['tampering']} | {r['check']} | {r['caught']} |" for r in neg]
+    L += [f"| model labels permuted within cells ({p['set']}) | model share {p['permuted_model_share']:.4f} "
+          f"(real {p['real_model_share']:.3f}) | {p['caught']} |" for p in perm]
+    L += ["", "The traceability control (an edited number in a metric file) belongs to gate G6.", "",
+          "## Auditor", "", "```", *[x for x in o["audit"]["output"] if x.startswith(("PASS", "FAIL", "SKIPPED"))], "```", ""]
+    if gate.get("rerun_reason"):
+        L += ["## Why this is a rerun", "", gate["rerun_reason"], ""]
+    OUT_REPORT.write_text("\n".join(L))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--workers", type=int, default=1)
@@ -451,6 +515,7 @@ def main() -> None:
         if gate_path != GATE:
             gate["rerun_reason"] = RERUN_REASON
         gate_path.write_text(json.dumps(gate, indent=1, default=str) + "\n")
+        write_report(gate, gate_path)
         PV.ledger_end(run_id, f"G5 {gate['verdict']}", started)
         print("G5", gate["verdict"])
         print(json.dumps({k: (v if k != "L5_negative_controls" else v) for k, v in obs.items()

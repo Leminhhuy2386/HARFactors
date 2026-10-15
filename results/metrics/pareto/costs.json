@@ -56,1352 +56,1352 @@
    "utd_mhad": {
     "params": 26451,
     "flops": 6974592,
-    "latency_ms": 6.006200099363923
+    "latency_ms": 5.100122652947903
    },
    "uci_har": {
     "params": 25590,
     "flops": 7001472,
-    "latency_ms": 6.12360006198287
+    "latency_ms": 5.126252770423889
    },
    "unimib_shar": {
     "params": 25297,
     "flops": 6943744,
-    "latency_ms": 6.225500022992492
+    "latency_ms": 5.0918906927108765
    },
    "actrectut_gestures": {
     "params": 26988,
     "flops": 4521216,
-    "latency_ms": 5.577499978244305
+    "latency_ms": 4.757018759846687
    },
    "opportunity": {
     "params": 46357,
     "flops": 4947968,
-    "latency_ms": 5.79579989425838
+    "latency_ms": 4.94880136102438
    },
    "sad": {
     "params": 34223,
     "flops": 7504256,
-    "latency_ms": 6.159900221973658
+    "latency_ms": 5.168101750314236
    },
    "hapt": {
     "params": 25476,
     "flops": 6972672,
-    "latency_ms": 6.119800033047795
+    "latency_ms": 5.114881321787834
    },
    "dsads": {
     "params": 32483,
     "flops": 3685952,
-    "latency_ms": 5.151999881491065
+    "latency_ms": 4.776995629072189
    },
    "wisdm": {
     "params": 24582,
     "flops": 2777856,
-    "latency_ms": 4.884900059551001
+    "latency_ms": 4.51352633535862
    },
    "daphnet": {
     "params": 25395,
     "flops": 8960640,
-    "latency_ms": 6.262600189074874
+    "latency_ms": 5.441655404865742
    }
   },
   "lawnet_rec": {
    "utd_mhad": {
     "params": 27553,
     "flops": 7044150,
-    "latency_ms": 9.752500103786588
+    "latency_ms": 8.453993126749992
    },
    "uci_har": {
     "params": 26834,
     "flops": 7118832,
-    "latency_ms": 10.567799909040332
+    "latency_ms": 9.836433455348015
    },
    "unimib_shar": {
     "params": 26031,
     "flops": 6973974,
-    "latency_ms": 8.774199988692999
+    "latency_ms": 7.883033715188503
    },
    "actrectut_gestures": {
     "params": 27416,
     "flops": 4596216,
-    "latency_ms": 9.473400190472603
+    "latency_ms": 8.434109389781952
    },
    "opportunity": {
     "params": 49437,
     "flops": 9585466,
-    "latency_ms": 11.135200038552284
+    "latency_ms": 10.68715937435627
    },
    "sad": {
     "params": 37881,
     "flops": 9806116,
-    "latency_ms": 11.67830009944737
+    "latency_ms": 10.103832930326462
    },
    "hapt": {
     "params": 26578,
     "flops": 7042230,
-    "latency_ms": 10.145500069484115
+    "latency_ms": 9.16606280952692
    },
    "dsads": {
     "params": 35431,
     "flops": 4421972,
-    "latency_ms": 9.542300133034587
+    "latency_ms": 9.097086265683174
    },
    "wisdm": {
     "params": 25316,
     "flops": 2790266,
-    "latency_ms": 7.615099893882871
+    "latency_ms": 6.86141662299633
    },
    "daphnet": {
     "params": 26639,
     "flops": 9109752,
-    "latency_ms": 10.141999926418066
+    "latency_ms": 9.448939934372902
    }
   },
   "stylealignnet": {
    "utd_mhad": {
     "params": 38249,
     "flops": 7479126,
-    "latency_ms": 13.331199996173382
+    "latency_ms": 11.996624059975147
    },
    "uci_har": {
     "params": 27239,
     "flops": 7130028,
-    "latency_ms": 11.581300059333444
+    "latency_ms": 9.001792408525944
    },
    "unimib_shar": {
     "params": 32829,
     "flops": 7259746,
-    "latency_ms": 12.610700214281678
+    "latency_ms": 11.265545152127743
    },
    "actrectut_gestures": {
     "params": 28739,
     "flops": 4639896,
-    "latency_ms": 9.45560005493462
+    "latency_ms": 8.093664422631264
    },
    "opportunity": {
     "params": 30709,
     "flops": 5142730,
-    "latency_ms": 8.688900154083967
+    "latency_ms": 7.371779531240463
    },
    "sad": {
     "params": 29809,
     "flops": 7760366,
-    "latency_ms": 11.735999956727028
+    "latency_ms": 9.749476797878742
    },
    "hapt": {
     "params": 30299,
     "flops": 7204056,
-    "latency_ms": 12.261299882084131
+    "latency_ms": 10.269446298480034
    },
    "dsads": {
     "params": 31009,
     "flops": 3828182,
-    "latency_ms": 8.708500070497394
+    "latency_ms": 7.437164895236492
    },
    "wisdm": {
     "params": 25271,
     "flops": 2800524,
-    "latency_ms": 7.634300040081143
+    "latency_ms": 6.465711630880833
    },
    "daphnet": {
     "params": 26081,
     "flops": 9079494,
-    "latency_ms": 12.542800046503544
+    "latency_ms": 10.69976482540369
    }
   },
   "recurrencenet": {
    "utd_mhad": {
     "params": 24675,
     "flops": 6971328,
-    "latency_ms": 5.641700001433492
+    "latency_ms": 4.900233820080757
    },
    "uci_har": {
     "params": 24078,
     "flops": 6998784,
-    "latency_ms": 5.726699950173497
+    "latency_ms": 4.9798088148236275
    },
    "unimib_shar": {
     "params": 24249,
     "flops": 6941888,
-    "latency_ms": 5.66280004568398
+    "latency_ms": 4.953672178089619
    },
    "actrectut_gestures": {
     "params": 24468,
     "flops": 4516608,
-    "latency_ms": 5.151099991053343
+    "latency_ms": 4.592337645590305
    },
    "opportunity": {
     "params": 28013,
     "flops": 4913600,
-    "latency_ms": 5.181600106880069
+    "latency_ms": 4.532312974333763
    },
    "sad": {
     "params": 25743,
     "flops": 7488448,
-    "latency_ms": 5.893700057640672
+    "latency_ms": 5.062537267804146
    },
    "hapt": {
     "params": 24180,
     "flops": 6970368,
-    "latency_ms": 5.900499876588583
+    "latency_ms": 4.989570938050747
    },
    "dsads": {
     "params": 25659,
     "flops": 3673216,
-    "latency_ms": 5.093000130727887
+    "latency_ms": 4.538399167358875
    },
    "wisdm": {
     "params": 23886,
     "flops": 2776704,
-    "latency_ms": 4.881999921053648
+    "latency_ms": 4.2089661583304405
    },
    "daphnet": {
     "params": 23979,
     "flops": 8958144,
-    "latency_ms": 6.405999884009361
+    "latency_ms": 4.891050048172474
    }
   },
   "s4d": {
    "utd_mhad": {
     "params": 27675,
     "flops": 5648256,
-    "latency_ms": 13.93010001629591
+    "latency_ms": 18.984503112733364
    },
    "uci_har": {
     "params": 26502,
     "flops": 5703168,
-    "latency_ms": 13.705500168725848
+    "latency_ms": 18.67619715631008
    },
    "unimib_shar": {
     "params": 26833,
     "flops": 5589376,
-    "latency_ms": 13.506899820640683
+    "latency_ms": 18.536210991442204
    },
    "actrectut_gestures": {
     "params": 27276,
     "flops": 3724800,
-    "latency_ms": 8.641700027510524
+    "latency_ms": 11.675409972667694
    },
    "opportunity": {
     "params": 34373,
     "flops": 4850560,
-    "latency_ms": 8.074700133875012
+    "latency_ms": 11.255752295255661
    },
    "sad": {
     "params": 29831,
     "flops": 6682496,
-    "latency_ms": 13.230199925601482
+    "latency_ms": 18.432541750371456
    },
    "hapt": {
     "params": 26700,
     "flops": 5646336,
-    "latency_ms": 12.884699972346425
+    "latency_ms": 18.828347325325012
    },
    "dsads": {
     "params": 29651,
     "flops": 3199232,
-    "latency_ms": 7.10869999602437
+    "latency_ms": 9.451180696487427
    },
    "wisdm": {
     "params": 26118,
     "flops": 2235648,
-    "latency_ms": 5.981899797916412
+    "latency_ms": 7.539860904216766
    },
    "daphnet": {
     "params": 26307,
     "flops": 7299456,
-    "latency_ms": 17.41049997508526
+    "latency_ms": 23.30686431378126
    }
   },
   "hystnet_sel_clock": {
    "utd_mhad": {
     "params": 23579,
     "flops": 6520128,
-    "latency_ms": 4.311199998483062
+    "latency_ms": 3.3601531758904457
    },
    "uci_har": {
     "params": 22982,
     "flops": 6547584,
-    "latency_ms": 4.258600063621998
+    "latency_ms": 3.3513791859149933
    },
    "unimib_shar": {
     "params": 23153,
     "flops": 6490688,
-    "latency_ms": 4.207600140944123
+    "latency_ms": 3.908103331923485
    },
    "actrectut_gestures": {
     "params": 23372,
     "flops": 4227840,
-    "latency_ms": 3.285699989646673
+    "latency_ms": 3.038511611521244
    },
    "opportunity": {
     "params": 26917,
     "flops": 4642880,
-    "latency_ms": 3.2736998982727528
+    "latency_ms": 2.791658043861389
    },
    "sad": {
     "params": 24647,
     "flops": 7037248,
-    "latency_ms": 4.282200010493398
+    "latency_ms": 3.4976424649357796
    },
    "hapt": {
     "params": 23084,
     "flops": 6519168,
-    "latency_ms": 4.2530999053269625
+    "latency_ms": 3.4901583567261696
    },
    "dsads": {
     "params": 24563,
     "flops": 3447616,
-    "latency_ms": 3.1280999537557364
+    "latency_ms": 2.5682197883725166
    },
    "wisdm": {
     "params": 22790,
     "flops": 2596224,
-    "latency_ms": 2.668599830940366
+    "latency_ms": 2.222806215286255
    },
    "daphnet": {
     "params": 22883,
     "flops": 8380608,
-    "latency_ms": 4.802800016477704
+    "latency_ms": 3.793768584728241
    }
   },
   "lawnet": {
    "utd_mhad": {
     "params": 19033,
     "flops": 4309014,
-    "latency_ms": 4.490400198847055
+    "latency_ms": 4.307877272367477
    },
    "uci_har": {
     "params": 18026,
     "flops": 4397424,
-    "latency_ms": 4.657200071960688
+    "latency_ms": 4.551071673631668
    },
    "unimib_shar": {
     "params": 17303,
     "flops": 4224118,
-    "latency_ms": 3.2914001494646072
+    "latency_ms": 3.173002041876316
    },
    "actrectut_gestures": {
     "params": 18800,
     "flops": 2873208,
-    "latency_ms": 4.654699936509132
+    "latency_ms": 4.135811701416969
    },
    "opportunity": {
     "params": 42597,
     "flops": 8309786,
-    "latency_ms": 5.858000135049224
+    "latency_ms": 6.2964726239442825
    },
    "sad": {
     "params": 29905,
     "flops": 7329540,
-    "latency_ms": 4.994499962776899
+    "latency_ms": 5.271540954709053
    },
    "hapt": {
     "params": 17818,
     "flops": 4306614,
-    "latency_ms": 4.4698999263346195
+    "latency_ms": 4.325517453253269
    },
    "dsads": {
     "params": 27407,
     "flops": 3148180,
-    "latency_ms": 4.70829987898469
+    "latency_ms": 4.791881889104843
    },
    "wisdm": {
     "params": 16412,
     "flops": 1690298,
-    "latency_ms": 3.2015000469982624
+    "latency_ms": 2.7689598500728607
    },
    "daphnet": {
     "params": 17783,
     "flops": 5626200,
-    "latency_ms": 4.415399860590696
+    "latency_ms": 4.4655632227659225
    }
   },
   "lawnet_rand": {
    "utd_mhad": {
     "params": 19033,
     "flops": 4309014,
-    "latency_ms": 4.42669983021915
+    "latency_ms": 4.295457154512405
    },
    "uci_har": {
     "params": 18026,
     "flops": 4397424,
-    "latency_ms": 4.485299810767174
+    "latency_ms": 4.543269984424114
    },
    "unimib_shar": {
     "params": 17303,
     "flops": 4224118,
-    "latency_ms": 3.209100104868412
+    "latency_ms": 3.3415257930755615
    },
    "actrectut_gestures": {
     "params": 18800,
     "flops": 2873208,
-    "latency_ms": 4.451700020581484
+    "latency_ms": 3.89898382127285
    },
    "opportunity": {
     "params": 42597,
     "flops": 8309786,
-    "latency_ms": 6.021000212058425
+    "latency_ms": 5.838874727487564
    },
    "sad": {
     "params": 29905,
     "flops": 7329540,
-    "latency_ms": 5.0963000394403934
+    "latency_ms": 5.553189665079117
    },
    "hapt": {
     "params": 17818,
     "flops": 4306614,
-    "latency_ms": 4.481799900531769
+    "latency_ms": 4.311017692089081
    },
    "dsads": {
     "params": 27407,
     "flops": 3148180,
-    "latency_ms": 4.726900020614266
+    "latency_ms": 4.761978052556515
    },
    "wisdm": {
     "params": 16412,
     "flops": 1690298,
-    "latency_ms": 3.181600011885166
+    "latency_ms": 2.7348678559064865
    },
    "daphnet": {
     "params": 17783,
     "flops": 5626200,
-    "latency_ms": 4.593799822032452
+    "latency_ms": 4.5448532328009605
    }
   },
   "statnet": {
    "utd_mhad": {
     "params": 17931,
     "flops": 4239456,
-    "latency_ms": 0.5455000791698694
+    "latency_ms": 0.5080709233880043
    },
    "uci_har": {
     "params": 16782,
     "flops": 4280064,
-    "latency_ms": 0.575000187382102
+    "latency_ms": 0.5195727571845055
    },
    "unimib_shar": {
     "params": 16569,
     "flops": 4193888,
-    "latency_ms": 0.5370001308619976
+    "latency_ms": 0.5098246037960052
    },
    "actrectut_gestures": {
     "params": 18372,
     "flops": 2798208,
-    "latency_ms": 0.5226999055594206
+    "latency_ms": 0.49070268869400024
    },
    "opportunity": {
     "params": 39517,
     "flops": 3672288,
-    "latency_ms": 0.755400164052844
+    "latency_ms": 0.6475541740655899
    },
    "sad": {
     "params": 26247,
     "flops": 5027680,
-    "latency_ms": 0.7035001181066036
+    "latency_ms": 0.6191795691847801
    },
    "hapt": {
     "params": 16716,
     "flops": 4237056,
-    "latency_ms": 0.5441999528557062
+    "latency_ms": 0.5073072388768196
    },
    "dsads": {
     "params": 24459,
     "flops": 2412160,
-    "latency_ms": 0.5489001050591469
+    "latency_ms": 0.5022576078772545
    },
    "wisdm": {
     "params": 15678,
     "flops": 1677888,
-    "latency_ms": 0.4640000406652689
+    "latency_ms": 0.45334361493587494
    },
    "daphnet": {
     "params": 16539,
     "flops": 5477088,
-    "latency_ms": 0.5773999728262424
+    "latency_ms": 0.5386210978031158
    }
   },
   "quantilenet": {
    "utd_mhad": {
     "params": 20763,
     "flops": 5588928,
-    "latency_ms": 15.476200031116605
+    "latency_ms": 13.048117980360985
    },
    "uci_har": {
     "params": 20166,
     "flops": 5616384,
-    "latency_ms": 14.780400088056922
+    "latency_ms": 13.034528121352196
    },
    "unimib_shar": {
     "params": 20337,
     "flops": 5559488,
-    "latency_ms": 14.627199852839112
+    "latency_ms": 12.969044037163258
    },
    "actrectut_gestures": {
     "params": 20556,
     "flops": 3631872,
-    "latency_ms": 9.557700017467141
+    "latency_ms": 8.645184338092804
    },
    "opportunity": {
     "params": 24101,
     "flops": 4084160,
-    "latency_ms": 9.317200165241957
+    "latency_ms": 8.101621642708778
    },
    "sad": {
     "params": 21831,
     "flops": 6106048,
-    "latency_ms": 16.122400062158704
+    "latency_ms": 13.381794095039368
    },
    "hapt": {
     "params": 20268,
     "flops": 5587968,
-    "latency_ms": 16.016999958083034
+    "latency_ms": 13.060633093118668
    },
    "dsads": {
     "params": 21747,
     "flops": 2982016,
-    "latency_ms": 8.129100082442164
+    "latency_ms": 6.820772774517536
    },
    "wisdm": {
     "params": 19974,
     "flops": 2223744,
-    "latency_ms": 6.9414000026881695
+    "latency_ms": 5.586085841059685
    },
    "daphnet": {
     "params": 20067,
     "flops": 7188672,
-    "latency_ms": 19.674499984830618
+    "latency_ms": 16.5543956682086
    }
   },
   "mamba": {
    "utd_mhad": {
     "params": 21147,
     "flops": 5284800,
-    "latency_ms": 4.983199993148446
+    "latency_ms": 7.397540844976902
    },
    "uci_har": {
     "params": 20550,
     "flops": 5312256,
-    "latency_ms": 4.933599848300219
+    "latency_ms": 7.323735393583775
    },
    "unimib_shar": {
     "params": 20721,
     "flops": 5255360,
-    "latency_ms": 4.848399898037314
+    "latency_ms": 7.370094768702984
    },
    "actrectut_gestures": {
     "params": 20940,
     "flops": 3438336,
-    "latency_ms": 3.3617999870330095
+    "latency_ms": 4.6281274408102036
    },
    "opportunity": {
     "params": 24485,
     "flops": 3902912,
-    "latency_ms": 3.2418000046163797
+    "latency_ms": 4.560737870633602
    },
    "sad": {
     "params": 22215,
     "flops": 5801920,
-    "latency_ms": 4.958900157362223
+    "latency_ms": 7.847323082387447
    },
    "hapt": {
     "params": 20652,
     "flops": 5283840,
-    "latency_ms": 5.048299906775355
+    "latency_ms": 7.709329016506672
    },
    "dsads": {
     "params": 22131,
     "flops": 2831488,
-    "latency_ms": 3.495299955829978
+    "latency_ms": 4.155700094997883
    },
    "wisdm": {
     "params": 20358,
     "flops": 2103936,
-    "latency_ms": 2.6870002038776875
+    "latency_ms": 2.7727531269192696
    },
    "daphnet": {
     "params": 20451,
     "flops": 6798528,
-    "latency_ms": 6.720300065353513
+    "latency_ms": 8.476367220282555
    }
   },
   "hystnet_nomem": {
    "utd_mhad": {
     "params": 19995,
     "flops": 5588928,
-    "latency_ms": 3.4400001168251038
+    "latency_ms": 3.2547442242503166
    },
    "uci_har": {
     "params": 19398,
     "flops": 5616384,
-    "latency_ms": 3.3261000644415617
+    "latency_ms": 3.0607134103775024
    },
    "unimib_shar": {
     "params": 19569,
     "flops": 5559488,
-    "latency_ms": 3.4336999524384737
+    "latency_ms": 3.0531352385878563
    },
    "actrectut_gestures": {
     "params": 19788,
     "flops": 3631872,
-    "latency_ms": 2.547200070694089
+    "latency_ms": 2.30417400598526
    },
    "opportunity": {
     "params": 23333,
     "flops": 4084160,
-    "latency_ms": 2.737300004810095
+    "latency_ms": 2.3471368476748466
    },
    "sad": {
     "params": 21063,
     "flops": 6106048,
-    "latency_ms": 3.382599912583828
+    "latency_ms": 3.0592093244194984
    },
    "hapt": {
     "params": 19500,
     "flops": 5587968,
-    "latency_ms": 3.2192999497056007
+    "latency_ms": 3.0372310429811478
    },
    "dsads": {
     "params": 20979,
     "flops": 2982016,
-    "latency_ms": 2.6692000683397055
+    "latency_ms": 2.2439612075686455
    },
    "wisdm": {
     "params": 19206,
     "flops": 2223744,
-    "latency_ms": 2.303300192579627
+    "latency_ms": 1.9698869436979294
    },
    "daphnet": {
     "params": 19299,
     "flops": 7188672,
-    "latency_ms": 3.602100070565939
+    "latency_ms": 3.338540904223919
    }
   },
   "CNN-HAR": {
    "utd_mhad": {
     "params": 71987,
     "flops": 12488400,
-    "latency_ms": 3.025500103831291
+    "latency_ms": 3.7681013345718384
    },
    "uci_har": {
     "params": 87566,
     "flops": 18705000,
-    "latency_ms": 3.989800112321973
+    "latency_ms": 4.735128954052925
    },
    "unimib_shar": {
     "params": 43977,
     "flops": 6247000,
-    "latency_ms": 1.9928000401705503
+    "latency_ms": 2.4710968136787415
    },
    "actrectut_gestures": {
     "params": 137972,
     "flops": 18303600,
-    "latency_ms": 3.787900088354945
+    "latency_ms": 4.51287068426609
    },
    "opportunity": {
     "params": 1079165,
     "flops": 151065400,
-    "latency_ms": 28.53140002116561
+    "latency_ms": 29.650388285517693
    },
    "sad": {
     "params": 495967,
     "flops": 124673600,
-    "latency_ms": 21.12639998085797
+    "latency_ms": 23.444809019565582
    },
    "hapt": {
     "params": 65972,
     "flops": 12476400,
-    "latency_ms": 2.9909000732004642
+    "latency_ms": 3.7815989926457405
    },
    "dsads": {
     "params": 380779,
     "flops": 39844700,
-    "latency_ms": 7.563400082290173
+    "latency_ms": 8.324699476361275
    },
    "wisdm": {
     "params": 39566,
     "flops": 1968000,
-    "latency_ms": 1.0282001458108425
+    "latency_ms": 1.2116339057683945
    },
    "daphnet": {
     "params": 86363,
     "flops": 24543600,
-    "latency_ms": 4.915800178423524
+    "latency_ms": 6.135067902505398
    }
   },
   "TinyHAR": {
    "utd_mhad": {
     "params": 185084,
     "flops": 10764544,
-    "latency_ms": 5.874000024050474
+    "latency_ms": 4.849872551858425
    },
    "uci_har": {
     "params": 189863,
     "flops": 15335488,
-    "latency_ms": 6.351999938488007
+    "latency_ms": 5.612491630017757
    },
    "unimib_shar": {
     "params": 178290,
     "flops": 6263360,
-    "latency_ms": 5.777599988505244
+    "latency_ms": 4.492349922657013
    },
    "actrectut_gestures": {
     "params": 145197,
     "flops": 14491008,
-    "latency_ms": 3.78140015527606
+    "latency_ms": 3.494860604405403
    },
    "opportunity": {
     "params": 382310,
     "flops": 146981824,
-    "latency_ms": 6.571399979293346
+    "latency_ms": 7.239975966513157
    },
    "sad": {
     "params": 294376,
     "flops": 104367744,
-    "latency_ms": 7.911500055342913
+    "latency_ms": 7.661337032914162
    },
    "hapt": {
     "params": 184109,
     "flops": 10762624,
-    "latency_ms": 5.566200008615851
+    "latency_ms": 5.134189501404762
    },
    "dsads": {
     "params": 186612,
     "flops": 33113344,
-    "latency_ms": 3.554800059646368
+    "latency_ms": 3.5700369626283646
    },
    "wisdm": {
     "params": 83367,
     "flops": 1936512,
-    "latency_ms": 1.8424999434500933
+    "latency_ms": 1.7199041321873665
    },
    "daphnet": {
     "params": 230628,
     "flops": 20035584,
-    "latency_ms": 7.743799826130271
+    "latency_ms": 6.89922459423542
    }
   },
   "Triple-Cross-Attn": {
    "utd_mhad": {
     "params": 454992,
     "flops": 22065616,
-    "latency_ms": 2.494300017133355
+    "latency_ms": 2.725888043642044
    },
    "uci_har": {
     "params": 316731,
     "flops": 32549944,
-    "latency_ms": 2.9460000805556774
+    "latency_ms": 3.431272692978382
    },
    "unimib_shar": {
     "params": 312902,
     "flops": 11020648,
-    "latency_ms": 2.110099885612726
+    "latency_ms": 2.2968044504523277
    },
    "actrectut_gestures": {
     "params": 385857,
     "flops": 33302160,
-    "latency_ms": 2.8609998989850283
+    "latency_ms": 3.4678392112255096
    },
    "opportunity": {
     "params": 588090,
     "flops": 227276960,
-    "latency_ms": 10.106900008395314
+    "latency_ms": 14.73108772188425
    },
    "sad": {
     "params": 785212,
     "flops": 216420640,
-    "latency_ms": 9.5875000115484
+    "latency_ms": 12.052997946739197
    },
    "hapt": {
     "params": 339777,
     "flops": 21835216,
-    "latency_ms": 2.5541000068187714
+    "latency_ms": 2.5062281638383865
    },
    "dsads": {
     "params": 685384,
     "flops": 68551940,
-    "latency_ms": 4.44769999012351
+    "latency_ms": 4.703156650066376
    },
    "wisdm": {
     "params": 252219,
     "flops": 3075352,
-    "latency_ms": 1.744000008329749
+    "latency_ms": 1.8808143213391304
    },
    "daphnet": {
     "params": 289080,
     "flops": 39706004,
-    "latency_ms": 3.4751000348478556
+    "latency_ms": 4.4093262404203415
    }
   },
   "DANA": {
    "utd_mhad": {
     "params": 460763,
     "flops": 111174912,
-    "latency_ms": 4.060900071635842
+    "latency_ms": 3.908330574631691
    },
    "uci_har": {
     "params": 556358,
     "flops": 166753536,
-    "latency_ms": 5.48629998229444
+    "latency_ms": 5.062337964773178
    },
    "unimib_shar": {
     "params": 361169,
     "flops": 55588352,
-    "latency_ms": 2.8623000252991915
+    "latency_ms": 3.1943032518029213
    },
    "actrectut_gestures": {
     "params": 753740,
     "flops": 177871872,
-    "latency_ms": 6.707299966365099
+    "latency_ms": 5.981052294373512
    },
    "opportunity": {
     "params": 4619461,
     "flops": 1478535680,
-    "latency_ms": 47.07960016094148
+    "latency_ms": 32.890879549086094
    },
    "sad": {
     "params": 2227655,
     "flops": 1111681792,
-    "latency_ms": 26.230999967083335
+    "latency_ms": 20.357895642518997
    },
    "hapt": {
     "params": 458828,
     "flops": 111171072,
-    "latency_ms": 3.8322999607771635
+    "latency_ms": 3.277258016169071
    },
    "dsads": {
     "params": 1737683,
     "flops": 416884864,
-    "latency_ms": 15.738599933683872
+    "latency_ms": 10.61180979013443
    },
    "wisdm": {
     "params": 359750,
     "flops": 22235136,
-    "latency_ms": 1.782099949195981
+    "latency_ms": 1.9268477335572243
    },
    "daphnet": {
     "params": 555971,
     "flops": 213443328,
-    "latency_ms": 6.265199976041913
+    "latency_ms": 4.569730721414089
    }
   },
   "TinierHAR": {
    "utd_mhad": {
     "params": 7978,
     "flops": 742456,
-    "latency_ms": 3.612699918448925
+    "latency_ms": 3.3392133191227913
    },
    "uci_har": {
     "params": 9589,
     "flops": 1053460,
-    "latency_ms": 3.667200217023492
+    "latency_ms": 3.4552495926618576
    },
    "unimib_shar": {
     "params": 5344,
     "flops": 429468,
-    "latency_ms": 3.5547998268157244
+    "latency_ms": 3.249550238251686
    },
    "actrectut_gestures": {
     "params": 14395,
     "flops": 1086912,
-    "latency_ms": 2.984900027513504
+    "latency_ms": 2.9286667704582214
    },
    "opportunity": {
     "params": 104788,
     "flops": 8314780,
-    "latency_ms": 4.47889999486506
+    "latency_ms": 5.1542846485972404
    },
    "sad": {
     "params": 48790,
     "flops": 6363440,
-    "latency_ms": 4.93669998832047
+    "latency_ms": 5.077739246189594
    },
    "hapt": {
     "params": 7483,
     "flops": 741496,
-    "latency_ms": 3.616899950429797
+    "latency_ms": 3.34942527115345
    },
    "dsads": {
     "params": 37666,
     "flops": 2343214,
-    "latency_ms": 2.821299945935607
+    "latency_ms": 3.0726008117198944
    },
    "wisdm": {
     "params": 4981,
     "flops": 173784,
-    "latency_ms": 2.240600064396858
+    "latency_ms": 2.2401222959160805
    },
    "daphnet": {
     "params": 9490,
     "flops": 1363776,
-    "latency_ms": 4.306300077587366
+    "latency_ms": 3.919328562915325
    }
   },
   "Attend+Discriminate": {
    "utd_mhad": {
     "params": 374365,
     "flops": 202376960,
-    "latency_ms": 31.73010004684329
+    "latency_ms": 26.020069606602192
    },
    "uci_har": {
     "params": 445384,
     "flops": 284706560,
-    "latency_ms": 34.03199999593198
+    "latency_ms": 26.843621395528316
    },
    "unimib_shar": {
     "params": 299347,
     "flops": 120656896,
-    "latency_ms": 31.324699986726046
+    "latency_ms": 25.14363918453455
    },
    "actrectut_gestures": {
     "params": 593614,
     "flops": 272410112,
-    "latency_ms": 21.390799898654222
+    "latency_ms": 17.625316977500916
    },
    "opportunity": {
     "params": 3492679,
     "flops": 2364652544,
-    "latency_ms": 51.60399992018938
+    "latency_ms": 44.02460157871246
    },
    "sad": {
     "params": 1698889,
     "flops": 1778874624,
-    "latency_ms": 54.41940017044544
+    "latency_ms": 43.99349074810743
    },
    "hapt": {
     "params": 372430,
     "flops": 202373120,
-    "latency_ms": 33.12840010039508
+    "latency_ms": 25.9537510573864
    },
    "dsads": {
     "params": 1331797,
     "flops": 594162816,
-    "latency_ms": 22.048699902370572
+    "latency_ms": 22.501067258417606
    },
    "wisdm": {
     "params": 297928,
     "flops": 40624640,
-    "latency_ms": 10.626900009810925
+    "latency_ms": 9.801977314054966
    },
    "daphnet": {
     "params": 444997,
     "flops": 372533504,
-    "latency_ms": 45.09199992753565
+    "latency_ms": 38.56557887047529
    }
   },
   "DynamicWHAR": {
    "utd_mhad": {
     "params": 1127460,
     "flops": 14757888,
-    "latency_ms": 1.1579999700188637
+    "latency_ms": 1.6729440540075302
    },
    "uci_har": {
     "params": 1419663,
     "flops": 29606784,
-    "latency_ms": 1.3015998993068933
+    "latency_ms": 1.902989111840725
    },
    "unimib_shar": {
     "params": 831258,
     "flops": 4942208,
-    "latency_ms": 0.851399963721633
+    "latency_ms": 1.4813141897320747
    },
    "actrectut_gestures": {
     "params": 2008101,
     "flops": 72978432,
-    "latency_ms": 2.1050998475402594
+    "latency_ms": 2.778680995106697
    },
    "opportunity": {
     "params": 13606830,
     "flops": 7129465216,
-    "latency_ms": 146.74639981240034
+    "latency_ms": 104.7296142205596
    },
    "sad": {
     "params": 6433296,
     "flops": 1214171392,
-    "latency_ms": 17.677400028333068
+    "latency_ms": 18.816810101270676
    },
    "hapt": {
     "params": 1125525,
     "flops": 14754048,
-    "latency_ms": 0.9930001106113195
+    "latency_ms": 1.2498721480369568
    },
    "dsads": {
     "params": 4957284,
     "flops": 652598464,
-    "latency_ms": 11.925600003451109
+    "latency_ms": 10.521236807107925
    },
    "wisdm": {
     "params": 826239,
     "flops": 4230912,
-    "latency_ms": 0.835200073197484
+    "latency_ms": 1.0693976655602455
    },
    "daphnet": {
     "params": 1420956,
     "flops": 30597888,
-    "latency_ms": 1.4595999382436275
+    "latency_ms": 1.4445818960666656
    }
   },
   "DeepConvLSTM-Attn": {
    "utd_mhad": {
     "params": 477404,
     "flops": 106704384,
-    "latency_ms": 4.879500018432736
+    "latency_ms": 4.136862233281136
    },
    "uci_har": {
     "params": 572999,
     "flops": 157851648,
-    "latency_ms": 5.8379999827593565
+    "latency_ms": 4.760549403727055
    },
    "unimib_shar": {
     "params": 377810,
     "flops": 55549184,
-    "latency_ms": 4.11989982239902
+    "latency_ms": 3.766232170164585
    },
    "actrectut_gestures": {
     "params": 770381,
     "flops": 158323968,
-    "latency_ms": 5.300899967551231
+    "latency_ms": 4.231367260217667
    },
    "opportunity": {
     "params": 4636102,
     "flops": 1284489472,
-    "latency_ms": 32.93889993801713
+    "latency_ms": 26.685419492423534
    },
    "sad": {
     "params": 2244296,
     "flops": 1027446784,
-    "latency_ms": 29.15049996227026
+    "latency_ms": 22.527401335537434
    },
    "hapt": {
     "params": 475469,
     "flops": 106700544,
-    "latency_ms": 4.7830999828875065
+    "latency_ms": 4.193414933979511
    },
    "dsads": {
     "params": 1754324,
     "flops": 352329856,
-    "latency_ms": 9.56530007533729
+    "latency_ms": 8.758647367358208
    },
    "wisdm": {
     "params": 376391,
     "flops": 19223808,
-    "latency_ms": 1.630599843338132
+    "latency_ms": 1.9271252676844597
    },
    "daphnet": {
     "params": 572612,
     "flops": 205928448,
-    "latency_ms": 6.865500006824732
+    "latency_ms": 5.845764651894569
    }
   },
   "MLP-HAR": {
    "utd_mhad": {
     "params": 217227,
     "flops": 3114288,
-    "latency_ms": 1.5842001885175705
+    "latency_ms": 0.9836135432124138
    },
    "uci_har": {
     "params": 242874,
     "flops": 5226768,
-    "latency_ms": 1.0125001426786184
+    "latency_ms": 1.0935384780168533
    },
    "unimib_shar": {
     "params": 199289,
     "flops": 1369800,
-    "latency_ms": 0.9385999292135239
+    "latency_ms": 0.9216358885169029
    },
    "actrectut_gestures": {
     "params": 210312,
     "flops": 5136480,
-    "latency_ms": 0.9709999430924654
+    "latency_ms": 1.0018758475780487
    },
    "opportunity": {
     "params": 10316453,
     "flops": 244395480,
-    "latency_ms": 6.999099859967828
+    "latency_ms": 12.280761264264584
    },
    "sad": {
     "params": 2291959,
     "flops": 98298720,
-    "latency_ms": 2.6495999190956354
+    "latency_ms": 2.5730812922120094
    },
    "hapt": {
     "params": 216132,
     "flops": 3112128,
-    "latency_ms": 0.9858000557869673
+    "latency_ms": 0.9813876822590828
    },
    "dsads": {
     "params": 1241995,
     "flops": 25681320,
-    "latency_ms": 1.3917000032961369
+    "latency_ms": 1.641053706407547
    },
    "wisdm": {
     "params": 37050,
     "flops": 266544,
-    "latency_ms": 0.8630999363958836
+    "latency_ms": 0.8145859465003014
    },
    "daphnet": {
     "params": 362187,
     "flops": 7869960,
-    "latency_ms": 1.0830000974237919
+    "latency_ms": 1.2384150177240372
    }
   },
   "DeepConvLSTM": {
    "utd_mhad": {
     "params": 460763,
     "flops": 102312192,
-    "latency_ms": 4.5050999615341425
+    "latency_ms": 4.115326330065727
    },
    "uci_har": {
     "params": 556358,
     "flops": 153459456,
-    "latency_ms": 5.5899000726640224
+    "latency_ms": 4.584509879350662
    },
    "unimib_shar": {
     "params": 361169,
     "flops": 51156992,
-    "latency_ms": 3.807300003245473
+    "latency_ms": 3.620604984462261
    },
    "actrectut_gestures": {
     "params": 753740,
     "flops": 155715072,
-    "latency_ms": 4.613500088453293
+    "latency_ms": 4.117731936275959
    },
    "opportunity": {
     "params": 4619461,
     "flops": 1282078720,
-    "latency_ms": 34.23400013707578
+    "latency_ms": 25.937773287296295
    },
    "sad": {
     "params": 2227655,
     "flops": 1023054592,
-    "latency_ms": 29.066000133752823
+    "latency_ms": 24.491912685334682
    },
    "hapt": {
     "params": 458828,
     "flops": 102308352,
-    "latency_ms": 5.523300031200051
+    "latency_ms": 4.645968787372112
    },
    "dsads": {
     "params": 1737683,
     "flops": 350414464,
-    "latency_ms": 9.741300018504262
+    "latency_ms": 10.391546413302422
    },
    "wisdm": {
     "params": 359750,
     "flops": 17803776,
-    "latency_ms": 1.5340999234467745
+    "latency_ms": 1.8555214628577232
    },
    "daphnet": {
     "params": 555971,
     "flops": 200149248,
-    "latency_ms": 6.8472998682409525
+    "latency_ms": 6.411436013877392
    }
   },
   "MLP-Mixer": {
    "utd_mhad": {
     "params": 621089,
     "flops": 101770520,
-    "latency_ms": 5.675899796187878
+    "latency_ms": 4.101132042706013
    },
    "uci_har": {
     "params": 618380,
     "flops": 102372644,
-    "latency_ms": 7.487800205126405
+    "latency_ms": 4.066837020218372
    },
    "unimib_shar": {
     "params": 580583,
     "flops": 50886156,
-    "latency_ms": 3.703800030052662
+    "latency_ms": 3.3395811915397644
    },
    "actrectut_gestures": {
     "params": 639794,
     "flops": 128955840,
-    "latency_ms": 8.986000204458833
+    "latency_ms": 4.6653784811496735
    },
    "opportunity": {
     "params": 1323107,
     "flops": 1020323852,
-    "latency_ms": 70.00319985672832
+    "latency_ms": 18.574081361293793
    },
    "sad": {
     "params": 1128317,
     "flops": 766266352,
-    "latency_ms": 49.51819987036288
+    "latency_ms": 14.185694046318531
    },
    "hapt": {
     "params": 619154,
     "flops": 101766680,
-    "latency_ms": 6.2957999762147665
+    "latency_ms": 4.051129333674908
    },
    "dsads": {
     "params": 757313,
     "flops": 281069786,
-    "latency_ms": 24.244500091299415
+    "latency_ms": 6.718826480209827
    },
    "wisdm": {
     "params": 555428,
     "flops": 20089656,
-    "latency_ms": 2.9944998677819967
+    "latency_ms": 2.7885520830750465
    },
    "daphnet": {
     "params": 638633,
     "flops": 129342336,
-    "latency_ms": 9.537500096485019
+    "latency_ms": 4.4759828597307205
    }
   },
   "Guan-LSTM": {
    "utd_mhad": {
     "params": 803611,
     "flops": 2073600,
-    "latency_ms": 7.853399962186813
+    "latency_ms": 8.964275941252708
    },
    "uci_har": {
     "params": 801286,
     "flops": 460800,
-    "latency_ms": 8.287200005725026
+    "latency_ms": 8.537055924534798
    },
    "unimib_shar": {
     "params": 797969,
     "flops": 1305600,
-    "latency_ms": 7.425699848681688
+    "latency_ms": 9.055348113179207
    },
    "actrectut_gestures": {
     "params": 808972,
     "flops": 589824,
-    "latency_ms": 5.40510006248951
+    "latency_ms": 5.838073790073395
    },
    "opportunity": {
     "params": 928005,
     "flops": 230400,
-    "latency_ms": 5.0698998384177685
+    "latency_ms": 6.262891925871372
    },
    "sad": {
     "params": 853767,
     "flops": 537600,
-    "latency_ms": 7.879200158640742
+    "latency_ms": 8.452950045466423
    },
    "hapt": {
     "params": 799756,
     "flops": 921600,
-    "latency_ms": 7.4859000742435455
+    "latency_ms": 8.656973950564861
    },
    "dsads": {
     "params": 841491,
     "flops": 729600,
-    "latency_ms": 4.338399972766638
+    "latency_ms": 4.8735300078988075
    },
    "wisdm": {
     "params": 795142,
     "flops": 184320,
-    "latency_ms": 3.407200099900365
+    "latency_ms": 4.206585697829723
    },
    "daphnet": {
     "params": 800515,
     "flops": 294912,
-    "latency_ms": 9.5336998347193
+    "latency_ms": 10.488181374967098
    }
   },
   "DeepConvShallowLSTM": {
    "utd_mhad": {
     "params": 402779,
     "flops": 196584960,
-    "latency_ms": 3.5302999895066023
+    "latency_ms": 3.7123598158359528
    },
    "uci_har": {
     "params": 498374,
     "flops": 293905920,
-    "latency_ms": 4.614800214767456
+    "latency_ms": 4.575427621603012
    },
    "unimib_shar": {
     "params": 303185,
     "flops": 98391040,
-    "latency_ms": 2.4383999407291412
+    "latency_ms": 3.2879095524549484
    },
    "actrectut_gestures": {
     "params": 695756,
     "flops": 269620992,
-    "latency_ms": 3.8948000874370337
+    "latency_ms": 4.390398971736431
    },
    "opportunity": {
     "params": 4561477,
     "flops": 2172326400,
-    "latency_ms": 32.464300049468875
+    "latency_ms": 31.07292577624321
    },
    "sad": {
     "params": 2169671,
     "flops": 1958443520,
-    "latency_ms": 30.48560000024736
+    "latency_ms": 29.354944825172424
    },
    "hapt": {
     "params": 400844,
     "flops": 196162560,
-    "latency_ms": 4.023000132292509
+    "latency_ms": 3.879544325172901
    },
    "dsads": {
     "params": 1679699,
     "flops": 551719040,
-    "latency_ms": 9.169799974188209
+    "latency_ms": 9.71225369721651
    },
    "wisdm": {
     "params": 301766,
     "flops": 24572160,
-    "latency_ms": 0.9943000040948391
+    "latency_ms": 1.2617716565728188
    },
    "daphnet": {
     "params": 497987,
     "flops": 396572928,
-    "latency_ms": 6.242299918085337
+    "latency_ms": 5.858013406395912
    }
   },
   "SA-HAR": {
    "utd_mhad": {
     "params": 415480,
     "flops": 148526280,
-    "latency_ms": 3.4415998961776495
+    "latency_ms": 4.023568704724312
    },
    "uci_har": {
     "params": 402241,
     "flops": 149766432,
-    "latency_ms": 3.5158998798578978
+    "latency_ms": 3.7070102989673615
    },
    "unimib_shar": {
     "params": 408160,
     "flops": 147245320,
-    "latency_ms": 3.3503000158816576
+    "latency_ms": 3.544893115758896
    },
    "actrectut_gestures": {
     "params": 406555,
     "flops": 92173440,
-    "latency_ms": 2.6134999934583902
+    "latency_ms": 2.9826927930116653
    },
    "opportunity": {
     "params": 417800,
     "flops": 115758280,
-    "latency_ms": 5.1460000686347485
+    "latency_ms": 6.823708303272724
    },
    "sad": {
     "params": 409440,
     "flops": 171309960,
-    "latency_ms": 5.022300174459815
+    "latency_ms": 6.184078752994537
    },
    "hapt": {
     "params": 405385,
     "flops": 148506240,
-    "latency_ms": 3.2063000835478306
+    "latency_ms": 3.82377952337265
    },
    "dsads": {
     "params": 414942,
     "flops": 76745544,
-    "latency_ms": 2.512600040063262
+    "latency_ms": 3.61590925604105
    },
    "wisdm": {
     "params": 401461,
     "flops": 53367072,
-    "latency_ms": 1.9087998662143946
+    "latency_ms": 2.216251567006111
    },
    "daphnet": {
     "params": 400582,
     "flops": 199953480,
-    "latency_ms": 4.044600063934922
+    "latency_ms": 4.538536071777344
    }
   }
  }

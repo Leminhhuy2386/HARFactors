@@ -1,0 +1,1397 @@
+node hpc02.local, job 86771, Fri Oct 16 04:54:10 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+== src.evaluation.profile_models
+[STEP 3] Creating AttendDiscriminate HAR model ...
+[STEP 3] Creating AttendDiscriminate HAR model ...
+[STEP 3] Creating AttendDiscriminate HAR model ...
+[STEP 3] Creating AttendDiscriminate HAR model ...
+{
+ "imported_rows": 156,
+ "new_rows": 156,
+ "params_equal": 156,
+ "params_differ": [],
+ "missing_from_import": []
+}
+== src.evaluation.compare_arena
+# Our models against the WHAR Arena paper table (Figure 6)
+
+Paper numbers: Figure 6 of the WHAR Arena paper (macro-F1 %, mean over subject splits, one run). Ours: same paper-era code, data, splits and protocol, training seed 0 (the protocol run); the mean over seeds 0-2 is in a separate column. No new training for this comparison.
+
+Datasets: the 10 of P5. Dev = used to screen rounds 6-7 (and UTD-MHAD for every earlier round); held-out = never used to choose anything. The paper's own mean (and the Leaderboard on the WHAR Arena website) is over 30 datasets; the means below are over these 10 only, which are easier on average (CNN-HAR 67.7 over 30, 73.2 over these 10, 65.0 over the other 20).
+
+## 0. Is a paper cell comparable to one of ours?
+
+Our harness re-ran all 17 Arena models on the 4 dev datasets (D:\Projects\HAR\paper-era):
+
+| Dataset | Models | Spearman rho vs paper | Mean delta (ours - paper) | Mean abs delta |
+|---|---|---|---|---|
+| UTD-MHAD | 17 | 0.975 | -0.11 | 1.00 |
+| UCI-HAR | 17 | 0.953 | +0.04 | 0.47 |
+| UniMiB | 17 | 0.983 | -0.86 | 1.17 |
+| ActRecTut | 17 | 0.897 | -1.55 | 2.55 |
+
+Run-to-run noise between the paper's GPU and ours is about 1 point per cell (larger on ActRecTut, 2 splits). Classical models (RF, k-NN) match to the digit, so the splits are the same.
+
+## 1. All 23 models over the 10 datasets
+
+Ours at seed 0. Mean rank: per dataset among all 23, then averaged (1 = best). Top 3 = datasets where the model is in the first three. Params on the UTD-MHAD configuration.
+
+| # | Model | Params | Mean F1 (10) | Dev (4) | Held-out (6) | Without ActRecTut (9) | Mean rank /23 | Top 3 | Ours, mean seeds 0-2 | Paper mean (30 ds) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | TinyHAR | 185.1k | 73.13 | 67.89 | 76.63 | 75.59 | 5.60 | 4 |  | 67.61 |
+| 2 | CNN-HAR | 72.0k | 73.18 | 69.94 | 75.34 | 75.51 | 6.20 | 4 |  | 67.72 |
+| 3 | **RecurrenceNet** | 24.7k | 72.25 | 67.09 | 75.69 | 76.38 | 6.20 | 3 | 72.01 |  |
+| 4 | DANA | 460.8k | 72.86 | 69.86 | 74.86 | 74.60 | 7.00 | 5 |  | 67.02 |
+| 5 | Attend+Discriminate | 374.4k | 72.74 | 69.00 | 75.24 | 74.85 | 7.60 | 1 |  | 66.61 |
+| 6 | Triple-Cross-Attn | 455.0k | 73.48 | 69.91 | 75.87 | 74.82 | 7.80 | 2 |  | 67.57 |
+| 7 | TinierHAR | 8.0k | 71.39 | 64.94 | 75.68 | 74.30 | 7.95 | 1 |  | 66.73 |
+| 8 | DeepConvLSTM-Attn | 477.4k | 71.20 | 66.39 | 74.40 | 73.27 | 9.70 | 1 |  | 64.67 |
+| 9 | **S4D** | 27.7k | 71.25 | 68.10 | 73.35 | 74.31 | 10.30 | 1 | 71.29 |  |
+| 10 | MLP-HAR | 217.2k | 69.31 | 60.20 | 75.38 | 72.15 | 11.60 | 2 |  | 64.23 |
+| 11 | **HysteresisNet sel+clock** | 23.6k | 70.25 | 66.41 | 72.81 | 73.32 | 11.90 | 1 | 70.69 |  |
+| 12 | **QuantileNet** | 20.8k | 68.86 | 65.76 | 70.92 | 72.59 | 12.40 | 1 | 69.70 |  |
+| 13 | DeepConvLSTM | 460.8k | 68.97 | 63.12 | 72.88 | 71.28 | 12.50 | 0 |  | 63.61 |
+| 14 | DynamicWHAR | 1.13M | 69.61 | 62.69 | 74.22 | 72.73 | 12.60 | 1 |  | 66.27 |
+| 15 | MLP-Mixer | 621.1k | 69.21 | 63.61 | 72.95 | 72.70 | 12.90 | 0 |  | 62.46 |
+| 16 | Random Forest | – | 65.30 | 55.57 | 71.79 | 67.90 | 13.40 | 3 |  | 65.10 |
+| 17 | **Mamba** | 21.1k | 67.90 | 63.68 | 70.71 | 71.92 | 13.40 | 0 | 68.91 |  |
+| 18 | DeepConvShallowLSTM | 402.8k | 61.83 | 48.47 | 70.74 | 63.49 | 14.90 | 0 |  | 59.96 |
+| 19 | Guan-LSTM | 803.6k | 63.32 | 51.78 | 71.01 | 66.42 | 15.25 | 0 |  | 60.07 |
+| 20 | **No memory (control)** | 20.0k | 65.63 | 61.95 | 68.09 | 68.72 | 15.90 | 0 | 66.06 |  |
+| 21 | SA-HAR | 415.5k | 61.82 | 55.75 | 65.86 | 65.24 | 19.60 | 0 |  | 59.84 |
+| 22 | SVM | – | 53.11 | 35.86 | 64.61 | 55.95 | 19.60 | 0 |  | 50.15 |
+| 23 | k-NN | – | 51.83 | 39.29 | 60.18 | 54.40 | 21.70 | 0 |  | 46.25 |
+
+## 2. Per dataset: our F1 and its rank among the 17 paper models
+
+Cell: seed-0 F1 (rank if inserted into the paper's 17; 1 = above all of them).
+
+| Dataset | Splits | Paper best | CNN-HAR | Paper median | RecurrenceNet | S4D | HysteresisNet sel+clock | QuantileNet | Mamba | No memory (control) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| UTD-MHAD | 8 | 68.2 CNN-HAR | 68.2 | 61.0 | 74.6 (#1) | 73.8 (#1) | 73.4 (#1) | 74.3 (#1) | 70.7 (#1) | 67.6 (#2) |
+| UCI-HAR | 10 | 96.1 TinyHAR | 96.0 | 93.0 | 96.7 (#1) | 94.8 (#6) | 94.3 (#7) | 94.7 (#6) | 93.5 (#8) | 92.7 (#10) |
+| UniMiB | 10 | 63.3 CNN-HAR | 63.3 | 55.5 | 62.0 (#3) | 60.1 (#5) | 55.3 (#10) | 58.8 (#5) | 58.8 (#5) | 49.6 (#12) |
+| ActRecTut | 2 | 61.5 Triple-Cross-Attn | 52.2 | 45.2 | 35.1 (#15) | 43.8 (#11) | 42.7 (#11) | 35.2 (#15) | 31.7 (#15) | 37.9 (#13) |
+| Opportunity * | 4 | 74.7 MLP-HAR | 63.1 | 65.1 | 64.9 (#10) | 61.0 (#14) | 64.6 (#10) | 60.9 (#14) | 61.9 (#13) | 57.8 (#18) |
+| SAD * | 10 | 98.2 Random Forest | 95.6 | 93.4 | 92.0 (#10) | 89.4 (#16) | 87.1 (#16) | 82.3 (#16) | 82.8 (#16) | 80.8 (#18) |
+| HAPT * | 10 | 84.8 CNN-HAR | 84.8 | 79.4 | 83.2 (#3) | 82.1 (#3) | 84.4 (#2) | 82.7 (#3) | 82.8 (#3) | 81.1 (#6) |
+| DSADS * | 8 | 89.3 Random Forest | 86.9 | 84.4 | 86.2 (#6) | 85.2 (#9) | 80.1 (#15) | 80.9 (#15) | 80.8 (#15) | 79.1 (#15) |
+| WISDM * | 10 | 85.5 DANA | 81.4 | 83.0 | 84.3 (#4) | 82.5 (#11) | 80.9 (#13) | 78.4 (#13) | 76.5 (#13) | 69.1 (#15) |
+| Daphnet * | 10 | 45.4 TinierHAR | 40.2 | 40.2 | 43.5 (#4) | 39.8 (#10) | 39.7 (#10) | 40.2 (#10) | 39.4 (#10) | 40.7 (#7) |
+
+\* held-out dataset.
+
+Same table, our models at the mean over seeds 0-2:
+
+| Dataset | RecurrenceNet | S4D | HysteresisNet sel+clock | QuantileNet | Mamba | No memory (control) |
+|---|---|---|---|---|---|---|
+| UTD-MHAD | 73.3 (#1) | 73.3 (#1) | 73.9 (#1) | 73.8 (#1) | 71.3 (#1) | 67.6 (#2) |
+| UCI-HAR | 96.6 (#1) | 94.9 (#6) | 94.5 (#7) | 94.7 (#6) | 93.9 (#8) | 92.8 (#10) |
+| UniMiB | 60.8 (#5) | 60.5 (#5) | 55.5 (#10) | 59.7 (#5) | 59.1 (#5) | 50.0 (#12) |
+| ActRecTut | 40.4 (#13) | 43.4 (#11) | 43.6 (#11) | 36.1 (#14) | 36.7 (#14) | 36.5 (#14) |
+| Opportunity | 61.6 (#13) | 61.2 (#14) | 63.8 (#10) | 63.4 (#10) | 62.3 (#12) | 59.6 (#15) |
+| SAD | 92.9 (#10) | 87.3 (#16) | 87.6 (#16) | 85.7 (#16) | 86.3 (#16) | 84.1 (#16) |
+| HAPT | 83.3 (#3) | 83.6 (#3) | 84.3 (#2) | 82.1 (#3) | 82.4 (#3) | 81.3 (#6) |
+| DSADS | 85.6 (#9) | 84.4 (#9) | 83.0 (#13) | 81.3 (#15) | 79.6 (#15) | 79.9 (#15) |
+| WISDM | 82.9 (#11) | 83.0 (#9) | 80.4 (#13) | 79.5 (#13) | 77.9 (#13) | 67.8 (#15) |
+| Daphnet | 42.7 (#6) | 41.4 (#7) | 40.3 (#9) | 40.7 (#7) | 39.6 (#10) | 41.1 (#7) |
+
+## 3. Paired over the 10 datasets against the strongest paper models
+
+Cell: mean difference in F1 points (ours - paper model), wins-losses over the 10 datasets, Wilcoxon signed-rank p with Holm correction within each row. TinierHAR is added as the only paper model at or below our size. "Best per dataset" is the strongest paper model on each dataset (an oracle pick, biased upward).
+
+| Ours | Triple-Cross-Attn | CNN-HAR | TinyHAR | DANA | Attend+Discriminate | TinierHAR | Best per dataset |
+|---|---|---|---|---|---|---|---|
+| RecurrenceNet | -1.23 (8-2) p=1.00 | -0.93 (5-5) p=1.00 | -0.88 (4-6) p=1.00 | -0.61 (4-6) p=1.00 | -0.49 (8-2) p=1.00 | +0.87 (6-4) p=1.00 | -4.45 (2-8) p=0.45 |
+| S4D | -2.23 (3-7) p=0.80 | -1.93 (2-8) p=0.50 | -1.88 (3-7) p=0.80 | -1.61 (3-7) p=0.80 | -1.49 (3-7) p=0.80 | -0.13 (3-7) p=0.80 | -5.45 (1-9) p=0.26 |
+| HysteresisNet sel+clock | -3.23 (3-7) p=0.65 | -2.93 (2-8) p=0.50 | -2.88 (2-8) p=0.65 | -2.61 (3-7) p=0.70 | -2.49 (4-6) p=0.70 | -1.13 (2-8) p=0.70 | -6.45 (1-9) p=0.10 |
+| QuantileNet | -4.62 (3-7) p=0.53 | -4.32 (1-9) p=0.29 | -4.27 (3-7) p=0.53 | -4.00 (2-8) p=0.53 | -3.88 (3-7) p=0.53 | -2.53 (3-7) p=0.53 | -7.85 (1-9) p=0.14 |
+| Mamba | -5.59 (3-7) p=0.32 | -5.28 (1-9) p=0.12 | -5.24 (3-7) p=0.32 | -4.97 (2-8) p=0.32 | -4.85 (3-7) p=0.32 | -3.49 (3-7) p=0.32 | -8.81 (1-9) p=0.04 |
+| No memory (control) | -7.85 (1-9) p=0.02 | -7.55 (1-9) p=0.02 | -7.50 (2-8) p=0.03 | -7.23 (1-9) p=0.03 | -7.11 (1-9) p=0.02 | -5.75 (1-9) p=0.03 | -11.07 (0-10) p=0.01 |
+
+## 4. Our other models on the dev datasets (seed 0)
+
+Models without the full 10-dataset run: earlier rounds (UTD-MHAD only, some also ActRecTut/UniMiB) and rounds 6-7 that stopped at stage 2. Cell: F1 (rank among the paper's 17).
+
+| Model | Params | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut |
+|---|---|---|---|---|---|
+| stylealignnet | 38.2k | 75.2 (#1) | 96.2 (#1) | 59.3 (#5) | 48.7 (#7) |
+| recstat_mean | 25.8k | 74.3 (#1) |  |  | 38.7 (#13) |
+| DualMemNet | 26.7k | 73.9 (#1) |  |  |  |
+| lawnet_rec | 27.6k | 73.7 (#1) | 96.4 (#1) | 63.7 (#1) | 43.8 (#11) |
+| isochron_rec | 36.1k | 73.6 (#1) |  |  | 53.8 (#3) |
+| recstat_std | 25.8k | 73.3 (#1) |  |  | 46.0 (#9) |
+| HysteresisNet mm | 21.3k | 72.1 (#1) |  |  |  |
+| isochron_rec_uniform | 36.1k | 71.9 (#1) |  |  | 52.5 (#5) |
+| HysteresisNet sel | 23.5k | 71.9 (#1) |  |  |  |
+| HysteresisNet k6 | 26.7k | 71.8 (#1) |  |  |  |
+| HysteresisNet sel k6 | 29.9k | 71.8 (#1) |  |  |  |
+| recnet_meanstd_nonorm | 25.4k | 71.6 (#1) |  |  | 52.4 (#5) |
+| recstatnet | 26.5k | 71.6 (#1) | 96.4 (#1) | 62.1 (#3) | 63.6 (#1) |
+| RainflowNet | 23.5k | 71.2 (#1) | 95.6 (#4) | 58.2 (#7) | 32.5 (#15) |
+| recstat_range | 26.0k | 71.1 (#1) |  |  | 52.7 (#4) |
+| lawnet | 19.0k | 70.9 (#1) | 94.9 (#6) | 58.4 (#7) | 44.5 (#10) |
+| recnet_meanstd | 25.6k | 70.9 (#1) |  |  | 49.3 (#7) |
+| HysteresisNet clock | 20.4k | 70.7 (#1) |  |  |  |
+| OrdinalNet | 18.7k | 70.5 (#1) | 96.3 (#1) | 56.3 (#9) | 40.7 (#13) |
+| recnet_nonorm | 24.5k | 70.5 (#1) |  |  | 38.9 (#13) |
+| HysteresisNet fixed r | 20.0k | 70.5 (#1) |  |  |  |
+| HysteresisNet | 20.4k | 70.3 (#1) |  |  |  |
+| TropicalNet | 26.4k | 70.3 (#1) |  |  |  |
+| isochron_uniform | 16.4k | 70.1 (#1) |  |  | 58.9 (#2) |
+| statnet | 17.9k | 69.6 (#1) | 92.1 (#12) | 53.9 (#11) | 47.2 (#8) |
+| isochron | 16.4k | 69.5 (#1) |  |  | 54.7 (#3) |
+| ReturnMapNet | 21.7k | 69.4 (#1) | 91.7 (#13) | 50.3 (#12) | 37.5 (#14) |
+| lawnet_rand | 19.0k | 68.5 (#1) | 95.6 (#4) | 58.4 (#7) | 45.5 (#9) |
+| levelnet_plane | 29.9k | 65.6 (#5) |  |  | 48.1 (#8) |
+| bhnet | 20.2k | 65.0 (#5) |  |  |  |
+| VortexNet | 17.0k | 63.4 (#8) |  |  |  |
+| parliamentbody | 30.1k | 60.0 (#11) |  |  |  |
+| levelnet | 20.5k | 58.7 (#12) |  |  | 48.3 (#7) |
+| parliamentnet | 21.6k | 58.6 (#12) |  |  |  |
+| Edge-SSM osc | 34.0k | 53.8 (#13) |  | 50.3 (#12) | 48.6 (#7) |
+| Edge-SSM tau input | 33.2k | 53.2 (#13) |  | 30.7 (#16) | 33.0 (#15) |
+| Edge-SSM no phi | 31.3k | 51.6 (#13) |  | 37.5 (#16) | 31.7 (#15) |
+| Edge-SSM v2 | 33.6k | 51.6 (#13) |  | 42.4 (#13) | 28.6 (#16) |
+| Edge-SSM tau fixed | 33.2k | 51.6 (#13) |  | 40.8 (#14) | 28.5 (#17) |
+| GRU | 40.5k | 50.1 (#14) |  |  | 36.0 (#14) |
+| stylealign_elastic | 13.5k | 49.8 (#14) |  |  | 34.1 (#15) |
+| Edge-SSM-S | 5.3k | 47.8 (#14) |  | 33.1 (#16) | 35.9 (#14) |
+| Edge-SSM EMA | 33.6k | 46.5 (#14) |  |  | 36.5 (#14) |
+| forestnet | 29.1k | 4.4 (#18) |  |  |  |
+
+Paper best on the dev datasets: UTD-MHAD 68.2, UCI-HAR 96.1, UniMiB 63.3, ActRecTut 61.5.
+
+## 5. Where the classical Random Forest wins (paper table, all 30 datasets)
+
+Random Forest on tsfresh minimal features minus the best of the 14 deep paper models, against the number of channels (paper Table 3). Spearman rho = 0.71 (p = 1.3e-05). Random Forest is the best model on 7 of 11 datasets with at least 20 channels and on 2 of 19 with fewer.
+
+| Dataset | Channels | RF - best deep | Best model |
+|---|---|---|---|
+| wisdm | 3 | -13.9 | DANA |
+| unimib_shar | 3 | -18.8 | CNN-HAR |
+| hang_time | 3 | -5.4 | Guan-LSTM |
+| hhar | 6 | -7.1 | CNN-HAR |
+| utd_mhad | 6 | -17.0 | CNN-HAR |
+| hapt | 6 | -17.7 | CNN-HAR |
+| usc_had | 6 | -6.1 | MLP-Mixer |
+| wisdm_19_phone | 6 | -5.4 | DynamicWHAR |
+| wisdm_19_watch | 6 | -11.5 | DANA |
+| harth | 6 | -16.8 | Triple-Cross-Attn |
+| har70 | 6 | -11.7 | CNN-HAR |
+| w_har | 7 | +0.4 | Random Forest |
+| uca_ehar | 7 | -12.5 | DANA |
+| uci_har | 9 | -11.4 | TinyHAR |
+| daphnet | 9 | -11.6 | TinierHAR |
+| wear | 12 | -2.3 | DynamicWHAR |
+| actrectut_gestures | 15 | -19.6 | Triple-Cross-Attn |
+| real_life_har | 15 | +7.6 | Random Forest |
+| motion_sense | 18 | -2.0 | DynamicWHAR |
+| mhealth | 23 | +1.5 | Random Forest |
+| gotov | 28 | -4.5 | DynamicWHAR |
+| hugadb | 38 | +3.3 | Random Forest |
+| uma_fall | 39 | -2.0 | DynamicWHAR |
+| up_fall | 42 | +11.6 | Random Forest |
+| dsads | 45 | +1.5 | Random Forest |
+| pamap2 | 52 | +0.8 | Random Forest |
+| sad | 60 | +0.6 | Random Forest |
+| real_world | 81 | +12.0 | Random Forest |
+| real_disp | 117 | -3.4 | TinyHAR |
+| opportunity | 133 | -4.1 | MLP-HAR |
+
+## 6. Seen against unseen subjects (ours, seed 0)
+
+Validation macro-F1 (20 % of the training subjects' windows, which overlap training windows by 50 %, so it overstates pure subject shift) minus test macro-F1 (unseen subjects).
+
+| Model | Mean | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut | Opportunity | SAD | HAPT | DSADS | WISDM | Daphnet |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| RecurrenceNet | 14.5 | 21.9 | 2.9 | 11.7 | 35.3 | 14.4 | 8.0 | 6.0 | 13.6 | 13.4 | 18.3 |
+| S4D | – | – | 4.5 | 15.2 | – | 18.2 | 10.6 | 8.6 | 14.7 | 15.8 | 20.8 |
+| HysteresisNet sel+clock | 16.3 | 23.4 | 5.0 | 16.6 | 27.7 | 14.6 | 12.9 | 6.3 | 19.8 | 17.1 | 19.6 |
+| QuantileNet | 18.0 | 23.1 | 4.5 | 17.1 | 34.8 | 18.3 | 17.7 | 7.4 | 18.9 | 19.3 | 18.9 |
+| Mamba | – | – | 5.8 | – | – | 17.3 | 17.1 | 7.1 | 19.1 | 22.2 | 22.3 |
+| No memory (control) | – | – | 6.3 | 12.0 | 32.4 | 21.4 | 19.2 | 6.9 | 20.8 | 23.5 | 18.3 |
+
+– = not recorded (the earliest seed-0 runs on UTD-MHAD, ActRecTut and part of UniMiB predate the validation score in the result file).
+
+== src.evaluation.synthesis
+# Synthesis of rounds 1-13 (10 dev datasets)
+
+3-seed means where seeds 0-2 exist, else seed 0 (marked). Probe = segment statistics + classical classifier (no deep training; DSADS and Daphnet not run). Paper = WHAR Arena Figure 6 (one run).
+
+| Model | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut | Opportunity | SAD | HAPT | DSADS | WISDM | Daphnet | Mean (10) | Mean w/o ActRecTut |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| RN + channel statistics | 72.2 | 96.3 | 61.8 | 61.7 | 63.9 | 95.9 | 84.5 | 86.1 | 81.9 | 42.8 | 74.70 | 76.15 |
+| RN + LawNet | 72.9 | 96.7 | 64.4 | 48.4 | 62.5 | 98.8 | 84.2 | 89.8 | 82.7 | 43.8 | 74.42 | 77.31 |
+| RecurrenceNet (RN) | 73.3 | 96.6 | 60.8 | 40.4 | 61.6 | 92.9 | 83.3 | 85.6 | 82.9 | 42.7 | 72.01 | 75.52 |
+| S4D | 73.3 | 94.9 | 60.5 | 43.4 | 61.2 | 87.3 | 83.6 | 84.4 | 83.0 | 41.4 | 71.29 | 74.39 |
+| HysteresisNet sel+clock | 73.9 | 94.5 | 55.5 | 43.6 | 63.8 | 87.6 | 84.3 | 83.0 | 80.4 | 40.3 | 70.69 | 73.70 |
+| LawNet (memoryless + laws) | 70.7 | 94.6 | 58.6 | 43.5 | 61.1 | 96.7 | 81.5 | 87.3 | 78.2 | 43.2 | 71.52 | 74.63 |
+| Statistics (memoryless + stats) | 67.3 | 92.6 | 54.1 | 55.6 | 62.0 | 93.1 | 81.5 | 83.2 | 71.5 | 41.5 | 70.24 | 71.86 |
+| QuantileNet | 73.8 | 94.7 | 59.7 | 36.1 | 63.4 | 85.7 | 82.1 | 81.3 | 79.5 | 40.7 | 69.70 | 73.43 |
+| Mamba | 71.3 | 93.9 | 59.1 | 36.7 | 62.3 | 86.3 | 82.4 | 79.6 | 77.9 | 39.6 | 68.91 | 72.48 |
+| No memory (control) | 67.6 | 92.8 | 50.0 | 36.5 | 59.6 | 84.1 | 81.3 | 79.9 | 67.8 | 41.1 | 66.06 | 69.35 |
+| StyleAlignNet (seed 0) | 75.2 | 96.2 | 59.3 | 48.7 | 65.8 | 93.5 | 83.3 | 88.0 | 83.9 | 43.5 | 73.74 | 76.52 |
+| LawNet, random triples (seed 0) | 68.5 | 95.6 | 58.4 | 45.5 | 63.1 | 98.7 | 81.9 | 87.5 | 77.9 | 44.3 | 72.14 | 75.10 |
+| probe root/et | 61.8 | 90.6 | 50.8 | 65.6 | 72.0 | 98.7 | 80.9 | – | 76.4 | – | – | – |
+| probe tree_abs/et | 72.2 | 89.8 | 57.3 | 49.4 | 72.5 | 97.4 | 80.7 | – | 75.8 | – | – | – |
+| probe tree_abs/lr | 66.6 | 92.4 | 46.9 | 56.8 | 62.9 | 98.2 | 80.0 | – | 77.6 | – | – | – |
+| 1-NN DTW std | 74.3 | 86.1 | 58.4 | 69.3 | 31.7 | 88.0 | 71.6 | 77.3 | 63.5 | 32.5 | 65.26 | 64.81 |
+| Paper best (17) | 68.2 | 96.1 | 63.3 | 61.5 | 74.7 | 98.2 | 84.8 | 89.3 | 85.5 | 45.4 | 76.70 | 78.40 |
+| Paper RF | 51.2 | 84.7 | 44.5 | 41.9 | 70.6 | 98.2 | 67.1 | 89.3 | 71.6 | 33.8 | 65.30 | 67.90 |
+| Paper CNN-HAR | 68.2 | 96.0 | 63.3 | 52.2 | 63.1 | 95.6 | 84.8 | 86.9 | 81.4 | 40.2 | 73.18 | 75.51 |
+| Paper TinyHAR | 65.8 | 96.1 | 58.6 | 51.1 | 65.4 | 97.7 | 81.0 | 86.8 | 85.0 | 43.9 | 73.13 | 75.59 |
+
+## Dataset properties (paper-era configs)
+
+| Dataset | Kind | Hz | Subjects | Classes | Channels | Samples per 3-s window |
+|---|---|---|---|---|---|---|
+| UTD-MHAD | gesture | 50 | 8 | 27 | 6 | 150 |
+| UCI-HAR | locomotion/ADL | 50 | 30 | 6 | 9 | 150 |
+| UniMiB | locomotion/ADL | 50 | 30 | 17 | 3 | 150 |
+| ActRecTut | gesture | 32 | 2 | 12 | 15 | 96 |
+| Opportunity | locomotion, many sensors | 30 | 4 | 5 | 133 | 90 |
+| SAD | locomotion/ADL | 50 | 10 | 7 | 60 | 150 |
+| HAPT | locomotion/ADL | 50 | 30 | 12 | 6 | 150 |
+| DSADS | locomotion/ADL | 25 | 8 | 19 | 45 | 75 |
+| WISDM | locomotion/ADL | 20 | 36 | 6 | 3 | 60 |
+| Daphnet | freezing of gait | 64 | 10 | 3 | 9 | 192 |
+
+## Gain of each component per dataset (points of macro-F1)
+
+| Contrast | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut | Opportunity | SAD | HAPT | DSADS | WISDM | Daphnet | Mean |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| memory: RN − no memory | +5.7 | +3.9 | +10.8 | +3.9 | +2.0 | +8.8 | +2.1 | +5.7 | +15.2 | +1.5 | +5.95 |
+| memory: S4D − no memory | +5.7 | +2.1 | +10.5 | +7.0 | +1.6 | +3.2 | +2.3 | +4.6 | +15.2 | +0.2 | +5.23 |
+| statistics on memoryless: statnet − no memory | -0.3 | -0.2 | +4.1 | +19.2 | +2.4 | +9.0 | +0.2 | +3.3 | +3.7 | +0.4 | +4.18 |
+| laws on memoryless: LawNet − no memory | +3.1 | +1.8 | +8.6 | +7.0 | +1.4 | +12.5 | +0.2 | +7.4 | +10.4 | +2.0 | +5.46 |
+| statistics on RN: recstatnet − RN | -1.1 | -0.3 | +1.0 | +21.4 | +2.3 | +3.0 | +1.2 | +0.6 | -1.0 | +0.1 | +2.70 |
+| laws on RN: lawnet_rec − RN | -0.4 | +0.1 | +3.6 | +8.0 | +0.9 | +5.8 | +0.9 | +4.2 | -0.3 | +1.2 | +2.41 |
+| classical vs deep: probe root/et − RN | -11.5 | -6.0 | -10.0 | +25.2 | +10.5 | +5.8 | -2.5 | – | -6.6 | – | +0.61 |
+| classical vs deep: probe tree_abs/et − RN | -1.2 | -6.9 | -3.4 | +9.0 | +10.9 | +4.4 | -2.6 | – | -7.1 | – | +0.39 |
+| elastic vs deep: 1-NN DTW std − RN | +1.0 | -10.6 | -2.4 | +29.0 | -29.9 | -5.0 | -11.7 | -8.3 | -19.4 | -10.1 | -6.74 |
+| RN − S4D | +0.0 | +1.8 | +0.3 | -3.1 | +0.4 | +5.6 | -0.3 | +1.1 | -0.1 | +1.3 | +0.71 |
+| S4D − Mamba | +2.0 | +0.9 | +1.4 | +6.7 | -1.2 | +1.0 | +1.2 | +4.8 | +5.1 | +1.8 | +2.39 |
+
+## Spearman correlation of each gain with dataset properties (n = 10, or 8 for the probe; descriptive only, no correction)
+
+| Contrast | log2 subjects | log2 channels | samples/window (3 s × Hz) | classes |
+|---|---|---|---|---|
+| memory: RN − no memory | +0.36 (p 0.30) | -0.45 (p 0.20) | -0.36 (p 0.31) | +0.48 (p 0.16) |
+| memory: S4D − no memory | +0.20 (p 0.58) | -0.54 (p 0.10) | -0.47 (p 0.17) | +0.57 (p 0.08) |
+| statistics on memoryless: statnet − no memory | -0.15 (p 0.67) | +0.20 (p 0.59) | -0.36 (p 0.31) | +0.01 (p 0.99) |
+| laws on memoryless: LawNet − no memory | +0.15 (p 0.67) | -0.12 (p 0.75) | -0.27 (p 0.46) | +0.24 (p 0.50) |
+| statistics on RN: recstatnet − RN | -0.44 (p 0.20) | +0.57 (p 0.08) | -0.06 (p 0.87) | -0.08 (p 0.83) |
+| laws on RN: lawnet_rec − RN | -0.38 (p 0.28) | +0.45 (p 0.20) | +0.03 (p 0.93) | +0.12 (p 0.75) |
+| classical vs deep: probe root/et − RN | -0.56 (p 0.15) | +0.78 (p 0.02) | -0.35 (p 0.39) | -0.48 (p 0.23) |
+| classical vs deep: probe tree_abs/et − RN | -0.93 (p 0.00) | +0.81 (p 0.02) | -0.11 (p 0.80) | -0.02 (p 0.95) |
+| elastic vs deep: 1-NN DTW std − RN | -0.40 (p 0.26) | -0.06 (p 0.87) | +0.28 (p 0.44) | +0.65 (p 0.04) |
+| RN − S4D | +0.07 (p 0.84) | +0.45 (p 0.19) | +0.34 (p 0.33) | -0.34 (p 0.33) |
+| S4D − Mamba | -0.13 (p 0.72) | -0.34 (p 0.33) | -0.36 (p 0.31) | +0.39 (p 0.26) |
+
+## Evaluation noise
+
+Seed spread = sample std over seeds 0-2 of the dataset mean. Person spread = sample std over subject splits (seed 0), the paper's ±.
+
+| Model | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut | Opportunity | SAD | HAPT | DSADS | WISDM | Daphnet | Mean |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| seed spread, RecurrenceNet (RN) | 1.39 | 0.21 | 1.03 | 6.12 | 3.37 | 0.85 | 0.65 | 0.78 | 1.26 | 1.68 | 1.73 |
+| seed spread, S4D | 1.11 | 0.17 | 0.40 | 2.97 | 0.79 | 2.00 | 1.33 | 0.74 | 1.15 | 1.43 | 1.21 |
+| seed spread, RN + channel statistics | 1.14 | 0.16 | 0.89 | 2.05 | 2.50 | 0.64 | 1.38 | 0.42 | 1.94 | 1.51 | 1.26 |
+| person spread, RecurrenceNet (RN) | 13.6 | 2.4 | 7.6 | 9.1 | 15.5 | 9.5 | 4.4 | 6.1 | 4.7 | 8.3 | 8.1 |
+| person spread, RN + channel statistics | 14.1 | 2.4 | 7.3 | 0.3 | 14.1 | 5.4 | 7.6 | 6.2 | 9.1 | 5.1 | 7.2 |
+| validation (seen people) − test (unseen), RN seed 0 | 21.9 | 2.9 | 11.7 | 35.3 | 14.4 | 8.0 | 6.0 | 13.6 | 13.4 | 18.3 | 14.5 |
+
+## Size vs accuracy, paper deep models on these 10 datasets (n = 14)
+
+Spearman(log params, mean F1) = -0.37 (p 0.19). Ours (20-38k params) for reference: RN 24.7k, recstatnet 26.5k, S4D 27.7k.
+
+- Triple-Cross-Attn: 455.0k params, mean F1 73.48
+- CNN-HAR: 72.0k params, mean F1 73.18
+- TinyHAR: 185.1k params, mean F1 73.13
+- DANA: 460.8k params, mean F1 72.86
+- Attend+Discriminate: 374.4k params, mean F1 72.74
+- TinierHAR: 8.0k params, mean F1 71.39
+- DeepConvLSTM-Attn: 477.4k params, mean F1 71.20
+- DynamicWHAR: 1127.5k params, mean F1 69.61
+- MLP-HAR: 217.2k params, mean F1 69.31
+- MLP-Mixer: 621.1k params, mean F1 69.21
+- DeepConvLSTM: 460.8k params, mean F1 68.97
+- Guan-LSTM: 803.6k params, mean F1 63.32
+- DeepConvShallowLSTM: 402.8k params, mean F1 61.83
+- SA-HAR: 415.5k params, mean F1 61.82
+== src.evaluation.factor_analysis
+# What drives macro-F1: data factors and model components
+
+## A. Where the variance of macro-F1 comes from (our 10 models × 10 datasets × splits × 3 seeds)
+
+2460 runs. Sum of squares by source; shares of the total, and of the variance left once the dataset is fixed (what decides a ranking within a dataset).
+
+| Source | Share of total | Share within a dataset | Typical size (RMS, F1 points) |
+|---|---|---|---|
+| dataset | 76.6 % | – | 17.15 |
+| test person (split) | 14.4 % | 61.3 % | 7.45 |
+| model | 1.5 % | 6.4 % | 2.41 |
+| model x dataset | 1.7 % | 7.2 % | 2.55 |
+| model x person | 2.6 % | 10.9 % | 3.14 |
+| seed | 3.3 % | 14.2 % | 3.59 |
+| sum of parts / total | 100.2 % | | |
+
+## B. Data factors over the paper's 30 datasets (17 models, one run each)
+
+Spearman ρ (p) between each dataset property and each outcome, n = 30:
+
+| Outcome | log2 subjects | log2 channels | log2 classes | log2 samples/window |
+|---|---|---|---|---|
+| median deep F1 (level) | +0.07 (0.715) | +0.09 (0.646) | +0.06 (0.752) | -0.10 (0.617) |
+| best − median deep (does the model matter) | -0.44 (0.016) | +0.38 (0.036) | +0.04 (0.830) | +0.10 (0.612) |
+| RF − best deep (classical margin) | -0.24 (0.198) | +0.71 (0.000) | -0.09 (0.651) | +0.10 (0.601) |
+| mean split sd of deep models (person spread) | -0.50 (0.004) | +0.58 (0.001) | +0.12 (0.538) | +0.19 (0.304) |
+
+Correlations among the properties (Spearman ρ; large values mean their effects cannot be separated):
+
+| | log2 subjects | log2 channels | log2 classes | log2 samples/window |
+|---|---|---|---|---|
+| log2 subjects | +1.00 | -0.50 | +0.11 | -0.16 |
+| log2 channels | -0.50 | +1.00 | +0.04 | +0.10 |
+| log2 classes | +0.11 | +0.04 | +1.00 | +0.02 |
+| log2 samples/window | -0.16 | +0.10 | +0.02 | +1.00 |
+
+Multiple regression (OLS, n = 30, predictors standardized: coefficient = change in F1 points per 1 sd of the property, others held fixed; p in brackets):
+
+| Outcome | R² | log2 subjects | log2 channels | log2 classes | log2 samples/window |
+|---|---|---|---|---|---|
+| median deep F1 (level) | 0.03 | +1.48 (0.701) | +2.61 (0.497) | +0.43 (0.902) | -1.58 (0.642) |
+| best − median deep (does the model matter) | 0.39 | -1.54 (0.004) | +0.39 (0.433) | +0.10 (0.818) | -0.05 (0.905) |
+| RF − best deep (classical margin) | 0.55 | +3.07 (0.027) | +7.12 (0.000) | -2.21 (0.073) | +0.35 (0.764) |
+| mean split sd of deep models (person spread) | 0.46 | -0.43 (0.542) | +2.44 (0.002) | +0.23 (0.723) | +0.79 (0.209) |
+
+## C. Model components: controlled contrasts, paired on the same splits
+
+Effect = a − b in F1 points; per dataset the mean over splits of the seed-averaged difference; across datasets the mean with a 95 % t-interval, datasets won, Wilcoxon p (no correction), and the between-dataset sd (heterogeneity). ★ = per-dataset 95 % interval over splits excludes 0.
+
+| Component | a − b | Seeds | UTD-MH | UCI-HA | UniMiB | ActRec | Opport | SAD | HAPT | DSADS | WISDM | Daphne | Mean [95 % CI] | Won | p | sd between datasets |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Memory (any) vs none | RecurrenceNet − no memory | 3 | +5.7★ | +3.9★ | +10.8★ | +3.9 | +2.0 | +8.8 | +2.1 | +5.7★ | +15.2★ | +1.5 | +5.95 [+2.79, +9.10] | 10/10 | 0.002 | 4.4 |
+| Memory (any) vs none | S4D − no memory | 3 | +5.7★ | +2.1★ | +10.5★ | +7.0 | +1.6 | +3.2 | +2.3 | +4.6★ | +15.2★ | +0.2 | +5.23 [+1.93, +8.54] | 10/10 | 0.002 | 4.6 |
+| Memory (any) vs none | HysteresisNet − no memory | 3 | +6.3★ | +1.7★ | +5.5★ | +7.1★ | +4.2 | +3.5 | +3.1★ | +3.2★ | +12.6★ | -0.8 | +4.63 [+2.04, +7.22] | 9/10 | 0.004 | 3.6 |
+| Memory (any) vs none | QuantileNet − no memory | 3 | +6.2★ | +1.9★ | +9.7★ | -0.4 | +3.8 | +1.6 | +0.9 | +1.4 | +11.7★ | -0.4 | +3.64 [+0.61, +6.67] | 8/10 | 0.010 | 4.2 |
+| Memory (any) vs none | Mamba − no memory | 3 | +3.7★ | +1.1 | +9.1★ | +0.2 | +2.7 | +2.2 | +1.1 | -0.3 | +10.1★ | -1.5 | +2.85 [+0.08, +5.61] | 8/10 | 0.037 | 3.9 |
+| Memory type (vs S4D) | RecurrenceNet − S4D | 3 | +0.0 | +1.8★ | +0.3 | -3.1 | +0.4 | +5.6 | -0.3 | +1.1 | -0.1 | +1.3 | +0.71 [-0.83, +2.26] | 7/10 | 0.193 | 2.2 |
+| Memory type (vs S4D) | HysteresisNet − S4D | 3 | +0.7 | -0.4 | -5.0★ | +0.1 | +2.6 | +0.3 | +0.8 | -1.4 | -2.6★ | -1.1 | -0.60 [-2.10, +0.90] | 5/10 | 0.557 | 2.1 |
+| Memory type (vs S4D) | QuantileNet − S4D | 3 | +0.5 | -0.2 | -0.8 | -7.4 | +2.2 | -1.6 | -1.5 | -3.1★ | -3.5★ | -0.6 | -1.59 [-3.47, +0.28] | 2/10 | 0.064 | 2.6 |
+| Memory type (vs S4D) | Mamba − S4D | 3 | -2.0 | -0.9 | -1.4 | -6.7 | +1.2 | -1.0 | -1.2 | -4.8★ | -5.1★ | -1.8 | -2.39 [-4.10, -0.67] | 1/10 | 0.010 | 2.4 |
+| Window statistics | stats (no memory) − no memory | 3 | -0.3 | -0.2 | +4.1★ | +19.2 | +2.4 | +9.0★ | +0.2 | +3.3 | +3.7★ | +0.4 | +4.18 [-0.09, +8.45] | 8/10 | 0.014 | 6.0 |
+| Window statistics | RN+stats − RecurrenceNet | 3 | -1.1 | -0.3 | +1.0 | +21.4 | +2.3 | +3.0 | +1.2 | +0.6 | -1.0 | +0.1 | +2.70 [-2.08, +7.48] | 7/10 | 0.131 | 6.7 |
+| Laws (lagged second-order) | laws (no memory) − no memory | 3 | +3.1 | +1.8★ | +8.6★ | +7.0 | +1.4 | +12.5★ | +0.2 | +7.4★ | +10.4★ | +2.0 | +5.46 [+2.40, +8.52] | 10/10 | 0.002 | 4.3 |
+| Laws (lagged second-order) | RN+laws − RecurrenceNet | 3 | -0.4 | +0.1 | +3.6★ | +8.0 | +0.9 | +5.8★ | +0.9 | +4.2★ | -0.3 | +1.2 | +2.41 [+0.35, +4.47] | 8/10 | 0.020 | 2.9 |
+| Laws (lagged second-order) | RN+laws − RN+stats | 3 | +0.7 | +0.4 | +2.6★ | -13.3 | -1.4 | +2.9 | -0.2 | +3.7★ | +0.7 | +1.1 | -0.29 [-3.74, +3.17] | 7/10 | 0.322 | 4.8 |
+| Sensor grouping | laws (no memory) − laws, random groups | 1 | +2.4 | -0.7★ | +0.0 | -1.0 | -3.8 | +0.3 | -0.7 | +0.4 | +0.0 | -1.1 | -0.41 [-1.53, +0.71] | 3/10 | 0.312 | 1.6 |
+
+Kill set only (UTD-MHAD, ActRecTut, SAD, Opportunity; 3 seeds):
+
+| Component | a − b | UTD-MHAD | ActRecTut | SAD | Opportunity | Mean | Without ActRecTut |
+|---|---|---|---|---|---|---|---|
+| Which statistic | RN+mean − RecurrenceNet | -1.5 | -2.9 | -2.2 | +0.3 | -1.55 | -1.11 |
+| Which statistic | RN+std − RecurrenceNet | -0.9 | +10.4 | +3.9 | +2.6 | +3.98 | +1.86 |
+| Which statistic | RN+min/max − RecurrenceNet | -1.6 | +15.7 | +3.7 | +0.9 | +4.68 | +0.99 |
+| Which statistic | RN+stats − RecurrenceNet | -1.1 | +21.4 | +3.0 | +2.3 | +6.38 | +1.39 |
+| Normalization / pooling | RN, mean+std pooling − RecurrenceNet | -1.4 | +8.0 | +1.0 | -0.5 | +1.78 | -0.29 |
+| Normalization / pooling | RN, no LayerNorm − RecurrenceNet | -3.1 | +6.2 | -2.7 | -0.7 | -0.08 | -2.17 |
+| Normalization / pooling | RN, both − RecurrenceNet | -1.7 | +13.8 | -0.2 | -1.2 | +2.67 | -1.03 |
+
+Which data properties go with each effect (Spearman ρ over the 10 datasets, p in brackets; descriptive):
+
+| a − b | log2 subjects | log2 channels | log2 classes | samples/window (3 s × Hz) | log2 windows |
+|---|---|---|---|---|---|
+| RecurrenceNet − no memory | +0.36 (0.30) | -0.45 (0.20) | +0.48 (0.16) | -0.36 (0.31) | -0.10 (0.78) |
+| S4D − no memory | +0.20 (0.58) | -0.54 (0.10) | +0.57 (0.08) | -0.47 (0.17) | -0.19 (0.60) |
+| HysteresisNet − no memory | -0.13 (0.72) | -0.27 (0.45) | +0.34 (0.34) | -0.59 (0.07) | -0.22 (0.53) |
+| QuantileNet − no memory | +0.40 (0.25) | -0.44 (0.20) | +0.17 (0.64) | -0.37 (0.29) | -0.04 (0.91) |
+| Mamba − no memory | +0.40 (0.26) | -0.46 (0.18) | +0.13 (0.72) | -0.28 (0.44) | -0.15 (0.68) |
+| RecurrenceNet − S4D | +0.07 (0.84) | +0.45 (0.19) | -0.34 (0.33) | +0.34 (0.33) | +0.19 (0.60) |
+| HysteresisNet − S4D | -0.46 (0.18) | +0.49 (0.15) | -0.08 (0.83) | +0.12 (0.74) | -0.26 (0.47) |
+| QuantileNet − S4D | -0.09 (0.81) | +0.10 (0.79) | -0.20 (0.58) | +0.43 (0.21) | -0.22 (0.53) |
+| Mamba − S4D | +0.13 (0.72) | +0.34 (0.33) | -0.39 (0.26) | +0.36 (0.31) | -0.04 (0.91) |
+| stats (no memory) − no memory | -0.15 (0.67) | +0.20 (0.59) | +0.01 (0.99) | -0.36 (0.31) | +0.05 (0.88) |
+| RN+stats − RecurrenceNet | -0.44 (0.20) | +0.57 (0.08) | -0.08 (0.83) | -0.06 (0.87) | -0.14 (0.70) |
+| laws (no memory) − no memory | +0.15 (0.67) | -0.12 (0.75) | +0.24 (0.50) | -0.27 (0.46) | +0.07 (0.85) |
+| RN+laws − RecurrenceNet | -0.38 (0.28) | +0.45 (0.20) | +0.12 (0.75) | +0.03 (0.93) | -0.07 (0.85) |
+| RN+laws − RN+stats | +0.28 (0.43) | -0.06 (0.87) | +0.23 (0.53) | +0.08 (0.82) | +0.33 (0.35) |
+| laws (no memory) − laws, random groups | +0.16 (0.66) | -0.25 (0.48) | +0.74 (0.02) | -0.11 (0.76) | -0.17 (0.64) |
+
+Model size (paper deep models, n = 14): Spearman(log params, mean F1) = -0.43 (p 0.12) over 30 datasets, -0.37 (p 0.19) over our 10.
+== src.evaluation.heldout_analysis
+# Held-out confirmation (RESEARCH_PLAN.md §5p)
+
+Complete datasets: 8 of 8 (PAMAP2 (9 splits), UP-Fall (10 splits), UMA-Fall (10 splits), USC-HAD (10 splits), MotionSense (10 splits), WEAR (10 splits), UCA-EHAR (10 splits), W-HAR (10 splits)). Pending: none.
+
+## Per dataset (macro-F1 %, mean over splits; ours: 3-seed mean, paper: one run)
+
+| Model | PAMAP2 | UP-Fall | UMA-Fall | USC-HAD† | MotionSense† | WEAR | UCA-EHAR | W-HAR | Mean |
+|---|---|---|---|---|---|---|---|---|---|
+| RN + laws | 60.3 | 52.5 | 52.7 | 76.9 | 93.7 | 86.8 | 62.6 | 50.6 | 67.02 |
+| RN + statistics | 58.6 | 51.8 | 50.0 | 72.7 | 91.6 | 85.8 | 64.0 | 53.5 | 65.99 |
+| RecurrenceNet | 52.6 | 49.8 | 46.6 | 73.3 | 91.2 | 85.7 | 61.7 | 50.1 | 63.87 |
+| S4D | 54.5 | 42.8 | 42.9 | 76.2 | 91.9 | 84.4 | 59.1 | 46.3 | 62.27 |
+| TinyHAR (paper) | 62.2 | 61.0 | 50.2 | 78.1 | 91.2 | 86.5 | 58.0 | 52.2 | 67.40 |
+| CNN-HAR (paper) | 62.1 | 55.0 | 50.0 | 76.2 | 91.5 | 86.9 | 58.7 | 52.7 | 66.63 |
+| Triple-Cross-Attn (paper) | 61.9 | 58.7 | 52.4 | 74.3 | 91.3 | 88.5 | 58.1 | 49.8 | 66.89 |
+| Random Forest (paper) | 65.1 | 72.8 | 54.2 | 72.7 | 91.5 | 87.3 | 47.6 | 53.1 | 68.02 |
+| best paper model | 65.1 Random Forest | 72.8 Random Forest | 56.2 DynamicWHAR | 78.8 MLP-Mixer | 93.5 DynamicWHAR | 89.7 DynamicWHAR | 60.1 DANA | 53.1 Random Forest | |
+
+† parser lists files unsorted: subject numbering may differ from the paper's machine; compared by means only.
+
+## Primary (pre-registered)
+
+1. RN + laws − S4D (3 seeds): +4.75 [+1.85, +7.65], 8–0 of 8, Wilcoxon p 0.008 → better than S4D.
+2. RN + laws (seed 0) − paper models, non-inferiority margin −1 on the top three:
+   - DynamicWHAR: -1.07 [-5.08, +2.94], 4–4 of 8, Wilcoxon p 0.641
+   - Random Forest: -0.64 [-9.40, +8.11], 3–5 of 8, Wilcoxon p 0.742
+   - TinyHAR: -0.02 [-3.67, +3.63], 4–4 of 8, Wilcoxon p 0.844 — non-inferiority not shown
+   - Triple-Cross-Attn: +0.49 [-2.72, +3.70], 4–4 of 8, Wilcoxon p 0.844 — non-inferiority not shown
+   - CNN-HAR: +0.76 [-1.57, +3.08], 5–3 of 8, Wilcoxon p 0.742 — non-inferiority not shown
+   - TinierHAR: +1.73 [-1.07, +4.53], 7–1 of 8, Wilcoxon p 0.148
+   - Attend+Discriminate: +1.97 [-0.29, +4.22], 6–2 of 8, Wilcoxon p 0.109
+   - DANA: +2.24 [-0.05, +4.52], 6–2 of 8, Wilcoxon p 0.055
+   - MLP-HAR: +2.27 [-1.56, +6.09], 6–2 of 8, Wilcoxon p 0.195
+   - DeepConvLSTM-Attn: +4.28 [+2.02, +6.55], 7–1 of 8, Wilcoxon p 0.016
+   - DeepConvLSTM: +4.62 [+2.37, +6.86], 7–1 of 8, Wilcoxon p 0.016
+   - SA-HAR: +5.73 [+1.43, +10.03], 7–1 of 8, Wilcoxon p 0.023
+   - MLP-Mixer: +6.78 [+1.20, +12.36], 7–1 of 8, Wilcoxon p 0.016
+   - Guan-LSTM: +7.94 [+4.70, +11.17], 8–0 of 8, Wilcoxon p 0.008
+   - DeepConvShallowLSTM: +9.57 [+3.30, +15.84], 7–1 of 8, Wilcoxon p 0.016
+   - SVM: +19.51 [+10.46, +28.55], 8–0 of 8, Wilcoxon p 0.008
+   - k-NN: +22.00 [+14.74, +29.25], 8–0 of 8, Wilcoxon p 0.008
+
+## Secondary
+
+- RN + statistics − S4D (3 seeds): +3.73 [+0.17, +7.29], 6–2 of 8, Wilcoxon p 0.055
+- RN + statistics (seed 0) − TinyHAR: -1.11 [-5.32, +3.10], 2–6 of 8, Wilcoxon p 0.383 — non-inferiority not shown
+- RN + statistics (seed 0) − CNN-HAR: -0.34 [-3.30, +2.63], 2–6 of 8, Wilcoxon p 0.461 — non-inferiority not shown
+- RN + statistics (seed 0) − Triple-Cross-Attn: -0.60 [-4.56, +3.35], 2–6 of 8, Wilcoxon p 0.641 — non-inferiority not shown
+- RN + laws − RecurrenceNet (3 seeds): +3.15 [+1.00, +5.30], 8–0 of 8, Wilcoxon p 0.008
+- RecurrenceNet − S4D (3 seeds): +1.61 [-1.18, +4.40], 5–3 of 8, Wilcoxon p 0.250
+- All 18 datasets (includes the 10 development datasets): RN + laws − S4D +3.85 [+2.10, +5.59], 16–2 of 18, Wilcoxon p 0.000
+== src.evaluation.pareto
+recstatnet                     utd_mhad                 26.5k      6.97 MFLOP     5.26 ms
+recstatnet                     uci_har                  25.6k      7.00 MFLOP     5.31 ms
+recstatnet                     unimib_shar              25.3k      6.94 MFLOP     5.25 ms
+recstatnet                     actrectut_gestures       27.0k      4.52 MFLOP     4.90 ms
+recstatnet                     opportunity              46.4k      4.95 MFLOP     4.97 ms
+recstatnet                     sad                      34.2k      7.50 MFLOP     5.37 ms
+recstatnet                     hapt                     25.5k      6.97 MFLOP     5.36 ms
+recstatnet                     dsads                    32.5k      3.69 MFLOP     5.03 ms
+recstatnet                     wisdm                    24.6k      2.78 MFLOP     4.39 ms
+recstatnet                     daphnet                  25.4k      8.96 MFLOP     5.14 ms
+lawnet_rec                     utd_mhad                 27.6k      7.04 MFLOP     9.37 ms
+lawnet_rec                     uci_har                  26.8k      7.12 MFLOP     9.48 ms
+lawnet_rec                     unimib_shar              26.0k      6.97 MFLOP     8.11 ms
+lawnet_rec                     actrectut_gestures       27.4k      4.60 MFLOP     8.64 ms
+lawnet_rec                     opportunity              49.4k      9.59 MFLOP    10.92 ms
+lawnet_rec                     sad                      37.9k      9.81 MFLOP    10.27 ms
+lawnet_rec                     hapt                     26.6k      7.04 MFLOP     9.28 ms
+lawnet_rec                     dsads                    35.4k      4.42 MFLOP     9.33 ms
+lawnet_rec                     wisdm                    25.3k      2.79 MFLOP     7.06 ms
+lawnet_rec                     daphnet                  26.6k      9.11 MFLOP     9.58 ms
+stylealignnet                  utd_mhad                 38.2k      7.48 MFLOP    11.36 ms
+stylealignnet                  uci_har                  27.2k      7.13 MFLOP    10.42 ms
+stylealignnet                  unimib_shar              32.8k      7.26 MFLOP    10.92 ms
+stylealignnet                  actrectut_gestures       28.7k      4.64 MFLOP     8.21 ms
+stylealignnet                  opportunity              30.7k      5.14 MFLOP     7.56 ms
+stylealignnet                  sad                      29.8k      7.76 MFLOP     9.81 ms
+stylealignnet                  hapt                     30.3k      7.20 MFLOP    10.15 ms
+stylealignnet                  dsads                    31.0k      3.83 MFLOP     7.56 ms
+stylealignnet                  wisdm                    25.3k      2.80 MFLOP     6.53 ms
+stylealignnet                  daphnet                  26.1k      9.08 MFLOP    10.73 ms
+recurrencenet                  utd_mhad                 24.7k      6.97 MFLOP     5.16 ms
+recurrencenet                  uci_har                  24.1k      7.00 MFLOP     5.28 ms
+recurrencenet                  unimib_shar              24.2k      6.94 MFLOP     4.80 ms
+recurrencenet                  actrectut_gestures       24.5k      4.52 MFLOP     4.45 ms
+recurrencenet                  opportunity              28.0k      4.91 MFLOP     4.98 ms
+recurrencenet                  sad                      25.7k      7.49 MFLOP     5.03 ms
+recurrencenet                  hapt                     24.2k      6.97 MFLOP     5.02 ms
+recurrencenet                  dsads                    25.7k      3.67 MFLOP     4.52 ms
+recurrencenet                  wisdm                    23.9k      2.78 MFLOP     4.38 ms
+recurrencenet                  daphnet                  24.0k      8.96 MFLOP     5.14 ms
+s4d                            utd_mhad                 27.7k      5.65 MFLOP    17.85 ms
+s4d                            uci_har                  26.5k      5.70 MFLOP    17.97 ms
+s4d                            unimib_shar              26.8k      5.59 MFLOP    17.63 ms
+s4d                            actrectut_gestures       27.3k      3.72 MFLOP    11.49 ms
+s4d                            opportunity              34.4k      4.85 MFLOP     9.31 ms
+s4d                            sad                      29.8k      6.68 MFLOP    18.46 ms
+s4d                            hapt                     26.7k      5.65 MFLOP    17.58 ms
+s4d                            dsads                    29.7k      3.20 MFLOP     9.32 ms
+s4d                            wisdm                    26.1k      2.24 MFLOP     7.50 ms
+s4d                            daphnet                  26.3k      7.30 MFLOP    22.86 ms
+hystnet_sel_clock              utd_mhad                 23.6k      6.52 MFLOP     3.64 ms
+hystnet_sel_clock              uci_har                  23.0k      6.55 MFLOP     3.56 ms
+hystnet_sel_clock              unimib_shar              23.2k      6.49 MFLOP     3.61 ms
+hystnet_sel_clock              actrectut_gestures       23.4k      4.23 MFLOP     2.82 ms
+hystnet_sel_clock              opportunity              26.9k      4.64 MFLOP     2.86 ms
+hystnet_sel_clock              sad                      24.6k      7.04 MFLOP     3.57 ms
+hystnet_sel_clock              hapt                     23.1k      6.52 MFLOP     3.61 ms
+hystnet_sel_clock              dsads                    24.6k      3.45 MFLOP     2.74 ms
+hystnet_sel_clock              wisdm                    22.8k      2.60 MFLOP     2.31 ms
+hystnet_sel_clock              daphnet                  22.9k      8.38 MFLOP     3.80 ms
+lawnet                         utd_mhad                 19.0k      4.31 MFLOP     4.52 ms
+lawnet                         uci_har                  18.0k      4.40 MFLOP     4.82 ms
+lawnet                         unimib_shar              17.3k      4.22 MFLOP     3.08 ms
+lawnet                         actrectut_gestures       18.8k      2.87 MFLOP     3.85 ms
+lawnet                         opportunity              42.6k      8.31 MFLOP     6.65 ms
+lawnet                         sad                      29.9k      7.33 MFLOP     5.40 ms
+lawnet                         hapt                     17.8k      4.31 MFLOP     4.39 ms
+lawnet                         dsads                    27.4k      3.15 MFLOP     4.80 ms
+lawnet                         wisdm                    16.4k      1.69 MFLOP     2.76 ms
+lawnet                         daphnet                  17.8k      5.63 MFLOP     4.57 ms
+lawnet_rand                    utd_mhad                 19.0k      4.31 MFLOP     4.39 ms
+lawnet_rand                    uci_har                  18.0k      4.40 MFLOP     4.54 ms
+lawnet_rand                    unimib_shar              17.3k      4.22 MFLOP     3.19 ms
+lawnet_rand                    actrectut_gestures       18.8k      2.87 MFLOP     4.05 ms
+lawnet_rand                    opportunity              42.6k      8.31 MFLOP     6.25 ms
+lawnet_rand                    sad                      29.9k      7.33 MFLOP     5.41 ms
+lawnet_rand                    hapt                     17.8k      4.31 MFLOP     4.41 ms
+lawnet_rand                    dsads                    27.4k      3.15 MFLOP     4.85 ms
+lawnet_rand                    wisdm                    16.4k      1.69 MFLOP     2.83 ms
+lawnet_rand                    daphnet                  17.8k      5.63 MFLOP     4.61 ms
+statnet                        utd_mhad                 17.9k      4.24 MFLOP     0.53 ms
+statnet                        uci_har                  16.8k      4.28 MFLOP     0.54 ms
+statnet                        unimib_shar              16.6k      4.19 MFLOP     0.53 ms
+statnet                        actrectut_gestures       18.4k      2.80 MFLOP     0.51 ms
+statnet                        opportunity              39.5k      3.67 MFLOP     0.67 ms
+statnet                        sad                      26.2k      5.03 MFLOP     0.63 ms
+statnet                        hapt                     16.7k      4.24 MFLOP     0.53 ms
+statnet                        dsads                    24.5k      2.41 MFLOP     0.53 ms
+statnet                        wisdm                    15.7k      1.68 MFLOP     0.49 ms
+statnet                        daphnet                  16.5k      5.48 MFLOP     0.55 ms
+quantilenet                    utd_mhad                 20.8k      5.59 MFLOP    13.18 ms
+quantilenet                    uci_har                  20.2k      5.62 MFLOP    13.02 ms
+quantilenet                    unimib_shar              20.3k      5.56 MFLOP    12.97 ms
+quantilenet                    actrectut_gestures       20.6k      3.63 MFLOP     8.52 ms
+quantilenet                    opportunity              24.1k      4.08 MFLOP     8.06 ms
+quantilenet                    sad                      21.8k      6.11 MFLOP    13.04 ms
+quantilenet                    hapt                     20.3k      5.59 MFLOP    13.10 ms
+quantilenet                    dsads                    21.7k      2.98 MFLOP     6.97 ms
+quantilenet                    wisdm                    20.0k      2.22 MFLOP     5.47 ms
+quantilenet                    daphnet                  20.1k      7.19 MFLOP    16.86 ms
+mamba                          utd_mhad                 21.1k      5.28 MFLOP     8.50 ms
+mamba                          uci_har                  20.6k      5.31 MFLOP     8.23 ms
+mamba                          unimib_shar              20.7k      5.26 MFLOP     6.73 ms
+mamba                          actrectut_gestures       20.9k      3.44 MFLOP     4.20 ms
+mamba                          opportunity              24.5k      3.90 MFLOP     3.95 ms
+mamba                          sad                      22.2k      5.80 MFLOP     6.74 ms
+mamba                          hapt                     20.7k      5.28 MFLOP     6.71 ms
+mamba                          dsads                    22.1k      2.83 MFLOP     3.40 ms
+mamba                          wisdm                    20.4k      2.10 MFLOP     2.80 ms
+mamba                          daphnet                  20.5k      6.80 MFLOP     8.43 ms
+hystnet_nomem                  utd_mhad                 20.0k      5.59 MFLOP     2.95 ms
+hystnet_nomem                  uci_har                  19.4k      5.62 MFLOP     2.94 ms
+hystnet_nomem                  unimib_shar              19.6k      5.56 MFLOP     2.94 ms
+hystnet_nomem                  actrectut_gestures       19.8k      3.63 MFLOP     2.24 ms
+hystnet_nomem                  opportunity              23.3k      4.08 MFLOP     2.31 ms
+hystnet_nomem                  sad                      21.1k      6.11 MFLOP     3.05 ms
+hystnet_nomem                  hapt                     19.5k      5.59 MFLOP     2.96 ms
+hystnet_nomem                  dsads                    21.0k      2.98 MFLOP     2.24 ms
+hystnet_nomem                  wisdm                    19.2k      2.22 MFLOP     1.95 ms
+hystnet_nomem                  daphnet                  19.3k      7.19 MFLOP     3.08 ms
+CNN-HAR                        utd_mhad                 72.0k     12.49 MFLOP     3.56 ms
+CNN-HAR                        uci_har                  87.6k     18.70 MFLOP     4.47 ms
+CNN-HAR                        unimib_shar              44.0k      6.25 MFLOP     2.41 ms
+CNN-HAR                        actrectut_gestures      138.0k     18.30 MFLOP     4.26 ms
+CNN-HAR                        opportunity            1079.2k    151.07 MFLOP    26.23 ms
+CNN-HAR                        sad                     496.0k    124.67 MFLOP    21.17 ms
+CNN-HAR                        hapt                     66.0k     12.48 MFLOP     3.56 ms
+CNN-HAR                        dsads                   380.8k     39.84 MFLOP     7.54 ms
+CNN-HAR                        wisdm                    39.6k      1.97 MFLOP     1.19 ms
+CNN-HAR                        daphnet                  86.4k     24.54 MFLOP     5.51 ms
+TinyHAR                        utd_mhad                185.1k     10.76 MFLOP     4.97 ms
+TinyHAR                        uci_har                 189.9k     15.34 MFLOP     5.05 ms
+TinyHAR                        unimib_shar             178.3k      6.26 MFLOP     4.28 ms
+TinyHAR                        actrectut_gestures      145.2k     14.49 MFLOP     3.29 ms
+TinyHAR                        opportunity             382.3k    146.98 MFLOP     6.26 ms
+TinyHAR                        sad                     294.4k    104.37 MFLOP     7.03 ms
+TinyHAR                        hapt                    184.1k     10.76 MFLOP     4.97 ms
+TinyHAR                        dsads                   186.6k     33.11 MFLOP     3.27 ms
+TinyHAR                        wisdm                    83.4k      1.94 MFLOP     1.70 ms
+TinyHAR                        daphnet                 230.6k     20.04 MFLOP     6.51 ms
+Triple-Cross-Attn              utd_mhad                455.0k     22.07 MFLOP     2.59 ms
+Triple-Cross-Attn              uci_har                 316.7k     32.55 MFLOP     3.14 ms
+Triple-Cross-Attn              unimib_shar             312.9k     11.02 MFLOP     2.20 ms
+Triple-Cross-Attn              actrectut_gestures      385.9k     33.30 MFLOP     3.58 ms
+Triple-Cross-Attn              opportunity             588.1k    227.28 MFLOP    11.39 ms
+Triple-Cross-Attn              sad                     785.2k    216.42 MFLOP     9.75 ms
+Triple-Cross-Attn              hapt                    339.8k     21.84 MFLOP     2.58 ms
+Triple-Cross-Attn              dsads                   685.4k     68.55 MFLOP     4.77 ms
+Triple-Cross-Attn              wisdm                   252.2k      3.08 MFLOP     1.79 ms
+Triple-Cross-Attn              daphnet                 289.1k     39.71 MFLOP     3.61 ms
+DANA                           utd_mhad                460.8k    111.17 MFLOP     3.30 ms
+DANA                           uci_har                 556.4k    166.75 MFLOP     4.09 ms
+DANA                           unimib_shar             361.2k     55.59 MFLOP     2.72 ms
+DANA                           actrectut_gestures      753.7k    177.87 MFLOP     4.64 ms
+DANA                           opportunity            4619.5k   1478.54 MFLOP    33.36 ms
+DANA                           sad                    2227.7k   1111.68 MFLOP    20.72 ms
+DANA                           hapt                    458.8k    111.17 MFLOP     3.31 ms
+DANA                           dsads                  1737.7k    416.88 MFLOP    10.58 ms
+DANA                           wisdm                   359.8k     22.24 MFLOP     1.98 ms
+DANA                           daphnet                 556.0k    213.44 MFLOP     4.60 ms
+TinierHAR                      utd_mhad                  8.0k      0.74 MFLOP     3.45 ms
+TinierHAR                      uci_har                   9.6k      1.05 MFLOP     3.54 ms
+TinierHAR                      unimib_shar               5.3k      0.43 MFLOP     3.35 ms
+TinierHAR                      actrectut_gestures       14.4k      1.09 MFLOP     3.01 ms
+TinierHAR                      opportunity             104.8k      8.31 MFLOP     5.24 ms
+TinierHAR                      sad                      48.8k      6.36 MFLOP     5.17 ms
+TinierHAR                      hapt                      7.5k      0.74 MFLOP     4.04 ms
+TinierHAR                      dsads                    37.7k      2.34 MFLOP     3.89 ms
+TinierHAR                      wisdm                     5.0k      0.17 MFLOP     3.00 ms
+TinierHAR                      daphnet                   9.5k      1.36 MFLOP     4.91 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            utd_mhad                374.4k    202.38 MFLOP    29.83 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            uci_har                 445.4k    284.71 MFLOP    30.35 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            unimib_shar             299.3k    120.66 MFLOP    25.95 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            actrectut_gestures      593.6k    272.41 MFLOP    18.06 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            opportunity            3492.7k   2364.65 MFLOP    44.39 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            sad                    1698.9k   1778.87 MFLOP    45.16 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            hapt                    372.4k    202.37 MFLOP    26.81 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            dsads                  1331.8k    594.16 MFLOP    18.67 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            wisdm                   297.9k     40.62 MFLOP     8.90 ms
+[STEP 3] Creating AttendDiscriminate HAR model ...
+Attend+Discriminate            daphnet                 445.0k    372.53 MFLOP    36.03 ms
+DynamicWHAR                    utd_mhad               1127.5k     14.76 MFLOP     1.30 ms
+DynamicWHAR                    uci_har                1419.7k     29.61 MFLOP     1.47 ms
+DynamicWHAR                    unimib_shar             831.3k      4.94 MFLOP     1.13 ms
+DynamicWHAR                    actrectut_gestures     2008.1k     72.98 MFLOP     2.14 ms
+DynamicWHAR                    opportunity           13606.8k   7129.47 MFLOP   123.32 ms
+DynamicWHAR                    sad                    6433.3k   1214.17 MFLOP    23.46 ms
+DynamicWHAR                    hapt                   1125.5k     14.75 MFLOP     1.43 ms
+DynamicWHAR                    dsads                  4957.3k    652.60 MFLOP    13.03 ms
+DynamicWHAR                    wisdm                   826.2k      4.23 MFLOP     1.35 ms
+DynamicWHAR                    daphnet                1421.0k     30.60 MFLOP     1.82 ms
+DeepConvLSTM-Attn              utd_mhad                477.4k    106.70 MFLOP     4.92 ms
+DeepConvLSTM-Attn              uci_har                 573.0k    157.85 MFLOP     5.74 ms
+DeepConvLSTM-Attn              unimib_shar             377.8k     55.55 MFLOP     4.50 ms
+DeepConvLSTM-Attn              actrectut_gestures      770.4k    158.32 MFLOP     5.32 ms
+DeepConvLSTM-Attn              opportunity            4636.1k   1284.49 MFLOP    29.56 ms
+DeepConvLSTM-Attn              sad                    2244.3k   1027.45 MFLOP    25.90 ms
+DeepConvLSTM-Attn              hapt                    475.5k    106.70 MFLOP     5.33 ms
+DeepConvLSTM-Attn              dsads                  1754.3k    352.33 MFLOP    10.75 ms
+DeepConvLSTM-Attn              wisdm                   376.4k     19.22 MFLOP     2.07 ms
+DeepConvLSTM-Attn              daphnet                 572.6k    205.93 MFLOP     7.33 ms
+MLP-HAR                        utd_mhad                217.2k      3.11 MFLOP     1.07 ms
+MLP-HAR                        uci_har                 242.9k      5.23 MFLOP     1.13 ms
+MLP-HAR                        unimib_shar             199.3k      1.37 MFLOP     1.00 ms
+MLP-HAR                        actrectut_gestures      210.3k      5.14 MFLOP     1.09 ms
+MLP-HAR                        opportunity           10316.5k    244.40 MFLOP    14.36 ms
+MLP-HAR                        sad                    2292.0k     98.30 MFLOP     3.60 ms
+MLP-HAR                        hapt                    216.1k      3.11 MFLOP     1.36 ms
+MLP-HAR                        dsads                  1242.0k     25.68 MFLOP     1.68 ms
+MLP-HAR                        wisdm                    37.0k      0.27 MFLOP     0.84 ms
+MLP-HAR                        daphnet                 362.2k      7.87 MFLOP     1.18 ms
+DeepConvLSTM                   utd_mhad                460.8k    102.31 MFLOP     4.06 ms
+DeepConvLSTM                   uci_har                 556.4k    153.46 MFLOP     5.86 ms
+DeepConvLSTM                   unimib_shar             361.2k     51.16 MFLOP     4.02 ms
+DeepConvLSTM                   actrectut_gestures      753.7k    155.72 MFLOP     4.79 ms
+DeepConvLSTM                   opportunity            4619.5k   1282.08 MFLOP    29.02 ms
+DeepConvLSTM                   sad                    2227.7k   1023.05 MFLOP    24.94 ms
+DeepConvLSTM                   hapt                    458.8k    102.31 MFLOP     4.62 ms
+DeepConvLSTM                   dsads                  1737.7k    350.41 MFLOP    10.01 ms
+DeepConvLSTM                   wisdm                   359.8k     17.80 MFLOP     2.15 ms
+DeepConvLSTM                   daphnet                 556.0k    200.15 MFLOP     6.31 ms
+MLP-Mixer                      utd_mhad                621.1k    101.77 MFLOP     4.24 ms
+MLP-Mixer                      uci_har                 618.4k    102.37 MFLOP     4.04 ms
+MLP-Mixer                      unimib_shar             580.6k     50.89 MFLOP     3.41 ms
+MLP-Mixer                      actrectut_gestures      639.8k    128.96 MFLOP     4.48 ms
+MLP-Mixer                      opportunity            1323.1k   1020.32 MFLOP    18.64 ms
+MLP-Mixer                      sad                    1128.3k    766.27 MFLOP    14.07 ms
+MLP-Mixer                      hapt                    619.2k    101.77 MFLOP     4.12 ms
+MLP-Mixer                      dsads                   757.3k    281.07 MFLOP     6.90 ms
+MLP-Mixer                      wisdm                   555.4k     20.09 MFLOP     2.90 ms
+MLP-Mixer                      daphnet                 638.6k    129.34 MFLOP     4.54 ms
+Guan-LSTM                      utd_mhad                803.6k      2.07 MFLOP     8.86 ms
+Guan-LSTM                      uci_har                 801.3k      0.46 MFLOP     7.80 ms
+Guan-LSTM                      unimib_shar             798.0k      1.31 MFLOP     7.52 ms
+Guan-LSTM                      actrectut_gestures      809.0k      0.59 MFLOP     5.89 ms
+Guan-LSTM                      opportunity             928.0k      0.23 MFLOP     6.44 ms
+Guan-LSTM                      sad                     853.8k      0.54 MFLOP     8.90 ms
+Guan-LSTM                      hapt                    799.8k      0.92 MFLOP     8.57 ms
+Guan-LSTM                      dsads                   841.5k      0.73 MFLOP     4.92 ms
+Guan-LSTM                      wisdm                   795.1k      0.18 MFLOP     4.15 ms
+Guan-LSTM                      daphnet                 800.5k      0.29 MFLOP    10.64 ms
+DeepConvShallowLSTM            utd_mhad                402.8k    196.58 MFLOP     3.84 ms
+DeepConvShallowLSTM            uci_har                 498.4k    293.91 MFLOP     4.57 ms
+DeepConvShallowLSTM            unimib_shar             303.2k     98.39 MFLOP     3.29 ms
+DeepConvShallowLSTM            actrectut_gestures      695.8k    269.62 MFLOP     4.32 ms
+DeepConvShallowLSTM            opportunity            4561.5k   2172.33 MFLOP    32.14 ms
+DeepConvShallowLSTM            sad                    2169.7k   1958.44 MFLOP    29.71 ms
+DeepConvShallowLSTM            hapt                    400.8k    196.16 MFLOP     3.89 ms
+DeepConvShallowLSTM            dsads                  1679.7k    551.72 MFLOP     8.82 ms
+DeepConvShallowLSTM            wisdm                   301.8k     24.57 MFLOP     1.21 ms
+DeepConvShallowLSTM            daphnet                 498.0k    396.57 MFLOP     5.12 ms
+SA-HAR                         utd_mhad                415.5k    148.53 MFLOP     4.12 ms
+SA-HAR                         uci_har                 402.2k    149.77 MFLOP     3.77 ms
+SA-HAR                         unimib_shar             408.2k    147.25 MFLOP     3.48 ms
+SA-HAR                         actrectut_gestures      406.6k     92.17 MFLOP     2.93 ms
+SA-HAR                         opportunity             417.8k    115.76 MFLOP     6.64 ms
+SA-HAR                         sad                     409.4k    171.31 MFLOP     6.46 ms
+SA-HAR                         hapt                    405.4k    148.51 MFLOP     3.63 ms
+SA-HAR                         dsads                   414.9k     76.75 MFLOP     3.31 ms
+SA-HAR                         wisdm                   401.5k     53.37 MFLOP     2.17 ms
+SA-HAR                         daphnet                 400.6k    199.95 MFLOP     4.43 ms
+# Accuracy against cost (Pareto)
+
+Mean macro-F1 over the 10 datasets at seed 0 (the paper ran once); cost = geometric mean over the 10 datasets of the measured cost on each dataset's input. ★ = on the Pareto front of all models for that cost. FLOPs count matmul/conv only (LSTM, FFT and scan work is missed), so they are listed without a front.
+
+| Model | Source | F1 seed 0 | F1 3 seeds | Params | Params (utd_mhad) | MFLOPs / window | CPU ms / window |
+|---|---|---|---|---|---|---|---|
+| RN + statistics | ours | 74.69 | 74.70 | 28.7k ★ | 26.5k | 5.70 | 5.09 ★ |
+| RN + laws | ours | 73.77 | 74.42 | 30.2k | 27.6k | 6.42 | 9.14 |
+| StyleAlignNet | ours | 73.74 |  | 29.8k | 38.2k | 5.89 | 9.18 |
+| Triple-Cross-Attn | paper | 73.48 |  | 410.7k | 455.0k | 34.47 | 3.76 ★ |
+| CNN-HAR | paper | 73.18 |  | 133.2k | 72.0k | 20.33 | 5.25 |
+| TinyHAR | paper | 73.13 |  | 191.9k | 185.1k | 17.79 | 4.41 |
+| DANA | paper | 72.86 |  | 805.2k | 460.8k | 191.48 | 5.72 |
+| Attend+Discriminate | paper | 72.74 |  | 640.2k | 374.4k | 328.19 | 25.91 |
+| RecurrenceNet | ours | 72.25 | 72.01 | 24.9k ★ | 24.7k | 5.69 | 4.87 |
+| LawNet (random groups) | ours | 72.14 |  | 21.4k ★ | 19.0k | 4.22 | 4.35 |
+| LawNet | ours | 71.73 | 71.52 | 21.4k | 19.0k | 4.22 | 4.36 |
+| TinierHAR | paper | 71.39 |  | 14.5k ★ | 8.0k | 1.23 | 3.88 |
+| S4D | ours | 71.25 | 71.29 | 28.0k | 27.7k | 4.79 | 14.11 |
+| DeepConvLSTM-Attn | paper | 71.20 |  | 826.6k | 477.4k | 176.35 | 7.33 |
+| HysteresisNet | ours | 70.25 | 70.69 | 23.8k | 23.6k | 5.34 | 3.21 ★ |
+| Statistics (memoryless) | ours | 69.64 | 70.24 | 20.0k | 17.9k | 3.60 | 0.55 ★ |
+| DynamicWHAR | paper | 69.61 |  | 2082.2k | 1127.5k | 66.54 | 3.79 |
+| MLP-HAR | paper | 69.31 |  | 424.1k | 217.2k | 7.35 | 1.66 |
+| MLP-Mixer | paper | 69.21 |  | 716.0k | 621.1k | 144.51 | 5.51 |
+| DeepConvLSTM | paper | 68.97 |  | 805.2k | 460.8k | 170.66 | 6.79 |
+| QuantileNet | ours | 68.86 | 69.70 | 20.9k | 20.8k | 4.60 | 10.53 |
+| Mamba | ours | 67.90 | 68.91 | 21.3k | 21.1k | 4.36 | 5.56 |
+| No memory | ours | 65.63 | 66.06 | 20.2k | 20.0k | 4.60 | 2.63 |
+| Guan-LSTM | paper | 63.32 |  | 822.1k | 803.6k | 0.57 | 7.10 |
+| DeepConvShallowLSTM | paper | 61.83 |  | 729.0k | 402.8k | 304.61 | 5.90 |
+| SA-HAR | paper | 61.82 |  | 408.2k | 415.5k | 121.96 | 3.89 |
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/pareto.svg
+== src.visualization.build_factor_figures
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/factor_map.svg
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/variance.svg
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/data_factors.svg
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/data_corr.svg
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/components_forest.svg
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/components_heatmap.svg
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/eval_noise.svg
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/ranking.svg
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/best_family.svg
+== src.visualization.letter_figures
+figures and table written; run 20261016_045734_letter_figures
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:228: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11060). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /__w/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+2026-10-16 04:57:52,515 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 04:57:52,516 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 04:57:52,698 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:52,698 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 04:57:52,698 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 04:57:52,735 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:52,736 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 04:57:52,736 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 04:57:52,757 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:52,757 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 04:57:52,757 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 04:57:52,803 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:52,803 - whar-datasets - INFO - Loading windowing
+2026-10-16 04:57:52,961 - whar-datasets - INFO - Selecting activities
+2026-10-16 04:57:53,436 - whar-datasets - INFO - activity_ids from 0 to 10
+2026-10-16 04:57:53,436 - whar-datasets - INFO - subject_ids from 0 to 1
+2026-10-16 04:57:53,440 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:57:53,440 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:57:53,465 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:53,465 - whar-datasets - INFO - Loading samples
+actrectut_gestures split 0: 3 runs
+2026-10-16 04:57:54,729 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:57:54,730 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:57:54,753 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:54,753 - whar-datasets - INFO - Loading samples
+actrectut_gestures split 1: 3 runs
+2026-10-16 04:57:56,065 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 04:57:56,065 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 04:57:56,081 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:56,082 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 04:57:56,082 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 04:57:56,101 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:56,101 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 04:57:56,102 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 04:57:56,137 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:56,137 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 04:57:56,137 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 04:57:56,146 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:56,146 - whar-datasets - INFO - Loading windowing
+2026-10-16 04:57:56,303 - whar-datasets - INFO - Selecting activities
+2026-10-16 04:57:56,308 - whar-datasets - INFO - activity_ids from 0 to 18
+2026-10-16 04:57:56,308 - whar-datasets - INFO - subject_ids from 0 to 7
+2026-10-16 04:57:56,368 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:57:56,368 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:57:56,381 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:57:56,381 - whar-datasets - INFO - Loading samples
+dsads split 1: 2 runs
+2026-10-16 04:58:03,055 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:03,055 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:03,075 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:03,075 - whar-datasets - INFO - Loading samples
+dsads split 3: 1 runs
+2026-10-16 04:58:08,600 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:08,600 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:08,645 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:08,645 - whar-datasets - INFO - Loading samples
+dsads split 4: 2 runs
+2026-10-16 04:58:16,179 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:16,179 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:16,203 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:16,204 - whar-datasets - INFO - Loading samples
+dsads split 6: 1 runs
+2026-10-16 04:58:21,156 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 04:58:21,156 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 04:58:21,196 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:21,196 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 04:58:21,196 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 04:58:21,225 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:21,225 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 04:58:21,225 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 04:58:21,261 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:21,261 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 04:58:21,261 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 04:58:21,295 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:21,295 - whar-datasets - INFO - Loading windowing
+2026-10-16 04:58:21,420 - whar-datasets - INFO - Selecting activities
+2026-10-16 04:58:21,424 - whar-datasets - INFO - activity_ids from 0 to 11
+2026-10-16 04:58:21,424 - whar-datasets - INFO - subject_ids from 0 to 29
+2026-10-16 04:58:21,455 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:21,455 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:21,489 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:21,489 - whar-datasets - INFO - Loading samples
+hapt split 4: 1 runs
+2026-10-16 04:58:22,130 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:22,130 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:22,142 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:22,142 - whar-datasets - INFO - Loading samples
+hapt split 5: 1 runs
+2026-10-16 04:58:23,111 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:23,111 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:23,117 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:23,117 - whar-datasets - INFO - Loading samples
+hapt split 6: 1 runs
+2026-10-16 04:58:23,877 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:23,878 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:23,908 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:23,908 - whar-datasets - INFO - Loading samples
+hapt split 7: 1 runs
+2026-10-16 04:58:24,799 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:24,799 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:24,828 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:24,828 - whar-datasets - INFO - Loading samples
+hapt split 8: 1 runs
+2026-10-16 04:58:25,991 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:25,991 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:26,005 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:26,005 - whar-datasets - INFO - Loading samples
+hapt split 9: 1 runs
+2026-10-16 04:58:26,907 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 04:58:26,907 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 04:58:26,913 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:26,913 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 04:58:26,913 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 04:58:26,932 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:26,932 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 04:58:26,932 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 04:58:26,953 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:26,953 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 04:58:26,953 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 04:58:26,984 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:26,984 - whar-datasets - INFO - Loading windowing
+2026-10-16 04:58:27,084 - whar-datasets - INFO - Selecting activities
+2026-10-16 04:58:27,088 - whar-datasets - INFO - activity_ids from 0 to 3
+2026-10-16 04:58:27,088 - whar-datasets - INFO - subject_ids from 0 to 3
+2026-10-16 04:58:27,106 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:27,106 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:27,117 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:27,117 - whar-datasets - INFO - Loading samples
+opportunity split 2: 4 runs
+2026-10-16 04:58:40,390 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:40,390 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:40,442 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:40,442 - whar-datasets - INFO - Loading samples
+opportunity split 3: 2 runs
+2026-10-16 04:58:46,336 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 04:58:46,336 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 04:58:46,345 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:46,345 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 04:58:46,345 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 04:58:46,357 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:46,357 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 04:58:46,357 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 04:58:46,403 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:46,403 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 04:58:46,403 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 04:58:46,412 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:46,412 - whar-datasets - INFO - Loading windowing
+2026-10-16 04:58:46,465 - whar-datasets - INFO - Selecting activities
+2026-10-16 04:58:46,469 - whar-datasets - INFO - activity_ids from 0 to 6
+2026-10-16 04:58:46,469 - whar-datasets - INFO - subject_ids from 0 to 9
+2026-10-16 04:58:46,500 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:46,500 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:46,515 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:46,515 - whar-datasets - INFO - Loading samples
+sad split 0: 2 runs
+2026-10-16 04:58:49,582 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:49,583 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:49,595 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:49,595 - whar-datasets - INFO - Loading samples
+sad split 2: 1 runs
+2026-10-16 04:58:53,836 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:53,836 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:53,860 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:53,860 - whar-datasets - INFO - Loading samples
+sad split 3: 1 runs
+2026-10-16 04:58:57,991 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:58:57,991 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:58:58,016 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:58:58,016 - whar-datasets - INFO - Loading samples
+sad split 5: 2 runs
+2026-10-16 04:59:01,905 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 04:59:01,905 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 04:59:01,957 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:01,957 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 04:59:01,957 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 04:59:01,971 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:01,972 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 04:59:01,972 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 04:59:02,008 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:02,009 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 04:59:02,009 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 04:59:02,048 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:02,049 - whar-datasets - INFO - Loading windowing
+2026-10-16 04:59:02,169 - whar-datasets - INFO - Selecting activities
+2026-10-16 04:59:02,173 - whar-datasets - INFO - activity_ids from 0 to 11
+2026-10-16 04:59:02,173 - whar-datasets - INFO - subject_ids from 0 to 19
+2026-10-16 04:59:02,222 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:59:02,222 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:59:02,236 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:02,236 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+uca_ehar split 0: 12 runs
+2026-10-16 04:59:10,271 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:59:10,271 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:59:10,306 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:10,306 - whar-datasets - INFO - Loading samples
+uca_ehar split 1: 12 runs
+2026-10-16 04:59:21,043 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:59:21,043 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:59:21,050 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:21,051 - whar-datasets - INFO - Loading samples
+uca_ehar split 2: 12 runs
+2026-10-16 04:59:29,060 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:59:29,060 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:59:29,099 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:29,100 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+uca_ehar split 3: 12 runs
+2026-10-16 04:59:35,904 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:59:35,904 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:59:35,940 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:35,940 - whar-datasets - INFO - Loading samples
+uca_ehar split 4: 12 runs
+2026-10-16 04:59:43,258 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:59:43,258 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:59:43,297 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:43,297 - whar-datasets - INFO - Loading samples
+uca_ehar split 5: 12 runs
+2026-10-16 04:59:51,660 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:59:51,661 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:59:51,664 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:51,664 - whar-datasets - INFO - Loading samples
+uca_ehar split 6: 12 runs
+2026-10-16 04:59:59,574 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 04:59:59,574 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 04:59:59,589 - whar-datasets - INFO - Hash is up to date
+2026-10-16 04:59:59,589 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+uca_ehar split 7: 12 runs
+2026-10-16 05:00:06,036 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:06,036 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:06,051 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:06,051 - whar-datasets - INFO - Loading samples
+uca_ehar split 8: 12 runs
+2026-10-16 05:00:13,273 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:13,273 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:13,297 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:13,297 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+uca_ehar split 9: 12 runs
+2026-10-16 05:00:20,405 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 05:00:20,405 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 05:00:20,422 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:20,422 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 05:00:20,422 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 05:00:20,429 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:20,429 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 05:00:20,429 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 05:00:20,438 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:20,438 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 05:00:20,438 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 05:00:20,464 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:20,464 - whar-datasets - INFO - Loading windowing
+2026-10-16 05:00:20,538 - whar-datasets - INFO - Selecting activities
+2026-10-16 05:00:20,541 - whar-datasets - INFO - activity_ids from 0 to 5
+2026-10-16 05:00:20,542 - whar-datasets - INFO - subject_ids from 0 to 29
+2026-10-16 05:00:20,573 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:20,574 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:20,608 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:20,608 - whar-datasets - INFO - Loading samples
+uci_har split 0: 1 runs
+2026-10-16 05:00:22,387 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:22,387 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:22,398 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:22,398 - whar-datasets - INFO - Loading samples
+uci_har split 2: 1 runs
+2026-10-16 05:00:23,561 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:23,561 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:23,572 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:23,572 - whar-datasets - INFO - Loading samples
+uci_har split 5: 1 runs
+2026-10-16 05:00:24,683 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:24,683 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:24,697 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:24,697 - whar-datasets - INFO - Loading samples
+uci_har split 6: 1 runs
+2026-10-16 05:00:26,736 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:26,736 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:26,747 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:26,747 - whar-datasets - INFO - Loading samples
+uci_har split 8: 1 runs
+2026-10-16 05:00:27,879 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:27,879 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:27,894 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:27,894 - whar-datasets - INFO - Loading samples
+uci_har split 9: 1 runs
+2026-10-16 05:00:29,684 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 05:00:29,684 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 05:00:29,693 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:29,693 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 05:00:29,693 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 05:00:29,706 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:29,706 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 05:00:29,706 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 05:00:29,713 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:29,713 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 05:00:29,713 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 05:00:29,726 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:29,726 - whar-datasets - INFO - Loading windowing
+2026-10-16 05:00:29,788 - whar-datasets - INFO - Selecting activities
+2026-10-16 05:00:29,792 - whar-datasets - INFO - activity_ids from 0 to 16
+2026-10-16 05:00:29,792 - whar-datasets - INFO - subject_ids from 0 to 29
+2026-10-16 05:00:29,823 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:29,823 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:29,851 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:29,851 - whar-datasets - INFO - Loading samples
+unimib_shar split 1: 1 runs
+2026-10-16 05:00:30,703 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:30,703 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:30,716 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:30,716 - whar-datasets - INFO - Loading samples
+unimib_shar split 2: 1 runs
+2026-10-16 05:00:31,202 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:31,202 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:31,216 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:31,216 - whar-datasets - INFO - Loading samples
+unimib_shar split 3: 1 runs
+2026-10-16 05:00:31,704 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:31,704 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:31,711 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:31,711 - whar-datasets - INFO - Loading samples
+unimib_shar split 4: 1 runs
+2026-10-16 05:00:32,207 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:32,207 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:32,218 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:32,218 - whar-datasets - INFO - Loading samples
+unimib_shar split 9: 2 runs
+2026-10-16 05:00:33,749 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 05:00:33,749 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 05:00:33,783 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:33,783 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 05:00:33,783 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 05:00:33,808 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:33,808 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 05:00:33,808 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 05:00:33,824 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:33,824 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 05:00:33,824 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 05:00:33,843 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:33,843 - whar-datasets - INFO - Loading windowing
+2026-10-16 05:00:33,919 - whar-datasets - INFO - Selecting activities
+2026-10-16 05:00:33,922 - whar-datasets - INFO - activity_ids from 0 to 10
+2026-10-16 05:00:33,922 - whar-datasets - INFO - subject_ids from 0 to 16
+2026-10-16 05:00:33,952 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:33,952 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:33,954 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:33,954 - whar-datasets - INFO - Loading samples
+up_fall split 0: 12 runs
+2026-10-16 05:00:41,224 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:41,224 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:41,251 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:41,251 - whar-datasets - INFO - Loading samples
+up_fall split 1: 12 runs
+2026-10-16 05:00:48,447 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:48,447 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:48,469 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:48,469 - whar-datasets - INFO - Loading samples
+up_fall split 2: 12 runs
+2026-10-16 05:00:56,121 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:00:56,122 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:00:56,133 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:00:56,133 - whar-datasets - INFO - Loading samples
+up_fall split 3: 12 runs
+2026-10-16 05:01:03,437 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:03,437 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:03,452 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:03,452 - whar-datasets - INFO - Loading samples
+up_fall split 4: 12 runs
+2026-10-16 05:01:11,929 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:11,929 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:11,947 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:11,947 - whar-datasets - INFO - Loading samples
+up_fall split 5: 12 runs
+2026-10-16 05:01:18,377 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:18,377 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:18,382 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:18,382 - whar-datasets - INFO - Loading samples
+up_fall split 6: 12 runs
+2026-10-16 05:01:26,669 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:26,669 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:26,680 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:26,680 - whar-datasets - INFO - Loading samples
+up_fall split 7: 12 runs
+2026-10-16 05:01:33,036 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:33,036 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:33,062 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:33,062 - whar-datasets - INFO - Loading samples
+up_fall split 8: 12 runs
+2026-10-16 05:01:40,050 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:40,050 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:40,080 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:40,080 - whar-datasets - INFO - Loading samples
+up_fall split 9: 12 runs
+2026-10-16 05:01:45,444 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 05:01:45,444 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 05:01:45,471 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:45,471 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 05:01:45,471 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 05:01:45,483 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:45,483 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 05:01:45,483 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 05:01:45,499 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:45,499 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 05:01:45,499 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 05:01:45,506 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:45,506 - whar-datasets - INFO - Loading windowing
+2026-10-16 05:01:45,553 - whar-datasets - INFO - Selecting activities
+2026-10-16 05:01:45,557 - whar-datasets - INFO - activity_ids from 0 to 26
+2026-10-16 05:01:45,557 - whar-datasets - INFO - subject_ids from 0 to 7
+2026-10-16 05:01:45,569 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:45,569 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:45,600 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:45,600 - whar-datasets - INFO - Loading samples
+utd_mhad split 0: 1 runs
+2026-10-16 05:01:46,030 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:46,030 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:46,047 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:46,047 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+utd_mhad split 2: 3 runs
+2026-10-16 05:01:46,668 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:46,668 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:46,715 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:46,715 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+utd_mhad split 3: 1 runs
+2026-10-16 05:01:46,952 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:46,952 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:46,962 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:46,962 - whar-datasets - INFO - Loading samples
+utd_mhad split 6: 1 runs
+2026-10-16 05:01:47,272 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 05:01:47,272 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 05:01:47,282 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:47,282 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 05:01:47,283 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 05:01:47,297 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:47,297 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 05:01:47,297 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 05:01:47,326 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:47,326 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 05:01:47,326 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 05:01:47,361 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:47,361 - whar-datasets - INFO - Loading windowing
+2026-10-16 05:01:47,430 - whar-datasets - INFO - Selecting activities
+2026-10-16 05:01:47,433 - whar-datasets - INFO - activity_ids from 0 to 17
+2026-10-16 05:01:47,433 - whar-datasets - INFO - subject_ids from 0 to 23
+2026-10-16 05:01:47,495 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:01:47,495 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:01:47,508 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:01:47,508 - whar-datasets - INFO - Loading samples
+wear split 0: 12 runs
+2026-10-16 05:02:06,521 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:02:06,521 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:02:06,537 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:02:06,537 - whar-datasets - INFO - Loading samples
+wear split 1: 12 runs
+2026-10-16 05:02:24,914 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:02:24,914 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:02:24,957 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:02:24,957 - whar-datasets - INFO - Loading samples
+wear split 2: 12 runs
+2026-10-16 05:02:44,184 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:02:44,184 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:02:44,220 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:02:44,220 - whar-datasets - INFO - Loading samples
+wear split 3: 12 runs
+2026-10-16 05:03:03,322 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:03:03,322 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:03:03,339 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:03:03,339 - whar-datasets - INFO - Loading samples
+wear split 4: 12 runs
+2026-10-16 05:03:17,121 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:03:17,121 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:03:17,165 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:03:17,165 - whar-datasets - INFO - Loading samples
+wear split 5: 12 runs
+2026-10-16 05:03:32,398 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:03:32,398 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:03:32,424 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:03:32,424 - whar-datasets - INFO - Loading samples
+wear split 6: 12 runs
+2026-10-16 05:03:48,161 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:03:48,161 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:03:48,187 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:03:48,187 - whar-datasets - INFO - Loading samples
+wear split 7: 12 runs
+2026-10-16 05:04:04,047 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:04:04,047 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:04:04,087 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:04,087 - whar-datasets - INFO - Loading samples
+wear split 8: 12 runs
+2026-10-16 05:04:18,319 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:04:18,319 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:04:18,350 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:18,350 - whar-datasets - INFO - Loading samples
+wear split 9: 12 runs
+2026-10-16 05:04:32,840 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 05:04:32,841 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 05:04:32,881 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:32,881 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 05:04:32,881 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 05:04:32,903 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:32,903 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 05:04:32,903 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 05:04:32,930 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:32,931 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 05:04:32,931 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 05:04:32,951 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:32,951 - whar-datasets - INFO - Loading windowing
+2026-10-16 05:04:33,080 - whar-datasets - INFO - Selecting activities
+2026-10-16 05:04:33,084 - whar-datasets - INFO - activity_ids from 0 to 5
+2026-10-16 05:04:33,085 - whar-datasets - INFO - subject_ids from 0 to 35
+2026-10-16 05:04:33,178 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:04:33,179 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:04:33,225 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:33,225 - whar-datasets - INFO - Loading samples
+wisdm split 3: 1 runs
+2026-10-16 05:04:34,736 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:04:34,737 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:04:34,767 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:34,767 - whar-datasets - INFO - Loading samples
+wisdm split 5: 2 runs
+2026-10-16 05:04:37,812 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:04:37,812 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:04:37,821 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:37,821 - whar-datasets - INFO - Loading samples
+wisdm split 7: 1 runs
+2026-10-16 05:04:39,692 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:04:39,692 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:04:39,707 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:39,707 - whar-datasets - INFO - Loading samples
+wisdm split 8: 1 runs
+2026-10-16 05:04:40,940 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 05:04:40,940 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 05:04:40,964 - whar-datasets - INFO - Hash is up to date
+2026-10-16 05:04:40,964 - whar-datasets - INFO - Loading samples
+wisdm split 9: 1 runs
+evaluated 414 of 414

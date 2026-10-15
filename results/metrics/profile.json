@@ -1,1770 +1,1250 @@
 [
   {
     "dataset": "uci_har",
+    "model_id": "attend_discriminate",
+    "params": 445384,
+    "flops_counted": 284706560,
+    "latency_ms_cpu1": 28.309,
+    "whar_model": true
+  },
+  {
+    "dataset": "uci_har",
     "model_id": "cnn_har",
     "params": 87566,
     "flops_counted": 18705000,
-    "latency_ms_cpu1": 3.799
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "tinyhar",
-    "params": 189863,
-    "flops_counted": 15335488,
-    "latency_ms_cpu1": 5.673
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "triple_cross_domain_attention",
-    "params": 316731,
-    "flops_counted": 32549944,
-    "latency_ms_cpu1": 2.889
+    "latency_ms_cpu1": 4.017,
+    "whar_model": true
   },
   {
     "dataset": "uci_har",
     "model_id": "dana",
     "params": 556358,
     "flops_counted": 166753536,
-    "latency_ms_cpu1": 4.904
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "tinierhar",
-    "params": 9589,
-    "flops_counted": 1053460,
-    "latency_ms_cpu1": 3.436
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "attend_discriminate",
-    "params": 445384,
-    "flops_counted": 284706560,
-    "latency_ms_cpu1": 32.144
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "dynamic_whar",
-    "params": 1419663,
-    "flops_counted": 29606784,
-    "latency_ms_cpu1": 1.267
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "deepconv_lstm_attention",
-    "params": 572999,
-    "flops_counted": 157851648,
-    "latency_ms_cpu1": 5.017
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "mlp_har",
-    "params": 242874,
-    "flops_counted": 5226768,
-    "latency_ms_cpu1": 0.976
+    "latency_ms_cpu1": 4.098,
+    "whar_model": true
   },
   {
     "dataset": "uci_har",
     "model_id": "deepconv_lstm",
     "params": 556358,
     "flops_counted": 153459456,
-    "latency_ms_cpu1": 4.958
+    "latency_ms_cpu1": 4.632,
+    "whar_model": true
   },
   {
     "dataset": "uci_har",
-    "model_id": "mlp_mixer",
-    "params": 618380,
-    "flops_counted": 102372644,
-    "latency_ms_cpu1": 7.389
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "lstms_ensemble",
-    "params": 801286,
-    "flops_counted": 460800,
-    "latency_ms_cpu1": 6.796
+    "model_id": "deepconv_lstm_attention",
+    "params": 572999,
+    "flops_counted": 157851648,
+    "latency_ms_cpu1": 4.82,
+    "whar_model": true
   },
   {
     "dataset": "uci_har",
     "model_id": "deepconv_lstm_iswc",
     "params": 498374,
     "flops_counted": 293905920,
-    "latency_ms_cpu1": 4.345
+    "latency_ms_cpu1": 4.037,
+    "whar_model": true
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "dynamic_whar",
+    "params": 1419663,
+    "flops_counted": 29606784,
+    "latency_ms_cpu1": 1.451,
+    "whar_model": true
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "lstms_ensemble",
+    "params": 801286,
+    "flops_counted": 460800,
+    "latency_ms_cpu1": 8.983,
+    "whar_model": true
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "mlp_har",
+    "params": 242874,
+    "flops_counted": 5226768,
+    "latency_ms_cpu1": 1.076,
+    "whar_model": true
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "mlp_mixer",
+    "params": 618380,
+    "flops_counted": 102372644,
+    "latency_ms_cpu1": 3.663,
+    "whar_model": true
   },
   {
     "dataset": "uci_har",
     "model_id": "sa_har",
     "params": 402241,
     "flops_counted": 149766432,
-    "latency_ms_cpu1": 3.15
+    "latency_ms_cpu1": 3.338,
+    "whar_model": true
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "tinierhar",
+    "params": 9589,
+    "flops_counted": 1053460,
+    "latency_ms_cpu1": 3.58,
+    "whar_model": true
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "tinyhar",
+    "params": 189863,
+    "flops_counted": 15335488,
+    "latency_ms_cpu1": 5.241,
+    "whar_model": true
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "triple_cross_domain_attention",
+    "params": 316731,
+    "flops_counted": 32549944,
+    "latency_ms_cpu1": 2.798,
+    "whar_model": true
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "dualmem",
+    "params": 26136,
+    "flops_counted": 7380360,
+    "latency_ms_cpu1": 15.55,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "dualmem_path",
+    "params": 26136,
+    "flops_counted": 7380360,
+    "latency_ms_cpu1": 20.842,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
     "model_id": "edge_ssm",
     "params": 33798,
     "flops_counted": 8602368,
-    "latency_ms_cpu1": 8.84,
-    "streaming": {
-      "mac": 33856,
-      "tanh": 3840,
-      "add": 3904,
-      "state_floats": 640,
-      "mac_per_window": 5078784
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2594
+    "latency_ms_cpu1": 4.808,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
-    "model_id": "edge_ssm_s",
-    "params": 4982,
-    "flops_counted": 1075584,
-    "latency_ms_cpu1": 2.492,
-    "streaming": {
-      "mac": 4880,
-      "tanh": 960,
-      "add": 992,
-      "state_floats": 176,
-      "mac_per_window": 732192
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2226
+    "model_id": "edge_ssm_ema",
+    "params": 33798,
+    "flops_counted": 8602368,
+    "latency_ms_cpu1": 4.828,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
     "model_id": "edge_ssm_nophi",
     "params": 30342,
     "flops_counted": 8602368,
-    "latency_ms_cpu1": 1.363,
-    "streaming": {
-      "mac": 30400,
-      "tanh": 384,
-      "add": 448,
-      "state_floats": 640,
-      "mac_per_window": 4560384
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.1723
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "edge_ssm_tau_input",
-    "params": 33231,
-    "flops_counted": 8602368,
-    "latency_ms_cpu1": 8.873,
-    "streaming": {
-      "mac": 33856,
-      "tanh": 3840,
-      "add": 3904,
-      "state_floats": 640,
-      "mac_per_window": 5078784
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2418
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "edge_ssm_tau_fixed",
-    "params": 33222,
-    "flops_counted": 8602368,
-    "latency_ms_cpu1": 8.796,
-    "streaming": {
-      "mac": 33856,
-      "tanh": 3840,
-      "add": 3904,
-      "state_floats": 640,
-      "mac_per_window": 5078784
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2485
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "edge_ssm_ema",
-    "params": 33798,
-    "flops_counted": 8602368,
-    "latency_ms_cpu1": 8.768,
-    "streaming": {
-      "mac": 33856,
-      "tanh": 3840,
-      "add": 3904,
-      "state_floats": 640,
-      "mac_per_window": 5078784
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2322
+    "latency_ms_cpu1": 1.47,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
     "model_id": "edge_ssm_osc",
     "params": 34374,
     "flops_counted": 8602368,
-    "latency_ms_cpu1": 8.904,
-    "streaming": {
-      "mac": 35584,
-      "tanh": 3840,
-      "add": 3904,
-      "state_floats": 1216,
-      "mac_per_window": 5337984
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.3435
+    "latency_ms_cpu1": 4.958,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "edge_ssm_s",
+    "params": 4982,
+    "flops_counted": 1075584,
+    "latency_ms_cpu1": 1.573,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "edge_ssm_tau_fixed",
+    "params": 33222,
+    "flops_counted": 8602368,
+    "latency_ms_cpu1": 5.578,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "edge_ssm_tau_input",
+    "params": 33231,
+    "flops_counted": 8602368,
+    "latency_ms_cpu1": 4.875,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
     "model_id": "gru",
     "params": 39750,
     "flops_counted": 11578368,
-    "latency_ms_cpu1": 8.657
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "s4d",
-    "params": 26502,
-    "flops_counted": 5703168,
-    "latency_ms_cpu1": 12.339
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "mamba",
-    "params": 20550,
-    "flops_counted": 5312256,
-    "latency_ms_cpu1": 4.739
+    "latency_ms_cpu1": 7.809,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
     "model_id": "hystnet",
     "params": 19782,
     "flops_counted": 5616384,
-    "latency_ms_cpu1": 3.205,
-    "streaming": {
-      "mac": 18720,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "hystnet_fixed_r",
-    "params": 19398,
-    "flops_counted": 5616384,
-    "latency_ms_cpu1": 3.15,
-    "streaming": {
-      "mac": 18720,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "hystnet_nomem",
-    "params": 19398,
-    "flops_counted": 5616384,
-    "latency_ms_cpu1": 3.18,
-    "streaming": {
-      "mac": 18720,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "hystnet_sel",
-    "params": 22950,
-    "flops_counted": 6537984,
-    "latency_ms_cpu1": 4.192,
-    "streaming": {
-      "mac": 21792,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.072,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
     "model_id": "hystnet_clock",
     "params": 19814,
     "flops_counted": 5625984,
-    "latency_ms_cpu1": 3.152,
-    "streaming": {
-      "mac": 18752,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.029,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
-    "model_id": "hystnet_mm",
-    "params": 20038,
-    "flops_counted": 5616768,
-    "latency_ms_cpu1": 3.231,
-    "streaming": {
-      "mac": 18720,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "model_id": "hystnet_fixed_r",
+    "params": 19398,
+    "flops_counted": 5616384,
+    "latency_ms_cpu1": 2.98,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
     "model_id": "hystnet_k6",
     "params": 26118,
     "flops_counted": 7459584,
-    "latency_ms_cpu1": 3.67,
-    "streaming": {
-      "mac": 24864,
-      "play_ops": 576,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 608
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.816,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
-    "model_id": "hystnet_sel_k6",
-    "params": 29286,
-    "flops_counted": 8381184,
-    "latency_ms_cpu1": 4.799,
-    "streaming": {
-      "mac": 27936,
-      "play_ops": 576,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 608
-    },
-    "sample_period_ms": 20.0
+    "model_id": "hystnet_mm",
+    "params": 20038,
+    "flops_counted": 5616768,
+    "latency_ms_cpu1": 3.01,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "hystnet_nomem",
+    "params": 19398,
+    "flops_counted": 5616384,
+    "latency_ms_cpu1": 2.992,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "hystnet_sel",
+    "params": 22950,
+    "flops_counted": 6537984,
+    "latency_ms_cpu1": 3.338,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
     "model_id": "hystnet_sel_clock",
     "params": 22982,
     "flops_counted": 6547584,
-    "latency_ms_cpu1": 4.128,
-    "streaming": {
-      "mac": 21824,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.987,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
-    "model_id": "vortexnet",
-    "params": 16422,
-    "flops_counted": 4694784,
-    "latency_ms_cpu1": 1.885
+    "model_id": "hystnet_sel_k6",
+    "params": 29286,
+    "flops_counted": 8381184,
+    "latency_ms_cpu1": 4.17,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "mamba",
+    "params": 20550,
+    "flops_counted": 5312256,
+    "latency_ms_cpu1": 7.823,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "pathquantilenet",
+    "params": 20166,
+    "flops_counted": 5616384,
+    "latency_ms_cpu1": 19.149,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "quantilenet",
+    "params": 20166,
+    "flops_counted": 5616384,
+    "latency_ms_cpu1": 13.953,
+    "whar_model": false
+  },
+  {
+    "dataset": "uci_har",
+    "model_id": "s4d",
+    "params": 26502,
+    "flops_counted": 5703168,
+    "latency_ms_cpu1": 18.883,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
     "model_id": "tropicalnet",
     "params": 25830,
     "flops_counted": 7459584,
-    "latency_ms_cpu1": 4.551
+    "latency_ms_cpu1": 4.067,
+    "whar_model": false
   },
   {
     "dataset": "uci_har",
-    "model_id": "quantilenet",
-    "params": 20166,
-    "flops_counted": 5616384,
-    "latency_ms_cpu1": 14.46,
-    "streaming": {
-      "mac": 18720,
-      "tracker_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "pathquantilenet",
-    "params": 20166,
-    "flops_counted": 5616384,
-    "latency_ms_cpu1": 19.757,
-    "streaming": {
-      "mac": 18720,
-      "tracker_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "dualmem",
-    "params": 26136,
-    "flops_counted": 7380360,
-    "latency_ms_cpu1": 17.887,
-    "streaming": {
-      "mac": 24600,
-      "play_ops": 270,
-      "tracker_ops": 270,
-      "gelu": 90,
-      "layernorm": 3,
-      "state_floats": 660
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "uci_har",
-    "model_id": "dualmem_path",
-    "params": 26136,
-    "flops_counted": 7380360,
-    "latency_ms_cpu1": 23.149,
-    "streaming": {
-      "mac": 24600,
-      "play_ops": 270,
-      "tracker_ops": 270,
-      "gelu": 90,
-      "layernorm": 3,
-      "state_floats": 660
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "cnn_har",
-    "params": 71987,
-    "flops_counted": 12488400,
-    "latency_ms_cpu1": 2.889
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "tinyhar",
-    "params": 185084,
-    "flops_counted": 10764544,
-    "latency_ms_cpu1": 5.293
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "triple_cross_domain_attention",
-    "params": 454992,
-    "flops_counted": 22065616,
-    "latency_ms_cpu1": 2.45
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "dana",
-    "params": 460763,
-    "flops_counted": 111174912,
-    "latency_ms_cpu1": 3.824
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "tinierhar",
-    "params": 7978,
-    "flops_counted": 742456,
-    "latency_ms_cpu1": 3.507
+    "model_id": "vortexnet",
+    "params": 16422,
+    "flops_counted": 4694784,
+    "latency_ms_cpu1": 1.671,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "attend_discriminate",
     "params": 374365,
     "flops_counted": 202376960,
-    "latency_ms_cpu1": 30.736
+    "latency_ms_cpu1": 28.849,
+    "whar_model": true
   },
   {
     "dataset": "utd_mhad",
-    "model_id": "dynamic_whar",
-    "params": 1127460,
-    "flops_counted": 14757888,
-    "latency_ms_cpu1": 0.974
+    "model_id": "cnn_har",
+    "params": 71987,
+    "flops_counted": 12488400,
+    "latency_ms_cpu1": 3.357,
+    "whar_model": true
   },
   {
     "dataset": "utd_mhad",
-    "model_id": "deepconv_lstm_attention",
-    "params": 477404,
-    "flops_counted": 106704384,
-    "latency_ms_cpu1": 4.555
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "mlp_har",
-    "params": 217227,
-    "flops_counted": 3114288,
-    "latency_ms_cpu1": 0.926
+    "model_id": "dana",
+    "params": 460763,
+    "flops_counted": 111174912,
+    "latency_ms_cpu1": 4.051,
+    "whar_model": true
   },
   {
     "dataset": "utd_mhad",
     "model_id": "deepconv_lstm",
     "params": 460763,
     "flops_counted": 102312192,
-    "latency_ms_cpu1": 4.214
+    "latency_ms_cpu1": 4.643,
+    "whar_model": true
   },
   {
     "dataset": "utd_mhad",
-    "model_id": "mlp_mixer",
-    "params": 621089,
-    "flops_counted": 101770520,
-    "latency_ms_cpu1": 5.629
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "lstms_ensemble",
-    "params": 803611,
-    "flops_counted": 2073600,
-    "latency_ms_cpu1": 7.384
+    "model_id": "deepconv_lstm_attention",
+    "params": 477404,
+    "flops_counted": 106704384,
+    "latency_ms_cpu1": 4.847,
+    "whar_model": true
   },
   {
     "dataset": "utd_mhad",
     "model_id": "deepconv_lstm_iswc",
     "params": 402779,
     "flops_counted": 196584960,
-    "latency_ms_cpu1": 3.276
+    "latency_ms_cpu1": 3.827,
+    "whar_model": true
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "dynamic_whar",
+    "params": 1127460,
+    "flops_counted": 14757888,
+    "latency_ms_cpu1": 1.574,
+    "whar_model": true
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "lstms_ensemble",
+    "params": 803611,
+    "flops_counted": 2073600,
+    "latency_ms_cpu1": 9.245,
+    "whar_model": true
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "mlp_har",
+    "params": 217227,
+    "flops_counted": 3114288,
+    "latency_ms_cpu1": 1.061,
+    "whar_model": true
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "mlp_mixer",
+    "params": 621089,
+    "flops_counted": 101770520,
+    "latency_ms_cpu1": 4.246,
+    "whar_model": true
   },
   {
     "dataset": "utd_mhad",
     "model_id": "sa_har",
     "params": 415480,
     "flops_counted": 148526280,
-    "latency_ms_cpu1": 3.162
+    "latency_ms_cpu1": 3.643,
+    "whar_model": true
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "tinierhar",
+    "params": 7978,
+    "flops_counted": 742456,
+    "latency_ms_cpu1": 3.687,
+    "whar_model": true
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "tinyhar",
+    "params": 185084,
+    "flops_counted": 10764544,
+    "latency_ms_cpu1": 5.574,
+    "whar_model": true
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "triple_cross_domain_attention",
+    "params": 454992,
+    "flops_counted": 22065616,
+    "latency_ms_cpu1": 2.518,
+    "whar_model": true
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "dualmem",
+    "params": 26697,
+    "flops_counted": 7354620,
+    "latency_ms_cpu1": 16.298,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "dualmem_path",
+    "params": 26697,
+    "flops_counted": 7354620,
+    "latency_ms_cpu1": 21.804,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "edge_ssm",
     "params": 33627,
     "flops_counted": 8605056,
-    "latency_ms_cpu1": 6.19,
-    "streaming": {
-      "mac": 32128,
-      "tanh": 2688,
-      "add": 2752,
-      "state_floats": 448,
-      "mac_per_window": 4820928
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2483
+    "latency_ms_cpu1": 4.226,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
-    "model_id": "edge_ssm_s",
-    "params": 5291,
-    "flops_counted": 1076928,
-    "latency_ms_cpu1": 1.87,
-    "streaming": {
-      "mac": 4448,
-      "tanh": 672,
-      "add": 704,
-      "state_floats": 128,
-      "mac_per_window": 668064
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2041
+    "model_id": "edge_ssm_ema",
+    "params": 33627,
+    "flops_counted": 8605056,
+    "latency_ms_cpu1": 3.927,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "edge_ssm_nophi",
     "params": 31323,
     "flops_counted": 8605056,
-    "latency_ms_cpu1": 1.114,
-    "streaming": {
-      "mac": 29824,
-      "tanh": 384,
-      "add": 448,
-      "state_floats": 448,
-      "mac_per_window": 4475328
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.1829
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "edge_ssm_tau_input",
-    "params": 33249,
-    "flops_counted": 8605056,
-    "latency_ms_cpu1": 6.19,
-    "streaming": {
-      "mac": 32128,
-      "tanh": 2688,
-      "add": 2752,
-      "state_floats": 448,
-      "mac_per_window": 4820928
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2438
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "edge_ssm_tau_fixed",
-    "params": 33243,
-    "flops_counted": 8605056,
-    "latency_ms_cpu1": 6.191,
-    "streaming": {
-      "mac": 32128,
-      "tanh": 2688,
-      "add": 2752,
-      "state_floats": 448,
-      "mac_per_window": 4820928
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2464
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "edge_ssm_ema",
-    "params": 33627,
-    "flops_counted": 8605056,
-    "latency_ms_cpu1": 6.179,
-    "streaming": {
-      "mac": 32128,
-      "tanh": 2688,
-      "add": 2752,
-      "state_floats": 448,
-      "mac_per_window": 4820928
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2269
+    "latency_ms_cpu1": 1.311,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "edge_ssm_osc",
     "params": 34011,
     "flops_counted": 8605056,
-    "latency_ms_cpu1": 6.242,
-    "streaming": {
-      "mac": 33280,
-      "tanh": 2688,
-      "add": 2752,
-      "state_floats": 832,
-      "mac_per_window": 4993728
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.3054
+    "latency_ms_cpu1": 3.744,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "edge_ssm_s",
+    "params": 5291,
+    "flops_counted": 1076928,
+    "latency_ms_cpu1": 1.291,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "edge_ssm_tau_fixed",
+    "params": 33243,
+    "flops_counted": 8605056,
+    "latency_ms_cpu1": 4.731,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "edge_ssm_tau_input",
+    "params": 33249,
+    "flops_counted": 8605056,
+    "latency_ms_cpu1": 4.793,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "gru",
     "params": 40539,
     "flops_counted": 11408256,
-    "latency_ms_cpu1": 8.537
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "s4d",
-    "params": 27675,
-    "flops_counted": 5648256,
-    "latency_ms_cpu1": 12.632
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "mamba",
-    "params": 21147,
-    "flops_counted": 5284800,
-    "latency_ms_cpu1": 4.727
+    "latency_ms_cpu1": 8.024,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "hystnet",
     "params": 20379,
     "flops_counted": 5588928,
-    "latency_ms_cpu1": 3.142,
-    "streaming": {
-      "mac": 18624,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "hystnet_fixed_r",
-    "params": 19995,
-    "flops_counted": 5588928,
-    "latency_ms_cpu1": 3.07,
-    "streaming": {
-      "mac": 18624,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "hystnet_nomem",
-    "params": 19995,
-    "flops_counted": 5588928,
-    "latency_ms_cpu1": 3.154,
-    "streaming": {
-      "mac": 18624,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "hystnet_sel",
-    "params": 23547,
-    "flops_counted": 6510528,
-    "latency_ms_cpu1": 4.077,
-    "streaming": {
-      "mac": 21696,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.087,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "hystnet_clock",
     "params": 20411,
     "flops_counted": 5598528,
-    "latency_ms_cpu1": 3.158,
-    "streaming": {
-      "mac": 18656,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.145,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
-    "model_id": "hystnet_mm",
-    "params": 21307,
-    "flops_counted": 5590656,
-    "latency_ms_cpu1": 3.164,
-    "streaming": {
-      "mac": 18624,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "model_id": "hystnet_fixed_r",
+    "params": 19995,
+    "flops_counted": 5588928,
+    "latency_ms_cpu1": 3.072,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "hystnet_k6",
     "params": 26715,
     "flops_counted": 7432128,
-    "latency_ms_cpu1": 3.649,
-    "streaming": {
-      "mac": 24768,
-      "play_ops": 576,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 608
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.609,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
-    "model_id": "hystnet_sel_k6",
-    "params": 29883,
-    "flops_counted": 8353728,
-    "latency_ms_cpu1": 4.766,
-    "streaming": {
-      "mac": 27840,
-      "play_ops": 576,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 608
-    },
-    "sample_period_ms": 20.0
+    "model_id": "hystnet_mm",
+    "params": 21307,
+    "flops_counted": 5590656,
+    "latency_ms_cpu1": 3.112,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "hystnet_nomem",
+    "params": 19995,
+    "flops_counted": 5588928,
+    "latency_ms_cpu1": 3.093,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "hystnet_sel",
+    "params": 23547,
+    "flops_counted": 6510528,
+    "latency_ms_cpu1": 3.427,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "hystnet_sel_clock",
     "params": 23579,
     "flops_counted": 6520128,
-    "latency_ms_cpu1": 4.106,
-    "streaming": {
-      "mac": 21728,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.582,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
-    "model_id": "vortexnet",
-    "params": 17019,
-    "flops_counted": 4667328,
-    "latency_ms_cpu1": 1.862
+    "model_id": "hystnet_sel_k6",
+    "params": 29883,
+    "flops_counted": 8353728,
+    "latency_ms_cpu1": 4.155,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "mamba",
+    "params": 21147,
+    "flops_counted": 5284800,
+    "latency_ms_cpu1": 8.168,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "pathquantilenet",
+    "params": 20763,
+    "flops_counted": 5588928,
+    "latency_ms_cpu1": 19.112,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "quantilenet",
+    "params": 20763,
+    "flops_counted": 5588928,
+    "latency_ms_cpu1": 13.998,
+    "whar_model": false
+  },
+  {
+    "dataset": "utd_mhad",
+    "model_id": "s4d",
+    "params": 27675,
+    "flops_counted": 5648256,
+    "latency_ms_cpu1": 18.673,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
     "model_id": "tropicalnet",
     "params": 26427,
     "flops_counted": 7432128,
-    "latency_ms_cpu1": 4.461
+    "latency_ms_cpu1": 4.028,
+    "whar_model": false
   },
   {
     "dataset": "utd_mhad",
-    "model_id": "quantilenet",
-    "params": 20763,
-    "flops_counted": 5588928,
-    "latency_ms_cpu1": 14.606,
-    "streaming": {
-      "mac": 18624,
-      "tracker_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "pathquantilenet",
-    "params": 20763,
-    "flops_counted": 5588928,
-    "latency_ms_cpu1": 19.89,
-    "streaming": {
-      "mac": 18624,
-      "tracker_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "dualmem",
-    "params": 26697,
-    "flops_counted": 7354620,
-    "latency_ms_cpu1": 17.676,
-    "streaming": {
-      "mac": 24510,
-      "play_ops": 270,
-      "tracker_ops": 270,
-      "gelu": 90,
-      "layernorm": 3,
-      "state_floats": 660
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "utd_mhad",
-    "model_id": "dualmem_path",
-    "params": 26697,
-    "flops_counted": 7354620,
-    "latency_ms_cpu1": 23.042,
-    "streaming": {
-      "mac": 24510,
-      "play_ops": 270,
-      "tracker_ops": 270,
-      "gelu": 90,
-      "layernorm": 3,
-      "state_floats": 660
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "cnn_har",
-    "params": 43977,
-    "flops_counted": 6247000,
-    "latency_ms_cpu1": 1.916
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "tinyhar",
-    "params": 178290,
-    "flops_counted": 6263360,
-    "latency_ms_cpu1": 5.276
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "triple_cross_domain_attention",
-    "params": 312902,
-    "flops_counted": 11020648,
-    "latency_ms_cpu1": 1.98
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "dana",
-    "params": 361169,
-    "flops_counted": 55588352,
-    "latency_ms_cpu1": 2.709
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "tinierhar",
-    "params": 5344,
-    "flops_counted": 429468,
-    "latency_ms_cpu1": 3.251
+    "model_id": "vortexnet",
+    "params": 17019,
+    "flops_counted": 4667328,
+    "latency_ms_cpu1": 1.651,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "attend_discriminate",
     "params": 299347,
     "flops_counted": 120656896,
-    "latency_ms_cpu1": 30.517
+    "latency_ms_cpu1": 27.799,
+    "whar_model": true
   },
   {
     "dataset": "unimib_shar",
-    "model_id": "dynamic_whar",
-    "params": 831258,
-    "flops_counted": 4942208,
-    "latency_ms_cpu1": 0.828
+    "model_id": "cnn_har",
+    "params": 43977,
+    "flops_counted": 6247000,
+    "latency_ms_cpu1": 2.268,
+    "whar_model": true
   },
   {
     "dataset": "unimib_shar",
-    "model_id": "deepconv_lstm_attention",
-    "params": 377810,
-    "flops_counted": 55549184,
-    "latency_ms_cpu1": 3.795
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "mlp_har",
-    "params": 199289,
-    "flops_counted": 1369800,
-    "latency_ms_cpu1": 0.924
+    "model_id": "dana",
+    "params": 361169,
+    "flops_counted": 55588352,
+    "latency_ms_cpu1": 3.013,
+    "whar_model": true
   },
   {
     "dataset": "unimib_shar",
     "model_id": "deepconv_lstm",
     "params": 361169,
     "flops_counted": 51156992,
-    "latency_ms_cpu1": 3.436
+    "latency_ms_cpu1": 4.187,
+    "whar_model": true
   },
   {
     "dataset": "unimib_shar",
-    "model_id": "mlp_mixer",
-    "params": 580583,
-    "flops_counted": 50886156,
-    "latency_ms_cpu1": 3.595
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "lstms_ensemble",
-    "params": 797969,
-    "flops_counted": 1305600,
-    "latency_ms_cpu1": 7.33
+    "model_id": "deepconv_lstm_attention",
+    "params": 377810,
+    "flops_counted": 55549184,
+    "latency_ms_cpu1": 4.442,
+    "whar_model": true
   },
   {
     "dataset": "unimib_shar",
     "model_id": "deepconv_lstm_iswc",
     "params": 303185,
     "flops_counted": 98391040,
-    "latency_ms_cpu1": 2.424
+    "latency_ms_cpu1": 2.969,
+    "whar_model": true
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "dynamic_whar",
+    "params": 831258,
+    "flops_counted": 4942208,
+    "latency_ms_cpu1": 1.137,
+    "whar_model": true
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "lstms_ensemble",
+    "params": 797969,
+    "flops_counted": 1305600,
+    "latency_ms_cpu1": 10.23,
+    "whar_model": true
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "mlp_har",
+    "params": 199289,
+    "flops_counted": 1369800,
+    "latency_ms_cpu1": 1.176,
+    "whar_model": true
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "mlp_mixer",
+    "params": 580583,
+    "flops_counted": 50886156,
+    "latency_ms_cpu1": 3.305,
+    "whar_model": true
   },
   {
     "dataset": "unimib_shar",
     "model_id": "sa_har",
     "params": 408160,
     "flops_counted": 147245320,
-    "latency_ms_cpu1": 2.93
+    "latency_ms_cpu1": 3.683,
+    "whar_model": true
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "tinierhar",
+    "params": 5344,
+    "flops_counted": 429468,
+    "latency_ms_cpu1": 3.585,
+    "whar_model": true
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "tinyhar",
+    "params": 178290,
+    "flops_counted": 6263360,
+    "latency_ms_cpu1": 4.562,
+    "whar_model": true
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "triple_cross_domain_attention",
+    "params": 312902,
+    "flops_counted": 11020648,
+    "latency_ms_cpu1": 2.258,
+    "whar_model": true
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "dualmem",
+    "params": 26297,
+    "flops_counted": 7327020,
+    "latency_ms_cpu1": 16.268,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "dualmem_path",
+    "params": 26297,
+    "flops_counted": 7327020,
+    "latency_ms_cpu1": 21.895,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "edge_ssm",
     "params": 31441,
     "flops_counted": 8603776,
-    "latency_ms_cpu1": 3.632,
-    "streaming": {
-      "mac": 30400,
-      "tanh": 1536,
-      "add": 1600,
-      "state_floats": 256,
-      "mac_per_window": 4561088
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2128
+    "latency_ms_cpu1": 2.623,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
-    "model_id": "edge_ssm_s",
-    "params": 4577,
-    "flops_counted": 1076288,
-    "latency_ms_cpu1": 1.199,
-    "streaming": {
-      "mac": 4016,
-      "tanh": 384,
-      "add": 416,
-      "state_floats": 80,
-      "mac_per_window": 602944
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2109
+    "model_id": "edge_ssm_ema",
+    "params": 31441,
+    "flops_counted": 8603776,
+    "latency_ms_cpu1": 2.622,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "edge_ssm_nophi",
     "params": 30289,
     "flops_counted": 8603776,
-    "latency_ms_cpu1": 0.999,
-    "streaming": {
-      "mac": 29248,
-      "tanh": 384,
-      "add": 448,
-      "state_floats": 256,
-      "mac_per_window": 4388288
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.1801
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "edge_ssm_tau_input",
-    "params": 31252,
-    "flops_counted": 8603776,
-    "latency_ms_cpu1": 3.541,
-    "streaming": {
-      "mac": 30400,
-      "tanh": 1536,
-      "add": 1600,
-      "state_floats": 256,
-      "mac_per_window": 4561088
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2323
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "edge_ssm_tau_fixed",
-    "params": 31249,
-    "flops_counted": 8603776,
-    "latency_ms_cpu1": 3.464,
-    "streaming": {
-      "mac": 30400,
-      "tanh": 1536,
-      "add": 1600,
-      "state_floats": 256,
-      "mac_per_window": 4561088
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2217
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "edge_ssm_ema",
-    "params": 31441,
-    "flops_counted": 8603776,
-    "latency_ms_cpu1": 3.602,
-    "streaming": {
-      "mac": 30400,
-      "tanh": 1536,
-      "add": 1600,
-      "state_floats": 256,
-      "mac_per_window": 4561088
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2112
+    "latency_ms_cpu1": 1.044,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "edge_ssm_osc",
     "params": 31633,
     "flops_counted": 8603776,
-    "latency_ms_cpu1": 3.662,
-    "streaming": {
-      "mac": 30976,
-      "tanh": 1536,
-      "add": 1600,
-      "state_floats": 448,
-      "mac_per_window": 4647488
-    },
-    "sample_period_ms": 20.0,
-    "streaming_ms_per_sample_cpu1": 0.2913
+    "latency_ms_cpu1": 3.022,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "edge_ssm_s",
+    "params": 4577,
+    "flops_counted": 1076288,
+    "latency_ms_cpu1": 1.013,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "edge_ssm_tau_fixed",
+    "params": 31249,
+    "flops_counted": 8603776,
+    "latency_ms_cpu1": 2.626,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "edge_ssm_tau_input",
+    "params": 31252,
+    "flops_counted": 8603776,
+    "latency_ms_cpu1": 2.726,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "gru",
     "params": 39313,
     "flops_counted": 11234176,
-    "latency_ms_cpu1": 8.388
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "s4d",
-    "params": 26833,
-    "flops_counted": 5589376,
-    "latency_ms_cpu1": 12.597
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "mamba",
-    "params": 20721,
-    "flops_counted": 5255360,
-    "latency_ms_cpu1": 4.907
+    "latency_ms_cpu1": 7.947,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "hystnet",
     "params": 19953,
     "flops_counted": 5559488,
-    "latency_ms_cpu1": 3.115,
-    "streaming": {
-      "mac": 18528,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "hystnet_fixed_r",
-    "params": 19569,
-    "flops_counted": 5559488,
-    "latency_ms_cpu1": 3.086,
-    "streaming": {
-      "mac": 18528,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "hystnet_nomem",
-    "params": 19569,
-    "flops_counted": 5559488,
-    "latency_ms_cpu1": 3.209,
-    "streaming": {
-      "mac": 18528,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "hystnet_sel",
-    "params": 23121,
-    "flops_counted": 6481088,
-    "latency_ms_cpu1": 3.986,
-    "streaming": {
-      "mac": 21600,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.193,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "hystnet_clock",
     "params": 19985,
     "flops_counted": 5569088,
-    "latency_ms_cpu1": 3.178,
-    "streaming": {
-      "mac": 18560,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.172,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
-    "model_id": "hystnet_mm",
-    "params": 20561,
-    "flops_counted": 5560576,
-    "latency_ms_cpu1": 3.165,
-    "streaming": {
-      "mac": 18528,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "model_id": "hystnet_fixed_r",
+    "params": 19569,
+    "flops_counted": 5559488,
+    "latency_ms_cpu1": 3.075,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "hystnet_k6",
     "params": 26289,
     "flops_counted": 7402688,
-    "latency_ms_cpu1": 3.457,
-    "streaming": {
-      "mac": 24672,
-      "play_ops": 576,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 608
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.739,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
-    "model_id": "hystnet_sel_k6",
-    "params": 29457,
-    "flops_counted": 8324288,
-    "latency_ms_cpu1": 4.646,
-    "streaming": {
-      "mac": 27744,
-      "play_ops": 576,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 608
-    },
-    "sample_period_ms": 20.0
+    "model_id": "hystnet_mm",
+    "params": 20561,
+    "flops_counted": 5560576,
+    "latency_ms_cpu1": 3.107,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "hystnet_nomem",
+    "params": 19569,
+    "flops_counted": 5559488,
+    "latency_ms_cpu1": 3.077,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "hystnet_sel",
+    "params": 23121,
+    "flops_counted": 6481088,
+    "latency_ms_cpu1": 3.52,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "hystnet_sel_clock",
     "params": 23153,
     "flops_counted": 6490688,
-    "latency_ms_cpu1": 4.113,
-    "streaming": {
-      "mac": 21632,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
+    "latency_ms_cpu1": 3.476,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
-    "model_id": "vortexnet",
-    "params": 16593,
-    "flops_counted": 4637888,
-    "latency_ms_cpu1": 1.928
+    "model_id": "hystnet_sel_k6",
+    "params": 29457,
+    "flops_counted": 8324288,
+    "latency_ms_cpu1": 4.007,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "mamba",
+    "params": 20721,
+    "flops_counted": 5255360,
+    "latency_ms_cpu1": 7.115,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "pathquantilenet",
+    "params": 20337,
+    "flops_counted": 5559488,
+    "latency_ms_cpu1": 18.971,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "quantilenet",
+    "params": 20337,
+    "flops_counted": 5559488,
+    "latency_ms_cpu1": 14.064,
+    "whar_model": false
+  },
+  {
+    "dataset": "unimib_shar",
+    "model_id": "s4d",
+    "params": 26833,
+    "flops_counted": 5589376,
+    "latency_ms_cpu1": 18.438,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
     "model_id": "tropicalnet",
     "params": 26001,
     "flops_counted": 7402688,
-    "latency_ms_cpu1": 4.532
+    "latency_ms_cpu1": 4.06,
+    "whar_model": false
   },
   {
     "dataset": "unimib_shar",
-    "model_id": "quantilenet",
-    "params": 20337,
-    "flops_counted": 5559488,
-    "latency_ms_cpu1": 14.675,
-    "streaming": {
-      "mac": 18528,
-      "tracker_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "pathquantilenet",
-    "params": 20337,
-    "flops_counted": 5559488,
-    "latency_ms_cpu1": 19.541,
-    "streaming": {
-      "mac": 18528,
-      "tracker_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "dualmem",
-    "params": 26297,
-    "flops_counted": 7327020,
-    "latency_ms_cpu1": 17.704,
-    "streaming": {
-      "mac": 24420,
-      "play_ops": 270,
-      "tracker_ops": 270,
-      "gelu": 90,
-      "layernorm": 3,
-      "state_floats": 660
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "unimib_shar",
-    "model_id": "dualmem_path",
-    "params": 26297,
-    "flops_counted": 7327020,
-    "latency_ms_cpu1": 23.037,
-    "streaming": {
-      "mac": 24420,
-      "play_ops": 270,
-      "tracker_ops": 270,
-      "gelu": 90,
-      "layernorm": 3,
-      "state_floats": 660
-    },
-    "sample_period_ms": 20.0
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "cnn_har",
-    "params": 137972,
-    "flops_counted": 18303600,
-    "latency_ms_cpu1": 3.487
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "tinyhar",
-    "params": 145197,
-    "flops_counted": 14491008,
-    "latency_ms_cpu1": 3.399
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "triple_cross_domain_attention",
-    "params": 385857,
-    "flops_counted": 33302160,
-    "latency_ms_cpu1": 2.87
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "dana",
-    "params": 753740,
-    "flops_counted": 177871872,
-    "latency_ms_cpu1": 5.686
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "tinierhar",
-    "params": 14395,
-    "flops_counted": 1086912,
-    "latency_ms_cpu1": 2.898
+    "model_id": "vortexnet",
+    "params": 16593,
+    "flops_counted": 4637888,
+    "latency_ms_cpu1": 1.671,
+    "whar_model": false
   },
   {
     "dataset": "actrectut_gestures",
     "model_id": "attend_discriminate",
     "params": 593614,
     "flops_counted": 272410112,
-    "latency_ms_cpu1": 20.807
+    "latency_ms_cpu1": 19.905,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
-    "model_id": "dynamic_whar",
-    "params": 2008101,
-    "flops_counted": 72978432,
-    "latency_ms_cpu1": 1.802
+    "model_id": "cnn_har",
+    "params": 137972,
+    "flops_counted": 18303600,
+    "latency_ms_cpu1": 4.105,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
-    "model_id": "deepconv_lstm_attention",
-    "params": 770381,
-    "flops_counted": 158323968,
-    "latency_ms_cpu1": 4.476
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "mlp_har",
-    "params": 210312,
-    "flops_counted": 5136480,
-    "latency_ms_cpu1": 0.972
+    "model_id": "dana",
+    "params": 753740,
+    "flops_counted": 177871872,
+    "latency_ms_cpu1": 5.545,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
     "model_id": "deepconv_lstm",
     "params": 753740,
     "flops_counted": 155715072,
-    "latency_ms_cpu1": 4.153
+    "latency_ms_cpu1": 4.831,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
-    "model_id": "mlp_mixer",
-    "params": 639794,
-    "flops_counted": 128955840,
-    "latency_ms_cpu1": 8.586
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "lstms_ensemble",
-    "params": 808972,
-    "flops_counted": 589824,
-    "latency_ms_cpu1": 4.519
+    "model_id": "deepconv_lstm_attention",
+    "params": 770381,
+    "flops_counted": 158323968,
+    "latency_ms_cpu1": 5.108,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
     "model_id": "deepconv_lstm_iswc",
     "params": 695756,
     "flops_counted": 269620992,
-    "latency_ms_cpu1": 3.887
+    "latency_ms_cpu1": 4.486,
+    "whar_model": true
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "dynamic_whar",
+    "params": 2008101,
+    "flops_counted": 72978432,
+    "latency_ms_cpu1": 2.582,
+    "whar_model": true
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "lstms_ensemble",
+    "params": 808972,
+    "flops_counted": 589824,
+    "latency_ms_cpu1": 6.533,
+    "whar_model": true
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "mlp_har",
+    "params": 210312,
+    "flops_counted": 5136480,
+    "latency_ms_cpu1": 1.039,
+    "whar_model": true
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "mlp_mixer",
+    "params": 639794,
+    "flops_counted": 128955840,
+    "latency_ms_cpu1": 4.617,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
     "model_id": "sa_har",
     "params": 406555,
     "flops_counted": 92173440,
-    "latency_ms_cpu1": 2.443
+    "latency_ms_cpu1": 3.558,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
-    "model_id": "edge_ssm",
-    "params": 37260,
-    "flops_counted": 5506560,
-    "latency_ms_cpu1": 9.16,
-    "streaming": {
-      "mac": 37312,
-      "tanh": 6144,
-      "add": 6208,
-      "state_floats": 1024,
-      "mac_per_window": 3582720
-    },
-    "sample_period_ms": 31.25,
-    "streaming_ms_per_sample_cpu1": 0.2818
+    "model_id": "tinierhar",
+    "params": 14395,
+    "flops_counted": 1086912,
+    "latency_ms_cpu1": 3.227,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
-    "model_id": "edge_ssm_s",
-    "params": 5948,
-    "flops_counted": 688896,
-    "latency_ms_cpu1": 2.562,
-    "streaming": {
-      "mac": 5744,
-      "tanh": 1536,
-      "add": 1568,
-      "state_floats": 272,
-      "mac_per_window": 551808
-    },
-    "sample_period_ms": 31.25,
-    "streaming_ms_per_sample_cpu1": 0.2324
+    "model_id": "tinyhar",
+    "params": 145197,
+    "flops_counted": 14491008,
+    "latency_ms_cpu1": 3.668,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
-    "model_id": "edge_ssm_nophi",
-    "params": 31500,
-    "flops_counted": 5506560,
-    "latency_ms_cpu1": 1.174,
-    "streaming": {
-      "mac": 31552,
-      "tanh": 384,
-      "add": 448,
-      "state_floats": 1024,
-      "mac_per_window": 3029760
-    },
-    "sample_period_ms": 31.25,
-    "streaming_ms_per_sample_cpu1": 0.1735
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "edge_ssm_tau_input",
-    "params": 36315,
-    "flops_counted": 5506560,
-    "latency_ms_cpu1": 9.26,
-    "streaming": {
-      "mac": 37312,
-      "tanh": 6144,
-      "add": 6208,
-      "state_floats": 1024,
-      "mac_per_window": 3582720
-    },
-    "sample_period_ms": 31.25,
-    "streaming_ms_per_sample_cpu1": 0.2899
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "edge_ssm_tau_fixed",
-    "params": 36300,
-    "flops_counted": 5506560,
-    "latency_ms_cpu1": 9.111,
-    "streaming": {
-      "mac": 37312,
-      "tanh": 6144,
-      "add": 6208,
-      "state_floats": 1024,
-      "mac_per_window": 3582720
-    },
-    "sample_period_ms": 31.25,
-    "streaming_ms_per_sample_cpu1": 0.2823
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "edge_ssm_ema",
-    "params": 37260,
-    "flops_counted": 5506560,
-    "latency_ms_cpu1": 9.139,
-    "streaming": {
-      "mac": 37312,
-      "tanh": 6144,
-      "add": 6208,
-      "state_floats": 1024,
-      "mac_per_window": 3582720
-    },
-    "sample_period_ms": 31.25,
-    "streaming_ms_per_sample_cpu1": 0.2612
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "edge_ssm_osc",
-    "params": 38220,
-    "flops_counted": 5506560,
-    "latency_ms_cpu1": 9.385,
-    "streaming": {
-      "mac": 40192,
-      "tanh": 6144,
-      "add": 6208,
-      "state_floats": 1984,
-      "mac_per_window": 3859200
-    },
-    "sample_period_ms": 31.25,
-    "streaming_ms_per_sample_cpu1": 0.3912
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "gru",
-    "params": 41292,
-    "flops_counted": 7632384,
-    "latency_ms_cpu1": 5.534
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "s4d",
-    "params": 27276,
-    "flops_counted": 3724800,
-    "latency_ms_cpu1": 8.348
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "mamba",
-    "params": 20940,
-    "flops_counted": 3438336,
-    "latency_ms_cpu1": 3.216
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "hystnet",
-    "params": 20172,
-    "flops_counted": 3631872,
-    "latency_ms_cpu1": 2.54,
-    "streaming": {
-      "mac": 18912,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "hystnet_fixed_r",
-    "params": 19788,
-    "flops_counted": 3631872,
-    "latency_ms_cpu1": 2.419,
-    "streaming": {
-      "mac": 18912,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "hystnet_nomem",
-    "params": 19788,
-    "flops_counted": 3631872,
-    "latency_ms_cpu1": 2.442,
-    "streaming": {
-      "mac": 18912,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "hystnet_sel",
-    "params": 23340,
-    "flops_counted": 4221696,
-    "latency_ms_cpu1": 3.097,
-    "streaming": {
-      "mac": 21984,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "hystnet_clock",
-    "params": 20204,
-    "flops_counted": 3638016,
-    "latency_ms_cpu1": 2.437,
-    "streaming": {
-      "mac": 18944,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "hystnet_mm",
-    "params": 20620,
-    "flops_counted": 3632640,
-    "latency_ms_cpu1": 2.471,
-    "streaming": {
-      "mac": 18912,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "hystnet_k6",
-    "params": 26508,
-    "flops_counted": 4811520,
-    "latency_ms_cpu1": 2.841,
-    "streaming": {
-      "mac": 25056,
-      "play_ops": 576,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 608
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "hystnet_sel_k6",
-    "params": 29676,
-    "flops_counted": 5401344,
-    "latency_ms_cpu1": 3.42,
-    "streaming": {
-      "mac": 28128,
-      "play_ops": 576,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 608
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "hystnet_sel_clock",
-    "params": 23372,
-    "flops_counted": 4227840,
-    "latency_ms_cpu1": 3.09,
-    "streaming": {
-      "mac": 22016,
-      "play_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "vortexnet",
-    "params": 16812,
-    "flops_counted": 3042048,
-    "latency_ms_cpu1": 1.472
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "tropicalnet",
-    "params": 26220,
-    "flops_counted": 4811520,
-    "latency_ms_cpu1": 3.576
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "quantilenet",
-    "params": 20556,
-    "flops_counted": 3631872,
-    "latency_ms_cpu1": 9.615,
-    "streaming": {
-      "mac": 18912,
-      "tracker_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 31.25
-  },
-  {
-    "dataset": "actrectut_gestures",
-    "model_id": "pathquantilenet",
-    "params": 20556,
-    "flops_counted": 3631872,
-    "latency_ms_cpu1": 12.807,
-    "streaming": {
-      "mac": 18912,
-      "tracker_ops": 384,
-      "gelu": 96,
-      "layernorm": 3,
-      "state_floats": 416
-    },
-    "sample_period_ms": 31.25
+    "model_id": "triple_cross_domain_attention",
+    "params": 385857,
+    "flops_counted": 33302160,
+    "latency_ms_cpu1": 3.121,
+    "whar_model": true
   },
   {
     "dataset": "actrectut_gestures",
     "model_id": "dualmem",
     "params": 26502,
     "flops_counted": 4758480,
-    "latency_ms_cpu1": 12.086,
-    "streaming": {
-      "mac": 24780,
-      "play_ops": 270,
-      "tracker_ops": 270,
-      "gelu": 90,
-      "layernorm": 3,
-      "state_floats": 660
-    },
-    "sample_period_ms": 31.25
+    "latency_ms_cpu1": 10.97,
+    "whar_model": false
   },
   {
     "dataset": "actrectut_gestures",
     "model_id": "dualmem_path",
     "params": 26502,
     "flops_counted": 4758480,
-    "latency_ms_cpu1": 15.19,
-    "streaming": {
-      "mac": 24780,
-      "play_ops": 270,
-      "tracker_ops": 270,
-      "gelu": 90,
-      "layernorm": 3,
-      "state_floats": 660
-    },
-    "sample_period_ms": 31.25
+    "latency_ms_cpu1": 14.533,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "edge_ssm",
+    "params": 37260,
+    "flops_counted": 5506560,
+    "latency_ms_cpu1": 5.603,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "edge_ssm_ema",
+    "params": 37260,
+    "flops_counted": 5506560,
+    "latency_ms_cpu1": 5.569,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "edge_ssm_nophi",
+    "params": 31500,
+    "flops_counted": 5506560,
+    "latency_ms_cpu1": 1.17,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "edge_ssm_osc",
+    "params": 38220,
+    "flops_counted": 5506560,
+    "latency_ms_cpu1": 5.745,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "edge_ssm_s",
+    "params": 5948,
+    "flops_counted": 688896,
+    "latency_ms_cpu1": 1.615,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "edge_ssm_tau_fixed",
+    "params": 36300,
+    "flops_counted": 5506560,
+    "latency_ms_cpu1": 5.574,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "edge_ssm_tau_input",
+    "params": 36315,
+    "flops_counted": 5506560,
+    "latency_ms_cpu1": 5.397,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "gru",
+    "params": 41292,
+    "flops_counted": 7632384,
+    "latency_ms_cpu1": 5.147,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "hystnet",
+    "params": 20172,
+    "flops_counted": 3631872,
+    "latency_ms_cpu1": 2.37,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "hystnet_clock",
+    "params": 20204,
+    "flops_counted": 3638016,
+    "latency_ms_cpu1": 2.401,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "hystnet_fixed_r",
+    "params": 19788,
+    "flops_counted": 3631872,
+    "latency_ms_cpu1": 2.381,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "hystnet_k6",
+    "params": 26508,
+    "flops_counted": 4811520,
+    "latency_ms_cpu1": 2.823,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "hystnet_mm",
+    "params": 20620,
+    "flops_counted": 3632640,
+    "latency_ms_cpu1": 2.322,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "hystnet_nomem",
+    "params": 19788,
+    "flops_counted": 3631872,
+    "latency_ms_cpu1": 2.327,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "hystnet_sel",
+    "params": 23340,
+    "flops_counted": 4221696,
+    "latency_ms_cpu1": 2.665,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "hystnet_sel_clock",
+    "params": 23372,
+    "flops_counted": 4227840,
+    "latency_ms_cpu1": 2.728,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "hystnet_sel_k6",
+    "params": 29676,
+    "flops_counted": 5401344,
+    "latency_ms_cpu1": 3.516,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "mamba",
+    "params": 20940,
+    "flops_counted": 3438336,
+    "latency_ms_cpu1": 5.474,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "pathquantilenet",
+    "params": 20556,
+    "flops_counted": 3631872,
+    "latency_ms_cpu1": 12.342,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "quantilenet",
+    "params": 20556,
+    "flops_counted": 3631872,
+    "latency_ms_cpu1": 9.093,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "s4d",
+    "params": 27276,
+    "flops_counted": 3724800,
+    "latency_ms_cpu1": 11.78,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "tropicalnet",
+    "params": 26220,
+    "flops_counted": 4811520,
+    "latency_ms_cpu1": 3.341,
+    "whar_model": false
+  },
+  {
+    "dataset": "actrectut_gestures",
+    "model_id": "vortexnet",
+    "params": 16812,
+    "flops_counted": 3042048,
+    "latency_ms_cpu1": 1.438,
+    "whar_model": false
   }
 ]
