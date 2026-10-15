@@ -49,7 +49,9 @@ from src.evaluation import variance_components as V  # noqa: E402
 from src.utils import provenance as PV  # noqa: E402
 
 SEED = 20261015
-S2_REEXEC = ["up_fall", "wear", "uca_ehar"]
+# S2 datasets with a paper-era cache on the cluster; pamap2, uma_fall and w_har were built on the PC and copied on
+# 2026-10-16 (user-approved). usc_had and motion_sense (unsorted parsers) are not re-executable here.
+S2_REEXEC = ["up_fall", "wear", "uca_ehar", "pamap2", "uma_fall", "w_har"]
 S1_REEXEC = ["utd_mhad", "uci_har", "unimib_shar", "actrectut_gestures", "opportunity", "sad", "hapt", "wisdm"]
 INFORMATIVE = ["dsads"]
 PER_DATASET = 6
@@ -75,7 +77,9 @@ RERUN_REASON = (
     "prediction in a non-degenerate file. (4) The provenance control was void because of (1); it now also requires "
     "the deleted file to be named. The tolerances are unchanged. Rerun 3 (approved by the user on 2026-10-16): adds "
     "the label-shuffle control of Level 3.5.3 (scripts/label_shuffle_control.py), which had not been run; nothing "
-    "else changes. Rerun 2: rerun 1 FAILed only because --recompute "
+    "else changes. Rerun 4 (approved by the user on 2026-10-16): pamap2, uma_fall and w_har received paper-era caches "
+    "(built on the PC with scripts/prepare_data.py, split sizes checked, copied to the cluster), so their S2 runs are "
+    "re-executed too; the set of re-executed cells grows accordingly and nothing else changes. Rerun 2: rerun 1 FAILed only because --recompute "
     "required the new hash field also in the 414 metric records of the first re-execution run "
     "(20261015_184242_evaluate_G5), written before the field existed, so even the untampered copy failed. Records "
     "without the field are now checked by recomputation only, records with it by hash and recomputation.")
@@ -415,14 +419,14 @@ def write_report(gate: dict, gate_path: Path) -> None:
          "`G5_results_authenticity.json` (FAIL) explains the first run.", "",
          "## What was re-executed", "",
          f"- {l3['gating_cells']} runs, chosen before measuring: every run of S2 on the datasets with a cache on the "
-         "cluster (up_fall, wear, uca_ehar: all 4 models x 3 seeds x 10 splits) and a seeded sample of 6 runs on each "
+         f"cluster ({', '.join(S2_REEXEC)}: all 4 models x 3 seeds x every split) and a seeded sample of 6 runs on each "
          "of the 8 re-executable development datasets.",
          f"- Exact equality with the stored macro-F1 and accuracy: {l3['exact_match']}; within the tolerance: "
          f"{l3['within_tolerance']}; outside: {len(l3['mismatches'])}. Largest |delta macro-F1|: "
          f"{l3['max_abs_delta_macro_f1_points']:.3f} points (float32 inference on a CPU node vs the original GPU).",
-         "- Not re-executable here, verified by their stored records only: S2's pamap2, uma_fall, usc_had, w_har (no "
-         "cache on the cluster; 468 of the 828 H1 runs); the six runs without a checkpoint (S4D on ActRecTut x2, Mamba "
-         "on ActRecTut and UniMiB x4); dsads (below); motion_sense and daphnet (excluded from the analyses).",
+         "- Not re-executable here, verified by their stored records only: S2's usc_had (unsorted parser, no matching "
+         "cache); the six runs without a checkpoint (S4D on ActRecTut x2, Mamba on ActRecTut and UniMiB x4); dsads "
+         "(below); motion_sense and daphnet (excluded from the analyses).",
          "- dsads (informative, not gating): " + ", ".join(
              f"{d['model']} seed {d['seed']} split {d['split']}: {100 * d['macro_f1']:.1f} vs stored "
              f"{100 * d['stored_macro_f1']:.1f}" for d in l3["informative_dsads"]) +
