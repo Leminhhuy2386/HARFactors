@@ -1,0 +1,4 @@
+node hpc02.local, job 86671, Thu Oct 15 16:43:09 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+sparse rows 2160 converged True sec 30.2 {'M': 5.9167, 'MD': 7.7688, 'MP': 6.6668, 'P': 66.2469} scale 17.6065

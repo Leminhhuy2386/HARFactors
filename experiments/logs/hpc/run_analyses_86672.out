@@ -1,0 +1,665 @@
+node hpc02.local, job 86672, Thu Oct 15 16:43:09 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+== src.evaluation.compare_arena
+# Our models against the WHAR Arena paper table (Figure 6)
+
+Paper numbers: Figure 6 of the WHAR Arena paper (macro-F1 %, mean over subject splits, one run). Ours: same paper-era code, data, splits and protocol, training seed 0 (the protocol run); the mean over seeds 0-2 is in a separate column. No new training for this comparison.
+
+Datasets: the 10 of P5. Dev = used to screen rounds 6-7 (and UTD-MHAD for every earlier round); held-out = never used to choose anything. The paper's own mean (and the Leaderboard on the WHAR Arena website) is over 30 datasets; the means below are over these 10 only, which are easier on average (CNN-HAR 67.7 over 30, 73.2 over these 10, 65.0 over the other 20).
+
+## 0. Is a paper cell comparable to one of ours?
+
+Our harness re-ran all 17 Arena models on the 4 dev datasets (D:\Projects\HAR\paper-era):
+
+| Dataset | Models | Spearman rho vs paper | Mean delta (ours - paper) | Mean abs delta |
+|---|---|---|---|---|
+| UTD-MHAD | 17 | 0.975 | -0.11 | 1.00 |
+| UCI-HAR | 17 | 0.953 | +0.04 | 0.47 |
+| UniMiB | 17 | 0.983 | -0.86 | 1.17 |
+| ActRecTut | 17 | 0.897 | -1.55 | 2.55 |
+
+Run-to-run noise between the paper's GPU and ours is about 1 point per cell (larger on ActRecTut, 2 splits). Classical models (RF, k-NN) match to the digit, so the splits are the same.
+
+## 1. All 23 models over the 10 datasets
+
+Ours at seed 0. Mean rank: per dataset among all 23, then averaged (1 = best). Top 3 = datasets where the model is in the first three. Params on the UTD-MHAD configuration.
+
+| # | Model | Params | Mean F1 (10) | Dev (4) | Held-out (6) | Without ActRecTut (9) | Mean rank /23 | Top 3 | Ours, mean seeds 0-2 | Paper mean (30 ds) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | TinyHAR | 185.1k | 73.13 | 67.89 | 76.63 | 75.59 | 5.60 | 4 |  | 67.61 |
+| 2 | CNN-HAR | 72.0k | 73.18 | 69.94 | 75.34 | 75.51 | 6.20 | 4 |  | 67.72 |
+| 3 | **RecurrenceNet** | 24.7k | 72.25 | 67.09 | 75.69 | 76.38 | 6.20 | 3 | 72.01 |  |
+| 4 | DANA | 460.8k | 72.86 | 69.86 | 74.86 | 74.60 | 7.00 | 5 |  | 67.02 |
+| 5 | Attend+Discriminate | 374.4k | 72.74 | 69.00 | 75.24 | 74.85 | 7.60 | 1 |  | 66.61 |
+| 6 | Triple-Cross-Attn | 455.0k | 73.48 | 69.91 | 75.87 | 74.82 | 7.80 | 2 |  | 67.57 |
+| 7 | TinierHAR | 8.0k | 71.39 | 64.94 | 75.68 | 74.30 | 7.95 | 1 |  | 66.73 |
+| 8 | DeepConvLSTM-Attn | 477.4k | 71.20 | 66.39 | 74.40 | 73.27 | 9.70 | 1 |  | 64.67 |
+| 9 | **S4D** | 27.7k | 71.25 | 68.10 | 73.35 | 74.31 | 10.30 | 1 | 71.29 |  |
+| 10 | MLP-HAR | 217.2k | 69.31 | 60.20 | 75.38 | 72.15 | 11.60 | 2 |  | 64.23 |
+| 11 | **HysteresisNet sel+clock** | 23.6k | 70.25 | 66.41 | 72.81 | 73.32 | 11.90 | 1 | 70.69 |  |
+| 12 | **QuantileNet** | 20.8k | 68.86 | 65.76 | 70.92 | 72.59 | 12.40 | 1 | 69.70 |  |
+| 13 | DeepConvLSTM | 460.8k | 68.97 | 63.12 | 72.88 | 71.28 | 12.50 | 0 |  | 63.61 |
+| 14 | DynamicWHAR | 1.13M | 69.61 | 62.69 | 74.22 | 72.73 | 12.60 | 1 |  | 66.27 |
+| 15 | MLP-Mixer | 621.1k | 69.21 | 63.61 | 72.95 | 72.70 | 12.90 | 0 |  | 62.46 |
+| 16 | Random Forest | – | 65.30 | 55.57 | 71.79 | 67.90 | 13.40 | 3 |  | 65.10 |
+| 17 | **Mamba** | 21.1k | 67.90 | 63.68 | 70.71 | 71.92 | 13.40 | 0 | 68.91 |  |
+| 18 | DeepConvShallowLSTM | 402.8k | 61.83 | 48.47 | 70.74 | 63.49 | 14.90 | 0 |  | 59.96 |
+| 19 | Guan-LSTM | 803.6k | 63.32 | 51.78 | 71.01 | 66.42 | 15.25 | 0 |  | 60.07 |
+| 20 | **No memory (control)** | 20.0k | 65.63 | 61.95 | 68.09 | 68.72 | 15.90 | 0 | 66.06 |  |
+| 21 | SA-HAR | 415.5k | 61.82 | 55.75 | 65.86 | 65.24 | 19.60 | 0 |  | 59.84 |
+| 22 | SVM | – | 53.11 | 35.86 | 64.61 | 55.95 | 19.60 | 0 |  | 50.15 |
+| 23 | k-NN | – | 51.83 | 39.29 | 60.18 | 54.40 | 21.70 | 0 |  | 46.25 |
+
+## 2. Per dataset: our F1 and its rank among the 17 paper models
+
+Cell: seed-0 F1 (rank if inserted into the paper's 17; 1 = above all of them).
+
+| Dataset | Splits | Paper best | CNN-HAR | Paper median | RecurrenceNet | S4D | HysteresisNet sel+clock | QuantileNet | Mamba | No memory (control) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| UTD-MHAD | 8 | 68.2 CNN-HAR | 68.2 | 61.0 | 74.6 (#1) | 73.8 (#1) | 73.4 (#1) | 74.3 (#1) | 70.7 (#1) | 67.6 (#2) |
+| UCI-HAR | 10 | 96.1 TinyHAR | 96.0 | 93.0 | 96.7 (#1) | 94.8 (#6) | 94.3 (#7) | 94.7 (#6) | 93.5 (#8) | 92.7 (#10) |
+| UniMiB | 10 | 63.3 CNN-HAR | 63.3 | 55.5 | 62.0 (#3) | 60.1 (#5) | 55.3 (#10) | 58.8 (#5) | 58.8 (#5) | 49.6 (#12) |
+| ActRecTut | 2 | 61.5 Triple-Cross-Attn | 52.2 | 45.2 | 35.1 (#15) | 43.8 (#11) | 42.7 (#11) | 35.2 (#15) | 31.7 (#15) | 37.9 (#13) |
+| Opportunity * | 4 | 74.7 MLP-HAR | 63.1 | 65.1 | 64.9 (#10) | 61.0 (#14) | 64.6 (#10) | 60.9 (#14) | 61.9 (#13) | 57.8 (#18) |
+| SAD * | 10 | 98.2 Random Forest | 95.6 | 93.4 | 92.0 (#10) | 89.4 (#16) | 87.1 (#16) | 82.3 (#16) | 82.8 (#16) | 80.8 (#18) |
+| HAPT * | 10 | 84.8 CNN-HAR | 84.8 | 79.4 | 83.2 (#3) | 82.1 (#3) | 84.4 (#2) | 82.7 (#3) | 82.8 (#3) | 81.1 (#6) |
+| DSADS * | 8 | 89.3 Random Forest | 86.9 | 84.4 | 86.2 (#6) | 85.2 (#9) | 80.1 (#15) | 80.9 (#15) | 80.8 (#15) | 79.1 (#15) |
+| WISDM * | 10 | 85.5 DANA | 81.4 | 83.0 | 84.3 (#4) | 82.5 (#11) | 80.9 (#13) | 78.4 (#13) | 76.5 (#13) | 69.1 (#15) |
+| Daphnet * | 10 | 45.4 TinierHAR | 40.2 | 40.2 | 43.5 (#4) | 39.8 (#10) | 39.7 (#10) | 40.2 (#10) | 39.4 (#10) | 40.7 (#7) |
+
+\* held-out dataset.
+
+Same table, our models at the mean over seeds 0-2:
+
+| Dataset | RecurrenceNet | S4D | HysteresisNet sel+clock | QuantileNet | Mamba | No memory (control) |
+|---|---|---|---|---|---|---|
+| UTD-MHAD | 73.3 (#1) | 73.3 (#1) | 73.9 (#1) | 73.8 (#1) | 71.3 (#1) | 67.6 (#2) |
+| UCI-HAR | 96.6 (#1) | 94.9 (#6) | 94.5 (#7) | 94.7 (#6) | 93.9 (#8) | 92.8 (#10) |
+| UniMiB | 60.8 (#5) | 60.5 (#5) | 55.5 (#10) | 59.7 (#5) | 59.1 (#5) | 50.0 (#12) |
+| ActRecTut | 40.4 (#13) | 43.4 (#11) | 43.6 (#11) | 36.1 (#14) | 36.7 (#14) | 36.5 (#14) |
+| Opportunity | 61.6 (#13) | 61.2 (#14) | 63.8 (#10) | 63.4 (#10) | 62.3 (#12) | 59.6 (#15) |
+| SAD | 92.9 (#10) | 87.3 (#16) | 87.6 (#16) | 85.7 (#16) | 86.3 (#16) | 84.1 (#16) |
+| HAPT | 83.3 (#3) | 83.6 (#3) | 84.3 (#2) | 82.1 (#3) | 82.4 (#3) | 81.3 (#6) |
+| DSADS | 85.6 (#9) | 84.4 (#9) | 83.0 (#13) | 81.3 (#15) | 79.6 (#15) | 79.9 (#15) |
+| WISDM | 82.9 (#11) | 83.0 (#9) | 80.4 (#13) | 79.5 (#13) | 77.9 (#13) | 67.8 (#15) |
+| Daphnet | 42.7 (#6) | 41.4 (#7) | 40.3 (#9) | 40.7 (#7) | 39.6 (#10) | 41.1 (#7) |
+
+## 3. Paired over the 10 datasets against the strongest paper models
+
+Cell: mean difference in F1 points (ours - paper model), wins-losses over the 10 datasets, Wilcoxon signed-rank p with Holm correction within each row. TinierHAR is added as the only paper model at or below our size. "Best per dataset" is the strongest paper model on each dataset (an oracle pick, biased upward).
+
+| Ours | Triple-Cross-Attn | CNN-HAR | TinyHAR | DANA | Attend+Discriminate | TinierHAR | Best per dataset |
+|---|---|---|---|---|---|---|---|
+| RecurrenceNet | -1.23 (8-2) p=1.00 | -0.93 (5-5) p=1.00 | -0.88 (4-6) p=1.00 | -0.61 (4-6) p=1.00 | -0.49 (8-2) p=1.00 | +0.87 (6-4) p=1.00 | -4.45 (2-8) p=0.45 |
+| S4D | -2.23 (3-7) p=0.80 | -1.93 (2-8) p=0.50 | -1.88 (3-7) p=0.80 | -1.61 (3-7) p=0.80 | -1.49 (3-7) p=0.80 | -0.13 (3-7) p=0.80 | -5.45 (1-9) p=0.26 |
+| HysteresisNet sel+clock | -3.23 (3-7) p=0.65 | -2.93 (2-8) p=0.50 | -2.88 (2-8) p=0.65 | -2.61 (3-7) p=0.70 | -2.49 (4-6) p=0.70 | -1.13 (2-8) p=0.70 | -6.45 (1-9) p=0.10 |
+| QuantileNet | -4.62 (3-7) p=0.53 | -4.32 (1-9) p=0.29 | -4.27 (3-7) p=0.53 | -4.00 (2-8) p=0.53 | -3.88 (3-7) p=0.53 | -2.53 (3-7) p=0.53 | -7.85 (1-9) p=0.14 |
+| Mamba | -5.59 (3-7) p=0.32 | -5.28 (1-9) p=0.12 | -5.24 (3-7) p=0.32 | -4.97 (2-8) p=0.32 | -4.85 (3-7) p=0.32 | -3.49 (3-7) p=0.32 | -8.81 (1-9) p=0.04 |
+| No memory (control) | -7.85 (1-9) p=0.02 | -7.55 (1-9) p=0.02 | -7.50 (2-8) p=0.03 | -7.23 (1-9) p=0.03 | -7.11 (1-9) p=0.02 | -5.75 (1-9) p=0.03 | -11.07 (0-10) p=0.01 |
+
+## 4. Our other models on the dev datasets (seed 0)
+
+Models without the full 10-dataset run: earlier rounds (UTD-MHAD only, some also ActRecTut/UniMiB) and rounds 6-7 that stopped at stage 2. Cell: F1 (rank among the paper's 17).
+
+| Model | Params | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut |
+|---|---|---|---|---|---|
+| stylealignnet | 38.2k | 75.2 (#1) | 96.2 (#1) | 59.3 (#5) | 48.7 (#7) |
+| recstat_mean | 25.8k | 74.3 (#1) |  |  | 38.7 (#13) |
+| DualMemNet | 26.7k | 73.9 (#1) |  |  |  |
+| lawnet_rec | 27.6k | 73.7 (#1) | 96.4 (#1) | 63.7 (#1) | 43.8 (#11) |
+| isochron_rec | 36.1k | 73.6 (#1) |  |  | 53.8 (#3) |
+| recstat_std | 25.8k | 73.3 (#1) |  |  | 46.0 (#9) |
+| HysteresisNet mm | 21.3k | 72.1 (#1) |  |  |  |
+| isochron_rec_uniform | 36.1k | 71.9 (#1) |  |  | 52.5 (#5) |
+| HysteresisNet sel | 23.5k | 71.9 (#1) |  |  |  |
+| HysteresisNet k6 | 26.7k | 71.8 (#1) |  |  |  |
+| HysteresisNet sel k6 | 29.9k | 71.8 (#1) |  |  |  |
+| recnet_meanstd_nonorm | 25.4k | 71.6 (#1) |  |  | 52.4 (#5) |
+| recstatnet | 26.5k | 71.6 (#1) | 96.4 (#1) | 62.1 (#3) | 63.6 (#1) |
+| RainflowNet | 23.5k | 71.2 (#1) | 95.6 (#4) | 58.2 (#7) | 32.5 (#15) |
+| recstat_range | 26.0k | 71.1 (#1) |  |  | 52.7 (#4) |
+| lawnet | 19.0k | 70.9 (#1) | 94.9 (#6) | 58.4 (#7) | 44.5 (#10) |
+| recnet_meanstd | 25.6k | 70.9 (#1) |  |  | 49.3 (#7) |
+| HysteresisNet clock | 20.4k | 70.7 (#1) |  |  |  |
+| OrdinalNet | 18.7k | 70.5 (#1) | 96.3 (#1) | 56.3 (#9) | 40.7 (#13) |
+| recnet_nonorm | 24.5k | 70.5 (#1) |  |  | 38.9 (#13) |
+| HysteresisNet fixed r | 20.0k | 70.5 (#1) |  |  |  |
+| HysteresisNet | 20.4k | 70.3 (#1) |  |  |  |
+| TropicalNet | 26.4k | 70.3 (#1) |  |  |  |
+| isochron_uniform | 16.4k | 70.1 (#1) |  |  | 58.9 (#2) |
+| statnet | 17.9k | 69.6 (#1) | 92.1 (#12) | 53.9 (#11) | 47.2 (#8) |
+| isochron | 16.4k | 69.5 (#1) |  |  | 54.7 (#3) |
+| ReturnMapNet | 21.7k | 69.4 (#1) | 91.7 (#13) | 50.3 (#12) | 37.5 (#14) |
+| lawnet_rand | 19.0k | 68.5 (#1) | 95.6 (#4) | 58.4 (#7) | 45.5 (#9) |
+| levelnet_plane | 29.9k | 65.6 (#5) |  |  | 48.1 (#8) |
+| bhnet | 20.2k | 65.0 (#5) |  |  |  |
+| VortexNet | 17.0k | 63.4 (#8) |  |  |  |
+| parliamentbody | 30.1k | 60.0 (#11) |  |  |  |
+| levelnet | 20.5k | 58.7 (#12) |  |  | 48.3 (#7) |
+| parliamentnet | 21.6k | 58.6 (#12) |  |  |  |
+| Edge-SSM osc | 34.0k | 53.8 (#13) |  | 50.3 (#12) | 48.6 (#7) |
+| Edge-SSM tau input | 33.2k | 53.2 (#13) |  | 30.7 (#16) | 33.0 (#15) |
+| Edge-SSM no phi | 31.3k | 51.6 (#13) |  | 37.5 (#16) | 31.7 (#15) |
+| Edge-SSM v2 | 33.6k | 51.6 (#13) |  | 42.4 (#13) | 28.6 (#16) |
+| Edge-SSM tau fixed | 33.2k | 51.6 (#13) |  | 40.8 (#14) | 28.5 (#17) |
+| GRU | 40.5k | 50.1 (#14) |  |  | 36.0 (#14) |
+| stylealign_elastic | 13.5k | 49.8 (#14) |  |  | 34.1 (#15) |
+| Edge-SSM-S | 5.3k | 47.8 (#14) |  | 33.1 (#16) | 35.9 (#14) |
+| Edge-SSM EMA | 33.6k | 46.5 (#14) |  |  | 36.5 (#14) |
+| forestnet | 29.1k | 4.4 (#18) |  |  |  |
+
+Paper best on the dev datasets: UTD-MHAD 68.2, UCI-HAR 96.1, UniMiB 63.3, ActRecTut 61.5.
+
+## 5. Where the classical Random Forest wins (paper table, all 30 datasets)
+
+Random Forest on tsfresh minimal features minus the best of the 14 deep paper models, against the number of channels (paper Table 3). Spearman rho = 0.71 (p = 1.3e-05). Random Forest is the best model on 7 of 11 datasets with at least 20 channels and on 2 of 19 with fewer.
+
+| Dataset | Channels | RF - best deep | Best model |
+|---|---|---|---|
+| wisdm | 3 | -13.9 | DANA |
+| unimib_shar | 3 | -18.8 | CNN-HAR |
+| hang_time | 3 | -5.4 | Guan-LSTM |
+| hhar | 6 | -7.1 | CNN-HAR |
+| utd_mhad | 6 | -17.0 | CNN-HAR |
+| hapt | 6 | -17.7 | CNN-HAR |
+| usc_had | 6 | -6.1 | MLP-Mixer |
+| wisdm_19_phone | 6 | -5.4 | DynamicWHAR |
+| wisdm_19_watch | 6 | -11.5 | DANA |
+| harth | 6 | -16.8 | Triple-Cross-Attn |
+| har70 | 6 | -11.7 | CNN-HAR |
+| w_har | 7 | +0.4 | Random Forest |
+| uca_ehar | 7 | -12.5 | DANA |
+| uci_har | 9 | -11.4 | TinyHAR |
+| daphnet | 9 | -11.6 | TinierHAR |
+| wear | 12 | -2.3 | DynamicWHAR |
+| actrectut_gestures | 15 | -19.6 | Triple-Cross-Attn |
+| real_life_har | 15 | +7.6 | Random Forest |
+| motion_sense | 18 | -2.0 | DynamicWHAR |
+| mhealth | 23 | +1.5 | Random Forest |
+| gotov | 28 | -4.5 | DynamicWHAR |
+| hugadb | 38 | +3.3 | Random Forest |
+| uma_fall | 39 | -2.0 | DynamicWHAR |
+| up_fall | 42 | +11.6 | Random Forest |
+| dsads | 45 | +1.5 | Random Forest |
+| pamap2 | 52 | +0.8 | Random Forest |
+| sad | 60 | +0.6 | Random Forest |
+| real_world | 81 | +12.0 | Random Forest |
+| real_disp | 117 | -3.4 | TinyHAR |
+| opportunity | 133 | -4.1 | MLP-HAR |
+
+## 6. Seen against unseen subjects (ours, seed 0)
+
+Validation macro-F1 (20 % of the training subjects' windows, which overlap training windows by 50 %, so it overstates pure subject shift) minus test macro-F1 (unseen subjects).
+
+| Model | Mean | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut | Opportunity | SAD | HAPT | DSADS | WISDM | Daphnet |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| RecurrenceNet | 14.5 | 21.9 | 2.9 | 11.7 | 35.3 | 14.4 | 8.0 | 6.0 | 13.6 | 13.4 | 18.3 |
+| S4D | – | – | 4.5 | 15.2 | – | 18.2 | 10.6 | 8.6 | 14.7 | 15.8 | 20.8 |
+| HysteresisNet sel+clock | 16.3 | 23.4 | 5.0 | 16.6 | 27.7 | 14.6 | 12.9 | 6.3 | 19.8 | 17.1 | 19.6 |
+| QuantileNet | 18.0 | 23.1 | 4.5 | 17.1 | 34.8 | 18.3 | 17.7 | 7.4 | 18.9 | 19.3 | 18.9 |
+| Mamba | – | – | 5.8 | – | – | 17.3 | 17.1 | 7.1 | 19.1 | 22.2 | 22.3 |
+| No memory (control) | – | – | 6.3 | 12.0 | 32.4 | 21.4 | 19.2 | 6.9 | 20.8 | 23.5 | 18.3 |
+
+– = not recorded (the earliest seed-0 runs on UTD-MHAD, ActRecTut and part of UniMiB predate the validation score in the result file).
+
+== src.evaluation.synthesis
+# Synthesis of rounds 1-13 (10 dev datasets)
+
+3-seed means where seeds 0-2 exist, else seed 0 (marked). Probe = segment statistics + classical classifier (no deep training; DSADS and Daphnet not run). Paper = WHAR Arena Figure 6 (one run).
+
+| Model | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut | Opportunity | SAD | HAPT | DSADS | WISDM | Daphnet | Mean (10) | Mean w/o ActRecTut |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| RN + channel statistics | 72.2 | 96.3 | 61.8 | 61.7 | 63.9 | 95.9 | 84.5 | 86.1 | 81.9 | 42.8 | 74.70 | 76.15 |
+| RN + LawNet | 72.9 | 96.7 | 64.4 | 48.4 | 62.5 | 98.8 | 84.2 | 89.8 | 82.7 | 43.8 | 74.42 | 77.31 |
+| RecurrenceNet (RN) | 73.3 | 96.6 | 60.8 | 40.4 | 61.6 | 92.9 | 83.3 | 85.6 | 82.9 | 42.7 | 72.01 | 75.52 |
+| S4D | 73.3 | 94.9 | 60.5 | 43.4 | 61.2 | 87.3 | 83.6 | 84.4 | 83.0 | 41.4 | 71.29 | 74.39 |
+| HysteresisNet sel+clock | 73.9 | 94.5 | 55.5 | 43.6 | 63.8 | 87.6 | 84.3 | 83.0 | 80.4 | 40.3 | 70.69 | 73.70 |
+| LawNet (memoryless + laws) | 70.7 | 94.6 | 58.6 | 43.5 | 61.1 | 96.7 | 81.5 | 87.3 | 78.2 | 43.2 | 71.52 | 74.63 |
+| Statistics (memoryless + stats) | 67.3 | 92.6 | 54.1 | 55.6 | 62.0 | 93.1 | 81.5 | 83.2 | 71.5 | 41.5 | 70.24 | 71.86 |
+| QuantileNet | 73.8 | 94.7 | 59.7 | 36.1 | 63.4 | 85.7 | 82.1 | 81.3 | 79.5 | 40.7 | 69.70 | 73.43 |
+| Mamba | 71.3 | 93.9 | 59.1 | 36.7 | 62.3 | 86.3 | 82.4 | 79.6 | 77.9 | 39.6 | 68.91 | 72.48 |
+| No memory (control) | 67.6 | 92.8 | 50.0 | 36.5 | 59.6 | 84.1 | 81.3 | 79.9 | 67.8 | 41.1 | 66.06 | 69.35 |
+| StyleAlignNet (seed 0) | 75.2 | 96.2 | 59.3 | 48.7 | 65.8 | 93.5 | 83.3 | 88.0 | 83.9 | 43.5 | 73.74 | 76.52 |
+| LawNet, random triples (seed 0) | 68.5 | 95.6 | 58.4 | 45.5 | 63.1 | 98.7 | 81.9 | 87.5 | 77.9 | 44.3 | 72.14 | 75.10 |
+| probe root/et | 61.8 | 90.6 | 50.8 | 65.6 | 72.0 | 98.7 | 80.9 | – | 76.4 | – | – | – |
+| probe tree_abs/et | 72.2 | 89.8 | 57.3 | 49.4 | 72.5 | 97.4 | 80.7 | – | 75.8 | – | – | – |
+| probe tree_abs/lr | 66.6 | 92.4 | 46.9 | 56.8 | 62.9 | 98.2 | 80.0 | – | 77.6 | – | – | – |
+| 1-NN DTW std | 74.3 | 86.1 | 58.4 | 69.3 | 31.7 | 88.0 | 71.6 | 77.3 | 63.5 | 32.5 | 65.26 | 64.81 |
+| Paper best (17) | 68.2 | 96.1 | 63.3 | 61.5 | 74.7 | 98.2 | 84.8 | 89.3 | 85.5 | 45.4 | 76.70 | 78.40 |
+| Paper RF | 51.2 | 84.7 | 44.5 | 41.9 | 70.6 | 98.2 | 67.1 | 89.3 | 71.6 | 33.8 | 65.30 | 67.90 |
+| Paper CNN-HAR | 68.2 | 96.0 | 63.3 | 52.2 | 63.1 | 95.6 | 84.8 | 86.9 | 81.4 | 40.2 | 73.18 | 75.51 |
+| Paper TinyHAR | 65.8 | 96.1 | 58.6 | 51.1 | 65.4 | 97.7 | 81.0 | 86.8 | 85.0 | 43.9 | 73.13 | 75.59 |
+
+## Dataset properties (paper-era configs)
+
+| Dataset | Kind | Hz | Subjects | Classes | Channels | Samples per 3-s window |
+|---|---|---|---|---|---|---|
+| UTD-MHAD | gesture | 50 | 8 | 27 | 6 | 150 |
+| UCI-HAR | locomotion/ADL | 50 | 30 | 6 | 9 | 150 |
+| UniMiB | locomotion/ADL | 50 | 30 | 17 | 3 | 150 |
+| ActRecTut | gesture | 32 | 2 | 12 | 15 | 96 |
+| Opportunity | locomotion, many sensors | 30 | 4 | 5 | 133 | 90 |
+| SAD | locomotion/ADL | 50 | 10 | 7 | 60 | 150 |
+| HAPT | locomotion/ADL | 50 | 30 | 12 | 6 | 150 |
+| DSADS | locomotion/ADL | 25 | 8 | 19 | 45 | 75 |
+| WISDM | locomotion/ADL | 20 | 36 | 6 | 3 | 60 |
+| Daphnet | freezing of gait | 64 | 10 | 3 | 9 | 192 |
+
+## Gain of each component per dataset (points of macro-F1)
+
+| Contrast | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut | Opportunity | SAD | HAPT | DSADS | WISDM | Daphnet | Mean |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| memory: RN − no memory | +5.7 | +3.9 | +10.8 | +3.9 | +2.0 | +8.8 | +2.1 | +5.7 | +15.2 | +1.5 | +5.95 |
+| memory: S4D − no memory | +5.7 | +2.1 | +10.5 | +7.0 | +1.6 | +3.2 | +2.3 | +4.6 | +15.2 | +0.2 | +5.23 |
+| statistics on memoryless: statnet − no memory | -0.3 | -0.2 | +4.1 | +19.2 | +2.4 | +9.0 | +0.2 | +3.3 | +3.7 | +0.4 | +4.18 |
+| laws on memoryless: LawNet − no memory | +3.1 | +1.8 | +8.6 | +7.0 | +1.4 | +12.5 | +0.2 | +7.4 | +10.4 | +2.0 | +5.46 |
+| statistics on RN: recstatnet − RN | -1.1 | -0.3 | +1.0 | +21.4 | +2.3 | +3.0 | +1.2 | +0.6 | -1.0 | +0.1 | +2.70 |
+| laws on RN: lawnet_rec − RN | -0.4 | +0.1 | +3.6 | +8.0 | +0.9 | +5.8 | +0.9 | +4.2 | -0.3 | +1.2 | +2.41 |
+| classical vs deep: probe root/et − RN | -11.5 | -6.0 | -10.0 | +25.2 | +10.5 | +5.8 | -2.5 | – | -6.6 | – | +0.61 |
+| classical vs deep: probe tree_abs/et − RN | -1.2 | -6.9 | -3.4 | +9.0 | +10.9 | +4.4 | -2.6 | – | -7.1 | – | +0.39 |
+| elastic vs deep: 1-NN DTW std − RN | +1.0 | -10.6 | -2.4 | +29.0 | -29.9 | -5.0 | -11.7 | -8.3 | -19.4 | -10.1 | -6.74 |
+| RN − S4D | +0.0 | +1.8 | +0.3 | -3.1 | +0.4 | +5.6 | -0.3 | +1.1 | -0.1 | +1.3 | +0.71 |
+| S4D − Mamba | +2.0 | +0.9 | +1.4 | +6.7 | -1.2 | +1.0 | +1.2 | +4.8 | +5.1 | +1.8 | +2.39 |
+
+## Spearman correlation of each gain with dataset properties (n = 10, or 8 for the probe; descriptive only, no correction)
+
+| Contrast | log2 subjects | log2 channels | samples/window (3 s × Hz) | classes |
+|---|---|---|---|---|
+| memory: RN − no memory | +0.36 (p 0.30) | -0.45 (p 0.20) | -0.36 (p 0.31) | +0.48 (p 0.16) |
+| memory: S4D − no memory | +0.20 (p 0.58) | -0.54 (p 0.10) | -0.47 (p 0.17) | +0.57 (p 0.08) |
+| statistics on memoryless: statnet − no memory | -0.15 (p 0.67) | +0.20 (p 0.59) | -0.36 (p 0.31) | +0.01 (p 0.99) |
+| laws on memoryless: LawNet − no memory | +0.15 (p 0.67) | -0.12 (p 0.75) | -0.27 (p 0.46) | +0.24 (p 0.50) |
+| statistics on RN: recstatnet − RN | -0.44 (p 0.20) | +0.57 (p 0.08) | -0.06 (p 0.87) | -0.08 (p 0.83) |
+| laws on RN: lawnet_rec − RN | -0.38 (p 0.28) | +0.45 (p 0.20) | +0.03 (p 0.93) | +0.12 (p 0.75) |
+| classical vs deep: probe root/et − RN | -0.56 (p 0.15) | +0.78 (p 0.02) | -0.35 (p 0.39) | -0.48 (p 0.23) |
+| classical vs deep: probe tree_abs/et − RN | -0.93 (p 0.00) | +0.81 (p 0.02) | -0.11 (p 0.80) | -0.02 (p 0.95) |
+| elastic vs deep: 1-NN DTW std − RN | -0.40 (p 0.26) | -0.06 (p 0.87) | +0.28 (p 0.44) | +0.65 (p 0.04) |
+| RN − S4D | +0.07 (p 0.84) | +0.45 (p 0.19) | +0.34 (p 0.33) | -0.34 (p 0.33) |
+| S4D − Mamba | -0.13 (p 0.72) | -0.34 (p 0.33) | -0.36 (p 0.31) | +0.39 (p 0.26) |
+
+## Evaluation noise
+
+Seed spread = sample std over seeds 0-2 of the dataset mean. Person spread = sample std over subject splits (seed 0), the paper's ±.
+
+| Model | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut | Opportunity | SAD | HAPT | DSADS | WISDM | Daphnet | Mean |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| seed spread, RecurrenceNet (RN) | 1.39 | 0.21 | 1.03 | 6.12 | 3.37 | 0.85 | 0.65 | 0.78 | 1.26 | 1.68 | 1.73 |
+| seed spread, S4D | 1.11 | 0.17 | 0.40 | 2.97 | 0.79 | 2.00 | 1.33 | 0.74 | 1.15 | 1.43 | 1.21 |
+| seed spread, RN + channel statistics | 1.14 | 0.16 | 0.89 | 2.05 | 2.50 | 0.64 | 1.38 | 0.42 | 1.94 | 1.51 | 1.26 |
+| person spread, RecurrenceNet (RN) | 13.6 | 2.4 | 7.6 | 9.1 | 15.5 | 9.5 | 4.4 | 6.1 | 4.7 | 8.3 | 8.1 |
+| person spread, RN + channel statistics | 14.1 | 2.4 | 7.3 | 0.3 | 14.1 | 5.4 | 7.6 | 6.2 | 9.1 | 5.1 | 7.2 |
+| validation (seen people) − test (unseen), RN seed 0 | 21.9 | 2.9 | 11.7 | 35.3 | 14.4 | 8.0 | 6.0 | 13.6 | 13.4 | 18.3 | 14.5 |
+
+## Size vs accuracy, paper deep models on these 10 datasets (n = 14)
+
+Spearman(log params, mean F1) = -0.37 (p 0.19). Ours (20-38k params) for reference: RN 24.7k, recstatnet 26.5k, S4D 27.7k.
+
+- Triple-Cross-Attn: 455.0k params, mean F1 73.48
+- CNN-HAR: 72.0k params, mean F1 73.18
+- TinyHAR: 185.1k params, mean F1 73.13
+- DANA: 460.8k params, mean F1 72.86
+- Attend+Discriminate: 374.4k params, mean F1 72.74
+- TinierHAR: 8.0k params, mean F1 71.39
+- DeepConvLSTM-Attn: 477.4k params, mean F1 71.20
+- DynamicWHAR: 1127.5k params, mean F1 69.61
+- MLP-HAR: 217.2k params, mean F1 69.31
+- MLP-Mixer: 621.1k params, mean F1 69.21
+- DeepConvLSTM: 460.8k params, mean F1 68.97
+- Guan-LSTM: 803.6k params, mean F1 63.32
+- DeepConvShallowLSTM: 402.8k params, mean F1 61.83
+- SA-HAR: 415.5k params, mean F1 61.82
+== src.evaluation.factor_analysis
+# What drives macro-F1: data factors and model components
+
+## A. Where the variance of macro-F1 comes from (our 10 models × 10 datasets × splits × 3 seeds)
+
+2460 runs. Sum of squares by source; shares of the total, and of the variance left once the dataset is fixed (what decides a ranking within a dataset).
+
+| Source | Share of total | Share within a dataset | Typical size (RMS, F1 points) |
+|---|---|---|---|
+| dataset | 76.6 % | – | 17.15 |
+| test person (split) | 14.4 % | 61.3 % | 7.45 |
+| model | 1.5 % | 6.4 % | 2.41 |
+| model x dataset | 1.7 % | 7.2 % | 2.55 |
+| model x person | 2.6 % | 10.9 % | 3.14 |
+| seed | 3.3 % | 14.2 % | 3.59 |
+| sum of parts / total | 100.2 % | | |
+
+## B. Data factors over the paper's 30 datasets (17 models, one run each)
+
+Spearman ρ (p) between each dataset property and each outcome, n = 30:
+
+| Outcome | log2 subjects | log2 channels | log2 classes | log2 samples/window |
+|---|---|---|---|---|
+| median deep F1 (level) | +0.07 (0.715) | +0.09 (0.646) | +0.06 (0.752) | -0.10 (0.617) |
+| best − median deep (does the model matter) | -0.44 (0.016) | +0.38 (0.036) | +0.04 (0.830) | +0.10 (0.612) |
+| RF − best deep (classical margin) | -0.24 (0.198) | +0.71 (0.000) | -0.09 (0.651) | +0.10 (0.601) |
+| mean split sd of deep models (person spread) | -0.50 (0.004) | +0.58 (0.001) | +0.12 (0.538) | +0.19 (0.304) |
+
+Correlations among the properties (Spearman ρ; large values mean their effects cannot be separated):
+
+| | log2 subjects | log2 channels | log2 classes | log2 samples/window |
+|---|---|---|---|---|
+| log2 subjects | +1.00 | -0.50 | +0.11 | -0.16 |
+| log2 channels | -0.50 | +1.00 | +0.04 | +0.10 |
+| log2 classes | +0.11 | +0.04 | +1.00 | +0.02 |
+| log2 samples/window | -0.16 | +0.10 | +0.02 | +1.00 |
+
+Multiple regression (OLS, n = 30, predictors standardized: coefficient = change in F1 points per 1 sd of the property, others held fixed; p in brackets):
+
+| Outcome | R² | log2 subjects | log2 channels | log2 classes | log2 samples/window |
+|---|---|---|---|---|---|
+| median deep F1 (level) | 0.03 | +1.48 (0.701) | +2.61 (0.497) | +0.43 (0.902) | -1.58 (0.642) |
+| best − median deep (does the model matter) | 0.39 | -1.54 (0.004) | +0.39 (0.433) | +0.10 (0.818) | -0.05 (0.905) |
+| RF − best deep (classical margin) | 0.55 | +3.07 (0.027) | +7.12 (0.000) | -2.21 (0.073) | +0.35 (0.764) |
+| mean split sd of deep models (person spread) | 0.46 | -0.43 (0.542) | +2.44 (0.002) | +0.23 (0.723) | +0.79 (0.209) |
+
+## C. Model components: controlled contrasts, paired on the same splits
+
+Effect = a − b in F1 points; per dataset the mean over splits of the seed-averaged difference; across datasets the mean with a 95 % t-interval, datasets won, Wilcoxon p (no correction), and the between-dataset sd (heterogeneity). ★ = per-dataset 95 % interval over splits excludes 0.
+
+| Component | a − b | Seeds | UTD-MH | UCI-HA | UniMiB | ActRec | Opport | SAD | HAPT | DSADS | WISDM | Daphne | Mean [95 % CI] | Won | p | sd between datasets |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Memory (any) vs none | RecurrenceNet − no memory | 3 | +5.7★ | +3.9★ | +10.8★ | +3.9 | +2.0 | +8.8 | +2.1 | +5.7★ | +15.2★ | +1.5 | +5.95 [+2.79, +9.10] | 10/10 | 0.002 | 4.4 |
+| Memory (any) vs none | S4D − no memory | 3 | +5.7★ | +2.1★ | +10.5★ | +7.0 | +1.6 | +3.2 | +2.3 | +4.6★ | +15.2★ | +0.2 | +5.23 [+1.93, +8.54] | 10/10 | 0.002 | 4.6 |
+| Memory (any) vs none | HysteresisNet − no memory | 3 | +6.3★ | +1.7★ | +5.5★ | +7.1★ | +4.2 | +3.5 | +3.1★ | +3.2★ | +12.6★ | -0.8 | +4.63 [+2.04, +7.22] | 9/10 | 0.004 | 3.6 |
+| Memory (any) vs none | QuantileNet − no memory | 3 | +6.2★ | +1.9★ | +9.7★ | -0.4 | +3.8 | +1.6 | +0.9 | +1.4 | +11.7★ | -0.4 | +3.64 [+0.61, +6.67] | 8/10 | 0.010 | 4.2 |
+| Memory (any) vs none | Mamba − no memory | 3 | +3.7★ | +1.1 | +9.1★ | +0.2 | +2.7 | +2.2 | +1.1 | -0.3 | +10.1★ | -1.5 | +2.85 [+0.08, +5.61] | 8/10 | 0.037 | 3.9 |
+| Memory type (vs S4D) | RecurrenceNet − S4D | 3 | +0.0 | +1.8★ | +0.3 | -3.1 | +0.4 | +5.6 | -0.3 | +1.1 | -0.1 | +1.3 | +0.71 [-0.83, +2.26] | 7/10 | 0.193 | 2.2 |
+| Memory type (vs S4D) | HysteresisNet − S4D | 3 | +0.7 | -0.4 | -5.0★ | +0.1 | +2.6 | +0.3 | +0.8 | -1.4 | -2.6★ | -1.1 | -0.60 [-2.10, +0.90] | 5/10 | 0.557 | 2.1 |
+| Memory type (vs S4D) | QuantileNet − S4D | 3 | +0.5 | -0.2 | -0.8 | -7.4 | +2.2 | -1.6 | -1.5 | -3.1★ | -3.5★ | -0.6 | -1.59 [-3.47, +0.28] | 2/10 | 0.064 | 2.6 |
+| Memory type (vs S4D) | Mamba − S4D | 3 | -2.0 | -0.9 | -1.4 | -6.7 | +1.2 | -1.0 | -1.2 | -4.8★ | -5.1★ | -1.8 | -2.39 [-4.10, -0.67] | 1/10 | 0.010 | 2.4 |
+| Window statistics | stats (no memory) − no memory | 3 | -0.3 | -0.2 | +4.1★ | +19.2 | +2.4 | +9.0★ | +0.2 | +3.3 | +3.7★ | +0.4 | +4.18 [-0.09, +8.45] | 8/10 | 0.014 | 6.0 |
+| Window statistics | RN+stats − RecurrenceNet | 3 | -1.1 | -0.3 | +1.0 | +21.4 | +2.3 | +3.0 | +1.2 | +0.6 | -1.0 | +0.1 | +2.70 [-2.08, +7.48] | 7/10 | 0.131 | 6.7 |
+| Laws (lagged second-order) | laws (no memory) − no memory | 3 | +3.1 | +1.8★ | +8.6★ | +7.0 | +1.4 | +12.5★ | +0.2 | +7.4★ | +10.4★ | +2.0 | +5.46 [+2.40, +8.52] | 10/10 | 0.002 | 4.3 |
+| Laws (lagged second-order) | RN+laws − RecurrenceNet | 3 | -0.4 | +0.1 | +3.6★ | +8.0 | +0.9 | +5.8★ | +0.9 | +4.2★ | -0.3 | +1.2 | +2.41 [+0.35, +4.47] | 8/10 | 0.020 | 2.9 |
+| Laws (lagged second-order) | RN+laws − RN+stats | 3 | +0.7 | +0.4 | +2.6★ | -13.3 | -1.4 | +2.9 | -0.2 | +3.7★ | +0.7 | +1.1 | -0.29 [-3.74, +3.17] | 7/10 | 0.322 | 4.8 |
+| Sensor grouping | laws (no memory) − laws, random groups | 1 | +2.4 | -0.7★ | +0.0 | -1.0 | -3.8 | +0.3 | -0.7 | +0.4 | +0.0 | -1.1 | -0.41 [-1.53, +0.71] | 3/10 | 0.312 | 1.6 |
+
+Kill set only (UTD-MHAD, ActRecTut, SAD, Opportunity; 3 seeds):
+
+| Component | a − b | UTD-MHAD | ActRecTut | SAD | Opportunity | Mean | Without ActRecTut |
+|---|---|---|---|---|---|---|---|
+| Which statistic | RN+mean − RecurrenceNet | -1.5 | -2.9 | -2.2 | +0.3 | -1.55 | -1.11 |
+| Which statistic | RN+std − RecurrenceNet | -0.9 | +10.4 | +3.9 | +2.6 | +3.98 | +1.86 |
+| Which statistic | RN+min/max − RecurrenceNet | -1.6 | +15.7 | +3.7 | +0.9 | +4.68 | +0.99 |
+| Which statistic | RN+stats − RecurrenceNet | -1.1 | +21.4 | +3.0 | +2.3 | +6.38 | +1.39 |
+| Normalization / pooling | RN, mean+std pooling − RecurrenceNet | -1.4 | +8.0 | +1.0 | -0.5 | +1.78 | -0.29 |
+| Normalization / pooling | RN, no LayerNorm − RecurrenceNet | -3.1 | +6.2 | -2.7 | -0.7 | -0.08 | -2.17 |
+| Normalization / pooling | RN, both − RecurrenceNet | -1.7 | +13.8 | -0.2 | -1.2 | +2.67 | -1.03 |
+
+Which data properties go with each effect (Spearman ρ over the 10 datasets, p in brackets; descriptive):
+
+| a − b | log2 subjects | log2 channels | log2 classes | samples/window (3 s × Hz) | log2 windows |
+|---|---|---|---|---|---|
+| RecurrenceNet − no memory | +0.36 (0.30) | -0.45 (0.20) | +0.48 (0.16) | -0.36 (0.31) | -0.10 (0.78) |
+| S4D − no memory | +0.20 (0.58) | -0.54 (0.10) | +0.57 (0.08) | -0.47 (0.17) | -0.19 (0.60) |
+| HysteresisNet − no memory | -0.13 (0.72) | -0.27 (0.45) | +0.34 (0.34) | -0.59 (0.07) | -0.22 (0.53) |
+| QuantileNet − no memory | +0.40 (0.25) | -0.44 (0.20) | +0.17 (0.64) | -0.37 (0.29) | -0.04 (0.91) |
+| Mamba − no memory | +0.40 (0.26) | -0.46 (0.18) | +0.13 (0.72) | -0.28 (0.44) | -0.15 (0.68) |
+| RecurrenceNet − S4D | +0.07 (0.84) | +0.45 (0.19) | -0.34 (0.33) | +0.34 (0.33) | +0.19 (0.60) |
+| HysteresisNet − S4D | -0.46 (0.18) | +0.49 (0.15) | -0.08 (0.83) | +0.12 (0.74) | -0.26 (0.47) |
+| QuantileNet − S4D | -0.09 (0.81) | +0.10 (0.79) | -0.20 (0.58) | +0.43 (0.21) | -0.22 (0.53) |
+| Mamba − S4D | +0.13 (0.72) | +0.34 (0.33) | -0.39 (0.26) | +0.36 (0.31) | -0.04 (0.91) |
+| stats (no memory) − no memory | -0.15 (0.67) | +0.20 (0.59) | +0.01 (0.99) | -0.36 (0.31) | +0.05 (0.88) |
+| RN+stats − RecurrenceNet | -0.44 (0.20) | +0.57 (0.08) | -0.08 (0.83) | -0.06 (0.87) | -0.14 (0.70) |
+| laws (no memory) − no memory | +0.15 (0.67) | -0.12 (0.75) | +0.24 (0.50) | -0.27 (0.46) | +0.07 (0.85) |
+| RN+laws − RecurrenceNet | -0.38 (0.28) | +0.45 (0.20) | +0.12 (0.75) | +0.03 (0.93) | -0.07 (0.85) |
+| RN+laws − RN+stats | +0.28 (0.43) | -0.06 (0.87) | +0.23 (0.53) | +0.08 (0.82) | +0.33 (0.35) |
+| laws (no memory) − laws, random groups | +0.16 (0.66) | -0.25 (0.48) | +0.74 (0.02) | -0.11 (0.76) | -0.17 (0.64) |
+
+Model size (paper deep models, n = 14): Spearman(log params, mean F1) = -0.43 (p 0.12) over 30 datasets, -0.37 (p 0.19) over our 10.
+== src.evaluation.heldout_analysis
+# Held-out confirmation (RESEARCH_PLAN.md §5p)
+
+Complete datasets: 8 of 8 (PAMAP2 (9 splits), UP-Fall (10 splits), UMA-Fall (10 splits), USC-HAD (10 splits), MotionSense (10 splits), WEAR (10 splits), UCA-EHAR (10 splits), W-HAR (10 splits)). Pending: none.
+
+## Per dataset (macro-F1 %, mean over splits; ours: 3-seed mean, paper: one run)
+
+| Model | PAMAP2 | UP-Fall | UMA-Fall | USC-HAD† | MotionSense† | WEAR | UCA-EHAR | W-HAR | Mean |
+|---|---|---|---|---|---|---|---|---|---|
+| RN + laws | 60.3 | 52.5 | 52.7 | 76.9 | 93.7 | 86.8 | 62.6 | 50.6 | 67.02 |
+| RN + statistics | 58.6 | 51.8 | 50.0 | 72.7 | 91.6 | 85.8 | 64.0 | 53.5 | 65.99 |
+| RecurrenceNet | 52.6 | 49.8 | 46.6 | 73.3 | 91.2 | 85.7 | 61.7 | 50.1 | 63.87 |
+| S4D | 54.5 | 42.8 | 42.9 | 76.2 | 91.9 | 84.4 | 59.1 | 46.3 | 62.27 |
+| TinyHAR (paper) | 62.2 | 61.0 | 50.2 | 78.1 | 91.2 | 86.5 | 58.0 | 52.2 | 67.40 |
+| CNN-HAR (paper) | 62.1 | 55.0 | 50.0 | 76.2 | 91.5 | 86.9 | 58.7 | 52.7 | 66.63 |
+| Triple-Cross-Attn (paper) | 61.9 | 58.7 | 52.4 | 74.3 | 91.3 | 88.5 | 58.1 | 49.8 | 66.89 |
+| Random Forest (paper) | 65.1 | 72.8 | 54.2 | 72.7 | 91.5 | 87.3 | 47.6 | 53.1 | 68.02 |
+| best paper model | 65.1 Random Forest | 72.8 Random Forest | 56.2 DynamicWHAR | 78.8 MLP-Mixer | 93.5 DynamicWHAR | 89.7 DynamicWHAR | 60.1 DANA | 53.1 Random Forest | |
+
+† parser lists files unsorted: subject numbering may differ from the paper's machine; compared by means only.
+
+## Primary (pre-registered)
+
+1. RN + laws − S4D (3 seeds): +4.75 [+1.85, +7.65], 8–0 of 8, Wilcoxon p 0.008 → better than S4D.
+2. RN + laws (seed 0) − paper models, non-inferiority margin −1 on the top three:
+   - DynamicWHAR: -1.07 [-5.08, +2.94], 4–4 of 8, Wilcoxon p 0.641
+   - Random Forest: -0.64 [-9.40, +8.11], 3–5 of 8, Wilcoxon p 0.742
+   - TinyHAR: -0.02 [-3.67, +3.63], 4–4 of 8, Wilcoxon p 0.844 — non-inferiority not shown
+   - Triple-Cross-Attn: +0.49 [-2.72, +3.70], 4–4 of 8, Wilcoxon p 0.844 — non-inferiority not shown
+   - CNN-HAR: +0.76 [-1.57, +3.08], 5–3 of 8, Wilcoxon p 0.742 — non-inferiority not shown
+   - TinierHAR: +1.73 [-1.07, +4.53], 7–1 of 8, Wilcoxon p 0.148
+   - Attend+Discriminate: +1.97 [-0.29, +4.22], 6–2 of 8, Wilcoxon p 0.109
+   - DANA: +2.24 [-0.05, +4.52], 6–2 of 8, Wilcoxon p 0.055
+   - MLP-HAR: +2.27 [-1.56, +6.09], 6–2 of 8, Wilcoxon p 0.195
+   - DeepConvLSTM-Attn: +4.28 [+2.02, +6.55], 7–1 of 8, Wilcoxon p 0.016
+   - DeepConvLSTM: +4.62 [+2.37, +6.86], 7–1 of 8, Wilcoxon p 0.016
+   - SA-HAR: +5.73 [+1.43, +10.03], 7–1 of 8, Wilcoxon p 0.023
+   - MLP-Mixer: +6.78 [+1.20, +12.36], 7–1 of 8, Wilcoxon p 0.016
+   - Guan-LSTM: +7.94 [+4.70, +11.17], 8–0 of 8, Wilcoxon p 0.008
+   - DeepConvShallowLSTM: +9.57 [+3.30, +15.84], 7–1 of 8, Wilcoxon p 0.016
+   - SVM: +19.51 [+10.46, +28.55], 8–0 of 8, Wilcoxon p 0.008
+   - k-NN: +22.00 [+14.74, +29.25], 8–0 of 8, Wilcoxon p 0.008
+
+## Secondary
+
+- RN + statistics − S4D (3 seeds): +3.73 [+0.17, +7.29], 6–2 of 8, Wilcoxon p 0.055
+- RN + statistics (seed 0) − TinyHAR: -1.11 [-5.32, +3.10], 2–6 of 8, Wilcoxon p 0.383 — non-inferiority not shown
+- RN + statistics (seed 0) − CNN-HAR: -0.34 [-3.30, +2.63], 2–6 of 8, Wilcoxon p 0.461 — non-inferiority not shown
+- RN + statistics (seed 0) − Triple-Cross-Attn: -0.60 [-4.56, +3.35], 2–6 of 8, Wilcoxon p 0.641 — non-inferiority not shown
+- RN + laws − RecurrenceNet (3 seeds): +3.15 [+1.00, +5.30], 8–0 of 8, Wilcoxon p 0.008
+- RecurrenceNet − S4D (3 seeds): +1.61 [-1.18, +4.40], 5–3 of 8, Wilcoxon p 0.250
+- All 18 datasets (includes the 10 development datasets): RN + laws − S4D +3.85 [+2.10, +5.59], 16–2 of 18, Wilcoxon p 0.000
+== src.evaluation.vs_benchmark
+# Our best family against every WHAR Arena model (10 datasets, paired)
+
+Ours − paper, macro-F1 points. Seed 0 (as the paper); the 3-seed column is a check. Holm over the 17 paper models.
+
+## RN + laws (mean F1 seed 0 73.77, 3 seeds 74.42; params 30.2k)
+
+| Paper model | Its mean F1 | Its params | Ours − it (seed 0) [95 % CI] | Won–lost | Wilcoxon p | Holm p | Ours − it (3 seeds) | Holm p (3 seeds) |
+|---|---|---|---|---|---|---|---|---|
+| Triple-Cross-Attn | 73.48 | 411k | +0.29 [-5.54, +6.11] | 6–4 | 0.695 | 1.000 | +0.93 | 0.697 |
+| CNN-HAR | 73.18 | 133k | +0.59 [-2.47, +3.65] | 7–3 | 0.432 | 1.000 | +1.24 | 0.654 |
+| TinyHAR | 73.13 | 192k | +0.64 [-2.41, +3.68] | 7–3 | 0.557 | 1.000 | +1.28 | 0.697 |
+| DANA | 72.86 | 805k | +0.91 [-3.46, +5.28] | 7–3 | 0.432 | 1.000 | +1.55 | 0.697 |
+| Attend+Discriminate | 72.74 | 640k | +1.03 [-2.11, +4.16] | 7–3 | 0.193 | 1.000 | +1.67 | 0.654 |
+| TinierHAR | 71.39 | 14k | +2.39 [-1.17, +5.95] | 6–4 | 0.275 | 1.000 | +3.03 | 0.516 |
+| DeepConvLSTM-Attn | 71.20 | 827k | +2.57 [-1.92, +7.07] | 7–3 | 0.193 | 1.000 | +3.22 | 0.516 |
+| DynamicWHAR | 69.61 | 2082k | +4.16 [+1.33, +7.00] | 9–1 | 0.004 | 0.055 | +4.81 | 0.059 |
+| MLP-HAR | 69.31 | 424k | +4.46 [-1.76, +10.69] | 8–2 | 0.084 | 0.672 | +5.11 | 0.516 |
+| MLP-Mixer | 69.21 | 716k | +4.56 [+2.34, +6.78] | 10–0 | 0.002 | 0.033 | +5.20 | 0.059 |
+| DeepConvLSTM | 68.97 | 805k | +4.80 [+0.26, +9.34] | 7–3 | 0.049 | 0.439 | +5.44 | 0.117 |
+| Random Forest | 65.30 | – | +8.47 [+1.51, +15.43] | 8–2 | 0.020 | 0.215 | +9.11 | 0.137 |
+| Guan-LSTM | 63.32 | 822k | +10.45 [-0.06, +20.96] | 8–2 | 0.010 | 0.117 | +11.10 | 0.117 |
+| DeepConvShallowLSTM | 61.83 | 729k | +11.94 [-0.87, +24.75] | 8–2 | 0.037 | 0.371 | +12.58 | 0.137 |
+| SA-HAR | 61.82 | 408k | +11.95 [+7.03, +16.88] | 10–0 | 0.002 | 0.033 | +12.60 | 0.033 |
+| SVM | 53.11 | – | +20.66 [+9.10, +32.23] | 9–1 | 0.004 | 0.055 | +21.31 | 0.059 |
+| k-NN | 51.83 | – | +21.95 [+13.25, +30.64] | 10–0 | 0.002 | 0.033 | +22.59 | 0.033 |
+
+## RN + statistics (mean F1 seed 0 74.69, 3 seeds 74.70; params 28.7k)
+
+| Paper model | Its mean F1 | Its params | Ours − it (seed 0) [95 % CI] | Won–lost | Wilcoxon p | Holm p | Ours − it (3 seeds) | Holm p (3 seeds) |
+|---|---|---|---|---|---|---|---|---|
+| Triple-Cross-Attn | 73.48 | 411k | +1.21 [-1.81, +4.23] | 7–3 | 0.322 | 1.000 | +1.22 | 0.697 |
+| CNN-HAR | 73.18 | 133k | +1.51 [-1.14, +4.17] | 6–4 | 0.322 | 1.000 | +1.52 | 0.697 |
+| TinyHAR | 73.13 | 192k | +1.56 [-1.91, +5.02] | 5–5 | 0.492 | 1.000 | +1.57 | 0.697 |
+| DANA | 72.86 | 805k | +1.83 [-0.59, +4.25] | 7–3 | 0.160 | 0.801 | +1.84 | 0.451 |
+| Attend+Discriminate | 72.74 | 640k | +1.95 [-0.45, +4.34] | 8–2 | 0.105 | 0.633 | +1.96 | 0.451 |
+| TinierHAR | 71.39 | 14k | +3.31 [-1.60, +8.21] | 6–4 | 0.275 | 1.000 | +3.32 | 0.641 |
+| DeepConvLSTM-Attn | 71.20 | 827k | +3.49 [-0.12, +7.11] | 7–3 | 0.049 | 0.391 | +3.51 | 0.391 |
+| DynamicWHAR | 69.61 | 2082k | +5.08 [+0.16, +10.01] | 9–1 | 0.014 | 0.150 | +5.10 | 0.215 |
+| MLP-HAR | 69.31 | 424k | +5.38 [-1.42, +12.18] | 8–2 | 0.084 | 0.588 | +5.39 | 0.451 |
+| MLP-Mixer | 69.21 | 716k | +5.48 [+0.16, +10.80] | 9–1 | 0.004 | 0.059 | +5.49 | 0.059 |
+| DeepConvLSTM | 68.97 | 805k | +5.72 [+1.39, +10.05] | 9–1 | 0.010 | 0.127 | +5.73 | 0.076 |
+| Random Forest | 65.30 | – | +9.39 [+1.94, +16.84] | 7–3 | 0.037 | 0.334 | +9.40 | 0.273 |
+| Guan-LSTM | 63.32 | 822k | +11.37 [+0.47, +22.27] | 8–2 | 0.010 | 0.127 | +11.38 | 0.117 |
+| DeepConvShallowLSTM | 61.83 | 729k | +12.86 [+0.61, +25.11] | 8–2 | 0.027 | 0.273 | +12.87 | 0.334 |
+| SA-HAR | 61.82 | 408k | +12.87 [+6.16, +19.59] | 10–0 | 0.002 | 0.033 | +12.88 | 0.033 |
+| SVM | 53.11 | – | +21.58 [+9.66, +33.50] | 9–1 | 0.004 | 0.059 | +21.59 | 0.059 |
+| k-NN | 51.83 | – | +22.87 [+14.01, +31.72] | 10–0 | 0.002 | 0.033 | +22.88 | 0.033 |
+
+## Rank among the 17 paper models on each dataset (1 = above all of them; seed 0)
+
+| Model | UTD-MHAD | UCI-HAR | UniMiB | ActRecTut | Opportunity | SAD | HAPT | DSADS | WISDM | Daphnet | Mean rank | First places |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| RN + laws | #1 | #1 | #1 | #11 | #13 | #1 | #6 | #2 | #9 | #1 | 4.6 | 5 |
+| RN + statistics | #1 | #1 | #3 | #1 | #11 | #4 | #2 | #6 | #11 | #7 | 4.7 | 3 |
+| best paper model | 68.2 CNN-HAR | 96.1 TinyHAR | 63.3 CNN-HAR | 61.5 Triple-Cross-Attn | 74.7 MLP-HAR | 98.2 Random Forest | 84.8 CNN-HAR | 89.3 Random Forest | 85.5 DANA | 45.4 TinierHAR | | |
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/figures/vs_benchmark.svg
+== src.evaluation.seeds_summary
+# P4: multi-seed results on utd_mhad
+
+Built by `seeds_summary.py`. Macro-F1 (%), WHAR Arena v1 protocol. A training seed changes only the model initialization and the batch order; the splits, validation windows and normalization are the protocol's (seed 0). Seeds are averaged within each subject split; comparisons are paired over splits.
+
+Splits used: 8; seeds every model has on all of them: [0, 1, 2, 3, 4].
+
+| Model | Params | Mean over splits (seed-averaged) | Std over splits | Mean seed std within a split | Mean per seed | Seed range |
+|---|---|---|---|---|---|---|
+| quantilenet | 20.8k | **73.99** | 13.3 | 2.87 | 74.3, 73.8, 73.3, 74.2, 74.5 | 73.3–74.5 |
+| hystnet_sel_clock | 23.6k | **73.23** | 12.6 | 4.13 | 73.4, 76.5, 72.0, 73.1, 71.2 | 71.2–76.5 |
+| s4d | 27.7k | **72.55** | 14.2 | 2.97 | 73.8, 74.0, 72.0, 71.2, 71.7 | 71.2–74.0 |
+| mamba | 21.1k | **71.89** | 13.8 | 4.08 | 70.7, 69.6, 73.5, 74.6, 71.0 | 69.6–74.6 |
+| hystnet_nomem | 20.0k | **67.12** | 11.2 | 3.50 | 67.6, 68.6, 66.6, 66.2, 66.6 | 66.2–68.6 |
+
+Hardware per seed: seed 0 and 4 on the local GTX 1080 Ti, seeds 1–2 on Kaggle T4, seed 3 on a Colab GPU (see each result's `device`). Non-deterministic GPU kernels make results differ slightly across hardware; every seed ran all models on the same hardware.
+
+## Model − s4d, paired over splits
+
+| Model | Mean Δ | 95 % CI | Wins/losses | Wilcoxon p | Non-inferior (margin 1) |
+|---|---|---|---|---|---|
+| quantilenet | +1.45 | [-1.48, +4.37] | 4/4 | 0.461 | no |
+| hystnet_sel_clock | +0.68 | [-3.26, +4.61] | 6/2 | 0.547 | no |
+| mamba | -0.66 | [-3.52, +2.20] | 2/6 | 0.461 | no |
+| hystnet_nomem | -5.42 | [-9.28, -1.57] | 1/7 | 0.016 | no |
+
+## Model − mamba, paired over splits
+
+| Model | Mean Δ | 95 % CI | Wins/losses | Wilcoxon p |
+|---|---|---|---|---|
+| quantilenet | +2.10 | [+0.37, +3.84] | 7/1 | 0.023 |
+| hystnet_sel_clock | +1.34 | [-1.62, +4.29] | 5/3 | 0.250 |
+| s4d | +0.66 | [-2.20, +3.52] | 6/2 | 0.461 |
+| hystnet_nomem | -4.77 | [-7.74, -1.80] | 1/7 | 0.023 |
+
+## Model − hystnet_nomem, paired over splits
+
+| Model | Mean Δ | 95 % CI | Wins/losses | Wilcoxon p |
+|---|---|---|---|---|
+| quantilenet | +6.87 | [+4.26, +9.48] | 8/0 | 0.008 |
+| hystnet_sel_clock | +6.10 | [+3.68, +8.52] | 8/0 | 0.008 |
+| s4d | +5.42 | [+1.57, +9.28] | 7/1 | 0.016 |
+| mamba | +4.77 | [+1.80, +7.74] | 7/1 | 0.023 |
+
+## Per split (seed-averaged)
+
+| Split | quantilenet | hystnet_sel_clock | s4d | mamba | hystnet_nomem |
+|---|---|---|---|---|---|
+| split-00 | 88.0 | 84.3 | 92.2 | 88.6 | 80.9 |
+| split-01 | 43.9 | 45.3 | 44.2 | 42.6 | 42.3 |
+| split-02 | 76.3 | 72.5 | 76.5 | 72.5 | 66.8 |
+| split-03 | 68.1 | 68.2 | 63.6 | 63.5 | 64.9 |
+| split-04 | 77.9 | 81.1 | 74.4 | 76.7 | 72.1 |
+| split-05 | 80.8 | 81.0 | 80.9 | 80.6 | 72.8 |
+| split-06 | 80.3 | 80.6 | 79.2 | 75.4 | 70.0 |
+| split-07 | 76.6 | 72.8 | 69.4 | 75.3 | 67.1 |
+
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/results/metrics/seeds/summary_utd_mhad.md
+== src.evaluation.p5_summary
+# P5: the 5 models across WHAR datasets (paper-era code, WHAR Arena v1)
+
+Built by `p5_summary.py`. Macro-F1 (%): per split the mean over training seeds 0–2, then the mean over splits. Pre-registered design in `RESEARCH_PLAN.md` §5b (P5).
+
+| Dataset | Status | QuantileNet | HysteresisNet sel+clock | S4D | Mamba | No memory |
+|---|---|---|---|---|---|---|
+| utd_mhad | 8 splits | 73.78 | **73.94** | 73.27 | 71.28 | 67.60 |
+| actrectut_gestures | 2 splits | 36.07 | **43.57** | 43.43 | 36.70 | 36.46 |
+| opportunity | 4 splits | 63.40 | **63.81** | 61.18 | 62.35 | 59.62 |
+| unimib_shar | 10 splits | 59.74 | 55.50 | **60.50** | 59.11 | 50.02 |
+| uci_har | 10 splits | 94.67 | 94.49 | **94.86** | 93.91 | 92.77 |
+| sad | 10 splits | 85.69 | **87.59** | 87.32 | 86.33 | 84.12 |
+| hapt | 10 splits | 82.11 | **84.33** | 83.57 | 82.37 | 81.25 |
+| dsads | 8 splits | 81.31 | 83.04 | **84.44** | 79.60 | 79.88 |
+| wisdm | 10 splits | 79.51 | 80.37 | **82.99** | 77.85 | 67.77 |
+| daphnet | 10 splits | 40.71 | 40.29 | **41.36** | 39.57 | 41.11 |
+
+## Ranking over the 10 complete datasets
+
+Friedman χ² = 20.72, p = 0.00036. 
+Nemenyi critical difference (α = 0.05): 1.93 ranks. Diagram: `results/p5/cd.svg`.
+
+| Model | Mean rank | Mean macro-F1 | Wins (rank 1) |
+|---|---|---|---|
+| S4D | 1.80 | 71.29 | 5 |
+| HysteresisNet sel+clock | 2.00 | 70.69 | 5 |
+| QuantileNet | 3.00 | 69.70 | 0 |
+| Mamba | 3.70 | 68.91 | 0 |
+| No memory | 4.50 | 66.06 | 0 |
+
+## Pairwise, over datasets (Wilcoxon signed-rank, Holm-corrected)
+
+| A − B | Mean Δ | 95 % CI | Wins/losses | p | p (Holm) |
+|---|---|---|---|---|---|
+| QuantileNet − HysteresisNet sel+clock | -0.99 | [-3.09, +1.10] | 3/7 | 0.232 | 0.465 |
+| QuantileNet − S4D | -1.59 | [-3.47, +0.28] | 2/8 | 0.0645 | 0.258 |
+| QuantileNet − Mamba | +0.79 | [+0.04, +1.54] | 7/3 | 0.0488 | 0.244 |
+| QuantileNet − No memory | +3.64 | [+0.61, +6.67] | 8/2 | 0.00977 | 0.0781 |
+| HysteresisNet sel+clock − S4D | -0.60 | [-2.10, +0.90] | 5/5 | 0.557 | 0.557 |
+| HysteresisNet sel+clock − Mamba | +1.78 | [-0.09, +3.66] | 9/1 | 0.0645 | 0.258 |
+| HysteresisNet sel+clock − No memory | +4.63 | [+2.04, +7.22] | 9/1 | 0.00391 | 0.0352 |
+| S4D − Mamba | +2.39 | [+0.67, +4.10] | 9/1 | 0.00977 | 0.0781 |
+| S4D − No memory | +5.23 | [+1.93, +8.54] | 10/0 | 0.00195 | 0.0195 |
+| Mamba − No memory | +2.85 | [+0.08, +5.61] | 8/2 | 0.0371 | 0.223 |
+
+## Pre-registered claims
+
+| New − old | Mean Δ | 95 % CI | Non-inferior (margin 1) | Better (CI above 0) |
+|---|---|---|---|---|
+| QuantileNet − S4D | -1.59 | [-3.47, +0.28] | no | no |
+| QuantileNet − Mamba | +0.79 | [+0.04, +1.54] | yes | yes |
+| HysteresisNet sel+clock − S4D | -0.60 | [-2.10, +0.90] | no | no |
+| HysteresisNet sel+clock − Mamba | +1.78 | [-0.09, +3.66] | yes | no |
+
+## Context: best of the 17 WHAR baselines (paper-era re-run, seed 0)
+
+| Dataset | Best WHAR model | Its macro-F1 | Best of our 5 |
+|---|---|---|---|
+| utd_mhad | attend_discriminate | 67.48 | 73.94 |
+| actrectut_gestures | triple_cross_domain_attention | 61.42 | 43.57 |
+| unimib_shar | cnn_har | 63.92 | 60.50 |
+| uci_har | tinyhar | 96.07 | 94.86 |
+wrote /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/results/metrics/p5/summary.md
+== src.evaluation.contrasts_robustness
+# Component contrasts without daphnet (exploratory)
+
+Same contrasts and statistics as results/metrics/factors/summary.md § C, over the 9 datasets whose stored runs agree on split sizes (daphnet excluded: its split ids do not name the same test subjects across runs; results/gates/G2_data.json).
+
+| Component | a − b | Seeds | 10 datasets: mean [95 % CI], won, p | 9 datasets: mean [95 % CI], won, p |
+|---|---|---|---|---|
+| Memory (any) vs none | RecurrenceNet − no memory | 3 | +5.95 [+2.79, +9.10], 10/10, 0.002 | +6.43 [+3.07, +9.80], 9/9, 0.004 |
+| Memory (any) vs none | S4D − no memory | 3 | +5.23 [+1.93, +8.54], 10/10, 0.002 | +5.79 [+2.30, +9.27], 9/9, 0.004 |
+| Memory (any) vs none | HysteresisNet − no memory | 3 | +4.63 [+2.04, +7.22], 9/10, 0.004 | +5.24 [+2.74, +7.74], 9/9, 0.004 |
+| Memory (any) vs none | QuantileNet − no memory | 3 | +3.64 [+0.61, +6.67], 8/10, 0.010 | +4.09 [+0.83, +7.34], 8/9, 0.008 |
+| Memory (any) vs none | Mamba − no memory | 3 | +2.85 [+0.08, +5.61], 8/10, 0.037 | +3.33 [+0.45, +6.22], 8/9, 0.012 |
+| Memory type (vs S4D) | RecurrenceNet − S4D | 3 | +0.71 [-0.83, +2.26], 7/10, 0.193 | +0.65 [-1.11, +2.40], 6/9, 0.301 |
+| Memory type (vs S4D) | HysteresisNet − S4D | 3 | -0.60 [-2.10, +0.90], 5/10, 0.557 | -0.55 [-2.25, +1.15], 5/9, 0.820 |
+| Memory type (vs S4D) | QuantileNet − S4D | 3 | -1.59 [-3.47, +0.28], 2/10, 0.064 | -1.70 [-3.82, +0.42], 2/9, 0.098 |
+| Memory type (vs S4D) | Mamba − S4D | 3 | -2.39 [-4.10, -0.67], 1/10, 0.010 | -2.45 [-4.40, -0.50], 1/9, 0.020 |
+| Window statistics | stats (no memory) − no memory | 3 | +4.18 [-0.09, +8.45], 8/10, 0.014 | +4.60 [-0.14, +9.34], 7/9, 0.027 |
+| Window statistics | RN+stats − RecurrenceNet | 3 | +2.70 [-2.08, +7.48], 7/10, 0.131 | +2.99 [-2.41, +8.39], 6/9, 0.129 |
+| Laws (lagged second-order) | laws (no memory) − no memory | 3 | +5.46 [+2.40, +8.52], 10/10, 0.002 | +5.84 [+2.49, +9.19], 9/9, 0.004 |
+| Laws (lagged second-order) | RN+laws − RecurrenceNet | 3 | +2.41 [+0.35, +4.47], 8/10, 0.020 | +2.55 [+0.23, +4.86], 7/9, 0.039 |
+| Laws (lagged second-order) | RN+laws − RN+stats | 3 | -0.29 [-3.74, +3.17], 7/10, 0.322 | -0.44 [-4.36, +3.48], 6/9, 0.426 |
+| Sensor grouping | laws (no memory) − laws, random groups | 1 | -0.41 [-1.53, +0.71], 3/10, 0.312 | -0.33 [-1.59, +0.93], 3/9, 0.469 |

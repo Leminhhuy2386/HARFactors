@@ -4968,3 +4968,5 @@ whar_arena_v1/vortexnet/utd_mhad/split-07 | IMPORT | fingerprint c98d3cdb212a | 
 ## New runs
 2026-10-15 | NOTE | checkpoints of the 10 population models (recurrencenet, s4d, hystnet_sel_clock, quantilenet, mamba, hystnet_nomem, recstatnet, lawnet_rec, lawnet, statnet) copied from Edge_SSM/results/checkpoints into experiments/checkpoints/ (3,486 files). The IMPORT lines above say checkpoint=no for these runs because they were written before the copy; 6 runs have no checkpoint anywhere (s4d actrectut x2, mamba actrectut/unimib x4).
 2026-10-15 | NOTE | correction to the line above: 3,482 checkpoint files (.pt), not 3,486.
+20261015_164309_run_analyses | START | config 4e911ecafa6e | data 10383f130f63 | synthetic=false
+20261015_164309_run_analyses | END   | 28 files | 00:00:14 | status=completed

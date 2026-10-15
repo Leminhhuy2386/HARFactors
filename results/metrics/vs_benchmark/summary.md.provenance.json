@@ -1,0 +1,28 @@
+{
+ "produced_by": "scripts/run_analyses.py (src.evaluation.p5_summary)",
+ "command": "python src.evaluation.p5_summary",
+ "run_id": "20261015_164309_run_analyses",
+ "timestamp": "2026-10-15T16:43:19",
+ "duration_sec": 10.25,
+ "git_commit": "f6f191f-dirty",
+ "config_sha256": "4e911ecafa6ebfd0860115c337eedbbd573b781828887c6fdc65cb80cbe6ad31",
+ "config": {
+  "steps": [
+   "src.evaluation.compare_arena",
+   "src.evaluation.synthesis",
+   "src.evaluation.factor_analysis",
+   "src.evaluation.heldout_analysis",
+   "src.evaluation.vs_benchmark",
+   "src.evaluation.seeds_summary",
+   "src.evaluation.p5_summary",
+   "src.evaluation.contrasts_robustness"
+  ]
+ },
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "data/processed/manifest.json": "sha256:9352e9c400f1b9b54b4fd45206e57c594761c3c84d42a6b908f789bd335c1fd5",
+  "src/evaluation/p5_summary.py": "sha256:270c0bd942a64775a0d016e2943f71194b61a5ff83e21a07d8509059da1f92f5"
+ },
+ "output_sha256": "b33ee38176225804cb131bfe8e9c3774bd469fa3b2607b26fbeee4067e947594",
+ "synthetic": false
+}
