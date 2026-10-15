@@ -1,0 +1,19 @@
+node hpc02.local, job 86660, Thu Oct 15 16:17:09 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+differences: 48 numeric: 48
+('/data/ols/median deep F1 (level)/r2', 1.5230077731757414e-14, (0.029158696210988988, 0.029158696210988544))
+('/data/ols/best − median deep (does the model matter)/beta[4]', 1.2044917010311737e-14, (-0.05184763421923155, -0.05184763421923218))
+('/data/ols/median deep F1 (level)/p[0]', 1.1399070164849525e-14, (8.109840188162979e-17, 8.109840188163071e-17))
+('/data/ols/best − median deep (does the model matter)/p[0]', 7.200429440770246e-15, (4.263100665934191e-12, 4.2631006659342215e-12))
+('/data/ols/RF − best deep (classical margin)/p[2]', 6.151639718572457e-15, (1.0739993385237982e-05, 1.0739993385237916e-05))
+('/data/ols/RF − best deep (classical margin)/p[1]', 5.451356685943572e-15, (0.026730368305890772, 0.026730368305890626))
+('/data/ols/mean split sd of deep models (person spread)/p[2]', 4.731478742360774e-15, (0.0016498553765034348, 0.001649855376503427))
+('/data/ols/median deep F1 (level)/beta[3]', 3.868684131924796e-15, (0.4304653675897745, 0.43046536758977283))
+('/data/ols/RF − best deep (classical margin)/p[3]', 3.4227995493625858e-15, (0.07298124734975482, 0.07298124734975457))
+('/data/ols/mean split sd of deep models (person spread)/beta[3]', 2.2195727334589506e-15, (0.22508852877407193, 0.22508852877407143))
+('/data/ols/best − median deep (does the model matter)/beta[3]', 2.027519406820338e-15, (0.10267069031101139, 0.1026706903110116))
+('/data/ols/RF − best deep (classical margin)/beta[4]', 1.90258013299537e-15, (0.35012129225082944, 0.3501212922508288))
+('/data/ols/median deep F1 (level)/beta[1]', 1.6549178873274137e-15, (1.4758983952489668, 1.4758983952489693))
+('/data/ols/RF − best deep (classical margin)/beta[1]', 1.4462418248198765e-15, (3.0706428359957814, 3.070642835995786))
+('/data/ols/median deep F1 (level)/beta[4]', 1.4019367490690988e-15, (-1.5838418179170424, -1.5838418179170446))

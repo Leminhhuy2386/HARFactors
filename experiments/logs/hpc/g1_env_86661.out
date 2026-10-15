@@ -1,0 +1,37 @@
+node hpc02.local, job 86661, Thu Oct 15 16:17:39 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+versions ok
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:228: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11060). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /__w/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+devices ok
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+paper_era_guard ok
+models ok
+checkpoints ok
+2026-10-15 16:17:52,605 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:17:52,605 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:17:52,606 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:17:52,606 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:17:52,606 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:17:52,607 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:17:52,607 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:17:52,607 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:17:52,607 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:17:52,607 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:17:52,607 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:17:52,608 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:17:52,608 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:17:52,614 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:17:52,622 - whar-datasets - INFO - activity_ids from 0 to 26
+2026-10-15 16:17:52,622 - whar-datasets - INFO - subject_ids from 0 to 7
+2026-10-15 16:17:52,635 - whar-datasets - INFO - Running SamplingStep
+2026-10-15 16:17:52,636 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-15 16:17:52,637 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:17:52,637 - whar-datasets - INFO - Loading samples
+data_pipeline ok
+analyses_reproduce ok
+latex ok
+vcs ok
+wrote results/gates/G1_environment_rerun2.json verdict PASS
