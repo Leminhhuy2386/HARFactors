@@ -1,0 +1,6 @@
+node hpc02.local, job 86779, Fri Oct 16 05:27:40 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+values 235
+G6 PASS values 235 control caught True no provenance []
+unknown value ids: ['<id>']

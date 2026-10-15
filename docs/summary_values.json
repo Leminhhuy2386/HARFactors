@@ -1,0 +1,3071 @@
+[
+ {
+  "id": "H1.R",
+  "description": "H1, confirmatory (S2, macro-F1): R",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "8.19",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.R_lo",
+  "description": "H1, confirmatory (S2, macro-F1): R, 97.5 % lower bound",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "2.85",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.R_hi",
+  "description": "H1, confirmatory (S2, macro-F1): R, 97.5 % upper bound",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "16.90",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.pi_P",
+  "description": "H1, confirmatory (S2, macro-F1): pi_P (%)",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "point",
+   "pi_P"
+  ],
+  "format": "pct",
+  "printed": "82",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.pi_P_lo",
+  "description": "H1, confirmatory (S2, macro-F1): pi_P lower bound (%)",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   0
+  ],
+  "format": "pct",
+  "printed": "64",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.pi_P_hi",
+  "description": "H1, confirmatory (S2, macro-F1): pi_P upper bound (%)",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   1
+  ],
+  "format": "pct",
+  "printed": "89",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.runs",
+  "description": "H1, confirmatory (S2, macro-F1): runs",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "828",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.splits",
+  "description": "H1, confirmatory (S2, macro-F1): splits",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "n_splits"
+  ],
+  "format": "d",
+  "printed": "69",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.s2_P",
+  "description": "H1, confirmatory (S2, macro-F1): variance component P",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "127.7",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.s2_M",
+  "description": "H1, confirmatory (S2, macro-F1): variance component M",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "4.8",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.s2_MD",
+  "description": "H1, confirmatory (S2, macro-F1): variance component MD",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "4.0",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.s2_MP",
+  "description": "H1, confirmatory (S2, macro-F1): variance component MP",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "point",
+   "components",
+   "MP"
+  ],
+  "format": ".1f",
+  "printed": "6.9",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.s2_e",
+  "description": "H1, confirmatory (S2, macro-F1): variance component e",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "11.7",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.resamples_converged",
+  "description": "H1, confirmatory (S2, macro-F1): converged resamples",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "bootstrap",
+   "converged"
+  ],
+  "format": "d",
+  "printed": "1000",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.datasets",
+  "description": "H1, confirmatory (S2, macro-F1): datasets analysed",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "datasets"
+  ],
+  "format": "len",
+  "printed": "7",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.R",
+  "description": "S2, balanced accuracy: R",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "4.09",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.R_lo",
+  "description": "S2, balanced accuracy: R, 97.5 % lower bound",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "2.05",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.R_hi",
+  "description": "S2, balanced accuracy: R, 97.5 % upper bound",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "6.03",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.pi_P",
+  "description": "S2, balanced accuracy: pi_P (%)",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "point",
+   "pi_P"
+  ],
+  "format": "pct",
+  "printed": "70",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.pi_P_lo",
+  "description": "S2, balanced accuracy: pi_P lower bound (%)",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   0
+  ],
+  "format": "pct",
+  "printed": "53",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.pi_P_hi",
+  "description": "S2, balanced accuracy: pi_P upper bound (%)",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   1
+  ],
+  "format": "pct",
+  "printed": "76",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.runs",
+  "description": "S2, balanced accuracy: runs",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "828",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.splits",
+  "description": "S2, balanced accuracy: splits",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "n_splits"
+  ],
+  "format": "d",
+  "printed": "69",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.s2_P",
+  "description": "S2, balanced accuracy: variance component P",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "86.3",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.s2_M",
+  "description": "S2, balanced accuracy: variance component M",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "6.5",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.s2_MD",
+  "description": "S2, balanced accuracy: variance component MD",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "4.4",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.s2_MP",
+  "description": "S2, balanced accuracy: variance component MP",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "MP"
+  ],
+  "format": ".1f",
+  "printed": "10.1",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.s2_e",
+  "description": "S2, balanced accuracy: variance component e",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "16.6",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.resamples_converged",
+  "description": "S2, balanced accuracy: converged resamples",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "converged"
+  ],
+  "format": "d",
+  "printed": "1000",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens1_S2_balanced_accuracy.datasets",
+  "description": "S2, balanced accuracy: datasets analysed",
+  "artifact": "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+  "path": [
+   "datasets"
+  ],
+  "format": "len",
+  "printed": "7",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.R",
+  "description": "S1, macro-F1: R",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "3.26",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.R_lo",
+  "description": "S1, macro-F1: R, 97.5 % lower bound",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "1.34",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.R_hi",
+  "description": "S1, macro-F1: R, 97.5 % upper bound",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "4.47",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.pi_P",
+  "description": "S1, macro-F1: pi_P (%)",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "point",
+   "pi_P"
+  ],
+  "format": "pct",
+  "printed": "64",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.pi_P_lo",
+  "description": "S1, macro-F1: pi_P lower bound (%)",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   0
+  ],
+  "format": "pct",
+  "printed": "41",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.pi_P_hi",
+  "description": "S1, macro-F1: pi_P upper bound (%)",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   1
+  ],
+  "format": "pct",
+  "printed": "70",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.runs",
+  "description": "S1, macro-F1: runs",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "2160",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.splits",
+  "description": "S1, macro-F1: splits",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "n_splits"
+  ],
+  "format": "d",
+  "printed": "72",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.s2_P",
+  "description": "S1, macro-F1: variance component P",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "66.2",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.s2_M",
+  "description": "S1, macro-F1: variance component M",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "5.9",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.s2_MD",
+  "description": "S1, macro-F1: variance component MD",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "7.8",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.s2_MP",
+  "description": "S1, macro-F1: variance component MP",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "point",
+   "components",
+   "MP"
+  ],
+  "format": ".1f",
+  "printed": "6.7",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.s2_e",
+  "description": "S1, macro-F1: variance component e",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "17.6",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.resamples_converged",
+  "description": "S1, macro-F1: converged resamples",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "converged"
+  ],
+  "format": "d",
+  "printed": "1000",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_macro_f1.datasets",
+  "description": "S1, macro-F1: datasets analysed",
+  "artifact": "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+  "path": [
+   "datasets"
+  ],
+  "format": "len",
+  "printed": "9",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.R",
+  "description": "S1, balanced accuracy: R",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "1.89",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.R_lo",
+  "description": "S1, balanced accuracy: R, 97.5 % lower bound",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.69",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.R_hi",
+  "description": "S1, balanced accuracy: R, 97.5 % upper bound",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "2.29",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.pi_P",
+  "description": "S1, balanced accuracy: pi_P (%)",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "point",
+   "pi_P"
+  ],
+  "format": "pct",
+  "printed": "52",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.pi_P_lo",
+  "description": "S1, balanced accuracy: pi_P lower bound (%)",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   0
+  ],
+  "format": "pct",
+  "printed": "30",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.pi_P_hi",
+  "description": "S1, balanced accuracy: pi_P upper bound (%)",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   1
+  ],
+  "format": "pct",
+  "printed": "57",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.runs",
+  "description": "S1, balanced accuracy: runs",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "2160",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.splits",
+  "description": "S1, balanced accuracy: splits",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "n_splits"
+  ],
+  "format": "d",
+  "printed": "72",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.s2_P",
+  "description": "S1, balanced accuracy: variance component P",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "39.2",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.s2_M",
+  "description": "S1, balanced accuracy: variance component M",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "5.5",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.s2_MD",
+  "description": "S1, balanced accuracy: variance component MD",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "9.6",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.s2_MP",
+  "description": "S1, balanced accuracy: variance component MP",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "MP"
+  ],
+  "format": ".1f",
+  "printed": "5.5",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.s2_e",
+  "description": "S1, balanced accuracy: variance component e",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "15.3",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.resamples_converged",
+  "description": "S1, balanced accuracy: converged resamples",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "bootstrap",
+   "converged"
+  ],
+  "format": "d",
+  "printed": "1000",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens2_S1_balanced_accuracy.datasets",
+  "description": "S1, balanced accuracy: datasets analysed",
+  "artifact": "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+  "path": [
+   "datasets"
+  ],
+  "format": "len",
+  "printed": "9",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.R",
+  "description": "S1 without ActRecTut: R",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "3.93",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.R_lo",
+  "description": "S1 without ActRecTut: R, 97.5 % lower bound",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "1.63",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.R_hi",
+  "description": "S1 without ActRecTut: R, 97.5 % upper bound",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "5.80",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.pi_P",
+  "description": "S1 without ActRecTut: pi_P (%)",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "point",
+   "pi_P"
+  ],
+  "format": "pct",
+  "printed": "66",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.pi_P_lo",
+  "description": "S1 without ActRecTut: pi_P lower bound (%)",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   0
+  ],
+  "format": "pct",
+  "printed": "43",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.pi_P_hi",
+  "description": "S1 without ActRecTut: pi_P upper bound (%)",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   1
+  ],
+  "format": "pct",
+  "printed": "72",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.runs",
+  "description": "S1 without ActRecTut: runs",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "2100",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.splits",
+  "description": "S1 without ActRecTut: splits",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "n_splits"
+  ],
+  "format": "d",
+  "printed": "70",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.s2_P",
+  "description": "S1 without ActRecTut: variance component P",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "67.4",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.s2_M",
+  "description": "S1 without ActRecTut: variance component M",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "5.5",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.s2_MD",
+  "description": "S1 without ActRecTut: variance component MD",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "5.1",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.s2_MP",
+  "description": "S1 without ActRecTut: variance component MP",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "point",
+   "components",
+   "MP"
+  ],
+  "format": ".1f",
+  "printed": "6.5",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.s2_e",
+  "description": "S1 without ActRecTut: variance component e",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "17.0",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.resamples_converged",
+  "description": "S1 without ActRecTut: converged resamples",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "bootstrap",
+   "converged"
+  ],
+  "format": "d",
+  "printed": "1000",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens3_S1_without_actrectut.datasets",
+  "description": "S1 without ActRecTut: datasets analysed",
+  "artifact": "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+  "path": [
+   "datasets"
+  ],
+  "format": "len",
+  "printed": "8",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.R",
+  "description": "S3, 17 architectures: R",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "0.21",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.R_lo",
+  "description": "S3, 17 architectures: R, 97.5 % lower bound",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.06",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.R_hi",
+  "description": "S3, 17 architectures: R, 97.5 % upper bound",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "0.36",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.pi_P",
+  "description": "S3, 17 architectures: pi_P (%)",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "point",
+   "pi_P"
+  ],
+  "format": "pct",
+  "printed": "17",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.pi_P_lo",
+  "description": "S3, 17 architectures: pi_P lower bound (%)",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   0
+  ],
+  "format": "pct",
+  "printed": "6",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.pi_P_hi",
+  "description": "S3, 17 architectures: pi_P upper bound (%)",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "pi_P_interval",
+   1
+  ],
+  "format": "pct",
+  "printed": "26",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.runs",
+  "description": "S3, 17 architectures: runs",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "510",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.splits",
+  "description": "S3, 17 architectures: splits",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "n_splits"
+  ],
+  "format": "d",
+  "printed": "30",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.s2_P",
+  "description": "S3, 17 architectures: variance component P",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "37.5",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.s2_M",
+  "description": "S3, 17 architectures: variance component M",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "100.2",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.s2_MD",
+  "description": "S3, 17 architectures: variance component MD",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "51.0",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.s2_e",
+  "description": "S3, 17 architectures: variance component e",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "29.2",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.resamples_converged",
+  "description": "S3, 17 architectures: converged resamples",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "bootstrap",
+   "converged"
+  ],
+  "format": "d",
+  "printed": "1000",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "sens4_S3_macro_f1.datasets",
+  "description": "S3, 17 architectures: datasets analysed",
+  "artifact": "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+  "path": [
+   "datasets"
+  ],
+  "format": "len",
+  "printed": "4",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "H1.decision",
+  "description": "H1: pre-registered decision",
+  "artifact": "results/metrics/confirmatory/H1.json",
+  "path": [
+   "decision"
+  ],
+  "format": "s",
+  "printed": "success",
+  "produced_by": "scripts/run_confirmatory.py"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.9.mean",
+  "description": "RecurrenceNet − no memory, 9 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "without_daphnet",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+6.43",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.9.lo",
+  "description": "RecurrenceNet − no memory, 9 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "without_daphnet",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+3.07",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.9.hi",
+  "description": "RecurrenceNet − no memory, 9 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "without_daphnet",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+9.80",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.9.wins",
+  "description": "RecurrenceNet − no memory, 9 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "without_daphnet",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.9.p",
+  "description": "RecurrenceNet − no memory, 9 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "without_daphnet",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.004",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.10.mean",
+  "description": "RecurrenceNet − no memory, 10 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "all_10",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+5.95",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.10.lo",
+  "description": "RecurrenceNet − no memory, 10 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "all_10",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+2.79",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.10.hi",
+  "description": "RecurrenceNet − no memory, 10 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "all_10",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+9.10",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.10.wins",
+  "description": "RecurrenceNet − no memory, 10 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "all_10",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-hystnet_nomem.10.p",
+  "description": "RecurrenceNet − no memory, 10 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-hystnet_nomem",
+   "all_10",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.002",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.9.mean",
+  "description": "S4D − no memory, 9 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "without_daphnet",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+5.79",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.9.lo",
+  "description": "S4D − no memory, 9 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "without_daphnet",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+2.30",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.9.hi",
+  "description": "S4D − no memory, 9 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "without_daphnet",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+9.27",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.9.wins",
+  "description": "S4D − no memory, 9 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "without_daphnet",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.9.p",
+  "description": "S4D − no memory, 9 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "without_daphnet",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.004",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.10.mean",
+  "description": "S4D − no memory, 10 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "all_10",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+5.23",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.10.lo",
+  "description": "S4D − no memory, 10 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "all_10",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+1.93",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.10.hi",
+  "description": "S4D − no memory, 10 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "all_10",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+8.54",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.10.wins",
+  "description": "S4D − no memory, 10 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "all_10",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.s4d-hystnet_nomem.10.p",
+  "description": "S4D − no memory, 10 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "s4d-hystnet_nomem",
+   "all_10",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.002",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.9.mean",
+  "description": "HysteresisNet − no memory, 9 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "without_daphnet",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+5.24",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.9.lo",
+  "description": "HysteresisNet − no memory, 9 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "without_daphnet",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+2.74",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.9.hi",
+  "description": "HysteresisNet − no memory, 9 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "without_daphnet",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+7.74",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.9.wins",
+  "description": "HysteresisNet − no memory, 9 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "without_daphnet",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.9.p",
+  "description": "HysteresisNet − no memory, 9 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "without_daphnet",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.004",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.10.mean",
+  "description": "HysteresisNet − no memory, 10 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "all_10",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+4.63",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.10.lo",
+  "description": "HysteresisNet − no memory, 10 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "all_10",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+2.04",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.10.hi",
+  "description": "HysteresisNet − no memory, 10 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "all_10",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+7.22",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.10.wins",
+  "description": "HysteresisNet − no memory, 10 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "all_10",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-hystnet_nomem.10.p",
+  "description": "HysteresisNet − no memory, 10 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-hystnet_nomem",
+   "all_10",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.004",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.9.mean",
+  "description": "QuantileNet − no memory, 9 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "without_daphnet",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+4.09",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.9.lo",
+  "description": "QuantileNet − no memory, 9 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "without_daphnet",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+0.83",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.9.hi",
+  "description": "QuantileNet − no memory, 9 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "without_daphnet",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+7.34",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.9.wins",
+  "description": "QuantileNet − no memory, 9 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "without_daphnet",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "8",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.9.p",
+  "description": "QuantileNet − no memory, 9 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "without_daphnet",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.008",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.10.mean",
+  "description": "QuantileNet − no memory, 10 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "all_10",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+3.64",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.10.lo",
+  "description": "QuantileNet − no memory, 10 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "all_10",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+0.61",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.10.hi",
+  "description": "QuantileNet − no memory, 10 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "all_10",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+6.67",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.10.wins",
+  "description": "QuantileNet − no memory, 10 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "all_10",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "8",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-hystnet_nomem.10.p",
+  "description": "QuantileNet − no memory, 10 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-hystnet_nomem",
+   "all_10",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.010",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.9.mean",
+  "description": "Mamba − no memory, 9 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "without_daphnet",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+3.33",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.9.lo",
+  "description": "Mamba − no memory, 9 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "without_daphnet",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+0.45",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.9.hi",
+  "description": "Mamba − no memory, 9 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "without_daphnet",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+6.22",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.9.wins",
+  "description": "Mamba − no memory, 9 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "without_daphnet",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "8",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.9.p",
+  "description": "Mamba − no memory, 9 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "without_daphnet",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.012",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.10.mean",
+  "description": "Mamba − no memory, 10 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "all_10",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+2.85",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.10.lo",
+  "description": "Mamba − no memory, 10 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "all_10",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "+0.08",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.10.hi",
+  "description": "Mamba − no memory, 10 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "all_10",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+5.61",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.10.wins",
+  "description": "Mamba − no memory, 10 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "all_10",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "8",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-hystnet_nomem.10.p",
+  "description": "Mamba − no memory, 10 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-hystnet_nomem",
+   "all_10",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.037",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.9.mean",
+  "description": "RecurrenceNet − S4D, 9 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "without_daphnet",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+0.65",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.9.lo",
+  "description": "RecurrenceNet − S4D, 9 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "without_daphnet",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "-1.11",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.9.hi",
+  "description": "RecurrenceNet − S4D, 9 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "without_daphnet",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+2.40",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.9.wins",
+  "description": "RecurrenceNet − S4D, 9 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "without_daphnet",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.9.p",
+  "description": "RecurrenceNet − S4D, 9 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "without_daphnet",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.301",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.10.mean",
+  "description": "RecurrenceNet − S4D, 10 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "all_10",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "+0.71",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.10.lo",
+  "description": "RecurrenceNet − S4D, 10 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "all_10",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "-0.83",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.10.hi",
+  "description": "RecurrenceNet − S4D, 10 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "all_10",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+2.26",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.10.wins",
+  "description": "RecurrenceNet − S4D, 10 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "all_10",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "7",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.recurrencenet-s4d.10.p",
+  "description": "RecurrenceNet − S4D, 10 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "recurrencenet-s4d",
+   "all_10",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.193",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.9.mean",
+  "description": "HysteresisNet − S4D, 9 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "without_daphnet",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "-0.55",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.9.lo",
+  "description": "HysteresisNet − S4D, 9 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "without_daphnet",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "-2.25",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.9.hi",
+  "description": "HysteresisNet − S4D, 9 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "without_daphnet",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+1.15",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.9.wins",
+  "description": "HysteresisNet − S4D, 9 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "without_daphnet",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.9.p",
+  "description": "HysteresisNet − S4D, 9 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "without_daphnet",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.820",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.10.mean",
+  "description": "HysteresisNet − S4D, 10 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "all_10",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "-0.60",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.10.lo",
+  "description": "HysteresisNet − S4D, 10 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "all_10",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "-2.10",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.10.hi",
+  "description": "HysteresisNet − S4D, 10 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "all_10",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+0.90",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.10.wins",
+  "description": "HysteresisNet − S4D, 10 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "all_10",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.hystnet_sel_clock-s4d.10.p",
+  "description": "HysteresisNet − S4D, 10 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "hystnet_sel_clock-s4d",
+   "all_10",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.557",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.9.mean",
+  "description": "QuantileNet − S4D, 9 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "without_daphnet",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "-1.70",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.9.lo",
+  "description": "QuantileNet − S4D, 9 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "without_daphnet",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "-3.82",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.9.hi",
+  "description": "QuantileNet − S4D, 9 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "without_daphnet",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+0.42",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.9.wins",
+  "description": "QuantileNet − S4D, 9 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "without_daphnet",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.9.p",
+  "description": "QuantileNet − S4D, 9 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "without_daphnet",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.098",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.10.mean",
+  "description": "QuantileNet − S4D, 10 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "all_10",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "-1.59",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.10.lo",
+  "description": "QuantileNet − S4D, 10 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "all_10",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "-3.47",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.10.hi",
+  "description": "QuantileNet − S4D, 10 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "all_10",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "+0.28",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.10.wins",
+  "description": "QuantileNet − S4D, 10 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "all_10",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.quantilenet-s4d.10.p",
+  "description": "QuantileNet − S4D, 10 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "quantilenet-s4d",
+   "all_10",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.064",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.9.mean",
+  "description": "Mamba − S4D, 9 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "without_daphnet",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "-2.45",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.9.lo",
+  "description": "Mamba − S4D, 9 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "without_daphnet",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "-4.40",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.9.hi",
+  "description": "Mamba − S4D, 9 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "without_daphnet",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "-0.50",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.9.wins",
+  "description": "Mamba − S4D, 9 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "without_daphnet",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.9.p",
+  "description": "Mamba − S4D, 9 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "without_daphnet",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.020",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.10.mean",
+  "description": "Mamba − S4D, 10 datasets: mean",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "all_10",
+   "mean"
+  ],
+  "format": "+.2f",
+  "printed": "-2.39",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.10.lo",
+  "description": "Mamba − S4D, 10 datasets: 95 % CI low",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "all_10",
+   "lo"
+  ],
+  "format": "+.2f",
+  "printed": "-4.10",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.10.hi",
+  "description": "Mamba − S4D, 10 datasets: 95 % CI high",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "all_10",
+   "hi"
+  ],
+  "format": "+.2f",
+  "printed": "-0.67",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.10.wins",
+  "description": "Mamba − S4D, 10 datasets: datasets won",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "all_10",
+   "wins"
+  ],
+  "format": "d",
+  "printed": "1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "contrast.mamba-s4d.10.p",
+  "description": "Mamba − S4D, 10 datasets: Wilcoxon p",
+  "artifact": "results/metrics/contrasts_robustness/data.json",
+  "path": [
+   "mamba-s4d",
+   "all_10",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "= 0.010",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.contrasts_robustness)"
+ },
+ {
+  "id": "ols.rf.r2",
+  "description": "OLS over 30 datasets, RF − best deep (classical margin): R^2",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "RF − best deep (classical margin)",
+   "r2"
+  ],
+  "format": ".2f",
+  "printed": "0.55",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.rf.subjects.beta",
+  "description": "OLS, RF − best deep (classical margin): log2 subjects (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "RF − best deep (classical margin)",
+   "beta",
+   1
+  ],
+  "format": "+.1f",
+  "printed": "+3.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.rf.subjects.p",
+  "description": "OLS, RF − best deep (classical margin): log2 subjects p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "RF − best deep (classical margin)",
+   "p",
+   1
+  ],
+  "format": "p3",
+  "printed": "= 0.027",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.rf.channels.beta",
+  "description": "OLS, RF − best deep (classical margin): log2 channels (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "RF − best deep (classical margin)",
+   "beta",
+   2
+  ],
+  "format": "+.1f",
+  "printed": "+7.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.rf.channels.p",
+  "description": "OLS, RF − best deep (classical margin): log2 channels p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "RF − best deep (classical margin)",
+   "p",
+   2
+  ],
+  "format": "p3",
+  "printed": "< 0.001",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.rf.classes.beta",
+  "description": "OLS, RF − best deep (classical margin): log2 classes (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "RF − best deep (classical margin)",
+   "beta",
+   3
+  ],
+  "format": "+.1f",
+  "printed": "-2.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.rf.classes.p",
+  "description": "OLS, RF − best deep (classical margin): log2 classes p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "RF − best deep (classical margin)",
+   "p",
+   3
+  ],
+  "format": "p3",
+  "printed": "= 0.073",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.rf.samples_window.beta",
+  "description": "OLS, RF − best deep (classical margin): log2 samples/window (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "RF − best deep (classical margin)",
+   "beta",
+   4
+  ],
+  "format": "+.1f",
+  "printed": "+0.4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.rf.samples_window.p",
+  "description": "OLS, RF − best deep (classical margin): log2 samples/window p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "RF − best deep (classical margin)",
+   "p",
+   4
+  ],
+  "format": "p3",
+  "printed": "= 0.764",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.gap.r2",
+  "description": "OLS over 30 datasets, best − median deep (does the model matter): R^2",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "best − median deep (does the model matter)",
+   "r2"
+  ],
+  "format": ".2f",
+  "printed": "0.39",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.gap.subjects.beta",
+  "description": "OLS, best − median deep (does the model matter): log2 subjects (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "best − median deep (does the model matter)",
+   "beta",
+   1
+  ],
+  "format": "+.1f",
+  "printed": "-1.5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.gap.subjects.p",
+  "description": "OLS, best − median deep (does the model matter): log2 subjects p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "best − median deep (does the model matter)",
+   "p",
+   1
+  ],
+  "format": "p3",
+  "printed": "= 0.004",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.gap.channels.beta",
+  "description": "OLS, best − median deep (does the model matter): log2 channels (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "best − median deep (does the model matter)",
+   "beta",
+   2
+  ],
+  "format": "+.1f",
+  "printed": "+0.4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.gap.channels.p",
+  "description": "OLS, best − median deep (does the model matter): log2 channels p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "best − median deep (does the model matter)",
+   "p",
+   2
+  ],
+  "format": "p3",
+  "printed": "= 0.433",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.gap.classes.beta",
+  "description": "OLS, best − median deep (does the model matter): log2 classes (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "best − median deep (does the model matter)",
+   "beta",
+   3
+  ],
+  "format": "+.1f",
+  "printed": "+0.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.gap.classes.p",
+  "description": "OLS, best − median deep (does the model matter): log2 classes p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "best − median deep (does the model matter)",
+   "p",
+   3
+  ],
+  "format": "p3",
+  "printed": "= 0.818",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.gap.samples_window.beta",
+  "description": "OLS, best − median deep (does the model matter): log2 samples/window (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "best − median deep (does the model matter)",
+   "beta",
+   4
+  ],
+  "format": "+.1f",
+  "printed": "-0.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.gap.samples_window.p",
+  "description": "OLS, best − median deep (does the model matter): log2 samples/window p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "best − median deep (does the model matter)",
+   "p",
+   4
+  ],
+  "format": "p3",
+  "printed": "= 0.905",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.level.r2",
+  "description": "OLS over 30 datasets, median deep F1 (level): R^2",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "median deep F1 (level)",
+   "r2"
+  ],
+  "format": ".2f",
+  "printed": "0.03",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.level.subjects.beta",
+  "description": "OLS, median deep F1 (level): log2 subjects (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "median deep F1 (level)",
+   "beta",
+   1
+  ],
+  "format": "+.1f",
+  "printed": "+1.5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.level.subjects.p",
+  "description": "OLS, median deep F1 (level): log2 subjects p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "median deep F1 (level)",
+   "p",
+   1
+  ],
+  "format": "p3",
+  "printed": "= 0.701",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.level.channels.beta",
+  "description": "OLS, median deep F1 (level): log2 channels (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "median deep F1 (level)",
+   "beta",
+   2
+  ],
+  "format": "+.1f",
+  "printed": "+2.6",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.level.channels.p",
+  "description": "OLS, median deep F1 (level): log2 channels p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "median deep F1 (level)",
+   "p",
+   2
+  ],
+  "format": "p3",
+  "printed": "= 0.497",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.level.classes.beta",
+  "description": "OLS, median deep F1 (level): log2 classes (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "median deep F1 (level)",
+   "beta",
+   3
+  ],
+  "format": "+.1f",
+  "printed": "+0.4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.level.classes.p",
+  "description": "OLS, median deep F1 (level): log2 classes p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "median deep F1 (level)",
+   "p",
+   3
+  ],
+  "format": "p3",
+  "printed": "= 0.902",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.level.samples_window.beta",
+  "description": "OLS, median deep F1 (level): log2 samples/window (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "median deep F1 (level)",
+   "beta",
+   4
+  ],
+  "format": "+.1f",
+  "printed": "-1.6",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.level.samples_window.p",
+  "description": "OLS, median deep F1 (level): log2 samples/window p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "median deep F1 (level)",
+   "p",
+   4
+  ],
+  "format": "p3",
+  "printed": "= 0.642",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.spread.r2",
+  "description": "OLS over 30 datasets, mean split sd of deep models (person spread): R^2",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "mean split sd of deep models (person spread)",
+   "r2"
+  ],
+  "format": ".2f",
+  "printed": "0.46",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.spread.subjects.beta",
+  "description": "OLS, mean split sd of deep models (person spread): log2 subjects (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "mean split sd of deep models (person spread)",
+   "beta",
+   1
+  ],
+  "format": "+.1f",
+  "printed": "-0.4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.spread.subjects.p",
+  "description": "OLS, mean split sd of deep models (person spread): log2 subjects p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "mean split sd of deep models (person spread)",
+   "p",
+   1
+  ],
+  "format": "p3",
+  "printed": "= 0.542",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.spread.channels.beta",
+  "description": "OLS, mean split sd of deep models (person spread): log2 channels (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "mean split sd of deep models (person spread)",
+   "beta",
+   2
+  ],
+  "format": "+.1f",
+  "printed": "+2.4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.spread.channels.p",
+  "description": "OLS, mean split sd of deep models (person spread): log2 channels p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "mean split sd of deep models (person spread)",
+   "p",
+   2
+  ],
+  "format": "p3",
+  "printed": "= 0.002",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.spread.classes.beta",
+  "description": "OLS, mean split sd of deep models (person spread): log2 classes (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "mean split sd of deep models (person spread)",
+   "beta",
+   3
+  ],
+  "format": "+.1f",
+  "printed": "+0.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.spread.classes.p",
+  "description": "OLS, mean split sd of deep models (person spread): log2 classes p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "mean split sd of deep models (person spread)",
+   "p",
+   3
+  ],
+  "format": "p3",
+  "printed": "= 0.723",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.spread.samples_window.beta",
+  "description": "OLS, mean split sd of deep models (person spread): log2 samples/window (per sd)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "mean split sd of deep models (person spread)",
+   "beta",
+   4
+  ],
+  "format": "+.1f",
+  "printed": "+0.8",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "ols.spread.samples_window.p",
+  "description": "OLS, mean split sd of deep models (person spread): log2 samples/window p",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "data",
+   "ols",
+   "mean split sd of deep models (person spread)",
+   "p",
+   4
+  ],
+  "format": "p3",
+  "printed": "= 0.209",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "exploratory_ss.P",
+  "description": "exploratory S1 sums of squares: test person (split), share within a dataset (%)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "variance",
+   "ss",
+   "test person (split)"
+  ],
+  "format": "within_share",
+  "printed": "61.3",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "exploratory_ss.M",
+  "description": "exploratory S1 sums of squares: model, share within a dataset (%)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "variance",
+   "ss",
+   "model"
+  ],
+  "format": "within_share",
+  "printed": "6.4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "exploratory_ss.MD",
+  "description": "exploratory S1 sums of squares: model x dataset, share within a dataset (%)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "variance",
+   "ss",
+   "model x dataset"
+  ],
+  "format": "within_share",
+  "printed": "7.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "exploratory_ss.MP",
+  "description": "exploratory S1 sums of squares: model x person, share within a dataset (%)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "variance",
+   "ss",
+   "model x person"
+  ],
+  "format": "within_share",
+  "printed": "10.9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "exploratory_ss.e",
+  "description": "exploratory S1 sums of squares: seed, share within a dataset (%)",
+  "artifact": "results/metrics/factors/data.json",
+  "path": [
+   "variance",
+   "ss",
+   "seed"
+  ],
+  "format": "within_share",
+  "printed": "14.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.heldout_analysis)"
+ },
+ {
+  "id": "subjects_per_split.min",
+  "description": "fewest test subjects in a split (13 cached datasets)",
+  "artifact": "data/processed/harness_splits.json",
+  "path": [
+   "datasets"
+  ],
+  "format": "subj_min",
+  "printed": "1",
+  "produced_by": "scripts/export_splits.py"
+ },
+ {
+  "id": "subjects_per_split.max",
+  "description": "most test subjects in a split (13 cached datasets)",
+  "artifact": "data/processed/harness_splits.json",
+  "path": [
+   "datasets"
+  ],
+  "format": "subj_max",
+  "printed": "4",
+  "produced_by": "scripts/export_splits.py"
+ },
+ {
+  "id": "g3.rf.utd_mhad.figure6",
+  "description": "G3 anchor: Random Forest Figure 6 value, utd_mhad",
+  "artifact": "results/gates/G3_baseline.json",
+  "path": [
+   "observed_value",
+   "anchor_random_forest",
+   0,
+   "figure6"
+  ],
+  "format": ".2f",
+  "printed": "51.20",
+  "produced_by": "scripts/check_baseline_anchor.py"
+ },
+ {
+  "id": "g3.rf.utd_mhad.rerun",
+  "description": "G3 anchor: Random Forest re-run mean, utd_mhad",
+  "artifact": "results/gates/G3_baseline.json",
+  "path": [
+   "observed_value",
+   "anchor_random_forest",
+   0,
+   "rerun_mean"
+  ],
+  "format": ".2f",
+  "printed": "51.20",
+  "produced_by": "scripts/check_baseline_anchor.py"
+ },
+ {
+  "id": "g3.rf.uci_har.figure6",
+  "description": "G3 anchor: Random Forest Figure 6 value, uci_har",
+  "artifact": "results/gates/G3_baseline.json",
+  "path": [
+   "observed_value",
+   "anchor_random_forest",
+   1,
+   "figure6"
+  ],
+  "format": ".2f",
+  "printed": "84.69",
+  "produced_by": "scripts/check_baseline_anchor.py"
+ },
+ {
+  "id": "g3.rf.uci_har.rerun",
+  "description": "G3 anchor: Random Forest re-run mean, uci_har",
+  "artifact": "results/gates/G3_baseline.json",
+  "path": [
+   "observed_value",
+   "anchor_random_forest",
+   1,
+   "rerun_mean"
+  ],
+  "format": ".2f",
+  "printed": "84.69",
+  "produced_by": "scripts/check_baseline_anchor.py"
+ },
+ {
+  "id": "g3.rf.unimib_shar.figure6",
+  "description": "G3 anchor: Random Forest Figure 6 value, unimib_shar",
+  "artifact": "results/gates/G3_baseline.json",
+  "path": [
+   "observed_value",
+   "anchor_random_forest",
+   2,
+   "figure6"
+  ],
+  "format": ".2f",
+  "printed": "44.49",
+  "produced_by": "scripts/check_baseline_anchor.py"
+ },
+ {
+  "id": "g3.rf.unimib_shar.rerun",
+  "description": "G3 anchor: Random Forest re-run mean, unimib_shar",
+  "artifact": "results/gates/G3_baseline.json",
+  "path": [
+   "observed_value",
+   "anchor_random_forest",
+   2,
+   "rerun_mean"
+  ],
+  "format": ".2f",
+  "printed": "44.49",
+  "produced_by": "scripts/check_baseline_anchor.py"
+ },
+ {
+  "id": "g3.rf.actrectut_gestures.figure6",
+  "description": "G3 anchor: Random Forest Figure 6 value, actrectut_gestures",
+  "artifact": "results/gates/G3_baseline.json",
+  "path": [
+   "observed_value",
+   "anchor_random_forest",
+   3,
+   "figure6"
+  ],
+  "format": ".2f",
+  "printed": "41.89",
+  "produced_by": "scripts/check_baseline_anchor.py"
+ },
+ {
+  "id": "g3.rf.actrectut_gestures.rerun",
+  "description": "G3 anchor: Random Forest re-run mean, actrectut_gestures",
+  "artifact": "results/gates/G3_baseline.json",
+  "path": [
+   "observed_value",
+   "anchor_random_forest",
+   3,
+   "rerun_mean"
+  ],
+  "format": ".2f",
+  "printed": "41.89",
+  "produced_by": "scripts/check_baseline_anchor.py"
+ },
+ {
+  "id": "g5.verdict",
+  "description": "G5 verdict",
+  "artifact": "results/gates/G5_results_authenticity_rerun2.json",
+  "path": [
+   "verdict"
+  ],
+  "format": "s",
+  "printed": "PASS",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "g5.reexecuted",
+  "description": "G5: runs re-executed from checkpoints (gating)",
+  "artifact": "results/gates/G5_results_authenticity_rerun2.json",
+  "path": [
+   "observed_value",
+   "L3_reexecution",
+   "evaluated"
+  ],
+  "format": "d",
+  "printed": "408",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "g5.exact",
+  "description": "G5: re-executed runs equal to the stored metrics exactly",
+  "artifact": "results/gates/G5_results_authenticity_rerun2.json",
+  "path": [
+   "observed_value",
+   "L3_reexecution",
+   "exact_match"
+  ],
+  "format": "d",
+  "printed": "373",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "g5.s2",
+  "description": "G5: S2 runs re-executed",
+  "artifact": "results/gates/G5_results_authenticity_rerun2.json",
+  "path": [
+   "observed_value",
+   "L3_reexecution",
+   "s2_runs_reexecuted"
+  ],
+  "format": "d",
+  "printed": "360",
+  "produced_by": "scripts/verify_results.py"
+ }
+]
