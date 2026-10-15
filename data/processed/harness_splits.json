@@ -1,7 +1,7 @@
 {
  "produced_by": "scripts/export_splits.py",
- "timestamp": "2026-10-15T16:21:18",
- "datasets_dir": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era",
+ "timestamp": "2026-10-16T06:47:34",
+ "datasets_dir": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era",
  "whar_code": {
   "whar-datasets": "144e006",
   "whar-models": "9b65004",
@@ -10,7 +10,7 @@
  "grouping_key": "subject_id (LKSOSplitter: subjects sorted, subject i -> fold i mod min(k, #subjects))",
  "datasets": {
   "actrectut_gestures": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/actrectut_gestures",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/actrectut_gestures",
    "subjects": 2,
    "windows": 798,
    "sessions": 572,
@@ -38,7 +38,7 @@
    }
   },
   "daphnet": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/daphnet",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/daphnet",
    "subjects": 10,
    "windows": 11160,
    "sessions": 509,
@@ -138,7 +138,7 @@
    }
   },
   "dsads": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/dsads",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/dsads",
    "subjects": 8,
    "windows": 30096,
    "sessions": 152,
@@ -220,7 +220,7 @@
    }
   },
   "hapt": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/hapt",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/hapt",
    "subjects": 30,
    "windows": 9056,
    "sessions": 1214,
@@ -340,7 +340,7 @@
    }
   },
   "opportunity": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/opportunity",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/opportunity",
    "subjects": 4,
    "windows": 10550,
    "sessions": 3653,
@@ -385,8 +385,99 @@
     }
    }
   },
+  "pamap2": {
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/pamap2",
+   "subjects": 9,
+   "windows": 12786,
+   "sessions": 108,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0
+     ],
+     "train_size": 8912,
+     "val_size": 2228,
+     "test_size": 1646
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1
+     ],
+     "train_size": 8842,
+     "val_size": 2210,
+     "test_size": 1734
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2
+     ],
+     "train_size": 9313,
+     "val_size": 2328,
+     "test_size": 1145
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3
+     ],
+     "train_size": 9011,
+     "val_size": 2252,
+     "test_size": 1523
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4
+     ],
+     "train_size": 8793,
+     "val_size": 2198,
+     "test_size": 1795
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5
+     ],
+     "train_size": 8912,
+     "val_size": 2228,
+     "test_size": 1646
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6
+     ],
+     "train_size": 9005,
+     "val_size": 2251,
+     "test_size": 1530
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7
+     ],
+     "train_size": 8848,
+     "val_size": 2212,
+     "test_size": 1726
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8
+     ],
+     "train_size": 10196,
+     "val_size": 2549,
+     "test_size": 41
+    }
+   }
+  },
   "sad": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/sad",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/sad",
    "subjects": 10,
    "windows": 8260,
    "sessions": 70,
@@ -486,7 +577,7 @@
    }
   },
   "uca_ehar": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/uca_ehar",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/uca_ehar",
    "subjects": 20,
    "windows": 16554,
    "sessions": 2340,
@@ -596,7 +687,7 @@
    }
   },
   "uci_har": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/uci_har",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/uci_har",
    "subjects": 30,
    "windows": 8188,
    "sessions": 400,
@@ -715,8 +806,117 @@
     }
    }
   },
+  "uma_fall": {
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/uma_fall",
+   "subjects": 19,
+   "windows": 6240,
+   "sessions": 746,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0,
+      10
+     ],
+     "train_size": 4639,
+     "val_size": 1159,
+     "test_size": 442
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1,
+      11
+     ],
+     "train_size": 4451,
+     "val_size": 1112,
+     "test_size": 677
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2,
+      12
+     ],
+     "train_size": 4733,
+     "val_size": 1183,
+     "test_size": 324
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3,
+      13
+     ],
+     "train_size": 4493,
+     "val_size": 1123,
+     "test_size": 624
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4,
+      14
+     ],
+     "train_size": 4466,
+     "val_size": 1116,
+     "test_size": 658
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5,
+      15
+     ],
+     "train_size": 4602,
+     "val_size": 1150,
+     "test_size": 488
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6,
+      16
+     ],
+     "train_size": 4644,
+     "val_size": 1160,
+     "test_size": 436
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7,
+      17
+     ],
+     "train_size": 3628,
+     "val_size": 906,
+     "test_size": 1706
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8,
+      18
+     ],
+     "train_size": 4421,
+     "val_size": 1105,
+     "test_size": 714
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9
+     ],
+     "train_size": 4856,
+     "val_size": 1213,
+     "test_size": 171
+    }
+   }
+  },
   "unimib_shar": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/unimib_shar",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/unimib_shar",
    "subjects": 30,
    "windows": 7195,
    "sessions": 1980,
@@ -836,7 +1036,7 @@
    }
   },
   "up_fall": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/up_fall",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/up_fall",
    "subjects": 17,
    "windows": 8974,
    "sessions": 559,
@@ -943,7 +1143,7 @@
    }
   },
   "utd_mhad": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/utd_mhad",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/utd_mhad",
    "subjects": 8,
    "windows": 783,
    "sessions": 861,
@@ -1024,8 +1224,120 @@
     }
    }
   },
+  "w_har": {
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/w_har",
+   "subjects": 22,
+   "windows": 5092,
+   "sessions": 912,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0,
+      10,
+      20
+     ],
+     "train_size": 2940,
+     "val_size": 734,
+     "test_size": 1418
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1,
+      11,
+      21
+     ],
+     "train_size": 3343,
+     "val_size": 835,
+     "test_size": 914
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2,
+      12
+     ],
+     "train_size": 3917,
+     "val_size": 979,
+     "test_size": 196
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3,
+      13
+     ],
+     "train_size": 3583,
+     "val_size": 895,
+     "test_size": 614
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4,
+      14
+     ],
+     "train_size": 3818,
+     "val_size": 954,
+     "test_size": 320
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5,
+      15
+     ],
+     "train_size": 3726,
+     "val_size": 931,
+     "test_size": 435
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6,
+      16
+     ],
+     "train_size": 3705,
+     "val_size": 926,
+     "test_size": 461
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7,
+      17
+     ],
+     "train_size": 3956,
+     "val_size": 988,
+     "test_size": 148
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8,
+      18
+     ],
+     "train_size": 3874,
+     "val_size": 968,
+     "test_size": 250
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9,
+      19
+     ],
+     "train_size": 3805,
+     "val_size": 951,
+     "test_size": 336
+    }
+   }
+  },
   "wear": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/wear",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/wear",
    "subjects": 24,
    "windows": 26739,
    "sessions": 437,
@@ -1139,7 +1451,7 @@
    }
   },
   "wisdm": {
-   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/wisdm",
+   "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/wisdm",
    "subjects": 36,
    "windows": 34097,
    "sessions": 179,
@@ -1265,5 +1577,5 @@
    }
   }
  },
- "duration_sec": 9.0
+ "duration_sec": 11.3
 }

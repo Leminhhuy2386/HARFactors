@@ -1120,7 +1120,17 @@
        "test_size": 1646
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0
+      ],
+      "train_size": 8912,
+      "val_size": 2228,
+      "test_size": 1646
+     },
+     "harness_matches_stored": true
     },
     "split-01": {
      "stored_runs": 12,
@@ -1132,7 +1142,17 @@
        "test_size": 1734
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1
+      ],
+      "train_size": 8842,
+      "val_size": 2210,
+      "test_size": 1734
+     },
+     "harness_matches_stored": true
     },
     "split-02": {
      "stored_runs": 12,
@@ -1144,7 +1164,17 @@
        "test_size": 1145
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2
+      ],
+      "train_size": 9313,
+      "val_size": 2328,
+      "test_size": 1145
+     },
+     "harness_matches_stored": true
     },
     "split-03": {
      "stored_runs": 12,
@@ -1156,7 +1186,17 @@
        "test_size": 1523
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3
+      ],
+      "train_size": 9011,
+      "val_size": 2252,
+      "test_size": 1523
+     },
+     "harness_matches_stored": true
     },
     "split-04": {
      "stored_runs": 12,
@@ -1168,7 +1208,17 @@
        "test_size": 1795
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4
+      ],
+      "train_size": 8793,
+      "val_size": 2198,
+      "test_size": 1795
+     },
+     "harness_matches_stored": true
     },
     "split-05": {
      "stored_runs": 12,
@@ -1180,7 +1230,17 @@
        "test_size": 1646
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5
+      ],
+      "train_size": 8912,
+      "val_size": 2228,
+      "test_size": 1646
+     },
+     "harness_matches_stored": true
     },
     "split-06": {
      "stored_runs": 12,
@@ -1192,7 +1252,17 @@
        "test_size": 1530
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6
+      ],
+      "train_size": 9005,
+      "val_size": 2251,
+      "test_size": 1530
+     },
+     "harness_matches_stored": true
     },
     "split-07": {
      "stored_runs": 12,
@@ -1204,7 +1274,17 @@
        "test_size": 1726
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7
+      ],
+      "train_size": 8848,
+      "val_size": 2212,
+      "test_size": 1726
+     },
+     "harness_matches_stored": true
     },
     "split-08": {
      "stored_runs": 12,
@@ -1216,11 +1296,21 @@
        "test_size": 41
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8
+      ],
+      "train_size": 10196,
+      "val_size": 2549,
+      "test_size": 41
+     },
+     "harness_matches_stored": true
     }
    },
-   "subjects": null,
-   "cache_on_this_machine": false
+   "subjects": 9,
+   "cache_on_this_machine": true
   },
   "sad": {
    "splits": {
@@ -1942,7 +2032,18 @@
        "test_size": 442
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0,
+       10
+      ],
+      "train_size": 4639,
+      "val_size": 1159,
+      "test_size": 442
+     },
+     "harness_matches_stored": true
     },
     "split-01": {
      "stored_runs": 12,
@@ -1954,7 +2055,18 @@
        "test_size": 677
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1,
+       11
+      ],
+      "train_size": 4451,
+      "val_size": 1112,
+      "test_size": 677
+     },
+     "harness_matches_stored": true
     },
     "split-02": {
      "stored_runs": 12,
@@ -1966,7 +2078,18 @@
        "test_size": 324
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2,
+       12
+      ],
+      "train_size": 4733,
+      "val_size": 1183,
+      "test_size": 324
+     },
+     "harness_matches_stored": true
     },
     "split-03": {
      "stored_runs": 12,
@@ -1978,7 +2101,18 @@
        "test_size": 624
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3,
+       13
+      ],
+      "train_size": 4493,
+      "val_size": 1123,
+      "test_size": 624
+     },
+     "harness_matches_stored": true
     },
     "split-04": {
      "stored_runs": 12,
@@ -1990,7 +2124,18 @@
        "test_size": 658
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4,
+       14
+      ],
+      "train_size": 4466,
+      "val_size": 1116,
+      "test_size": 658
+     },
+     "harness_matches_stored": true
     },
     "split-05": {
      "stored_runs": 12,
@@ -2002,7 +2147,18 @@
        "test_size": 488
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5,
+       15
+      ],
+      "train_size": 4602,
+      "val_size": 1150,
+      "test_size": 488
+     },
+     "harness_matches_stored": true
     },
     "split-06": {
      "stored_runs": 12,
@@ -2014,7 +2170,18 @@
        "test_size": 436
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6,
+       16
+      ],
+      "train_size": 4644,
+      "val_size": 1160,
+      "test_size": 436
+     },
+     "harness_matches_stored": true
     },
     "split-07": {
      "stored_runs": 12,
@@ -2026,7 +2193,18 @@
        "test_size": 1706
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7,
+       17
+      ],
+      "train_size": 3628,
+      "val_size": 906,
+      "test_size": 1706
+     },
+     "harness_matches_stored": true
     },
     "split-08": {
      "stored_runs": 12,
@@ -2038,7 +2216,18 @@
        "test_size": 714
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8,
+       18
+      ],
+      "train_size": 4421,
+      "val_size": 1105,
+      "test_size": 714
+     },
+     "harness_matches_stored": true
     },
     "split-09": {
      "stored_runs": 12,
@@ -2050,11 +2239,21 @@
        "test_size": 171
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9
+      ],
+      "train_size": 4856,
+      "val_size": 1213,
+      "test_size": 171
+     },
+     "harness_matches_stored": true
     }
    },
-   "subjects": null,
-   "cache_on_this_machine": false
+   "subjects": 19,
+   "cache_on_this_machine": true
   },
   "unimib_shar": {
    "splits": {
@@ -2855,7 +3054,19 @@
        "test_size": 1418
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0,
+       10,
+       20
+      ],
+      "train_size": 2940,
+      "val_size": 734,
+      "test_size": 1418
+     },
+     "harness_matches_stored": true
     },
     "split-01": {
      "stored_runs": 12,
@@ -2867,7 +3078,19 @@
        "test_size": 914
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1,
+       11,
+       21
+      ],
+      "train_size": 3343,
+      "val_size": 835,
+      "test_size": 914
+     },
+     "harness_matches_stored": true
     },
     "split-02": {
      "stored_runs": 12,
@@ -2879,7 +3102,18 @@
        "test_size": 196
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2,
+       12
+      ],
+      "train_size": 3917,
+      "val_size": 979,
+      "test_size": 196
+     },
+     "harness_matches_stored": true
     },
     "split-03": {
      "stored_runs": 12,
@@ -2891,7 +3125,18 @@
        "test_size": 614
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3,
+       13
+      ],
+      "train_size": 3583,
+      "val_size": 895,
+      "test_size": 614
+     },
+     "harness_matches_stored": true
     },
     "split-04": {
      "stored_runs": 12,
@@ -2903,7 +3148,18 @@
        "test_size": 320
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4,
+       14
+      ],
+      "train_size": 3818,
+      "val_size": 954,
+      "test_size": 320
+     },
+     "harness_matches_stored": true
     },
     "split-05": {
      "stored_runs": 12,
@@ -2915,7 +3171,18 @@
        "test_size": 435
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5,
+       15
+      ],
+      "train_size": 3726,
+      "val_size": 931,
+      "test_size": 435
+     },
+     "harness_matches_stored": true
     },
     "split-06": {
      "stored_runs": 12,
@@ -2927,7 +3194,18 @@
        "test_size": 461
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6,
+       16
+      ],
+      "train_size": 3705,
+      "val_size": 926,
+      "test_size": 461
+     },
+     "harness_matches_stored": true
     },
     "split-07": {
      "stored_runs": 12,
@@ -2939,7 +3217,18 @@
        "test_size": 148
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7,
+       17
+      ],
+      "train_size": 3956,
+      "val_size": 988,
+      "test_size": 148
+     },
+     "harness_matches_stored": true
     },
     "split-08": {
      "stored_runs": 12,
@@ -2951,7 +3240,18 @@
        "test_size": 250
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8,
+       18
+      ],
+      "train_size": 3874,
+      "val_size": 968,
+      "test_size": 250
+     },
+     "harness_matches_stored": true
     },
     "split-09": {
      "stored_runs": 12,
@@ -2963,11 +3263,22 @@
        "test_size": 336
       }
      ],
-     "stored_runs_agree": true
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9,
+       19
+      ],
+      "train_size": 3805,
+      "val_size": 951,
+      "test_size": 336
+     },
+     "harness_matches_stored": true
     }
    },
-   "subjects": null,
-   "cache_on_this_machine": false
+   "subjects": 22,
+   "cache_on_this_machine": true
   },
   "wear": {
    "splits": {
