@@ -1,5 +1,65 @@
 # Run report: HARFactors
 
+## Final state (2026-10-16, end of this run)
+
+Final verdict of stage 08: **`NOT_READY_FOR_SUBMISSION`** (`docs/review_report_iter3.md`). The science is done and
+verified. What blocks submission is listed under § Open items.
+
+### Gates (latest file of each; earlier files kept and never edited)
+
+| Gate | Verdict | File | Note |
+|---|---|---|---|
+| G1 environment | PASS | G1_environment_rerun2.json | Tolerance changed after the first run (line endings, last-digit floats), declared. The first run and rerun1 FAILed |
+| G2 data | PASS | G2_data.json | S1/S2/S3 complete; ActRecTut sizes equal the authors' files; UTD-MHAD 861 sequences |
+| G3 baseline | PASS | G3_baseline.json | The Random Forest re-run equals Figure 6 to rounding |
+| G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
+| G5 authenticity | PASS | G5_results_authenticity_rerun2.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls. The first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
+| G6 traceability | PASS | G6_traceability_rerun1.json | 239 values re-derive; the tampering control was caught |
+| G7 manuscript | PASS | G7_compile_citations_rerun2.json | 3 pages in the drafting class, 0 problems |
+
+### Results
+
+- **H1 (pre-registered):** success.
+  - S2, 828 runs on 7 held-out datasets: R = 8.19 [2.85, 16.90] (97.5 %); pi_P = 82 % [64, 89].
+  - Secondary criterion (pi_P lower bound ≥ 40 %) met.
+- **Sensitivity analyses:**
+
+  | Analysis | R | Interval |
+  |---|---|---|
+  | S2, balanced accuracy | 4.09 | [2.05, 6.03] |
+  | S1, macro-F1 | 3.26 | [1.34, 4.47] |
+  | S1, balanced accuracy | 1.89 | [0.69, 2.29], includes 1 |
+  | S1 without ActRecTut | 3.93 | [1.63, 5.80] |
+  | **S3, 17 WHAR architectures** | **R' = 0.21** | **[0.06, 0.36]: the network dominates** |
+
+- **Exploratory:**
+  - memory vs none: S4D +5.79 [+2.30, +9.27], 9/9 datasets;
+  - Mamba − S4D: −2.45;
+  - Random Forest margin vs channel count: +7.1 per sd (p < 0.001).
+- Every number is in `docs/summary.md` / `docs/summary_values.json`. The manuscript prints no other.
+
+### Open items (the user's decisions)
+
+1. **Label-shuffle control** (mandatory check 20). It needs training; the user ruled training out on 2026-10-15. It is
+   disclosed in Limitations. If approved: stage 04, then 05 and 06 again.
+2. **Figure 6 spot check against the paper** (check 13). Download arXiv:2606.13194 on the PC (the brief is in the
+   session of 2026-10-16) and confirm two cells.
+3. **Re-execution of the remaining S2 runs** (check 16; 468 runs).
+   - pamap2, uma_fall and w_har need paper-era caches added to HAR (the user's approval).
+   - usc_had needs a cache built as the stored runs were (unsorted parser).
+4. **Submission formalities:**
+   - the author block;
+   - `IEEE_lsens.cls` in place of IEEEtran [journal,9pt], then check the 4-page limit;
+   - consider the Sensors Letters scope risk (data-analysis papers may be declined without review).
+5. **dsads:** on the HPC cache its checkpoints score at chance. Its runs (in S1) rest on their records.
+
+### Copy back to the PC
+
+The HPC copy is now the working copy: git repository, environment, gates, results.
+- The PC copy has none of the 2026-10-15/16 changes.
+- Copy the HPC project back as a whole (it is a git repository; e.g. clone it), rather than file by file.
+- Do not edit the PC copy in the meantime.
+
 **State on 2026-10-14:** split off from Edge_SSM with its runs and analyses, then restructured to
 `agents/00_project_structure.md`. No gate written yet. Resume at `agents/02_plan.md`: pre-register the
 confirmatory analyses before running any new one (see `agents/00.md` § Project status).

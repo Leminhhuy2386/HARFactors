@@ -1,0 +1,29 @@
+{
+ "gate": "G7_compile_citations",
+ "stage": "07_paper",
+ "timestamp": "2026-10-16T05:36:13",
+ "check": "the manuscript compiles; citations, references and numbers check out",
+ "reference_value": null,
+ "reference_source": "paper/references_verified.json, docs/summary_values.json",
+ "observed_value": {
+  "latexmk_exit_code": 0,
+  "pages": 3,
+  "latex_warnings": [],
+  "audit_manuscript_exit": 0,
+  "audit_problems": [],
+  "class": "IEEEtran [journal,9pt] (substitute for IEEE_lsens.cls; G1)"
+ },
+ "tolerance": "latexmk exit 0; zero undefined references and citations; every \\cite in references.bib; every bib entry verified with a matching title; every number in summary_values.json or a declared design constant; at most 4 pages (IEEE Sensors Letters)",
+ "verdict": "PASS",
+ "evidence": [
+  "paper/manuscript.tex",
+  "paper/manuscript.pdf",
+  "paper/manuscript.log",
+  "paper/references.bib",
+  "paper/references_verified.json",
+  "scripts/audit.py",
+  "scripts/check_manuscript.py"
+ ],
+ "notes": "The page count is for the drafting class; IEEE_lsens.cls must replace it before submission.",
+ "rerun_reason": "Review iteration 2 revised the abstract and the limitations (interval scope)"
+}

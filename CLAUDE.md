@@ -4,17 +4,31 @@ Paper project for **IEEE Sensors Letters**: what drives wearable-HAR accuracy un
 answer so far: who is tested matters far more than the architecture. Split off from `D:\Projects\Edge_SSM` on
 2026-10-14 and self-contained. The only outside resource is the shared WHAR data in `D:\Projects\HAR`.
 
-## Current state (handoff of 2026-10-15): read this first
+## Current state (handoff of 2026-10-16): read this first
 
-- **What exists.** Imported from Edge_SSM: the 2,460-run population (10 models × 10 datasets × 3 seeds) with its
-  checkpoints (added 2026-10-15, ledger note), the exploratory factor analysis and its figures. Everything is
-  **unverified until gate G5**. No gate file exists yet.
+- **Pipeline run to stage 08 on the HPC copy (2026-10-15/16).** All gates G1-G7 PASS; the final review verdict is
+  **NOT_READY_FOR_SUBMISSION**. Details: `RUN_REPORT.md` § Final state, and `docs/review_report_iter3.md`.
+  - H1 (pre-registered): **success**. R = 8.19 [2.85, 16.90] on 828 held-out runs.
+  - **S3 reversal:** across the 17 WHAR architectures, R' = 0.21.
+  - Manuscript: `paper/manuscript.tex`, rendered from `paper/manuscript_src.tex` by `scripts/render_manuscript.py`.
+    Never hand-edit numbers.
+  - Open items:
+    - label-shuffle control (needs training; the user's decision);
+    - two Figure 6 cells to check against the paper PDF;
+    - re-execution of the 468 S2 runs without a cache on the HPC;
+    - the author block;
+    - `IEEE_lsens.cls`, which must be fetched on the PC.
+- **What exists (history).** Imported from Edge_SSM:
+  - the 2,460-run population (10 models × 10 datasets × 3 seeds) with its checkpoints;
+  - the exploratory factor analysis and its figures.
+
+  These were verified at G5 (rerun 2) where re-executable.
 - **Audited 2026-10-15** (`RUN_REPORT.md` § Audit):
   - independent: 0 accesses to other projects;
   - HAR data unchanged;
   - 47/47 required artifacts present;
   - `scripts/run_analyses.py` reproduces every number byte for byte.
-- **Next step: stage 02** (`agents/02_plan.md`).
+- **Stage 02 (done):**
   - **Pre-registered on 2026-10-15** (`docs/preregistration.md`; frozen; sha256 in `RUN_REPORT.md`).
     - H1 is the only confirmatory hypothesis, tested on the 948 held-out runs.
     - There is no new training.
@@ -36,7 +50,7 @@ answer so far: who is tested matters far more than the architecture. Split off f
 - A copy of this project lives at `/work/huy.leminh/code/Dr.Huy/HAR/HARFactors` (login `ssh hpc-gw`, Slurm).
   The shared data mirror is `/work/huy.leminh/code/Dr.Huy/HAR`: the 13 paper-era caches (the 10 development datasets
   among them) and the raw files of all 30 WHAR datasets.
-- **The environment there is not installed yet** (2026-10-15: upload only). Jobs run on the compute nodes
+- **The environment is installed** (2026-10-15, `scripts/hpc/setup.sh` with hash-checked local wheels). Jobs run on the compute nodes
   (hpc21-24 GPU, dgx A100, hpc01-20 CPU). `hpc-gw` is for Claude Code and internet access only.
 - Read `docs/hpc.md` first:
   - one-time `bash scripts/hpc/setup.sh` on the login node;
