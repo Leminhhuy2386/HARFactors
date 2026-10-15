@@ -15,7 +15,7 @@ verified. What blocks submission is listed under § Open items.
 | G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
 | G5 authenticity | PASS | G5_results_authenticity_rerun2.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls. The first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
 | G6 traceability | PASS | G6_traceability_rerun1.json | 239 values re-derive; the tampering control was caught |
-| G7 manuscript | PASS | G7_compile_citations_rerun2.json | 3 pages in the drafting class, 0 problems |
+| G7 manuscript | PASS | G7_compile_citations_rerun3.json | Official IEEE_lsens.cls (2023): 3 pages, 2 figures, abstract 140 words, 0 problems |
 
 ### Results
 
@@ -42,15 +42,20 @@ verified. What blocks submission is listed under § Open items.
 
 1. **Label-shuffle control** (mandatory check 20). It needs training; the user ruled training out on 2026-10-15. It is
    disclosed in Limitations. If approved: stage 04, then 05 and 06 again.
-2. **Figure 6 spot check against the paper** (check 13). Download arXiv:2606.13194 on the PC (the brief is in the
-   session of 2026-10-16) and confirm two cells.
+2. ~~Figure 6 spot check~~: **resolved 2026-10-16.** Four cells match the paper
+   (`docs/sources/figure6_spot_checks.json`, `docs/review_addendum_2026-10-16.md`).
 3. **Re-execution of the remaining S2 runs** (check 16; 468 runs).
    - pamap2, uma_fall and w_har need paper-era caches added to HAR (the user's approval).
    - usc_had needs a cache built as the stored runs were (unsorted parser).
 4. **Submission formalities:**
-   - the author block;
-   - `IEEE_lsens.cls` in place of IEEEtran [journal,9pt], then check the 4-page limit;
-   - consider the Sensors Letters scope risk (data-analysis papers may be declined without review).
+   - the author block and affiliations;
+   - the subject category ("Sensor Applications" set, to be confirmed);
+   - the graphical abstract (Fig. 1, replaceable);
+   - at submission: 2 suggested reviewers, ORCID and the EDICS category;
+   - the Sensors Letters scope risk (data-analysis papers may be declined without review).
+   - `IEEE_lsens.cls` is **in place since 2026-10-16** (G7 rerun3).
+   - PC downloads: `/work/huy.leminh/.cache/harfactors_scratch/pc_downloads/2026-10-16/` (36 files, SOURCES.txt).
+     They stay outside the project (copyright).
 5. **dsads:** on the HPC cache its checkpoints score at chance. Its runs (in S1) rest on their records.
 
 ### Copy back to the PC

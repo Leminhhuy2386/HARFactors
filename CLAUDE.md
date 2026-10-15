@@ -14,10 +14,11 @@ answer so far: who is tested matters far more than the architecture. Split off f
     Never hand-edit numbers.
   - Open items:
     - label-shuffle control (needs training; the user's decision);
-    - two Figure 6 cells to check against the paper PDF;
+    - (two Figure 6 cells: done 2026-10-16);
     - re-execution of the 468 S2 runs without a cache on the HPC;
     - the author block;
-    - `IEEE_lsens.cls`, which must be fetched on the PC.
+    - (`IEEE_lsens.cls`: in place 2026-10-16).
+    - Submission formalities: authors, subject category, graphical abstract, reviewers, ORCID, EDICS.
 - **What exists (history).** Imported from Edge_SSM:
   - the 2,460-run population (10 models × 10 datasets × 3 seeds) with its checkpoints;
   - the exploratory factor analysis and its figures.

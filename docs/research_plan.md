@@ -94,7 +94,9 @@ These are exploratory findings (Edge_SSM, 2026-10-12). The one confirmatory test
 - **Class:** `IEEE_lsens.cls` (IEEE / Overleaf template `bare_lsens.tex`, 9 pt, two columns).
   - The class could not be downloaded from the cluster: the TLS-inspecting firewall blocks Overleaf, IEEE and arXiv.
   - Drafting uses `IEEEtran.cls [journal,9pt]`, a substitute recorded in `results/gates/G1_environment_rerun2.json`.
-  - Before submission, swap in `IEEE_lsens.cls` and check the page count again.
+  - Before submission, swap in `IEEE_lsens.cls` and check the page count again. **Done 2026-10-16:** the 2023 class
+    from the IEEE Template Selector, fetched on the PC. The letter is 3 pages; the abstract is 140 words (limit 150);
+    a graphical abstract is required.
 - **Budget:** about 3 pages of body, 3 figures (variance shares, data factors, component contrasts) and 1 table.
 - **Structure:** title, abstract, Index Terms, Introduction, Methods, Results, Discussion and limitations,
   Conclusion, References.
