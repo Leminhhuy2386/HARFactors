@@ -1,0 +1,160 @@
+{
+ "analysis": "sens3_S1_without_actrectut",
+ "role": "sensitivity 3",
+ "set": "S1",
+ "outcome": "macro_f1",
+ "run_id": "20261015_165540_vc_sens3_S1_without_actrectut",
+ "inclusion": {
+  "utd_mhad": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "uci_har": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "unimib_shar": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "actrectut_gestures": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "opportunity": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "sad": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "hapt": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "dsads": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "wisdm": {
+   "included": true,
+   "splits_with_size_disagreement": [],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  },
+  "daphnet": {
+   "included": false,
+   "splits_with_size_disagreement": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "runs_with_other_protocol_hash": 0,
+   "missing_runs": 0
+  }
+ },
+ "excluded": {
+  "daphnet": "split sizes disagree across runs (pre-registered inclusion rule)",
+  "actrectut_gestures": "pre-registered sensitivity subset"
+ },
+ "datasets": [
+  "utd_mhad",
+  "uci_har",
+  "unimib_shar",
+  "opportunity",
+  "sad",
+  "hapt",
+  "dsads",
+  "wisdm"
+ ],
+ "n_runs": 2100,
+ "n_splits": 70,
+ "point": {
+  "converged": true,
+  "method": "default",
+  "components": {
+   "M": 5.510275170313153,
+   "MD": 5.14109047716621,
+   "MP": 6.502427725910742,
+   "P": 67.3648558673713,
+   "e": 16.958856763936485
+  },
+  "R": 3.927111304247801,
+  "pi_P": 0.6638402786944001,
+  "R_definition": "s2_P / (s2_M + s2_MD + s2_MP)"
+ },
+ "bootstrap": {
+  "resamples": 1000,
+  "converged": 1000,
+  "dropped": 0,
+  "dropped_share": 0.0,
+  "level": 0.975,
+  "R_interval": [
+   1.632345540020905,
+   5.797218671096105
+  ],
+  "pi_P_interval": [
+   0.43470889219561415,
+   0.7224572193022606
+  ],
+  "components_intervals": {
+   "P": [
+    22.793539893073394,
+    99.3129559326081
+   ],
+   "M": [
+    3.696087997148453,
+    7.845071281373778
+   ],
+   "MD": [
+    3.9283745632159413,
+    12.152260966780517
+   ],
+   "MP": [
+    0.6430309102630686,
+    11.206098388599466
+   ],
+   "e": [
+    12.000015345991677,
+    22.391818634570217
+   ]
+  },
+  "refit_with_powell": 4,
+  "seed": 20261015
+ },
+ "decision": null,
+ "per_dataset_split_means_sd": {
+  "dsads": 5.544536120668058,
+  "hapt": 3.9393466178867858,
+  "opportunity": 16.45224328031581,
+  "sad": 10.78921578248974,
+  "uci_har": 3.0374668728682312,
+  "unimib_shar": 7.130270997222759,
+  "utd_mhad": 12.655429179799079,
+  "wisdm": 6.468932945310792
+ }
+}

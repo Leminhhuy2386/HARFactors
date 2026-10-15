@@ -1,0 +1,252 @@
+{
+ "rows": [
+  {
+   "analysis": "H1",
+   "label": "S2 F1 (H1)",
+   "set": "S2",
+   "outcome": "macro_f1",
+   "datasets": 7,
+   "splits": 69,
+   "runs": 828,
+   "components": {
+    "M": 4.773939628028107,
+    "MD": 3.9554494789299777,
+    "MP": 6.864011549805682,
+    "P": 127.65871187628933,
+    "e": 11.667372312119944
+   },
+   "shares": {
+    "P": 0.8240326386566016,
+    "M": 0.030815617756534602,
+    "MD": 0.02553229171193711,
+    "MP": 0.044306960849150735,
+    "e": 0.07531249102577606
+   },
+   "R": 8.186714026418368,
+   "R_interval": [
+    2.8472554215192187,
+    16.904802527728343
+   ],
+   "pi_P": 0.8240326386566016,
+   "pi_P_interval": [
+    0.6398040369216047,
+    0.8940728400406195
+   ],
+   "R_definition": "s2_P / (s2_M + s2_MD + s2_MP)",
+   "decision": "success",
+   "excluded": {
+    "motion_sense": "split sizes disagree across runs (pre-registered inclusion rule)"
+   }
+  },
+  {
+   "analysis": "sens1_S2_balanced_accuracy",
+   "label": "S2 bal. acc.",
+   "set": "S2",
+   "outcome": "balanced_accuracy",
+   "datasets": 7,
+   "splits": 69,
+   "runs": 828,
+   "components": {
+    "M": 6.52617976093258,
+    "MD": 4.445368683735392,
+    "MP": 10.127735249523157,
+    "P": 86.27215084070596,
+    "e": 16.557743845663314
+   },
+   "shares": {
+    "P": 0.6961407472240505,
+    "M": 0.05266055860462543,
+    "MD": 0.035870234450232547,
+    "MP": 0.08172195912106361,
+    "e": 0.13360650060002796
+   },
+   "R": 4.08886633741304,
+   "R_interval": [
+    2.0456786339626394,
+    6.030690223786021
+   ],
+   "pi_P": 0.6961407472240505,
+   "pi_P_interval": [
+    0.528096336914969,
+    0.7623019027671247
+   ],
+   "R_definition": "s2_P / (s2_M + s2_MD + s2_MP)",
+   "decision": null,
+   "excluded": {
+    "motion_sense": "split sizes disagree across runs (pre-registered inclusion rule)"
+   }
+  },
+  {
+   "analysis": "sens2_S1_macro_f1",
+   "label": "S1 F1",
+   "set": "S1",
+   "outcome": "macro_f1",
+   "datasets": 9,
+   "splits": 72,
+   "runs": 2160,
+   "components": {
+    "M": 5.916712428409565,
+    "MD": 7.7688375817948945,
+    "MP": 6.6667795791585585,
+    "P": 66.24692189967652,
+    "e": 17.606465714663166
+   },
+   "shares": {
+    "P": 0.6357321237008154,
+    "M": 0.056779153650883644,
+    "MD": 0.0745528920127124,
+    "MP": 0.0639770998948767,
+    "e": 0.16895873074071183
+   },
+   "R": 3.2550043772040698,
+   "R_interval": [
+    1.3437414352443473,
+    4.473300040843624
+   ],
+   "pi_P": 0.6357321237008154,
+   "pi_P_interval": [
+    0.41355733728039423,
+    0.6985850143450049
+   ],
+   "R_definition": "s2_P / (s2_M + s2_MD + s2_MP)",
+   "decision": null,
+   "excluded": {
+    "daphnet": "split sizes disagree across runs (pre-registered inclusion rule)"
+   }
+  },
+  {
+   "analysis": "sens2_S1_balanced_accuracy",
+   "label": "S1 bal. acc.",
+   "set": "S1",
+   "outcome": "balanced_accuracy",
+   "datasets": 9,
+   "splits": 72,
+   "runs": 2160,
+   "components": {
+    "M": 5.548372436168804,
+    "MD": 9.629144804475615,
+    "MP": 5.54473904522708,
+    "P": 39.212981255051645,
+    "e": 15.274631808088545
+   },
+   "shares": {
+    "P": 0.521380792101681,
+    "M": 0.07377186643446434,
+    "MD": 0.12803033548418402,
+    "MP": 0.07372355640583149,
+    "e": 0.2030934495738393
+   },
+   "R": 1.8923123386803773,
+   "R_interval": [
+    0.6893398068550447,
+    2.2937928903395397
+   ],
+   "pi_P": 0.521380792101681,
+   "pi_P_interval": [
+    0.2984029979581619,
+    0.5688181983870362
+   ],
+   "R_definition": "s2_P / (s2_M + s2_MD + s2_MP)",
+   "decision": null,
+   "excluded": {
+    "daphnet": "split sizes disagree across runs (pre-registered inclusion rule)"
+   }
+  },
+  {
+   "analysis": "sens3_S1_without_actrectut",
+   "label": "S1 F1, no ActRecTut",
+   "set": "S1",
+   "outcome": "macro_f1",
+   "datasets": 8,
+   "splits": 70,
+   "runs": 2100,
+   "components": {
+    "M": 5.510275170313153,
+    "MD": 5.14109047716621,
+    "MP": 6.502427725910742,
+    "P": 67.3648558673713,
+    "e": 16.958856763936485
+   },
+   "shares": {
+    "P": 0.6638402786944001,
+    "M": 0.05430045915848637,
+    "MD": 0.05066236528249131,
+    "MP": 0.06407752793618827,
+    "e": 0.16711936892843401
+   },
+   "R": 3.927111304247801,
+   "R_interval": [
+    1.632345540020905,
+    5.797218671096105
+   ],
+   "pi_P": 0.6638402786944001,
+   "pi_P_interval": [
+    0.43470889219561415,
+    0.7224572193022606
+   ],
+   "R_definition": "s2_P / (s2_M + s2_MD + s2_MP)",
+   "decision": null,
+   "excluded": {
+    "daphnet": "split sizes disagree across runs (pre-registered inclusion rule)",
+    "actrectut_gestures": "pre-registered sensitivity subset"
+   }
+  },
+  {
+   "analysis": "sens4_S3_macro_f1",
+   "label": "S3 F1 (17 models)",
+   "set": "S3",
+   "outcome": "macro_f1",
+   "datasets": 4,
+   "splits": 30,
+   "runs": 510,
+   "components": {
+    "M": 100.16017293105875,
+    "MD": 50.994675476029656,
+    "P": 37.51626719672539,
+    "e": 29.170514057772074
+   },
+   "shares": {
+    "P": 0.17221807996481855,
+    "M": 0.45978435382923033,
+    "MD": 0.23409058936645497,
+    "MP": 0.0,
+    "e": 0.13390697683949615
+   },
+   "R": 0.20804764612097246,
+   "R_interval": [
+    0.058756963846634466,
+    0.35515777801854104
+   ],
+   "pi_P": 0.17221807996481855,
+   "pi_P_interval": [
+    0.0554961036250345,
+    0.2620784048199722
+   ],
+   "R_definition": "s2_P / (s2_M + s2_MD + s2_e)",
+   "decision": null,
+   "excluded": {}
+  }
+ ],
+ "sources": [
+  [
+   "P",
+   "test-subject group"
+  ],
+  [
+   "M",
+   "model"
+  ],
+  [
+   "MD",
+   "model \u00d7 dataset"
+  ],
+  [
+   "MP",
+   "model \u00d7 split"
+  ],
+  [
+   "e",
+   "seed (residual)"
+  ]
+ ]
+}

@@ -225,6 +225,8 @@ def _printed(entry: dict) -> str:
         return v
     if f == "pct":
         return f"{100 * v:.0f}"
+    if f == "p3":
+        return "< 0.001" if v < 0.001 else f"= {v:.3f}"
     return format(v, f)
 
 
@@ -301,7 +303,7 @@ def check_manuscript() -> list[str]:
     errs += [f"\\ref{{{r}}} undefined" for r in sorted(refs - labels)]
     errs += [f"{l} never referenced" for l in sorted(labels) if (l.startswith("fig:") or l.startswith("tab:"))
              and l not in refs]
-    values = {e["printed"].lstrip("+") for e in json.loads((ROOT / "docs/summary_values.json").read_text())}
+    values = {e["printed"].lstrip("=< ").lstrip("+") for e in json.loads((ROOT / "docs/summary_values.json").read_text())}
     values |= {v.replace("-", "−") for v in values} | {v.lstrip("−-") for v in values}
     for inc in re.findall(r"\\input\{([^}]+)\}", body):  # tables are \input files: check their numbers too
         f = paper / (inc if inc.endswith(".tex") else inc + ".tex")

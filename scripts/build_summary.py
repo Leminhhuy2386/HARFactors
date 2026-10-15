@@ -38,6 +38,8 @@ def get(obj, path):
 
 
 def fmt(v, f: str) -> str:
+    if f == "p3":
+        return "< 0.001" if v < 0.001 else f"= {v:.3f}"
     if f == "pct":
         return f"{100 * v:.0f}"
     if f == "pct1":
@@ -72,7 +74,7 @@ def spec() -> list[dict]:
             add(f"contrast.{key}.{tag}.lo", f"{label}, {tag} datasets: 95 % CI low", a, [key, sub, "lo"], "+.2f")
             add(f"contrast.{key}.{tag}.hi", f"{label}, {tag} datasets: 95 % CI high", a, [key, sub, "hi"], "+.2f")
             add(f"contrast.{key}.{tag}.wins", f"{label}, {tag} datasets: datasets won", a, [key, sub, "wins"], "d")
-            add(f"contrast.{key}.{tag}.p", f"{label}, {tag} datasets: Wilcoxon p", a, [key, sub, "p"], ".3f")
+            add(f"contrast.{key}.{tag}.p", f"{label}, {tag} datasets: Wilcoxon p", a, [key, sub, "p"], "p3")
     fa = "results/metrics/factors/data.json"
     for k, out in OLS_OUT.items():
         add(f"ols.{k}.r2", f"OLS over 30 datasets, {out}: R^2", fa, ["data", "ols", out, "r2"], ".2f")
@@ -80,7 +82,7 @@ def spec() -> list[dict]:
             add(f"ols.{k}.{pr.split()[1].replace('/', '_')}.beta", f"OLS, {out}: {pr} (per sd)", fa,
                 ["data", "ols", out, "beta", j + 1], "+.1f")
             add(f"ols.{k}.{pr.split()[1].replace('/', '_')}.p", f"OLS, {out}: {pr} p", fa,
-                ["data", "ols", out, "p", j + 1], ".3f")
+                ["data", "ols", out, "p", j + 1], "p3")
     ss = "results/metrics/factors/data.json"
     for src, tag in (("test person (split)", "P"), ("model", "M"), ("model x dataset", "MD"), ("model x person", "MP"),
                      ("seed", "e")):

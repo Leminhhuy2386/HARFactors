@@ -1,0 +1,261 @@
+{
+ "forest_without_daphnet": [
+  {
+   "contrast": "recurrencenet-hystnet_nomem",
+   "label": "RecurrenceNet",
+   "group": "memory \u2212 none",
+   "mean": 6.4344665684081885,
+   "lo": 3.066198488198102,
+   "hi": 9.802734648618275,
+   "wins": 9,
+   "n": 9,
+   "p": 0.00390625
+  },
+  {
+   "contrast": "s4d-hystnet_nomem",
+   "label": "S4D",
+   "group": "memory \u2212 none",
+   "mean": 5.785653930571344,
+   "lo": 2.3011315852690526,
+   "hi": 9.270176275873636,
+   "wins": 9,
+   "n": 9,
+   "p": 0.00390625
+  },
+  {
+   "contrast": "hystnet_sel_clock-hystnet_nomem",
+   "label": "HysteresisNet",
+   "group": "memory \u2212 none",
+   "mean": 5.237104851338598,
+   "lo": 2.7370822482937407,
+   "hi": 7.737127454383456,
+   "wins": 9,
+   "n": 9,
+   "p": 0.00390625
+  },
+  {
+   "contrast": "quantilenet-hystnet_nomem",
+   "label": "QuantileNet",
+   "group": "memory \u2212 none",
+   "mean": 4.086380984496188,
+   "lo": 0.8301251235090565,
+   "hi": 7.3426368454833195,
+   "wins": 8,
+   "n": 9,
+   "p": 0.0078125
+  },
+  {
+   "contrast": "mamba-hystnet_nomem",
+   "label": "Mamba",
+   "group": "memory \u2212 none",
+   "mean": 3.33403832382626,
+   "lo": 0.44609415828480703,
+   "hi": 6.221982489367713,
+   "wins": 8,
+   "n": 9,
+   "p": 0.01171875
+  },
+  {
+   "contrast": "recurrencenet-s4d",
+   "label": "RecurrenceNet",
+   "group": "memory type \u2212 S4D",
+   "mean": 0.648812637836845,
+   "lo": -1.1068707242322184,
+   "hi": 2.404495999905908,
+   "wins": 6,
+   "n": 9,
+   "p": 0.30078125
+  },
+  {
+   "contrast": "hystnet_sel_clock-s4d",
+   "label": "HysteresisNet",
+   "group": "memory type \u2212 S4D",
+   "mean": -0.5485490792327461,
+   "lo": -2.2517494806063825,
+   "hi": 1.1546513221408905,
+   "wins": 5,
+   "n": 9,
+   "p": 0.8203125
+  },
+  {
+   "contrast": "quantilenet-s4d",
+   "label": "QuantileNet",
+   "group": "memory type \u2212 S4D",
+   "mean": -1.6992729460751566,
+   "lo": -3.817696642475975,
+   "hi": 0.41915075032566174,
+   "wins": 2,
+   "n": 9,
+   "p": 0.09765625
+  },
+  {
+   "contrast": "mamba-s4d",
+   "label": "Mamba",
+   "group": "memory type \u2212 S4D",
+   "mean": -2.451615606745084,
+   "lo": -4.403909544413987,
+   "hi": -0.4993216690761806,
+   "wins": 1,
+   "n": 9,
+   "p": 0.01953125
+  }
+ ],
+ "scatter": [
+  {
+   "dataset": "actrectut_gestures",
+   "log2_channels": 3.9068905956085187,
+   "rf_minus_best_deep": -19.6
+  },
+  {
+   "dataset": "daphnet",
+   "log2_channels": 3.169925001442312,
+   "rf_minus_best_deep": -11.569999999999993
+  },
+  {
+   "dataset": "dsads",
+   "log2_channels": 5.491853096329675,
+   "rf_minus_best_deep": 1.480000000000004
+  },
+  {
+   "dataset": "gotov",
+   "log2_channels": 4.807354922057604,
+   "rf_minus_best_deep": -4.460000000000008
+  },
+  {
+   "dataset": "hang_time",
+   "log2_channels": 1.584962500721156,
+   "rf_minus_best_deep": -5.350000000000001
+  },
+  {
+   "dataset": "hapt",
+   "log2_channels": 2.584962500721156,
+   "rf_minus_best_deep": -17.67
+  },
+  {
+   "dataset": "har70",
+   "log2_channels": 2.584962500721156,
+   "rf_minus_best_deep": -11.739999999999995
+  },
+  {
+   "dataset": "harth",
+   "log2_channels": 2.584962500721156,
+   "rf_minus_best_deep": -16.79
+  },
+  {
+   "dataset": "hhar",
+   "log2_channels": 2.584962500721156,
+   "rf_minus_best_deep": -7.090000000000003
+  },
+  {
+   "dataset": "hugadb",
+   "log2_channels": 5.247927513443585,
+   "rf_minus_best_deep": 3.3200000000000003
+  },
+  {
+   "dataset": "mhealth",
+   "log2_channels": 4.523561956057013,
+   "rf_minus_best_deep": 1.5200000000000102
+  },
+  {
+   "dataset": "motion_sense",
+   "log2_channels": 4.169925001442312,
+   "rf_minus_best_deep": -1.990000000000009
+  },
+  {
+   "dataset": "opportunity",
+   "log2_channels": 7.05528243550119,
+   "rf_minus_best_deep": -4.079999999999998
+  },
+  {
+   "dataset": "pamap2",
+   "log2_channels": 5.700439718141092,
+   "rf_minus_best_deep": 0.8200000000000074
+  },
+  {
+   "dataset": "real_disp",
+   "log2_channels": 6.870364719583405,
+   "rf_minus_best_deep": -3.3900000000000006
+  },
+  {
+   "dataset": "real_life_har",
+   "log2_channels": 3.9068905956085187,
+   "rf_minus_best_deep": 7.550000000000004
+  },
+  {
+   "dataset": "real_world",
+   "log2_channels": 6.339850002884624,
+   "rf_minus_best_deep": 11.959999999999994
+  },
+  {
+   "dataset": "sad",
+   "log2_channels": 5.906890595608519,
+   "rf_minus_best_deep": 0.5799999999999983
+  },
+  {
+   "dataset": "uca_ehar",
+   "log2_channels": 2.807354922057604,
+   "rf_minus_best_deep": -12.509999999999998
+  },
+  {
+   "dataset": "uci_har",
+   "log2_channels": 3.169925001442312,
+   "rf_minus_best_deep": -11.420000000000002
+  },
+  {
+   "dataset": "uma_fall",
+   "log2_channels": 5.285402218862249,
+   "rf_minus_best_deep": -1.990000000000002
+  },
+  {
+   "dataset": "unimib_shar",
+   "log2_channels": 1.584962500721156,
+   "rf_minus_best_deep": -18.809999999999995
+  },
+  {
+   "dataset": "up_fall",
+   "log2_channels": 5.392317422778761,
+   "rf_minus_best_deep": 11.649999999999999
+  },
+  {
+   "dataset": "usc_had",
+   "log2_channels": 2.584962500721156,
+   "rf_minus_best_deep": -6.1499999999999915
+  },
+  {
+   "dataset": "utd_mhad",
+   "log2_channels": 2.584962500721156,
+   "rf_minus_best_deep": -16.959999999999994
+  },
+  {
+   "dataset": "w_har",
+   "log2_channels": 2.807354922057604,
+   "rf_minus_best_deep": 0.3500000000000014
+  },
+  {
+   "dataset": "wear",
+   "log2_channels": 3.584962500721156,
+   "rf_minus_best_deep": -2.3100000000000023
+  },
+  {
+   "dataset": "wisdm",
+   "log2_channels": 1.584962500721156,
+   "rf_minus_best_deep": -13.909999999999997
+  },
+  {
+   "dataset": "wisdm_19_phone",
+   "log2_channels": 2.584962500721156,
+   "rf_minus_best_deep": -5.419999999999998
+  },
+  {
+   "dataset": "wisdm_19_watch",
+   "log2_channels": 2.584962500721156,
+   "rf_minus_best_deep": -11.5
+  }
+ ],
+ "ols_log2_channels": {
+  "beta_per_sd": 7.123785306730373,
+  "p": 1.0739993385237916e-05,
+  "r2": 0.5546669424180473
+ },
+ "note": "(b) re-analyses the WHAR Arena paper's published single runs (Figure 6): derived from quoted numbers"
+}

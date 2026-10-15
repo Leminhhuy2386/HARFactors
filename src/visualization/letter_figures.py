@@ -88,7 +88,7 @@ def variance_rows() -> tuple[list[dict], list]:
 
 
 def fig01(rows, run_id, started, inputs) -> None:
-    fig, (a, b) = plt.subplots(1, 2, figsize=(3.5, 2.35), gridspec_kw={"width_ratios": [1.55, 1], "wspace": 0.08},
+    fig, (a, b) = plt.subplots(1, 2, figsize=(3.5, 2.45), gridspec_kw={"width_ratios": [1.55, 1], "wspace": 0.16},
                                sharey=True)
     y = np.arange(len(rows))[::-1]
     for i, (k, name) in enumerate(SOURCES):
@@ -100,8 +100,8 @@ def fig01(rows, run_id, started, inputs) -> None:
                 a.text(l + ww / 2, yy, f"{100 * ww:.0f}", ha="center", va="center", fontsize=6.5, color=INK)
     a.set_yticks(y, [r["label"] for r in rows])
     a.set_xlim(0, 1)
-    a.set_xticks([0, 0.5, 1], ["0", "50", "100 %"])
-    a.set_xlabel("share of within-dataset variance")
+    a.set_xticks([0, 0.5, 1], ["0", "50", "100"])
+    a.set_xlabel("within-dataset variance (%)")
     a.legend(ncol=3, loc="lower left", bbox_to_anchor=(-0.62, 1.0), frameon=False, handlelength=1.0,
              columnspacing=0.8, handletextpad=0.4)
     for yy, r in zip(y, rows):
@@ -110,7 +110,9 @@ def fig01(rows, run_id, started, inputs) -> None:
         b.plot([r["R"]], [yy], "o", color=SLOTS[0], markersize=4.5, markeredgecolor="white", markeredgewidth=0.8)
     b.axvline(1, color=INK, linewidth=0.8, linestyle=(0, (3, 2)))
     b.set_xscale("log")
-    b.set_xlabel("R (97.5 % interval)")
+    b.set_xlim(0.04, 30)
+    b.set_xticks([0.1, 1, 10], ["0.1", "1", "10"])
+    b.set_xlabel("R, 97.5 % interval")
     b.tick_params(axis="y", length=0)
     b.grid(axis="x", color=GRID, linewidth=0.5)
     b.set_axisbelow(True)
@@ -130,17 +132,18 @@ def fig02(run_id, started) -> dict:
         group = "memory − none" if key.endswith("nomem") else "memory type − S4D"
         forest.append({"contrast": key, "label": label, "group": group, "mean": c["mean"], "lo": c["lo"], "hi": c["hi"],
                        "wins": c["wins"], "n": c["n"], "p": c["p"]})
-    ypos = [8.6, 7.6, 6.6, 5.6, 4.6, 2.8, 1.8, 0.8, -0.2]
+    ypos = [9, 8, 7, 6, 5, 2.6, 1.6, 0.6, -0.4]
     for yy, f in zip(ypos, forest):
         a.plot([f["lo"], f["hi"]], [yy, yy], color=INK2, linewidth=1.2, solid_capstyle="round")
         a.plot([f["mean"]], [yy], "o", color=SLOTS[0], markersize=4.5, markeredgecolor="white", markeredgewidth=0.8)
         a.text(10.6, yy, f"{f['mean']:+.1f} ({f['wins']}/{f['n']})", va="center", ha="left", fontsize=6.5, color=INK)
     a.axvline(0, color=INK, linewidth=0.8, linestyle=(0, (3, 2)))
-    a.set_yticks(ypos, [f["label"] for f in forest])
-    a.text(-6.4, 9.5, "memory − no memory", fontsize=7, color=INK, fontweight="bold", va="bottom")
-    a.text(-6.4, 3.7, "memory type − S4D", fontsize=7, color=INK, fontweight="bold", va="bottom")
+    a.set_yticks(ypos + [10.1, 3.7], [f["label"] for f in forest] + ["memory − none", "type − S4D"])
+    for lab in a.get_yticklabels()[-2:]:
+        lab.set_fontweight("bold")
+        lab.set_color(INK)
     a.set_xlim(-6.5, 10.5)
-    a.set_ylim(-0.8, 10.2)
+    a.set_ylim(-1.0, 10.7)
     a.set_xlabel("macro-F1 difference, points (mean over 9 datasets, 95 % CI)")
     a.tick_params(axis="y", length=0)
     a.grid(axis="x", color=GRID, linewidth=0.5)
@@ -155,13 +158,18 @@ def fig02(run_id, started) -> dict:
     j = 1 + ["log2 subjects", "log2 channels", "log2 classes", "log2 samples/window"].index("log2 channels")
     b.axhline(0, color=INK, linewidth=0.8, linestyle=(0, (3, 2)))
     b.scatter(x, yv, s=16, color=SLOTS[0], edgecolor="white", linewidth=0.6, zorder=3)
+    names = {e["dataset"]: e["dataset_name"] for e in json.loads((PATHS.DOCS / "baselines_cited.json").read_text())["entries"]}
     for d, xx, yy in zip(ds, x, yv):
-        if yy > 5 or yy < -25:
-            b.annotate(FA.CA.SHORT.get(d, d), (xx, yy), xytext=(3, 2), textcoords="offset points", fontsize=6, color=INK2)
+        if yy > 5:
+            b.annotate(names.get(d, d), (xx, yy), xytext=(-4, 3), textcoords="offset points", fontsize=6, color=INK2,
+                       ha="right")
     b.set_xlabel("log2 channel count")
     b.set_ylabel("RF − best deep, F1 points")
-    b.text(0.02, 0.97, f"OLS, other properties held fixed: {ols['beta'][j]:+.1f} per sd (p {ols['p'][j]:.3g}), "
-                       f"R² {ols['r2']:.2f}", transform=b.transAxes, fontsize=6.5, va="top", color=INK)
+    pj = ols["p"][j]
+    b.text(0.98, 0.04, f"OLS, other properties fixed:\n{ols['beta'][j]:+.1f} per sd, "
+                       f"p {'< 0.001' if pj < 0.001 else f'= {pj:.3f}'}, R² {ols['r2']:.2f}",
+           transform=b.transAxes, fontsize=6.5, va="bottom", ha="right", color=INK)
+    b.set_ylim(min(yv) - 2, max(yv) + 5)
     b.grid(color=GRID, linewidth=0.5)
     b.set_axisbelow(True)
     b.set_title("(b)", loc="left", fontweight="bold")

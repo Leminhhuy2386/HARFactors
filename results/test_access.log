@@ -1,3 +1,15 @@
 2026-10-15T16:49:41 | scripts/run_confirmatory.py | 20261015_164940_vc_H1 | pre-registered H1 (confirmatory test of H1); sealed by G4 at 2026-10-15T16:49:10
 2026-10-15T16:55:40 | scripts/run_confirmatory.py | 20261015_165538_vc_sens1_S2_balanced_accuracy | pre-registered sens1_S2_balanced_accuracy (sensitivity 1); sealed by G4 at 2026-10-15T16:49:10
 2026-10-15T17:04:56 | scripts/evaluate.py | smoke_evaluate_dev | verification (G5): regenerate 2 stored test predictions on utd_mhad from checkpoints
+2026-10-15T18:42:55 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on actrectut_gestures from checkpoints
+2026-10-15T18:43:03 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on dsads from checkpoints
+2026-10-15T18:43:20 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on hapt from checkpoints
+2026-10-15T18:43:25 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on opportunity from checkpoints
+2026-10-15T18:43:39 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on sad from checkpoints
+2026-10-15T18:43:47 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 120 stored test predictions on uca_ehar from checkpoints
+2026-10-15T18:44:56 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on uci_har from checkpoints
+2026-10-15T18:45:01 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on unimib_shar from checkpoints
+2026-10-15T18:45:04 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 120 stored test predictions on up_fall from checkpoints
+2026-10-15T18:45:59 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on utd_mhad from checkpoints
+2026-10-15T18:46:00 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 120 stored test predictions on wear from checkpoints
+2026-10-15T18:48:22 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on wisdm from checkpoints

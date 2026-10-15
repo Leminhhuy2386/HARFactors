@@ -1,0 +1,21 @@
+{
+ "produced_by": "src/visualization/letter_figures.py",
+ "command": "python /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/visualization/letter_figures.py",
+ "run_id": "20261015_185839_letter_figures",
+ "timestamp": "2026-10-15T18:58:41",
+ "duration_sec": 1.68,
+ "git_commit": "4845bba-dirty",
+ "config_sha256": null,
+ "config": null,
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "results/metrics/confirmatory/H1.json": "sha256:fc56b079c962d7612eeb130ef2f70cc281d5176001f46b9a094b02a719586bf2",
+  "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json": "sha256:9880dc13d64d8dde014640e01c85a8bd9a35d78cd6c28828cc36daa9868b44b7",
+  "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json": "sha256:c149d49a0f19e6db5d88edac8e33bd3af737d295b89c093f5f36ef396b15c004",
+  "results/metrics/confirmatory/sens2_S1_macro_f1.json": "sha256:8784e4b22547473078bd9ded9289e72330b71fc8269c81cec5c4624c14984274",
+  "results/metrics/confirmatory/sens3_S1_without_actrectut.json": "sha256:b4925f57a4f54d206bb85759f1816a5eb12352068acf2298c58c8bd94ab1cd6f",
+  "results/metrics/confirmatory/sens4_S3_macro_f1.json": "sha256:115a8ab4fe944ad5f3ef871c7e9558a359f3681f8ed0c65270e0c9b9b09140f5"
+ },
+ "output_sha256": "4ca7794db998217c8bbb745532a11815d6fbf9521426dd2e3301df36aebfc1c0",
+ "synthetic": false
+}

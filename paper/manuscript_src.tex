@@ -25,10 +25,10 @@ decompose the variance of stored runs of one fixed person-disjoint protocol (WHA
 whose confirmatory test was pre-registered. On \val{H1.datasets} held-out datasets (\val{H1.runs} runs of four
 networks with three training seeds), the group of test subjects accounts for \val{H1.pi_P}\,\% of the within-dataset
 variance, \val{H1.R} times (97.5\,\% interval \val{H1.R_lo}--\val{H1.R_hi}) the variance of all network-related terms
-together, and the pre-registered criterion was met. The ordering holds for a metric without per-split ceilings and on
-the development datasets, but it reverses across the benchmark's 17 heterogeneous published architectures, where the
-network dominates. Between comparable networks, the subjects a wearable study records bound what an accuracy
-difference can show.
+together, and the pre-registered criterion was met. The ordering also holds with a metric free of per-split
+ceilings and on the development datasets, where its interval includes 1 for that metric. It reverses across the
+benchmark's 17 heterogeneous published architectures, where the network dominates. Between comparable networks, the
+subjects a wearable study records bound what an accuracy difference can show.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -104,9 +104,9 @@ and the secondary criterion ($\pi_P$ lower bound $\ge 40$\,\%) is met.
 \centering
 \includegraphics[width=\columnwidth]{figures/fig01_variance_components.pdf}
 \caption{Where the within-dataset variance of the stored runs lies. Left: shares by source (numbers in \%). Right:
-$R$ with its 97.5\,\% bootstrap interval; the dashed line is the pre-registered threshold. The test-subject group
-dominates every analysis of the shared-skeleton networks, and the network dominates across the 17 heterogeneous
-published architectures (S3, conservative $R'$).}
+$R$ with its 97.5\,\% bootstrap interval; the dashed line is the pre-registered threshold. $R$ exceeds 1 in every
+analysis of the shared-skeleton networks (on S1 with balanced accuracy its interval includes 1), and the network
+dominates across the 17 heterogeneous published architectures (S3, conservative $R'$).}
 \label{fig:vc}
 \end{figure}
 
@@ -121,9 +121,11 @@ published architectures (S3, conservative $R'$).}
 \subsection{Sensitivity analyses}
 Balanced accuracy, which averages recall over the classes present and so has no per-split ceiling, gives
 $R=\val{sens1_S2_balanced_accuracy.R}$ [\val{sens1_S2_balanced_accuracy.R_lo}, \val{sens1_S2_balanced_accuracy.R_hi}]
-on S2: ceilings enlarge the subject share but do not create it. On the development set S1 ($R=\val{sens2_S1_macro_f1.R}$
-[\val{sens2_S1_macro_f1.R_lo}, \val{sens2_S1_macro_f1.R_hi}]) and without its two-subject dataset ActRecTut
-($R=\val{sens3_S1_without_actrectut.R}$) the ordering is the same. Across the benchmark's 17 published architectures
+on S2: ceilings enlarge the subject share but do not create it. On the development set S1 the ordering is the same
+with macro-F1 ($R=\val{sens2_S1_macro_f1.R}$ [\val{sens2_S1_macro_f1.R_lo}, \val{sens2_S1_macro_f1.R_hi}]), also
+without its two-subject dataset ActRecTut ($R=\val{sens3_S1_without_actrectut.R}$); with balanced accuracy the point
+estimate stays above 1 but the interval does not exclude it ($R=\val{sens2_S1_balanced_accuracy.R}$
+[\val{sens2_S1_balanced_accuracy.R_lo}, \val{sens2_S1_balanced_accuracy.R_hi}]). Across the benchmark's 17 published architectures
 it reverses: $R'=\val{sens4_S3_macro_f1.R}$ [\val{sens4_S3_macro_f1.R_lo}, \val{sens4_S3_macro_f1.R_hi}], with
 $\sigma^2_M=\val{sens4_S3_macro_f1.s2_M}$ against $\sigma^2_P=\val{sens4_S3_macro_f1.s2_P}$. These architectures range
 from k-NN to attention networks; their differences are far larger than those between the shared-skeleton networks.
@@ -145,9 +147,9 @@ $\val{contrast.s4d-hystnet_nomem.9.hi}$] points over the same network without me
 points (Mamba $-$ S4D: $\val{contrast.mamba-s4d.9.mean}$ [$\val{contrast.mamba-s4d.9.lo}$,
 $\val{contrast.mamba-s4d.9.hi}$]). Over the 30 datasets, a larger channel count goes with a larger margin of the
 feature-based Random Forest over the best deep network ($\val{ols.rf.channels.beta}$ points per standard deviation of
-$\log_2$ channels, $p=\val{ols.rf.channels.p}$, other properties held fixed; Fig.~\ref{fig:explore}b), and fewer
+$\log_2$ channels, $p\val{ols.rf.channels.p}$, other properties held fixed; Fig.~\ref{fig:explore}b), and fewer
 training subjects go with a larger gap between the best and the median deep network
-($\val{ols.gap.subjects.beta}$ per standard deviation, $p=\val{ols.gap.subjects.p}$). No property predicts how hard a
+($\val{ols.gap.subjects.beta}$ per standard deviation, $p\val{ols.gap.subjects.p}$). No property predicts how hard a
 dataset is ($R^2=\val{ols.level.r2}$).
 
 \section{Discussion and Limitations}
