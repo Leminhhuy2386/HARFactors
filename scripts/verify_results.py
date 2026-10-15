@@ -132,7 +132,7 @@ def seeds_differ(eval_dir: Path) -> dict:
 
 def second_implementation() -> list[dict]:
     rows = []
-    for f in sorted((ROOT / "results/metrics/confirmatory").glob("*.json")):
+    for f in sorted(p for p in (ROOT / "results/metrics/confirmatory").glob("*.json") if not p.name.endswith(".provenance.json")):
         r = json.loads(f.read_text())
         has_seeds = len(SETS[r["set"]]["seeds"]) > 1
         df = V.load(SETS[r["set"]], r["outcome"], r["datasets"])
@@ -196,6 +196,7 @@ def negative_controls(eval_dir: Path) -> list[dict]:
         ignore = shutil.ignore_patterns("checkpoints", ".venv", "third_party", "paper", "figures", "docs")
         shutil.copytree(ROOT, copy, ignore=ignore, symlinks=True)
         (copy / "third_party").symlink_to(ROOT / "third_party")
+        (copy / "experiments" / "checkpoints").symlink_to(ROOT / "experiments" / "checkpoints")
         rel_eval = eval_dir.relative_to(ROOT)
         base = {flag: audit(flag, root=copy)[0] for flag in ("--recompute", "--provenance", "--ledger", "--seeds")}
         # 1. alter one prediction value -> --recompute
@@ -260,12 +261,13 @@ def reproduce_control(eval_dir: Path) -> dict:
                     window_length=stored["model"]["window_length"], num_classes=rec["num_classes"])
         ck["state_dict"] = net.state_dict()
         torch.save(ck, fake)
-        saved, saved_log = E.PATHS.CHECKPOINTS, E.ACCESS_LOG
+        saved, saved_log, saved_rel = E.PATHS.CHECKPOINTS, E.ACCESS_LOG, E.PV.rel
         E.PATHS.CHECKPOINTS, E.ACCESS_LOG = fake_root, t / "access.log"
+        E.PV.rel = lambda q: str(q)  # the fake checkpoint lives outside the project
         try:
             E.evaluate([(model, dataset, seed, split)], t / "out", "negative_control", 0.0)
         finally:
-            E.PATHS.CHECKPOINTS, E.ACCESS_LOG = saved, saved_log
+            E.PATHS.CHECKPOINTS, E.ACCESS_LOG, E.PV.rel = saved, saved_log, saved_rel
         new = t / "out" / "predictions" / model / dataset / seed_dir / f.name
         caught = list(csv.reader(open(new))) != list(csv.reader(open(f)))
     return {"tampering": "a checkpoint replaced by a fresh initialisation", "check": "--reproduce (re-execution)",

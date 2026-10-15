@@ -4984,3 +4984,9 @@ whar_arena_v1/vortexnet/utd_mhad/split-07 | IMPORT | fingerprint c98d3cdb212a | 
 20261015_165540_vc_sens2_S1_macro_f1 | END   | R=3.255 [1.344, 4.473] | 01:09:07 | status=completed
 20261015_184242_evaluate_G5 | START | config 3d4253021576 | data 10383f130f63 | synthetic=false
 20261015_184242_evaluate_G5 | END   | 414 of 414 evaluated | 00:05:36 | status=completed
+20261015_191450_verify_G5 | START | config e1e0d270e419 | data 10383f130f63 | synthetic=false
+20261015_191450_verify_G5 | END   | - | 00:01:03 | status=crashed(KeyError)
+20261015_194859_verify_G5 | START | config e1e0d270e419 | data 10383f130f63 | synthetic=false
+20261015_194859_verify_G5 | END   | - | 00:07:09 | status=crashed(ValueError)
+20261015_205121_verify_G5 | START | config e1e0d270e419 | data 10383f130f63 | synthetic=false
+20261015_205121_verify_G5 | END   | G5 FAIL | 00:07:07 | status=completed

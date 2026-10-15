@@ -1,0 +1,45 @@
+node hpc02.local, job 86718, Thu Oct 15 19:48:39 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+figures and table written; run 20261015_195315_letter_figures
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:228: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11060). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /__w/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+2026-10-15 19:56:09,505 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 19:56:09,505 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 19:56:09,530 - whar-datasets - INFO - Hash is up to date
+2026-10-15 19:56:09,530 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 19:56:09,530 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 19:56:09,533 - whar-datasets - INFO - Hash is up to date
+2026-10-15 19:56:09,533 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 19:56:09,533 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 19:56:09,536 - whar-datasets - INFO - Hash is up to date
+2026-10-15 19:56:09,536 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 19:56:09,536 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 19:56:09,538 - whar-datasets - INFO - Hash is up to date
+2026-10-15 19:56:09,538 - whar-datasets - INFO - Loading windowing
+2026-10-15 19:56:09,549 - whar-datasets - INFO - Selecting activities
+2026-10-15 19:56:09,559 - whar-datasets - INFO - activity_ids from 0 to 10
+2026-10-15 19:56:09,559 - whar-datasets - INFO - subject_ids from 0 to 1
+2026-10-15 19:56:09,563 - whar-datasets - INFO - Running SamplingStep
+2026-10-15 19:56:09,563 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-15 19:56:09,567 - whar-datasets - INFO - Hash is up to date
+2026-10-15 19:56:09,567 - whar-datasets - INFO - Loading samples
+Traceback (most recent call last):
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/verify_results.py", line 443, in <module>
+    main()
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/verify_results.py", line 416, in main
+    obs["L5_negative_controls"] = negative_controls(eval_dir)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/verify_results.py", line 235, in negative_controls
+    rows.append(reproduce_control(eval_dir))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/verify_results.py", line 267, in reproduce_control
+    E.evaluate([(model, dataset, seed, split)], t / "out", "negative_control", 0.0)
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/evaluate.py", line 85, in evaluate
+    "checkpoint": str(ck_path.relative_to(ROOT))}
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/huy.leminh/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/tmpkv7fm0dn/ck/s4d/actrectut_gestures/seed-2/split-01.pt' is not in the subpath of '/work/huy.leminh/code/Dr.Huy/HAR/HARFactors'

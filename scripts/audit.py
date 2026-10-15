@@ -190,7 +190,7 @@ def check_seeds() -> list[str]:
     from src.data.sets import SETS
     from src.evaluation import variance_components as V
     errs = []
-    for f in sorted((ROOT / "results/metrics/confirmatory").glob("*.json")):
+    for f in sorted(p for p in (ROOT / "results/metrics/confirmatory").glob("*.json") if not p.name.endswith(".provenance.json")):
         r = json.loads(f.read_text())
         df = V.load(SETS[r["set"]], r["outcome"], r["datasets"])
         p = V.fit(df, len(SETS[r["set"]]["seeds"]) > 1)

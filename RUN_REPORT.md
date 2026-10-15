@@ -94,6 +94,34 @@ analysis is descriptive over all stored runs. The analysis code and the pre-regi
   - `git init`;
   - the environment checks.
 
+## Stages 03-05 (2026-10-15, on the HPC copy)
+
+- **G2 PASS, G3 PASS.**
+- **G4 sealed** the pre-registration and the analysis code (commit 761d6bd).
+- **H1 (confirmatory): success.**
+  - R = 8.19, 97.5 % interval [2.85, 16.9]; pi_P = 82 % [64, 89]; 828 runs on 7 held-out datasets.
+  - Sensitivity analyses: `results/metrics/confirmatory/`.
+  - With balanced accuracy on S1, the interval includes 1.
+  - Across the 17 WHAR architectures (S3) the network dominates: R' = 0.21.
+- **G5 FAIL** (`results/gates/G5_results_authenticity.json`; kept, never edited).
+  - **What passed:**
+    - 408/408 re-executed runs agree with their records (373 exactly; largest difference 0.35 F1 points);
+    - an independent REML gives the same R for all 6 analyses;
+    - permuting model labels removes the model share;
+    - no leakage path; the S2 access log matches the seal.
+  - **What failed:**
+    1. 7 imported Edge_SSM files under `results/metrics/` have no provenance: `pareto/`, `pareto_heldout/`,
+       `profile.json`, `p5/*_recurrencenet`. The letter does not use them.
+    2. One run differs from its record by exactly 2 windows, which is the declared limit. The comparison used float32
+       values and so counted it as above the limit (an implementation bug).
+    3. A negative control altered one prediction in a degenerate file (dsads, constant predictions), changing one
+       wrong class to another wrong class. No metric changed, so `--recompute` passed. The auditor misses changes that
+       leave the metrics unchanged.
+    4. The provenance negative control was void, because the untampered copy already failed on item 1.
+  - **Informative:** on this cluster's dsads cache the stored dsads checkpoints score at chance (macro-F1 about
+    0.053). dsads runs (in S1) can be verified only by their records.
+  - **Waiting for the user's decision** on the fixes before a G5 rerun.
+
 ## Incomplete / open decisions
 
 - Data for G5:

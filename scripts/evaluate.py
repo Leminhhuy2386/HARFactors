@@ -82,7 +82,7 @@ def evaluate(cells: list[tuple[str, str, int, int]], out_dir: Path, run_id: str,
             for model_id, _, seed, _ in [c for c in cs if c[3] == split]:
                 ck_path = checkpoint_path(model_id, dataset, seed, split)
                 rec = {"model": model_id, "dataset": dataset, "seed": seed, "split": split,
-                       "checkpoint": str(ck_path.relative_to(ROOT))}
+                       "checkpoint": str(ck_path.relative_to(ROOT)) if ck_path.is_relative_to(ROOT) else str(ck_path)}
                 if not ck_path.exists():
                     results.append(rec | {"status": "no checkpoint"})
                     continue

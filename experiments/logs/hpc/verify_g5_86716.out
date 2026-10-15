@@ -1,0 +1,15 @@
+node hpc01.local, job 86716, Thu Oct 15 19:14:37 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+Traceback (most recent call last):
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/verify_results.py", line 442, in <module>
+    main()
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/verify_results.py", line 406, in main
+    obs["L3_second_implementation"] = second_implementation()
+                                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/verify_results.py", line 137, in second_implementation
+    has_seeds = len(SETS[r["set"]]["seeds"]) > 1
+                         ~^^^^^^^
+KeyError: 'set'

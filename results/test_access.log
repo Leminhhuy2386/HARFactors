@@ -13,3 +13,10 @@
 2026-10-15T18:45:59 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on utd_mhad from checkpoints
 2026-10-15T18:46:00 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 120 stored test predictions on wear from checkpoints
 2026-10-15T18:48:22 | scripts/evaluate.py | 20261015_184242_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on wisdm from checkpoints
+2026-10-15T19:15:44 | scripts/verify_results.py | 20261015_191450_verify_G5 | verification (G5): re-read the S2 run records for the second implementation of every confirmatory analysis
+2026-10-15T19:49:12 | scripts/verify_results.py | 20261015_194859_verify_G5 | verification (G5): re-read the S2 run records for the second implementation of every confirmatory analysis
+2026-10-15T19:53:18 | scripts/verify_results.py | 20261015_194859_verify_G5 | verification (G5): re-read the S2 run records for the model-label permutation control
+2026-10-15T19:54:24 | scripts/verify_results.py | 20261015_194859_verify_G5 | verification (G5): re-read the S2 run records for the auditor's --seeds check and its negative control
+2026-10-15T20:51:30 | scripts/verify_results.py | 20261015_205121_verify_G5 | verification (G5): re-read the S2 run records for the second implementation of every confirmatory analysis
+2026-10-15T20:55:15 | scripts/verify_results.py | 20261015_205121_verify_G5 | verification (G5): re-read the S2 run records for the model-label permutation control
+2026-10-15T20:56:13 | scripts/verify_results.py | 20261015_205121_verify_G5 | verification (G5): re-read the S2 run records for the auditor's --seeds check and its negative control
