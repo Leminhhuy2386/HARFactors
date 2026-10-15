@@ -1,0 +1,24 @@
+{
+  "dataset_id": "unimib_shar",
+  "fingerprint": "66d273b801c422d97f5cdcea0a269d7a27d51c73a5c083291aa9c9137096d189",
+  "metrics": {
+    "accuracy": 0.322775274515152,
+    "balanced_accuracy": 0.2398794446008068,
+    "macro_f1": 0.20939607918262482
+  },
+  "model_id": "svm",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "protocol_id": "whar_arena_v1",
+  "source": {
+    "best_epoch": null,
+    "epochs_ran": 0,
+    "framework": "sklearn",
+    "kind": "local_training",
+    "split_identifier": "group_kfold_0",
+    "test_size": 663,
+    "train_size": 5226,
+    "val_size": 1306
+  },
+  "split_id": "split-00",
+  "status": "complete"
+}

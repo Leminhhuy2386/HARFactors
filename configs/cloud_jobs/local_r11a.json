@@ -1,0 +1,107 @@
+{
+ "experiment": "Round 11 A kill-set screen on PC: stylealignnet + elastic-only control on UTD, ActRecTut, SAD, Opportunity, seed 0",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "stylealign_elastic"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "stylealign_elastic"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "stylealign_elastic"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "stylealign_elastic"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "stylealign_elastic"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  }
+ ]
+}

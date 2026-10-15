@@ -1,0 +1,24 @@
+{
+  "dataset_id": "utd_mhad",
+  "fingerprint": "cd846a383466bbd18f5ea22b9b965370062c1ffad4703c1104a75f7ef359335a",
+  "metrics": {
+    "accuracy": 0.6304348111152649,
+    "balanced_accuracy": 0.6417989417989418,
+    "macro_f1": 0.5928894877433777
+  },
+  "model_id": "tinierhar",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "protocol_id": "whar_arena_v1",
+  "source": {
+    "best_epoch": 45,
+    "epochs_ran": 55,
+    "framework": "torch",
+    "kind": "local_training",
+    "split_identifier": "group_kfold_5",
+    "test_size": 138,
+    "train_size": 516,
+    "val_size": 129
+  },
+  "split_id": "split-05",
+  "status": "complete"
+}

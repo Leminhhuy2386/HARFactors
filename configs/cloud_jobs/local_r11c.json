@@ -1,0 +1,151 @@
+{
+ "experiment": "Round 11b on PC: round-8 models seeds 1-2 on HAPT; rerun of the control's SAD half",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "hapt",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "hapt",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "hapt",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "hapt",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "hapt",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "hapt",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "hapt",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "hapt",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "hapt",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "hapt",
+   "seed": 2
+  },
+  {
+   "models": [
+    "stylealign_elastic"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  }
+ ]
+}

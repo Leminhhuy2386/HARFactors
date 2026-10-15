@@ -1,0 +1,66 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "statnet",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-00",
+  "train_seed": 1,
+  "fingerprint": "1f9ee89aa30d69182ff2c539dd3337686ae122a60ff50ed83832010ea4c9709c",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.8239378333091736,
+    "accuracy": 0.8495575189590454,
+    "balanced_accuracy": 0.8505291005291006,
+    "val_macro_f1": 0.962005078792572
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 536,
+    "val_size": 134,
+    "test_size": 113,
+    "best_epoch": 55,
+    "epochs_ran": 65
+  },
+  "model": {
+    "class": "Round8Net",
+    "config": {
+      "side": "stats",
+      "blocks": "plain",
+      "d_model": 48,
+      "num_layers": 3
+    },
+    "params": 17931,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/content/edge/datasets",
+  "device": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "train_seconds": 20.3,
+  "fast_paths": true,
+  "peak_gpu_mb": 91.4,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      5
+    ]
+  ]
+}

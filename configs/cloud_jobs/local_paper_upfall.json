@@ -1,0 +1,93 @@
+{
+ "experiment": "Paper held-out (\u00a75p) on the PC: UP-Fall, 4 models \u00d7 3 seeds (its paper-era parser fails under Colab's Python 3.13; built locally from HAR raw files)",
+ "max_parallel": 3,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "up_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "up_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "up_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "up_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "up_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "up_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "up_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "up_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "up_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "up_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "up_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "up_fall",
+   "seed": 2
+  }
+ ]
+}

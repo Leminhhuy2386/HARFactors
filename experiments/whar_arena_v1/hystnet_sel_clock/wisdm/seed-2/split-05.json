@@ -1,0 +1,70 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "hystnet_sel_clock",
+  "dataset_id": "wisdm",
+  "split_id": "split-05",
+  "train_seed": 2,
+  "fingerprint": "7e38f6eda3847c9e4b1d2a3c898c3ce8ae6b0f79ddd7a68ad094d0542ad3a2b1",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.8225293159484863,
+    "accuracy": 0.8287926316261292,
+    "balanced_accuracy": 0.8343377065435811,
+    "val_macro_f1": 0.9843323826789856
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_5",
+    "train_size": 24488,
+    "val_size": 6122,
+    "test_size": 3487,
+    "best_epoch": 48,
+    "epochs_ran": 58
+  },
+  "model": {
+    "class": "HysteresisNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3,
+      "selective": true,
+      "clock": true
+    },
+    "params": 22790,
+    "input_channels": 3,
+    "window_length": 60,
+    "num_classes": 6,
+    "sampling_freq": 20
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/content/edge/datasets",
+  "device": "NVIDIA L4",
+  "torch": "2.11.0+cu130",
+  "train_seconds": 595.9,
+  "fast_paths": true,
+  "peak_gpu_mb": 96.6,
+  "tau": null,
+  "hysteresis_widths": [
+    [
+      0.05715275928378105,
+      0.3463900685310364,
+      1.5237873792648315
+    ],
+    [
+      0.05283935368061066,
+      0.3616727590560913,
+      1.6349647045135498
+    ],
+    [
+      0.05291816592216492,
+      0.39318642020225525,
+      1.6731458902359009
+    ]
+  ]
+}

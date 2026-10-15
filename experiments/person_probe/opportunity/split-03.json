@@ -1,0 +1,17 @@
+{
+  "dataset": "opportunity",
+  "split": 3,
+  "subjects": {
+    "3": {
+      "n": 1973,
+      "base": 0.43791231513023376,
+      "unlabelled": 0.6388468742370605,
+      "shots_1": 0.5354411900043488,
+      "base_on_rest_shots_1": 0.43741894761721295,
+      "unlabelled+shots_1": 0.7390705347061157,
+      "base_on_rest_unlabelled+shots_1": 0.4377170999844869,
+      "shots_3": 0.7302594383557638,
+      "base_on_rest_shots_3": 0.4372471670309703
+    }
+  }
+}

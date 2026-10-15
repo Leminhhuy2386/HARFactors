@@ -1,0 +1,9 @@
+[submodule "third_party/whar-datasets"]
+	path = third_party/whar-datasets
+	url = https://github.com/teco-kit/whar-datasets.git
+[submodule "third_party/whar-models"]
+	path = third_party/whar-models
+	url = https://github.com/teco-kit/whar-models.git
+[submodule "third_party/whar-arena"]
+	path = third_party/whar-arena
+	url = https://github.com/teco-kit/whar-arena.git

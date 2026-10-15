@@ -1,0 +1,41 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "mamba",
+  "dataset_id": "unimib_shar",
+  "split_id": "split-00",
+  "fingerprint": "f4e390fbe34af57127be2663735c82afef0147c58d5a9a4a4fcb591cfc5581ba",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.5586870908737183,
+    "accuracy": 0.6470588445663452,
+    "balanced_accuracy": 0.5657088160146159
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 5226,
+    "val_size": 1306,
+    "test_size": 663,
+    "best_epoch": 45,
+    "epochs_ran": 55
+  },
+  "model": {
+    "class": "MambaClassifier",
+    "config": {
+      "d_model": 32,
+      "d_state": 16,
+      "num_layers": 2
+    },
+    "params": 20721,
+    "input_channels": 3,
+    "window_length": 150,
+    "num_classes": 17,
+    "sampling_freq": 50
+  },
+  "train_seconds": 2416.7,
+  "peak_gpu_mb": 1524.9,
+  "tau": null
+}

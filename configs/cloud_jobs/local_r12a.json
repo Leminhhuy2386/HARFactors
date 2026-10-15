@@ -1,0 +1,205 @@
+{
+ "experiment": "Round 12 kill-set screen on PC (RESEARCH_PLAN.md 5j): isochron, isochron_rec on UTD, ActRecTut, Opportunity, SAD, WISDM; uniform controls on the first three; seed 0",
+ "max_parallel": 5,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "isochron"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron_rec"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron_rec"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron_rec"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron_uniform"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron_rec_uniform"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron_uniform"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron_rec_uniform"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron_uniform"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron_rec_uniform"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "isochron"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "isochron"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "isochron_rec"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "isochron_rec"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "isochron"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "isochron"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "isochron_rec"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "isochron_rec"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  }
+ ]
+}

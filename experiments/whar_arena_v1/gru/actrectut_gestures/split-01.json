@@ -1,0 +1,40 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "gru",
+  "dataset_id": "actrectut_gestures",
+  "split_id": "split-01",
+  "fingerprint": "a1a1d0a7a121f3a5e76e325c60eb5762a6f1150d6bc9a325b3f8d1eddba59221",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.3829878568649292,
+    "accuracy": 0.6187050342559814,
+    "balanced_accuracy": 0.5454921695679305
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_1",
+    "train_size": 305,
+    "val_size": 76,
+    "test_size": 417,
+    "best_epoch": 26,
+    "epochs_ran": 36
+  },
+  "model": {
+    "class": "GRUClassifier",
+    "config": {
+      "hidden": 64,
+      "num_layers": 2
+    },
+    "params": 41292,
+    "input_channels": 15,
+    "window_length": 96,
+    "num_classes": 12,
+    "sampling_freq": 32
+  },
+  "train_seconds": 3.1,
+  "peak_gpu_mb": 135.6,
+  "tau": null
+}

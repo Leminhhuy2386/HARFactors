@@ -1,0 +1,37 @@
+{
+ "experiment": "Round 10 fast screen on PC: econet, grammarnet on UTD-MHAD and Opportunity, seed 0",
+ "max_parallel": 2,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "econet"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "grammarnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "econet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "grammarnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  }
+ ]
+}

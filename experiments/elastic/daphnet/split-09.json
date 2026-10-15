@@ -1,0 +1,19 @@
+{
+  "dataset_id": "daphnet",
+  "split_id": "split-09",
+  "macro_f1": {
+    "euclid": 0.3282163739204407,
+    "euclid_std": 0.2874692976474762,
+    "dtw": 0.3183088004589081,
+    "dtw_std": 0.2987370491027832
+  },
+  "n_test": 463,
+  "n_ref": 10697,
+  "band": 19,
+  "window_length": 192,
+  "test_subjects": [
+    9
+  ],
+  "datasets_dir": "/content/edge/datasets",
+  "seconds": 172.6
+}

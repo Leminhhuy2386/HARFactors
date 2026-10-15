@@ -1,0 +1,173 @@
+{
+ "experiment": "Round 8 stage A (Kaggle T4, as the references): hybrids on dsads, wisdm, daphnet, seed 0",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "splits": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "splits": [
+    4,
+    5,
+    6,
+    7
+   ]
+  }
+ ]
+}

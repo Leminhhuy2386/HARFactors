@@ -1,0 +1,20 @@
+{
+ "experiment": "Round 8 stage A, local GTX 1080 Ti: seed 0 of the 4 cached dev datasets, 5 models",
+ "max_parallel": 4,
+ "env": {"EDGE_SSM_FAST": "1"},
+ "jobs": [
+  {"models": ["lawnet", "lawnet_rand", "statnet"], "dataset": "utd_mhad", "seed": 0},
+  {"models": ["lawnet", "lawnet_rand", "statnet", "lawnet_rec", "recstatnet"], "dataset": "actrectut_gestures", "seed": 0},
+  {"models": ["lawnet", "lawnet_rand", "statnet"], "dataset": "uci_har", "seed": 0},
+  {"models": ["lawnet", "lawnet_rand", "statnet"], "dataset": "unimib_shar", "seed": 0},
+  {"models": ["lawnet_rec", "recstatnet"], "dataset": "utd_mhad", "seed": 0},
+  {"models": ["lawnet_rec"], "dataset": "uci_har", "seed": 0, "splits": [0, 1, 2, 3, 4]},
+  {"models": ["lawnet_rec"], "dataset": "uci_har", "seed": 0, "splits": [5, 6, 7, 8, 9]},
+  {"models": ["recstatnet"], "dataset": "uci_har", "seed": 0, "splits": [0, 1, 2, 3, 4]},
+  {"models": ["recstatnet"], "dataset": "uci_har", "seed": 0, "splits": [5, 6, 7, 8, 9]},
+  {"models": ["lawnet_rec"], "dataset": "unimib_shar", "seed": 0, "splits": [0, 1, 2, 3, 4]},
+  {"models": ["lawnet_rec"], "dataset": "unimib_shar", "seed": 0, "splits": [5, 6, 7, 8, 9]},
+  {"models": ["recstatnet"], "dataset": "unimib_shar", "seed": 0, "splits": [0, 1, 2, 3, 4]},
+  {"models": ["recstatnet"], "dataset": "unimib_shar", "seed": 0, "splits": [5, 6, 7, 8, 9]}
+ ]
+}

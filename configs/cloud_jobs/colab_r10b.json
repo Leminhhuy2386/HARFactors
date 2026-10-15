@@ -1,0 +1,55 @@
+{
+ "experiment": "Round 10 fast screen on Colab: bhnet on SAD, seed 0",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "bhnet"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "models": [
+    "bhnet"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "models": [
+    "bhnet"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    6,
+    7
+   ]
+  },
+  {
+   "models": [
+    "bhnet"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    8,
+    9
+   ]
+  }
+ ]
+}

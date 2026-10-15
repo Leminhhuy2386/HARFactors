@@ -1,0 +1,179 @@
+{
+ "experiment": "Paper held-out (\u00a75p) on Colab: PAMAP2, UMA-Fall, 4 models \u00d7 3 seeds",
+ "max_parallel": 4,
+ "warm_parallel": 1,
+ "playwright": true,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "pamap2",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "pamap2",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "pamap2",
+   "seed": 0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "pamap2",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "pamap2",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "pamap2",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "pamap2",
+   "seed": 1
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "pamap2",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "pamap2",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "pamap2",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "pamap2",
+   "seed": 2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "pamap2",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uma_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uma_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uma_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "uma_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uma_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uma_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uma_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "uma_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uma_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uma_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uma_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "uma_fall",
+   "seed": 2
+  }
+ ]
+}

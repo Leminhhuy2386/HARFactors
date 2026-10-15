@@ -1,0 +1,46 @@
+{
+ "experiment": "Option C on Colab VM 1 (LB_Keogh-pruned exact 1-NN DTW): wisdm, daphnet 4-9, dsads 1-7",
+ "max_parallel": 3,
+ "warm_parallel": 3,
+ "jobs": [
+  {
+   "script": "elastic_baseline.py",
+   "args": [
+    "--datasets",
+    "wisdm"
+   ],
+   "dataset": "wisdm"
+  },
+  {
+   "script": "elastic_baseline.py",
+   "args": [
+    "--datasets",
+    "daphnet",
+    "--splits",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "dataset": "daphnet"
+  },
+  {
+   "script": "elastic_baseline.py",
+   "args": [
+    "--datasets",
+    "dsads",
+    "--splits",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "dataset": "dsads"
+  }
+ ]
+}

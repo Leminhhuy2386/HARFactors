@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 224" font-family="sans-serif" font-size="12"><style>text{fill:currentColor} line{stroke:currentColor}</style>
+<text x="380.0" y="14" text-anchor="middle">Mean rank over 10 datasets (1 = best); Nemenyi CD = 1.93</text>
+<line x1="210.0" y1="74" x2="600.0" y2="74"/>
+<line x1="210.0" y1="69" x2="210.0" y2="74"/><text x="210.0" y="66" text-anchor="middle">1</text>
+<line x1="307.5" y1="69" x2="307.5" y2="74"/><text x="307.5" y="66" text-anchor="middle">2</text>
+<line x1="405.0" y1="69" x2="405.0" y2="74"/><text x="405.0" y="66" text-anchor="middle">3</text>
+<line x1="502.5" y1="69" x2="502.5" y2="74"/><text x="502.5" y="66" text-anchor="middle">4</text>
+<line x1="600.0" y1="69" x2="600.0" y2="74"/><text x="600.0" y="66" text-anchor="middle">5</text>
+<line x1="210.0" y1="34" x2="398.07626165999795" y2="34" stroke-width="3"/><line x1="210.0" y1="29" x2="210.0" y2="39"/><line x1="398.07626165999795" y1="29" x2="398.07626165999795" y2="39"/><text x="404.07626165999795" y="38">CD</text>
+<line x1="288.0" y1="74" x2="288.0" y2="104"/><line x1="288.0" y1="104" x2="202" y2="104"/><text x="198" y="108" text-anchor="end">S4D (1.80)</text>
+<line x1="307.5" y1="74" x2="307.5" y2="126"/><line x1="307.5" y1="126" x2="202" y2="126"/><text x="198" y="130" text-anchor="end">HysteresisNet sel+clock (2.00)</text>
+<line x1="405.0" y1="74" x2="405.0" y2="148"/><line x1="405.0" y1="148" x2="202" y2="148"/><text x="198" y="152" text-anchor="end">QuantileNet (3.00)</text>
+<line x1="473.25" y1="74" x2="473.25" y2="126"/><line x1="473.25" y1="126" x2="608" y2="126"/><text x="612" y="130" text-anchor="start">Mamba (3.70)</text>
+<line x1="551.25" y1="74" x2="551.25" y2="104"/><line x1="551.25" y1="104" x2="608" y2="104"/><text x="612" y="108" text-anchor="start">No memory (4.50)</text>
+<line x1="285.0" y1="88" x2="476.25" y2="88" stroke-width="4" stroke-linecap="round"/>
+<line x1="402.0" y1="94" x2="554.25" y2="94" stroke-width="4" stroke-linecap="round"/>
+</svg>

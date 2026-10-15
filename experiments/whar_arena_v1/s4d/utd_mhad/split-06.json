@@ -1,0 +1,41 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "s4d",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-06",
+  "fingerprint": "7886cd57b2d642a1aeead27599e034f22806379385bde82b9b1caee9c68d5dd0",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.8147753477096558,
+    "accuracy": 0.8399999737739563,
+    "balanced_accuracy": 0.8602564102564103
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_6",
+    "train_size": 547,
+    "val_size": 136,
+    "test_size": 100,
+    "best_epoch": 51,
+    "epochs_ran": 61
+  },
+  "model": {
+    "class": "S4DClassifier",
+    "config": {
+      "d_model": 64,
+      "d_state": 32,
+      "num_layers": 2
+    },
+    "params": 27675,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "train_seconds": 18.9,
+  "peak_gpu_mb": 139.2,
+  "tau": null
+}

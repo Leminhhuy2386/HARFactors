@@ -1,0 +1,52 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "quantilenet",
+  "dataset_id": "unimib_shar",
+  "split_id": "split-07",
+  "train_seed": 2,
+  "fingerprint": "49aa6ab2c0c4e5aa793d55fd5bb24db6b7150c80648ba38060d366f7d63cbce7",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7049396634101868,
+    "accuracy": 0.7894737124443054,
+    "balanced_accuracy": 0.7117324510821482,
+    "val_macro_f1": 0.7625440955162048
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_7",
+    "train_size": 5148,
+    "val_size": 1287,
+    "test_size": 760,
+    "best_epoch": 77,
+    "epochs_ran": 87
+  },
+  "model": {
+    "class": "QuantileNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3
+    },
+    "params": 20337,
+    "input_channels": 3,
+    "window_length": 150,
+    "num_classes": 17,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/content/edge/datasets",
+  "device": "NVIDIA L4",
+  "torch": "2.11.0+cu130",
+  "train_seconds": 235.4,
+  "fast_paths": true,
+  "peak_gpu_mb": 132.8,
+  "tau": null,
+  "hysteresis_widths": null
+}

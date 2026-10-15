@@ -1,0 +1,55 @@
+{
+ "experiment": "Round 11 A stage 2 on Colab: stylealignnet seed 0 on hapt",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "hapt",
+   "seed": 0,
+   "splits": [
+    0,
+    4,
+    8
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "hapt",
+   "seed": 0,
+   "splits": [
+    1,
+    5,
+    9
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "hapt",
+   "seed": 0,
+   "splits": [
+    2,
+    6
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "hapt",
+   "seed": 0,
+   "splits": [
+    3,
+    7
+   ]
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "experiment": "Paper held-out (\u00a75p) on Kaggle T4: UP-Fall, MotionSense, 4 models \u00d7 3 seeds",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "up_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "up_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "up_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "up_fall",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "up_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "up_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "up_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "up_fall",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "up_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "up_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "up_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "up_fall",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "motion_sense",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "motion_sense",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "motion_sense",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 1
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "motion_sense",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "motion_sense",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "motion_sense",
+   "seed": 2
+  }
+ ]
+}

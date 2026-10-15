@@ -1,0 +1,163 @@
+{
+ "experiment": "Round 14 kill-set screen on PC (RESEARCH_PLAN.md 5m): levelnet, levelnet_plane on UTD, ActRecTut, Opportunity, SAD, WISDM; seed 0",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "levelnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "levelnet_plane"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "levelnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "levelnet_plane"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "levelnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "levelnet_plane"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "levelnet"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "levelnet"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "levelnet_plane"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "levelnet_plane"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "levelnet"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "levelnet"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "levelnet_plane"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "levelnet_plane"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  }
+ ]
+}

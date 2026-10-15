@@ -1,0 +1,84 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "edge_ssm",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-00",
+  "fingerprint": "05f998e2138103d63065901012e983f6a84f27ee4ce29fbb7937e4e397c15980",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7000400424003601,
+    "accuracy": 0.7079645991325378,
+    "balanced_accuracy": 0.7263668430335096
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 536,
+    "val_size": 134,
+    "test_size": 113,
+    "best_epoch": 58,
+    "epochs_ran": 68
+  },
+  "model": {
+    "class": "EdgeSSMClassifier",
+    "config": {
+      "hidden": 64,
+      "kan_hidden": 64
+    },
+    "params": 33627,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "train_seconds": 42.1,
+  "peak_gpu_mb": 476.8,
+  "tau": {
+    "unit": "seconds",
+    "quantiles": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "all": [
+      0.0612,
+      0.2919,
+      1.34
+    ],
+    "per_input_channel": {
+      "Ax": [
+        0.0703,
+        0.2463,
+        1.2154
+      ],
+      "Ay": [
+        0.0539,
+        0.3019,
+        1.3794
+      ],
+      "Az": [
+        0.0541,
+        0.24,
+        1.2352
+      ],
+      "GyroX": [
+        0.0678,
+        0.2733,
+        1.2641
+      ],
+      "GyroY": [
+        0.0655,
+        0.3098,
+        1.1015
+      ],
+      "GyroZ": [
+        0.0626,
+        0.5201,
+        1.5548
+      ]
+    }
+  }
+}

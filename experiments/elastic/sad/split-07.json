@@ -1,0 +1,19 @@
+{
+  "dataset_id": "sad",
+  "split_id": "split-07",
+  "macro_f1": {
+    "euclid": 0.3589484393596649,
+    "euclid_std": 0.9027239084243774,
+    "dtw": 0.46967175602912903,
+    "dtw_std": 0.9525529146194458
+  },
+  "n_test": 826,
+  "n_ref": 7434,
+  "band": 15,
+  "window_length": 150,
+  "test_subjects": [
+    7
+  ],
+  "datasets_dir": "D:\\Projects\\Edge_SSM\\datasets_paper_era_local",
+  "seconds": 252.3
+}

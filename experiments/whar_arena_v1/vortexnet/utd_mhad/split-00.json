@@ -1,0 +1,44 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "vortexnet",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-00",
+  "fingerprint": "303b6a0e26e8a8988a8f0707eee07feaa086e431a1e5d004c0b15cf94fd0d331",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7267573475837708,
+    "accuracy": 0.7433628439903259,
+    "balanced_accuracy": 0.7655202821869489
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 536,
+    "val_size": 134,
+    "test_size": 113,
+    "best_epoch": 27,
+    "epochs_ran": 37
+  },
+  "model": {
+    "class": "VortexNet",
+    "config": {
+      "d_model": 32,
+      "n_units": 32,
+      "num_layers": 3
+    },
+    "params": 17019,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 11.5,
+  "peak_gpu_mb": 131.5,
+  "tau": null,
+  "hysteresis_widths": null
+}

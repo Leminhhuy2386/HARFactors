@@ -1,0 +1,53 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "s4d",
+  "dataset_id": "unimib_shar",
+  "split_id": "split-05",
+  "train_seed": 0,
+  "fingerprint": "51439439100614d0d934220faecc13d114bfc82bb29e9a9a391fb172305809f8",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.6428245902061462,
+    "accuracy": 0.736775815486908,
+    "balanced_accuracy": 0.6402794805185458,
+    "val_macro_f1": 0.7462257742881775
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_5",
+    "train_size": 5121,
+    "val_size": 1280,
+    "test_size": 794,
+    "best_epoch": 57,
+    "epochs_ran": 67
+  },
+  "model": {
+    "class": "S4DClassifier",
+    "config": {
+      "d_model": 64,
+      "d_state": 32,
+      "num_layers": 2
+    },
+    "params": 26833,
+    "input_channels": 3,
+    "window_length": 150,
+    "num_classes": 17,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\HAR\\datasets_paper_era",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 124.3,
+  "fast_paths": true,
+  "peak_gpu_mb": 139.4,
+  "tau": null,
+  "hysteresis_widths": null
+}

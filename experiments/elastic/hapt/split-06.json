@@ -1,0 +1,21 @@
+{
+  "dataset_id": "hapt",
+  "split_id": "split-06",
+  "macro_f1": {
+    "euclid": 0.707352340221405,
+    "euclid_std": 0.5819745063781738,
+    "dtw": 0.8077177405357361,
+    "dtw_std": 0.7820975184440613
+  },
+  "n_test": 930,
+  "n_ref": 8126,
+  "band": 15,
+  "window_length": 150,
+  "test_subjects": [
+    6,
+    16,
+    26
+  ],
+  "datasets_dir": "/content/edge/datasets",
+  "seconds": 42.7
+}

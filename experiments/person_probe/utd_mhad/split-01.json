@@ -1,0 +1,17 @@
+{
+  "dataset": "utd_mhad",
+  "split": 1,
+  "subjects": {
+    "1": {
+      "n": 50,
+      "base": 0.4839506149291992,
+      "unlabelled": 0.48935917019844055,
+      "shots_1": 0.5050264497598013,
+      "base_on_rest_shots_1": 0.49256319801012677,
+      "unlabelled+shots_1": 0.49576719601949054,
+      "base_on_rest_unlabelled+shots_1": 0.47930630048116046,
+      "shots_3": 0.3374485671520233,
+      "base_on_rest_shots_3": 0.3374485671520233
+    }
+  }
+}

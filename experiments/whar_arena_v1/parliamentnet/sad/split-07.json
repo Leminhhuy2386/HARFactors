@@ -1,0 +1,55 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "parliamentnet",
+  "dataset_id": "sad",
+  "split_id": "split-07",
+  "train_seed": 0,
+  "fingerprint": "63593c926163065fcab30abeaf8f0f9651c076fe16704b302d8095868be5c417",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.9975786209106445,
+    "accuracy": 0.9975786805152893,
+    "balanced_accuracy": 0.9975786924939466,
+    "val_macro_f1": 0.9993292093276978
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_7",
+    "train_size": 5948,
+    "val_size": 1486,
+    "test_size": 826,
+    "best_epoch": 17,
+    "epochs_ran": 27
+  },
+  "model": {
+    "class": "ParliamentNet",
+    "config": {
+      "d_model": 48,
+      "num_layers": 2,
+      "patch": 5,
+      "bits": 4
+    },
+    "params": 21492,
+    "input_channels": 60,
+    "window_length": 150,
+    "num_classes": 7,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\Edge_SSM\\datasets_paper_era_local",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 176.0,
+  "fast_paths": true,
+  "peak_gpu_mb": 233.7,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": null
+}

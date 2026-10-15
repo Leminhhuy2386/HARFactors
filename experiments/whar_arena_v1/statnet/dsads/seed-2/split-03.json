@@ -1,0 +1,131 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "statnet",
+  "dataset_id": "dsads",
+  "split_id": "split-03",
+  "train_seed": 2,
+  "fingerprint": "ddb3af275fd6c7a172f2c253596103e2667170e7d2cd77a0fc8bc9cb085e30f7",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.9516677856445312,
+    "accuracy": 0.9550771117210388,
+    "balanced_accuracy": 0.9550770866560341,
+    "val_macro_f1": 0.9992688894271851
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_3",
+    "train_size": 21068,
+    "val_size": 5266,
+    "test_size": 3762,
+    "best_epoch": 15,
+    "epochs_ran": 25
+  },
+  "model": {
+    "class": "Round8Net",
+    "config": {
+      "side": "stats",
+      "blocks": "plain",
+      "d_model": 48,
+      "num_layers": 3
+    },
+    "params": 24459,
+    "input_channels": 45,
+    "window_length": 75,
+    "num_classes": 19,
+    "sampling_freq": 25
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/kaggle/temp_edge/datasets",
+  "device": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "train_seconds": 145.5,
+  "fast_paths": true,
+  "peak_gpu_mb": 79.7,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ],
+    [
+      9,
+      10,
+      11
+    ],
+    [
+      12,
+      13,
+      14
+    ],
+    [
+      15,
+      16,
+      17
+    ],
+    [
+      18,
+      19,
+      20
+    ],
+    [
+      21,
+      22,
+      23
+    ],
+    [
+      24,
+      25,
+      26
+    ],
+    [
+      27,
+      28,
+      29
+    ],
+    [
+      30,
+      31,
+      32
+    ],
+    [
+      33,
+      34,
+      35
+    ],
+    [
+      36,
+      37,
+      38
+    ],
+    [
+      39,
+      40,
+      41
+    ],
+    [
+      42,
+      43,
+      44
+    ]
+  ]
+}

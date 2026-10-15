@@ -1,0 +1,61 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "hystnet_sel",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-03",
+  "fingerprint": "cff8535d50a23e7ca86064dc5eaf2a79e369842d60f2ee3b195ff52cd87b7fa4",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.659729540348053,
+    "accuracy": 0.9117646813392639,
+    "balanced_accuracy": 0.865079365079365,
+    "val_macro_f1": 0.9948692917823792
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_3",
+    "train_size": 572,
+    "val_size": 143,
+    "test_size": 68,
+    "best_epoch": 30,
+    "epochs_ran": 40
+  },
+  "model": {
+    "class": "HysteresisNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3,
+      "selective": true
+    },
+    "params": 23547,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 73.8,
+  "peak_gpu_mb": 591.0,
+  "tau": null,
+  "hysteresis_widths": [
+    [
+      0.046025797724723816,
+      0.3107392191886902,
+      1.6299402713775635
+    ],
+    [
+      0.04448777809739113,
+      0.3648243248462677,
+      1.52968168258667
+    ],
+    [
+      0.045579250901937485,
+      0.3331148624420166,
+      1.8255192041397095
+    ]
+  ]
+}

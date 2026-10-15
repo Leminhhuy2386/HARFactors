@@ -1,0 +1,70 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "hystnet_sel_clock",
+  "dataset_id": "unimib_shar",
+  "split_id": "split-03",
+  "train_seed": 1,
+  "fingerprint": "de96cd9ce78f6115f908af5ec736f291d3dc16d5bcc4d91e6c691fe0d827498f",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.37773022055625916,
+    "accuracy": 0.49712643027305603,
+    "balanced_accuracy": 0.3860006133044673,
+    "val_macro_f1": 0.75273597240448
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_3",
+    "train_size": 5200,
+    "val_size": 1299,
+    "test_size": 696,
+    "best_epoch": 39,
+    "epochs_ran": 49
+  },
+  "model": {
+    "class": "HysteresisNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3,
+      "selective": true,
+      "clock": true
+    },
+    "params": 23153,
+    "input_channels": 3,
+    "window_length": 150,
+    "num_classes": 17,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/content/edge/datasets",
+  "device": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "train_seconds": 467.4,
+  "fast_paths": true,
+  "peak_gpu_mb": 142.7,
+  "tau": null,
+  "hysteresis_widths": [
+    [
+      0.054115019738674164,
+      0.3067342936992645,
+      1.6737204790115356
+    ],
+    [
+      0.04507044702768326,
+      0.36205416917800903,
+      1.4853384494781494
+    ],
+    [
+      0.04073691368103027,
+      0.3951965570449829,
+      1.7546639442443848
+    ]
+  ]
+}

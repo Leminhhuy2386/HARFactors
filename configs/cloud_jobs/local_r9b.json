@@ -1,0 +1,51 @@
+{
+ "experiment": "Round 9b fast screen (kill set UTD, SAD, Opportunity), seed 0, local GTX 1080 Ti",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "parliamentbody"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "parliamentbody"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "parliamentbody"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "parliamentbody"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  }
+ ]
+}

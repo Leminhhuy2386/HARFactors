@@ -1,0 +1,36 @@
+{
+ "experiment": "Option C on Colab (remaining splits only): wisdm 4-9, dsads 3-7",
+ "max_parallel": 2,
+ "warm_parallel": 2,
+ "jobs": [
+  {
+   "script": "elastic_baseline.py",
+   "args": [
+    "--datasets",
+    "wisdm",
+    "--splits",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "dataset": "wisdm"
+  },
+  {
+   "script": "elastic_baseline.py",
+   "args": [
+    "--datasets",
+    "dsads",
+    "--splits",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "dataset": "dsads"
+  }
+ ]
+}

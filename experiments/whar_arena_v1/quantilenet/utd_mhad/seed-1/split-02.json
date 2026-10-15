@@ -1,0 +1,51 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "quantilenet",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-02",
+  "train_seed": 1,
+  "fingerprint": "33c73d8622b30b0547cd2f2240814cf414f47edb4cea244f0c320d10709d4637",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7288066148757935,
+    "accuracy": 0.8681318759918213,
+    "balanced_accuracy": 0.8263888888888888,
+    "val_macro_f1": 0.9495887160301208
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_2",
+    "train_size": 554,
+    "val_size": 138,
+    "test_size": 91,
+    "best_epoch": 36,
+    "epochs_ran": 46
+  },
+  "model": {
+    "class": "QuantileNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3
+    },
+    "params": 20763,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/kaggle/temp_edge/datasets",
+  "device": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "train_seconds": 138.6,
+  "peak_gpu_mb": 130.7,
+  "tau": null,
+  "hysteresis_widths": null
+}

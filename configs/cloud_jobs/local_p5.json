@@ -1,0 +1,209 @@
+{
+ "experiment": "P5 local: seed 0 of uci_har and unimib_shar, all seeds of actrectut_gestures",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "uci_har",
+   "seed": 0,
+   "est_hours": 0.51
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "uci_har",
+   "seed": 0,
+   "est_hours": 0.41
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "uci_har",
+   "seed": 0,
+   "est_hours": 0.38
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "uci_har",
+   "seed": 0,
+   "est_hours": 0.12
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "uci_har",
+   "seed": 0,
+   "est_hours": 0.06
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 0,
+   "est_hours": 0.45
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 0,
+   "est_hours": 0.36
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 0,
+   "est_hours": 0.34
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 0,
+   "est_hours": 0.1
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 0,
+   "est_hours": 0.06
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0,
+   "est_hours": 0.01
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0,
+   "est_hours": 0.01
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0,
+   "est_hours": 0.0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0,
+   "est_hours": 0.0
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0,
+   "est_hours": 0.0
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1,
+   "est_hours": 0.01
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1,
+   "est_hours": 0.01
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1,
+   "est_hours": 0.0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1,
+   "est_hours": 0.0
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1,
+   "est_hours": 0.0
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2,
+   "est_hours": 0.01
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2,
+   "est_hours": 0.01
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2,
+   "est_hours": 0.0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2,
+   "est_hours": 0.0
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2,
+   "est_hours": 0.0
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "dataset_id": "uci_har",
+  "split_id": "split-08",
+  "macro_f1": {
+    "euclid": 0.8873400092124939,
+    "euclid_std": 0.801856279373169,
+    "dtw": 0.9487889409065247,
+    "dtw_std": 0.8151693940162659
+  },
+  "n_test": 850,
+  "n_ref": 7338,
+  "band": 15,
+  "window_length": 150,
+  "test_subjects": [
+    8,
+    18,
+    28
+  ],
+  "datasets_dir": "D:\\Projects\\HAR\\datasets_paper_era",
+  "seconds": 71.5
+}

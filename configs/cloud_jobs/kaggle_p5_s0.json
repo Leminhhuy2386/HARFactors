@@ -1,0 +1,289 @@
+{
+ "experiment": "P5 Kaggle A: seed 0 of the datasets not cached locally",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "est_hours": 0.89
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "est_hours": 0.84
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "est_hours": 0.71
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "est_hours": 0.67
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "est_hours": 0.67
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "est_hours": 0.63
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "hapt",
+   "seed": 0,
+   "est_hours": 0.57
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "est_hours": 0.52
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "est_hours": 0.46
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "hapt",
+   "seed": 0,
+   "est_hours": 0.45
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "hapt",
+   "seed": 0,
+   "est_hours": 0.43
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "est_hours": 0.42
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "est_hours": 0.39
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "est_hours": 0.36
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "est_hours": 0.34
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "mhealth",
+   "seed": 0,
+   "est_hours": 0.27
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "mhealth",
+   "seed": 0,
+   "est_hours": 0.22
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "mhealth",
+   "seed": 0,
+   "est_hours": 0.2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "est_hours": 0.2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "est_hours": 0.19
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "opportunity",
+   "seed": 0,
+   "est_hours": 0.16
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "opportunity",
+   "seed": 0,
+   "est_hours": 0.13
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "hapt",
+   "seed": 0,
+   "est_hours": 0.13
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "opportunity",
+   "seed": 0,
+   "est_hours": 0.12
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "est_hours": 0.12
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "wisdm",
+   "seed": 0,
+   "est_hours": 0.11
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "est_hours": 0.11
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "est_hours": 0.1
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "sad",
+   "seed": 0,
+   "est_hours": 0.07
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "hapt",
+   "seed": 0,
+   "est_hours": 0.07
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "mhealth",
+   "seed": 0,
+   "est_hours": 0.06
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "est_hours": 0.06
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "opportunity",
+   "seed": 0,
+   "est_hours": 0.04
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "mhealth",
+   "seed": 0,
+   "est_hours": 0.03
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "opportunity",
+   "seed": 0,
+   "est_hours": 0.02
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "experiment": "Round 7 stage 2, Colab L4: uci_har and unimib_shar seed 2",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "returnmapnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 2
+  },
+  {
+   "models": [
+    "returnmapnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2
+  }
+ ]
+}

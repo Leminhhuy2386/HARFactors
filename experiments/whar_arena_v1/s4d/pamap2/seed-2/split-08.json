@@ -1,0 +1,54 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "s4d",
+  "dataset_id": "pamap2",
+  "split_id": "split-08",
+  "train_seed": 2,
+  "fingerprint": "203387ba1bd4253440546f324f3cbe583eb8ce5b2077ab3185fec65c15a47978",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.06974358856678009,
+    "accuracy": 0.8292682766914368,
+    "balanced_accuracy": 0.8292682926829268,
+    "val_macro_f1": 0.9152341485023499
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_8",
+    "train_size": 10196,
+    "val_size": 2549,
+    "test_size": 41,
+    "best_epoch": 19,
+    "epochs_ran": 29
+  },
+  "model": {
+    "class": "S4DClassifier",
+    "config": {
+      "d_model": 64,
+      "d_state": 32,
+      "num_layers": 2
+    },
+    "params": 29709,
+    "input_channels": 52,
+    "window_length": 300,
+    "num_classes": 13,
+    "sampling_freq": 100
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/content/edge/datasets",
+  "device": "NVIDIA L4",
+  "torch": "2.11.0+cu130",
+  "train_seconds": 93.3,
+  "fast_paths": true,
+  "peak_gpu_mb": 192.2,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": null
+}

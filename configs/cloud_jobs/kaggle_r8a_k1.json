@@ -1,0 +1,82 @@
+{
+ "experiment": "Round 8 stage A (Kaggle T4, as the references): memoryless trio on 5 dev datasets, hybrids on sad/hapt, seed 0",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "lawnet",
+    "lawnet_rand",
+    "statnet"
+   ],
+   "dataset": "wisdm",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet",
+    "lawnet_rand",
+    "statnet"
+   ],
+   "dataset": "dsads",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet",
+    "lawnet_rand",
+    "statnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet",
+    "lawnet_rand",
+    "statnet"
+   ],
+   "dataset": "hapt",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet",
+    "lawnet_rand",
+    "statnet"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "hapt",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "hapt",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  }
+ ]
+}

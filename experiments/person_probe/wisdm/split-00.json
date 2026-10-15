@@ -1,0 +1,50 @@
+{
+  "dataset": "wisdm",
+  "split": 0,
+  "subjects": {
+    "0": {
+      "n": 982,
+      "base": 0.4178711473941803,
+      "unlabelled": 0.41942667961120605,
+      "shots_1": 0.4185389180978139,
+      "base_on_rest_shots_1": 0.41746120651563007,
+      "unlabelled+shots_1": 0.42166168491045636,
+      "base_on_rest_unlabelled+shots_1": 0.4168846507867177,
+      "shots_3": 0.4206595718860626,
+      "base_on_rest_shots_3": 0.41619465748469037
+    },
+    "10": {
+      "n": 1075,
+      "base": 0.5714731812477112,
+      "unlabelled": 0.587689220905304,
+      "shots_1": 0.7990540067354838,
+      "base_on_rest_shots_1": 0.5708110332489014,
+      "unlabelled+shots_1": 0.7871587872505188,
+      "base_on_rest_unlabelled+shots_1": 0.572049081325531,
+      "shots_3": 0.8041269381841024,
+      "base_on_rest_shots_3": 0.5716380079587301
+    },
+    "20": {
+      "n": 699,
+      "base": 0.5788379311561584,
+      "unlabelled": 0.5314502120018005,
+      "shots_1": 0.5779059926668803,
+      "base_on_rest_shots_1": 0.5788495540618896,
+      "unlabelled+shots_1": 0.528420110543569,
+      "base_on_rest_unlabelled+shots_1": 0.5786180098851522,
+      "shots_3": 0.5764087041219076,
+      "base_on_rest_shots_3": 0.5778487722078959
+    },
+    "30": {
+      "n": 365,
+      "base": 0.6163592338562012,
+      "unlabelled": 0.49747633934020996,
+      "shots_1": 0.6186072826385498,
+      "base_on_rest_shots_1": 0.6165724396705627,
+      "unlabelled+shots_1": 0.6141670147577921,
+      "base_on_rest_unlabelled+shots_1": 0.6160963177680969,
+      "shots_3": 0.6321010986963908,
+      "base_on_rest_shots_3": 0.6148960987726847
+    }
+  }
+}

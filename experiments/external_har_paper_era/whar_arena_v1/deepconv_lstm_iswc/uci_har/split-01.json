@@ -1,0 +1,24 @@
+{
+  "dataset_id": "uci_har",
+  "fingerprint": "e76fd7d6bdc2bc1a49fdf65d43047b9fe6225697dcc05af6aeffddf5f4c8d196",
+  "metrics": {
+    "accuracy": 0.9057788848876953,
+    "balanced_accuracy": 0.9040702022560363,
+    "macro_f1": 0.9025082588195801
+  },
+  "model_id": "deepconv_lstm_iswc",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "protocol_id": "whar_arena_v1",
+  "source": {
+    "best_epoch": 33,
+    "epochs_ran": 43,
+    "framework": "torch",
+    "kind": "local_training",
+    "split_identifier": "group_kfold_1",
+    "test_size": 796,
+    "train_size": 5914,
+    "val_size": 1478
+  },
+  "split_id": "split-01",
+  "status": "complete"
+}

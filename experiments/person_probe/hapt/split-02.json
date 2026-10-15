@@ -1,0 +1,39 @@
+{
+  "dataset": "hapt",
+  "split": 2,
+  "subjects": {
+    "2": {
+      "n": 299,
+      "base": 0.8655255436897278,
+      "unlabelled": 0.9166666865348816,
+      "shots_1": 0.6811696688334147,
+      "base_on_rest_shots_1": 0.6811696688334147,
+      "unlabelled+shots_1": 0.7731481194496155,
+      "base_on_rest_unlabelled+shots_1": 0.7089474598566691,
+      "shots_3": 0.49718397855758667,
+      "base_on_rest_shots_3": 0.49718397855758667
+    },
+    "12": {
+      "n": 287,
+      "base": 0.8808287978172302,
+      "unlabelled": 0.8448669910430908,
+      "shots_1": 0.7601268092791239,
+      "base_on_rest_shots_1": 0.7581422527631124,
+      "unlabelled+shots_1": 0.7197449008623759,
+      "base_on_rest_unlabelled+shots_1": 0.7819621364275614,
+      "shots_3": 0.4821596046288808,
+      "base_on_rest_shots_3": 0.480070819457372
+    },
+    "22": {
+      "n": 320,
+      "base": 0.6340484619140625,
+      "unlabelled": 0.6269841194152832,
+      "shots_1": 0.6268229087193807,
+      "base_on_rest_shots_1": 0.6224695444107056,
+      "unlabelled+shots_1": 0.6508856018384298,
+      "base_on_rest_unlabelled+shots_1": 0.5902305245399475,
+      "shots_3": 0.524771382411321,
+      "base_on_rest_shots_3": 0.5458797017733256
+    }
+  }
+}

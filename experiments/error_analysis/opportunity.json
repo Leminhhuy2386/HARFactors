@@ -1,0 +1,252 @@
+{
+  "dataset": "opportunity",
+  "classes": [
+    "Unknown",
+    "Stand",
+    "Walk",
+    "Sit",
+    "Lie"
+  ],
+  "models": {
+    "recurrencenet": {
+      "runs": 12,
+      "macro_f1": 61.59166666691181,
+      "errors": 5620,
+      "categories": {
+        "static_postures": {
+          "error_share": 0.0028469750889679717,
+          "oracle_gain": 0.07079306943763528
+        },
+        "null_class": {
+          "error_share": 0.7912811387900356,
+          "oracle_gain": 11.442969036839846
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 2796,
+          "true": "Unknown",
+          "pred": "Walk",
+          "share": 0.49750889679715304
+        },
+        {
+          "count": 778,
+          "true": "Sit",
+          "pred": "Walk",
+          "share": 0.13843416370106762
+        },
+        {
+          "count": 446,
+          "true": "Stand",
+          "pred": "Unknown",
+          "share": 0.07935943060498221
+        },
+        {
+          "count": 420,
+          "true": "Walk",
+          "pred": "Unknown",
+          "share": 0.07473309608540925
+        },
+        {
+          "count": 381,
+          "true": "Sit",
+          "pred": "Unknown",
+          "share": 0.06779359430604982
+        },
+        {
+          "count": 365,
+          "true": "Stand",
+          "pred": "Walk",
+          "share": 0.06494661921708185
+        },
+        {
+          "count": 214,
+          "true": "Unknown",
+          "pred": "Stand",
+          "share": 0.03807829181494662
+        },
+        {
+          "count": 190,
+          "true": "Unknown",
+          "pred": "Sit",
+          "share": 0.033807829181494664
+        }
+      ],
+      "worst_recall": [
+        [
+          0.7106666666666667,
+          "Walk"
+        ],
+        [
+          0.798666163332075,
+          "Unknown"
+        ],
+        [
+          0.8599625659350009,
+          "Stand"
+        ],
+        [
+          0.8612006205991168,
+          "Sit"
+        ]
+      ],
+      "confusion_total": [
+        [
+          12694,
+          214,
+          2796,
+          190,
+          0
+        ],
+        [
+          446,
+          5054,
+          365,
+          12,
+          0
+        ],
+        [
+          420,
+          10,
+          1066,
+          4,
+          0
+        ],
+        [
+          381,
+          4,
+          778,
+          7216,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "parliamentnet": {
+      "runs": 4,
+      "macro_f1": 70.66653559731884,
+      "errors": 847,
+      "categories": {
+        "static_postures": {
+          "error_share": 0.015348288075560802,
+          "oracle_gain": 0.20172587204363157
+        },
+        "null_class": {
+          "error_share": 0.9138134592680047,
+          "oracle_gain": 7.770768001680295
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 442,
+          "true": "Stand",
+          "pred": "Unknown",
+          "share": 0.5218417945690673
+        },
+        {
+          "count": 120,
+          "true": "Sit",
+          "pred": "Unknown",
+          "share": 0.14167650531286896
+        },
+        {
+          "count": 107,
+          "true": "Unknown",
+          "pred": "Sit",
+          "share": 0.12632821723730814
+        },
+        {
+          "count": 63,
+          "true": "Unknown",
+          "pred": "Stand",
+          "share": 0.0743801652892562
+        },
+        {
+          "count": 57,
+          "true": "Sit",
+          "pred": "Walk",
+          "share": 0.06729634002361275
+        },
+        {
+          "count": 41,
+          "true": "Walk",
+          "pred": "Unknown",
+          "share": 0.048406139315230225
+        },
+        {
+          "count": 7,
+          "true": "Stand",
+          "pred": "Sit",
+          "share": 0.008264462809917356
+        },
+        {
+          "count": 6,
+          "true": "Sit",
+          "pred": "Stand",
+          "share": 0.0070838252656434475
+        }
+      ],
+      "worst_recall": [
+        [
+          0.7702909647779479,
+          "Stand"
+        ],
+        [
+          0.914,
+          "Walk"
+        ],
+        [
+          0.9344790547798066,
+          "Sit"
+        ],
+        [
+          0.9677236693091733,
+          "Unknown"
+        ]
+      ],
+      "confusion_total": [
+        [
+          5127,
+          63,
+          1,
+          107,
+          0
+        ],
+        [
+          442,
+          1509,
+          1,
+          7,
+          0
+        ],
+        [
+          41,
+          1,
+          457,
+          1,
+          0
+        ],
+        [
+          120,
+          6,
+          57,
+          2610,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  }
+}

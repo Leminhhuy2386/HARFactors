@@ -1,0 +1,19 @@
+{
+  "dataset_id": "actrectut_gestures",
+  "split_id": "split-00",
+  "macro_f1": {
+    "euclid": 0.3615654706954956,
+    "euclid_std": 0.46930208802223206,
+    "dtw": 0.6045865416526794,
+    "dtw_std": 0.6907250285148621
+  },
+  "n_test": 381,
+  "n_ref": 417,
+  "band": 10,
+  "window_length": 96,
+  "test_subjects": [
+    0
+  ],
+  "datasets_dir": "D:\\Projects\\HAR\\datasets_paper_era",
+  "seconds": 2.1
+}

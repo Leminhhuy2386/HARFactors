@@ -1,0 +1,266 @@
+{
+ "experiment": "Round 11b on Colab VM B: round-8 models seeds 1-2 on UCI-HAR and UniMiB",
+ "max_parallel": 4,
+ "warm_parallel": 2,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uci_har",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uci_har",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2
+  }
+ ]
+}

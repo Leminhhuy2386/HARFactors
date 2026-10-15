@@ -1,0 +1,51 @@
+{
+ "experiment": "Round 11 A stage 2 on PC (rerun of the jobs that hit out-of-memory): uci_har, unimib_shar 0-4",
+ "max_parallel": 3,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 0,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ ]
+}

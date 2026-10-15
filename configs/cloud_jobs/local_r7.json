@@ -1,0 +1,51 @@
+{
+ "experiment": "Round 7 stage 2, local GTX 1080 Ti: seed 0 of the dev datasets, all seeds of actrectut_gestures",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "returnmapnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 0
+  },
+  {
+   "models": [
+    "returnmapnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 0
+  },
+  {
+   "models": [
+    "returnmapnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "returnmapnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "returnmapnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "returnmapnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  }
+ ]
+}

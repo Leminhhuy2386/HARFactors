@@ -1,0 +1,53 @@
+{
+ "experiment": "Round 11b on Kaggle T4: round-8 models seeds 1-2 on WISDM",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "wisdm",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "wisdm",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "wisdm",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "wisdm",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "wisdm",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "wisdm",
+   "seed": 2
+  }
+ ]
+}

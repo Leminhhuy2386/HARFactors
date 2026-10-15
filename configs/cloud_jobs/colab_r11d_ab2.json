@@ -1,0 +1,102 @@
+{
+ "experiment": "Round 11b a/b test, remainder: Opportunity (cache build was OOM-killed on a T4 VM) and SAD splits killed by OOM; finished splits are skipped via prior results. Opportunity warms first, one cache at a time",
+ "max_parallel": 3,
+ "warm_parallel": 1,
+ "playwright": true,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  }
+ ]
+}

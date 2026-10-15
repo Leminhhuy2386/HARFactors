@@ -1,0 +1,9 @@
+{
+  "experiment": "P10: base HysteresisNet (no clock, no selective widths), the pure rate-independent memory; added after hystnet_sel_clock solved the freq control",
+  "jobs": [
+    {"script": "synthetic_test.py", "args": ["--tasks", "loop_dir", "--models", "hystnet"]},
+    {"script": "synthetic_test.py", "args": ["--tasks", "step_dir", "--models", "hystnet"]},
+    {"script": "synthetic_test.py", "args": ["--tasks", "freq", "--models", "hystnet"]},
+    {"script": "synthetic_test.py", "args": ["--tasks", "long_order", "--models", "hystnet"]}
+  ]
+}

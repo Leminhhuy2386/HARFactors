@@ -1,0 +1,39 @@
+{
+  "dataset": "unimib_shar",
+  "split": 6,
+  "subjects": {
+    "6": {
+      "n": 308,
+      "base": 0.5147781372070312,
+      "unlabelled": 0.48906534910202026,
+      "shots_1": 0.5297103722890218,
+      "base_on_rest_shots_1": 0.5217200716336569,
+      "unlabelled+shots_1": 0.480753093957901,
+      "base_on_rest_unlabelled+shots_1": 0.5101007024447123,
+      "shots_3": 0.5507012009620667,
+      "base_on_rest_shots_3": 0.5179667274157206
+    },
+    "16": {
+      "n": 193,
+      "base": 0.6410019993782043,
+      "unlabelled": 0.63929682970047,
+      "shots_1": 0.6310792764027914,
+      "base_on_rest_shots_1": 0.6404353578885397,
+      "unlabelled+shots_1": 0.6437298258145651,
+      "base_on_rest_unlabelled+shots_1": 0.6402596235275269,
+      "shots_3": 0.65740966796875,
+      "base_on_rest_shots_3": 0.6510545611381531
+    },
+    "26": {
+      "n": 277,
+      "base": 0.7081072330474854,
+      "unlabelled": 0.658238410949707,
+      "shots_1": 0.7046124736467997,
+      "base_on_rest_shots_1": 0.7036120295524597,
+      "unlabelled+shots_1": 0.6717626651128134,
+      "base_on_rest_unlabelled+shots_1": 0.7024739583333334,
+      "shots_3": 0.7363351384798685,
+      "base_on_rest_shots_3": 0.7241185506184896
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "s4d",
+  "dataset_id": "wisdm",
+  "split_id": "split-02",
+  "train_seed": 0,
+  "fingerprint": "c87af256202617b6834fc43e5ee7d6f4d27df69dd3a95494983792faa0c3e868",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7371392846107483,
+    "accuracy": 0.80887371301651,
+    "balanced_accuracy": 0.7507765852083601,
+    "val_macro_f1": 0.9877507090568542
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_2",
+    "train_size": 23528,
+    "val_size": 5881,
+    "test_size": 4688,
+    "best_epoch": 54,
+    "epochs_ran": 64
+  },
+  "model": {
+    "class": "S4DClassifier",
+    "config": {
+      "d_model": 64,
+      "d_state": 32,
+      "num_layers": 2
+    },
+    "params": 26118,
+    "input_channels": 3,
+    "window_length": 60,
+    "num_classes": 6,
+    "sampling_freq": 20
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/kaggle/temp_edge/datasets",
+  "device": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "train_seconds": 374.7,
+  "fast_paths": true,
+  "peak_gpu_mb": 90.3,
+  "tau": null,
+  "hysteresis_widths": null
+}

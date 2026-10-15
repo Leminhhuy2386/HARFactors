@@ -1,0 +1,17 @@
+{
+  "dataset": "actrectut_gestures",
+  "split": 0,
+  "n_fit": 417,
+  "n_test": 381,
+  "macro_f1": {
+    "stats": 0.6734686493873596,
+    "level": 0.6120885610580444,
+    "level3": 0.6475574374198914,
+    "level+stats": 0.6361331343650818,
+    "level3+stats": 0.6538044810295105
+  },
+  "macro_f1_et": {
+    "level3": 0.5532305836677551,
+    "level3+stats": 0.6475740075111389
+  }
+}

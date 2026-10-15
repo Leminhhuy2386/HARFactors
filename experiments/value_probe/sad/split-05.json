@@ -1,0 +1,17 @@
+{
+  "dataset": "sad",
+  "split": 5,
+  "n_fit": 7434,
+  "n_test": 826,
+  "macro_f1": {
+    "stats": 0.9987893104553223,
+    "level": 1.0,
+    "level3": 1.0,
+    "level+stats": 1.0,
+    "level3+stats": 1.0
+  },
+  "macro_f1_et": {
+    "level3": 0.991547703742981,
+    "level3+stats": 0.991544246673584
+  }
+}

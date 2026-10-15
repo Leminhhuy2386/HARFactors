@@ -1,0 +1,24 @@
+{
+  "dataset_id": "unimib_shar",
+  "fingerprint": "9dd72a2bd95f8f76fa7de82e6cc330850494d1058e2a4041adc38c311beb4c71",
+  "metrics": {
+    "accuracy": 0.75944584608078,
+    "balanced_accuracy": 0.6835930829832969,
+    "macro_f1": 0.6749641299247742
+  },
+  "model_id": "cnn_har",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "protocol_id": "whar_arena_v1",
+  "source": {
+    "best_epoch": 19,
+    "epochs_ran": 29,
+    "framework": "torch",
+    "kind": "local_training",
+    "split_identifier": "group_kfold_5",
+    "test_size": 794,
+    "train_size": 5121,
+    "val_size": 1280
+  },
+  "split_id": "split-05",
+  "status": "complete"
+}

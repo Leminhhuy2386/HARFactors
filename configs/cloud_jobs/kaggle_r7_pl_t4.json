@@ -1,0 +1,79 @@
+{
+ "experiment": "Round 7 stage 2 PhaseLockNet, Kaggle T4: utd_mhad seeds 1-2, uci_har and unimib_shar seed 1",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "phaselocknet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "phaselocknet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "phaselocknet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "phaselocknet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "phaselocknet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "phaselocknet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  }
+ ]
+}

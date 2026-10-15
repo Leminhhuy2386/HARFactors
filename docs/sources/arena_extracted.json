@@ -1,0 +1,4237 @@
+{
+ "f1": {
+  "sad": {
+   "CNN-HAR": [
+    95.6,
+    5.91
+   ],
+   "TinyHAR": [
+    97.67,
+    5.22
+   ],
+   "Triple-Cross-Attn": [
+    90.77,
+    8.68
+   ],
+   "DANA": [
+    93.41,
+    10.89
+   ],
+   "TinierHAR": [
+    91.22,
+    12.37
+   ],
+   "Attend+Discriminate": [
+    95.68,
+    7.2
+   ],
+   "DynamicWHAR": [
+    95.67,
+    5.77
+   ],
+   "Random Forest": [
+    98.25,
+    1.38
+   ],
+   "DeepConvLSTM-Attn": [
+    91.43,
+    12.94
+   ],
+   "MLP-HAR": [
+    97.38,
+    2.75
+   ],
+   "DeepConvLSTM": [
+    91.14,
+    11.23
+   ],
+   "MLP-Mixer": [
+    93.51,
+    8.45
+   ],
+   "Guan-LSTM": [
+    90.1,
+    13.0
+   ],
+   "DeepConvShallowLSTM": [
+    95.45,
+    5.8
+   ],
+   "SA-HAR": [
+    81.24,
+    24.82
+   ],
+   "SVM": [
+    90.36,
+    11.3
+   ],
+   "k-NN": [
+    82.09,
+    11.58
+   ],
+   "Mean": [
+    92.41,
+    9.37
+   ]
+  },
+  "uci_har": {
+   "CNN-HAR": [
+    96.03,
+    2.91
+   ],
+   "TinyHAR": [
+    96.11,
+    2.08
+   ],
+   "Triple-Cross-Attn": [
+    95.96,
+    2.63
+   ],
+   "DANA": [
+    94.97,
+    2.56
+   ],
+   "TinierHAR": [
+    95.17,
+    3.81
+   ],
+   "Attend+Discriminate": [
+    94.05,
+    4.35
+   ],
+   "DynamicWHAR": [
+    92.12,
+    4.03
+   ],
+   "Random Forest": [
+    84.69,
+    5.26
+   ],
+   "DeepConvLSTM-Attn": [
+    92.57,
+    4.64
+   ],
+   "MLP-HAR": [
+    93.19,
+    3.74
+   ],
+   "DeepConvLSTM": [
+    93.0,
+    4.14
+   ],
+   "MLP-Mixer": [
+    94.57,
+    3.41
+   ],
+   "Guan-LSTM": [
+    91.46,
+    6.78
+   ],
+   "DeepConvShallowLSTM": [
+    90.02,
+    4.94
+   ],
+   "SA-HAR": [
+    92.27,
+    5.09
+   ],
+   "SVM": [
+    72.72,
+    6.62
+   ],
+   "k-NN": [
+    71.23,
+    5.39
+   ],
+   "Mean": [
+    90.6,
+    4.26
+   ]
+  },
+  "motion_sense": {
+   "CNN-HAR": [
+    91.51,
+    6.98
+   ],
+   "TinyHAR": [
+    91.2,
+    6.47
+   ],
+   "Triple-Cross-Attn": [
+    91.34,
+    4.02
+   ],
+   "DANA": [
+    88.91,
+    6.94
+   ],
+   "TinierHAR": [
+    90.9,
+    5.4
+   ],
+   "Attend+Discriminate": [
+    88.57,
+    6.31
+   ],
+   "DynamicWHAR": [
+    93.48,
+    4.15
+   ],
+   "Random Forest": [
+    91.49,
+    3.67
+   ],
+   "DeepConvLSTM-Attn": [
+    88.48,
+    6.68
+   ],
+   "MLP-HAR": [
+    91.16,
+    5.3
+   ],
+   "DeepConvLSTM": [
+    87.56,
+    7.52
+   ],
+   "MLP-Mixer": [
+    91.24,
+    5.92
+   ],
+   "Guan-LSTM": [
+    90.52,
+    7.84
+   ],
+   "DeepConvShallowLSTM": [
+    88.6,
+    6.23
+   ],
+   "SA-HAR": [
+    85.26,
+    9.47
+   ],
+   "SVM": [
+    76.54,
+    11.51
+   ],
+   "k-NN": [
+    67.42,
+    8.77
+   ],
+   "Mean": [
+    87.89,
+    6.66
+   ]
+  },
+  "wear": {
+   "CNN-HAR": [
+    86.9,
+    8.45
+   ],
+   "TinyHAR": [
+    86.48,
+    8.32
+   ],
+   "Triple-Cross-Attn": [
+    88.52,
+    6.6
+   ],
+   "DANA": [
+    87.01,
+    7.66
+   ],
+   "TinierHAR": [
+    87.04,
+    9.04
+   ],
+   "Attend+Discriminate": [
+    85.63,
+    9.32
+   ],
+   "DynamicWHAR": [
+    89.65,
+    5.42
+   ],
+   "Random Forest": [
+    87.34,
+    5.55
+   ],
+   "DeepConvLSTM-Attn": [
+    84.16,
+    8.84
+   ],
+   "MLP-HAR": [
+    85.28,
+    9.15
+   ],
+   "DeepConvLSTM": [
+    83.33,
+    10.31
+   ],
+   "MLP-Mixer": [
+    83.99,
+    10.64
+   ],
+   "Guan-LSTM": [
+    82.81,
+    11.89
+   ],
+   "DeepConvShallowLSTM": [
+    81.13,
+    8.18
+   ],
+   "SA-HAR": [
+    84.24,
+    10.61
+   ],
+   "SVM": [
+    75.92,
+    10.27
+   ],
+   "k-NN": [
+    69.67,
+    10.65
+   ],
+   "Mean": [
+    84.06,
+    8.88
+   ]
+  },
+  "dsads": {
+   "CNN-HAR": [
+    86.87,
+    6.74
+   ],
+   "TinyHAR": [
+    86.77,
+    6.61
+   ],
+   "Triple-Cross-Attn": [
+    85.57,
+    7.83
+   ],
+   "DANA": [
+    84.42,
+    7.11
+   ],
+   "TinierHAR": [
+    86.4,
+    7.01
+   ],
+   "Attend+Discriminate": [
+    86.15,
+    4.18
+   ],
+   "DynamicWHAR": [
+    87.85,
+    6.44
+   ],
+   "Random Forest": [
+    89.33,
+    4.03
+   ],
+   "DeepConvLSTM-Attn": [
+    83.79,
+    9.8
+   ],
+   "MLP-HAR": [
+    84.26,
+    8.04
+   ],
+   "DeepConvLSTM": [
+    81.98,
+    9.31
+   ],
+   "MLP-Mixer": [
+    81.5,
+    5.18
+   ],
+   "Guan-LSTM": [
+    83.22,
+    6.9
+   ],
+   "DeepConvShallowLSTM": [
+    85.69,
+    7.01
+   ],
+   "SA-HAR": [
+    77.43,
+    8.46
+   ],
+   "SVM": [
+    75.88,
+    6.44
+   ],
+   "k-NN": [
+    70.94,
+    4.93
+   ],
+   "Mean": [
+    83.41,
+    6.82
+   ]
+  },
+  "mhealth": {
+   "CNN-HAR": [
+    86.13,
+    5.16
+   ],
+   "TinyHAR": [
+    80.53,
+    10.16
+   ],
+   "Triple-Cross-Attn": [
+    81.28,
+    8.26
+   ],
+   "DANA": [
+    82.96,
+    6.97
+   ],
+   "TinierHAR": [
+    84.76,
+    6.45
+   ],
+   "Attend+Discriminate": [
+    83.95,
+    9.31
+   ],
+   "DynamicWHAR": [
+    85.74,
+    5.58
+   ],
+   "Random Forest": [
+    87.65,
+    4.83
+   ],
+   "DeepConvLSTM-Attn": [
+    80.52,
+    9.34
+   ],
+   "MLP-HAR": [
+    80.76,
+    7.2
+   ],
+   "DeepConvLSTM": [
+    78.03,
+    9.72
+   ],
+   "MLP-Mixer": [
+    77.2,
+    10.7
+   ],
+   "Guan-LSTM": [
+    78.44,
+    6.96
+   ],
+   "DeepConvShallowLSTM": [
+    81.91,
+    6.12
+   ],
+   "SA-HAR": [
+    76.5,
+    12.08
+   ],
+   "SVM": [
+    76.61,
+    10.21
+   ],
+   "k-NN": [
+    64.17,
+    16.66
+   ],
+   "Mean": [
+    80.42,
+    8.57
+   ]
+  },
+  "wisdm": {
+   "CNN-HAR": [
+    81.44,
+    9.1
+   ],
+   "TinyHAR": [
+    85.0,
+    6.17
+   ],
+   "Triple-Cross-Attn": [
+    83.55,
+    4.66
+   ],
+   "DANA": [
+    85.49,
+    5.01
+   ],
+   "TinierHAR": [
+    83.77,
+    5.56
+   ],
+   "Attend+Discriminate": [
+    83.79,
+    5.61
+   ],
+   "DynamicWHAR": [
+    81.93,
+    7.4
+   ],
+   "Random Forest": [
+    71.58,
+    6.52
+   ],
+   "DeepConvLSTM-Attn": [
+    84.65,
+    5.52
+   ],
+   "MLP-HAR": [
+    76.07,
+    4.53
+   ],
+   "DeepConvLSTM": [
+    83.99,
+    4.82
+   ],
+   "MLP-Mixer": [
+    82.98,
+    5.77
+   ],
+   "Guan-LSTM": [
+    84.24,
+    4.18
+   ],
+   "DeepConvShallowLSTM": [
+    82.97,
+    4.97
+   ],
+   "SA-HAR": [
+    65.06,
+    7.59
+   ],
+   "SVM": [
+    59.16,
+    4.44
+   ],
+   "k-NN": [
+    51.19,
+    6.9
+   ],
+   "Mean": [
+    78.05,
+    5.81
+   ]
+  },
+  "real_disp": {
+   "CNN-HAR": [
+    86.97,
+    10.93
+   ],
+   "TinyHAR": [
+    88.3,
+    10.07
+   ],
+   "Triple-Cross-Attn": [
+    87.16,
+    9.48
+   ],
+   "DANA": [
+    84.08,
+    10.85
+   ],
+   "TinierHAR": [
+    86.26,
+    11.17
+   ],
+   "Attend+Discriminate": [
+    86.39,
+    11.28
+   ],
+   "DynamicWHAR": [
+    68.96,
+    13.93
+   ],
+   "Random Forest": [
+    84.91,
+    8.42
+   ],
+   "DeepConvLSTM-Attn": [
+    80.07,
+    12.13
+   ],
+   "MLP-HAR": [
+    85.41,
+    10.57
+   ],
+   "DeepConvLSTM": [
+    79.35,
+    12.87
+   ],
+   "MLP-Mixer": [
+    66.11,
+    15.19
+   ],
+   "Guan-LSTM": [
+    68.31,
+    15.57
+   ],
+   "DeepConvShallowLSTM": [
+    80.22,
+    10.64
+   ],
+   "SA-HAR": [
+    80.68,
+    11.45
+   ],
+   "SVM": [
+    52.85,
+    14.3
+   ],
+   "k-NN": [
+    38.31,
+    9.37
+   ],
+   "Mean": [
+    76.73,
+    11.66
+   ]
+  },
+  "hapt": {
+   "CNN-HAR": [
+    84.8,
+    5.58
+   ],
+   "TinyHAR": [
+    81.02,
+    6.79
+   ],
+   "Triple-Cross-Attn": [
+    82.02,
+    6.06
+   ],
+   "DANA": [
+    83.58,
+    6.23
+   ],
+   "TinierHAR": [
+    81.42,
+    6.23
+   ],
+   "Attend+Discriminate": [
+    81.38,
+    6.09
+   ],
+   "DynamicWHAR": [
+    79.41,
+    5.66
+   ],
+   "Random Forest": [
+    67.13,
+    5.5
+   ],
+   "DeepConvLSTM-Attn": [
+    79.52,
+    6.66
+   ],
+   "MLP-HAR": [
+    79.22,
+    6.11
+   ],
+   "DeepConvLSTM": [
+    77.33,
+    7.17
+   ],
+   "MLP-Mixer": [
+    80.5,
+    5.76
+   ],
+   "Guan-LSTM": [
+    73.44,
+    10.25
+   ],
+   "DeepConvShallowLSTM": [
+    59.74,
+    5.33
+   ],
+   "SA-HAR": [
+    75.69,
+    8.68
+   ],
+   "SVM": [
+    63.86,
+    6.59
+   ],
+   "k-NN": [
+    66.34,
+    7.66
+   ],
+   "Mean": [
+    76.26,
+    6.61
+   ]
+  },
+  "hhar": {
+   "CNN-HAR": [
+    82.47,
+    8.73
+   ],
+   "TinyHAR": [
+    80.67,
+    8.23
+   ],
+   "Triple-Cross-Attn": [
+    78.06,
+    8.06
+   ],
+   "DANA": [
+    80.02,
+    10.17
+   ],
+   "TinierHAR": [
+    78.59,
+    8.17
+   ],
+   "Attend+Discriminate": [
+    79.95,
+    8.08
+   ],
+   "DynamicWHAR": [
+    78.82,
+    7.9
+   ],
+   "Random Forest": [
+    75.38,
+    10.37
+   ],
+   "DeepConvLSTM-Attn": [
+    75.39,
+    8.65
+   ],
+   "MLP-HAR": [
+    72.96,
+    10.92
+   ],
+   "DeepConvLSTM": [
+    77.69,
+    9.56
+   ],
+   "MLP-Mixer": [
+    80.33,
+    8.23
+   ],
+   "Guan-LSTM": [
+    75.04,
+    11.66
+   ],
+   "DeepConvShallowLSTM": [
+    77.91,
+    10.89
+   ],
+   "SA-HAR": [
+    79.21,
+    9.63
+   ],
+   "SVM": [
+    65.16,
+    10.96
+   ],
+   "k-NN": [
+    47.6,
+    10.94
+   ],
+   "Mean": [
+    75.6,
+    9.48
+   ]
+  },
+  "usc_had": {
+   "CNN-HAR": [
+    76.16,
+    10.03
+   ],
+   "TinyHAR": [
+    78.09,
+    8.48
+   ],
+   "Triple-Cross-Attn": [
+    74.34,
+    9.35
+   ],
+   "DANA": [
+    71.11,
+    10.02
+   ],
+   "TinierHAR": [
+    75.67,
+    7.12
+   ],
+   "Attend+Discriminate": [
+    73.32,
+    9.27
+   ],
+   "DynamicWHAR": [
+    75.7,
+    8.14
+   ],
+   "Random Forest": [
+    72.68,
+    7.59
+   ],
+   "DeepConvLSTM-Attn": [
+    70.99,
+    11.07
+   ],
+   "MLP-HAR": [
+    76.52,
+    8.87
+   ],
+   "DeepConvLSTM": [
+    73.5,
+    10.66
+   ],
+   "MLP-Mixer": [
+    78.83,
+    9.16
+   ],
+   "Guan-LSTM": [
+    68.88,
+    9.11
+   ],
+   "DeepConvShallowLSTM": [
+    62.88,
+    9.32
+   ],
+   "SA-HAR": [
+    69.82,
+    11.16
+   ],
+   "SVM": [
+    37.74,
+    4.94
+   ],
+   "k-NN": [
+    43.25,
+    7.94
+   ],
+   "Mean": [
+    69.38,
+    8.96
+   ]
+  },
+  "wisdm_19_watch": {
+   "CNN-HAR": [
+    68.79,
+    4.62
+   ],
+   "TinyHAR": [
+    68.72,
+    4.42
+   ],
+   "Triple-Cross-Attn": [
+    68.51,
+    5.04
+   ],
+   "DANA": [
+    71.3,
+    4.65
+   ],
+   "TinierHAR": [
+    68.6,
+    4.97
+   ],
+   "Attend+Discriminate": [
+    69.38,
+    4.42
+   ],
+   "DynamicWHAR": [
+    68.93,
+    4.33
+   ],
+   "Random Forest": [
+    59.8,
+    5.5
+   ],
+   "DeepConvLSTM-Attn": [
+    69.04,
+    4.36
+   ],
+   "MLP-HAR": [
+    61.8,
+    4.46
+   ],
+   "DeepConvLSTM": [
+    67.18,
+    5.63
+   ],
+   "MLP-Mixer": [
+    69.77,
+    5.33
+   ],
+   "Guan-LSTM": [
+    70.61,
+    5.14
+   ],
+   "DeepConvShallowLSTM": [
+    67.82,
+    4.95
+   ],
+   "SA-HAR": [
+    65.39,
+    5.2
+   ],
+   "SVM": [
+    49.76,
+    5.44
+   ],
+   "k-NN": [
+    43.91,
+    4.51
+   ],
+   "Mean": [
+    65.25,
+    4.88
+   ]
+  },
+  "opportunity": {
+   "CNN-HAR": [
+    63.12,
+    14.75
+   ],
+   "TinyHAR": [
+    65.37,
+    17.19
+   ],
+   "Triple-Cross-Attn": [
+    70.57,
+    6.32
+   ],
+   "DANA": [
+    58.7,
+    21.63
+   ],
+   "TinierHAR": [
+    65.88,
+    16.42
+   ],
+   "Attend+Discriminate": [
+    61.44,
+    19.35
+   ],
+   "DynamicWHAR": [
+    62.65,
+    27.27
+   ],
+   "Random Forest": [
+    70.63,
+    7.53
+   ],
+   "DeepConvLSTM-Attn": [
+    65.2,
+    11.41
+   ],
+   "MLP-HAR": [
+    74.71,
+    4.04
+   ],
+   "DeepConvLSTM": [
+    62.15,
+    17.88
+   ],
+   "MLP-Mixer": [
+    60.26,
+    14.75
+   ],
+   "Guan-LSTM": [
+    65.88,
+    11.34
+   ],
+   "DeepConvShallowLSTM": [
+    65.14,
+    12.28
+   ],
+   "SA-HAR": [
+    58.08,
+    18.83
+   ],
+   "SVM": [
+    66.68,
+    10.09
+   ],
+   "k-NN": [
+    59.42,
+    12.37
+   ],
+   "Mean": [
+    64.46,
+    14.32
+   ]
+  },
+  "harth": {
+   "CNN-HAR": [
+    72.38,
+    7.09
+   ],
+   "TinyHAR": [
+    71.14,
+    7.36
+   ],
+   "Triple-Cross-Attn": [
+    72.69,
+    8.56
+   ],
+   "DANA": [
+    69.86,
+    7.44
+   ],
+   "TinierHAR": [
+    72.64,
+    8.26
+   ],
+   "Attend+Discriminate": [
+    66.68,
+    6.48
+   ],
+   "DynamicWHAR": [
+    67.53,
+    6.53
+   ],
+   "Random Forest": [
+    55.9,
+    4.99
+   ],
+   "DeepConvLSTM-Attn": [
+    63.38,
+    5.52
+   ],
+   "MLP-HAR": [
+    65.15,
+    6.63
+   ],
+   "DeepConvLSTM": [
+    64.03,
+    8.27
+   ],
+   "MLP-Mixer": [
+    66.84,
+    6.94
+   ],
+   "Guan-LSTM": [
+    66.72,
+    10.3
+   ],
+   "DeepConvShallowLSTM": [
+    54.07,
+    6.56
+   ],
+   "SA-HAR": [
+    61.54,
+    8.7
+   ],
+   "SVM": [
+    44.28,
+    3.9
+   ],
+   "k-NN": [
+    43.06,
+    5.73
+   ],
+   "Mean": [
+    63.4,
+    7.02
+   ]
+  },
+  "gotov": {
+   "CNN-HAR": [
+    64.38,
+    14.83
+   ],
+   "TinyHAR": [
+    66.27,
+    13.06
+   ],
+   "Triple-Cross-Attn": [
+    68.02,
+    12.25
+   ],
+   "DANA": [
+    66.81,
+    13.58
+   ],
+   "TinierHAR": [
+    64.93,
+    12.35
+   ],
+   "Attend+Discriminate": [
+    65.16,
+    12.91
+   ],
+   "DynamicWHAR": [
+    70.09,
+    14.47
+   ],
+   "Random Forest": [
+    65.63,
+    14.27
+   ],
+   "DeepConvLSTM-Attn": [
+    64.24,
+    13.15
+   ],
+   "MLP-HAR": [
+    64.4,
+    13.47
+   ],
+   "DeepConvLSTM": [
+    63.27,
+    14.76
+   ],
+   "MLP-Mixer": [
+    59.92,
+    13.21
+   ],
+   "Guan-LSTM": [
+    60.05,
+    15.49
+   ],
+   "DeepConvShallowLSTM": [
+    59.7,
+    14.73
+   ],
+   "SA-HAR": [
+    59.94,
+    14.7
+   ],
+   "SVM": [
+    51.37,
+    11.84
+   ],
+   "k-NN": [
+    44.45,
+    9.42
+   ],
+   "Mean": [
+    62.27,
+    13.44
+   ]
+  },
+  "real_world": {
+   "CNN-HAR": [
+    57.55,
+    19.04
+   ],
+   "TinyHAR": [
+    60.18,
+    15.86
+   ],
+   "Triple-Cross-Attn": [
+    61.69,
+    16.81
+   ],
+   "DANA": [
+    63.97,
+    19.06
+   ],
+   "TinierHAR": [
+    60.89,
+    17.74
+   ],
+   "Attend+Discriminate": [
+    57.2,
+    21.19
+   ],
+   "DynamicWHAR": [
+    68.39,
+    20.77
+   ],
+   "Random Forest": [
+    80.35,
+    16.33
+   ],
+   "DeepConvLSTM-Attn": [
+    59.25,
+    20.23
+   ],
+   "MLP-HAR": [
+    58.86,
+    10.79
+   ],
+   "DeepConvLSTM": [
+    55.03,
+    15.71
+   ],
+   "MLP-Mixer": [
+    51.85,
+    12.84
+   ],
+   "Guan-LSTM": [
+    50.8,
+    19.52
+   ],
+   "DeepConvShallowLSTM": [
+    67.26,
+    21.81
+   ],
+   "SA-HAR": [
+    52.97,
+    20.02
+   ],
+   "SVM": [
+    56.72,
+    18.67
+   ],
+   "k-NN": [
+    47.29,
+    12.1
+   ],
+   "Mean": [
+    59.43,
+    17.56
+   ]
+  },
+  "har70": {
+   "CNN-HAR": [
+    69.24,
+    9.08
+   ],
+   "TinyHAR": [
+    65.8,
+    11.32
+   ],
+   "Triple-Cross-Attn": [
+    59.5,
+    9.08
+   ],
+   "DANA": [
+    60.6,
+    9.8
+   ],
+   "TinierHAR": [
+    68.47,
+    10.13
+   ],
+   "Attend+Discriminate": [
+    62.36,
+    8.13
+   ],
+   "DynamicWHAR": [
+    57.49,
+    8.75
+   ],
+   "Random Forest": [
+    57.5,
+    9.28
+   ],
+   "DeepConvLSTM-Attn": [
+    59.43,
+    7.33
+   ],
+   "MLP-HAR": [
+    59.84,
+    11.02
+   ],
+   "DeepConvLSTM": [
+    60.37,
+    9.06
+   ],
+   "MLP-Mixer": [
+    62.42,
+    10.37
+   ],
+   "Guan-LSTM": [
+    56.24,
+    7.9
+   ],
+   "DeepConvShallowLSTM": [
+    53.31,
+    6.83
+   ],
+   "SA-HAR": [
+    56.63,
+    6.16
+   ],
+   "SVM": [
+    48.59,
+    6.2
+   ],
+   "k-NN": [
+    44.11,
+    8.46
+   ],
+   "Mean": [
+    58.94,
+    8.76
+   ]
+  },
+  "pamap2": {
+   "CNN-HAR": [
+    62.06,
+    23.13
+   ],
+   "TinyHAR": [
+    62.2,
+    22.44
+   ],
+   "Triple-Cross-Attn": [
+    61.94,
+    23.13
+   ],
+   "DANA": [
+    60.27,
+    22.07
+   ],
+   "TinierHAR": [
+    59.63,
+    20.95
+   ],
+   "Attend+Discriminate": [
+    62.25,
+    21.94
+   ],
+   "DynamicWHAR": [
+    64.24,
+    24.58
+   ],
+   "Random Forest": [
+    65.06,
+    23.96
+   ],
+   "DeepConvLSTM-Attn": [
+    57.58,
+    21.67
+   ],
+   "MLP-HAR": [
+    63.09,
+    23.86
+   ],
+   "DeepConvLSTM": [
+    55.81,
+    24.08
+   ],
+   "MLP-Mixer": [
+    47.81,
+    20.33
+   ],
+   "Guan-LSTM": [
+    51.82,
+    20.6
+   ],
+   "DeepConvShallowLSTM": [
+    55.91,
+    22.2
+   ],
+   "SA-HAR": [
+    58.97,
+    21.76
+   ],
+   "SVM": [
+    48.05,
+    24.97
+   ],
+   "k-NN": [
+    48.97,
+    23.48
+   ],
+   "Mean": [
+    57.98,
+    22.66
+   ]
+  },
+  "up_fall": {
+   "CNN-HAR": [
+    55.02,
+    9.35
+   ],
+   "TinyHAR": [
+    60.96,
+    8.14
+   ],
+   "Triple-Cross-Attn": [
+    58.66,
+    8.4
+   ],
+   "DANA": [
+    52.62,
+    8.78
+   ],
+   "TinierHAR": [
+    55.65,
+    6.97
+   ],
+   "Attend+Discriminate": [
+    54.49,
+    7.7
+   ],
+   "DynamicWHAR": [
+    61.12,
+    7.68
+   ],
+   "Random Forest": [
+    72.77,
+    4.27
+   ],
+   "DeepConvLSTM-Attn": [
+    52.24,
+    8.95
+   ],
+   "MLP-HAR": [
+    56.54,
+    4.58
+   ],
+   "DeepConvLSTM": [
+    52.87,
+    9.51
+   ],
+   "MLP-Mixer": [
+    43.16,
+    9.9
+   ],
+   "Guan-LSTM": [
+    45.67,
+    9.98
+   ],
+   "DeepConvShallowLSTM": [
+    54.53,
+    6.88
+   ],
+   "SA-HAR": [
+    51.73,
+    7.35
+   ],
+   "SVM": [
+    46.85,
+    11.79
+   ],
+   "k-NN": [
+    40.43,
+    6.99
+   ],
+   "Mean": [
+    53.84,
+    8.07
+   ]
+  },
+  "utd_mhad": {
+   "CNN-HAR": [
+    68.16,
+    13.42
+   ],
+   "TinyHAR": [
+    65.75,
+    12.12
+   ],
+   "Triple-Cross-Attn": [
+    66.97,
+    12.52
+   ],
+   "DANA": [
+    64.8,
+    12.98
+   ],
+   "TinierHAR": [
+    61.0,
+    11.75
+   ],
+   "Attend+Discriminate": [
+    67.21,
+    12.48
+   ],
+   "DynamicWHAR": [
+    64.66,
+    13.01
+   ],
+   "Random Forest": [
+    51.2,
+    11.38
+   ],
+   "DeepConvLSTM-Attn": [
+    59.4,
+    9.65
+   ],
+   "MLP-HAR": [
+    61.59,
+    10.1
+   ],
+   "DeepConvLSTM": [
+    54.91,
+    7.51
+   ],
+   "MLP-Mixer": [
+    64.9,
+    8.78
+   ],
+   "Guan-LSTM": [
+    24.69,
+    12.12
+   ],
+   "DeepConvShallowLSTM": [
+    19.02,
+    4.72
+   ],
+   "SA-HAR": [
+    60.96,
+    11.25
+   ],
+   "SVM": [
+    23.92,
+    3.23
+   ],
+   "k-NN": [
+    33.85,
+    7.06
+   ],
+   "Mean": [
+    53.71,
+    10.24
+   ]
+  },
+  "uca_ehar": {
+   "CNN-HAR": [
+    58.66,
+    6.58
+   ],
+   "TinyHAR": [
+    57.97,
+    7.39
+   ],
+   "Triple-Cross-Attn": [
+    58.09,
+    8.28
+   ],
+   "DANA": [
+    60.1,
+    8.39
+   ],
+   "TinierHAR": [
+    55.99,
+    6.73
+   ],
+   "Attend+Discriminate": [
+    59.85,
+    9.39
+   ],
+   "DynamicWHAR": [
+    57.36,
+    7.45
+   ],
+   "Random Forest": [
+    47.59,
+    3.24
+   ],
+   "DeepConvLSTM-Attn": [
+    56.83,
+    9.34
+   ],
+   "MLP-HAR": [
+    53.0,
+    6.71
+   ],
+   "DeepConvLSTM": [
+    56.33,
+    6.37
+   ],
+   "MLP-Mixer": [
+    57.87,
+    8.0
+   ],
+   "Guan-LSTM": [
+    59.47,
+    8.5
+   ],
+   "DeepConvShallowLSTM": [
+    42.85,
+    5.12
+   ],
+   "SA-HAR": [
+    50.35,
+    7.93
+   ],
+   "SVM": [
+    36.68,
+    6.65
+   ],
+   "k-NN": [
+    31.73,
+    6.03
+   ],
+   "Mean": [
+    52.98,
+    7.18
+   ]
+  },
+  "unimib_shar": {
+   "CNN-HAR": [
+    63.3,
+    8.0
+   ],
+   "TinyHAR": [
+    58.65,
+    9.7
+   ],
+   "Triple-Cross-Attn": [
+    55.22,
+    5.55
+   ],
+   "DANA": [
+    62.42,
+    8.59
+   ],
+   "TinierHAR": [
+    58.41,
+    6.6
+   ],
+   "Attend+Discriminate": [
+    60.97,
+    7.19
+   ],
+   "DynamicWHAR": [
+    52.51,
+    6.03
+   ],
+   "Random Forest": [
+    44.49,
+    5.83
+   ],
+   "DeepConvLSTM-Attn": [
+    61.08,
+    9.66
+   ],
+   "MLP-HAR": [
+    42.26,
+    6.51
+   ],
+   "DeepConvLSTM": [
+    56.34,
+    9.0
+   ],
+   "MLP-Mixer": [
+    57.19,
+    8.39
+   ],
+   "Guan-LSTM": [
+    55.55,
+    13.38
+   ],
+   "DeepConvShallowLSTM": [
+    37.95,
+    5.07
+   ],
+   "SA-HAR": [
+    38.71,
+    5.31
+   ],
+   "SVM": [
+    19.2,
+    2.54
+   ],
+   "k-NN": [
+    23.45,
+    3.2
+   ],
+   "Mean": [
+    49.86,
+    7.09
+   ]
+  },
+  "real_life_har": {
+   "CNN-HAR": [
+    47.64,
+    9.62
+   ],
+   "TinyHAR": [
+    49.05,
+    9.25
+   ],
+   "Triple-Cross-Attn": [
+    49.33,
+    9.11
+   ],
+   "DANA": [
+    52.56,
+    9.93
+   ],
+   "TinierHAR": [
+    48.16,
+    8.69
+   ],
+   "Attend+Discriminate": [
+    53.05,
+    7.6
+   ],
+   "DynamicWHAR": [
+    55.01,
+    8.6
+   ],
+   "Random Forest": [
+    62.56,
+    17.66
+   ],
+   "DeepConvLSTM-Attn": [
+    48.72,
+    10.33
+   ],
+   "MLP-HAR": [
+    46.3,
+    9.54
+   ],
+   "DeepConvLSTM": [
+    48.11,
+    7.95
+   ],
+   "MLP-Mixer": [
+    42.3,
+    11.15
+   ],
+   "Guan-LSTM": [
+    43.32,
+    11.29
+   ],
+   "DeepConvShallowLSTM": [
+    53.59,
+    10.84
+   ],
+   "SA-HAR": [
+    42.85,
+    11.06
+   ],
+   "SVM": [
+    48.7,
+    10.44
+   ],
+   "k-NN": [
+    38.04,
+    10.65
+   ],
+   "Mean": [
+    48.78,
+    10.22
+   ]
+  },
+  "hang_time": {
+   "CNN-HAR": [
+    51.5,
+    1.81
+   ],
+   "TinyHAR": [
+    51.14,
+    1.87
+   ],
+   "Triple-Cross-Attn": [
+    51.08,
+    2.53
+   ],
+   "DANA": [
+    52.15,
+    1.87
+   ],
+   "TinierHAR": [
+    50.93,
+    2.43
+   ],
+   "Attend+Discriminate": [
+    50.95,
+    1.8
+   ],
+   "DynamicWHAR": [
+    46.98,
+    2.05
+   ],
+   "Random Forest": [
+    46.94,
+    2.58
+   ],
+   "DeepConvLSTM-Attn": [
+    51.49,
+    2.0
+   ],
+   "MLP-HAR": [
+    47.78,
+    2.37
+   ],
+   "DeepConvLSTM": [
+    51.5,
+    2.34
+   ],
+   "MLP-Mixer": [
+    50.79,
+    2.64
+   ],
+   "Guan-LSTM": [
+    52.29,
+    2.55
+   ],
+   "DeepConvShallowLSTM": [
+    46.49,
+    2.05
+   ],
+   "SA-HAR": [
+    42.9,
+    3.32
+   ],
+   "SVM": [
+    36.77,
+    1.96
+   ],
+   "k-NN": [
+    39.19,
+    1.6
+   ],
+   "Mean": [
+    48.29,
+    2.22
+   ]
+  },
+  "w_har": {
+   "CNN-HAR": [
+    52.72,
+    3.39
+   ],
+   "TinyHAR": [
+    52.16,
+    4.9
+   ],
+   "Triple-Cross-Attn": [
+    49.83,
+    6.49
+   ],
+   "DANA": [
+    49.31,
+    7.78
+   ],
+   "TinierHAR": [
+    49.14,
+    8.9
+   ],
+   "Attend+Discriminate": [
+    48.63,
+    7.83
+   ],
+   "DynamicWHAR": [
+    49.91,
+    8.9
+   ],
+   "Random Forest": [
+    53.07,
+    4.2
+   ],
+   "DeepConvLSTM-Attn": [
+    48.81,
+    7.72
+   ],
+   "MLP-HAR": [
+    46.28,
+    6.88
+   ],
+   "DeepConvLSTM": [
+    47.23,
+    6.78
+   ],
+   "MLP-Mixer": [
+    48.88,
+    8.56
+   ],
+   "Guan-LSTM": [
+    39.09,
+    11.06
+   ],
+   "DeepConvShallowLSTM": [
+    35.78,
+    11.78
+   ],
+   "SA-HAR": [
+    50.97,
+    4.56
+   ],
+   "SVM": [
+    31.48,
+    10.18
+   ],
+   "k-NN": [
+    32.43,
+    10.66
+   ],
+   "Mean": [
+    46.22,
+    7.68
+   ]
+  },
+  "uma_fall": {
+   "CNN-HAR": [
+    49.99,
+    13.96
+   ],
+   "TinyHAR": [
+    50.17,
+    10.84
+   ],
+   "Triple-Cross-Attn": [
+    52.43,
+    11.66
+   ],
+   "DANA": [
+    51.85,
+    13.76
+   ],
+   "TinierHAR": [
+    51.22,
+    12.26
+   ],
+   "Attend+Discriminate": [
+    50.6,
+    13.31
+   ],
+   "DynamicWHAR": [
+    56.18,
+    12.6
+   ],
+   "Random Forest": [
+    54.19,
+    16.09
+   ],
+   "DeepConvLSTM-Attn": [
+    45.71,
+    11.64
+   ],
+   "MLP-HAR": [
+    49.06,
+    14.12
+   ],
+   "DeepConvLSTM": [
+    45.49,
+    12.73
+   ],
+   "MLP-Mixer": [
+    33.05,
+    10.77
+   ],
+   "Guan-LSTM": [
+    37.31,
+    12.42
+   ],
+   "DeepConvShallowLSTM": [
+    40.82,
+    12.13
+   ],
+   "SA-HAR": [
+    41.88,
+    12.36
+   ],
+   "SVM": [
+    29.76,
+    13.01
+   ],
+   "k-NN": [
+    29.19,
+    11.1
+   ],
+   "Mean": [
+    45.23,
+    12.63
+   ]
+  },
+  "hugadb": {
+   "CNN-HAR": [
+    49.15,
+    7.26
+   ],
+   "TinyHAR": [
+    46.63,
+    6.73
+   ],
+   "Triple-Cross-Attn": [
+    47.79,
+    9.1
+   ],
+   "DANA": [
+    44.82,
+    8.85
+   ],
+   "TinierHAR": [
+    48.26,
+    8.73
+   ],
+   "Attend+Discriminate": [
+    42.94,
+    8.83
+   ],
+   "DynamicWHAR": [
+    44.14,
+    7.84
+   ],
+   "Random Forest": [
+    52.47,
+    5.65
+   ],
+   "DeepConvLSTM-Attn": [
+    42.86,
+    7.31
+   ],
+   "MLP-HAR": [
+    46.14,
+    8.33
+   ],
+   "DeepConvLSTM": [
+    44.31,
+    8.63
+   ],
+   "MLP-Mixer": [
+    41.94,
+    7.83
+   ],
+   "Guan-LSTM": [
+    44.55,
+    7.48
+   ],
+   "DeepConvShallowLSTM": [
+    43.88,
+    7.71
+   ],
+   "SA-HAR": [
+    41.42,
+    8.57
+   ],
+   "SVM": [
+    41.22,
+    6.97
+   ],
+   "k-NN": [
+    38.48,
+    7.23
+   ],
+   "Mean": [
+    44.76,
+    7.83
+   ]
+  },
+  "actrectut_gestures": {
+   "CNN-HAR": [
+    52.25,
+    9.71
+   ],
+   "TinyHAR": [
+    51.06,
+    7.0
+   ],
+   "Triple-Cross-Attn": [
+    61.49,
+    0.07
+   ],
+   "DANA": [
+    57.23,
+    8.32
+   ],
+   "TinierHAR": [
+    45.17,
+    7.33
+   ],
+   "Attend+Discriminate": [
+    53.76,
+    15.68
+   ],
+   "DynamicWHAR": [
+    41.47,
+    11.83
+   ],
+   "Random Forest": [
+    41.89,
+    18.12
+   ],
+   "DeepConvLSTM-Attn": [
+    52.53,
+    9.07
+   ],
+   "MLP-HAR": [
+    43.78,
+    0.58
+   ],
+   "DeepConvLSTM": [
+    48.21,
+    5.22
+   ],
+   "MLP-Mixer": [
+    37.77,
+    4.54
+   ],
+   "Guan-LSTM": [
+    35.42,
+    0.27
+   ],
+   "DeepConvShallowLSTM": [
+    46.89,
+    1.44
+   ],
+   "SA-HAR": [
+    31.07,
+    6.27
+   ],
+   "SVM": [
+    27.59,
+    2.6
+   ],
+   "k-NN": [
+    28.64,
+    2.35
+   ],
+   "Mean": [
+    44.48,
+    6.49
+   ]
+  },
+  "daphnet": {
+   "CNN-HAR": [
+    40.23,
+    7.73
+   ],
+   "TinyHAR": [
+    43.94,
+    6.73
+   ],
+   "Triple-Cross-Attn": [
+    42.72,
+    7.31
+   ],
+   "DANA": [
+    43.59,
+    6.59
+   ],
+   "TinierHAR": [
+    45.41,
+    9.33
+   ],
+   "Attend+Discriminate": [
+    43.01,
+    9.52
+   ],
+   "DynamicWHAR": [
+    37.81,
+    5.69
+   ],
+   "Random Forest": [
+    33.84,
+    5.34
+   ],
+   "DeepConvLSTM-Attn": [
+    41.81,
+    10.37
+   ],
+   "MLP-HAR": [
+    40.63,
+    6.3
+   ],
+   "DeepConvLSTM": [
+    40.66,
+    6.12
+   ],
+   "MLP-Mixer": [
+    38.93,
+    7.48
+   ],
+   "Guan-LSTM": [
+    29.2,
+    6.73
+   ],
+   "DeepConvShallowLSTM": [
+    35.44,
+    4.66
+   ],
+   "SA-HAR": [
+    37.69,
+    6.58
+   ],
+   "SVM": [
+    31.73,
+    1.52
+   ],
+   "k-NN": [
+    31.11,
+    3.94
+   ],
+   "Mean": [
+    38.69,
+    6.58
+   ]
+  },
+  "wisdm_19_phone": {
+   "CNN-HAR": [
+    30.45,
+    4.28
+   ],
+   "TinyHAR": [
+    29.17,
+    3.54
+   ],
+   "Triple-Cross-Attn": [
+    32.05,
+    2.43
+   ],
+   "DANA": [
+    31.72,
+    3.69
+   ],
+   "TinierHAR": [
+    30.28,
+    2.68
+   ],
+   "Attend+Discriminate": [
+    29.53,
+    5.34
+   ],
+   "DynamicWHAR": [
+    32.23,
+    3.41
+   ],
+   "Random Forest": [
+    26.81,
+    2.2
+   ],
+   "DeepConvLSTM-Attn": [
+    29.07,
+    4.5
+   ],
+   "MLP-HAR": [
+    23.6,
+    3.35
+   ],
+   "DeepConvLSTM": [
+    27.64,
+    4.58
+   ],
+   "MLP-Mixer": [
+    27.31,
+    4.17
+   ],
+   "Guan-LSTM": [
+    26.85,
+    6.17
+   ],
+   "DeepConvShallowLSTM": [
+    31.68,
+    2.82
+   ],
+   "SA-HAR": [
+    23.85,
+    4.23
+   ],
+   "SVM": [
+    18.46,
+    2.59
+   ],
+   "k-NN": [
+    17.59,
+    4.16
+   ],
+   "Mean": [
+    27.55,
+    3.77
+   ]
+  },
+  "Mean": {
+   "CNN-HAR": [
+    67.72,
+    8.94
+   ],
+   "TinyHAR": [
+    67.61,
+    8.62
+   ],
+   "Triple-Cross-Attn": [
+    67.57,
+    8.01
+   ],
+   "DANA": [
+    67.02,
+    9.41
+   ],
+   "TinierHAR": [
+    66.73,
+    8.85
+   ],
+   "Attend+Discriminate": [
+    66.61,
+    9.4
+   ],
+   "DynamicWHAR": [
+    66.27,
+    9.21
+   ],
+   "Random Forest": [
+    65.1,
+    8.05
+   ],
+   "DeepConvLSTM-Attn": [
+    64.67,
+    9.35
+   ],
+   "MLP-HAR": [
+    64.23,
+    7.69
+   ],
+   "DeepConvLSTM": [
+    63.61,
+    9.31
+   ],
+   "MLP-Mixer": [
+    62.46,
+    8.81
+   ],
+   "Guan-LSTM": [
+    60.07,
+    9.88
+   ],
+   "DeepConvShallowLSTM": [
+    59.96,
+    8.13
+   ],
+   "SA-HAR": [
+    59.84,
+    10.11
+   ],
+   "SVM": [
+    50.15,
+    8.41
+   ],
+   "k-NN": [
+    46.25,
+    8.4
+   ],
+   "Mean": [
+    62.7,
+    8.86
+   ]
+  }
+ },
+ "latency_ms": {
+  "wisdm": {
+   "Attend+Discriminate": 14.42,
+   "CNN-HAR": 1.62,
+   "DANA": 8.03,
+   "DeepConvLSTM": 16.78,
+   "DeepConvLSTM-Attn": 16.18,
+   "DeepConvShallowLSTM": 5.17,
+   "DynamicWHAR": 4.75,
+   "k-NN": 69.79,
+   "Guan-LSTM": 36.77,
+   "MLP-HAR": 1.03,
+   "MLP-Mixer": 9.33,
+   "Random Forest": 0.48,
+   "SA-HAR": 6.07,
+   "SVM": 0.8,
+   "TinierHAR": 2.4,
+   "TinyHAR": 2.71,
+   "Triple-Cross-Attn": 3.24,
+   "Mean": 11.74
+  },
+  "uci_har": {
+   "Attend+Discriminate": 47.3,
+   "CNN-HAR": 5.39,
+   "DANA": 12.56,
+   "DeepConvLSTM": 99.01,
+   "DeepConvLSTM-Attn": 47.18,
+   "DeepConvShallowLSTM": 13.65,
+   "DynamicWHAR": 6.49,
+   "k-NN": 17.5,
+   "Guan-LSTM": 43.3,
+   "MLP-HAR": 1.77,
+   "MLP-Mixer": 17.91,
+   "Random Forest": 0.47,
+   "SA-HAR": 9.2,
+   "SVM": 0.71,
+   "TinierHAR": 2.28,
+   "TinyHAR": 9.71,
+   "Triple-Cross-Attn": 6.26,
+   "Mean": 20.04
+  },
+  "utd_mhad": {
+   "Attend+Discriminate": 46.79,
+   "CNN-HAR": 4.62,
+   "DANA": 10.87,
+   "DeepConvLSTM": 43.72,
+   "DeepConvLSTM-Attn": 40.97,
+   "DeepConvShallowLSTM": 11.41,
+   "DynamicWHAR": 5.41,
+   "k-NN": 2.0,
+   "Guan-LSTM": 44.07,
+   "MLP-HAR": 2.68,
+   "MLP-Mixer": 8.79,
+   "Random Forest": 0.73,
+   "SA-HAR": 11.03,
+   "SVM": 0.39,
+   "TinierHAR": 3.0,
+   "TinyHAR": 5.78,
+   "Triple-Cross-Attn": 9.26,
+   "Mean": 14.8
+  },
+  "hapt": {
+   "Attend+Discriminate": 43.58,
+   "CNN-HAR": 4.57,
+   "DANA": 9.54,
+   "DeepConvLSTM": 42.97,
+   "DeepConvLSTM-Attn": 43.8,
+   "DeepConvShallowLSTM": 11.38,
+   "DynamicWHAR": 8.56,
+   "k-NN": 18.77,
+   "Guan-LSTM": 55.68,
+   "MLP-HAR": 1.6,
+   "MLP-Mixer": 8.54,
+   "Random Forest": 0.48,
+   "SA-HAR": 14.1,
+   "SVM": 0.56,
+   "TinierHAR": 2.17,
+   "TinyHAR": 5.09,
+   "Triple-Cross-Attn": 5.85,
+   "Mean": 16.31
+  },
+  "usc_had": {
+   "Attend+Discriminate": 148.21,
+   "CNN-HAR": 8.04,
+   "DANA": 13.75,
+   "DeepConvLSTM": 96.73,
+   "DeepConvLSTM-Attn": 143.45,
+   "DeepConvShallowLSTM": 21.43,
+   "DynamicWHAR": 9.53,
+   "k-NN": 33.1,
+   "Guan-LSTM": 97.59,
+   "MLP-HAR": 2.22,
+   "MLP-Mixer": 14.73,
+   "Random Forest": 0.5,
+   "SA-HAR": 14.17,
+   "SVM": 1.12,
+   "TinierHAR": 3.72,
+   "TinyHAR": 15.99,
+   "Triple-Cross-Attn": 7.89,
+   "Mean": 37.19
+  },
+  "unimib_shar": {
+   "Attend+Discriminate": 46.43,
+   "CNN-HAR": 2.28,
+   "DANA": 9.34,
+   "DeepConvLSTM": 34.49,
+   "DeepConvLSTM-Attn": 39.78,
+   "DeepConvShallowLSTM": 9.21,
+   "DynamicWHAR": 2.88,
+   "k-NN": 14.61,
+   "Guan-LSTM": 56.76,
+   "MLP-HAR": 1.82,
+   "MLP-Mixer": 8.46,
+   "Random Forest": 0.71,
+   "SA-HAR": 9.39,
+   "SVM": 0.65,
+   "TinierHAR": 1.79,
+   "TinyHAR": 11.74,
+   "Triple-Cross-Attn": 4.69,
+   "Mean": 15.0
+  },
+  "motion_sense": {
+   "Attend+Discriminate": 66.13,
+   "CNN-HAR": 8.77,
+   "DANA": 21.19,
+   "DeepConvLSTM": 60.58,
+   "DeepConvLSTM-Attn": 44.06,
+   "DeepConvShallowLSTM": 23.46,
+   "DynamicWHAR": 16.81,
+   "k-NN": 39.05,
+   "Guan-LSTM": 56.65,
+   "MLP-HAR": 2.03,
+   "MLP-Mixer": 13.35,
+   "Random Forest": 0.6,
+   "SA-HAR": 9.82,
+   "SVM": 1.48,
+   "TinierHAR": 2.39,
+   "TinyHAR": 8.26,
+   "Triple-Cross-Attn": 12.14,
+   "Mean": 22.75
+  },
+  "real_life_har": {
+   "Attend+Discriminate": 19.17,
+   "CNN-HAR": 6.03,
+   "DANA": 10.91,
+   "DeepConvLSTM": 17.72,
+   "DeepConvLSTM-Attn": 21.35,
+   "DeepConvShallowLSTM": 11.32,
+   "DynamicWHAR": 18.09,
+   "k-NN": 738.61,
+   "Guan-LSTM": 25.8,
+   "MLP-HAR": 1.33,
+   "MLP-Mixer": 8.4,
+   "Random Forest": 0.53,
+   "SA-HAR": 6.98,
+   "SVM": 9.66,
+   "TinierHAR": 2.39,
+   "TinyHAR": 4.93,
+   "Triple-Cross-Attn": 6.23,
+   "Mean": 53.5
+  },
+  "wisdm_19_phone": {
+   "Attend+Discriminate": 17.84,
+   "CNN-HAR": 1.89,
+   "DANA": 7.92,
+   "DeepConvLSTM": 32.15,
+   "DeepConvLSTM-Attn": 13.99,
+   "DeepConvShallowLSTM": 6.7,
+   "DynamicWHAR": 5.18,
+   "k-NN": 174.34,
+   "Guan-LSTM": 24.69,
+   "MLP-HAR": 0.99,
+   "MLP-Mixer": 7.45,
+   "Random Forest": 0.67,
+   "SA-HAR": 5.23,
+   "SVM": 4.4,
+   "TinierHAR": 2.01,
+   "TinyHAR": 3.71,
+   "Triple-Cross-Attn": 3.76,
+   "Mean": 18.41
+  },
+  "wisdm_19_watch": {
+   "Attend+Discriminate": 19.46,
+   "CNN-HAR": 2.09,
+   "DANA": 7.65,
+   "DeepConvLSTM": 13.76,
+   "DeepConvLSTM-Attn": 15.46,
+   "DeepConvShallowLSTM": 6.45,
+   "DynamicWHAR": 4.01,
+   "k-NN": 188.29,
+   "Guan-LSTM": 29.82,
+   "MLP-HAR": 1.57,
+   "MLP-Mixer": 5.95,
+   "Random Forest": 0.53,
+   "SA-HAR": 4.95,
+   "SVM": 6.15,
+   "TinierHAR": 1.46,
+   "TinyHAR": 2.62,
+   "Triple-Cross-Attn": 5.25,
+   "Mean": 18.56
+  },
+  "hang_time": {
+   "Attend+Discriminate": 35.96,
+   "CNN-HAR": 3.37,
+   "DANA": 7.51,
+   "DeepConvLSTM": 42.07,
+   "DeepConvLSTM-Attn": 46.44,
+   "DeepConvShallowLSTM": 10.95,
+   "DynamicWHAR": 4.15,
+   "k-NN": 99.53,
+   "Guan-LSTM": 59.33,
+   "MLP-HAR": 3.14,
+   "MLP-Mixer": 7.17,
+   "Random Forest": 0.49,
+   "SA-HAR": 13.04,
+   "SVM": 0.79,
+   "TinierHAR": 3.55,
+   "TinyHAR": 4.73,
+   "Triple-Cross-Attn": 4.62,
+   "Mean": 20.4
+  },
+  "pamap2": {
+   "Attend+Discriminate": 173.68,
+   "CNN-HAR": 31.75,
+   "DANA": 60.6,
+   "DeepConvLSTM": 129.09,
+   "DeepConvLSTM-Attn": 144.88,
+   "DeepConvShallowLSTM": 81.85,
+   "DynamicWHAR": 51.76,
+   "k-NN": 37.85,
+   "Guan-LSTM": 105.4,
+   "MLP-HAR": 10.64,
+   "MLP-Mixer": 47.42,
+   "Random Forest": 1.32,
+   "SA-HAR": 26.26,
+   "SVM": 2.79,
+   "TinierHAR": 6.65,
+   "TinyHAR": 19.14,
+   "Triple-Cross-Attn": 25.38,
+   "Mean": 56.26
+  },
+  "opportunity": {
+   "Attend+Discriminate": 104.99,
+   "CNN-HAR": 26.27,
+   "DANA": 70.06,
+   "DeepConvLSTM": 77.43,
+   "DeepConvLSTM-Attn": 76.16,
+   "DeepConvShallowLSTM": 93.23,
+   "DynamicWHAR": 207.62,
+   "k-NN": 36.01,
+   "Guan-LSTM": 37.12,
+   "MLP-HAR": 47.25,
+   "MLP-Mixer": 55.07,
+   "Random Forest": 0.91,
+   "SA-HAR": 13.99,
+   "SVM": 2.36,
+   "TinierHAR": 5.61,
+   "TinyHAR": 13.21,
+   "Triple-Cross-Attn": 17.22,
+   "Mean": 52.03
+  },
+  "hhar": {
+   "Attend+Discriminate": 18.47,
+   "CNN-HAR": 2.38,
+   "DANA": 7.62,
+   "DeepConvLSTM": 16.47,
+   "DeepConvLSTM-Attn": 15.68,
+   "DeepConvShallowLSTM": 6.34,
+   "DynamicWHAR": 3.83,
+   "k-NN": 94.16,
+   "Guan-LSTM": 25.63,
+   "MLP-HAR": 1.26,
+   "MLP-Mixer": 6.92,
+   "Random Forest": 0.46,
+   "SA-HAR": 5.64,
+   "SVM": 1.27,
+   "TinierHAR": 1.55,
+   "TinyHAR": 1.84,
+   "Triple-Cross-Attn": 4.09,
+   "Mean": 12.57
+  },
+  "mhealth": {
+   "Attend+Discriminate": 64.57,
+   "CNN-HAR": 9.4,
+   "DANA": 24.47,
+   "DeepConvLSTM": 46.26,
+   "DeepConvLSTM-Attn": 63.5,
+   "DeepConvShallowLSTM": 30.05,
+   "DynamicWHAR": 17.73,
+   "k-NN": 9.26,
+   "Guan-LSTM": 56.39,
+   "MLP-HAR": 2.41,
+   "MLP-Mixer": 15.12,
+   "Random Forest": 0.62,
+   "SA-HAR": 10.84,
+   "SVM": 0.8,
+   "TinierHAR": 2.8,
+   "TinyHAR": 9.04,
+   "Triple-Cross-Attn": 13.07,
+   "Mean": 22.14
+  },
+  "dsads": {
+   "Attend+Discriminate": 37.29,
+   "CNN-HAR": 9.96,
+   "DANA": 25.9,
+   "DeepConvLSTM": 37.48,
+   "DeepConvLSTM-Attn": 38.33,
+   "DeepConvShallowLSTM": 26.4,
+   "DynamicWHAR": 36.25,
+   "k-NN": 76.39,
+   "Guan-LSTM": 29.45,
+   "MLP-HAR": 3.48,
+   "MLP-Mixer": 15.05,
+   "Random Forest": 0.64,
+   "SA-HAR": 7.65,
+   "SVM": 3.27,
+   "TinierHAR": 5.73,
+   "TinyHAR": 6.21,
+   "Triple-Cross-Attn": 12.41,
+   "Mean": 21.88
+  },
+  "sad": {
+   "Attend+Discriminate": 105.33,
+   "CNN-HAR": 16.39,
+   "DANA": 44.97,
+   "DeepConvLSTM": 69.81,
+   "DeepConvLSTM-Attn": 91.97,
+   "DeepConvShallowLSTM": 56.24,
+   "DynamicWHAR": 58.28,
+   "k-NN": 24.94,
+   "Guan-LSTM": 56.64,
+   "MLP-HAR": 10.39,
+   "MLP-Mixer": 24.66,
+   "Random Forest": 1.1,
+   "SA-HAR": 8.21,
+   "SVM": 1.8,
+   "TinierHAR": 6.35,
+   "TinyHAR": 13.02,
+   "Triple-Cross-Attn": 17.22,
+   "Mean": 35.73
+  },
+  "daphnet": {
+   "Attend+Discriminate": 59.77,
+   "CNN-HAR": 8.8,
+   "DANA": 13.69,
+   "DeepConvLSTM": 54.54,
+   "DeepConvLSTM-Attn": 60.66,
+   "DeepConvShallowLSTM": 18.46,
+   "DynamicWHAR": 7.42,
+   "k-NN": 23.82,
+   "Guan-LSTM": 67.36,
+   "MLP-HAR": 2.62,
+   "MLP-Mixer": 10.42,
+   "Random Forest": 0.48,
+   "SA-HAR": 9.64,
+   "SVM": 0.53,
+   "TinierHAR": 7.02,
+   "TinyHAR": 8.35,
+   "Triple-Cross-Attn": 7.57,
+   "Mean": 21.24
+  },
+  "real_world": {
+   "Attend+Discriminate": 129.72,
+   "CNN-HAR": 29.23,
+   "DANA": 58.17,
+   "DeepConvLSTM": 94.56,
+   "DeepConvLSTM-Attn": 85.72,
+   "DeepConvShallowLSTM": 72.33,
+   "DynamicWHAR": 99.7,
+   "k-NN": 138.07,
+   "Guan-LSTM": 50.43,
+   "MLP-HAR": 25.29,
+   "MLP-Mixer": 41.16,
+   "Random Forest": 1.13,
+   "SA-HAR": 15.25,
+   "SVM": 7.98,
+   "TinierHAR": 6.92,
+   "TinyHAR": 14.21,
+   "Triple-Cross-Attn": 24.2,
+   "Mean": 52.59
+  },
+  "up_fall": {
+   "Attend+Discriminate": 30.65,
+   "CNN-HAR": 8.17,
+   "DANA": 23.13,
+   "DeepConvLSTM": 29.66,
+   "DeepConvLSTM-Attn": 27.82,
+   "DeepConvShallowLSTM": 20.53,
+   "DynamicWHAR": 36.58,
+   "k-NN": 26.47,
+   "Guan-LSTM": 29.45,
+   "MLP-HAR": 5.06,
+   "MLP-Mixer": 15.55,
+   "Random Forest": 0.7,
+   "SA-HAR": 8.77,
+   "SVM": 1.35,
+   "TinierHAR": 2.78,
+   "TinyHAR": 5.41,
+   "Triple-Cross-Attn": 7.79,
+   "Mean": 16.46
+  },
+  "uma_fall": {
+   "Attend+Discriminate": 369.73,
+   "CNN-HAR": 49.15,
+   "DANA": 89.49,
+   "DeepConvLSTM": 323.31,
+   "DeepConvLSTM-Attn": 269.9,
+   "DeepConvShallowLSTM": 128.48,
+   "DynamicWHAR": 46.01,
+   "k-NN": 19.07,
+   "Guan-LSTM": 176.59,
+   "MLP-HAR": 21.11,
+   "MLP-Mixer": 65.87,
+   "Random Forest": 2.16,
+   "SA-HAR": 48.62,
+   "SVM": 3.13,
+   "TinierHAR": 22.09,
+   "TinyHAR": 28.68,
+   "Triple-Cross-Attn": 64.27,
+   "Mean": 101.63
+  },
+  "real_disp": {
+   "Attend+Discriminate": 131.7,
+   "CNN-HAR": 34.39,
+   "DANA": 69.46,
+   "DeepConvLSTM": 121.67,
+   "DeepConvLSTM-Attn": 107.14,
+   "DeepConvShallowLSTM": 155.69,
+   "DynamicWHAR": 220.08,
+   "k-NN": 91.73,
+   "Guan-LSTM": 60.88,
+   "MLP-HAR": 28.43,
+   "MLP-Mixer": 58.19,
+   "Random Forest": 1.35,
+   "SA-HAR": 24.38,
+   "SVM": 17.2,
+   "TinierHAR": 8.61,
+   "TinyHAR": 19.82,
+   "Triple-Cross-Attn": 41.98,
+   "Mean": 70.16
+  },
+  "hugadb": {
+   "Attend+Discriminate": 72.85,
+   "CNN-HAR": 13.84,
+   "DANA": 35.53,
+   "DeepConvLSTM": 70.92,
+   "DeepConvLSTM-Attn": 76.54,
+   "DeepConvShallowLSTM": 40.45,
+   "DynamicWHAR": 33.45,
+   "k-NN": 42.28,
+   "Guan-LSTM": 53.17,
+   "MLP-HAR": 6.75,
+   "MLP-Mixer": 23.93,
+   "Random Forest": 0.91,
+   "SA-HAR": 14.43,
+   "SVM": 2.38,
+   "TinierHAR": 5.22,
+   "TinyHAR": 16.2,
+   "Triple-Cross-Attn": 16.51,
+   "Mean": 30.9
+  },
+  "harth": {
+   "Attend+Discriminate": 45.89,
+   "CNN-HAR": 4.18,
+   "DANA": 7.27,
+   "DeepConvLSTM": 51.24,
+   "DeepConvLSTM-Attn": 46.06,
+   "DeepConvShallowLSTM": 11.82,
+   "DynamicWHAR": 7.34,
+   "k-NN": 141.8,
+   "Guan-LSTM": 57.68,
+   "MLP-HAR": 1.94,
+   "MLP-Mixer": 11.11,
+   "Random Forest": 0.48,
+   "SA-HAR": 9.62,
+   "SVM": 0.99,
+   "TinierHAR": 2.17,
+   "TinyHAR": 5.96,
+   "Triple-Cross-Attn": 5.74,
+   "Mean": 24.19
+  },
+  "w_har": {
+   "Attend+Discriminate": 237.34,
+   "CNN-HAR": 13.58,
+   "DANA": 28.25,
+   "DeepConvLSTM": 252.51,
+   "DeepConvLSTM-Attn": 242.62,
+   "DeepConvShallowLSTM": 31.92,
+   "DynamicWHAR": 11.54,
+   "k-NN": 10.31,
+   "Guan-LSTM": 287.39,
+   "MLP-HAR": 31.28,
+   "MLP-Mixer": 21.58,
+   "Random Forest": 0.77,
+   "SA-HAR": 39.65,
+   "SVM": 0.93,
+   "TinierHAR": 7.89,
+   "TinyHAR": 27.53,
+   "Triple-Cross-Attn": 12.49,
+   "Mean": 73.98
+  },
+  "wear": {
+   "Attend+Discriminate": 44.19,
+   "CNN-HAR": 7.23,
+   "DANA": 14.28,
+   "DeepConvLSTM": 46.41,
+   "DeepConvLSTM-Attn": 45.0,
+   "DeepConvShallowLSTM": 18.78,
+   "DynamicWHAR": 13.61,
+   "k-NN": 54.5,
+   "Guan-LSTM": 57.01,
+   "MLP-HAR": 1.61,
+   "MLP-Mixer": 11.88,
+   "Random Forest": 0.57,
+   "SA-HAR": 9.21,
+   "SVM": 1.62,
+   "TinierHAR": 2.81,
+   "TinyHAR": 6.45,
+   "Triple-Cross-Attn": 12.02,
+   "Mean": 20.42
+  },
+  "har70": {
+   "Attend+Discriminate": 63.07,
+   "CNN-HAR": 7.06,
+   "DANA": 10.9,
+   "DeepConvLSTM": 46.64,
+   "DeepConvLSTM-Attn": 37.83,
+   "DeepConvShallowLSTM": 16.86,
+   "DynamicWHAR": 6.94,
+   "k-NN": 54.35,
+   "Guan-LSTM": 63.03,
+   "MLP-HAR": 1.57,
+   "MLP-Mixer": 8.37,
+   "Random Forest": 0.52,
+   "SA-HAR": 11.13,
+   "SVM": 0.54,
+   "TinierHAR": 2.55,
+   "TinyHAR": 4.95,
+   "Triple-Cross-Attn": 4.94,
+   "Mean": 20.07
+  },
+  "uca_ehar": {
+   "Attend+Discriminate": 28.33,
+   "CNN-HAR": 3.07,
+   "DANA": 17.85,
+   "DeepConvLSTM": 23.51,
+   "DeepConvLSTM-Attn": 22.25,
+   "DeepConvShallowLSTM": 8.48,
+   "DynamicWHAR": 6.59,
+   "k-NN": 33.53,
+   "Guan-LSTM": 35.47,
+   "MLP-HAR": 0.87,
+   "MLP-Mixer": 6.76,
+   "Random Forest": 0.56,
+   "SA-HAR": 9.78,
+   "SVM": 0.98,
+   "TinierHAR": 1.95,
+   "TinyHAR": 4.31,
+   "Triple-Cross-Attn": 5.31,
+   "Mean": 12.33
+  },
+  "gotov": {
+   "Attend+Discriminate": 24.55,
+   "CNN-HAR": 7.89,
+   "DANA": 21.81,
+   "DeepConvLSTM": 27.12,
+   "DeepConvLSTM-Attn": 25.86,
+   "DeepConvShallowLSTM": 15.83,
+   "DynamicWHAR": 46.0,
+   "k-NN": 100.68,
+   "Guan-LSTM": 29.75,
+   "MLP-HAR": 1.89,
+   "MLP-Mixer": 9.99,
+   "Random Forest": 0.51,
+   "SA-HAR": 5.67,
+   "SVM": 5.34,
+   "TinierHAR": 1.64,
+   "TinyHAR": 4.1,
+   "Triple-Cross-Attn": 7.5,
+   "Mean": 19.77
+  },
+  "actrectut_gestures": {
+   "Attend+Discriminate": 25.67,
+   "CNN-HAR": 6.86,
+   "DANA": 12.01,
+   "DeepConvLSTM": 24.52,
+   "DeepConvLSTM-Attn": 27.65,
+   "DeepConvShallowLSTM": 14.02,
+   "DynamicWHAR": 8.97,
+   "k-NN": 1.12,
+   "Guan-LSTM": 28.95,
+   "MLP-HAR": 1.2,
+   "MLP-Mixer": 8.94,
+   "Random Forest": 0.39,
+   "SA-HAR": 6.79,
+   "SVM": 0.39,
+   "TinierHAR": 1.57,
+   "TinyHAR": 4.36,
+   "Triple-Cross-Attn": 5.59,
+   "Mean": 10.53
+  },
+  "Mean": {
+   "Attend+Discriminate": 75.77,
+   "CNN-HAR": 11.28,
+   "DANA": 25.16,
+   "DeepConvLSTM": 68.1,
+   "DeepConvLSTM-Attn": 65.94,
+   "DeepConvShallowLSTM": 32.63,
+   "DynamicWHAR": 33.52,
+   "k-NN": 80.4,
+   "Guan-LSTM": 61.27,
+   "MLP-HAR": 7.51,
+   "MLP-Mixer": 18.94,
+   "Random Forest": 0.73,
+   "SA-HAR": 12.98,
+   "SVM": 2.75,
+   "TinierHAR": 4.3,
+   "TinyHAR": 9.6,
+   "Triple-Cross-Attn": 12.48,
+   "Mean": 30.79
+  }
+ },
+ "memory_mb": {
+  "wisdm": {
+   "Attend+Discriminate": 8.67,
+   "CNN-HAR": 0.75,
+   "DANA": 1.91,
+   "DeepConvLSTM": 2.73,
+   "DeepConvLSTM-Attn": 0.92,
+   "DeepConvShallowLSTM": 2.24,
+   "DynamicWHAR": 0.0,
+   "k-NN": 3.01,
+   "Guan-LSTM": 3.31,
+   "MLP-HAR": 1.19,
+   "MLP-Mixer": 3.24,
+   "Random Forest": 9.44,
+   "SA-HAR": 3.08,
+   "SVM": 8.19,
+   "TinierHAR": 0.75,
+   "TinyHAR": 1.05,
+   "Triple-Cross-Attn": 0.23,
+   "Mean": 2.98
+  },
+  "uci_har": {
+   "Attend+Discriminate": 30.73,
+   "CNN-HAR": 1.75,
+   "DANA": 3.71,
+   "DeepConvLSTM": 0.0,
+   "DeepConvLSTM-Attn": 5.22,
+   "DeepConvShallowLSTM": 4.37,
+   "DynamicWHAR": 3.7,
+   "k-NN": 2.72,
+   "Guan-LSTM": 3.32,
+   "MLP-HAR": 1.47,
+   "MLP-Mixer": 2.64,
+   "Random Forest": 5.88,
+   "SA-HAR": 5.31,
+   "SVM": 8.28,
+   "TinierHAR": 0.0,
+   "TinyHAR": 4.86,
+   "Triple-Cross-Attn": 1.74,
+   "Mean": 5.04
+  },
+  "utd_mhad": {
+   "Attend+Discriminate": 32.84,
+   "CNN-HAR": 1.5,
+   "DANA": 1.01,
+   "DeepConvLSTM": 3.88,
+   "DeepConvLSTM-Attn": 3.65,
+   "DeepConvShallowLSTM": 1.46,
+   "DynamicWHAR": 4.47,
+   "k-NN": 0.67,
+   "Guan-LSTM": 0.0,
+   "MLP-HAR": 1.95,
+   "MLP-Mixer": 4.77,
+   "Random Forest": 9.5,
+   "SA-HAR": 5.32,
+   "SVM": 1.01,
+   "TinierHAR": 0.0,
+   "TinyHAR": 4.71,
+   "Triple-Cross-Attn": 3.09,
+   "Mean": 4.7
+  },
+  "hapt": {
+   "Attend+Discriminate": 23.39,
+   "CNN-HAR": 1.59,
+   "DANA": 4.54,
+   "DeepConvLSTM": 1.84,
+   "DeepConvLSTM-Attn": 4.2,
+   "DeepConvShallowLSTM": 3.19,
+   "DynamicWHAR": 0.0,
+   "k-NN": 3.12,
+   "Guan-LSTM": 1.46,
+   "MLP-HAR": 0.0,
+   "MLP-Mixer": 4.49,
+   "Random Forest": 13.75,
+   "SA-HAR": 4.92,
+   "SVM": 5.13,
+   "TinierHAR": 1.17,
+   "TinyHAR": 5.62,
+   "Triple-Cross-Attn": 2.23,
+   "Mean": 4.74
+  },
+  "usc_had": {
+   "Attend+Discriminate": 69.91,
+   "CNN-HAR": 2.2,
+   "DANA": 2.23,
+   "DeepConvLSTM": 4.31,
+   "DeepConvLSTM-Attn": 4.88,
+   "DeepConvShallowLSTM": 3.3,
+   "DynamicWHAR": 4.79,
+   "k-NN": 3.09,
+   "Guan-LSTM": 5.77,
+   "MLP-HAR": 4.79,
+   "MLP-Mixer": 0.0,
+   "Random Forest": 15.12,
+   "SA-HAR": 6.26,
+   "SVM": 10.57,
+   "TinierHAR": 0.0,
+   "TinyHAR": 2.83,
+   "Triple-Cross-Attn": 66.59,
+   "Mean": 12.15
+  },
+  "unimib_shar": {
+   "Attend+Discriminate": 30.63,
+   "CNN-HAR": 0.15,
+   "DANA": 0.0,
+   "DeepConvLSTM": 2.44,
+   "DeepConvLSTM-Attn": 3.32,
+   "DeepConvShallowLSTM": 2.55,
+   "DynamicWHAR": 4.66,
+   "k-NN": 1.54,
+   "Guan-LSTM": 0.0,
+   "MLP-HAR": 0.85,
+   "MLP-Mixer": 0.0,
+   "Random Forest": 25.22,
+   "SA-HAR": 4.63,
+   "SVM": 4.26,
+   "TinierHAR": 0.46,
+   "TinyHAR": 2.08,
+   "Triple-Cross-Attn": 2.34,
+   "Mean": 5.01
+  },
+  "motion_sense": {
+   "Attend+Discriminate": 35.03,
+   "CNN-HAR": 3.01,
+   "DANA": 8.11,
+   "DeepConvLSTM": 6.78,
+   "DeepConvLSTM-Attn": 5.91,
+   "DeepConvShallowLSTM": 7.09,
+   "DynamicWHAR": 10.21,
+   "k-NN": 9.57,
+   "Guan-LSTM": 3.08,
+   "MLP-HAR": 1.18,
+   "MLP-Mixer": 4.21,
+   "Random Forest": 4.26,
+   "SA-HAR": 6.87,
+   "SVM": 11.05,
+   "TinierHAR": 1.21,
+   "TinyHAR": 5.25,
+   "Triple-Cross-Attn": 0.0,
+   "Mean": 7.23
+  },
+  "real_life_har": {
+   "Attend+Discriminate": 13.0,
+   "CNN-HAR": 0.93,
+   "DANA": 8.19,
+   "DeepConvLSTM": 5.04,
+   "DeepConvLSTM-Attn": 3.75,
+   "DeepConvShallowLSTM": 4.1,
+   "DynamicWHAR": 9.04,
+   "k-NN": 161.47,
+   "Guan-LSTM": 3.86,
+   "MLP-HAR": 1.85,
+   "MLP-Mixer": 4.12,
+   "Random Forest": 17.59,
+   "SA-HAR": 2.54,
+   "SVM": 101.7,
+   "TinierHAR": 0.31,
+   "TinyHAR": 1.6,
+   "Triple-Cross-Attn": 1.41,
+   "Mean": 20.03
+  },
+  "wisdm_19_phone": {
+   "Attend+Discriminate": 11.83,
+   "CNN-HAR": 1.3,
+   "DANA": 3.6,
+   "DeepConvLSTM": 2.86,
+   "DeepConvLSTM-Attn": 2.59,
+   "DeepConvShallowLSTM": 2.64,
+   "DynamicWHAR": 4.41,
+   "k-NN": 16.39,
+   "Guan-LSTM": 2.98,
+   "MLP-HAR": 0.09,
+   "MLP-Mixer": 3.69,
+   "Random Forest": 32.89,
+   "SA-HAR": 2.36,
+   "SVM": 54.45,
+   "TinierHAR": 0.45,
+   "TinyHAR": 1.41,
+   "Triple-Cross-Attn": 2.32,
+   "Mean": 8.6
+  },
+  "wisdm_19_watch": {
+   "Attend+Discriminate": 10.62,
+   "CNN-HAR": 0.93,
+   "DANA": 3.07,
+   "DeepConvLSTM": 2.79,
+   "DeepConvLSTM-Attn": 3.5,
+   "DeepConvShallowLSTM": 2.62,
+   "DynamicWHAR": 5.12,
+   "k-NN": 19.26,
+   "Guan-LSTM": 3.7,
+   "MLP-HAR": 0.14,
+   "MLP-Mixer": 2.28,
+   "Random Forest": 36.33,
+   "SA-HAR": 0.0,
+   "SVM": 58.41,
+   "TinierHAR": 0.76,
+   "TinyHAR": 0.58,
+   "Triple-Cross-Attn": 1.4,
+   "Mean": 8.91
+  },
+  "hang_time": {
+   "Attend+Discriminate": 33.27,
+   "CNN-HAR": 0.93,
+   "DANA": 3.43,
+   "DeepConvLSTM": 1.14,
+   "DeepConvLSTM-Attn": 3.88,
+   "DeepConvShallowLSTM": 2.15,
+   "DynamicWHAR": 3.62,
+   "k-NN": 4.32,
+   "Guan-LSTM": 2.56,
+   "MLP-HAR": 0.0,
+   "MLP-Mixer": 4.17,
+   "Random Forest": 20.53,
+   "SA-HAR": 4.12,
+   "SVM": 8.54,
+   "TinierHAR": 0.0,
+   "TinyHAR": 6.81,
+   "Triple-Cross-Attn": 1.61,
+   "Mean": 5.95
+  },
+  "pamap2": {
+   "Attend+Discriminate": 68.88,
+   "CNN-HAR": 14.43,
+   "DANA": 16.7,
+   "DeepConvLSTM": 9.1,
+   "DeepConvLSTM-Attn": 8.89,
+   "DeepConvShallowLSTM": 11.21,
+   "DynamicWHAR": 30.65,
+   "k-NN": 22.17,
+   "Guan-LSTM": 4.96,
+   "MLP-HAR": 12.3,
+   "MLP-Mixer": 7.15,
+   "Random Forest": 16.1,
+   "SA-HAR": 8.89,
+   "SVM": 24.06,
+   "TinierHAR": 3.06,
+   "TinyHAR": 17.82,
+   "Triple-Cross-Attn": 20.17,
+   "Mean": 17.44
+  },
+  "opportunity": {
+   "Attend+Discriminate": 28.71,
+   "CNN-HAR": 13.03,
+   "DANA": 45.94,
+   "DeepConvLSTM": 18.79,
+   "DeepConvLSTM-Attn": 19.06,
+   "DeepConvShallowLSTM": 23.55,
+   "DynamicWHAR": 69.2,
+   "k-NN": 35.25,
+   "Guan-LSTM": 3.4,
+   "MLP-HAR": 40.84,
+   "MLP-Mixer": 9.06,
+   "Random Forest": 7.82,
+   "SA-HAR": 3.21,
+   "SVM": 23.42,
+   "TinierHAR": 2.99,
+   "TinyHAR": 8.96,
+   "Triple-Cross-Attn": 9.81,
+   "Mean": 21.36
+  },
+  "hhar": {
+   "Attend+Discriminate": 10.21,
+   "CNN-HAR": 0.54,
+   "DANA": 4.02,
+   "DeepConvLSTM": 3.17,
+   "DeepConvLSTM-Attn": 3.7,
+   "DeepConvShallowLSTM": 1.28,
+   "DynamicWHAR": 4.27,
+   "k-NN": 8.17,
+   "Guan-LSTM": 3.72,
+   "MLP-HAR": 2.47,
+   "MLP-Mixer": 2.7,
+   "Random Forest": 14.6,
+   "SA-HAR": 1.99,
+   "SVM": 15.25,
+   "TinierHAR": 0.86,
+   "TinyHAR": 2.47,
+   "Triple-Cross-Attn": 1.81,
+   "Mean": 4.78
+  },
+  "mhealth": {
+   "Attend+Discriminate": 35.59,
+   "CNN-HAR": 4.5,
+   "DANA": 9.54,
+   "DeepConvLSTM": 8.3,
+   "DeepConvLSTM-Attn": 8.74,
+   "DeepConvShallowLSTM": 7.55,
+   "DynamicWHAR": 8.89,
+   "k-NN": 4.15,
+   "Guan-LSTM": 4.92,
+   "MLP-HAR": 2.71,
+   "MLP-Mixer": 3.83,
+   "Random Forest": 5.69,
+   "SA-HAR": 5.25,
+   "SVM": 8.82,
+   "TinierHAR": 1.02,
+   "TinyHAR": 4.7,
+   "Triple-Cross-Attn": 5.59,
+   "Mean": 7.63
+  },
+  "dsads": {
+   "Attend+Discriminate": 21.77,
+   "CNN-HAR": 1.73,
+   "DANA": 16.8,
+   "DeepConvLSTM": 11.42,
+   "DeepConvLSTM-Attn": 10.14,
+   "DeepConvShallowLSTM": 12.77,
+   "DynamicWHAR": 21.45,
+   "k-NN": 37.44,
+   "Guan-LSTM": 3.02,
+   "MLP-HAR": 6.62,
+   "MLP-Mixer": 3.21,
+   "Random Forest": 11.38,
+   "SA-HAR": 5.34,
+   "SVM": 27.09,
+   "TinierHAR": 1.29,
+   "TinyHAR": 0.0,
+   "Triple-Cross-Attn": 5.57,
+   "Mean": 11.59
+  },
+  "sad": {
+   "Attend+Discriminate": 40.79,
+   "CNN-HAR": 12.71,
+   "DANA": 19.41,
+   "DeepConvLSTM": 13.31,
+   "DeepConvLSTM-Attn": 14.41,
+   "DeepConvShallowLSTM": 15.95,
+   "DynamicWHAR": 31.59,
+   "k-NN": 15.54,
+   "Guan-LSTM": 4.83,
+   "MLP-HAR": 11.97,
+   "MLP-Mixer": 6.94,
+   "Random Forest": 5.54,
+   "SA-HAR": 7.01,
+   "SVM": 15.15,
+   "TinierHAR": 1.39,
+   "TinyHAR": 3.6,
+   "Triple-Cross-Attn": 8.7,
+   "Mean": 13.46
+  },
+  "daphnet": {
+   "Attend+Discriminate": 40.54,
+   "CNN-HAR": 0.32,
+   "DANA": 6.03,
+   "DeepConvLSTM": 4.27,
+   "DeepConvLSTM-Attn": 4.52,
+   "DeepConvShallowLSTM": 6.23,
+   "DynamicWHAR": 3.96,
+   "k-NN": 3.35,
+   "Guan-LSTM": 2.89,
+   "MLP-HAR": 3.16,
+   "MLP-Mixer": 3.76,
+   "Random Forest": 4.84,
+   "SA-HAR": 6.82,
+   "SVM": 2.79,
+   "TinierHAR": 0.31,
+   "TinyHAR": 5.93,
+   "Triple-Cross-Attn": 2.47,
+   "Mean": 6.01
+  },
+  "real_world": {
+   "Attend+Discriminate": 38.16,
+   "CNN-HAR": 11.41,
+   "DANA": 29.34,
+   "DeepConvLSTM": 12.84,
+   "DeepConvLSTM-Attn": 12.52,
+   "DeepConvShallowLSTM": 12.52,
+   "DynamicWHAR": 38.44,
+   "k-NN": 96.94,
+   "Guan-LSTM": 3.33,
+   "MLP-HAR": 17.66,
+   "MLP-Mixer": 6.34,
+   "Random Forest": 16.06,
+   "SA-HAR": 4.73,
+   "SVM": 74.56,
+   "TinierHAR": 1.94,
+   "TinyHAR": 10.42,
+   "Triple-Cross-Attn": 12.39,
+   "Mean": 23.51
+  },
+  "up_fall": {
+   "Attend+Discriminate": 16.7,
+   "CNN-HAR": 3.19,
+   "DANA": 13.79,
+   "DeepConvLSTM": 9.55,
+   "DeepConvLSTM-Attn": 8.96,
+   "DeepConvShallowLSTM": 8.6,
+   "DynamicWHAR": 25.61,
+   "k-NN": 10.81,
+   "Guan-LSTM": 4.22,
+   "MLP-HAR": 5.26,
+   "MLP-Mixer": 2.89,
+   "Random Forest": 13.83,
+   "SA-HAR": 6.96,
+   "SVM": 14.49,
+   "TinierHAR": 0.12,
+   "TinyHAR": 2.98,
+   "Triple-Cross-Attn": 0.0,
+   "Mean": 8.7
+  },
+  "uma_fall": {
+   "Attend+Discriminate": 145.39,
+   "CNN-HAR": 12.18,
+   "DANA": 14.32,
+   "DeepConvLSTM": 9.27,
+   "DeepConvLSTM-Attn": 7.57,
+   "DeepConvShallowLSTM": 11.73,
+   "DynamicWHAR": 26.09,
+   "k-NN": 10.8,
+   "Guan-LSTM": 5.89,
+   "MLP-HAR": 18.48,
+   "MLP-Mixer": 16.29,
+   "Random Forest": 16.91,
+   "SA-HAR": 10.26,
+   "SVM": 22.08,
+   "TinierHAR": 4.05,
+   "TinyHAR": 29.88,
+   "Triple-Cross-Attn": 30.88,
+   "Mean": 23.06
+  },
+  "real_disp": {
+   "Attend+Discriminate": 44.4,
+   "CNN-HAR": 14.33,
+   "DANA": 37.46,
+   "DeepConvLSTM": 17.27,
+   "DeepConvLSTM-Attn": 15.36,
+   "DeepConvShallowLSTM": 17.56,
+   "DynamicWHAR": 58.09,
+   "k-NN": 83.29,
+   "Guan-LSTM": 4.6,
+   "MLP-HAR": 31.32,
+   "MLP-Mixer": 12.26,
+   "Random Forest": 27.39,
+   "SA-HAR": 4.96,
+   "SVM": 191.42,
+   "TinierHAR": 2.96,
+   "TinyHAR": 9.94,
+   "Triple-Cross-Attn": 33.49,
+   "Mean": 35.65
+  },
+  "hugadb": {
+   "Attend+Discriminate": 55.95,
+   "CNN-HAR": 7.81,
+   "DANA": 17.23,
+   "DeepConvLSTM": 5.27,
+   "DeepConvLSTM-Attn": 18.94,
+   "DeepConvShallowLSTM": 16.35,
+   "DynamicWHAR": 23.48,
+   "k-NN": 20.21,
+   "Guan-LSTM": 5.35,
+   "MLP-HAR": 5.76,
+   "MLP-Mixer": 6.12,
+   "Random Forest": 15.19,
+   "SA-HAR": 5.0,
+   "SVM": 15.76,
+   "TinierHAR": 0.9,
+   "TinyHAR": 6.55,
+   "Triple-Cross-Attn": 8.98,
+   "Mean": 13.82
+  },
+  "harth": {
+   "Attend+Discriminate": 31.25,
+   "CNN-HAR": 0.68,
+   "DANA": 2.36,
+   "DeepConvLSTM": 3.85,
+   "DeepConvLSTM-Attn": 3.96,
+   "DeepConvShallowLSTM": 2.57,
+   "DynamicWHAR": 4.23,
+   "k-NN": 13.91,
+   "Guan-LSTM": 4.88,
+   "MLP-HAR": 0.71,
+   "MLP-Mixer": 4.97,
+   "Random Forest": 15.21,
+   "SA-HAR": 5.35,
+   "SVM": 9.37,
+   "TinierHAR": 0.83,
+   "TinyHAR": 3.9,
+   "Triple-Cross-Attn": 2.67,
+   "Mean": 6.51
+  },
+  "w_har": {
+   "Attend+Discriminate": 173.88,
+   "CNN-HAR": 4.51,
+   "DANA": 1.47,
+   "DeepConvLSTM": 10.42,
+   "DeepConvLSTM-Attn": 8.23,
+   "DeepConvShallowLSTM": 13.53,
+   "DynamicWHAR": 0.0,
+   "k-NN": 2.85,
+   "Guan-LSTM": 6.01,
+   "MLP-HAR": 21.36,
+   "MLP-Mixer": 6.3,
+   "Random Forest": 5.85,
+   "SA-HAR": 10.62,
+   "SVM": 3.56,
+   "TinierHAR": 1.42,
+   "TinyHAR": 29.38,
+   "Triple-Cross-Attn": 6.51,
+   "Mean": 17.99
+  },
+  "wear": {
+   "Attend+Discriminate": 33.24,
+   "CNN-HAR": 3.51,
+   "DANA": 5.96,
+   "DeepConvLSTM": 6.31,
+   "DeepConvLSTM-Attn": 6.02,
+   "DeepConvShallowLSTM": 5.93,
+   "DynamicWHAR": 0.0,
+   "k-NN": 9.63,
+   "Guan-LSTM": 3.7,
+   "MLP-HAR": 2.39,
+   "MLP-Mixer": 3.54,
+   "Random Forest": 23.5,
+   "SA-HAR": 5.36,
+   "SVM": 16.69,
+   "TinierHAR": 0.29,
+   "TinyHAR": 4.79,
+   "Triple-Cross-Attn": 4.25,
+   "Mean": 7.95
+  },
+  "har70": {
+   "Attend+Discriminate": 27.94,
+   "CNN-HAR": 1.04,
+   "DANA": 4.21,
+   "DeepConvLSTM": 3.98,
+   "DeepConvLSTM-Attn": 4.83,
+   "DeepConvShallowLSTM": 3.61,
+   "DynamicWHAR": 3.78,
+   "k-NN": 5.19,
+   "Guan-LSTM": 3.09,
+   "MLP-HAR": 1.85,
+   "MLP-Mixer": 6.02,
+   "Random Forest": 3.95,
+   "SA-HAR": 5.55,
+   "SVM": 6.15,
+   "TinierHAR": 1.11,
+   "TinyHAR": 5.26,
+   "Triple-Cross-Attn": 2.31,
+   "Mean": 5.28
+  },
+  "uca_ehar": {
+   "Attend+Discriminate": 12.98,
+   "CNN-HAR": 0.17,
+   "DANA": 6.28,
+   "DeepConvLSTM": 3.54,
+   "DeepConvLSTM-Attn": 3.52,
+   "DeepConvShallowLSTM": 3.41,
+   "DynamicWHAR": 3.21,
+   "k-NN": 3.55,
+   "Guan-LSTM": 2.64,
+   "MLP-HAR": 0.25,
+   "MLP-Mixer": 4.38,
+   "Random Forest": 17.9,
+   "SA-HAR": 3.26,
+   "SVM": 10.64,
+   "TinierHAR": 0.61,
+   "TinyHAR": 1.46,
+   "Triple-Cross-Attn": 1.07,
+   "Mean": 4.64
+  },
+  "gotov": {
+   "Attend+Discriminate": 12.93,
+   "CNN-HAR": 1.74,
+   "DANA": 8.92,
+   "DeepConvLSTM": 5.59,
+   "DeepConvLSTM-Attn": 6.38,
+   "DeepConvShallowLSTM": 5.39,
+   "DynamicWHAR": 15.96,
+   "k-NN": 37.88,
+   "Guan-LSTM": 3.43,
+   "MLP-HAR": 3.38,
+   "MLP-Mixer": 3.19,
+   "Random Forest": 20.11,
+   "SA-HAR": 4.33,
+   "SVM": 56.43,
+   "TinierHAR": 0.38,
+   "TinyHAR": 1.29,
+   "Triple-Cross-Attn": 2.09,
+   "Mean": 11.14
+  },
+  "actrectut_gestures": {
+   "Attend+Discriminate": 25.56,
+   "CNN-HAR": 3.0,
+   "DANA": 10.96,
+   "DeepConvLSTM": 3.58,
+   "DeepConvLSTM-Attn": 6.2,
+   "DeepConvShallowLSTM": 6.54,
+   "DynamicWHAR": 71.84,
+   "k-NN": 2.0,
+   "Guan-LSTM": 4.59,
+   "MLP-HAR": 1.93,
+   "MLP-Mixer": 4.28,
+   "Random Forest": 5.09,
+   "SA-HAR": 3.3,
+   "SVM": 3.11,
+   "TinierHAR": 1.05,
+   "TinyHAR": 3.93,
+   "Triple-Cross-Attn": 2.82,
+   "Mean": 9.4
+  },
+  "Mean": {
+   "Attend+Discriminate": 38.83,
+   "CNN-HAR": 4.2,
+   "DANA": 10.35,
+   "DeepConvLSTM": 6.45,
+   "DeepConvLSTM-Attn": 7.13,
+   "DeepConvShallowLSTM": 7.4,
+   "DynamicWHAR": 16.36,
+   "k-NN": 21.61,
+   "Guan-LSTM": 3.65,
+   "MLP-HAR": 6.8,
+   "MLP-Mixer": 4.9,
+   "Random Forest": 14.58,
+   "SA-HAR": 5.12,
+   "SVM": 27.08,
+   "TinierHAR": 1.06,
+   "TinyHAR": 6.34,
+   "Triple-Cross-Attn": 8.15,
+   "Mean": 11.18
+  }
+ },
+ "flops": {
+  "wisdm": {
+   "Attend+Discriminate": "41.15M",
+   "CNN-HAR": "2.19M",
+   "DANA": "27.30M",
+   "DeepConvLSTM": "44.39M",
+   "DeepConvLSTM-Attn": "45.82M",
+   "DeepConvShallowLSTM": "31.38M",
+   "DynamicWHAR": "4.31M",
+   "k-NN": "2.24M",
+   "Guan-LSTM": "96.03M",
+   "MLP-HAR": "265.8k",
+   "MLP-Mixer": "20.80M",
+   "Random Forest": "3.6k",
+   "SA-HAR": "52.12M",
+   "SVM": "1.29M",
+   "TinierHAR": "239.2k",
+   "TinyHAR": "2.02M",
+   "Triple-Cross-Attn": "3.16M",
+   "Mean": "22.04M"
+  },
+  "uci_har": {
+   "Attend+Discriminate": "287.56M",
+   "CNN-HAR": "20.27M",
+   "DANA": "176.77M",
+   "DeepConvLSTM": "288.36M",
+   "DeepConvLSTM-Attn": "292.78M",
+   "DeepConvShallowLSTM": "375.44M",
+   "DynamicWHAR": "30.16M",
+   "k-NN": "1.62M",
+   "Guan-LSTM": "241.92M",
+   "MLP-HAR": "5.22M",
+   "MLP-Mixer": "104.37M",
+   "Random Forest": "22.3k",
+   "SA-HAR": "147.33M",
+   "SVM": "1.05M",
+   "TinierHAR": "1.48M",
+   "TinyHAR": "16.01M",
+   "Triple-Cross-Attn": "33.18M",
+   "Mean": "119.03M"
+  },
+  "utd_mhad": {
+   "Attend+Discriminate": "204.57M",
+   "CNN-HAR": "13.61M",
+   "DANA": "118.92M",
+   "DeepConvLSTM": "210.22M",
+   "DeepConvLSTM-Attn": "214.65M",
+   "DeepConvShallowLSTM": "255.92M",
+   "DynamicWHAR": "15.09M",
+   "k-NN": "113.4k",
+   "Guan-LSTM": "242.62M",
+   "MLP-HAR": "3.11M",
+   "MLP-Mixer": "103.76M",
+   "Random Forest": "14.6k",
+   "SA-HAR": "145.86M",
+   "SVM": "113.5k",
+   "TinierHAR": "1.04M",
+   "TinyHAR": "11.23M",
+   "Triple-Cross-Attn": "22.49M",
+   "Mean": "91.96M"
+  },
+  "hapt": {
+   "Attend+Discriminate": "204.57M",
+   "CNN-HAR": "13.60M",
+   "DANA": "118.92M",
+   "DeepConvLSTM": "210.22M",
+   "DeepConvLSTM-Attn": "214.64M",
+   "DeepConvShallowLSTM": "255.50M",
+   "DynamicWHAR": "15.08M",
+   "k-NN": "1.20M",
+   "Guan-LSTM": "241.46M",
+   "MLP-HAR": "3.11M",
+   "MLP-Mixer": "103.76M",
+   "Random Forest": "14.6k",
+   "SA-HAR": "145.84M",
+   "SVM": "676.5k",
+   "TinierHAR": "1.04M",
+   "TinyHAR": "11.23M",
+   "Triple-Cross-Attn": "22.26M",
+   "Mean": "91.95M"
+  },
+  "usc_had": {
+   "Attend+Discriminate": "430.14M",
+   "CNN-HAR": "28.88M",
+   "DANA": "231.47M",
+   "DeepConvLSTM": "442.11M",
+   "DeepConvLSTM-Attn": "451.53M",
+   "DeepConvShallowLSTM": "581.25M",
+   "DynamicWHAR": "17.68M",
+   "k-NN": "2.30M",
+   "Guan-LSTM": "482.93M",
+   "MLP-HAR": "11.24M",
+   "MLP-Mixer": "204.44M",
+   "Random Forest": "27.7k",
+   "SA-HAR": "338.46M",
+   "SVM": "1.61M",
+   "TinierHAR": "2.09M",
+   "TinyHAR": "23.78M",
+   "Triple-Cross-Attn": "44.47M",
+   "Mean": "193.79M"
+  },
+  "unimib_shar": {
+   "Attend+Discriminate": "122.20M",
+   "CNN-HAR": "6.92M",
+   "DANA": "61.07M",
+   "DeepConvLSTM": "132.07M",
+   "DeepConvLSTM-Attn": "136.50M",
+   "DeepConvShallowLSTM": "135.52M",
+   "DynamicWHAR": "5.09M",
+   "k-NN": "479.7k",
+   "Guan-LSTM": "240.93M",
+   "MLP-HAR": "1.37M",
+   "MLP-Mixer": "52.08M",
+   "Random Forest": "7.3k",
+   "SA-HAR": "144.34M",
+   "SVM": "479.0k",
+   "TinierHAR": "592.1k",
+   "TinyHAR": "6.53M",
+   "Triple-Cross-Attn": "11.25M",
+   "Mean": "62.20M"
+  },
+  "motion_sense": {
+   "Attend+Discriminate": "540.27M",
+   "CNN-HAR": "40.32M",
+   "DANA": "350.31M",
+   "DeepConvLSTM": "522.79M",
+   "DeepConvLSTM-Attn": "527.21M",
+   "DeepConvShallowLSTM": "735.79M",
+   "DynamicWHAR": "107.50M",
+   "k-NN": "7.18M",
+   "Guan-LSTM": "244.69M",
+   "MLP-HAR": "13.80M",
+   "MLP-Mixer": "259.42M",
+   "Random Forest": "46.5k",
+   "SA-HAR": "151.83M",
+   "SVM": "3.16M",
+   "TinierHAR": "2.81M",
+   "TinyHAR": "30.78M",
+   "Triple-Cross-Attn": "66.20M",
+   "Mean": "212.01M"
+  },
+  "real_life_har": {
+   "Attend+Discriminate": "154.66M",
+   "CNN-HAR": "10.68M",
+   "DANA": "123.64M",
+   "DeepConvLSTM": "151.12M",
+   "DeepConvLSTM-Attn": "152.56M",
+   "DeepConvShallowLSTM": "145.91M",
+   "DynamicWHAR": "72.31M",
+   "k-NN": "123.00M",
+   "Guan-LSTM": "97.44M",
+   "MLP-HAR": "2.78M",
+   "MLP-Mixer": "82.25M",
+   "Random Forest": "16.9k",
+   "SA-HAR": "54.52M",
+   "SVM": "26.22M",
+   "TinierHAR": "956.2k",
+   "TinyHAR": "8.19M",
+   "Triple-Cross-Attn": "15.56M",
+   "Mean": "71.87M"
+  },
+  "wisdm_19_phone": {
+   "Attend+Discriminate": "69.22M",
+   "CNN-HAR": "4.32M",
+   "DANA": "51.39M",
+   "DeepConvLSTM": "71.08M",
+   "DeepConvLSTM-Attn": "72.51M",
+   "DeepConvShallowLSTM": "60.08M",
+   "DynamicWHAR": "13.53M",
+   "k-NN": "11.69M",
+   "Guan-LSTM": "96.77M",
+   "MLP-HAR": "678.4k",
+   "MLP-Mixer": "41.21M",
+   "Random Forest": "6.7k",
+   "SA-HAR": "52.74M",
+   "SVM": "11.23M",
+   "TinierHAR": "419.3k",
+   "TinyHAR": "3.54M",
+   "Triple-Cross-Attn": "6.30M",
+   "Mean": "33.33M"
+  },
+  "wisdm_19_watch": {
+   "Attend+Discriminate": "69.22M",
+   "CNN-HAR": "4.32M",
+   "DANA": "51.39M",
+   "DeepConvLSTM": "71.08M",
+   "DeepConvLSTM-Attn": "72.51M",
+   "DeepConvShallowLSTM": "60.08M",
+   "DynamicWHAR": "13.53M",
+   "k-NN": "13.67M",
+   "Guan-LSTM": "96.77M",
+   "MLP-HAR": "678.4k",
+   "MLP-Mixer": "41.21M",
+   "Random Forest": "6.7k",
+   "SA-HAR": "52.74M",
+   "SVM": "11.80M",
+   "TinierHAR": "419.3k",
+   "TinyHAR": "3.54M",
+   "Triple-Cross-Attn": "6.30M",
+   "Mean": "33.49M"
+  },
+  "hang_time": {
+   "Attend+Discriminate": "122.19M",
+   "CNN-HAR": "6.91M",
+   "DANA": "61.07M",
+   "DeepConvLSTM": "132.07M",
+   "DeepConvLSTM-Attn": "136.50M",
+   "DeepConvShallowLSTM": "135.21M",
+   "DynamicWHAR": "5.09M",
+   "k-NN": "3.40M",
+   "Guan-LSTM": "240.08M",
+   "MLP-HAR": "1.37M",
+   "MLP-Mixer": "52.08M",
+   "Random Forest": "7.3k",
+   "SA-HAR": "144.33M",
+   "SVM": "1.87M",
+   "TinierHAR": "591.4k",
+   "TinyHAR": "6.53M",
+   "Triple-Cross-Attn": "11.16M",
+   "Mean": "62.38M"
+  },
+  "pamap2": {
+   "Attend+Discriminate": "3.25G",
+   "CNN-HAR": "246.47M",
+   "DANA": "1.98G",
+   "DeepConvLSTM": "2.96G",
+   "DeepConvLSTM-Attn": "2.96G",
+   "DeepConvShallowLSTM": "4.76G",
+   "DynamicWHAR": "925.95M",
+   "k-NN": "14.48M",
+   "Guan-LSTM": "511.34M",
+   "MLP-HAR": "199.41M",
+   "MLP-Mixer": "1.33G",
+   "Random Forest": "283.0k",
+   "SA-HAR": "384.47M",
+   "SVM": "5.24M",
+   "TinierHAR": "15.84M",
+   "TinyHAR": "196.15M",
+   "Triple-Cross-Attn": "383.27M",
+   "Mean": "1.18G"
+  },
+  "opportunity": {
+   "Attend+Discriminate": "2.38G",
+   "CNN-HAR": "162.60M",
+   "DANA": "1.57G",
+   "DeepConvLSTM": "1.97G",
+   "DeepConvLSTM-Attn": "1.98G",
+   "DeepConvShallowLSTM": "2.63G",
+   "DynamicWHAR": "7.17G",
+   "k-NN": "25.51M",
+   "Guan-LSTM": "167.96M",
+   "MLP-HAR": "244.33M",
+   "MLP-Mixer": "1.04G",
+   "Random Forest": "244.3k",
+   "SA-HAR": "119.99M",
+   "SVM": "5.50M",
+   "TinierHAR": "11.83M",
+   "TinyHAR": "152.64M",
+   "Triple-Cross-Attn": "232.23M",
+   "Mean": "1.17G"
+  },
+  "hhar": {
+   "Attend+Discriminate": "69.22M",
+   "CNN-HAR": "4.31M",
+   "DANA": "51.39M",
+   "DeepConvLSTM": "71.08M",
+   "DeepConvLSTM-Attn": "72.51M",
+   "DeepConvShallowLSTM": "60.01M",
+   "DynamicWHAR": "13.53M",
+   "k-NN": "5.89M",
+   "Guan-LSTM": "96.40M",
+   "MLP-HAR": "676.7k",
+   "MLP-Mixer": "41.20M",
+   "Random Forest": "6.7k",
+   "SA-HAR": "52.72M",
+   "SVM": "3.71M",
+   "TinierHAR": "418.5k",
+   "TinyHAR": "3.53M",
+   "Triple-Cross-Attn": "6.26M",
+   "Mean": "32.52M"
+  },
+  "mhealth": {
+   "Attend+Discriminate": "683.08M",
+   "CNN-HAR": "51.46M",
+   "DANA": "446.72M",
+   "DeepConvLSTM": "653.03M",
+   "DeepConvLSTM-Attn": "657.45M",
+   "DeepConvShallowLSTM": "936.18M",
+   "DynamicWHAR": "172.52M",
+   "k-NN": "2.22M",
+   "Guan-LSTM": "246.76M",
+   "MLP-HAR": "20.02M",
+   "MLP-Mixer": "311.51M",
+   "Random Forest": "60.5k",
+   "SA-HAR": "154.34M",
+   "SVM": "1.10M",
+   "TinierHAR": "3.55M",
+   "TinyHAR": "39.29M",
+   "Triple-Cross-Attn": "84.95M",
+   "Mean": "262.60M"
+  },
+  "dsads": {
+   "Attend+Discriminate": "599.29M",
+   "CNN-HAR": "43.06M",
+   "DANA": "448.88M",
+   "DeepConvLSTM": "552.65M",
+   "DeepConvLSTM-Attn": "554.58M",
+   "DeepConvShallowLSTM": "663.14M",
+   "DynamicWHAR": "657.80M",
+   "k-NN": "28.53M",
+   "Guan-LSTM": "126.99M",
+   "MLP-HAR": "25.67M",
+   "MLP-Mixer": "285.87M",
+   "Random Forest": "64.9k",
+   "SA-HAR": "76.84M",
+   "SVM": "7.38M",
+   "TinierHAR": "3.33M",
+   "TinyHAR": "34.58M",
+   "Triple-Cross-Attn": "69.98M",
+   "Mean": "245.80M"
+  },
+  "sad": {
+   "Attend+Discriminate": "1.79G",
+   "CNN-HAR": "133.86M",
+   "DANA": "1.16G",
+   "DeepConvLSTM": "1.62G",
+   "DeepConvLSTM-Attn": "1.62G",
+   "DeepConvShallowLSTM": "2.42G",
+   "DynamicWHAR": "1.22G",
+   "k-NN": "10.88M",
+   "Guan-LSTM": "257.67M",
+   "MLP-HAR": "98.25M",
+   "MLP-Mixer": "778.68M",
+   "Random Forest": "168.9k",
+   "SA-HAR": "172.84M",
+   "SVM": "3.28M",
+   "TinierHAR": "9.03M",
+   "TinyHAR": "108.66M",
+   "Triple-Cross-Attn": "220.45M",
+   "Mean": "683.95M"
+  },
+  "daphnet": {
+   "Attend+Discriminate": "376.25M",
+   "CNN-HAR": "26.58M",
+   "DANA": "224.04M",
+   "DeepConvLSTM": "377.30M",
+   "DeepConvLSTM-Attn": "383.13M",
+   "DeepConvShallowLSTM": "509.16M",
+   "DynamicWHAR": "31.24M",
+   "k-NN": "2.21M",
+   "Guan-LSTM": "309.36M",
+   "MLP-HAR": "7.86M",
+   "MLP-Mixer": "131.76M",
+   "Random Forest": "28.1k",
+   "SA-HAR": "196.97M",
+   "SVM": "356.6k",
+   "TinierHAR": "1.91M",
+   "TinyHAR": "20.91M",
+   "Triple-Cross-Attn": "40.49M",
+   "Mean": "155.27M"
+  },
+  "real_world": {
+   "Attend+Discriminate": "2.47G",
+   "CNN-HAR": "180.63M",
+   "DANA": "1.57G",
+   "DeepConvLSTM": "2.16G",
+   "DeepConvLSTM-Attn": "2.17G",
+   "DeepConvShallowLSTM": "3.26G",
+   "DynamicWHAR": "2.35G",
+   "k-NN": "74.74M",
+   "Guan-LSTM": "264.19M",
+   "MLP-HAR": "167.91M",
+   "MLP-Mixer": "1.04G",
+   "Random Forest": "233.0k",
+   "SA-HAR": "183.34M",
+   "SVM": "18.66M",
+   "TinierHAR": "12.14M",
+   "TinyHAR": "153.10M",
+   "Triple-Cross-Attn": "297.76M",
+   "Mean": "962.30M"
+  },
+  "up_fall": {
+   "Attend+Discriminate": "422.01M",
+   "CNN-HAR": "29.81M",
+   "DANA": "340.38M",
+   "DeepConvLSTM": "391.28M",
+   "DeepConvLSTM-Attn": "392.71M",
+   "DeepConvShallowLSTM": "403.66M",
+   "DynamicWHAR": "567.68M",
+   "k-NN": "8.20M",
+   "Guan-LSTM": "100.98M",
+   "MLP-HAR": "16.93M",
+   "MLP-Mixer": "225.57M",
+   "Random Forest": "49.5k",
+   "SA-HAR": "59.93M",
+   "SVM": "3.35M",
+   "TinierHAR": "2.57M",
+   "TinyHAR": "23.30M",
+   "Triple-Cross-Attn": "43.61M",
+   "Mean": "178.35M"
+  },
+  "uma_fall": {
+   "Attend+Discriminate": "4.95G",
+   "CNN-HAR": "381.59M",
+   "DANA": "2.95G",
+   "DeepConvLSTM": "4.60G",
+   "DeepConvLSTM-Attn": "4.62G",
+   "DeepConvShallowLSTM": "7.59G",
+   "DynamicWHAR": "547.23M",
+   "k-NN": "5.67M",
+   "Guan-LSTM": "1.01G",
+   "MLP-HAR": "378.89M",
+   "MLP-Mixer": "2.05G",
+   "Random Forest": "409.8k",
+   "SA-HAR": "930.13M",
+   "SVM": "4.61M",
+   "TinierHAR": "23.90M",
+   "TinyHAR": "296.16M",
+   "Triple-Cross-Attn": "599.01M",
+   "Mean": "1.82G"
+  },
+  "real_disp": {
+   "Attend+Discriminate": "3.69G",
+   "CNN-HAR": "260.82M",
+   "DANA": "2.26G",
+   "DeepConvLSTM": "3.10G",
+   "DeepConvLSTM-Attn": "3.11G",
+   "DeepConvShallowLSTM": "4.70G",
+   "DynamicWHAR": "5.35G",
+   "k-NN": "63.47M",
+   "Guan-LSTM": "277.26M",
+   "MLP-HAR": "329.95M",
+   "MLP-Mixer": "1.51G",
+   "Random Forest": "345.5k",
+   "SA-HAR": "201.38M",
+   "SVM": "48.11M",
+   "TinierHAR": "17.47M",
+   "TinyHAR": "237.82M",
+   "Triple-Cross-Attn": "437.82M",
+   "Mean": "1.51G"
+  },
+  "hugadb": {
+   "Attend+Discriminate": "1.37G",
+   "CNN-HAR": "103.61M",
+   "DANA": "878.53M",
+   "DeepConvLSTM": "1.27G",
+   "DeepConvLSTM-Attn": "1.28G",
+   "DeepConvShallowLSTM": "1.93G",
+   "DynamicWHAR": "474.22M",
+   "k-NN": "14.66M",
+   "Guan-LSTM": "301.55M",
+   "MLP-HAR": "58.72M",
+   "MLP-Mixer": "614.47M",
+   "Random Forest": "123.2k",
+   "SA-HAR": "199.82M",
+   "SVM": "4.10M",
+   "TinierHAR": "6.99M",
+   "TinyHAR": "80.31M",
+   "Triple-Cross-Attn": "167.37M",
+   "Mean": "514.82M"
+  },
+  "harth": {
+   "Attend+Discriminate": "204.57M",
+   "CNN-HAR": "13.60M",
+   "DANA": "118.92M",
+   "DeepConvLSTM": "210.22M",
+   "DeepConvLSTM-Attn": "214.64M",
+   "DeepConvShallowLSTM": "255.50M",
+   "DynamicWHAR": "15.08M",
+   "k-NN": "9.81M",
+   "Guan-LSTM": "241.46M",
+   "MLP-HAR": "3.11M",
+   "MLP-Mixer": "103.76M",
+   "Random Forest": "14.6k",
+   "SA-HAR": "145.84M",
+   "SVM": "1.90M",
+   "TinierHAR": "1.04M",
+   "TinyHAR": "11.23M",
+   "Triple-Cross-Attn": "22.26M",
+   "Mean": "92.53M"
+  },
+  "w_har": {
+   "Attend+Discriminate": "1.26G",
+   "CNN-HAR": "87.29M",
+   "DANA": "663.44M",
+   "DeepConvLSTM": "1.28G",
+   "DeepConvLSTM-Attn": "1.30G",
+   "DeepConvShallowLSTM": "1.80G",
+   "DynamicWHAR": "31.63M",
+   "k-NN": "853.5k",
+   "Guan-LSTM": "1.21G",
+   "MLP-HAR": "75.72M",
+   "MLP-Mixer": "512.86M",
+   "Random Forest": "79.4k",
+   "SA-HAR": "1.20G",
+   "SVM": "402.3k",
+   "TinierHAR": "5.96M",
+   "TinyHAR": "70.52M",
+   "Triple-Cross-Attn": "136.22M",
+   "Mean": "566.48M"
+  },
+  "wear": {
+   "Attend+Discriminate": "371.17M",
+   "CNN-HAR": "26.96M",
+   "DANA": "234.62M",
+   "DeepConvLSTM": "366.50M",
+   "DeepConvLSTM-Attn": "370.93M",
+   "DeepConvShallowLSTM": "495.90M",
+   "DynamicWHAR": "50.48M",
+   "k-NN": "6.99M",
+   "Guan-LSTM": "243.77M",
+   "MLP-HAR": "7.71M",
+   "MLP-Mixer": "156.05M",
+   "Random Forest": "30.2k",
+   "SA-HAR": "148.85M",
+   "SVM": "3.64M",
+   "TinierHAR": "1.92M",
+   "TinyHAR": "20.86M",
+   "Triple-Cross-Attn": "44.55M",
+   "Mean": "150.05M"
+  },
+  "har70": {
+   "Attend+Discriminate": "204.56M",
+   "CNN-HAR": "13.59M",
+   "DANA": "118.92M",
+   "DeepConvLSTM": "210.21M",
+   "DeepConvLSTM-Attn": "214.64M",
+   "DeepConvShallowLSTM": "255.35M",
+   "DynamicWHAR": "15.08M",
+   "k-NN": "3.44M",
+   "Guan-LSTM": "241.08M",
+   "MLP-HAR": "3.11M",
+   "MLP-Mixer": "103.76M",
+   "Random Forest": "14.6k",
+   "SA-HAR": "145.83M",
+   "SVM": "790.6k",
+   "TinierHAR": "1.04M",
+   "TinyHAR": "11.23M",
+   "Triple-Cross-Attn": "22.18M",
+   "Mean": "92.05M"
+  },
+  "uca_ehar": {
+   "Attend+Discriminate": "104.21M",
+   "CNN-HAR": "6.78M",
+   "DANA": "72.55M",
+   "DeepConvLSTM": "106.02M",
+   "DeepConvLSTM-Attn": "107.95M",
+   "DeepConvShallowLSTM": "107.25M",
+   "DynamicWHAR": "18.02M",
+   "k-NN": "2.53M",
+   "Guan-LSTM": "120.89M",
+   "MLP-HAR": "1.23M",
+   "MLP-Mixer": "52.18M",
+   "Random Forest": "9.4k",
+   "SA-HAR": "67.33M",
+   "SVM": "2.05M",
+   "TinierHAR": "579.4k",
+   "TinyHAR": "5.58M",
+   "Triple-Cross-Attn": "10.89M",
+   "Mean": "46.24M"
+  },
+  "gotov": {
+   "Attend+Discriminate": "281.32M",
+   "CNN-HAR": "19.90M",
+   "DANA": "228.00M",
+   "DeepConvLSTM": "266.76M",
+   "DeepConvLSTM-Attn": "268.19M",
+   "DeepConvShallowLSTM": "270.06M",
+   "DynamicWHAR": "246.99M",
+   "k-NN": "27.99M",
+   "Guan-LSTM": "99.41M",
+   "MLP-HAR": "8.13M",
+   "MLP-Mixer": "143.80M",
+   "Random Forest": "32.3k",
+   "SA-HAR": "57.13M",
+   "SVM": "13.69M",
+   "TinierHAR": "1.73M",
+   "TinyHAR": "15.25M",
+   "Triple-Cross-Attn": "29.16M",
+   "Mean": "116.33M"
+  },
+  "actrectut_gestures": {
+   "Attend+Discriminate": "274.96M",
+   "CNN-HAR": "19.80M",
+   "DANA": "191.17M",
+   "DeepConvLSTM": "268.53M",
+   "DeepConvLSTM-Attn": "271.16M",
+   "DeepConvShallowLSTM": "333.91M",
+   "DynamicWHAR": "73.87M",
+   "k-NN": "168.9k",
+   "Guan-LSTM": "156.31M",
+   "MLP-HAR": "5.13M",
+   "MLP-Mixer": "131.37M",
+   "Random Forest": "25.2k",
+   "SA-HAR": "90.83M",
+   "SVM": "138.2k",
+   "TinierHAR": "1.53M",
+   "TinyHAR": "15.14M",
+   "Triple-Cross-Attn": "33.95M",
+   "Mean": "109.88M"
+  },
+  "Mean": {
+   "Attend+Discriminate": "899.77M",
+   "CNN-HAR": "65.49M",
+   "DANA": "562.52M",
+   "DeepConvLSTM": "823.56M",
+   "DeepConvLSTM-Attn": "828.57M",
+   "DeepConvShallowLSTM": "1.20G",
+   "DynamicWHAR": "674.50M",
+   "k-NN": "15.84M",
+   "Guan-LSTM": "276.67M",
+   "MLP-HAR": "56.55M",
+   "MLP-Mixer": "387.29M",
+   "Random Forest": "79.9k",
+   "SA-HAR": "200.61M",
+   "SVM": "6.25M",
+   "TinierHAR": "4.48M",
+   "TinyHAR": "53.99M",
+   "Triple-Cross-Attn": "104.16M",
+   "Mean": "362.65M"
+  }
+ },
+ "f1_models": [
+  "CNN-HAR",
+  "TinyHAR",
+  "Triple-Cross-Attn",
+  "DANA",
+  "TinierHAR",
+  "Attend+Discriminate",
+  "DynamicWHAR",
+  "Random Forest",
+  "DeepConvLSTM-Attn",
+  "MLP-HAR",
+  "DeepConvLSTM",
+  "MLP-Mixer",
+  "Guan-LSTM",
+  "DeepConvShallowLSTM",
+  "SA-HAR",
+  "SVM",
+  "k-NN",
+  "Mean"
+ ],
+ "app_models": [
+  "Attend+Discriminate",
+  "CNN-HAR",
+  "DANA",
+  "DeepConvLSTM",
+  "DeepConvLSTM-Attn",
+  "DeepConvShallowLSTM",
+  "DynamicWHAR",
+  "k-NN",
+  "Guan-LSTM",
+  "MLP-HAR",
+  "MLP-Mixer",
+  "Random Forest",
+  "SA-HAR",
+  "SVM",
+  "TinierHAR",
+  "TinyHAR",
+  "Triple-Cross-Attn",
+  "Mean"
+ ],
+ "dataset_order_f1": [
+  "sad",
+  "uci_har",
+  "motion_sense",
+  "wear",
+  "dsads",
+  "mhealth",
+  "wisdm",
+  "real_disp",
+  "hapt",
+  "hhar",
+  "usc_had",
+  "wisdm_19_watch",
+  "opportunity",
+  "harth",
+  "gotov",
+  "real_world",
+  "har70",
+  "pamap2",
+  "up_fall",
+  "utd_mhad",
+  "uca_ehar",
+  "unimib_shar",
+  "real_life_har",
+  "hang_time",
+  "w_har",
+  "uma_fall",
+  "hugadb",
+  "actrectut_gestures",
+  "daphnet",
+  "wisdm_19_phone",
+  "Mean"
+ ]
+}

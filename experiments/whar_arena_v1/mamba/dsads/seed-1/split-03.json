@@ -1,0 +1,53 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "mamba",
+  "dataset_id": "dsads",
+  "split_id": "split-03",
+  "train_seed": 1,
+  "fingerprint": "d58cfe80213bd523c7f26121a117f0449c816a3205888afa2e1aaa6830a3266f",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.8287439942359924,
+    "accuracy": 0.8490164875984192,
+    "balanced_accuracy": 0.849016480595428,
+    "val_macro_f1": 0.999435544013977
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_3",
+    "train_size": 21068,
+    "val_size": 5266,
+    "test_size": 3762,
+    "best_epoch": 29,
+    "epochs_ran": 39
+  },
+  "model": {
+    "class": "MambaClassifier",
+    "config": {
+      "d_model": 32,
+      "d_state": 16,
+      "num_layers": 2
+    },
+    "params": 22131,
+    "input_channels": 45,
+    "window_length": 75,
+    "num_classes": 19,
+    "sampling_freq": 25
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/kaggle/temp_edge/datasets",
+  "device": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "train_seconds": 492.4,
+  "fast_paths": true,
+  "peak_gpu_mb": 247.9,
+  "tau": null,
+  "hysteresis_widths": null
+}

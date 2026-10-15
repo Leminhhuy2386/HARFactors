@@ -1,0 +1,9 @@
+{
+  "experiment": "P10 synthetic mechanism tests: QuantileNet (slow sequential loop), one process per task, seeds 0-2",
+  "jobs": [
+    {"script": "synthetic_test.py", "args": ["--tasks", "loop_dir", "--models", "quantilenet"], "gpu": 0},
+    {"script": "synthetic_test.py", "args": ["--tasks", "step_dir", "--models", "quantilenet"], "gpu": 0},
+    {"script": "synthetic_test.py", "args": ["--tasks", "freq", "--models", "quantilenet"], "gpu": 1},
+    {"script": "synthetic_test.py", "args": ["--tasks", "long_order", "--models", "quantilenet"], "gpu": 1}
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "isochron",
+  "dataset_id": "opportunity",
+  "split_id": "split-00",
+  "train_seed": 0,
+  "fingerprint": "141f53f657e8b1e2f623ca4366309438f6f3ba346389fbe4f87f5651dd55a1c9",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7507092952728271,
+    "accuracy": 0.9287719130516052,
+    "balanced_accuracy": 0.9368782163617903,
+    "val_macro_f1": 0.7913057208061218
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 6160,
+    "val_size": 1540,
+    "test_size": 2850,
+    "best_epoch": 23,
+    "epochs_ran": 33
+  },
+  "model": {
+    "class": "IsochronNet",
+    "config": {
+      "tonic": "encoder",
+      "d_model": 48,
+      "values": 24,
+      "ring_dim": 12
+    },
+    "params": 32767,
+    "input_channels": 133,
+    "window_length": 90,
+    "num_classes": 5,
+    "sampling_freq": 30
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\Edge_SSM\\datasets_paper_era_local",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 202.7,
+  "fast_paths": true,
+  "peak_gpu_mb": 106.5,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": null
+}

@@ -1,0 +1,326 @@
+{
+  "dataset": "sad",
+  "classes": [
+    "Walking",
+    "Standing",
+    "Jogging",
+    "Sitting",
+    "Biking",
+    "Upstairs",
+    "Downstairs"
+  ],
+  "models": {
+    "recurrencenet": {
+      "runs": 30,
+      "macro_f1": 92.92808679040796,
+      "errors": 1607,
+      "categories": {
+        "stairs_up_down": {
+          "error_share": 0.09520846297448662,
+          "oracle_gain": 0.6066347880161045
+        },
+        "static_postures": {
+          "error_share": 0.0,
+          "oracle_gain": 0.0
+        },
+        "gait_types": {
+          "error_share": 0.8344741754822651,
+          "oracle_gain": 6.024026672667722
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 584,
+          "true": "Walking",
+          "pred": "Downstairs",
+          "share": 0.3634100808960797
+        },
+        {
+          "count": 344,
+          "true": "Upstairs",
+          "pred": "Walking",
+          "share": 0.21406347230864967
+        },
+        {
+          "count": 180,
+          "true": "Walking",
+          "pred": "Upstairs",
+          "share": 0.11200995644057249
+        },
+        {
+          "count": 160,
+          "true": "Biking",
+          "pred": "Sitting",
+          "share": 0.09956440572495333
+        },
+        {
+          "count": 147,
+          "true": "Upstairs",
+          "pred": "Downstairs",
+          "share": 0.09147479775980087
+        },
+        {
+          "count": 45,
+          "true": "Upstairs",
+          "pred": "Sitting",
+          "share": 0.028002489110143122
+        },
+        {
+          "count": 31,
+          "true": "Downstairs",
+          "pred": "Walking",
+          "share": 0.019290603609209707
+        },
+        {
+          "count": 28,
+          "true": "Walking",
+          "pred": "Sitting",
+          "share": 0.017423771001866834
+        }
+      ],
+      "worst_recall": [
+        [
+          0.7748587570621469,
+          "Walking"
+        ],
+        [
+          0.8480225988700565,
+          "Upstairs"
+        ],
+        [
+          0.9545197740112994,
+          "Biking"
+        ],
+        [
+          0.9742937853107345,
+          "Downstairs"
+        ],
+        [
+          0.9946327683615819,
+          "Jogging"
+        ]
+      ],
+      "confusion_total": [
+        [
+          2743,
+          0,
+          5,
+          28,
+          0,
+          180,
+          584
+        ],
+        [
+          0,
+          3539,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3521,
+          0,
+          0,
+          2,
+          17
+        ],
+        [
+          0,
+          0,
+          0,
+          3540,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          160,
+          3379,
+          0,
+          1
+        ],
+        [
+          344,
+          0,
+          1,
+          45,
+          1,
+          3002,
+          147
+        ],
+        [
+          31,
+          0,
+          24,
+          25,
+          5,
+          6,
+          3449
+        ]
+      ]
+    },
+    "parliamentnet": {
+      "runs": 10,
+      "macro_f1": 96.86854796693657,
+      "errors": 251,
+      "categories": {
+        "stairs_up_down": {
+          "error_share": 0.27091633466135456,
+          "oracle_gain": 0.854953327816641
+        },
+        "static_postures": {
+          "error_share": 0.00398406374501992,
+          "oracle_gain": 0.012106754902337924
+        },
+        "gait_types": {
+          "error_share": 0.9322709163346613,
+          "oracle_gain": 2.9253355390433433
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 74,
+          "true": "Walking",
+          "pred": "Jogging",
+          "share": 0.2948207171314741
+        },
+        {
+          "count": 62,
+          "true": "Upstairs",
+          "pred": "Downstairs",
+          "share": 0.24701195219123506
+        },
+        {
+          "count": 27,
+          "true": "Upstairs",
+          "pred": "Walking",
+          "share": 0.10756972111553785
+        },
+        {
+          "count": 21,
+          "true": "Walking",
+          "pred": "Downstairs",
+          "share": 0.08366533864541832
+        },
+        {
+          "count": 16,
+          "true": "Downstairs",
+          "pred": "Jogging",
+          "share": 0.06374501992031872
+        },
+        {
+          "count": 12,
+          "true": "Walking",
+          "pred": "Upstairs",
+          "share": 0.04780876494023904
+        },
+        {
+          "count": 9,
+          "true": "Downstairs",
+          "pred": "Walking",
+          "share": 0.035856573705179286
+        },
+        {
+          "count": 6,
+          "true": "Downstairs",
+          "pred": "Upstairs",
+          "share": 0.02390438247011952
+        }
+      ],
+      "worst_recall": [
+        [
+          0.9093220338983051,
+          "Walking"
+        ],
+        [
+          0.9186440677966101,
+          "Upstairs"
+        ],
+        [
+          0.9737288135593221,
+          "Downstairs"
+        ],
+        [
+          0.9940677966101695,
+          "Biking"
+        ],
+        [
+          0.9949152542372881,
+          "Standing"
+        ]
+      ],
+      "confusion_total": [
+        [
+          1073,
+          0,
+          74,
+          0,
+          0,
+          12,
+          21
+        ],
+        [
+          0,
+          1174,
+          1,
+          1,
+          1,
+          3,
+          0
+        ],
+        [
+          4,
+          0,
+          1176,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1180,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          6,
+          1173,
+          0,
+          0
+        ],
+        [
+          27,
+          3,
+          3,
+          1,
+          0,
+          1084,
+          62
+        ],
+        [
+          9,
+          0,
+          16,
+          0,
+          0,
+          6,
+          1149
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+ "experiment": "Round 8 stage A, local GTX 1080 Ti: opportunity (cache built from HAR raw files), seed 0",
+ "max_parallel": 1,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "lawnet",
+    "lawnet_rand",
+    "statnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec",
+    "recstatnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  }
+ ]
+}

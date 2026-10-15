@@ -1,0 +1,177 @@
+{
+ "experiment": "Paper held-out (\u00a75p) on the PC: UCA-EHAR and WEAR, 4 models \u00d7 3 seeds (Kaggle quota spent)",
+ "max_parallel": 3,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 1
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "uca_ehar",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "wear",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "wear",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "wear",
+   "seed": 0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "wear",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "wear",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "wear",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "wear",
+   "seed": 1
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "wear",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "wear",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "wear",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "wear",
+   "seed": 2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "wear",
+   "seed": 2
+  }
+ ]
+}

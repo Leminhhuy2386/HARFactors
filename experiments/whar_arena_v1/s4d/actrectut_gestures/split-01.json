@@ -1,0 +1,41 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "s4d",
+  "dataset_id": "actrectut_gestures",
+  "split_id": "split-01",
+  "fingerprint": "f5ac21b20d43154c6729021e72ea45328955a5b9a5b67ffd7e6d642e407dbd12",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.5042767524719238,
+    "accuracy": 0.6954436302185059,
+    "balanced_accuracy": 0.6896580584862231
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_1",
+    "train_size": 305,
+    "val_size": 76,
+    "test_size": 417,
+    "best_epoch": 11,
+    "epochs_ran": 21
+  },
+  "model": {
+    "class": "S4DClassifier",
+    "config": {
+      "d_model": 64,
+      "d_state": 32,
+      "num_layers": 2
+    },
+    "params": 27276,
+    "input_channels": 15,
+    "window_length": 96,
+    "num_classes": 12,
+    "sampling_freq": 32
+  },
+  "train_seconds": 4.2,
+  "peak_gpu_mb": 104.6,
+  "tau": null
+}

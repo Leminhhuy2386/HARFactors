@@ -1,0 +1,16 @@
+{
+ "experiment": "P5: opportunity, seeds 0-2 on one machine. Its paper-era downloader needs playwright, which the first P5 VMs lacked (cache FAILED there).",
+ "max_parallel": 4,
+ "playwright": true,
+ "env": {"EDGE_SSM_FAST": "1"},
+ "jobs": [
+  {"models": ["mamba"], "dataset": "opportunity", "seed": 0}, {"models": ["mamba"], "dataset": "opportunity", "seed": 1},
+  {"models": ["mamba"], "dataset": "opportunity", "seed": 2}, {"models": ["hystnet_sel_clock"], "dataset": "opportunity", "seed": 0},
+  {"models": ["hystnet_sel_clock"], "dataset": "opportunity", "seed": 1}, {"models": ["hystnet_sel_clock"], "dataset": "opportunity", "seed": 2},
+  {"models": ["quantilenet"], "dataset": "opportunity", "seed": 0}, {"models": ["quantilenet"], "dataset": "opportunity", "seed": 1},
+  {"models": ["quantilenet"], "dataset": "opportunity", "seed": 2}, {"models": ["s4d"], "dataset": "opportunity", "seed": 0},
+  {"models": ["s4d"], "dataset": "opportunity", "seed": 1}, {"models": ["s4d"], "dataset": "opportunity", "seed": 2},
+  {"models": ["hystnet_nomem"], "dataset": "opportunity", "seed": 0}, {"models": ["hystnet_nomem"], "dataset": "opportunity", "seed": 1},
+  {"models": ["hystnet_nomem"], "dataset": "opportunity", "seed": 2}
+ ]
+}

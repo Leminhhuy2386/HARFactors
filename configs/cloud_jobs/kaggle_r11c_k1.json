@@ -1,0 +1,97 @@
+{
+ "experiment": "Round 11b on Kaggle T4: round-8 models seeds 1-2 on DSADS and Daphnet",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "dsads",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "dsads",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "dsads",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "dsads",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "dsads",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "dsads",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "daphnet",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "daphnet",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet",
+    "statnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 2
+  }
+ ]
+}

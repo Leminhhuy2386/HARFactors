@@ -1,0 +1,24 @@
+{
+  "dataset_id": "utd_mhad",
+  "fingerprint": "85f54ed5cfbd4b7ee3fec64c136664b4b31ff1db0def8a18dc5b50edba3382d1",
+  "metrics": {
+    "accuracy": 0.8399999737739563,
+    "balanced_accuracy": 0.8214285714285714,
+    "macro_f1": 0.42270320653915405
+  },
+  "model_id": "dana",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "protocol_id": "whar_arena_v1",
+  "source": {
+    "best_epoch": 47,
+    "epochs_ran": 57,
+    "framework": "torch",
+    "kind": "local_training",
+    "split_identifier": "group_kfold_1",
+    "test_size": 50,
+    "train_size": 587,
+    "val_size": 146
+  },
+  "split_id": "split-01",
+  "status": "complete"
+}

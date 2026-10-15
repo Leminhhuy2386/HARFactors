@@ -1,0 +1,54 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "grammarnet",
+  "dataset_id": "opportunity",
+  "split_id": "split-03",
+  "train_seed": 0,
+  "fingerprint": "2f555a1a651feba8c2ef1ee5f59c6cc92ced5a336f367d672641de9f7d45400b",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.31703948974609375,
+    "accuracy": 0.3411049246788025,
+    "balanced_accuracy": 0.5608320450048212,
+    "val_macro_f1": 0.7864515781402588
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_3",
+    "train_size": 6862,
+    "val_size": 1715,
+    "test_size": 1973,
+    "best_epoch": 30,
+    "epochs_ran": 40
+  },
+  "model": {
+    "class": "GrammarNet",
+    "config": {
+      "d_model": 64,
+      "nonterminals": 16,
+      "patch": 5
+    },
+    "params": 23068,
+    "input_channels": 133,
+    "window_length": 90,
+    "num_classes": 5,
+    "sampling_freq": 30
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\Edge_SSM\\datasets_paper_era_local",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 721.2,
+  "fast_paths": true,
+  "peak_gpu_mb": 166.8,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": null
+}

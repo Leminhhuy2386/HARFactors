@@ -1,0 +1,284 @@
+{
+  "dataset": "hapt",
+  "classes": [
+    "Walking",
+    "Walking Upstairs",
+    "Walking Downstairs",
+    "Sitting",
+    "Standing",
+    "Laying",
+    "Stand To Sit",
+    "Sit To Stand",
+    "Sit To Lie",
+    "Lie To Sit",
+    "Stand To Lie",
+    "Lie To Stand"
+  ],
+  "models": {
+    "recurrencenet": {
+      "runs": 30,
+      "macro_f1": 83.31274040022531,
+      "errors": 1472,
+      "categories": {
+        "time_reversal": {
+          "error_share": 0.02309782608695652,
+          "oracle_gain": 0.15940250132625383
+        },
+        "stairs_up_down": {
+          "error_share": 0.009510869565217392,
+          "oracle_gain": 0.3675182071099444
+        },
+        "static_postures": {
+          "error_share": 0.001358695652173913,
+          "oracle_gain": 0.030124090265265892
+        },
+        "gait_types": {
+          "error_share": 0.4796195652173913,
+          "oracle_gain": 1.6936766586989362
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 354,
+          "true": "Walking",
+          "pred": "Walking Downstairs",
+          "share": 0.24048913043478262
+        },
+        {
+          "count": 335,
+          "true": "Walking Downstairs",
+          "pred": "Walking",
+          "share": 0.22758152173913043
+        },
+        {
+          "count": 150,
+          "true": "Lie To Sit",
+          "pred": "Lie To Stand",
+          "share": 0.10190217391304347
+        },
+        {
+          "count": 137,
+          "true": "Lie To Sit",
+          "pred": "Stand To Lie",
+          "share": 0.09307065217391304
+        },
+        {
+          "count": 76,
+          "true": "Standing",
+          "pred": "Sit To Stand",
+          "share": 0.051630434782608696
+        },
+        {
+          "count": 56,
+          "true": "Sit To Stand",
+          "pred": "Standing",
+          "share": 0.03804347826086957
+        },
+        {
+          "count": 50,
+          "true": "Stand To Sit",
+          "pred": "Sit To Lie",
+          "share": 0.033967391304347824
+        },
+        {
+          "count": 50,
+          "true": "Stand To Lie",
+          "pred": "Lie To Sit",
+          "share": 0.033967391304347824
+        }
+      ],
+      "worst_recall": [
+        [
+          0.6947040498442367,
+          "Standing"
+        ],
+        [
+          0.6949152542372882,
+          "Stand To Sit"
+        ],
+        [
+          0.7022222222222222,
+          "Sit To Stand"
+        ],
+        [
+          0.751412429378531,
+          "Sit To Lie"
+        ],
+        [
+          0.8402777777777778,
+          "Walking Upstairs"
+        ]
+      ],
+      "confusion_total": [
+        [
+          4604,
+          1,
+          354,
+          1,
+          2,
+          0,
+          1,
+          0,
+          2,
+          8,
+          1,
+          0
+        ],
+        [
+          2,
+          121,
+          6,
+          1,
+          7,
+          0,
+          0,
+          2,
+          1,
+          4,
+          0,
+          0
+        ],
+        [
+          335,
+          8,
+          4156,
+          3,
+          1,
+          26,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          39,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          6,
+          0,
+          223,
+          1,
+          1,
+          76,
+          0,
+          2,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          4927,
+          0,
+          7,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          123,
+          0,
+          50,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          0,
+          3,
+          56,
+          2,
+          2,
+          158,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          4,
+          37,
+          1,
+          133,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4018,
+          137,
+          150
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          50,
+          3421,
+          8
+        ],
+        [
+          0,
+          2,
+          1,
+          2,
+          8,
+          0,
+          0,
+          0,
+          1,
+          35,
+          24,
+          3773
+        ]
+      ]
+    }
+  }
+}

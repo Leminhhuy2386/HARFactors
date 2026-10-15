@@ -1,0 +1,89 @@
+{
+ "experiment": "P5 Colab session 2: seed 1 of uci_har and unimib_shar",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "est_hours": 0.51
+  },
+  {
+   "models": [
+    "mamba"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "est_hours": 0.45
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "est_hours": 0.41
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "est_hours": 0.38
+  },
+  {
+   "models": [
+    "hystnet_sel_clock"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "est_hours": 0.36
+  },
+  {
+   "models": [
+    "quantilenet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "est_hours": 0.34
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "est_hours": 0.12
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "est_hours": 0.1
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "est_hours": 0.06
+  },
+  {
+   "models": [
+    "hystnet_nomem"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "est_hours": 0.06
+  }
+ ]
+}

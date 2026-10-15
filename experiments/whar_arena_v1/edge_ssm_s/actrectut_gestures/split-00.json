@@ -1,0 +1,129 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "edge_ssm_s",
+  "dataset_id": "actrectut_gestures",
+  "split_id": "split-00",
+  "fingerprint": "bf30695bfe842d93d0b7d19a401b7b1925d6928b33c7c7f6fb8148da5254c1d3",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.3375556766986847,
+    "accuracy": 0.530183732509613,
+    "balanced_accuracy": 0.5140627912013741
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 334,
+    "val_size": 83,
+    "test_size": 381,
+    "best_epoch": 29,
+    "epochs_ran": 39
+  },
+  "model": {
+    "class": "EdgeSSMClassifier",
+    "config": {
+      "hidden": 16,
+      "kan_hidden": 32
+    },
+    "params": 5948,
+    "input_channels": 15,
+    "window_length": 96,
+    "num_classes": 12,
+    "sampling_freq": 32
+  },
+  "train_seconds": 7.1,
+  "peak_gpu_mb": 243.9,
+  "tau": {
+    "unit": "seconds",
+    "quantiles": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "all": [
+      0.0914,
+      0.399,
+      1.9621
+    ],
+    "per_input_channel": {
+      "acc_1_x": [
+        0.0977,
+        0.3458,
+        0.9717
+      ],
+      "acc_1_y": [
+        0.1203,
+        0.435,
+        2.1719
+      ],
+      "acc_1_z": [
+        0.0905,
+        0.1729,
+        1.3463
+      ],
+      "gyr_1_x": [
+        0.122,
+        0.6354,
+        1.4926
+      ],
+      "gyr_1_y": [
+        0.1062,
+        0.7014,
+        2.5581
+      ],
+      "acc_2_x": [
+        0.0689,
+        0.4815,
+        1.7888
+      ],
+      "acc_2_y": [
+        0.0971,
+        0.3392,
+        1.5654
+      ],
+      "acc_2_z": [
+        0.1092,
+        0.3698,
+        1.353
+      ],
+      "gyr_2_x": [
+        0.1743,
+        0.4412,
+        2.1758
+      ],
+      "gyr_2_y": [
+        0.0734,
+        0.1912,
+        1.5062
+      ],
+      "acc_3_x": [
+        0.0803,
+        0.3179,
+        1.9551
+      ],
+      "acc_3_y": [
+        0.1423,
+        0.6567,
+        1.8458
+      ],
+      "acc_3_z": [
+        0.1129,
+        0.1901,
+        1.5802
+      ],
+      "gyr_3_x": [
+        0.1298,
+        0.4571,
+        1.5221
+      ],
+      "gyr_3_y": [
+        0.1104,
+        0.3987,
+        1.7507
+      ]
+    }
+  }
+}

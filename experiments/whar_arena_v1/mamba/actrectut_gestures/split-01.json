@@ -1,0 +1,41 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "mamba",
+  "dataset_id": "actrectut_gestures",
+  "split_id": "split-01",
+  "fingerprint": "e420e92a2f597d5dbe194346832373ae10c92a514a6fe9ddf35ca28a4287d611",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.367696076631546,
+    "accuracy": 0.44364508986473083,
+    "balanced_accuracy": 0.6300754444208504
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_1",
+    "train_size": 305,
+    "val_size": 76,
+    "test_size": 417,
+    "best_epoch": 11,
+    "epochs_ran": 21
+  },
+  "model": {
+    "class": "MambaClassifier",
+    "config": {
+      "d_model": 32,
+      "d_state": 16,
+      "num_layers": 2
+    },
+    "params": 20940,
+    "input_channels": 15,
+    "window_length": 96,
+    "num_classes": 12,
+    "sampling_freq": 32
+  },
+  "train_seconds": 23.8,
+  "peak_gpu_mb": 892.3,
+  "tau": null
+}

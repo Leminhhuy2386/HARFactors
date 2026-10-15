@@ -1,0 +1,44 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "tropicalnet",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-00",
+  "fingerprint": "80d24453db63ae2bb307373752ac957b8e966154538846fc8554eabb4f75131a",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.8376783728599548,
+    "accuracy": 0.8672566413879395,
+    "balanced_accuracy": 0.8581128747795413,
+    "val_macro_f1": 0.969768762588501
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 536,
+    "val_size": 134,
+    "test_size": 113,
+    "best_epoch": 30,
+    "epochs_ran": 40
+  },
+  "model": {
+    "class": "TropicalNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3
+    },
+    "params": 26427,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 63.0,
+  "peak_gpu_mb": 421.9,
+  "tau": null,
+  "hysteresis_widths": null
+}

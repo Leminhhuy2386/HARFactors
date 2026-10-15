@@ -1,0 +1,487 @@
+{
+ "experiment": "Round 11b on Colab VM A: ablation (3 seeds) + round-8 models seeds 1-2 on UTD, ActRecTut, SAD, Opportunity",
+ "max_parallel": 4,
+ "warm_parallel": 4,
+ "playwright": true,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "statnet"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "statnet"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "statnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "statnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "statnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "statnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstat_mean"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_std"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstat_range"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "statnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "statnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  }
+ ]
+}

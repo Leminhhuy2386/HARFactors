@@ -1,0 +1,50 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "levelnet",
+  "dataset_id": "opportunity",
+  "split_id": "split-00",
+  "train_seed": 0,
+  "fingerprint": "0d2de89d3c4a939a09d9ff9580dd14e071a669e64f200d82029ca85de3eea483",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7552614212036133,
+    "accuracy": 0.9407017827033997,
+    "balanced_accuracy": 0.9380369568193984,
+    "val_macro_f1": 0.7925926446914673
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 6160,
+    "val_size": 1540,
+    "test_size": 2850,
+    "best_epoch": 8,
+    "epochs_ran": 18
+  },
+  "model": {
+    "class": "LevelNet",
+    "config": {},
+    "params": 24109,
+    "input_channels": 133,
+    "window_length": 90,
+    "num_classes": 5,
+    "sampling_freq": 30
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\Edge_SSM\\datasets_paper_era_local",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 250.3,
+  "fast_paths": true,
+  "peak_gpu_mb": 422.9,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": null
+}

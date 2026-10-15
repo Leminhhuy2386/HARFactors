@@ -1,0 +1,21 @@
+{
+  "dataset_id": "unimib_shar",
+  "split_id": "split-01",
+  "macro_f1": {
+    "euclid": 0.3696008026599884,
+    "euclid_std": 0.4300059676170349,
+    "dtw": 0.5173571109771729,
+    "dtw_std": 0.5791177153587341
+  },
+  "n_test": 615,
+  "n_ref": 6580,
+  "band": 15,
+  "window_length": 150,
+  "test_subjects": [
+    1,
+    11,
+    21
+  ],
+  "datasets_dir": "/content/edge/datasets",
+  "seconds": 177.7
+}

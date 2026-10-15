@@ -1,0 +1,241 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "statnet",
+  "dataset_id": "opportunity",
+  "split_id": "split-00",
+  "train_seed": 2,
+  "fingerprint": "71fb6ffdb38de1bb896451966f921a1b696fc2f2410c75d8d96b6962a56658cb",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7611891031265259,
+    "accuracy": 0.9449122548103333,
+    "balanced_accuracy": 0.9409350832830985,
+    "val_macro_f1": 0.7944316267967224
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 6160,
+    "val_size": 1540,
+    "test_size": 2850,
+    "best_epoch": 26,
+    "epochs_ran": 36
+  },
+  "model": {
+    "class": "Round8Net",
+    "config": {
+      "side": "stats",
+      "blocks": "plain",
+      "d_model": 48,
+      "num_layers": 3
+    },
+    "params": 39517,
+    "input_channels": 133,
+    "window_length": 90,
+    "num_classes": 5,
+    "sampling_freq": 30
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/content/edge/datasets",
+  "device": "NVIDIA L4",
+  "torch": "2.11.0+cu130",
+  "train_seconds": 72.4,
+  "fast_paths": true,
+  "peak_gpu_mb": 86.9,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ],
+    [
+      9,
+      10,
+      11
+    ],
+    [
+      12,
+      13,
+      14
+    ],
+    [
+      15,
+      16,
+      17
+    ],
+    [
+      18,
+      19,
+      20
+    ],
+    [
+      21,
+      22,
+      23
+    ],
+    [
+      24,
+      25,
+      26
+    ],
+    [
+      27,
+      28,
+      29
+    ],
+    [
+      30,
+      31,
+      32
+    ],
+    [
+      33,
+      34,
+      35
+    ],
+    [
+      36,
+      37,
+      38
+    ],
+    [
+      39,
+      40,
+      41
+    ],
+    [
+      42,
+      43,
+      44
+    ],
+    [
+      49,
+      50,
+      51
+    ],
+    [
+      52,
+      53,
+      54
+    ],
+    [
+      55,
+      56,
+      57
+    ],
+    [
+      62,
+      63,
+      64
+    ],
+    [
+      65,
+      66,
+      67
+    ],
+    [
+      68,
+      69,
+      70
+    ],
+    [
+      75,
+      76,
+      77
+    ],
+    [
+      78,
+      79,
+      80
+    ],
+    [
+      81,
+      82,
+      83
+    ],
+    [
+      88,
+      89,
+      90
+    ],
+    [
+      91,
+      92,
+      93
+    ],
+    [
+      94,
+      95,
+      96
+    ],
+    [
+      101,
+      102,
+      103
+    ],
+    [
+      104,
+      105,
+      106
+    ],
+    [
+      107,
+      108,
+      109
+    ],
+    [
+      110,
+      111,
+      112
+    ],
+    [
+      113,
+      114,
+      115
+    ],
+    [
+      117,
+      118,
+      119
+    ],
+    [
+      120,
+      121,
+      122
+    ],
+    [
+      123,
+      124,
+      125
+    ],
+    [
+      126,
+      127,
+      128
+    ],
+    [
+      129,
+      130,
+      131
+    ]
+  ]
+}

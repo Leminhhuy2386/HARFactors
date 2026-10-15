@@ -1,0 +1,154 @@
+{
+  "dataset": "wisdm",
+  "classes": [
+    "Walking",
+    "Jogging",
+    "Upstairs",
+    "Downstairs",
+    "Sitting",
+    "Standing"
+  ],
+  "models": {
+    "recurrencenet": {
+      "runs": 30,
+      "macro_f1": 82.92618391393918,
+      "errors": 14235,
+      "categories": {
+        "stairs_up_down": {
+          "error_share": 0.1941693010186161,
+          "oracle_gain": 4.151300909762622
+        },
+        "static_postures": {
+          "error_share": 0.05226554267650158,
+          "oracle_gain": 2.9109287119585634
+        },
+        "gait_types": {
+          "error_share": 0.9367755532139094,
+          "oracle_gain": 13.765259613449393
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 2902,
+          "true": "Jogging",
+          "pred": "Upstairs",
+          "share": 0.2038637161924833
+        },
+        {
+          "count": 2637,
+          "true": "Jogging",
+          "pred": "Downstairs",
+          "share": 0.18524762908324552
+        },
+        {
+          "count": 1478,
+          "true": "Upstairs",
+          "pred": "Downstairs",
+          "share": 0.10382859149982437
+        },
+        {
+          "count": 1286,
+          "true": "Downstairs",
+          "pred": "Upstairs",
+          "share": 0.09034070951879171
+        },
+        {
+          "count": 1219,
+          "true": "Jogging",
+          "pred": "Walking",
+          "share": 0.08563400070249386
+        },
+        {
+          "count": 797,
+          "true": "Upstairs",
+          "pred": "Walking",
+          "share": 0.05598876009834914
+        },
+        {
+          "count": 750,
+          "true": "Upstairs",
+          "pred": "Jogging",
+          "share": 0.05268703898840885
+        },
+        {
+          "count": 690,
+          "true": "Walking",
+          "pred": "Downstairs",
+          "share": 0.04847207586933614
+        }
+      ],
+      "worst_recall": [
+        [
+          0.7375415282392026,
+          "Upstairs"
+        ],
+        [
+          0.7889410537297862,
+          "Downstairs"
+        ],
+        [
+          0.8331115054717539,
+          "Jogging"
+        ],
+        [
+          0.90126087728645,
+          "Standing"
+        ],
+        [
+          0.946467273515388,
+          "Sitting"
+        ]
+      ],
+      "confusion_total": [
+        [
+          28593,
+          307,
+          560,
+          690,
+          0,
+          0
+        ],
+        [
+          1219,
+          33801,
+          2902,
+          2637,
+          7,
+          6
+        ],
+        [
+          797,
+          750,
+          8658,
+          1478,
+          30,
+          26
+        ],
+        [
+          250,
+          459,
+          1286,
+          7562,
+          3,
+          25
+        ],
+        [
+          0,
+          1,
+          23,
+          6,
+          4367,
+          217
+        ],
+        [
+          0,
+          3,
+          12,
+          14,
+          527,
+          5075
+        ]
+      ]
+    }
+  }
+}

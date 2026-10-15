@@ -1,0 +1,90 @@
+{
+ "experiment": "Round 11 A stage 2 on Kaggle T4 (as the references): stylealignnet seed 0 on dsads and daphnet",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "splits": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "splits": [
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "daphnet",
+   "seed": 0,
+   "splits": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "splits": [
+    0,
+    1
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "splits": [
+    2,
+    3
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "splits": [
+    4,
+    5
+   ]
+  },
+  {
+   "models": [
+    "stylealignnet"
+   ],
+   "dataset": "dsads",
+   "seed": 0,
+   "splits": [
+    6,
+    7
+   ]
+  }
+ ]
+}

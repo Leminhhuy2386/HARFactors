@@ -1,0 +1,276 @@
+{
+  "dataset": "actrectut_gestures",
+  "classes": [
+    "Null",
+    "Open Window",
+    "Drink",
+    "Water Plant",
+    "Close Window",
+    "Cut",
+    "Chop",
+    "Stir",
+    "Turn Book Pages",
+    "Tennis Forehand",
+    "Tennis Backhand",
+    "Tennis Smash"
+  ],
+  "models": {
+    "recurrencenet": {
+      "runs": 6,
+      "macro_f1": 40.37343901085489,
+      "errors": 843,
+      "categories": {
+        "time_reversal": {
+          "error_share": 0.0,
+          "oracle_gain": 0.0
+        },
+        "null_class": {
+          "error_share": 0.12336892052194544,
+          "oracle_gain": 7.102880598478635
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 89,
+          "true": "Drink",
+          "pred": "Water Plant",
+          "share": 0.1055753262158956
+        },
+        {
+          "count": 69,
+          "true": "Cut",
+          "pred": "Close Window",
+          "share": 0.08185053380782918
+        },
+        {
+          "count": 66,
+          "true": "Water Plant",
+          "pred": "Drink",
+          "share": 0.07829181494661921
+        },
+        {
+          "count": 65,
+          "true": "Drink",
+          "pred": "Open Window",
+          "share": 0.0771055753262159
+        },
+        {
+          "count": 62,
+          "true": "Chop",
+          "pred": "Close Window",
+          "share": 0.07354685646500593
+        },
+        {
+          "count": 61,
+          "true": "Chop",
+          "pred": "Drink",
+          "share": 0.07236061684460261
+        },
+        {
+          "count": 41,
+          "true": "Open Window",
+          "pred": "Water Plant",
+          "share": 0.04863582443653618
+        },
+        {
+          "count": 35,
+          "true": "Stir",
+          "pred": "Close Window",
+          "share": 0.04151838671411625
+        }
+      ],
+      "worst_recall": [
+        [
+          0.34065934065934067,
+          "Drink"
+        ],
+        [
+          0.38181818181818183,
+          "Water Plant"
+        ],
+        [
+          0.4444444444444444,
+          "Turn Book Pages"
+        ],
+        [
+          0.4666666666666667,
+          "Null"
+        ],
+        [
+          0.4918032786885246,
+          "Chop"
+        ]
+      ],
+      "confusion_total": [
+        [
+          42,
+          3,
+          27,
+          13,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          11,
+          203,
+          6,
+          41,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          17,
+          65,
+          93,
+          89,
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          14,
+          21,
+          66,
+          63,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          3,
+          272,
+          32,
+          0,
+          17,
+          14,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          14,
+          69,
+          219,
+          2,
+          19,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          61,
+          20,
+          62,
+          13,
+          180,
+          19,
+          10,
+          0,
+          0,
+          0
+        ],
+        [
+          13,
+          1,
+          4,
+          13,
+          35,
+          24,
+          0,
+          475,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  }
+}

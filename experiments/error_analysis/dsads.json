@@ -1,0 +1,287 @@
+{
+  "dataset": "dsads",
+  "classes": [
+    "Sitting",
+    "Standing",
+    "Lying On Back",
+    "Lying On Right Side",
+    "Ascending Stairs",
+    "Descending Stairs",
+    "Standing In An Elevator Still",
+    "Moving Around In An Elevator",
+    "Walking In A Parking Lot",
+    "Walking On Treadmill Flat 4 Km H",
+    "Walking On Treadmill 15\u00b0 Incline 4 Km H",
+    "Running On Treadmill 8 Km H",
+    "Exercising On A Stepper",
+    "Exercising On A Cross Trainer",
+    "Cycling On Exercise Bike Horizontal",
+    "Cycling On Exercise Bike Vertical",
+    "Rowing",
+    "Jumping",
+    "Playing Basketball"
+  ],
+  "models": {
+    "recurrencenet": {
+      "runs": 24,
+      "macro_f1": 3.507667152768571,
+      "errors": 87120,
+      "categories": {
+        "stairs_up_down": {
+          "error_share": 0.0,
+          "oracle_gain": 0.0
+        },
+        "static_postures": {
+          "error_share": 0.03605371900826446,
+          "oracle_gain": 2.3268974706908274
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 3168,
+          "true": "Walking On Treadmill Flat 4 Km H",
+          "pred": "Lying On Right Side",
+          "share": 0.03636363636363636
+        },
+        {
+          "count": 3168,
+          "true": "Walking On Treadmill 15\u00b0 Incline 4 Km H",
+          "pred": "Running On Treadmill 8 Km H",
+          "share": 0.03636363636363636
+        },
+        {
+          "count": 3168,
+          "true": "Walking In A Parking Lot",
+          "pred": "Rowing",
+          "share": 0.03636363636363636
+        },
+        {
+          "count": 3168,
+          "true": "Sitting",
+          "pred": "Jumping",
+          "share": 0.03636363636363636
+        },
+        {
+          "count": 3168,
+          "true": "Running On Treadmill 8 Km H",
+          "pred": "Moving Around In An Elevator",
+          "share": 0.03636363636363636
+        },
+        {
+          "count": 3168,
+          "true": "Rowing",
+          "pred": "Cycling On Exercise Bike Horizontal",
+          "share": 0.03636363636363636
+        },
+        {
+          "count": 3168,
+          "true": "Lying On Right Side",
+          "pred": "Walking In A Parking Lot",
+          "share": 0.03636363636363636
+        },
+        {
+          "count": 3168,
+          "true": "Lying On Back",
+          "pred": "Ascending Stairs",
+          "share": 0.03636363636363636
+        }
+      ],
+      "worst_recall": [
+        [
+          0.0,
+          "Ascending Stairs"
+        ],
+        [
+          0.0,
+          "Cycling On Exercise Bike Horizontal"
+        ],
+        [
+          0.0,
+          "Cycling On Exercise Bike Vertical"
+        ],
+        [
+          0.0,
+          "Descending Stairs"
+        ],
+        [
+          0.0,
+          "Exercising On A Cross Trainer"
+        ]
+      ]
+    },
+    "s4d": {
+      "runs": 24,
+      "macro_f1": 4.40082149279521,
+      "errors": 86320,
+      "categories": {
+        "stairs_up_down": {
+          "error_share": 0.0,
+          "oracle_gain": 0.0
+        },
+        "static_postures": {
+          "error_share": 0.04028035217794254,
+          "oracle_gain": 2.6187677016609454
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 4552,
+          "true": "Exercising On A Cross Trainer",
+          "pred": "Descending Stairs",
+          "share": 0.05273401297497683
+        },
+        {
+          "count": 3366,
+          "true": "Sitting",
+          "pred": "Jumping",
+          "share": 0.03899443929564411
+        },
+        {
+          "count": 3241,
+          "true": "Lying On Back",
+          "pred": "Ascending Stairs",
+          "share": 0.03754633920296571
+        },
+        {
+          "count": 3239,
+          "true": "Playing Basketball",
+          "pred": "Cycling On Exercise Bike Vertical",
+          "share": 0.03752316960148285
+        },
+        {
+          "count": 3169,
+          "true": "Walking On Treadmill Flat 4 Km H",
+          "pred": "Lying On Right Side",
+          "share": 0.036712233549582945
+        },
+        {
+          "count": 3168,
+          "true": "Walking On Treadmill 15\u00b0 Incline 4 Km H",
+          "pred": "Running On Treadmill 8 Km H",
+          "share": 0.03670064874884152
+        },
+        {
+          "count": 3168,
+          "true": "Walking In A Parking Lot",
+          "pred": "Rowing",
+          "share": 0.03670064874884152
+        },
+        {
+          "count": 3168,
+          "true": "Running On Treadmill 8 Km H",
+          "pred": "Moving Around In An Elevator",
+          "share": 0.03670064874884152
+        }
+      ],
+      "worst_recall": [
+        [
+          0.0,
+          "Ascending Stairs"
+        ],
+        [
+          0.0,
+          "Cycling On Exercise Bike Horizontal"
+        ],
+        [
+          0.0,
+          "Cycling On Exercise Bike Vertical"
+        ],
+        [
+          0.0,
+          "Descending Stairs"
+        ],
+        [
+          0.0,
+          "Exercising On A Cross Trainer"
+        ]
+      ]
+    },
+    "hystnet_nomem": {
+      "runs": 24,
+      "macro_f1": 4.39410491727597,
+      "errors": 86343,
+      "categories": {
+        "stairs_up_down": {
+          "error_share": 1.1581714788691613e-05,
+          "oracle_gain": 0.0011103708638685321
+        },
+        "static_postures": {
+          "error_share": 0.03812700508437279,
+          "oracle_gain": 2.510546020205293
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 4552,
+          "true": "Exercising On A Cross Trainer",
+          "pred": "Descending Stairs",
+          "share": 0.05271996571812423
+        },
+        {
+          "count": 3212,
+          "true": "Playing Basketball",
+          "pred": "Cycling On Exercise Bike Vertical",
+          "share": 0.03720046790127746
+        },
+        {
+          "count": 3168,
+          "true": "Walking On Treadmill 15\u00b0 Incline 4 Km H",
+          "pred": "Running On Treadmill 8 Km H",
+          "share": 0.036690872450575035
+        },
+        {
+          "count": 3168,
+          "true": "Walking In A Parking Lot",
+          "pred": "Rowing",
+          "share": 0.036690872450575035
+        },
+        {
+          "count": 3168,
+          "true": "Sitting",
+          "pred": "Jumping",
+          "share": 0.036690872450575035
+        },
+        {
+          "count": 3168,
+          "true": "Running On Treadmill 8 Km H",
+          "pred": "Moving Around In An Elevator",
+          "share": 0.036690872450575035
+        },
+        {
+          "count": 3168,
+          "true": "Rowing",
+          "pred": "Cycling On Exercise Bike Horizontal",
+          "share": 0.036690872450575035
+        },
+        {
+          "count": 3168,
+          "true": "Lying On Right Side",
+          "pred": "Walking In A Parking Lot",
+          "share": 0.036690872450575035
+        }
+      ],
+      "worst_recall": [
+        [
+          0.0,
+          "Ascending Stairs"
+        ],
+        [
+          0.0,
+          "Cycling On Exercise Bike Horizontal"
+        ],
+        [
+          0.0,
+          "Descending Stairs"
+        ],
+        [
+          0.0,
+          "Exercising On A Cross Trainer"
+        ],
+        [
+          0.0,
+          "Exercising On A Stepper"
+        ]
+      ]
+    }
+  }
+}

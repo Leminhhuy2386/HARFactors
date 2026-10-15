@@ -1,0 +1,19 @@
+{
+  "dataset_id": "dsads",
+  "split_id": "split-04",
+  "macro_f1": {
+    "euclid": 0.7236683964729309,
+    "euclid_std": 0.7013732194900513,
+    "dtw": 0.7766231894493103,
+    "dtw_std": 0.7825693488121033
+  },
+  "n_test": 3762,
+  "n_ref": 26334,
+  "band": 8,
+  "window_length": 75,
+  "test_subjects": [
+    4
+  ],
+  "datasets_dir": "/content/edge/datasets",
+  "seconds": 2227.5
+}

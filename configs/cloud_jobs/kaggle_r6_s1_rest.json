@@ -1,0 +1,139 @@
+{
+ "experiment": "Round 6 stage 2: every seed-1 split still missing on 2026-10-10 10:55, on Kaggle T4 (faster than Colab T4); the first copy of each result is kept, all on T4",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    6
+   ]
+  },
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    7
+   ]
+  },
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    8
+   ]
+  },
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    4
+   ]
+  },
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    8
+   ]
+  },
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    9
+   ]
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    5
+   ]
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    6
+   ]
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    7
+   ]
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    8
+   ]
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    9
+   ]
+  },
+  {
+   "models": [
+    "ordinalnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    8
+   ]
+  },
+  {
+   "models": [
+    "ordinalnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    9
+   ]
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "experiment": "Round 6 stage 3: recurrencenet on the held-out datasets, seeds 0-1 (Kaggle T4, as the old models)",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "daphnet",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "daphnet",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "wisdm",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "wisdm",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "hapt",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "hapt",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "dsads",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "dsads",
+   "seed": 1
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "dualmem",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-01",
+  "fingerprint": "e28fe0cab8f0a3aca75e4cb6baea11b50c2065469ebe45d58bfaf45ecd88c18a",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.44944149255752563,
+    "accuracy": 0.8999999761581421,
+    "balanced_accuracy": 0.863095238095238,
+    "val_macro_f1": 0.9745013117790222
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_1",
+    "train_size": 587,
+    "val_size": 146,
+    "test_size": 50,
+    "best_epoch": 29,
+    "epochs_ran": 39
+  },
+  "model": {
+    "class": "DualMemNet",
+    "config": {
+      "d_model": 30,
+      "num_layers": 3
+    },
+    "params": 26697,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 237.3,
+  "peak_gpu_mb": 470.7,
+  "tau": null,
+  "hysteresis_widths": null
+}

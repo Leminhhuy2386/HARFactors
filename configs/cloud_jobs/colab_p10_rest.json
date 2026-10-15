@@ -1,0 +1,8 @@
+{
+  "experiment": "P10 remainder moved off the overloaded PC: loop_dir and step_dir for the fast models, only the seeds not yet done locally",
+  "jobs": [
+    {"script": "synthetic_test.py", "args": ["--tasks", "loop_dir", "--models", "hystnet_nomem", "--seeds", "1", "2"]},
+    {"script": "synthetic_test.py", "args": ["--tasks", "step_dir", "--models", "hystnet_sel_clock", "--seeds", "0", "1", "2"]},
+    {"script": "synthetic_test.py", "args": ["--tasks", "step_dir", "--models", "s4d", "hystnet_nomem", "--seeds", "1", "2"]}
+  ]
+}

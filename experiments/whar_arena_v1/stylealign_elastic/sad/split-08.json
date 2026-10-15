@@ -1,0 +1,59 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "stylealign_elastic",
+  "dataset_id": "sad",
+  "split_id": "split-08",
+  "train_seed": 0,
+  "fingerprint": "f5b168b28d5658601d3601a798d66655b4e5d2d470148d820369d4de76f1e428",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.6565098762512207,
+    "accuracy": 0.7046005129814148,
+    "balanced_accuracy": 0.7046004842615012,
+    "val_macro_f1": 0.9879245162010193
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_8",
+    "train_size": 5948,
+    "val_size": 1486,
+    "test_size": 826,
+    "best_epoch": 67,
+    "epochs_ran": 77
+  },
+  "model": {
+    "class": "StyleAlignNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3,
+      "embed": 8,
+      "patch": 5,
+      "programs": 2,
+      "band": 0.3,
+      "gamma": 0.5,
+      "deep": false
+    },
+    "params": 4009,
+    "input_channels": 60,
+    "window_length": 150,
+    "num_classes": 7,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\Edge_SSM\\datasets_paper_era_local",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 1184.9,
+  "fast_paths": true,
+  "peak_gpu_mb": 83.9,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": null
+}

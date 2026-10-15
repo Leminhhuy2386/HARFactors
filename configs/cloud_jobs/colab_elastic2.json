@@ -1,0 +1,23 @@
+{
+ "experiment": "Option C on Colab VM 2 (pruned): hapt, unimib_shar",
+ "max_parallel": 2,
+ "warm_parallel": 2,
+ "jobs": [
+  {
+   "script": "elastic_baseline.py",
+   "args": [
+    "--datasets",
+    "unimib_shar"
+   ],
+   "dataset": "unimib_shar"
+  },
+  {
+   "script": "elastic_baseline.py",
+   "args": [
+    "--datasets",
+    "hapt"
+   ],
+   "dataset": "hapt"
+  }
+ ]
+}

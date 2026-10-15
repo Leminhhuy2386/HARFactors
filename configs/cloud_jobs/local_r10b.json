@@ -1,0 +1,23 @@
+{
+ "experiment": "Round 10 fast screen on PC: bhnet (braid holonomy) on UTD-MHAD and Opportunity, seed 0",
+ "max_parallel": 2,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "bhnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "bhnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  }
+ ]
+}

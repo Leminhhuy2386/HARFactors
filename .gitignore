@@ -1,0 +1,16 @@
+# environments (uv.lock and requirements*.txt are the record)
+.venv/
+deploy_env/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# large binaries kept on disk but not under version control
+experiments/checkpoints/
+experiments/mcu/onnx/
+data/processed/mcu_windows/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg

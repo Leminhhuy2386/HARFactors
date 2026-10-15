@@ -1,0 +1,105 @@
+{
+ "experiment": "Round 6 stage 2, Colab T4: utd_mhad seeds 1-2, uci_har and unimib_shar seed 1",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "est_hours": 0.79
+  },
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "est_hours": 0.7
+  },
+  {
+   "models": [
+    "ordinalnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "est_hours": 0.6
+  },
+  {
+   "models": [
+    "ordinalnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "est_hours": 0.53
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "est_hours": 0.46
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "est_hours": 0.41
+  },
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1,
+   "est_hours": 0.06
+  },
+  {
+   "models": [
+    "rainflownet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2,
+   "est_hours": 0.06
+  },
+  {
+   "models": [
+    "ordinalnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1,
+   "est_hours": 0.05
+  },
+  {
+   "models": [
+    "ordinalnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2,
+   "est_hours": 0.05
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1,
+   "est_hours": 0.04
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2,
+   "est_hours": 0.04
+  }
+ ]
+}

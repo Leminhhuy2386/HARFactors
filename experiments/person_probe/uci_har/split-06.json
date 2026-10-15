@@ -1,0 +1,39 @@
+{
+  "dataset": "uci_har",
+  "split": 6,
+  "subjects": {
+    "6": {
+      "n": 252,
+      "base": 1.0,
+      "unlabelled": 0.9874510169029236,
+      "shots_1": 1.0,
+      "base_on_rest_shots_1": 1.0,
+      "unlabelled+shots_1": 0.9870924552281698,
+      "base_on_rest_unlabelled+shots_1": 1.0,
+      "shots_3": 1.0,
+      "base_on_rest_shots_3": 1.0
+    },
+    "16": {
+      "n": 313,
+      "base": 1.0,
+      "unlabelled": 0.9838667511940002,
+      "shots_1": 1.0,
+      "base_on_rest_shots_1": 1.0,
+      "unlabelled+shots_1": 0.9854251742362976,
+      "base_on_rest_unlabelled+shots_1": 1.0,
+      "shots_3": 1.0,
+      "base_on_rest_shots_3": 1.0
+    },
+    "26": {
+      "n": 263,
+      "base": 0.9800195693969727,
+      "unlabelled": 0.9631021618843079,
+      "shots_1": 0.987768809000651,
+      "base_on_rest_shots_1": 0.9808875123659769,
+      "unlabelled+shots_1": 0.962138831615448,
+      "base_on_rest_unlabelled+shots_1": 0.9795215129852295,
+      "shots_3": 0.9957290490468343,
+      "base_on_rest_shots_3": 0.9813222289085388
+    }
+  }
+}

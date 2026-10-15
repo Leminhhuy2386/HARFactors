@@ -1,0 +1,40 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "gru",
+  "dataset_id": "unimib_shar",
+  "split_id": "split-04",
+  "fingerprint": "914d416e1e6a76d9633419861fd7d31afc91c456862a10351015933095bb24d7",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.4555950164794922,
+    "accuracy": 0.5692090392112732,
+    "balanced_accuracy": 0.47030291864555346
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_4",
+    "train_size": 5190,
+    "val_size": 1297,
+    "test_size": 708,
+    "best_epoch": 67,
+    "epochs_ran": 77
+  },
+  "model": {
+    "class": "GRUClassifier",
+    "config": {
+      "hidden": 64,
+      "num_layers": 2
+    },
+    "params": 39313,
+    "input_channels": 3,
+    "window_length": 150,
+    "num_classes": 17,
+    "sampling_freq": 50
+  },
+  "train_seconds": 138.1,
+  "peak_gpu_mb": 163.5,
+  "tau": null
+}

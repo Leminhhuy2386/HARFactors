@@ -1,0 +1,19 @@
+{
+  "dataset_id": "opportunity",
+  "split_id": "split-02",
+  "macro_f1": {
+    "euclid": 0.3363373875617981,
+    "euclid_std": 0.307341605424881,
+    "dtw": 0.35806864500045776,
+    "dtw_std": 0.33960720896720886
+  },
+  "n_test": 3039,
+  "n_ref": 7511,
+  "band": 9,
+  "window_length": 90,
+  "test_subjects": [
+    2
+  ],
+  "datasets_dir": "D:\\Projects\\Edge_SSM\\datasets_paper_era_local",
+  "seconds": 549.1
+}

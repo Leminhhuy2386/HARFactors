@@ -1,0 +1,66 @@
+{
+ "experiment": "Round 6 stage 3: recurrencenet seed 2 of the held-out datasets and opportunity seeds 0-2 (Colab L4, as the old models)",
+ "max_parallel": 4,
+ "playwright": true,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "daphnet",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "wisdm",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "hapt",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "dsads",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  }
+ ]
+}

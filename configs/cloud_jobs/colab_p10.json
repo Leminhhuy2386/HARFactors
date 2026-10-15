@@ -1,0 +1,9 @@
+{
+  "experiment": "P10 synthetic mechanism tests: Mamba, one process per task, seeds 0-2",
+  "jobs": [
+    {"script": "synthetic_test.py", "args": ["--tasks", "loop_dir", "--models", "mamba"]},
+    {"script": "synthetic_test.py", "args": ["--tasks", "step_dir", "--models", "mamba"]},
+    {"script": "synthetic_test.py", "args": ["--tasks", "freq", "--models", "mamba"]},
+    {"script": "synthetic_test.py", "args": ["--tasks", "long_order", "--models", "mamba"]}
+  ]
+}

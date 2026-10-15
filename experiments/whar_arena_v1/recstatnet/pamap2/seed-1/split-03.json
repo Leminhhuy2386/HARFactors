@@ -1,0 +1,131 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "recstatnet",
+  "dataset_id": "pamap2",
+  "split_id": "split-03",
+  "train_seed": 1,
+  "fingerprint": "9103bc663765bc4bdb7be43b6245e4366bedd77e4381b1ac344d28824065a34d",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7380405068397522,
+    "accuracy": 0.9553512930870056,
+    "balanced_accuracy": 0.9507454573506229,
+    "val_macro_f1": 0.917103111743927
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_3",
+    "train_size": 9011,
+    "val_size": 2252,
+    "test_size": 1523,
+    "best_epoch": 78,
+    "epochs_ran": 88
+  },
+  "model": {
+    "class": "Round8Net",
+    "config": {
+      "side": "stats",
+      "blocks": "recurrence",
+      "d_model": 32,
+      "num_layers": 3
+    },
+    "params": 33269,
+    "input_channels": 52,
+    "window_length": 300,
+    "num_classes": 13,
+    "sampling_freq": 100
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/content/edge/datasets",
+  "device": "NVIDIA L4",
+  "torch": "2.11.0+cu130",
+  "train_seconds": 676.7,
+  "fast_paths": true,
+  "peak_gpu_mb": 260.6,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": [
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      5,
+      6,
+      7
+    ],
+    [
+      8,
+      9,
+      10
+    ],
+    [
+      11,
+      12,
+      13
+    ],
+    [
+      14,
+      15,
+      16
+    ],
+    [
+      19,
+      20,
+      21
+    ],
+    [
+      22,
+      23,
+      24
+    ],
+    [
+      25,
+      26,
+      27
+    ],
+    [
+      28,
+      29,
+      30
+    ],
+    [
+      31,
+      32,
+      33
+    ],
+    [
+      36,
+      37,
+      38
+    ],
+    [
+      39,
+      40,
+      41
+    ],
+    [
+      42,
+      43,
+      44
+    ],
+    [
+      45,
+      46,
+      47
+    ],
+    [
+      48,
+      49,
+      50
+    ]
+  ]
+}

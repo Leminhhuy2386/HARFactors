@@ -1,0 +1,44 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "quantilenet",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-07",
+  "fingerprint": "98159819b67a42f3e1e8bad93ee91293e76f51143aa331da6b81a447d784d9b4",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.8392648100852966,
+    "accuracy": 0.841269850730896,
+    "balanced_accuracy": 0.8847883597883599,
+    "val_macro_f1": 0.9181658625602722
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_7",
+    "train_size": 526,
+    "val_size": 131,
+    "test_size": 126,
+    "best_epoch": 47,
+    "epochs_ran": 57
+  },
+  "model": {
+    "class": "QuantileNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3
+    },
+    "params": 20763,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 238.7,
+  "peak_gpu_mb": 134.4,
+  "tau": null,
+  "hysteresis_widths": null
+}

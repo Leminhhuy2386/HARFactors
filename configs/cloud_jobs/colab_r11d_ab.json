@@ -1,0 +1,263 @@
+{
+ "experiment": "Round 11b mechanism test (a/b): RecurrenceNet + mean/std pooling, without per-step LayerNorm, both; kill set, 3 seeds",
+ "max_parallel": 4,
+ "warm_parallel": 4,
+ "playwright": true,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "sad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "sad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "sad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recnet_meanstd"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_nonorm"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recnet_meanstd_nonorm"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  }
+ ]
+}

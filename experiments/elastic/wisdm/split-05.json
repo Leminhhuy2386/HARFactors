@@ -1,0 +1,22 @@
+{
+  "dataset_id": "wisdm",
+  "split_id": "split-05",
+  "macro_f1": {
+    "euclid": 0.4306248128414154,
+    "euclid_std": 0.49830350279808044,
+    "dtw": 0.628762423992157,
+    "dtw_std": 0.6562812328338623
+  },
+  "n_test": 3487,
+  "n_ref": 30610,
+  "band": 6,
+  "window_length": 60,
+  "test_subjects": [
+    5,
+    15,
+    25,
+    35
+  ],
+  "datasets_dir": "/content/edge/datasets",
+  "seconds": 1371.7
+}

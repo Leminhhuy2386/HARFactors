@@ -1,0 +1,25 @@
+{
+ "experiment": "Paper held-out (\u00a75p): PAMAP2 seed-2 splits lost when the UCI download timed out on the second VM",
+ "max_parallel": 2,
+ "warm_parallel": 1,
+ "playwright": true,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "pamap2",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "pamap2",
+   "seed": 2
+  }
+ ]
+}

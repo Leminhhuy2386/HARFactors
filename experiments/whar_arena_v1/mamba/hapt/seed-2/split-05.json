@@ -1,0 +1,53 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "mamba",
+  "dataset_id": "hapt",
+  "split_id": "split-05",
+  "train_seed": 2,
+  "fingerprint": "2baee136b8aab8e13da419de6a084acefe40d4d42a2b8f1a3186d6c63bcc4322",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.8180667757987976,
+    "accuracy": 0.8739316463470459,
+    "balanced_accuracy": 0.8489752104695322,
+    "val_macro_f1": 0.9471061825752258
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_5",
+    "train_size": 6496,
+    "val_size": 1624,
+    "test_size": 936,
+    "best_epoch": 31,
+    "epochs_ran": 41
+  },
+  "model": {
+    "class": "MambaClassifier",
+    "config": {
+      "d_model": 32,
+      "d_state": 16,
+      "num_layers": 2
+    },
+    "params": 20652,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 12,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/content/edge/datasets",
+  "device": "NVIDIA L4",
+  "torch": "2.11.0+cu130",
+  "train_seconds": 192.3,
+  "fast_paths": true,
+  "peak_gpu_mb": 430.7,
+  "tau": null,
+  "hysteresis_widths": null
+}

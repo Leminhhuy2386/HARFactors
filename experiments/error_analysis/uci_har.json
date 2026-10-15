@@ -1,0 +1,154 @@
+{
+  "dataset": "uci_har",
+  "classes": [
+    "Walking",
+    "Walking Upstairs",
+    "Walking Downstairs",
+    "Sitting",
+    "Standing",
+    "Laying"
+  ],
+  "models": {
+    "recurrencenet": {
+      "runs": 30,
+      "macro_f1": 96.62074337323784,
+      "errors": 834,
+      "categories": {
+        "stairs_up_down": {
+          "error_share": 0.05995203836930456,
+          "oracle_gain": 0.19833565011758034
+        },
+        "static_postures": {
+          "error_share": 0.3441247002398082,
+          "oracle_gain": 1.34142274839455
+        },
+        "gait_types": {
+          "error_share": 0.6486810551558753,
+          "oracle_gain": 2.0117184503510166
+        }
+      },
+      "top_confusions": [
+        {
+          "count": 287,
+          "true": "Walking",
+          "pred": "Walking Upstairs",
+          "share": 0.3441247002398082
+        },
+        {
+          "count": 203,
+          "true": "Walking Upstairs",
+          "pred": "Walking",
+          "share": 0.2434052757793765
+        },
+        {
+          "count": 146,
+          "true": "Sitting",
+          "pred": "Laying",
+          "share": 0.1750599520383693
+        },
+        {
+          "count": 63,
+          "true": "Laying",
+          "pred": "Standing",
+          "share": 0.07553956834532374
+        },
+        {
+          "count": 55,
+          "true": "Sitting",
+          "pred": "Standing",
+          "share": 0.06594724220623502
+        },
+        {
+          "count": 50,
+          "true": "Walking Upstairs",
+          "pred": "Walking Downstairs",
+          "share": 0.05995203836930456
+        },
+        {
+          "count": 16,
+          "true": "Laying",
+          "pred": "Sitting",
+          "share": 0.019184652278177457
+        },
+        {
+          "count": 5,
+          "true": "Standing",
+          "pred": "Sitting",
+          "share": 0.005995203836930456
+        }
+      ],
+      "worst_recall": [
+        [
+          0.9368489583333334,
+          "Walking"
+        ],
+        [
+          0.940517844646606,
+          "Walking Upstairs"
+        ],
+        [
+          0.9514844315713251,
+          "Sitting"
+        ],
+        [
+          0.977796280877047,
+          "Laying"
+        ],
+        [
+          0.9978213507625272,
+          "Standing"
+        ]
+      ],
+      "confusion_total": [
+        [
+          4317,
+          287,
+          1,
+          2,
+          0,
+          1
+        ],
+        [
+          203,
+          4032,
+          50,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          4710,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3942,
+          55,
+          146
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          3206,
+          2
+        ],
+        [
+          0,
+          1,
+          0,
+          16,
+          63,
+          3523
+        ]
+      ]
+    }
+  }
+}

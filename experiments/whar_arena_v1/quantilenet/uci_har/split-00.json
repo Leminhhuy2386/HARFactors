@@ -1,0 +1,52 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "quantilenet",
+  "dataset_id": "uci_har",
+  "split_id": "split-00",
+  "train_seed": 0,
+  "fingerprint": "64a804b632105cb20aa7d8dfe93d21daf5604ff871a0c3fe8c7f3b11c0cb7d7b",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.9792799949645996,
+    "accuracy": 0.97926265001297,
+    "balanced_accuracy": 0.9780721618357487,
+    "val_macro_f1": 0.9891913533210754
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 5856,
+    "val_size": 1464,
+    "test_size": 868,
+    "best_epoch": 31,
+    "epochs_ran": 41
+  },
+  "model": {
+    "class": "QuantileNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3
+    },
+    "params": 20166,
+    "input_channels": 9,
+    "window_length": 150,
+    "num_classes": 6,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\HAR\\datasets_paper_era",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 524.9,
+  "fast_paths": true,
+  "peak_gpu_mb": 132.1,
+  "tau": null,
+  "hysteresis_widths": null
+}

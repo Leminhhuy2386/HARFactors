@@ -1,0 +1,53 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "recurrencenet",
+  "dataset_id": "uci_har",
+  "split_id": "split-04",
+  "train_seed": 0,
+  "fingerprint": "4574cd37deddaf8492d24ec93f4a175caf0dbac0d5dda3a93c54df6c8144fbfd",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.9418718218803406,
+    "accuracy": 0.9417098164558411,
+    "balanced_accuracy": 0.9438290706382245,
+    "val_macro_f1": 0.996812105178833
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_4",
+    "train_size": 5933,
+    "val_size": 1483,
+    "test_size": 772,
+    "best_epoch": 43,
+    "epochs_ran": 53
+  },
+  "model": {
+    "class": "Round6Net",
+    "config": {
+      "memory": "recurrence",
+      "d_model": 32,
+      "num_layers": 3
+    },
+    "params": 24078,
+    "input_channels": 9,
+    "window_length": 150,
+    "num_classes": 6,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\HAR\\datasets_paper_era",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 643.2,
+  "fast_paths": true,
+  "peak_gpu_mb": 159.0,
+  "tau": null,
+  "hysteresis_widths": null
+}

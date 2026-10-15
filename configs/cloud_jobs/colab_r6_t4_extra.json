@@ -1,0 +1,13 @@
+{
+ "experiment": "Round 6 stage 2, second Colab T4 session: the last splits of rainflownet seed 1 (the first T4 session runs the splits in order; the first copy of each result to arrive is kept, both on T4)",
+ "max_parallel": 4,
+ "env": {"EDGE_SSM_FAST": "1"},
+ "jobs": [
+  {"models": ["rainflownet"], "dataset": "uci_har", "seed": 1, "splits": [9]},
+  {"models": ["rainflownet"], "dataset": "uci_har", "seed": 1, "splits": [8]},
+  {"models": ["rainflownet"], "dataset": "unimib_shar", "seed": 1, "splits": [9]},
+  {"models": ["rainflownet"], "dataset": "unimib_shar", "seed": 1, "splits": [8]},
+  {"models": ["rainflownet"], "dataset": "uci_har", "seed": 1, "splits": [7]},
+  {"models": ["rainflownet"], "dataset": "unimib_shar", "seed": 1, "splits": [7]}
+ ]
+}

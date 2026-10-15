@@ -1,0 +1,24 @@
+{
+  "dataset_id": "utd_mhad",
+  "fingerprint": "857aaaf04cf3ceb4ab478888923735779e8f407aec26c4304c8d0156503d6bee",
+  "metrics": {
+    "accuracy": 0.3650793731212616,
+    "balanced_accuracy": 0.32186948853615516,
+    "macro_f1": 0.22202759981155396
+  },
+  "model_id": "svm",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "protocol_id": "whar_arena_v1",
+  "source": {
+    "best_epoch": null,
+    "epochs_ran": 0,
+    "framework": "sklearn",
+    "kind": "local_training",
+    "split_identifier": "group_kfold_7",
+    "test_size": 126,
+    "train_size": 526,
+    "val_size": 131
+  },
+  "split_id": "split-07",
+  "status": "complete"
+}

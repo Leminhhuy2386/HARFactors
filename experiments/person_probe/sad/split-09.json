@@ -1,0 +1,17 @@
+{
+  "dataset": "sad",
+  "split": 9,
+  "subjects": {
+    "9": {
+      "n": 826,
+      "base": 0.9951572418212891,
+      "unlabelled": 0.9963679313659668,
+      "shots_1": 0.9955228368441263,
+      "base_on_rest_shots_1": 0.9955228368441263,
+      "unlabelled+shots_1": 0.9963368773460388,
+      "base_on_rest_unlabelled+shots_1": 0.9951158165931702,
+      "shots_3": 0.9950308799743652,
+      "base_on_rest_shots_3": 0.9950308799743652
+    }
+  }
+}

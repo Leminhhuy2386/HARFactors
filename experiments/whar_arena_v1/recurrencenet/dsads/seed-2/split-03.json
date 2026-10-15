@@ -1,0 +1,53 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "recurrencenet",
+  "dataset_id": "dsads",
+  "split_id": "split-03",
+  "train_seed": 2,
+  "fingerprint": "2788a6e081154ba43e01c24764825d58352d5e5c7db10bd45d21beb29008ce24",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.8593772053718567,
+    "accuracy": 0.8748006224632263,
+    "balanced_accuracy": 0.8748006379585327,
+    "val_macro_f1": 0.9992440938949585
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_3",
+    "train_size": 21068,
+    "val_size": 5266,
+    "test_size": 3762,
+    "best_epoch": 35,
+    "epochs_ran": 45
+  },
+  "model": {
+    "class": "Round6Net",
+    "config": {
+      "memory": "recurrence",
+      "d_model": 32,
+      "num_layers": 3
+    },
+    "params": 25659,
+    "input_channels": 45,
+    "window_length": 75,
+    "num_classes": 19,
+    "sampling_freq": 25
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/content/edge/datasets",
+  "device": "NVIDIA L4",
+  "torch": "2.11.0+cu130",
+  "train_seconds": 552.9,
+  "fast_paths": true,
+  "peak_gpu_mb": 114.4,
+  "tau": null,
+  "hysteresis_widths": null
+}

@@ -1,0 +1,19 @@
+{
+  "dataset_id": "utd_mhad",
+  "split_id": "split-06",
+  "macro_f1": {
+    "euclid": 0.6189597845077515,
+    "euclid_std": 0.6571934223175049,
+    "dtw": 0.7808212041854858,
+    "dtw_std": 0.776147723197937
+  },
+  "n_test": 100,
+  "n_ref": 683,
+  "band": 15,
+  "window_length": 150,
+  "test_subjects": [
+    6
+  ],
+  "datasets_dir": "D:\\Projects\\HAR\\datasets_paper_era",
+  "seconds": 3.2
+}

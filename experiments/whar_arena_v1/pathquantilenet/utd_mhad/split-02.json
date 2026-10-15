@@ -1,0 +1,63 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "pathquantilenet",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-02",
+  "fingerprint": "4b0c9191d8c0415d327e963f348bccbc8caf31d2b33128707b6e081940c4849b",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.7284315824508667,
+    "accuracy": 0.8351648449897766,
+    "balanced_accuracy": 0.8415178571428571,
+    "val_macro_f1": 0.9512166380882263
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_2",
+    "train_size": 554,
+    "val_size": 138,
+    "test_size": 91,
+    "best_epoch": 42,
+    "epochs_ran": 52
+  },
+  "model": {
+    "class": "QuantileNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3,
+      "path": true,
+      "trackers": [
+        [
+          0.1,
+          0.25
+        ],
+        [
+          0.5,
+          0.1
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.9,
+          0.25
+        ]
+      ]
+    },
+    "params": 20763,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 267.0,
+  "peak_gpu_mb": 150.8,
+  "tau": null,
+  "hysteresis_widths": null
+}

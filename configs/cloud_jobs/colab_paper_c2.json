@@ -1,0 +1,95 @@
+{
+ "experiment": "Paper held-out (\u00a75p): MotionSense, continued after the first supervisor ran out of VM cycles",
+ "max_parallel": 4,
+ "warm_parallel": 1,
+ "playwright": true,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "motion_sense",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 0
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 0
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "motion_sense",
+   "seed": 0
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "motion_sense",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 1
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "motion_sense",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "motion_sense",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recurrencenet"
+   ],
+   "dataset": "motion_sense",
+   "seed": 2
+  },
+  {
+   "models": [
+    "s4d"
+   ],
+   "dataset": "motion_sense",
+   "seed": 2
+  }
+ ]
+}

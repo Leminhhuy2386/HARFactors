@@ -1,0 +1,8 @@
+{
+  "experiment": "P4 multi-seed on UTD-MHAD; Colab runs training seed 3",
+  "jobs": [
+    {"models": ["quantilenet"], "dataset": "utd_mhad", "seed": 3, "splits": [0, 1, 2, 3]},
+    {"models": ["quantilenet"], "dataset": "utd_mhad", "seed": 3, "splits": [4, 5, 6, 7]},
+    {"models": ["s4d", "hystnet_sel_clock", "hystnet_nomem", "mamba"], "dataset": "utd_mhad", "seed": 3}
+  ]
+}

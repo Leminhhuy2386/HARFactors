@@ -1,0 +1,55 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "forestnet",
+  "dataset_id": "utd_mhad",
+  "split_id": "split-00",
+  "train_seed": 0,
+  "fingerprint": "962f47a8b2f676a5b0db2c48d04941ee9fd61b8c20a01de6d00275241d3827ec",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.04142226651310921,
+    "accuracy": 0.12389380484819412,
+    "balanced_accuracy": 0.11772486772486773,
+    "val_macro_f1": 0.04608304798603058
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 536,
+    "val_size": 134,
+    "test_size": 113,
+    "best_epoch": 26,
+    "epochs_ran": 36
+  },
+  "model": {
+    "class": "ForestNet",
+    "config": {
+      "d_model": 32,
+      "num_layers": 3,
+      "trees": 8,
+      "depth": 4
+    },
+    "params": 29144,
+    "input_channels": 6,
+    "window_length": 150,
+    "num_classes": 27,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\HAR\\datasets_paper_era",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 57.4,
+  "fast_paths": true,
+  "peak_gpu_mb": 158.7,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": null
+}

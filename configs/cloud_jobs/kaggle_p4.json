@@ -1,0 +1,9 @@
+{
+  "experiment": "P4 multi-seed on UTD-MHAD; Kaggle 2x T4 runs training seeds 1 and 2",
+  "jobs": [
+    {"models": ["quantilenet"], "dataset": "utd_mhad", "seed": 1, "gpu": 0},
+    {"models": ["s4d", "hystnet_sel_clock", "hystnet_nomem", "mamba"], "dataset": "utd_mhad", "seed": 1, "gpu": 0},
+    {"models": ["quantilenet"], "dataset": "utd_mhad", "seed": 2, "gpu": 1},
+    {"models": ["s4d", "hystnet_sel_clock", "hystnet_nomem", "mamba"], "dataset": "utd_mhad", "seed": 2, "gpu": 1}
+  ]
+}

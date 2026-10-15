@@ -1,0 +1,317 @@
+{
+ "experiment": "Round 8 stage B started early (used only if a model advances by the seed-0 rule): seeds 1-2 of the two hybrids on the 5 local dev datasets",
+ "max_parallel": 4,
+ "env": {
+  "EDGE_SSM_FAST": "1"
+ },
+ "jobs": [
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 1
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 1,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uci_har",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "uci_har",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "lawnet_rec"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "utd_mhad",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "actrectut_gestures",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "opportunity",
+   "seed": 2
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "uci_har",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2,
+   "splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "models": [
+    "recstatnet"
+   ],
+   "dataset": "unimib_shar",
+   "seed": 2,
+   "splits": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  }
+ ]
+}

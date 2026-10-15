@@ -1,0 +1,53 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "mamba",
+  "dataset_id": "uci_har",
+  "split_id": "split-02",
+  "train_seed": 0,
+  "fingerprint": "3b279820beb2d60aed954d007f6eac558716ad7fc845a0e006278edeed866fc9",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.9507858157157898,
+    "accuracy": 0.9445812702178955,
+    "balanced_accuracy": 0.9512163561076604,
+    "val_macro_f1": 0.9914524555206299
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "Edge_SSM/run_whar.py",
+    "split_identifier": "group_kfold_2",
+    "train_size": 5901,
+    "val_size": 1475,
+    "test_size": 812,
+    "best_epoch": 38,
+    "epochs_ran": 48
+  },
+  "model": {
+    "class": "MambaClassifier",
+    "config": {
+      "d_model": 32,
+      "d_state": 16,
+      "num_layers": 2
+    },
+    "params": 20550,
+    "input_channels": 9,
+    "window_length": 150,
+    "num_classes": 6,
+    "sampling_freq": 50
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "D:\\Projects\\HAR\\datasets_paper_era",
+  "device": "NVIDIA GeForce GTX 1080 Ti",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 445.5,
+  "fast_paths": true,
+  "peak_gpu_mb": 429.8,
+  "tau": null,
+  "hysteresis_widths": null
+}

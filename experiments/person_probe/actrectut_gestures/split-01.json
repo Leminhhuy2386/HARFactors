@@ -1,0 +1,17 @@
+{
+  "dataset": "actrectut_gestures",
+  "split": 1,
+  "subjects": {
+    "1": {
+      "n": 417,
+      "base": 0.6046037673950195,
+      "unlabelled": 0.7148356437683105,
+      "shots_1": 0.6887625455856323,
+      "base_on_rest_shots_1": 0.6028480728467306,
+      "unlabelled+shots_1": 0.7283334334691366,
+      "base_on_rest_unlabelled+shots_1": 0.6038831273714701,
+      "shots_3": 0.6519222259521484,
+      "base_on_rest_shots_3": 0.5119664072990417
+    }
+  }
+}
