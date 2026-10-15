@@ -1,0 +1,102 @@
+{
+ "gate": "G4_test_seal",
+ "stage": "04_research",
+ "timestamp": "2026-10-15T16:49:10",
+ "template_form": "not_applicable: no held-out test split exists to seal; the analysis is over stored runs. Sealed instead: the pre-registration and the analysis code (agents/04_research.md).",
+ "check": "the pre-registration and the confirmatory analysis code are hashed before S2's metrics are read for the confirmatory analysis",
+ "reference_value": null,
+ "reference_source": "docs/preregistration.md, \u00a7 Rules fixed now (Sealing)",
+ "observed_value": {
+  "sealed_files": {
+   "docs/preregistration.md": "91487bd455f70451c2be613dc80ba581b8d1d64636f14ac92471e43c6f7cf3c4",
+   "src/evaluation/variance_components.py": "520a2277d44485e06431c0afe94fbbfec2f89cca13469ea86cefd5d2ecf3eedd",
+   "scripts/run_confirmatory.py": "2ebed7584ba51cc05f9e06f581f5ede6f684d00fa9d6044294ac3f29b6e68ec3",
+   "src/data/sets.py": "92b2cfc804e6a9be709dff16bdf2bff1d6022fc420ed0b99e7883a54e49fdb00",
+   "src/utils/provenance.py": "91598f1e4f0264b5616cf40c7c5c27a9f1ee5b00189cdb856f5c3548856707a3",
+   "src/utils/paths.py": "907928977d13c8ad7f55629bc67da433808e782b43879d3820f213912970ca2d",
+   "tests/test_variance_components.py": "8931ed0f4836113a65b211b314eb8b4ae4834e595a99aed52a7d3eabe0038a70"
+  },
+  "git_commit": "761d6bd",
+  "test_access_log_before_seal": [],
+  "prior_reads_declared": "Before this seal, S2 metric values were read by code only through scripts/run_analyses.py -> src/evaluation/heldout_analysis.py, the imported exploratory analysis of the RILA-Net held-out confirmation, while checking that the imported aggregates reproduce (gate G1 jobs 86656, 86658, 86661 and diagnostic job 86657). It recomputes results/metrics/heldout/summary.md (per-dataset means and paired model differences), which was already known; it computes no variance component and no split-level spread. S2's per-dataset means were known before the pre-registration (docs/preregistration.md, \u00a7 Data). scripts/validate_data.py checked only that S2's metric keys are present floats; src/evaluation/variance_components.inclusion read only split sizes and the protocol hash.",
+  "anchor_baseline_test_read": "none of S2 (G3 read S3 and the quoted table only)",
+  "s2_inclusion": {
+   "pamap2": {
+    "included": true,
+    "splits_with_size_disagreement": [],
+    "runs_with_other_protocol_hash": 0,
+    "missing_runs": 0
+   },
+   "up_fall": {
+    "included": true,
+    "splits_with_size_disagreement": [],
+    "runs_with_other_protocol_hash": 0,
+    "missing_runs": 0
+   },
+   "uma_fall": {
+    "included": true,
+    "splits_with_size_disagreement": [],
+    "runs_with_other_protocol_hash": 0,
+    "missing_runs": 0
+   },
+   "usc_had": {
+    "included": true,
+    "splits_with_size_disagreement": [],
+    "runs_with_other_protocol_hash": 0,
+    "missing_runs": 0
+   },
+   "motion_sense": {
+    "included": false,
+    "splits_with_size_disagreement": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "runs_with_other_protocol_hash": 0,
+    "missing_runs": 0
+   },
+   "wear": {
+    "included": true,
+    "splits_with_size_disagreement": [],
+    "runs_with_other_protocol_hash": 0,
+    "missing_runs": 0
+   },
+   "uca_ehar": {
+    "included": true,
+    "splits_with_size_disagreement": [],
+    "runs_with_other_protocol_hash": 0,
+    "missing_runs": 0
+   },
+   "w_har": {
+    "included": true,
+    "splits_with_size_disagreement": [],
+    "runs_with_other_protocol_hash": 0,
+    "missing_runs": 0
+   }
+  },
+  "analyses_allowed_on_S2": [
+   "H1",
+   "sens1_S2_balanced_accuracy"
+  ]
+ },
+ "tolerance": "every sealed file hashed and committed; no entry in results/test_access.log before this timestamp; every earlier read of S2 metric values declared",
+ "verdict": "PASS",
+ "evidence": [
+  "docs/preregistration.md",
+  "src/evaluation/variance_components.py",
+  "scripts/run_confirmatory.py",
+  "src/data/sets.py",
+  "src/utils/provenance.py",
+  "src/utils/paths.py",
+  "tests/test_variance_components.py",
+  "scripts/seal_g4.py"
+ ],
+ "notes": "This is the first read of S2 for the confirmatory analysis. After this seal no change to the sealed files is permitted; run_confirmatory.py refuses to read S2 if any sealed hash differs."
+}

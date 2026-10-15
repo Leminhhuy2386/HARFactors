@@ -1,0 +1,5 @@
+node hpc02.local, job 86676, Thu Oct 15 16:49:09 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+wrote results/gates/G4_test_seal.json commit 761d6bd
+S2 inclusion: {'pamap2': True, 'up_fall': True, 'uma_fall': True, 'usc_had': True, 'motion_sense': False, 'wear': True, 'uca_ehar': True, 'w_har': True}
