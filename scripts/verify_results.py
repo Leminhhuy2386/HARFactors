@@ -64,6 +64,16 @@ TOL = {
     "negative_controls": "every tampered copy fails the check that guards it",
 }
 OUT_REPORT = ROOT / "docs" / "verification_report.md"
+RERUN_REASON = (
+    "Rerun 1, approved by the user on 2026-10-16. The first G5 FAILed for four reasons. (1) 7 imported files under "
+    "results/metrics had no provenance; they are regenerated with provenance by their own scripts (profile.json by the "
+    "new src/evaluation/profile_models.py). (2) One run differed from its record by exactly 2 windows, the declared "
+    "limit, and the float32 comparison counted it as above the limit; the window difference is now counted as an "
+    "integer, as the tolerance states. (3) The recompute negative control changed one wrong prediction into another "
+    "wrong one in a degenerate file (dsads, constant predictions), so no metric changed and --recompute passed; metric "
+    "records now carry the prediction file's sha256, --recompute checks it, and the control alters a correct "
+    "prediction in a non-degenerate file. (4) The provenance control was void because of (1); it now also requires "
+    "the deleted file to be named. The tolerances are unchanged.")
 GATE = ROOT / "results" / "gates" / "G5_results_authenticity.json"
 
 
@@ -98,8 +108,8 @@ def select_cells() -> tuple[list, list]:
 def run_matches(r: dict) -> bool:
     if r["status"] != "evaluated" or r["test_size"] != r["stored_test_size"]:
         return False
-    return (abs(r["accuracy"] - r["stored_accuracy"]) * r["test_size"] <= 2 + 1e-9
-            and abs(r["macro_f1"] - r["stored_macro_f1"]) * 100 <= 2)
+    windows = round(abs(r["accuracy"] - r["stored_accuracy"]) * r["test_size"])  # an integer count of windows
+    return windows <= 2 and abs(r["macro_f1"] - r["stored_macro_f1"]) * 100 <= 2
 
 
 def level2(r: dict) -> list[str]:
@@ -199,11 +209,13 @@ def negative_controls(eval_dir: Path) -> list[dict]:
         (copy / "experiments" / "checkpoints").symlink_to(ROOT / "experiments" / "checkpoints")
         rel_eval = eval_dir.relative_to(ROOT)
         base = {flag: audit(flag, root=copy)[0] for flag in ("--recompute", "--provenance", "--ledger", "--seeds")}
-        # 1. alter one prediction value -> --recompute
-        pf = sorted((copy / rel_eval / "predictions").rglob("split-*.csv"))[0]
+        # 1. alter one prediction value -> --recompute. A non-degenerate S2 file; a correct prediction made wrong, so
+        #    that the metrics change too (the file hash in the metric record catches any edit regardless)
+        pf = sorted((copy / rel_eval / "predictions" / "s4d" / "wear").rglob("split-*.csv"))[0]
         k = json.loads(Path(str(pf).replace("/predictions/", "/metrics/")).with_suffix(".json").read_text())["num_classes"]
         rows_ = list(csv.reader(open(pf)))
-        rows_[1][2] = str((int(rows_[1][2]) + 1) % k)  # one window predicted as another class
+        j = next(i for i in range(1, len(rows_)) if rows_[i][1] == rows_[i][2])
+        rows_[j][2] = str((int(rows_[j][2]) + 1) % k)  # a correctly classified window now predicted as another class
         with open(pf, "w", newline="") as f:
             csv.writer(f).writerows(rows_)
         ok, _ = audit("--recompute", root=copy)
@@ -213,9 +225,11 @@ def negative_controls(eval_dir: Path) -> list[dict]:
         # 2. delete a provenance record -> --provenance
         pv = next((copy / "results/metrics/confirmatory").glob("*.json.provenance.json"))
         pv.unlink()
-        ok, _ = audit("--provenance", root=copy)
+        ok, out = audit("--provenance", root=copy)
+        named = str(pv.relative_to(copy)).removesuffix(".provenance.json") in out
         rows.append({"tampering": "a provenance record deleted", "check": "--provenance",
-                     "untampered_passes": base["--provenance"], "caught": base["--provenance"] and not ok})
+                     "untampered_passes": base["--provenance"], "deleted_file_named": named,
+                     "caught": not ok and named})
         shutil.copy2(ROOT / pv.relative_to(copy), pv)
         # 3. remove a run directory listed in the ledger -> --ledger
         shutil.rmtree(copy / rel_eval)
@@ -355,8 +369,12 @@ def main() -> None:
     ap.add_argument("--workers", type=int, default=1)
     ap.add_argument("--evaluated", default=None, help="run_id of a scripts/evaluate.py run over select_cells()")
     a = ap.parse_args()
-    if GATE.exists():
-        raise SystemExit("G5 exists: a re-run must get its own file and state why")
+    gate_path = GATE
+    if GATE.exists():  # never edit a gate file: a re-run gets its own name and states why
+        k = 1
+        while (GATE.parent / f"G5_results_authenticity_rerun{k}.json").exists():
+            k += 1
+        gate_path = GATE.parent / f"G5_results_authenticity_rerun{k}.json"
     from scripts import evaluate as E
     run_id = PV.new_run_id("verify_G5")
     RUNNING["id"] = run_id
@@ -430,7 +448,9 @@ def main() -> None:
                              "scripts/evaluate.py", "src/evaluation/reml_numpy.py", "scripts/audit.py"],
                 "notes": "Runs without a checkpoint and datasets without a cache here cannot be re-executed; they "
                          "are listed in the report."}
-        GATE.write_text(json.dumps(gate, indent=1, default=str) + "\n")
+        if gate_path != GATE:
+            gate["rerun_reason"] = RERUN_REASON
+        gate_path.write_text(json.dumps(gate, indent=1, default=str) + "\n")
         PV.ledger_end(run_id, f"G5 {gate['verdict']}", started)
         print("G5", gate["verdict"])
         print(json.dumps({k: (v if k != "L5_negative_controls" else v) for k, v in obs.items()

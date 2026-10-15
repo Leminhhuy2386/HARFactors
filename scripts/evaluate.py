@@ -101,6 +101,7 @@ def evaluate(cells: list[tuple[str, str, int, int]], out_dir: Path, run_id: str,
                     w.writerow(["window_index", "y_true", "y_pred"])
                     w.writerows(zip(test_indices, y_true, y_pred))
                 m = metrics_from_csv(pred_f, K)
+                rec["predictions_sha256"] = PV.sha256(pred_f)  # --recompute checks it: any edit is caught
                 stored_f = stored_run(model_id, dataset, seed, split)
                 stored = json.loads(stored_f.read_text())
                 sm = stored["metrics"]

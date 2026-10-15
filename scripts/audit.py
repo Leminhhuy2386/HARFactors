@@ -148,6 +148,8 @@ def check_recompute() -> list[str]:
             errs.append(f"no metric file for {f.relative_to(ROOT)}")
             continue
         rec = json.loads(mf.read_text())
+        if rec.get("predictions_sha256") != sha256(f):
+            errs.append(f"prediction file differs from the one its metrics were computed from: {f.relative_to(ROOT)}")
         num_classes = int(rec.get("num_classes") or 0) or None
         m = metrics_from_csv(f, num_classes or _classes(rec["dataset"]))
         for k in ("macro_f1", "accuracy", "balanced_accuracy"):

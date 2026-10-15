@@ -17,7 +17,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-STEPS = ["src.evaluation.compare_arena", "src.evaluation.synthesis", "src.evaluation.factor_analysis", "src.evaluation.heldout_analysis", "src.evaluation.vs_benchmark", "src.evaluation.seeds_summary", "src.evaluation.p5_summary", "src.evaluation.contrasts_robustness"]
+# (module, arguments), in dependency order: compare_arena reads profile.json at import, vs_benchmark reads
+# pareto/costs.json at import
+STEPS = [("src.evaluation.profile_models", []), ("src.evaluation.compare_arena", []), ("src.evaluation.synthesis", []),
+         ("src.evaluation.factor_analysis", []), ("src.evaluation.heldout_analysis", []),
+         ("src.evaluation.pareto", []), ("src.evaluation.pareto", ["--heldout"]), ("src.evaluation.vs_benchmark", []),
+         ("src.evaluation.seeds_summary", []), ("src.evaluation.p5_summary", []),
+         ("src.evaluation.p5_summary", ["recurrencenet"]), ("src.evaluation.contrasts_robustness", [])]
 
 
 def written_since(t0: float) -> list[Path]:
@@ -31,12 +37,12 @@ if __name__ == "__main__":
     ap.add_argument("--only", nargs="*", default=None)
     ap.add_argument("--no-record", action="store_true", help="no run directory, ledger line or provenance (checks only)")
     a = ap.parse_args()
-    steps = [m for m in STEPS if not a.only or m.rsplit(".", 1)[-1] in a.only]
+    steps = [s for s in STEPS if not a.only or s[0].rsplit(".", 1)[-1] in a.only]
     record = not a.no_record
     if record:
         from src.utils import provenance as PV
         run_id = PV.new_run_id("run_analyses")
-        config = {"steps": steps}
+        config = {"steps": [" ".join([m, *args]) for m, args in steps]}
         run_dir = ROOT / "experiments" / run_id
         run_dir.mkdir()
         (run_dir / "config.json").write_text(json.dumps(config, indent=1) + "\n")
@@ -44,16 +50,23 @@ if __name__ == "__main__":
         PV.ledger_start(run_id, config)
     log = []
     try:
-        for mod in steps:
-            print("==", mod, flush=True)
+        for mod, args in steps:
+            print("==", mod, *args, flush=True)
             t0 = time.time() - 1
-            sys.argv = [mod]
+            sys.argv = [mod, *args]
             runpy.run_module(mod, run_name="__main__")
+            for name in [k for k in sys.modules if k.startswith("src.evaluation")]:
+                del sys.modules[name]  # the next step re-imports and so reads what this step wrote
             if record:
                 src = ROOT / (mod.replace(".", "/") + ".py")
+                inputs = [ROOT / "data/processed/manifest.json", src]
+                if mod != "src.evaluation.profile_models":  # every later step reads params via compare_arena.PROFILE
+                    inputs.append(ROOT / "results/metrics/profile.json")
+                if mod == "src.evaluation.vs_benchmark":
+                    inputs.append(ROOT / "results/metrics/pareto/costs.json")
                 for f in written_since(t0):
-                    PV.write(f, run_id=run_id, started=started, config=config, produced_by=f"scripts/run_analyses.py ({mod})",
-                             inputs=[ROOT / "data/processed/manifest.json", src])
+                    PV.write(f, run_id=run_id, started=started, config=config, produced_by=f"scripts/run_analyses.py ({mod}"
+                             + (" " + " ".join(args) if args else "") + ")", inputs=inputs)
                     log.append(f"{mod}: {f.relative_to(ROOT)}")
     except BaseException as e:
         if record:
