@@ -1,0 +1,11 @@
+node hpc02.local, job 86675, Thu Oct 15 16:48:09 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+ok test_fit_recovers_components
+ok test_fit_without_seeds_drops_mp
+ok test_no_model_effect_gives_large_R
+ok test_resamples_deterministic_and_balanced
+ok test_resample_relabels_duplicate_splits
+ok test_bootstrap_interval_contains_point
+ok test_decide_rules
+ok test_inclusion_reads_no_metric

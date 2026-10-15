@@ -1,0 +1,7 @@
+node hpc02.local, job 86673, Thu Oct 15 16:44:39 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+0 None conv True sec 17.2 [5.22, 10.45, 1.6, 32.56] 18.93 warnings []
+0 lbfgs conv True sec 13.0 [5.22, 10.46, 1.6, 32.57] 18.93 warnings []
+1 None conv True sec 16.7 [6.44, 11.09, 8.38, 97.61] 19.68 warnings []
+slurmstepd: error: *** JOB 86673 ON hpc02 CANCELLED AT 2026-10-15T16:45:36 ***

@@ -60,6 +60,32 @@ These are exploratory findings (Edge_SSM, 2026-10-12). The one confirmatory test
    (exploratory) and the pre-registered mixed-effects (REML) model (§ Pre-registration).
 4. Print-ready figures (vector PDF, ≥ 8 pt).
 
+## Related work (verified 2026-10-15; `paper/references_verified.json`, notes in `docs/literature_notes.md`)
+
+- **Benchmark and data.**
+  - WHAR Arena [burzer2026arena] defines the person-disjoint protocol used here: k = 10 subject groups, test only
+    on unseen subjects, mean and sd over splits. It finds the state of the art "distributed rather than dominated
+    by a single architecture". It reports one run per split, with no seed replicates.
+  - WHAR Datasets [burzer2025whar] provides the caches and splits.
+- **Evaluation and people.**
+  - Random cross-validation of segmented sensor data is optimistic [hammerla2015lets].
+  - How training and test data are partitioned across people decides the reported accuracy
+    [lockhart2014limitations].
+  - Activity patterns differ between people [qian2021latent], and so do devices [stisen2015smart].
+  - Background on the activity recognition chain: [bulling2014tutorial].
+- **Variance in benchmarks.** Comparisons must account for data-split and seed variation
+  [bouthillier2021accounting]. Classifiers are compared over multiple datasets with rank tests [demsar2006statistical,
+  wilcoxon1945individual, holm1979simple].
+- **Models in the population.** S4 and S4D [gu2022efficiently, gu2022parameterization], Mamba [gu2023mamba]. The WHAR
+  baselines include DeepConvLSTM [ordonez2016deep], deep and recurrent HAR models [hammerla2016deep], and Random
+  Forest [breiman2001random] on tsfresh features [christ2018tsfresh].
+- **Statistics.** REML [patterson1971recovery] fitted with statsmodels [seabold2010statsmodels]; the cluster bootstrap
+  [field2007bootstrapping].
+- **Gap.**
+  - No study separates, under one fixed person-disjoint protocol, how much of macro-F1 variance comes from the test
+    subjects, the model and the training seed.
+  - WHAR Arena has a single run per split, so it cannot separate seed noise from the person effect.
+
 ## Target journal (fixed 2026-10-15)
 
 - **Journal:** IEEE Sensors Letters, a regular letter.

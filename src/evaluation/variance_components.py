@@ -130,11 +130,16 @@ def _fit_resample(args) -> dict:
     return fit(pd.concat(parts, ignore_index=True), has_seeds)
 
 
+def _one_blas_thread() -> None:  # worker processes: one BLAS thread each, or they oversubscribe the node's cores
+    from threadpoolctl import threadpool_limits
+    threadpool_limits(1)
+
+
 def bootstrap(df: pd.DataFrame, n: int, has_seeds: bool = True, workers: int = 1) -> dict:
     draws = resamples(df, n)
     args = [(df, dr, has_seeds) for dr in draws]
     if workers > 1:
-        with ProcessPoolExecutor(workers) as ex:
+        with ProcessPoolExecutor(workers, initializer=_one_blas_thread) as ex:
             fits = list(ex.map(_fit_resample, args, chunksize=max(1, n // (4 * workers))))
     else:
         fits = [_fit_resample(a) for a in args]

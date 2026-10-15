@@ -1,0 +1,78 @@
+node hpc02.local, job 86674, Thu Oct 15 16:45:39 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+{
+ "analysis": "sens2_S1_macro_f1",
+ "n_runs": 2160,
+ "datasets": [
+  "utd_mhad",
+  "uci_har",
+  "unimib_shar",
+  "actrectut_gestures",
+  "opportunity",
+  "sad",
+  "hapt",
+  "dsads",
+  "wisdm"
+ ],
+ "excluded": {
+  "daphnet": "split sizes disagree across runs (pre-registered inclusion rule)"
+ },
+ "point": {
+  "converged": true,
+  "method": "default",
+  "components": {
+   "M": 5.916712428408274,
+   "MD": 7.768837581794202,
+   "MP": 6.66677957915867,
+   "P": 66.24692189966763,
+   "e": 17.60646571466325
+  },
+  "R": 3.255004377203931,
+  "pi_P": 0.6357321237007953,
+  "R_definition": "s2_P / (s2_M + s2_MD + s2_MP)"
+ },
+ "bootstrap": {
+  "resamples": 32,
+  "converged": 32,
+  "dropped": 0,
+  "dropped_share": 0.0,
+  "level": 0.975,
+  "R_interval": [
+   1.5165103618133253,
+   4.089746707912047
+  ],
+  "pi_P_interval": [
+   0.42276651582440034,
+   0.6851470845444538
+  ],
+  "components_intervals": {
+   "P": [
+    23.619219886304574,
+    100.99875331049329
+   ],
+   "M": [
+    3.8322121447789814,
+    14.878075748540356
+   ],
+   "MD": [
+    7.0458811778126,
+    15.027855857943202
+   ],
+   "MP": [
+    1.2352574813176889,
+    10.569578319013031
+   ],
+   "e": [
+    12.309476974664255,
+    22.130802108693977
+   ]
+  },
+  "refit_with_powell": 0,
+  "seed": 20261015
+ }
+}
+
+real	1m40.236s
+user	18m20.939s
+sys	0m45.153s

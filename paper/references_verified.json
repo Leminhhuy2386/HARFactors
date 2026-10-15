@@ -1,0 +1,243 @@
+{
+  "burzer2026arena": {
+    "arxiv": "2606.13194",
+    "resolved_title": "WHAR Arena: Benchmarking the State of the Art in Efficient Wearable Human Activity Recognition",
+    "resolved_venue": "arXiv preprint (v1, June 2026); no journal-ref or venue found",
+    "year": 2026,
+    "authors": ["Maximilian Burzer", "Tobias King", "Till Riedel", "Michael Beigl", "Tobias Röddiger"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://huggingface.co/papers/2606.13194 (title, authors and affiliations, abstract, protocol sentences, v1 figure URLs arxiv.org/html/2606.13194v1); WebSearch result https://arxiv.org/pdf/2606.13194 with same title. Direct WebFetch of arxiv.org / export.arxiv.org returned HTTP 403.",
+    "status": "verified",
+    "note": "Title matches the coordinator's title from the pinned whar-arena repo (paper-benchmark.json source.paper). Affiliations: KIT (first four), IPAI Foundation gGmbH, Heilbronn (Röddiger). No venue/DOI: a search for an acceptance or journal-ref returned nothing. Cite as an arXiv preprint. arXiv DOI 10.48550/arXiv.2606.13194 not checked, so it is left out."
+  },
+  "burzer2025whar": {
+    "doi": "10.1145/3714394.3756254",
+    "arxiv": "2508.16604",
+    "resolved_title": "WHAR Datasets: An Open Source Library for Wearable Human Activity Recognition",
+    "resolved_venue": "Companion of the 2025 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp Companion '25), Espoo, Finland, pp. 1315-1322",
+    "year": 2025,
+    "authors": ["Maximilian Burzer", "Tobias King", "Till Riedel", "Michael Beigl", "Tobias Röddiger"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1145/3714394.3756254 (DOI registered -> https://dl.acm.org/doi/10.1145/3714394.3756254); WebFetch https://github.com/teco-kit/whar-datasets (authors' BibTeX: booktitle, pages 1315--1322, year 2025); WebFetch https://huggingface.co/papers/2606.13194 (WHAR Arena reference list: same title, venue, pp. 1315-1322); WebSearch (ACM record: UbiComp Companion '25, Espoo, Finland).",
+    "status": "verified",
+    "note": "The arXiv version 2508.16604 is noted as accepted at the OpenWearables workshop. dl.acm.org itself returned HTTP 403."
+  },
+  "chen2015utdmhad": {
+    "doi": "10.1109/ICIP.2015.7350781",
+    "resolved_title": "UTD-MHAD: A multimodal dataset for human action recognition utilizing a depth camera and a wearable inertial sensor",
+    "resolved_venue": "2015 IEEE International Conference on Image Processing (ICIP), Quebec City, Canada, 27-30 Sept. 2015, pp. 168-172",
+    "year": 2015,
+    "authors": ["C. Chen", "Roozbeh Jafari", "Nasser Kehtarnavaz"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1109/ICIP.2015.7350781 (DOI registered -> http://ieeexplore.ieee.org/document/7350781/); WebSearch x4 (result https://ieeexplore.ieee.org/document/7350781/ with this exact title; Semantic Scholar entry bb4d8ebca96f3c467c660d62339f0828d8442305 'Chen-Jafari'; review reference list at https://www.cjig.cn/en/article/doi/10.11834/jig.210786/ giving 'Quebec City, Canada: IEEE: 168-172 [DOI:10.1109/ICIP.2015.7350781]'; official dataset page https://personal.utdallas.edu/~kehtar/UTD-MHAD.html for the dataset facts). ieeexplore.ieee.org, personal.utdallas.edu and the authors' PDF (jafari.tamu.edu) all returned HTTP 403 to WebFetch.",
+    "status": "verified",
+    "note": "Pages 168-172 come from one secondary reference list plus one search summary, not from IEEE Xplore itself. Check them on Xplore if possible. The first author's given name is shown only as the initial 'C.': one search summary said 'Cheng Chen', which conflicts with the usual 'Chen Chen', so it was not confirmed. Dataset facts (861 sequences after removing 3 corrupted, 8 subjects, 27 actions, inertial sensor at 50 Hz) are in notes.md with their sources. The local harness config third_party/whar-datasets/src/whar_datasets/config/cfg_utd_mhad.py agrees (sampling_freq=50, num_of_subjects=8, num_of_activities=27), but that is code, not a published source."
+  },
+  "hammerla2015lets": {
+    "doi": "10.1145/2750858.2807551",
+    "resolved_title": "Let's (not) stick together: pairwise similarity biases cross-validation in activity recognition",
+    "resolved_venue": "UbiComp '15, ACM International Joint Conference on Pervasive and Ubiquitous Computing, Osaka, pp. 1041-1051, ACM",
+    "year": 2015,
+    "authors": ["Nils Y. Hammerla", "Thomas Plötz"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1145/2750858.2807551 (DOI registered -> dl.acm.org); WebSearch x2 (Newcastle University eprint record https://apps-eprint4-l.ncl.ac.uk/216590: UbiComp '15, pp. 1041-1051, ACM, DOI as above).",
+    "status": "verified",
+    "note": "Middle initial 'Y.' from the Northumbria repository listing 'Hammerla, Nils Y.'. Direct fetches of ACM DL, Crossref and the Newcastle page returned HTTP 403."
+  },
+  "bulling2014tutorial": {
+    "doi": "10.1145/2499621",
+    "resolved_title": "A Tutorial on Human Activity Recognition Using Body-worn Inertial Sensors",
+    "resolved_venue": "ACM Computing Surveys 46(3): 33:1-33:33",
+    "year": 2014,
+    "authors": ["Andreas Bulling", "Ulf Blanke", "Bernt Schiele"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1145/2499621 (-> https://dl.acm.org/doi/10.1145/2499621); WebSearch x2 (author page https://perceptualui.org/publications/bulling14_csur/ and dblp: 46(3): 33:1-33:33 (2014)); WebFetch https://huggingface.co/papers/2606.13194 (WHAR Arena reference: ACM Computing Surveys (CSUR) 46 (3), pp. 1-33).",
+    "status": "verified",
+    "note": "Article number 33, 33 pages."
+  },
+  "lockhart2014limitations": {
+    "doi": "10.1145/2638728.2641306",
+    "resolved_title": "Limitations with Activity Recognition Methodology & Data Sets",
+    "resolved_venue": "Proceedings of the ACM International Joint Conference on Pervasive and Ubiquitous Computing, Adjunct Publication (UbiComp '14 Adjunct), Seattle, WA, pp. 747-756",
+    "year": 2014,
+    "authors": ["Jeffrey W. Lockhart", "Gary M. Weiss"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1145/2638728.2641306 (-> https://dl.acm.org/doi/10.1145/2638728.2641306); WebSearch x2 (author PDF https://storm.cis.fordham.edu/gweiss/papers/HASCA-2014.pdf with header 'UBICOMP '14 ADJUNCT, SEPTEMBER 13 - 17, 2014, SEATTLE, WA, USA'; Lockhart publication list https://storm.cis.fordham.edu/lockhart/publications.html: pp. 747-756).",
+    "status": "verified",
+    "note": "Chosen over Weiss & Lockhart 2012 (personalization), because this paper argues directly that model type (personal / hybrid / impersonal) decides how train and test data are split."
+  },
+  "stisen2015smart": {
+    "doi": "10.1145/2809695.2809718",
+    "resolved_title": "Smart Devices are Different: Assessing and Mitigating Mobile Sensing Heterogeneities for Activity Recognition",
+    "resolved_venue": "Proceedings of the 13th ACM Conference on Embedded Networked Sensor Systems (SenSys 2015), Seoul, South Korea, pp. 127-140",
+    "year": 2015,
+    "authors": ["Allan Stisen", "Henrik Blunck", "Sourav Bhattacharya", "Thor Siiger Prentow", "Mikkel Baun Kjærgaard", "Anind Dey", "Tobias Sonne", "Mads Møller Jensen"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1145/2809695.2809718 (-> https://dl.acm.org/doi/10.1145/2809695.2809718); WebFetch https://huggingface.co/papers/2606.13194 (WHAR Arena reference: same authors, Proc. 13th ACM SenSys, Seoul, pp. 127-140, DOI as above); WebSearch (Münster CRIS / SDU portal records with same title).",
+    "status": "verified",
+    "note": "The ACM record's title has a typo, 'MitigatingMobile'. Use the spaced form."
+  },
+  "qian2021latent": {
+    "doi": "10.1609/aaai.v35i13.17416",
+    "resolved_title": "Latent Independent Excitation for Generalizable Sensor-based Cross-Person Activity Recognition",
+    "resolved_venue": "Proceedings of the AAAI Conference on Artificial Intelligence, vol. 35 (no. 13)",
+    "year": 2021,
+    "authors": ["Hangwei Qian", "Sinno Jialin Pan", "Chunyan Miao"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1609/aaai.v35i13.17416 (-> https://ojs.aaai.org/index.php/AAAI/article/view/17416); WebSearch x2 (AAAI OJS page with title, authors (NTU), DOI; abstract).",
+    "status": "verified",
+    "note": "Added under candidate 15 (cross-person generalisation). Volume/issue are taken from the DOI string (v35i13). Pages 11921-11929 appear only in one third-party reference list and are NOT verified, so they are left out. Alternative considered but not added: Chang et al. 2020 IMWUT (10.1145/3380985), which is about sensor placement ('wearing diversity'), not subjects."
+  },
+  "bouthillier2021accounting": {
+    "arxiv": "2103.03098",
+    "resolved_title": "Accounting for Variance in Machine Learning Benchmarks",
+    "resolved_venue": "Proceedings of Machine Learning and Systems 3 (MLSys 2021)",
+    "year": 2021,
+    "authors": ["Xavier Bouthillier", "Pierre Delaunay", "Mirko Bronzi", "Assya Trofimov", "Brennan Nichyporuk", "Justin Szeto", "Naz Sepah", "Edward Raff", "Kanika Madan", "Vikram Voleti", "Samira Ebrahimi Kahou", "Vincent Michalski", "Dmitriy Serdyuk", "Tal Arbel", "Chris Pal", "Gaël Varoquaux", "Pascal Vincent"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://huggingface.co/papers/2103.03098 (title, 17 authors, abstract); WebSearch (result https://proceedings.mlsys.org/paper_files/paper/2021/hash/0184b0cd3cfb185989f858a1d9f5c1eb-Abstract.html, same title, MLSys volume 3).",
+    "status": "verified",
+    "note": "Page numbers not found, so they are left out. proceedings.mlsys.org returned HTTP 403 to WebFetch."
+  },
+  "ordonez2016deep": {
+    "doi": "10.3390/s16010115",
+    "resolved_title": "Deep Convolutional and LSTM Recurrent Neural Networks for Multimodal Wearable Activity Recognition",
+    "resolved_venue": "Sensors 16(1), article 115",
+    "year": 2016,
+    "authors": ["Francisco Javier Ordóñez", "Daniel Roggen"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.3390/s16010115 (-> https://www.mdpi.com/1424-8220/16/1/115); WebSearch (PMC4732148 and DOAJ: Sensors 2016, 16(1), 115, published 18 Jan 2016); WebFetch https://huggingface.co/papers/2606.13194 (WHAR Arena reference, same DOI).",
+    "status": "verified",
+    "note": "DeepConvLSTM. In IEEE style write 'Art. no. 115'."
+  },
+  "hammerla2016deep": {
+    "arxiv": "1604.08880",
+    "resolved_title": "Deep, Convolutional, and Recurrent Models for Human Activity Recognition Using Wearables",
+    "resolved_venue": "IJCAI 2016 (proceedings page header shows start page 1533)",
+    "year": 2016,
+    "authors": ["Nils Y. Hammerla", "Shane Halloran", "Thomas Plötz"],
+    "checked_on": "2026-10-15",
+    "method": "WebSearch x2 (https://www.ijcai.org/Abstract/16/220 page header '... Using Wearables / 1533', authors; https://www.arxiv.org/abs/1604.08880; ML Anthology entry ijcai/2016/hammerla2016ijcai-deep). huggingface.co/papers/1604.08880 returned 404; ijcai.org and mlanthology.org returned 403.",
+    "status": "verified",
+    "note": "The START page 1533 is verified. The END page is NOT: the commonly cited 1533-1540 could not be confirmed, so pages are left out of the .bib. Check ijcai.org/Proceedings/16/Papers/220.pdf by hand before adding 'pp. 1533-1540'."
+  },
+  "gu2022efficiently": {
+    "arxiv": "2111.00396",
+    "resolved_title": "Efficiently Modeling Long Sequences with Structured State Spaces",
+    "resolved_venue": "International Conference on Learning Representations (ICLR) 2022",
+    "year": 2022,
+    "authors": ["Albert Gu", "Karan Goel", "Christopher Ré"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://huggingface.co/papers/2111.00396 (title, authors, abstract); WebFetch https://github.com/state-spaces/s4 (authors' BibTeX: booktitle The International Conference on Learning Representations (ICLR), 2022).",
+    "status": "verified",
+    "note": "S4."
+  },
+  "gu2022parameterization": {
+    "arxiv": "2206.11893",
+    "resolved_title": "On the Parameterization and Initialization of Diagonal State Space Models",
+    "resolved_venue": "Advances in Neural Information Processing Systems 35 (NeurIPS 2022)",
+    "year": 2022,
+    "authors": ["Albert Gu", "Ankit Gupta", "Karan Goel", "Christopher Ré"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://huggingface.co/papers/2206.11893 (title, authors, abstract); WebFetch https://raw.githubusercontent.com/state-spaces/s4/main/models/README.md (authors' citation: Advances in Neural Information Processing Systems, volume 35, 2022).",
+    "status": "verified",
+    "note": "S4D. Pages not verified, so they are left out."
+  },
+  "gu2023mamba": {
+    "arxiv": "2312.00752",
+    "resolved_title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+    "resolved_venue": "arXiv preprint arXiv:2312.00752",
+    "year": 2023,
+    "authors": ["Albert Gu", "Tri Dao"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://huggingface.co/papers/2312.00752 (title, affiliations CMU / Princeton, abstract); WebFetch https://github.com/state-spaces/mamba (authors' BibTeX: Gu, Albert and Dao, Tri; journal arXiv preprint arXiv:2312.00752; 2023).",
+    "status": "verified",
+    "note": "The authors' own README still cites it as an arXiv preprint. No venue claimed."
+  },
+  "breiman2001random": {
+    "doi": "10.1023/A:1010933404324",
+    "resolved_title": "Random Forests",
+    "resolved_venue": "Machine Learning 45(1): 5-32",
+    "year": 2001,
+    "authors": ["Leo Breiman"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1023/A:1010933404324 (-> https://link.springer.com/10.1023/A:1010933404324); WebSearch (Machine Learning 45 (2001), Nr. 1, S. 5-32; ML Anthology mlj/2001/breiman2001mlj-random).",
+    "status": "verified",
+    "note": "WHAR Arena uses Random Forest as its classical baseline but does not cite Breiman in its reference list."
+  },
+  "christ2018tsfresh": {
+    "doi": "10.1016/j.neucom.2018.03.067",
+    "resolved_title": "Time Series FeatuRe Extraction on basis of Scalable Hypothesis tests (tsfresh -- A Python package)",
+    "resolved_venue": "Neurocomputing 307: 72-77",
+    "year": 2018,
+    "authors": ["Maximilian Christ", "Nils Braun", "Julius Neuffer", "Andreas W. Kempa-Liehr"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1016/j.neucom.2018.03.067 (-> https://linkinghub.elsevier.com/retrieve/pii/S0925231218304843); WebFetch https://github.com/blue-yonder/tsfresh (README citation: Neurocomputing 307, p. 72-77, doi 10.1016/j.neucom.2018.03.067); WebFetch https://pypi.org/project/tsfresh/ (full author names); WebFetch https://huggingface.co/papers/2606.13194 (WHAR Arena reference: Neurocomputing 307, pp. 72-77).",
+    "status": "verified",
+    "note": "Cite only if the letter uses tsfresh features or mentions the feature-based baseline."
+  },
+  "seabold2010statsmodels": {
+    "doi": "10.25080/Majora-92bf1922-011",
+    "resolved_title": "Statsmodels: Econometric and Statistical Modeling with Python",
+    "resolved_venue": "Proceedings of the 9th Python in Science Conference (SciPy 2010), Austin, TX, pp. 92-96",
+    "year": 2010,
+    "authors": ["Skipper Seabold", "Josef Perktold"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.25080/Majora-92bf1922-011 (-> https://doi.curvenote.com/10.25080/Majora-92bf1922-011); WebFetch https://raw.githubusercontent.com/statsmodels/statsmodels/main/CITATION.cff (preferred citation: title, 9th Python in Science Conference, 2010); WebSearch (https://proceedings.scipy.org/articles/Majora-92bf1922-011.bib: pages 92 - 96; PDF header '92 PROC. OF THE 9th PYTHON IN SCIENCE CONF. (SCIPY 2010)').",
+    "status": "verified",
+    "note": "The CITATION.cff spells the title in lower case ('statsmodels: Econometric and statistical modeling with python'). The SciPy .bib capitalises it. Either is fine."
+  },
+  "patterson1971recovery": {
+    "doi": "10.1093/biomet/58.3.545",
+    "resolved_title": "Recovery of Inter-Block Information when Block Sizes are Unequal",
+    "resolved_venue": "Biometrika 58(3): 545-554",
+    "year": 1971,
+    "authors": ["H. D. Patterson", "R. Thompson"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1093/biomet/58.3.545 (-> https://academic.oup.com/biomet/article-lookup/doi/10.1093/biomet/58.3.545); WebSearch (Rothamsted repository and others: Biometrika 58(3), pp. 545-554, 1971).",
+    "status": "verified",
+    "note": "Extra (not on the candidate list): the original REML paper. It fits because the variance components are fitted by REML. Optional if space is tight; citing statsmodels alone also works."
+  },
+  "field2007bootstrapping": {
+    "doi": "10.1111/j.1467-9868.2007.00593.x",
+    "resolved_title": "Bootstrapping clustered data",
+    "resolved_venue": "Journal of the Royal Statistical Society Series B 69(3): 369-390",
+    "year": 2007,
+    "authors": ["C. A. Field", "A. H. Welsh"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.1111/j.1467-9868.2007.00593.x (-> https://academic.oup.com/jrsssb/article/69/3/369/7109361, i.e. vol 69 issue 3 p 369); WebSearch x2 (RePEc https://ideas.repec.org/a/bla/jorssb/v69y2007i3p369-390.html; ANU research portal; abstract).",
+    "status": "verified",
+    "note": "Authors' given names were not confirmed beyond the initials C. A. and A. H., so the .bib uses initials."
+  },
+  "wilcoxon1945individual": {
+    "doi": "10.2307/3001968",
+    "resolved_title": "Individual Comparisons by Ranking Methods",
+    "resolved_venue": "Biometrics Bulletin 1(6): 80-83",
+    "year": 1945,
+    "authors": ["Frank Wilcoxon"],
+    "checked_on": "2026-10-15",
+    "method": "WebFetch https://doi.org/api/handles/10.2307/3001968 (-> https://www.jstor.org/stable/10.2307/3001968); WebSearch (several bibliographic sources: Biometrics Bulletin 1(6), 80-83).",
+    "status": "verified",
+    "note": "Extra (not on the candidate list): the Wilcoxon signed-rank test. Optional; Demšar 2006 can stand in for it."
+  },
+  "holm1979simple": {
+    "resolved_title": "A Simple Sequentially Rejective Multiple Test Procedure",
+    "resolved_venue": "Scandinavian Journal of Statistics 6(2): 65-70 (JSTOR stable 4615733)",
+    "year": 1979,
+    "authors": ["Sture Holm"],
+    "checked_on": "2026-10-15",
+    "method": "WebSearch (JSTOR record via usp.br copy: Sture Holm, Scandinavian Journal of Statistics, Vol. 6, No. 2 (1979), pp. 65-70, stable URL http://www.jstor.org/stable/4615733); WebFetch https://doi.org/api/handles/10.2307/4615733 -> HTTP 404 (so this 'DOI' does not exist).",
+    "status": "verified",
+    "note": "NO DOI. An R package lists 10.2307/4615733, but it is not registered (doi.org 404), so cite by the JSTOR stable URL or without a DOI."
+  },
+  "demsar2006statistical": {
+    "resolved_title": "Statistical Comparisons of Classifiers over Multiple Data Sets",
+    "resolved_venue": "Journal of Machine Learning Research 7: 1-30",
+    "year": 2006,
+    "authors": ["Janez Demšar"],
+    "checked_on": "2026-10-15",
+    "method": "WebSearch (JMLR pages https://www.jmlr.org/papers/v7/demsar06a.html and https://jmlr2020.csail.mit.edu/papers/volume7/demsar06a/demsar06a.pdf: JMLR vol. 7, pp. 1-30, 2006). Direct WebFetch of jmlr.org returned HTTP 403.",
+    "status": "verified",
+    "note": "JMLR has no DOI for this paper; cite by the URL."
+  }
+}
