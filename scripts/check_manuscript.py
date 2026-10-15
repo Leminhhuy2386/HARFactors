@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 GATES = ROOT / "results" / "gates"
 TOLERANCE = ("latexmk exit 0; zero undefined references and citations; every \\cite in references.bib; every bib entry "
              "verified with a matching title; every number in summary_values.json or a declared design constant; "
-             "at most 4 pages (IEEE Sensors Letters)")
+             "at most 4 pages, at most 5 figures and an abstract of at most 150 words (IEEE Sensors Letters)")
 
 
 def main() -> None:
@@ -40,18 +40,27 @@ def main() -> None:
     a = subprocess.run([sys.executable, "scripts/audit.py", "--manuscript", "--max-errors", "100"], cwd=ROOT,
                        capture_output=True, text=True)
     problems = [l.strip() for l in a.stdout.splitlines()[1:] if l.strip()]
+    tex = (ROOT / "paper/manuscript.tex").read_text()
+    m = re.search(r"\\begin\{abstract\}(?:\[[^\]]*\])?(.*?)\\end\{abstract\}", tex, re.S)
+    words = len(re.sub(r"\\[a-zA-Z]+|[{}$\\,]", " ", m.group(1)).replace("--", " ").split()) if m else None
+    figures = len(re.findall(r"\\begin\{figure\*?\}", tex))
+    if words is None or words > 150:
+        problems.append(f"abstract has {words} words (limit 150)")
+    if figures > 5:
+        problems.append(f"{figures} figures (limit 5)")
     gate = {"gate": "G7_compile_citations", "stage": "07_paper", "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "check": "the manuscript compiles; citations, references and numbers check out",
             "reference_value": None, "reference_source": "paper/references_verified.json, docs/summary_values.json",
             "observed_value": {"latexmk_exit_code": p.returncode, "pages": int(pages.group(1)) if pages else None,
                                "latex_warnings": warnings[:30], "audit_manuscript_exit": a.returncode,
-                               "audit_problems": problems,
-                               "class": "IEEEtran [journal,9pt] (substitute for IEEE_lsens.cls; G1)"},
+                               "audit_problems": problems, "abstract_words": words, "figures": figures,
+                               "class": re.search(r"\\documentclass(\[[^\]]*\])?\{([^}]+)\}", tex).group(2)},
             "tolerance": TOLERANCE,
-            "verdict": "PASS" if p.returncode == 0 and a.returncode == 0 else "FAIL",
+            "verdict": "PASS" if p.returncode == 0 and a.returncode == 0 and not problems else "FAIL",
             "evidence": ["paper/manuscript.tex", "paper/manuscript.pdf", "paper/manuscript.log", "paper/references.bib",
                          "paper/references_verified.json", "scripts/audit.py", "scripts/check_manuscript.py"],
-            "notes": "The page count is for the drafting class; IEEE_lsens.cls must replace it before submission."}
+            "notes": "IEEE_lsens.cls from the IEEE Template Selector (2023 author templates) since rerun 3; IEEEtran "
+                     "[journal,9pt] before."}
     if reason:
         gate["rerun_reason"] = reason
     out.write_text(json.dumps(gate, indent=1) + "\n")

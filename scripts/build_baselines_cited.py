@@ -31,6 +31,7 @@ EXTRACTED = ROOT / "docs/sources/arena_extracted.json"
 # paper-era parsers that list files unsorted: subject numbering (so per-split membership) can differ by machine
 UNSORTED = {"usc_had", "motion_sense", "dsads", "daphnet"}
 OUT = ROOT / "docs" / "baselines_cited.json"
+SPOT = ROOT / "docs" / "sources" / "figure6_spot_checks.json"  # cells read by eye from the paper (check 13)
 
 
 def main() -> None:
@@ -77,7 +78,7 @@ def main() -> None:
     out = {"note": "Quoted numbers, not measurements of this project. Never write them into results/metrics/.",
            "cells": len(entries), "snapshot_mismatches": mismatches, "entries": entries,
            "covariates": covariates,
-           "spot_checks_against_paper": []}  # filled by hand only from the paper itself, with page and figure
+           "spot_checks_against_paper": json.loads(SPOT.read_text()) if SPOT.exists() else None}
     OUT.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
     print("cells", len(entries), "snapshot mismatches", len(mismatches), "partial", sum(e["protocol_match"] == "partial"
                                                                                        for e in entries))

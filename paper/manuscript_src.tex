@@ -1,44 +1,53 @@
 % Source of paper/manuscript.tex. Every result is a value marker (backslash-val with an id) that scripts/render_manuscript.py replaces with
 % the string docs/summary_values.json prints for it; the manuscript holds no hand-typed result.
-% Drafting class: IEEEtran [journal,9pt] stands in for IEEE_lsens.cls (results/gates/G1_environment_rerun2.json);
-% swap in IEEE_lsens.cls from the IEEE Sensors Letters template before submission and check the 4-page limit.
-\documentclass[journal,9pt]{IEEEtran}
-\usepackage{amsmath,amssymb}
+% Class: IEEE_lsens.cls from the IEEE Template Selector (IEEE Sensors Letters, LSENS-AuthorTemplates.zip, 2023-06-29;
+% sha256 660780da...; docs/sources/pc_downloads note in RUN_REPORT.md). Rules: at most 4 pages including at least one
+% column of references, at most 5 figures, abstract at most 150 words with a graphical abstract.
+\documentclass{IEEE_lsens}
+\usepackage{textcomp}
 \usepackage{graphicx}
+\usepackage[noadjust]{cite}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\interdisplaylinepenalty=2500
+\usepackage[cmintegrals]{newtxmath}
+\usepackage{array}
 \usepackage{booktabs}
-\usepackage{cite}
-\usepackage[hidelinks]{hyperref}
+\usepackage{url}
 
 \begin{document}
+
+\markboth{}{}  % volume, issue and article number are set by the journal
+\IEEELSENSarticlesubject{Sensor Applications}  % subject category: to be confirmed by the authors (EDICS)
 
 \title{How Much of Wearable Activity-Recognition Accuracy Is the Network? A Pre-Registered Variance Decomposition
 Under Person-Disjoint Evaluation}
 
-\author{[Authors and affiliations to be added by the authors]}
+\author{\IEEEauthorblockN{[Authors to be added by the authors]}%
+\IEEEauthorblockA{[Affiliations to be added by the authors]}}
 
-\maketitle
-
-\begin{abstract}
-Wearable inertial activity-recognition systems are compared by their macro-F1 on people unseen in training, but how
-much of that figure reflects the network and how much the people who happen to be tested has not been measured. We
-decompose the variance of stored runs of one fixed person-disjoint protocol (WHAR Arena v1) with a linear mixed model
-whose confirmatory test was pre-registered. On \val{H1.datasets} held-out datasets (\val{H1.runs} runs of four
-networks with three training seeds), the group of test subjects accounts for \val{H1.pi_P}\,\% of the within-dataset
-variance, \val{H1.R} times (97.5\,\% interval \val{H1.R_lo}--\val{H1.R_hi}) the variance of all network-related terms
-together, and the pre-registered criterion was met. The ordering also holds with a metric free of per-split
-ceilings and on the development datasets, where its interval includes 1 for that metric. It reverses across the
-benchmark's 17 heterogeneous published architectures, where the network dominates. For comparable networks, the
-reported accuracy depends more on who is tested than on the network, so comparisons must be paired by split and report
-the spread across test subjects.
+% Graphical abstract: Fig. 1 (figures/fig01_variance_components.pdf); the authors may replace it.
+\IEEEtitleabstractindextext{%
+\begin{abstract}[figures/fig01_variance_components.pdf]
+Wearable activity-recognition systems are compared by macro-F1 on people unseen in training, but how much of that
+figure reflects the network rather than the people tested is unknown. We decompose the variance of stored runs of one
+person-disjoint protocol (WHAR Arena v1) with a linear mixed model and a pre-registered test. On \val{H1.datasets}
+held-out datasets (\val{H1.runs} runs of four networks, three seeds), the test-subject group accounts for
+\val{H1.pi_P}\,\% of the within-dataset variance, \val{H1.R} times (97.5\,\% interval \val{H1.R_lo}--\val{H1.R_hi})
+all network-related variance; the pre-registered criterion was met. The ordering holds with a ceiling-free metric and
+on development datasets, where that metric leaves it unresolved, and it reverses across 17 heterogeneous published
+architectures. For comparable networks, reported accuracy depends more on who is tested than on the network:
+comparisons must be paired by split and report the spread across subjects.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Wearable sensors, inertial sensors, human activity recognition, person-disjoint evaluation, variance components,
-mixed models.
-\end{IEEEkeywords}
+Wearable sensors, inertial sensors, human activity recognition, person-disjoint evaluation, variance components.
+\end{IEEEkeywords}}
+
+\maketitle
 
 \section{Introduction}
-Wearable inertial sensing systems for human activity recognition (HAR) are designed and chosen on one number:
+\IEEEPARstart{W}{earable} inertial sensing systems for human activity recognition (HAR) are designed and chosen on one number:
 macro-F1 on subjects held out from training~\cite{bulling2014tutorial}. Evaluating on unseen people removes the
 optimism of random cross-validation~\cite{hammerla2015lets}, and how people are partitioned between training and test
 data changes the reported accuracy~\cite{lockhart2014limitations}. People move differently~\cite{qian2021latent} and

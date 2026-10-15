@@ -1,0 +1,40 @@
+node hpc02.local, job 86788, Fri Oct 16 05:40:10 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+      1 whar_arena_paper/arxiv_2606.13194.pdf: OK
+      1 utd_mhad_page/UTD-MHAD.txt: OK
+      1 utd_mhad_page/UTD-MHAD.html: OK
+      1 sensors_letters_pages/out-of-scope-topics.txt: OK
+      1 sensors_letters_pages/out-of-scope-topics.html: OK
+      1 sensors_letters_pages/information-for-authors.txt: OK
+      1 sensors_letters_pages/information-for-authors.html: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates.zip: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/MsWord/Viewpoint-MsWord.pdf: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/MsWord/Viewpoint-MsWord.dotx: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/MsWord/Regular_Paper-MsWord.pdf: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/MsWord/Regular_Paper-MsWord.dotx: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/MsWord/Editorial-MsWord.pdf: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/MsWord/Editorial-MsWord.dotx: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/viewpoints_lsens.tex: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/viewpoints_lsens.pdf: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/regular_lsens.tex~: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/regular_lsens.tex: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/regular_lsens.pdf: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/README.txt: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/IEEEtran_HOWTO.pdf: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/IEEE_lsens_HOWTO.pdf: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/IEEE_lsens.cls: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/gianoglio-abstract-3273733.eps: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/gianoglio-abstract-3273733-eps-converted-to.pdf: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/figtbl1.png: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/fig1.eps: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/fig1-eps-converted-to.pdf: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/editorial_lsens.tex: OK
+      1 ieee_lsens_template/LSENS-AuthorTemplates/Latex/editorial_lsens.pdf: OK
+      1 ieee_lsens_template/IEEE_lsens.tar.gz: OK
+      1 ieee_lsens_template/IEEE_lsens/README.txt: OK
+      1 ieee_lsens_template/IEEE_lsens/IEEE_lsens_HOWTO.pdf: OK
+      1 ieee_lsens_template/IEEE_lsens/IEEE_lsens.cls: OK
+      1 ieee_lsens_template/IEEE_lsens/changelog.txt: OK
+      1 ieee_lsens_template/IEEE_lsens/bare_lsens.tex: OK
+36

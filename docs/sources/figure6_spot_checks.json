@@ -1,0 +1,18 @@
+{
+ "note": "Cells of the WHAR Arena paper's Figure 6 read by eye from the paper itself, against docs/sources/arena_extracted.json (agents/08_review.md, check 13). The PDF is not stored in the project (copyright); it is identified by its sha256.",
+ "source": {"citation_key": "burzer2026arena", "arxiv": "2606.13194v1", "url": "https://arxiv.org/pdf/2606.13194",
+            "retrieved": "2026-10-16 05:24-05:26 +07, on the user's PC (session 'IEEE Sensors Letters template and resources')",
+            "sha256": "2fcc4b3d22c9863c6060e7de554f251310649cca5b8e138fe73701e021aa254b",
+            "location": "page 14, Figure 6 (rows: datasets; columns: models; each cell 'mean% +- sd%')"},
+ "read_on": "2026-10-16",
+ "cells": [
+  {"dataset": "sad", "model": "CNN-HAR", "paper_mean": 95.60, "paper_sd": 5.91, "extracted": [95.6, 5.91], "match": true},
+  {"dataset": "sad", "model": "TinyHAR", "paper_mean": 97.67, "paper_sd": 5.22, "extracted": [97.67, 5.22], "match": true},
+  {"dataset": "uci_har", "model": "Random Forest", "paper_mean": 84.69, "paper_sd": null, "extracted": [84.69, 5.26], "match": true,
+   "note": "mean read; the sd digits are not legible at the rendered resolution"},
+  {"dataset": "utd_mhad", "model": "Random Forest", "paper_mean": 51.20, "paper_sd": null, "extracted": [51.2, 11.38], "match": true,
+   "note": "mean read; the sd digits are not legible at the rendered resolution"}
+ ],
+ "also_confirmed": ["Mean row, CNN-HAR: 67.72 % (text p. 13: 'CNN-HAR attains the highest mean test macro-F1 (67.7%)')",
+                    "column order equals arena_extracted.json f1_models"]
+}
