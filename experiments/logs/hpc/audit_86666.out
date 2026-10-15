@@ -1,0 +1,21 @@
+node hpc02.local, job 86666, Thu Oct 15 16:25:09 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+FAIL  --provenance  (19 problems)
+       no provenance: results/metrics/arena/compare.json
+       no provenance: results/metrics/arena/compare.md
+       no provenance: results/metrics/factors/data.json
+       no provenance: results/metrics/factors/summary.md
+       no provenance: results/metrics/heldout/summary.md
+       ... and 14 more
+FAIL  --ledger  (2 problems)
+       START without END: Format of new runs (agents/01_integrity.md): `<run_id>
+       ledger run without directory: experiments/Format of new runs (agents/01_integrity.md): `<run_id>
+PASS  --data
+PASS  --synthetic
+SKIPPED --recompute  (not implemented yet: added by a later stage)
+SKIPPED --reproduce  (not implemented yet: added by a later stage)
+SKIPPED --seeds  (not implemented yet: added by a later stage)
+SKIPPED --authenticity  (not implemented yet: added by a later stage)
+SKIPPED --traceability  (not implemented yet: added by a later stage)
+SKIPPED --manuscript  (not implemented yet: added by a later stage)

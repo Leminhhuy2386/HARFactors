@@ -1,0 +1,207 @@
+{
+ "gate": "G2_data",
+ "stage": "03_data",
+ "timestamp": "2026-10-15T16:23:42",
+ "check": "the stored runs, the quoted table and the caches match their documentation and published values",
+ "reference_value": {
+  "utd_mhad": {
+   "sequences": 861,
+   "subjects": 8,
+   "actions": 27,
+   "source": "Chen, Jafari, Kehtarnavaz, UTD-MHAD dataset paper, IEEE ICIP 2015 (paper/references_verified.json); 864 = 8 x 27 x 4 minus 3 corrupted sequences"
+  },
+  "actrectut_split_sizes": "WHAR Arena authors' result files",
+  "figure6": "authors' snapshot paper-benchmark.json"
+ },
+ "reference_source": "UTD-MHAD dataset paper (ICIP 2015); third_party/whar-arena (19b3019) data/results and apps/web/src/generated/paper-benchmark.json; paper-era whar-datasets configs",
+ "observed_value": {
+  "completeness": {
+   "S1": {
+    "expected": 2460,
+    "missing": [],
+    "invalid": [],
+    "metric_values_read": true
+   },
+   "S2": {
+    "expected": 948,
+    "missing": [],
+    "invalid": [],
+    "metric_values_read": false
+   },
+   "S3": {
+    "expected": 510,
+    "missing": [],
+    "invalid": [],
+    "metric_values_read": true
+   }
+  },
+  "actrectut_vs_authors": {
+   "official_files": 42,
+   "all_match": true,
+   "sizes": [
+    "{\"identifier\": \"group_kfold_0\", \"test_size\": 381, \"train_size\": 334, \"val_size\": 83}",
+    "{\"identifier\": \"group_kfold_1\", \"test_size\": 417, \"train_size\": 305, \"val_size\": 76}"
+   ]
+  },
+  "utd_mhad": {
+   "published": {
+    "sequences": 861,
+    "subjects": 8,
+    "actions": 27,
+    "source": "Chen, Jafari, Kehtarnavaz, UTD-MHAD dataset paper, IEEE ICIP 2015 (paper/references_verified.json); 864 = 8 x 27 x 4 minus 3 corrupted sequences"
+   },
+   "observed": {
+    "sequences": 861,
+    "subjects": 8,
+    "actions": 27
+   },
+   "match": true
+  },
+  "subjects_vs_config": {
+   "rows": {
+    "actrectut_gestures": {
+     "config": 2,
+     "cache": 2,
+     "splits": 2,
+     "expected_splits": 2
+    },
+    "daphnet": {
+     "config": 10,
+     "cache": 10,
+     "splits": 10,
+     "expected_splits": 10
+    },
+    "dsads": {
+     "config": 8,
+     "cache": 8,
+     "splits": 8,
+     "expected_splits": 8
+    },
+    "hapt": {
+     "config": 30,
+     "cache": 30,
+     "splits": 10,
+     "expected_splits": 10
+    },
+    "opportunity": {
+     "config": 4,
+     "cache": 4,
+     "splits": 4,
+     "expected_splits": 4
+    },
+    "sad": {
+     "config": 10,
+     "cache": 10,
+     "splits": 10,
+     "expected_splits": 10
+    },
+    "uca_ehar": {
+     "config": 20,
+     "cache": 20,
+     "splits": 10,
+     "expected_splits": 10
+    },
+    "uci_har": {
+     "config": 30,
+     "cache": 30,
+     "splits": 10,
+     "expected_splits": 10
+    },
+    "unimib_shar": {
+     "config": 30,
+     "cache": 30,
+     "splits": 10,
+     "expected_splits": 10
+    },
+    "up_fall": {
+     "config": 17,
+     "cache": 17,
+     "splits": 10,
+     "expected_splits": 10
+    },
+    "utd_mhad": {
+     "config": 8,
+     "cache": 8,
+     "splits": 8,
+     "expected_splits": 8
+    },
+    "wear": {
+     "config": 24,
+     "cache": 24,
+     "splits": 10,
+     "expected_splits": 10
+    },
+    "wisdm": {
+     "config": 36,
+     "cache": 36,
+     "splits": 10,
+     "expected_splits": 10
+    }
+   },
+   "all_match": true
+  },
+  "figure6_vs_snapshot": {
+   "cells": 510,
+   "snapshot_mismatches": 0,
+   "match": true
+  },
+  "split_records": {
+   "stored_runs_disagree": {
+    "daphnet": [
+     "split-00",
+     "split-01",
+     "split-02",
+     "split-03",
+     "split-04",
+     "split-05",
+     "split-06",
+     "split-07",
+     "split-08",
+     "split-09"
+    ],
+    "motion_sense": [
+     "split-00",
+     "split-01",
+     "split-02",
+     "split-03",
+     "split-04",
+     "split-05",
+     "split-06",
+     "split-07",
+     "split-08",
+     "split-09"
+    ]
+   },
+   "harness_differs_from_stored": {
+    "daphnet": [
+     "split-00",
+     "split-01",
+     "split-02",
+     "split-03",
+     "split-04",
+     "split-05",
+     "split-06",
+     "split-07",
+     "split-08",
+     "split-09"
+    ]
+   },
+   "note": "A dataset whose stored runs disagree on split sizes was run on caches with different subject numbering: its split ids do not name the same test subjects across runs. The pre-registered inclusion rule excludes it from the variance analyses (S1: daphnet; S2: motion_sense)."
+  },
+  "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+  "manifest_files": 5504
+ },
+ "tolerance": "exact: all S1/S2/S3 runs present, complete, protocol hash e8739ef2c5b36c99, metric keys present; ActRecTut split sizes equal the authors' result files; UTD-MHAD cache has 861 sequences, 8 subjects, 27 classes; subjects per cached dataset equal the paper-era config; 0 Figure 6 cells differing from the authors' snapshot by more than 0.006 points",
+ "verdict": "PASS",
+ "evidence": [
+  "data/processed/manifest.json",
+  "data/processed/splits.json",
+  "data/processed/harness_splits.json",
+  "docs/baselines_cited.json",
+  "scripts/validate_data.py",
+  "scripts/export_splits.py",
+  "scripts/build_data_records.py",
+  "scripts/build_baselines_cited.py"
+ ],
+ "notes": "data_manifest_sha256 above is the value every provenance record must carry. Split-size disagreements (daphnet in S1, motion_sense in S2) are documented consequences of unsorted paper-era parsers and are handled by the pre-registered inclusion rule; they do not contradict the datasets' documentation."
+}

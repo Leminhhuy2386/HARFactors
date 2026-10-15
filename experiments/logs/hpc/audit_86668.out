@@ -1,0 +1,6 @@
+node hpc02.local, job 86668, Thu Oct 15 16:26:09 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+PASS  --ledger
+PASS  --data
+PASS  --synthetic

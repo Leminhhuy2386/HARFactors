@@ -1,0 +1,231 @@
+node hpc02.local, job 86664, Thu Oct 15 16:21:09 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+== actrectut_gestures
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:228: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11060). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /__w/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+2026-10-15 16:21:23,277 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:23,277 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:23,278 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:23,278 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:23,278 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:23,278 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:23,279 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:23,279 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:23,279 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:23,279 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:23,279 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:23,280 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:23,280 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:23,287 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:23,294 - whar-datasets - INFO - activity_ids from 0 to 10
+2026-10-15 16:21:23,294 - whar-datasets - INFO - subject_ids from 0 to 1
+== daphnet
+2026-10-15 16:21:23,351 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:23,351 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:23,351 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:23,351 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:23,351 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:23,352 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:23,352 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:23,352 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:23,353 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:23,353 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:23,353 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:23,353 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:23,353 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:23,368 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:23,373 - whar-datasets - INFO - activity_ids from 0 to 1
+2026-10-15 16:21:23,373 - whar-datasets - INFO - subject_ids from 0 to 9
+== dsads
+2026-10-15 16:21:24,515 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:24,515 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:24,516 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:24,516 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:24,516 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:24,516 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:24,516 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:24,516 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:24,517 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:24,517 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:24,517 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:24,518 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:24,518 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:24,541 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:24,546 - whar-datasets - INFO - activity_ids from 0 to 18
+2026-10-15 16:21:24,546 - whar-datasets - INFO - subject_ids from 0 to 7
+== hapt
+2026-10-15 16:21:25,532 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:25,532 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:25,532 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,532 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:25,532 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:25,533 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,533 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:25,533 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:25,534 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,534 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:25,534 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:25,535 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,535 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:25,549 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:25,555 - whar-datasets - INFO - activity_ids from 0 to 11
+2026-10-15 16:21:25,555 - whar-datasets - INFO - subject_ids from 0 to 29
+== opportunity
+2026-10-15 16:21:25,693 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:25,693 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:25,694 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,694 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:25,694 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:25,695 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,695 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:25,695 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:25,695 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,695 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:25,695 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:25,696 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,696 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:25,710 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:25,715 - whar-datasets - INFO - activity_ids from 0 to 3
+2026-10-15 16:21:25,715 - whar-datasets - INFO - subject_ids from 0 to 3
+== sad
+2026-10-15 16:21:25,806 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:25,806 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:25,807 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,807 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:25,807 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:25,808 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,808 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:25,808 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:25,808 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,808 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:25,808 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:25,809 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,809 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:25,822 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:25,827 - whar-datasets - INFO - activity_ids from 0 to 6
+2026-10-15 16:21:25,827 - whar-datasets - INFO - subject_ids from 0 to 9
+== uca_ehar
+2026-10-15 16:21:25,950 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:25,950 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:25,951 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,951 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:25,951 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:25,952 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,952 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:25,952 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:25,952 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,952 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:25,952 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:25,953 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:25,953 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:25,969 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:25,973 - whar-datasets - INFO - activity_ids from 0 to 11
+2026-10-15 16:21:25,973 - whar-datasets - INFO - subject_ids from 0 to 19
+== uci_har
+2026-10-15 16:21:26,147 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:26,147 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:26,147 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,148 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:26,148 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:26,148 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,148 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:26,148 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:26,149 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,149 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:26,149 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:26,150 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,150 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:26,161 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:26,166 - whar-datasets - INFO - activity_ids from 0 to 5
+2026-10-15 16:21:26,166 - whar-datasets - INFO - subject_ids from 0 to 29
+== unimib_shar
+2026-10-15 16:21:26,300 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:26,300 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:26,301 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,301 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:26,301 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:26,301 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,301 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:26,301 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:26,302 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,302 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:26,302 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:26,303 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,303 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:26,315 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:26,320 - whar-datasets - INFO - activity_ids from 0 to 16
+2026-10-15 16:21:26,320 - whar-datasets - INFO - subject_ids from 0 to 29
+== up_fall
+2026-10-15 16:21:26,440 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:26,440 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:26,441 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,441 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:26,441 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:26,442 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,442 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:26,442 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:26,442 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,443 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:26,443 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:26,443 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,443 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:26,455 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:26,459 - whar-datasets - INFO - activity_ids from 0 to 10
+2026-10-15 16:21:26,459 - whar-datasets - INFO - subject_ids from 0 to 16
+== utd_mhad
+2026-10-15 16:21:26,715 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:26,715 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:26,715 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,715 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:26,715 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:26,716 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,716 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:26,716 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:26,717 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,717 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:26,717 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:26,717 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,717 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:26,722 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:26,726 - whar-datasets - INFO - activity_ids from 0 to 26
+2026-10-15 16:21:26,726 - whar-datasets - INFO - subject_ids from 0 to 7
+== wear
+2026-10-15 16:21:26,936 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:26,936 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:26,936 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,936 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:26,936 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:26,937 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,937 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:26,937 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:26,937 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,938 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:26,938 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:26,938 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:26,938 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:26,960 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:26,964 - whar-datasets - INFO - activity_ids from 0 to 17
+2026-10-15 16:21:26,964 - whar-datasets - INFO - subject_ids from 0 to 23
+== wisdm
+2026-10-15 16:21:27,160 - whar-datasets - INFO - Running DownloadingStep
+2026-10-15 16:21:27,160 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-15 16:21:27,161 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:27,161 - whar-datasets - INFO - Running ExtractingStep
+2026-10-15 16:21:27,161 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-15 16:21:27,161 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:27,161 - whar-datasets - INFO - Running ParsingStep
+2026-10-15 16:21:27,161 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-15 16:21:27,162 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:27,162 - whar-datasets - INFO - Running WindowingStep
+2026-10-15 16:21:27,162 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-15 16:21:27,163 - whar-datasets - INFO - Hash is up to date
+2026-10-15 16:21:27,163 - whar-datasets - INFO - Loading windowing
+2026-10-15 16:21:27,190 - whar-datasets - INFO - Selecting activities
+2026-10-15 16:21:27,194 - whar-datasets - INFO - activity_ids from 0 to 5
+2026-10-15 16:21:27,194 - whar-datasets - INFO - subject_ids from 0 to 35
+wrote data/processed/harness_splits.json datasets 13
+manifest files 5504 data_manifest_sha256 10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220
+splits datasets 18 sets {'S1': 2460, 'S2': 948, 'S3': 510}

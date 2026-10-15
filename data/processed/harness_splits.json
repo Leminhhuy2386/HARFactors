@@ -1,0 +1,1269 @@
+{
+ "produced_by": "scripts/export_splits.py",
+ "timestamp": "2026-10-15T16:21:18",
+ "datasets_dir": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era",
+ "whar_code": {
+  "whar-datasets": "144e006",
+  "whar-models": "9b65004",
+  "whar-arena": "19b3019"
+ },
+ "grouping_key": "subject_id (LKSOSplitter: subjects sorted, subject i -> fold i mod min(k, #subjects))",
+ "datasets": {
+  "actrectut_gestures": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/actrectut_gestures",
+   "subjects": 2,
+   "windows": 798,
+   "sessions": 572,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0
+     ],
+     "train_size": 334,
+     "val_size": 83,
+     "test_size": 381
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1
+     ],
+     "train_size": 305,
+     "val_size": 76,
+     "test_size": 417
+    }
+   }
+  },
+  "daphnet": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/daphnet",
+   "subjects": 10,
+   "windows": 11160,
+   "sessions": 509,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0
+     ],
+     "train_size": 7965,
+     "val_size": 1991,
+     "test_size": 1204
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1
+     ],
+     "train_size": 8231,
+     "val_size": 2057,
+     "test_size": 872
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2
+     ],
+     "train_size": 7968,
+     "val_size": 1992,
+     "test_size": 1200
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3
+     ],
+     "train_size": 7826,
+     "val_size": 1956,
+     "test_size": 1378
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4
+     ],
+     "train_size": 7973,
+     "val_size": 1993,
+     "test_size": 1194
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5
+     ],
+     "train_size": 7895,
+     "val_size": 1973,
+     "test_size": 1292
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6
+     ],
+     "train_size": 8125,
+     "val_size": 2031,
+     "test_size": 1004
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7
+     ],
+     "train_size": 8558,
+     "val_size": 2139,
+     "test_size": 463
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8
+     ],
+     "train_size": 8073,
+     "val_size": 2018,
+     "test_size": 1069
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9
+     ],
+     "train_size": 7741,
+     "val_size": 1935,
+     "test_size": 1484
+    }
+   }
+  },
+  "dsads": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/dsads",
+   "subjects": 8,
+   "windows": 30096,
+   "sessions": 152,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0
+     ],
+     "train_size": 21068,
+     "val_size": 5266,
+     "test_size": 3762
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1
+     ],
+     "train_size": 21068,
+     "val_size": 5266,
+     "test_size": 3762
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2
+     ],
+     "train_size": 21068,
+     "val_size": 5266,
+     "test_size": 3762
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3
+     ],
+     "train_size": 21068,
+     "val_size": 5266,
+     "test_size": 3762
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4
+     ],
+     "train_size": 21068,
+     "val_size": 5266,
+     "test_size": 3762
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5
+     ],
+     "train_size": 21068,
+     "val_size": 5266,
+     "test_size": 3762
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6
+     ],
+     "train_size": 21068,
+     "val_size": 5266,
+     "test_size": 3762
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7
+     ],
+     "train_size": 21068,
+     "val_size": 5266,
+     "test_size": 3762
+    }
+   }
+  },
+  "hapt": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/hapt",
+   "subjects": 30,
+   "windows": 9056,
+   "sessions": 1214,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0,
+      10,
+      20
+     ],
+     "train_size": 6495,
+     "val_size": 1623,
+     "test_size": 938
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1,
+      11,
+      21
+     ],
+     "train_size": 6577,
+     "val_size": 1644,
+     "test_size": 835
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2,
+      12,
+      22
+     ],
+     "train_size": 6520,
+     "val_size": 1630,
+     "test_size": 906
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3,
+      13,
+      23
+     ],
+     "train_size": 6524,
+     "val_size": 1631,
+     "test_size": 901
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4,
+      14,
+      24
+     ],
+     "train_size": 6512,
+     "val_size": 1628,
+     "test_size": 916
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5,
+      15,
+      25
+     ],
+     "train_size": 6496,
+     "val_size": 1624,
+     "test_size": 936
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6,
+      16,
+      26
+     ],
+     "train_size": 6501,
+     "val_size": 1625,
+     "test_size": 930
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7,
+      17,
+      27
+     ],
+     "train_size": 6518,
+     "val_size": 1629,
+     "test_size": 909
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8,
+      18,
+      28
+     ],
+     "train_size": 6550,
+     "val_size": 1637,
+     "test_size": 869
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9,
+      19,
+      29
+     ],
+     "train_size": 6512,
+     "val_size": 1628,
+     "test_size": 916
+    }
+   }
+  },
+  "opportunity": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/opportunity",
+   "subjects": 4,
+   "windows": 10550,
+   "sessions": 3653,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0
+     ],
+     "train_size": 6160,
+     "val_size": 1540,
+     "test_size": 2850
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1
+     ],
+     "train_size": 6290,
+     "val_size": 1572,
+     "test_size": 2688
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2
+     ],
+     "train_size": 6009,
+     "val_size": 1502,
+     "test_size": 3039
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3
+     ],
+     "train_size": 6862,
+     "val_size": 1715,
+     "test_size": 1973
+    }
+   }
+  },
+  "sad": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/sad",
+   "subjects": 10,
+   "windows": 8260,
+   "sessions": 70,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9
+     ],
+     "train_size": 5948,
+     "val_size": 1486,
+     "test_size": 826
+    }
+   }
+  },
+  "uca_ehar": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/uca_ehar",
+   "subjects": 20,
+   "windows": 16554,
+   "sessions": 2340,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0,
+      10
+     ],
+     "train_size": 11752,
+     "val_size": 2938,
+     "test_size": 1864
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1,
+      11
+     ],
+     "train_size": 11278,
+     "val_size": 2819,
+     "test_size": 2457
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2,
+      12
+     ],
+     "train_size": 11704,
+     "val_size": 2925,
+     "test_size": 1925
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3,
+      13
+     ],
+     "train_size": 12122,
+     "val_size": 3030,
+     "test_size": 1402
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4,
+      14
+     ],
+     "train_size": 11882,
+     "val_size": 2970,
+     "test_size": 1702
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5,
+      15
+     ],
+     "train_size": 11756,
+     "val_size": 2939,
+     "test_size": 1859
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6,
+      16
+     ],
+     "train_size": 11954,
+     "val_size": 2988,
+     "test_size": 1612
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7,
+      17
+     ],
+     "train_size": 12342,
+     "val_size": 3085,
+     "test_size": 1127
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8,
+      18
+     ],
+     "train_size": 12152,
+     "val_size": 3037,
+     "test_size": 1365
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9,
+      19
+     ],
+     "train_size": 12251,
+     "val_size": 3062,
+     "test_size": 1241
+    }
+   }
+  },
+  "uci_har": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/uci_har",
+   "subjects": 30,
+   "windows": 8188,
+   "sessions": 400,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0,
+      10,
+      20
+     ],
+     "train_size": 5856,
+     "val_size": 1464,
+     "test_size": 868
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1,
+      11,
+      21
+     ],
+     "train_size": 5914,
+     "val_size": 1478,
+     "test_size": 796
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2,
+      12,
+      22
+     ],
+     "train_size": 5901,
+     "val_size": 1475,
+     "test_size": 812
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3,
+      13,
+      23
+     ],
+     "train_size": 5967,
+     "val_size": 1491,
+     "test_size": 730
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4,
+      14,
+      24
+     ],
+     "train_size": 5933,
+     "val_size": 1483,
+     "test_size": 772
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5,
+      15,
+      25
+     ],
+     "train_size": 5903,
+     "val_size": 1475,
+     "test_size": 810
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6,
+      16,
+      26
+     ],
+     "train_size": 5888,
+     "val_size": 1472,
+     "test_size": 828
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7,
+      17,
+      27
+     ],
+     "train_size": 5874,
+     "val_size": 1468,
+     "test_size": 846
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8,
+      18,
+      28
+     ],
+     "train_size": 5871,
+     "val_size": 1467,
+     "test_size": 850
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9,
+      19,
+      29
+     ],
+     "train_size": 5850,
+     "val_size": 1462,
+     "test_size": 876
+    }
+   }
+  },
+  "unimib_shar": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/unimib_shar",
+   "subjects": 30,
+   "windows": 7195,
+   "sessions": 1980,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0,
+      10,
+      20
+     ],
+     "train_size": 5226,
+     "val_size": 1306,
+     "test_size": 663
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1,
+      11,
+      21
+     ],
+     "train_size": 5264,
+     "val_size": 1316,
+     "test_size": 615
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2,
+      12,
+      22
+     ],
+     "train_size": 5252,
+     "val_size": 1313,
+     "test_size": 630
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3,
+      13,
+      23
+     ],
+     "train_size": 5200,
+     "val_size": 1299,
+     "test_size": 696
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4,
+      14,
+      24
+     ],
+     "train_size": 5190,
+     "val_size": 1297,
+     "test_size": 708
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5,
+      15,
+      25
+     ],
+     "train_size": 5121,
+     "val_size": 1280,
+     "test_size": 794
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6,
+      16,
+      26
+     ],
+     "train_size": 5134,
+     "val_size": 1283,
+     "test_size": 778
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7,
+      17,
+      27
+     ],
+     "train_size": 5148,
+     "val_size": 1287,
+     "test_size": 760
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8,
+      18,
+      28
+     ],
+     "train_size": 5090,
+     "val_size": 1272,
+     "test_size": 833
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9,
+      19,
+      29
+     ],
+     "train_size": 5182,
+     "val_size": 1295,
+     "test_size": 718
+    }
+   }
+  },
+  "up_fall": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/up_fall",
+   "subjects": 17,
+   "windows": 8974,
+   "sessions": 559,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0,
+      10
+     ],
+     "train_size": 6294,
+     "val_size": 1573,
+     "test_size": 1107
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1,
+      11
+     ],
+     "train_size": 6319,
+     "val_size": 1579,
+     "test_size": 1076
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2,
+      12
+     ],
+     "train_size": 6317,
+     "val_size": 1579,
+     "test_size": 1078
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3,
+      13
+     ],
+     "train_size": 6324,
+     "val_size": 1580,
+     "test_size": 1070
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4,
+      14
+     ],
+     "train_size": 6308,
+     "val_size": 1576,
+     "test_size": 1090
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5,
+      15
+     ],
+     "train_size": 6451,
+     "val_size": 1612,
+     "test_size": 911
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6,
+      16
+     ],
+     "train_size": 6307,
+     "val_size": 1576,
+     "test_size": 1091
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7
+     ],
+     "train_size": 6800,
+     "val_size": 1699,
+     "test_size": 475
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8
+     ],
+     "train_size": 6747,
+     "val_size": 1686,
+     "test_size": 541
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9
+     ],
+     "train_size": 6752,
+     "val_size": 1687,
+     "test_size": 535
+    }
+   }
+  },
+  "utd_mhad": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/utd_mhad",
+   "subjects": 8,
+   "windows": 783,
+   "sessions": 861,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0
+     ],
+     "train_size": 536,
+     "val_size": 134,
+     "test_size": 113
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1
+     ],
+     "train_size": 587,
+     "val_size": 146,
+     "test_size": 50
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2
+     ],
+     "train_size": 554,
+     "val_size": 138,
+     "test_size": 91
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3
+     ],
+     "train_size": 572,
+     "val_size": 143,
+     "test_size": 68
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4
+     ],
+     "train_size": 549,
+     "val_size": 137,
+     "test_size": 97
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5
+     ],
+     "train_size": 516,
+     "val_size": 129,
+     "test_size": 138
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6
+     ],
+     "train_size": 547,
+     "val_size": 136,
+     "test_size": 100
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7
+     ],
+     "train_size": 526,
+     "val_size": 131,
+     "test_size": 126
+    }
+   }
+  },
+  "wear": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/wear",
+   "subjects": 24,
+   "windows": 26739,
+   "sessions": 437,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0,
+      10,
+      20
+     ],
+     "train_size": 18797,
+     "val_size": 4699,
+     "test_size": 3243
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1,
+      11,
+      21
+     ],
+     "train_size": 18767,
+     "val_size": 4691,
+     "test_size": 3281
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2,
+      12,
+      22
+     ],
+     "train_size": 18604,
+     "val_size": 4650,
+     "test_size": 3485
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3,
+      13,
+      23
+     ],
+     "train_size": 18706,
+     "val_size": 4676,
+     "test_size": 3357
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4,
+      14
+     ],
+     "train_size": 19626,
+     "val_size": 4906,
+     "test_size": 2207
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5,
+      15
+     ],
+     "train_size": 19659,
+     "val_size": 4914,
+     "test_size": 2166
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6,
+      16
+     ],
+     "train_size": 19556,
+     "val_size": 4889,
+     "test_size": 2294
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7,
+      17
+     ],
+     "train_size": 19584,
+     "val_size": 4895,
+     "test_size": 2260
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8,
+      18
+     ],
+     "train_size": 19618,
+     "val_size": 4904,
+     "test_size": 2217
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9,
+      19
+     ],
+     "train_size": 19608,
+     "val_size": 4902,
+     "test_size": 2229
+    }
+   }
+  },
+  "wisdm": {
+   "cache": "/work/huy.leminh/code/Dr.Huy/HAR/datasets_paper_era/wisdm",
+   "subjects": 36,
+   "windows": 34097,
+   "sessions": 179,
+   "num_folds_cfg": 10,
+   "seed": 0,
+   "splits": {
+    "split-00": {
+     "identifier": "group_kfold_0",
+     "test_subjects": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "train_size": 24781,
+     "val_size": 6195,
+     "test_size": 3121
+    },
+    "split-01": {
+     "identifier": "group_kfold_1",
+     "test_subjects": [
+      1,
+      11,
+      21,
+      31
+     ],
+     "train_size": 24120,
+     "val_size": 6030,
+     "test_size": 3947
+    },
+    "split-02": {
+     "identifier": "group_kfold_2",
+     "test_subjects": [
+      2,
+      12,
+      22,
+      32
+     ],
+     "train_size": 23528,
+     "val_size": 5881,
+     "test_size": 4688
+    },
+    "split-03": {
+     "identifier": "group_kfold_3",
+     "test_subjects": [
+      3,
+      13,
+      23,
+      33
+     ],
+     "train_size": 24101,
+     "val_size": 6025,
+     "test_size": 3971
+    },
+    "split-04": {
+     "identifier": "group_kfold_4",
+     "test_subjects": [
+      4,
+      14,
+      24,
+      34
+     ],
+     "train_size": 23576,
+     "val_size": 5894,
+     "test_size": 4627
+    },
+    "split-05": {
+     "identifier": "group_kfold_5",
+     "test_subjects": [
+      5,
+      15,
+      25,
+      35
+     ],
+     "train_size": 24488,
+     "val_size": 6122,
+     "test_size": 3487
+    },
+    "split-06": {
+     "identifier": "group_kfold_6",
+     "test_subjects": [
+      6,
+      16,
+      26
+     ],
+     "train_size": 25236,
+     "val_size": 6309,
+     "test_size": 2552
+    },
+    "split-07": {
+     "identifier": "group_kfold_7",
+     "test_subjects": [
+      7,
+      17,
+      27
+     ],
+     "train_size": 25512,
+     "val_size": 6378,
+     "test_size": 2207
+    },
+    "split-08": {
+     "identifier": "group_kfold_8",
+     "test_subjects": [
+      8,
+      18,
+      28
+     ],
+     "train_size": 25288,
+     "val_size": 6321,
+     "test_size": 2488
+    },
+    "split-09": {
+     "identifier": "group_kfold_9",
+     "test_subjects": [
+      9,
+      19,
+      29
+     ],
+     "train_size": 24871,
+     "val_size": 6217,
+     "test_size": 3009
+    }
+   }
+  }
+ },
+ "duration_sec": 9.0
+}

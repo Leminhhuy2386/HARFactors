@@ -1,0 +1,6 @@
+node hpc02.local, job 86663, Thu Oct 15 16:20:09 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+manifest files 5504 data_manifest_sha256 10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220
+splits datasets 18 sets {'S1': 2460, 'S2': 948, 'S3': 510}
+cells 510 snapshot mismatches 0 partial 68

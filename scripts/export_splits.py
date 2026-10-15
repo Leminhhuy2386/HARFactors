@@ -35,7 +35,7 @@ def export(dataset_id: str) -> dict:
         test_sessions = window_df.loc[split.test_indices, "session_id"].unique()
         splits[f"split-{i:02d}"] = {
             "identifier": split.identifier,
-            "test_subjects": sorted(int(subject_of_session[s]) for s in set(test_sessions)),
+            "test_subjects": sorted({int(subject_of_session[s]) for s in test_sessions}),
             "train_size": len(split.train_indices), "val_size": len(split.val_indices),
             "test_size": len(split.test_indices),
         }

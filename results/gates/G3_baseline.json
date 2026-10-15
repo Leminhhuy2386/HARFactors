@@ -1,0 +1,339 @@
+{
+ "gate": "G3_baseline",
+ "stage": "03_data",
+ "timestamp": "2026-10-15T16:23:45",
+ "mode": "quoted+anchor",
+ "check": "Random Forest re-run with this code state reproduces its Figure 6 value on the 4 re-run datasets",
+ "reference_value": {
+  "utd_mhad": 51.2,
+  "uci_har": 84.69,
+  "unimib_shar": 44.49,
+  "actrectut_gestures": 41.89
+ },
+ "reference_source": "WHAR Arena paper, Figure 6 (docs/baselines_cited.json; mean cross-checked against the authors' snapshot)",
+ "observed_value": {
+  "anchor_random_forest": [
+   {
+    "dataset": "utd_mhad",
+    "figure6": 51.2,
+    "rerun_mean": 51.204,
+    "abs_diff": 0.004,
+    "rel_diff": 0.0001,
+    "within_tolerance": true
+   },
+   {
+    "dataset": "uci_har",
+    "figure6": 84.69,
+    "rerun_mean": 84.686,
+    "abs_diff": -0.004,
+    "rel_diff": 0.0,
+    "within_tolerance": true
+   },
+   {
+    "dataset": "unimib_shar",
+    "figure6": 44.49,
+    "rerun_mean": 44.49,
+    "abs_diff": -0.0,
+    "rel_diff": 0.0,
+    "within_tolerance": true
+   },
+   {
+    "dataset": "actrectut_gestures",
+    "figure6": 41.89,
+    "rerun_mean": 41.888,
+    "abs_diff": -0.002,
+    "rel_diff": 0.0,
+    "within_tolerance": true
+   }
+  ],
+  "protocol_match_counts": {
+   "exact": 442,
+   "partial": 68,
+   "unknown": 0
+  },
+  "supplementary_17_models_vs_figure6": [
+   {
+    "dataset": "utd_mhad",
+    "models": 17,
+    "spearman": 0.975,
+    "mean_abs_diff": 1.001
+   },
+   {
+    "dataset": "uci_har",
+    "models": 17,
+    "spearman": 0.953,
+    "mean_abs_diff": 0.469
+   },
+   {
+    "dataset": "unimib_shar",
+    "models": 17,
+    "spearman": 0.983,
+    "mean_abs_diff": 1.174
+   },
+   {
+    "dataset": "actrectut_gestures",
+    "models": 17,
+    "spearman": 0.897,
+    "mean_abs_diff": 2.551
+   }
+  ],
+  "supplementary_authors_actrectut_files": {
+   "pairs": 34,
+   "equal_to_1e-3": 13,
+   "max_abs_diff": 36.6331,
+   "rows": [
+    {
+     "model": "attend_discriminate",
+     "split": "split-00",
+     "authors": 45.6508,
+     "rerun": 33.5833,
+     "diff": -12.0675
+    },
+    {
+     "model": "attend_discriminate",
+     "split": "split-01",
+     "authors": 64.7672,
+     "rerun": 59.0485,
+     "diff": -5.7186
+    },
+    {
+     "model": "cnn_har",
+     "split": "split-00",
+     "authors": 59.1175,
+     "rerun": 59.1176,
+     "diff": 0.0
+    },
+    {
+     "model": "cnn_har",
+     "split": "split-01",
+     "authors": 45.3857,
+     "rerun": 45.3857,
+     "diff": 0.0
+    },
+    {
+     "model": "dana",
+     "split": "split-00",
+     "authors": 46.377,
+     "rerun": 45.7061,
+     "diff": -0.6709
+    },
+    {
+     "model": "dana",
+     "split": "split-01",
+     "authors": 50.9306,
+     "rerun": 53.803,
+     "diff": 2.8725
+    },
+    {
+     "model": "deepconv_lstm",
+     "split": "split-00",
+     "authors": 37.3859,
+     "rerun": 32.7007,
+     "diff": -4.6852
+    },
+    {
+     "model": "deepconv_lstm",
+     "split": "split-01",
+     "authors": 48.9275,
+     "rerun": 55.2472,
+     "diff": 6.3197
+    },
+    {
+     "model": "deepconv_lstm_attention",
+     "split": "split-00",
+     "authors": 46.6303,
+     "rerun": 38.4426,
+     "diff": -8.1877
+    },
+    {
+     "model": "deepconv_lstm_attention",
+     "split": "split-01",
+     "authors": 39.7023,
+     "rerun": 51.9482,
+     "diff": 12.2459
+    },
+    {
+     "model": "deepconv_lstm_iswc",
+     "split": "split-00",
+     "authors": 36.705,
+     "rerun": 40.5718,
+     "diff": 3.8668
+    },
+    {
+     "model": "deepconv_lstm_iswc",
+     "split": "split-01",
+     "authors": 48.7509,
+     "rerun": 41.2402,
+     "diff": -7.5107
+    },
+    {
+     "model": "dynamic_whar",
+     "split": "split-00",
+     "authors": 37.8966,
+     "rerun": 28.3778,
+     "diff": -9.5188
+    },
+    {
+     "model": "dynamic_whar",
+     "split": "split-01",
+     "authors": 48.0133,
+     "rerun": 51.5192,
+     "diff": 3.5059
+    },
+    {
+     "model": "knn",
+     "split": "split-00",
+     "authors": 30.3045,
+     "rerun": 30.3045,
+     "diff": -0.0
+    },
+    {
+     "model": "knn",
+     "split": "split-01",
+     "authors": 26.9839,
+     "rerun": 26.9839,
+     "diff": 0.0
+    },
+    {
+     "model": "lstms_ensemble",
+     "split": "split-00",
+     "authors": 28.4955,
+     "rerun": 37.2973,
+     "diff": 8.8018
+    },
+    {
+     "model": "lstms_ensemble",
+     "split": "split-01",
+     "authors": 46.0546,
+     "rerun": 33.9875,
+     "diff": -12.0671
+    },
+    {
+     "model": "mlp_har",
+     "split": "split-00",
+     "authors": 43.3755,
+     "rerun": 43.3755,
+     "diff": 0.0
+    },
+    {
+     "model": "mlp_har",
+     "split": "split-01",
+     "authors": 44.1902,
+     "rerun": 44.1902,
+     "diff": 0.0
+    },
+    {
+     "model": "mlp_mixer",
+     "split": "split-00",
+     "authors": 34.5585,
+     "rerun": 34.5585,
+     "diff": -0.0
+    },
+    {
+     "model": "mlp_mixer",
+     "split": "split-01",
+     "authors": 40.975,
+     "rerun": 40.975,
+     "diff": 0.0
+    },
+    {
+     "model": "random_forest",
+     "split": "split-00",
+     "authors": 29.0727,
+     "rerun": 29.0727,
+     "diff": 0.0
+    },
+    {
+     "model": "random_forest",
+     "split": "split-01",
+     "authors": 51.9268,
+     "rerun": 54.7038,
+     "diff": 2.777
+    },
+    {
+     "model": "sa_har",
+     "split": "split-00",
+     "authors": 3.0108,
+     "rerun": 39.6438,
+     "diff": 36.6331
+    },
+    {
+     "model": "sa_har",
+     "split": "split-01",
+     "authors": 2.0351,
+     "rerun": 21.7915,
+     "diff": 19.7564
+    },
+    {
+     "model": "svm",
+     "split": "split-00",
+     "authors": 29.4262,
+     "rerun": 29.4262,
+     "diff": 0.0
+    },
+    {
+     "model": "svm",
+     "split": "split-01",
+     "authors": 24.8989,
+     "rerun": 24.8989,
+     "diff": 0.0
+    },
+    {
+     "model": "tinierhar",
+     "split": "split-00",
+     "authors": 45.2223,
+     "rerun": 46.5883,
+     "diff": 1.366
+    },
+    {
+     "model": "tinierhar",
+     "split": "split-01",
+     "authors": 55.7239,
+     "rerun": 57.2428,
+     "diff": 1.5189
+    },
+    {
+     "model": "tinyhar",
+     "split": "split-00",
+     "authors": 45.182,
+     "rerun": 52.0792,
+     "diff": 6.8972
+    },
+    {
+     "model": "tinyhar",
+     "split": "split-01",
+     "authors": 55.3154,
+     "rerun": 53.1219,
+     "diff": -2.1935
+    },
+    {
+     "model": "triple_cross_domain_attention",
+     "split": "split-00",
+     "authors": 61.2961,
+     "rerun": 61.296,
+     "diff": -0.0
+    },
+    {
+     "model": "triple_cross_domain_attention",
+     "split": "split-01",
+     "authors": 61.5375,
+     "rerun": 61.5375,
+     "diff": -0.0
+    }
+   ]
+  }
+ },
+ "tolerance": "anchor: |re-run mean - Figure 6| <= 10 % of the Figure 6 value, for Random Forest on each of the 4 datasets",
+ "verdict": "PASS",
+ "test_read": {
+  "scope": "none of the sealed set S2",
+  "justification": "the anchor reads S3 and the quoted table only; S2 stays sealed until G4"
+ },
+ "evidence": [
+  "docs/baselines_cited.json",
+  "experiments/external_har_paper_era/whar_arena_v1/random_forest",
+  "third_party/whar-arena/data/results/whar_arena_v1",
+  "scripts/check_baseline_anchor.py"
+ ],
+ "notes": "Quoted cells with protocol_match 'partial' (usc_had, motion_sense, dsads, daphnet) are compared by dataset means only. Our 10 population models have no external value; they share this evaluation code (whar_arena.training._fit_torch_split and _classification_metrics) with the re-runs."
+}

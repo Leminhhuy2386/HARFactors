@@ -1,0 +1,3465 @@
+{
+ "grouping_key": "subject_id: leave-subjects-out (LKSOSplitter, k = 10 subject groups); the validation set is 20 % of the training subjects' windows drawn with cfg.seed = 0",
+ "defined_by": "third_party/whar-datasets (144e006) LKSOSplitter via src/training/run_whar.prepare_dataset",
+ "sets": {
+  "S1": {
+   "description": "development population",
+   "runs": 2460
+  },
+  "S2": {
+   "description": "held-out (confirmatory)",
+   "runs": 948
+  },
+  "S3": {
+   "description": "independent architectures",
+   "runs": 510
+  }
+ },
+ "datasets": {
+  "actrectut_gestures": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 91,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 334,
+       "val_size": 83,
+       "test_size": 381
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0
+      ],
+      "train_size": 334,
+      "val_size": 83,
+      "test_size": 381
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 91,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 305,
+       "val_size": 76,
+       "test_size": 417
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1
+      ],
+      "train_size": 305,
+      "val_size": 76,
+      "test_size": 417
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 2,
+   "cache_on_this_machine": true
+  },
+  "daphnet": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 7741,
+       "val_size": 1935,
+       "test_size": 1484
+      },
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 7895,
+       "val_size": 1973,
+       "test_size": 1292
+      },
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 8231,
+       "val_size": 2057,
+       "test_size": 872
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0
+      ],
+      "train_size": 7965,
+      "val_size": 1991,
+      "test_size": 1204
+     },
+     "harness_matches_stored": false
+    },
+    "split-01": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 7895,
+       "val_size": 1973,
+       "test_size": 1292
+      },
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 7968,
+       "val_size": 1992,
+       "test_size": 1200
+      },
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 8073,
+       "val_size": 2018,
+       "test_size": 1069
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1
+      ],
+      "train_size": 8231,
+      "val_size": 2057,
+      "test_size": 872
+     },
+     "harness_matches_stored": false
+    },
+    "split-02": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 7965,
+       "val_size": 1991,
+       "test_size": 1204
+      },
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 7973,
+       "val_size": 1993,
+       "test_size": 1194
+      },
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 8125,
+       "val_size": 2031,
+       "test_size": 1004
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2
+      ],
+      "train_size": 7968,
+      "val_size": 1992,
+      "test_size": 1200
+     },
+     "harness_matches_stored": false
+    },
+    "split-03": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 7826,
+       "val_size": 1956,
+       "test_size": 1378
+      },
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 7968,
+       "val_size": 1992,
+       "test_size": 1200
+      },
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 7973,
+       "val_size": 1993,
+       "test_size": 1194
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3
+      ],
+      "train_size": 7826,
+      "val_size": 1956,
+      "test_size": 1378
+     },
+     "harness_matches_stored": false
+    },
+    "split-04": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 8125,
+       "val_size": 2031,
+       "test_size": 1004
+      },
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 8231,
+       "val_size": 2057,
+       "test_size": 872
+      },
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 8558,
+       "val_size": 2139,
+       "test_size": 463
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4
+      ],
+      "train_size": 7973,
+      "val_size": 1993,
+      "test_size": 1194
+     },
+     "harness_matches_stored": false
+    },
+    "split-05": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 7741,
+       "val_size": 1935,
+       "test_size": 1484
+      },
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 7826,
+       "val_size": 1956,
+       "test_size": 1378
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5
+      ],
+      "train_size": 7895,
+      "val_size": 1973,
+      "test_size": 1292
+     },
+     "harness_matches_stored": false
+    },
+    "split-06": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 7965,
+       "val_size": 1991,
+       "test_size": 1204
+      },
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 8073,
+       "val_size": 2018,
+       "test_size": 1069
+      },
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 8125,
+       "val_size": 2031,
+       "test_size": 1004
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6
+      ],
+      "train_size": 8125,
+      "val_size": 2031,
+      "test_size": 1004
+     },
+     "harness_matches_stored": false
+    },
+    "split-07": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 7895,
+       "val_size": 1973,
+       "test_size": 1292
+      },
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 7968,
+       "val_size": 1992,
+       "test_size": 1200
+      },
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 7973,
+       "val_size": 1993,
+       "test_size": 1194
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7
+      ],
+      "train_size": 8558,
+      "val_size": 2139,
+      "test_size": 463
+     },
+     "harness_matches_stored": false
+    },
+    "split-08": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 7965,
+       "val_size": 1991,
+       "test_size": 1204
+      },
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 8073,
+       "val_size": 2018,
+       "test_size": 1069
+      },
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 8231,
+       "val_size": 2057,
+       "test_size": 872
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8
+      ],
+      "train_size": 8073,
+      "val_size": 2018,
+      "test_size": 1069
+     },
+     "harness_matches_stored": false
+    },
+    "split-09": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 7826,
+       "val_size": 1956,
+       "test_size": 1378
+      },
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 8558,
+       "val_size": 2139,
+       "test_size": 463
+      }
+     ],
+     "stored_runs_agree": false,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9
+      ],
+      "train_size": 7741,
+      "val_size": 1935,
+      "test_size": 1484
+     },
+     "harness_matches_stored": false
+    }
+   },
+   "subjects": 10,
+   "cache_on_this_machine": true
+  },
+  "dsads": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 21068,
+       "val_size": 5266,
+       "test_size": 3762
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0
+      ],
+      "train_size": 21068,
+      "val_size": 5266,
+      "test_size": 3762
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 21068,
+       "val_size": 5266,
+       "test_size": 3762
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1
+      ],
+      "train_size": 21068,
+      "val_size": 5266,
+      "test_size": 3762
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 21068,
+       "val_size": 5266,
+       "test_size": 3762
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2
+      ],
+      "train_size": 21068,
+      "val_size": 5266,
+      "test_size": 3762
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 21068,
+       "val_size": 5266,
+       "test_size": 3762
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3
+      ],
+      "train_size": 21068,
+      "val_size": 5266,
+      "test_size": 3762
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 21068,
+       "val_size": 5266,
+       "test_size": 3762
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4
+      ],
+      "train_size": 21068,
+      "val_size": 5266,
+      "test_size": 3762
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 21068,
+       "val_size": 5266,
+       "test_size": 3762
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5
+      ],
+      "train_size": 21068,
+      "val_size": 5266,
+      "test_size": 3762
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 21068,
+       "val_size": 5266,
+       "test_size": 3762
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6
+      ],
+      "train_size": 21068,
+      "val_size": 5266,
+      "test_size": 3762
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 21068,
+       "val_size": 5266,
+       "test_size": 3762
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7
+      ],
+      "train_size": 21068,
+      "val_size": 5266,
+      "test_size": 3762
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 8,
+   "cache_on_this_machine": true
+  },
+  "hapt": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 6495,
+       "val_size": 1623,
+       "test_size": 938
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0,
+       10,
+       20
+      ],
+      "train_size": 6495,
+      "val_size": 1623,
+      "test_size": 938
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 6577,
+       "val_size": 1644,
+       "test_size": 835
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1,
+       11,
+       21
+      ],
+      "train_size": 6577,
+      "val_size": 1644,
+      "test_size": 835
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 6520,
+       "val_size": 1630,
+       "test_size": 906
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2,
+       12,
+       22
+      ],
+      "train_size": 6520,
+      "val_size": 1630,
+      "test_size": 906
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 6524,
+       "val_size": 1631,
+       "test_size": 901
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3,
+       13,
+       23
+      ],
+      "train_size": 6524,
+      "val_size": 1631,
+      "test_size": 901
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 6512,
+       "val_size": 1628,
+       "test_size": 916
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4,
+       14,
+       24
+      ],
+      "train_size": 6512,
+      "val_size": 1628,
+      "test_size": 916
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 6496,
+       "val_size": 1624,
+       "test_size": 936
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5,
+       15,
+       25
+      ],
+      "train_size": 6496,
+      "val_size": 1624,
+      "test_size": 936
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 6501,
+       "val_size": 1625,
+       "test_size": 930
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6,
+       16,
+       26
+      ],
+      "train_size": 6501,
+      "val_size": 1625,
+      "test_size": 930
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 6518,
+       "val_size": 1629,
+       "test_size": 909
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7,
+       17,
+       27
+      ],
+      "train_size": 6518,
+      "val_size": 1629,
+      "test_size": 909
+     },
+     "harness_matches_stored": true
+    },
+    "split-08": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 6550,
+       "val_size": 1637,
+       "test_size": 869
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8,
+       18,
+       28
+      ],
+      "train_size": 6550,
+      "val_size": 1637,
+      "test_size": 869
+     },
+     "harness_matches_stored": true
+    },
+    "split-09": {
+     "stored_runs": 32,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 6512,
+       "val_size": 1628,
+       "test_size": 916
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9,
+       19,
+       29
+      ],
+      "train_size": 6512,
+      "val_size": 1628,
+      "test_size": 916
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 30,
+   "cache_on_this_machine": true
+  },
+  "motion_sense": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 12782,
+       "val_size": 3195,
+       "test_size": 2323
+      },
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 12904,
+       "val_size": 3226,
+       "test_size": 2170
+      }
+     ],
+     "stored_runs_agree": false
+    },
+    "split-01": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 12663,
+       "val_size": 3165,
+       "test_size": 2472
+      },
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 12727,
+       "val_size": 3181,
+       "test_size": 2392
+      }
+     ],
+     "stored_runs_agree": false
+    },
+    "split-02": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 12840,
+       "val_size": 3210,
+       "test_size": 2250
+      },
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 12842,
+       "val_size": 3210,
+       "test_size": 2248
+      }
+     ],
+     "stored_runs_agree": false
+    },
+    "split-03": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 12817,
+       "val_size": 3204,
+       "test_size": 2279
+      },
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 12860,
+       "val_size": 3215,
+       "test_size": 2225
+      }
+     ],
+     "stored_runs_agree": false
+    },
+    "split-04": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 13304,
+       "val_size": 3326,
+       "test_size": 1670
+      },
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 13456,
+       "val_size": 3364,
+       "test_size": 1480
+      }
+     ],
+     "stored_runs_agree": false
+    },
+    "split-05": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 13366,
+       "val_size": 3341,
+       "test_size": 1593
+      },
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 13465,
+       "val_size": 3366,
+       "test_size": 1469
+      }
+     ],
+     "stored_runs_agree": false
+    },
+    "split-06": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 13416,
+       "val_size": 3353,
+       "test_size": 1531
+      },
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 13532,
+       "val_size": 3383,
+       "test_size": 1385
+      }
+     ],
+     "stored_runs_agree": false
+    },
+    "split-07": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 13360,
+       "val_size": 3340,
+       "test_size": 1600
+      },
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 13512,
+       "val_size": 3377,
+       "test_size": 1411
+      }
+     ],
+     "stored_runs_agree": false
+    },
+    "split-08": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 13436,
+       "val_size": 3358,
+       "test_size": 1506
+      },
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 13484,
+       "val_size": 3370,
+       "test_size": 1446
+      }
+     ],
+     "stored_runs_agree": false
+    },
+    "split-09": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 13286,
+       "val_size": 3321,
+       "test_size": 1693
+      },
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 13475,
+       "val_size": 3368,
+       "test_size": 1457
+      }
+     ],
+     "stored_runs_agree": false
+    }
+   },
+   "subjects": null,
+   "cache_on_this_machine": false
+  },
+  "opportunity": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 63,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 6160,
+       "val_size": 1540,
+       "test_size": 2850
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0
+      ],
+      "train_size": 6160,
+      "val_size": 1540,
+      "test_size": 2850
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 63,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 6290,
+       "val_size": 1572,
+       "test_size": 2688
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1
+      ],
+      "train_size": 6290,
+      "val_size": 1572,
+      "test_size": 2688
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 62,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 6009,
+       "val_size": 1502,
+       "test_size": 3039
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2
+      ],
+      "train_size": 6009,
+      "val_size": 1502,
+      "test_size": 3039
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 62,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 6862,
+       "val_size": 1715,
+       "test_size": 1973
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3
+      ],
+      "train_size": 6862,
+      "val_size": 1715,
+      "test_size": 1973
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 4,
+   "cache_on_this_machine": true
+  },
+  "pamap2": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 8912,
+       "val_size": 2228,
+       "test_size": 1646
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-01": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 8842,
+       "val_size": 2210,
+       "test_size": 1734
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-02": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 9313,
+       "val_size": 2328,
+       "test_size": 1145
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-03": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 9011,
+       "val_size": 2252,
+       "test_size": 1523
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-04": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 8793,
+       "val_size": 2198,
+       "test_size": 1795
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-05": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 8912,
+       "val_size": 2228,
+       "test_size": 1646
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-06": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 9005,
+       "val_size": 2251,
+       "test_size": 1530
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-07": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 8848,
+       "val_size": 2212,
+       "test_size": 1726
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-08": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 10196,
+       "val_size": 2549,
+       "test_size": 41
+      }
+     ],
+     "stored_runs_agree": true
+    }
+   },
+   "subjects": null,
+   "cache_on_this_machine": false
+  },
+  "sad": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 59,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 59,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 59,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 59,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 58,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 59,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 59,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 59,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    },
+    "split-08": {
+     "stored_runs": 59,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    },
+    "split-09": {
+     "stored_runs": 59,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 5948,
+       "val_size": 1486,
+       "test_size": 826
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9
+      ],
+      "train_size": 5948,
+      "val_size": 1486,
+      "test_size": 826
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 10,
+   "cache_on_this_machine": true
+  },
+  "uca_ehar": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 11752,
+       "val_size": 2938,
+       "test_size": 1864
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0,
+       10
+      ],
+      "train_size": 11752,
+      "val_size": 2938,
+      "test_size": 1864
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 11278,
+       "val_size": 2819,
+       "test_size": 2457
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1,
+       11
+      ],
+      "train_size": 11278,
+      "val_size": 2819,
+      "test_size": 2457
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 11704,
+       "val_size": 2925,
+       "test_size": 1925
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2,
+       12
+      ],
+      "train_size": 11704,
+      "val_size": 2925,
+      "test_size": 1925
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 12122,
+       "val_size": 3030,
+       "test_size": 1402
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3,
+       13
+      ],
+      "train_size": 12122,
+      "val_size": 3030,
+      "test_size": 1402
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 11882,
+       "val_size": 2970,
+       "test_size": 1702
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4,
+       14
+      ],
+      "train_size": 11882,
+      "val_size": 2970,
+      "test_size": 1702
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 11756,
+       "val_size": 2939,
+       "test_size": 1859
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5,
+       15
+      ],
+      "train_size": 11756,
+      "val_size": 2939,
+      "test_size": 1859
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 11954,
+       "val_size": 2988,
+       "test_size": 1612
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6,
+       16
+      ],
+      "train_size": 11954,
+      "val_size": 2988,
+      "test_size": 1612
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 12342,
+       "val_size": 3085,
+       "test_size": 1127
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7,
+       17
+      ],
+      "train_size": 12342,
+      "val_size": 3085,
+      "test_size": 1127
+     },
+     "harness_matches_stored": true
+    },
+    "split-08": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 12152,
+       "val_size": 3037,
+       "test_size": 1365
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8,
+       18
+      ],
+      "train_size": 12152,
+      "val_size": 3037,
+      "test_size": 1365
+     },
+     "harness_matches_stored": true
+    },
+    "split-09": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 12251,
+       "val_size": 3062,
+       "test_size": 1241
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9,
+       19
+      ],
+      "train_size": 12251,
+      "val_size": 3062,
+      "test_size": 1241
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 20,
+   "cache_on_this_machine": true
+  },
+  "uci_har": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 62,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 5856,
+       "val_size": 1464,
+       "test_size": 868
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0,
+       10,
+       20
+      ],
+      "train_size": 5856,
+      "val_size": 1464,
+      "test_size": 868
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 62,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 5914,
+       "val_size": 1478,
+       "test_size": 796
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1,
+       11,
+       21
+      ],
+      "train_size": 5914,
+      "val_size": 1478,
+      "test_size": 796
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 61,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 5901,
+       "val_size": 1475,
+       "test_size": 812
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2,
+       12,
+       22
+      ],
+      "train_size": 5901,
+      "val_size": 1475,
+      "test_size": 812
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 61,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 5967,
+       "val_size": 1491,
+       "test_size": 730
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3,
+       13,
+       23
+      ],
+      "train_size": 5967,
+      "val_size": 1491,
+      "test_size": 730
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 61,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 5933,
+       "val_size": 1483,
+       "test_size": 772
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4,
+       14,
+       24
+      ],
+      "train_size": 5933,
+      "val_size": 1483,
+      "test_size": 772
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 62,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 5903,
+       "val_size": 1475,
+       "test_size": 810
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5,
+       15,
+       25
+      ],
+      "train_size": 5903,
+      "val_size": 1475,
+      "test_size": 810
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 61,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 5888,
+       "val_size": 1472,
+       "test_size": 828
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6,
+       16,
+       26
+      ],
+      "train_size": 5888,
+      "val_size": 1472,
+      "test_size": 828
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 60,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 5874,
+       "val_size": 1468,
+       "test_size": 846
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7,
+       17,
+       27
+      ],
+      "train_size": 5874,
+      "val_size": 1468,
+      "test_size": 846
+     },
+     "harness_matches_stored": true
+    },
+    "split-08": {
+     "stored_runs": 60,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 5871,
+       "val_size": 1467,
+       "test_size": 850
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8,
+       18,
+       28
+      ],
+      "train_size": 5871,
+      "val_size": 1467,
+      "test_size": 850
+     },
+     "harness_matches_stored": true
+    },
+    "split-09": {
+     "stored_runs": 60,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 5850,
+       "val_size": 1462,
+       "test_size": 876
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9,
+       19,
+       29
+      ],
+      "train_size": 5850,
+      "val_size": 1462,
+      "test_size": 876
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 30,
+   "cache_on_this_machine": true
+  },
+  "uma_fall": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 4639,
+       "val_size": 1159,
+       "test_size": 442
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-01": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 4451,
+       "val_size": 1112,
+       "test_size": 677
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-02": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 4733,
+       "val_size": 1183,
+       "test_size": 324
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-03": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 4493,
+       "val_size": 1123,
+       "test_size": 624
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-04": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 4466,
+       "val_size": 1116,
+       "test_size": 658
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-05": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 4602,
+       "val_size": 1150,
+       "test_size": 488
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-06": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 4644,
+       "val_size": 1160,
+       "test_size": 436
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-07": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 3628,
+       "val_size": 906,
+       "test_size": 1706
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-08": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 4421,
+       "val_size": 1105,
+       "test_size": 714
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-09": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 4856,
+       "val_size": 1213,
+       "test_size": 171
+      }
+     ],
+     "stored_runs_agree": true
+    }
+   },
+   "subjects": null,
+   "cache_on_this_machine": false
+  },
+  "unimib_shar": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 69,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 5226,
+       "val_size": 1306,
+       "test_size": 663
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0,
+       10,
+       20
+      ],
+      "train_size": 5226,
+      "val_size": 1306,
+      "test_size": 663
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 69,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 5264,
+       "val_size": 1316,
+       "test_size": 615
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1,
+       11,
+       21
+      ],
+      "train_size": 5264,
+      "val_size": 1316,
+      "test_size": 615
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 69,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 5252,
+       "val_size": 1313,
+       "test_size": 630
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2,
+       12,
+       22
+      ],
+      "train_size": 5252,
+      "val_size": 1313,
+      "test_size": 630
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 68,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 5200,
+       "val_size": 1299,
+       "test_size": 696
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3,
+       13,
+       23
+      ],
+      "train_size": 5200,
+      "val_size": 1299,
+      "test_size": 696
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 68,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 5190,
+       "val_size": 1297,
+       "test_size": 708
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4,
+       14,
+       24
+      ],
+      "train_size": 5190,
+      "val_size": 1297,
+      "test_size": 708
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 69,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 5121,
+       "val_size": 1280,
+       "test_size": 794
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5,
+       15,
+       25
+      ],
+      "train_size": 5121,
+      "val_size": 1280,
+      "test_size": 794
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 68,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 5134,
+       "val_size": 1283,
+       "test_size": 778
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6,
+       16,
+       26
+      ],
+      "train_size": 5134,
+      "val_size": 1283,
+      "test_size": 778
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 67,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 5148,
+       "val_size": 1287,
+       "test_size": 760
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7,
+       17,
+       27
+      ],
+      "train_size": 5148,
+      "val_size": 1287,
+      "test_size": 760
+     },
+     "harness_matches_stored": true
+    },
+    "split-08": {
+     "stored_runs": 67,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 5090,
+       "val_size": 1272,
+       "test_size": 833
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8,
+       18,
+       28
+      ],
+      "train_size": 5090,
+      "val_size": 1272,
+      "test_size": 833
+     },
+     "harness_matches_stored": true
+    },
+    "split-09": {
+     "stored_runs": 66,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 5182,
+       "val_size": 1295,
+       "test_size": 718
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9,
+       19,
+       29
+      ],
+      "train_size": 5182,
+      "val_size": 1295,
+      "test_size": 718
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 30,
+   "cache_on_this_machine": true
+  },
+  "up_fall": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 6294,
+       "val_size": 1573,
+       "test_size": 1107
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0,
+       10
+      ],
+      "train_size": 6294,
+      "val_size": 1573,
+      "test_size": 1107
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 6319,
+       "val_size": 1579,
+       "test_size": 1076
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1,
+       11
+      ],
+      "train_size": 6319,
+      "val_size": 1579,
+      "test_size": 1076
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 6317,
+       "val_size": 1579,
+       "test_size": 1078
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2,
+       12
+      ],
+      "train_size": 6317,
+      "val_size": 1579,
+      "test_size": 1078
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 6324,
+       "val_size": 1580,
+       "test_size": 1070
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3,
+       13
+      ],
+      "train_size": 6324,
+      "val_size": 1580,
+      "test_size": 1070
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 6308,
+       "val_size": 1576,
+       "test_size": 1090
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4,
+       14
+      ],
+      "train_size": 6308,
+      "val_size": 1576,
+      "test_size": 1090
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 6451,
+       "val_size": 1612,
+       "test_size": 911
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5,
+       15
+      ],
+      "train_size": 6451,
+      "val_size": 1612,
+      "test_size": 911
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 6307,
+       "val_size": 1576,
+       "test_size": 1091
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6,
+       16
+      ],
+      "train_size": 6307,
+      "val_size": 1576,
+      "test_size": 1091
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 6800,
+       "val_size": 1699,
+       "test_size": 475
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7
+      ],
+      "train_size": 6800,
+      "val_size": 1699,
+      "test_size": 475
+     },
+     "harness_matches_stored": true
+    },
+    "split-08": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 6747,
+       "val_size": 1686,
+       "test_size": 541
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8
+      ],
+      "train_size": 6747,
+      "val_size": 1686,
+      "test_size": 541
+     },
+     "harness_matches_stored": true
+    },
+    "split-09": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 6752,
+       "val_size": 1687,
+       "test_size": 535
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9
+      ],
+      "train_size": 6752,
+      "val_size": 1687,
+      "test_size": 535
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 17,
+   "cache_on_this_machine": true
+  },
+  "usc_had": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 11620,
+       "val_size": 2904,
+       "test_size": 2862
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-01": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 11710,
+       "val_size": 2927,
+       "test_size": 2749
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-02": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 11967,
+       "val_size": 2991,
+       "test_size": 2428
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-03": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 12093,
+       "val_size": 3023,
+       "test_size": 2270
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-04": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 13237,
+       "val_size": 3309,
+       "test_size": 840
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-05": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 13143,
+       "val_size": 3285,
+       "test_size": 958
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-06": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 13271,
+       "val_size": 3317,
+       "test_size": 798
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-07": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 12889,
+       "val_size": 3222,
+       "test_size": 1275
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-08": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 12596,
+       "val_size": 3148,
+       "test_size": 1642
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-09": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 12658,
+       "val_size": 3164,
+       "test_size": 1564
+      }
+     ],
+     "stored_runs_agree": true
+    }
+   },
+   "subjects": null,
+   "cache_on_this_machine": false
+  },
+  "utd_mhad": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 121,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 536,
+       "val_size": 134,
+       "test_size": 113
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0
+      ],
+      "train_size": 536,
+      "val_size": 134,
+      "test_size": 113
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 121,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 587,
+       "val_size": 146,
+       "test_size": 50
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1
+      ],
+      "train_size": 587,
+      "val_size": 146,
+      "test_size": 50
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 121,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 554,
+       "val_size": 138,
+       "test_size": 91
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2
+      ],
+      "train_size": 554,
+      "val_size": 138,
+      "test_size": 91
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 120,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 572,
+       "val_size": 143,
+       "test_size": 68
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3
+      ],
+      "train_size": 572,
+      "val_size": 143,
+      "test_size": 68
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 118,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 549,
+       "val_size": 137,
+       "test_size": 97
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4
+      ],
+      "train_size": 549,
+      "val_size": 137,
+      "test_size": 97
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 118,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 516,
+       "val_size": 129,
+       "test_size": 138
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5
+      ],
+      "train_size": 516,
+      "val_size": 129,
+      "test_size": 138
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 117,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 547,
+       "val_size": 136,
+       "test_size": 100
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6
+      ],
+      "train_size": 547,
+      "val_size": 136,
+      "test_size": 100
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 117,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 526,
+       "val_size": 131,
+       "test_size": 126
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7
+      ],
+      "train_size": 526,
+      "val_size": 131,
+      "test_size": 126
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 8,
+   "cache_on_this_machine": true
+  },
+  "w_har": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 2940,
+       "val_size": 734,
+       "test_size": 1418
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-01": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 3343,
+       "val_size": 835,
+       "test_size": 914
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-02": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 3917,
+       "val_size": 979,
+       "test_size": 196
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-03": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 3583,
+       "val_size": 895,
+       "test_size": 614
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-04": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 3818,
+       "val_size": 954,
+       "test_size": 320
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-05": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 3726,
+       "val_size": 931,
+       "test_size": 435
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-06": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 3705,
+       "val_size": 926,
+       "test_size": 461
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-07": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 3956,
+       "val_size": 988,
+       "test_size": 148
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-08": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 3874,
+       "val_size": 968,
+       "test_size": 250
+      }
+     ],
+     "stored_runs_agree": true
+    },
+    "split-09": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 3805,
+       "val_size": 951,
+       "test_size": 336
+      }
+     ],
+     "stored_runs_agree": true
+    }
+   },
+   "subjects": null,
+   "cache_on_this_machine": false
+  },
+  "wear": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 18797,
+       "val_size": 4699,
+       "test_size": 3243
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0,
+       10,
+       20
+      ],
+      "train_size": 18797,
+      "val_size": 4699,
+      "test_size": 3243
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 18767,
+       "val_size": 4691,
+       "test_size": 3281
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1,
+       11,
+       21
+      ],
+      "train_size": 18767,
+      "val_size": 4691,
+      "test_size": 3281
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 18604,
+       "val_size": 4650,
+       "test_size": 3485
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2,
+       12,
+       22
+      ],
+      "train_size": 18604,
+      "val_size": 4650,
+      "test_size": 3485
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 18706,
+       "val_size": 4676,
+       "test_size": 3357
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3,
+       13,
+       23
+      ],
+      "train_size": 18706,
+      "val_size": 4676,
+      "test_size": 3357
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 19626,
+       "val_size": 4906,
+       "test_size": 2207
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4,
+       14
+      ],
+      "train_size": 19626,
+      "val_size": 4906,
+      "test_size": 2207
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 19659,
+       "val_size": 4914,
+       "test_size": 2166
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5,
+       15
+      ],
+      "train_size": 19659,
+      "val_size": 4914,
+      "test_size": 2166
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 19556,
+       "val_size": 4889,
+       "test_size": 2294
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6,
+       16
+      ],
+      "train_size": 19556,
+      "val_size": 4889,
+      "test_size": 2294
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 19584,
+       "val_size": 4895,
+       "test_size": 2260
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7,
+       17
+      ],
+      "train_size": 19584,
+      "val_size": 4895,
+      "test_size": 2260
+     },
+     "harness_matches_stored": true
+    },
+    "split-08": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 19618,
+       "val_size": 4904,
+       "test_size": 2217
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8,
+       18
+      ],
+      "train_size": 19618,
+      "val_size": 4904,
+      "test_size": 2217
+     },
+     "harness_matches_stored": true
+    },
+    "split-09": {
+     "stored_runs": 12,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 19608,
+       "val_size": 4902,
+       "test_size": 2229
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9,
+       19
+      ],
+      "train_size": 19608,
+      "val_size": 4902,
+      "test_size": 2229
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 24,
+   "cache_on_this_machine": true
+  },
+  "wisdm": {
+   "splits": {
+    "split-00": {
+     "stored_runs": 36,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_0",
+       "train_size": 24781,
+       "val_size": 6195,
+       "test_size": 3121
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_0",
+      "test_subjects": [
+       0,
+       10,
+       20,
+       30
+      ],
+      "train_size": 24781,
+      "val_size": 6195,
+      "test_size": 3121
+     },
+     "harness_matches_stored": true
+    },
+    "split-01": {
+     "stored_runs": 36,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_1",
+       "train_size": 24120,
+       "val_size": 6030,
+       "test_size": 3947
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_1",
+      "test_subjects": [
+       1,
+       11,
+       21,
+       31
+      ],
+      "train_size": 24120,
+      "val_size": 6030,
+      "test_size": 3947
+     },
+     "harness_matches_stored": true
+    },
+    "split-02": {
+     "stored_runs": 35,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_2",
+       "train_size": 23528,
+       "val_size": 5881,
+       "test_size": 4688
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_2",
+      "test_subjects": [
+       2,
+       12,
+       22,
+       32
+      ],
+      "train_size": 23528,
+      "val_size": 5881,
+      "test_size": 4688
+     },
+     "harness_matches_stored": true
+    },
+    "split-03": {
+     "stored_runs": 35,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_3",
+       "train_size": 24101,
+       "val_size": 6025,
+       "test_size": 3971
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_3",
+      "test_subjects": [
+       3,
+       13,
+       23,
+       33
+      ],
+      "train_size": 24101,
+      "val_size": 6025,
+      "test_size": 3971
+     },
+     "harness_matches_stored": true
+    },
+    "split-04": {
+     "stored_runs": 35,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_4",
+       "train_size": 23576,
+       "val_size": 5894,
+       "test_size": 4627
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_4",
+      "test_subjects": [
+       4,
+       14,
+       24,
+       34
+      ],
+      "train_size": 23576,
+      "val_size": 5894,
+      "test_size": 4627
+     },
+     "harness_matches_stored": true
+    },
+    "split-05": {
+     "stored_runs": 35,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_5",
+       "train_size": 24488,
+       "val_size": 6122,
+       "test_size": 3487
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_5",
+      "test_subjects": [
+       5,
+       15,
+       25,
+       35
+      ],
+      "train_size": 24488,
+      "val_size": 6122,
+      "test_size": 3487
+     },
+     "harness_matches_stored": true
+    },
+    "split-06": {
+     "stored_runs": 35,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_6",
+       "train_size": 25236,
+       "val_size": 6309,
+       "test_size": 2552
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_6",
+      "test_subjects": [
+       6,
+       16,
+       26
+      ],
+      "train_size": 25236,
+      "val_size": 6309,
+      "test_size": 2552
+     },
+     "harness_matches_stored": true
+    },
+    "split-07": {
+     "stored_runs": 35,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_7",
+       "train_size": 25512,
+       "val_size": 6378,
+       "test_size": 2207
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_7",
+      "test_subjects": [
+       7,
+       17,
+       27
+      ],
+      "train_size": 25512,
+      "val_size": 6378,
+      "test_size": 2207
+     },
+     "harness_matches_stored": true
+    },
+    "split-08": {
+     "stored_runs": 35,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_8",
+       "train_size": 25288,
+       "val_size": 6321,
+       "test_size": 2488
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_8",
+      "test_subjects": [
+       8,
+       18,
+       28
+      ],
+      "train_size": 25288,
+      "val_size": 6321,
+      "test_size": 2488
+     },
+     "harness_matches_stored": true
+    },
+    "split-09": {
+     "stored_runs": 35,
+     "stored_sizes": [
+      {
+       "identifier": "group_kfold_9",
+       "train_size": 24871,
+       "val_size": 6217,
+       "test_size": 3009
+      }
+     ],
+     "stored_runs_agree": true,
+     "harness": {
+      "identifier": "group_kfold_9",
+      "test_subjects": [
+       9,
+       19,
+       29
+      ],
+      "train_size": 24871,
+      "val_size": 6217,
+      "test_size": 3009
+     },
+     "harness_matches_stored": true
+    }
+   },
+   "subjects": 36,
+   "cache_on_this_machine": true
+  }
+ }
+}

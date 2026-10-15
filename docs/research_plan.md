@@ -60,6 +60,50 @@ These are exploratory findings (Edge_SSM, 2026-10-12). The one confirmatory test
    (exploratory) and the pre-registered mixed-effects (REML) model (§ Pre-registration).
 4. Print-ready figures (vector PDF, ≥ 8 pt).
 
+## Target journal (fixed 2026-10-15)
+
+- **Journal:** IEEE Sensors Letters, a regular letter.
+- **Length:** at most 4 pages, which must include at least one column of references. The source is the journal's
+  Information for Authors (ieee-sensorsletters.org); papers longer than this go to IEEE Sensors Journal.
+- **Class:** `IEEE_lsens.cls` (IEEE / Overleaf template `bare_lsens.tex`, 9 pt, two columns).
+  - The class could not be downloaded from the cluster: the TLS-inspecting firewall blocks Overleaf, IEEE and arXiv.
+  - Drafting uses `IEEEtran.cls [journal,9pt]`, a substitute recorded in `results/gates/G1_environment_rerun2.json`.
+  - Before submission, swap in `IEEE_lsens.cls` and check the page count again.
+- **Budget:** about 3 pages of body, 3 figures (variance shares, data factors, component contrasts) and 1 table.
+- **Structure:** title, abstract, Index Terms, Introduction, Methods, Results, Discussion and limitations,
+  Conclusion, References.
+- **Reference style:** IEEE numeric. Every entry is verified (`paper/references_verified.json`).
+
+## Data records and leakage prevention (stage 03, `agents/03_data.md` Step 3.5)
+
+The analysed data are stored run records. Their windows, splits and normalisation were produced by the paper-era
+harness. How each leakage rule is satisfied:
+
+1. **Split by unit.** Splits are by subject (LKSOSplitter, k = 10 subject groups).
+   - `scripts/export_splits.py` regenerates the splits of the 13 cached datasets and asserts that no test subject has
+     a window in train or validation.
+   - Each split's test subjects are in `data/processed/harness_splits.json`: 1 to 4 subjects per split.
+2. **Split before anything else touches the data.**
+   - Windows are cut per session, and whole subjects are then assigned to folds.
+   - The z-score is fitted only after splitting.
+3. **Preprocessing is fitted on train only.**
+   - The z-score is fitted on the training split's windows (`PostProcessingPipeline(cfg, ..., split.train_indices)`).
+   - Class weights for the loss come from the training frequency.
+   - The validation windows are 20 % of the training subjects' windows, drawn per window. This is a property of the
+     protocol, inherited and kept (`docs/protocol.md`). It affects early stopping only; test subjects are never seen.
+4. **Features available at prediction time.** The inputs are raw 3-s windows of the sensor channels. No input is
+   derived from labels, from whole-session quantities, or from future samples beyond the window.
+5. **Validation is carved from train, never from test**, as the protocol prescribes.
+6. **No test-time statistics.**
+   - Evaluation runs the model in eval mode, with the training-split normalisation.
+   - The models' LayerNorm acts per sample.
+7. **At the level of this letter's analysis:**
+   - the outcome is each run's test macro-F1, and the factors are design labels (dataset, split, model, seed);
+   - the confirmatory set S2 is sealed until gate G4 (`docs/preregistration.md`).
+   - **Inclusion.** By the pre-registered inclusion rule, a dataset whose stored runs disagree on split sizes is
+     excluded, because its split ids do not name the same test subjects across runs (S1: daphnet; S2: motion_sense;
+     `results/gates/G2_data.json`).
+
 ## Reviewer risks
 
 | Risk | Answer |
