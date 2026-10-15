@@ -13,9 +13,9 @@ verified. What blocks submission is listed under § Open items.
 | G2 data | PASS | G2_data.json | S1/S2/S3 complete; ActRecTut sizes equal the authors' files; UTD-MHAD 861 sequences |
 | G3 baseline | PASS | G3_baseline.json | The Random Forest re-run equals Figure 6 to rounding |
 | G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
-| G5 authenticity | PASS | G5_results_authenticity_rerun2.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls. The first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
-| G6 traceability | PASS | G6_traceability_rerun1.json | 239 values re-derive; the tampering control was caught |
-| G7 manuscript | PASS | G7_compile_citations_rerun3.json | Official IEEE_lsens.cls (2023): 3 pages, 2 figures, abstract 140 words, 0 problems |
+| G5 authenticity | PASS | G5_results_authenticity_rerun3.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; label-shuffle control collapsed (6/6). The first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
+| G6 traceability | PASS | G6_traceability_rerun2.json | 247 values re-derive; the tampering control was caught |
+| G7 manuscript | PASS | G7_compile_citations_rerun4.json | Official IEEE_lsens.cls (2023): 3 pages, 2 figures, abstract 140 words, 0 problems |
 
 ### Results
 
@@ -40,8 +40,9 @@ verified. What blocks submission is listed under § Open items.
 
 ### Open items (the user's decisions)
 
-1. **Label-shuffle control** (mandatory check 20). It needs training; the user ruled training out on 2026-10-15. It is
-   disclosed in Limitations. If approved: stage 04, then 05 and 06 again.
+1. ~~Label-shuffle control~~: **resolved 2026-10-16** (approved by the user).
+   - S4D, 6 runs on permuted training labels: test macro-F1 4.9 against 8.7 by chance and 54.5 with the true labels.
+   - G5 rerun3 and G6 rerun2 PASS. See `docs/review_addendum_2026-10-16b.md`.
 2. ~~Figure 6 spot check~~: **resolved 2026-10-16.** Four cells match the paper
    (`docs/sources/figure6_spot_checks.json`, `docs/review_addendum_2026-10-16.md`).
 3. **Re-execution of the remaining S2 runs** (check 16; 468 runs).

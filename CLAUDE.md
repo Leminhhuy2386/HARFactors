@@ -13,7 +13,7 @@ answer so far: who is tested matters far more than the architecture. Split off f
   - Manuscript: `paper/manuscript.tex`, rendered from `paper/manuscript_src.tex` by `scripts/render_manuscript.py`.
     Never hand-edit numbers.
   - Open items:
-    - label-shuffle control (needs training; the user's decision);
+    - (label-shuffle control: done 2026-10-16, collapsed to chance);
     - (two Figure 6 cells: done 2026-10-16);
     - re-execution of the 468 S2 runs without a cache on the HPC;
     - the author block;

@@ -70,8 +70,8 @@ All runs follow WHAR Arena v1 with its paper-era code~\cite{burzer2026arena,burz
 overlap at the native sampling rate; $k=10$ subject groups, each split testing on one group
 (1 to 4 subjects) that never appears in training or validation;
 validation from 20\,\% of the training subjects' windows; a z-score fitted on the training split; macro-F1 over all
-classes, with classes absent from a test split counted as 0. No network was trained for this letter: we analyse stored
-runs and their checkpoints. Three sets enter (Table~\ref{tab:vc}): S1, ten networks that share one skeleton and differ
+classes, with classes absent from a test split counted as 0. Apart from a label-permutation control, no network was
+trained for this letter: we analyse stored runs and their checkpoints. Three sets enter (Table~\ref{tab:vc}): S1, ten networks that share one skeleton and differ
 in single components (with and without temporal memory, e.g.\ S4D~\cite{gu2022efficiently,gu2022parameterization} and
 Mamba~\cite{gu2023mamba}, or window statistics), on ten development datasets with three seeds; S2, four of these
 networks on eight datasets never used for this question, with three seeds; S3, the benchmark's 17 published models
@@ -104,7 +104,9 @@ benchmark's Random Forest, re-run with our code, reproduces its published macro-
 84.69 against 84.69 on UCI-HAR); test predictions were regenerated from
 408 checkpoints, 373 of which reproduced the stored metrics exactly and all within two
 test windows; an independent REML implementation and negative controls (e.g.\ permuting network labels within cells)
-confirmed the analysis. The regenerated runs include 360 of the 828 confirmatory runs (the
+confirmed the analysis; and S4D retrained on permuted training labels (6 runs on UP-Fall and UCA-EHAR)
+fell to chance, with a test macro-F1 of 4.9 against 8.7
+by chance and 54.5 with the true labels. The regenerated runs include 360 of the 828 confirmatory runs (the
 datasets cached on our cluster); the others, and one development dataset (DSADS) whose cache on the cluster does not
 reproduce the stored runs, enter on their stored records.
 
@@ -185,10 +187,7 @@ The analysis covers one protocol, and three seeds per run. The S1 and S2 network
 components are controlled but not independent designs. S2's means were known before the registration. The 30-dataset
 results re-analyse published single runs and are correlational, and subjects and channels co-vary across datasets.
 The intervals resample test-subject groups and treat the networks as fixed: they say how precisely $R$ is known for
-these networks, not for networks in general, and S3 shows that another population of networks can reverse it. No
-network was trained for this letter, so no label-permutation control was run; the splits are subject-disjoint by
-construction and the normalisation is fitted on the training split, which we verified, but a leak through another
-path would not have been detected.
+these networks, not for networks in general, and S3 shows that another population of networks can reverse it.
 
 \section{Conclusion}
 Under a fixed person-disjoint protocol, who is tested accounts for most of the variance of macro-F1 among comparable

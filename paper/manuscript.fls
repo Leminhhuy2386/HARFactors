@@ -342,6 +342,8 @@ INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxsy5.vf
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
+INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
@@ -356,8 +358,6 @@ INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regula
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxmi5.vf
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/NewTXMI5.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
-INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
-INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT ./manuscript.bbl
 INPUT ./manuscript.bbl
 INPUT manuscript.bbl

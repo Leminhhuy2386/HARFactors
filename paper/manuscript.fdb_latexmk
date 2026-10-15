@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript"] 1792104165.42016 "manuscript.aux" "manuscript.bbl" "manuscript" 1792104166.56811 0
+["bibtex manuscript"] 1792105450.1657 "manuscript.aux" "manuscript.bbl" "manuscript" 1792105451.10137 0
   "./references.bib" 1792057439 9385 d69ab60d65ada64cbc8ab5edafb983b6 ""
   "/home/huy.leminh/texlive/2026/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "manuscript.aux" 1792104166 3922 3b32c80a3708cc1f0fa4860852795649 "pdflatex"
+  "manuscript.aux" 1792105450 3922 d43c6df17bb773196050b660a2f33d0c "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1792104165.58374 "manuscript.tex" "manuscript.pdf" "manuscript" 1792104166.56873 0
+["pdflatex"] 1792105450.29761 "manuscript.tex" "manuscript.pdf" "manuscript" 1792105451.10189 0
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -119,9 +119,9 @@
   "IEEE_lsens.cls" 1792104099 214510 832b5a4695db10df88e7211f1c5ef489 ""
   "figures/fig01_variance_components.pdf" 1792102101 15951 164baea39e17cbecb2df1b2a9138d9eb ""
   "figures/fig02_contrasts_channels.pdf" 1792102102 30739 9abc016fdb1ec10209c5d114570737cb ""
-  "manuscript.aux" 1792104166 3922 3b32c80a3708cc1f0fa4860852795649 "pdflatex"
-  "manuscript.bbl" 1792104165 6122 645e1a4a08cbaa211010f929ed975f01 "bibtex manuscript"
-  "manuscript.tex" 1792104163 13876 de21678d9970f4605eb23665c1fa7c15 ""
+  "manuscript.aux" 1792105450 3922 d43c6df17bb773196050b660a2f33d0c "pdflatex"
+  "manuscript.bbl" 1792105450 6122 645e1a4a08cbaa211010f929ed975f01 "bibtex manuscript"
+  "manuscript.tex" 1792105448 13827 c8d89e5267c30c0a276ad4a3e0684fec ""
   "tab01_variance_components.tex" 1792102102 652 e717c4cf5968f95c4401bdd7bb33ab68 ""
   (generated)
   "manuscript.aux"
