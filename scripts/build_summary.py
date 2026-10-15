@@ -97,7 +97,9 @@ def spec() -> list[dict]:
             ["observed_value", "anchor_random_forest", i, "figure6"], ".2f")
         add(f"g3.rf.{d}.rerun", f"G3 anchor: Random Forest re-run mean, {d}", g3,
             ["observed_value", "anchor_random_forest", i, "rerun_mean"], ".2f")
-    g5 = "results/gates/G5_results_authenticity.json"
+    reruns = sorted((ROOT / "results/gates").glob("G5_results_authenticity_rerun*.json"),
+                    key=lambda q: int(q.stem.rsplit("rerun", 1)[1]))
+    g5 = str((reruns[-1] if reruns else ROOT / "results/gates/G5_results_authenticity.json").relative_to(ROOT))
     add("g5.verdict", "G5 verdict", g5, ["verdict"], "s")
     add("g5.reexecuted", "G5: runs re-executed from checkpoints (gating)", g5, ["observed_value", "L3_reexecution", "evaluated"], "d")
     add("g5.exact", "G5: re-executed runs equal to the stored metrics exactly", g5,
@@ -136,8 +138,10 @@ def producer(artifact: str) -> str:
     pv = ROOT / (artifact + ".provenance.json")
     if pv.exists():
         return json.loads(pv.read_text())["produced_by"]
+    if artifact.startswith("results/gates/G5_"):
+        return "scripts/verify_results.py"
     return {"results/gates/G3_baseline.json": "scripts/check_baseline_anchor.py",
-            "results/gates/G5_results_authenticity.json": "scripts/verify_results.py"}.get(artifact, "?")
+            "data/processed/harness_splits.json": "scripts/export_splits.py"}.get(artifact, "?")
 
 
 def write_summary(v: dict, values: list) -> None:

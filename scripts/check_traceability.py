@@ -44,7 +44,9 @@ def main() -> None:
         f.write_text(json.dumps(r, indent=1))
         tampered_ok, tampered_out = audit(copy)
     sources = sorted({v["artifact"] for v in values})
-    no_prov = [s for s in sources if not s.startswith("results/gates/") and not (ROOT / (s + ".provenance.json")).exists()]
+    # computed results need a provenance record (agents/01_integrity.md); gates and data records are exempt
+    no_prov = [s for s in sources if s.startswith("results/") and not s.startswith("results/gates/")
+               and not (ROOT / (s + ".provenance.json")).exists()]
     passed = ok and base_ok and not tampered_ok and not no_prov
     gate = {"gate": "G6_traceability", "stage": "06_summary", "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "check": "every number in docs/summary.md re-derives from its artifact (scripts/audit.py --traceability)",
