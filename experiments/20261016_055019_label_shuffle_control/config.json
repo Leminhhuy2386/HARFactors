@@ -1,0 +1,34 @@
+{
+ "model": "s4d",
+ "cells": [
+  [
+   "up_fall",
+   0
+  ],
+  [
+   "up_fall",
+   1
+  ],
+  [
+   "up_fall",
+   2
+  ],
+  [
+   "uca_ehar",
+   0
+  ],
+  [
+   "uca_ehar",
+   1
+  ],
+  [
+   "uca_ehar",
+   2
+  ]
+ ],
+ "perm_seed": 20261016,
+ "chance_permutations": 100,
+ "tolerance": "every run: shuffled-label macro-F1 <= chance + 5.0 points on validation and on test; the stored true-label run >= shuffled + 20.0 points on validation",
+ "datasets_dir": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era",
+ "train_seed": 0
+}

@@ -227,7 +227,7 @@ def _printed(entry: dict) -> str:
         return f"{100 * _get(art, entry['path']) / sum(v for k, v in ss.items() if k != 'dataset'):.1f}"
     v = _get(art, entry["path"])
     if f == "s":
-        return v
+        return v if isinstance(v, str) else str(v)
     if f == "pct":
         return f"{100 * v:.0f}"
     if f == "p3":

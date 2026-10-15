@@ -109,6 +109,18 @@ def spec() -> list[dict]:
     add("g5.exact", "G5: re-executed runs equal to the stored metrics exactly", g5,
         ["observed_value", "L3_reexecution", "exact_match"], "d")
     add("g5.s2", "G5: S2 runs re-executed", g5, ["observed_value", "L3_reexecution", "s2_runs_reexecuted"], "d")
+    ls = ["observed_value", "L3_5_leakage", "label_shuffle_control"]
+    g5_json = json.loads((ROOT / g5).read_text())
+    if isinstance(get(g5_json, ls), dict):
+        add("ls.runs", "label-shuffle control: runs", g5, ls + ["runs"], "d")
+        for k, lab in (("mean_shuffled_test_macro_f1", "shuffled-label test macro-F1"),
+                       ("mean_chance_test_macro_f1", "chance test macro-F1"),
+                       ("mean_stored_test_macro_f1", "true-label test macro-F1 (stored runs)"),
+                       ("mean_shuffled_val_macro_f1", "shuffled-label validation macro-F1"),
+                       ("mean_chance_val_macro_f1", "chance validation macro-F1"),
+                       ("mean_stored_val_macro_f1", "true-label validation macro-F1 (stored runs)")):
+            add(f"ls.{k}", f"label-shuffle control: mean {lab}", g5, ls + [k], ".1f")
+        add("ls.all_collapsed", "label-shuffle control: every run collapsed to chance", g5, ls + ["all_collapsed"], "s")
     return s
 
 
@@ -126,7 +138,7 @@ def derive(entry: dict) -> str:
         within = sum(v for k, v in ss.items() if k != "dataset")
         return f"{100 * get(art, entry['path']) / within:.1f}"
     v = get(art, entry["path"])
-    return v if entry["format"] == "s" else fmt(v, entry["format"])
+    return (v if isinstance(v, str) else str(v)) if entry["format"] == "s" else fmt(v, entry["format"])
 
 
 def main() -> None:
@@ -189,7 +201,12 @@ def write_summary(v: dict, values: list) -> None:
               f"{d} {v[f'g3.rf.{d}.rerun']} vs {v[f'g3.rf.{d}.figure6']}"
               for d in ["utd_mhad", "uci_har", "unimib_shar", "actrectut_gestures"]) + ".",
           f"- G5 {v['g5.verdict']}: {v['g5.reexecuted']} runs re-executed from checkpoints ({v['g5.s2']} of them in "
-          f"S2), {v['g5.exact']} equal to the stored metrics exactly.", "",
+          f"S2), {v['g5.exact']} equal to the stored metrics exactly.",
+          (f"- Label-shuffle control (S4D, {v['ls.runs']} runs on UP-Fall and UCA-EHAR, permuted training labels): test "
+           f"macro-F1 {v['ls.mean_shuffled_test_macro_f1']} against chance {v['ls.mean_chance_test_macro_f1']} and "
+           f"{v['ls.mean_stored_test_macro_f1']} with true labels; validation {v['ls.mean_shuffled_val_macro_f1']} vs "
+           f"{v['ls.mean_chance_val_macro_f1']} vs {v['ls.mean_stored_val_macro_f1']}; collapsed on every run: "
+           f"{v['ls.all_collapsed']}." if "ls.runs" in v else "- Label-shuffle control: not run."), "",
           "## 5. Excluded runs (agents/08_review.md, check 9)", "",
           f"- The ledger imports {v['runs.imported']} WHAR-harness runs. The letter analyses S1 ({v['runs.S1']} runs) and "
           f"S2 ({v['runs.S2']} runs), and S3 ({v['runs.S3']} re-runs of the benchmark's models, in "

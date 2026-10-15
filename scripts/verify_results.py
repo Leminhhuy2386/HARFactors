@@ -73,7 +73,9 @@ RERUN_REASON = (
     "wrong one in a degenerate file (dsads, constant predictions), so no metric changed and --recompute passed; metric "
     "records now carry the prediction file's sha256, --recompute checks it, and the control alters a correct "
     "prediction in a non-degenerate file. (4) The provenance control was void because of (1); it now also requires "
-    "the deleted file to be named. The tolerances are unchanged. Rerun 2: rerun 1 FAILed only because --recompute "
+    "the deleted file to be named. The tolerances are unchanged. Rerun 3 (approved by the user on 2026-10-16): adds "
+    "the label-shuffle control of Level 3.5.3 (scripts/label_shuffle_control.py), which had not been run; nothing "
+    "else changes. Rerun 2: rerun 1 FAILed only because --recompute "
     "required the new hash field also in the 414 metric records of the first re-execution run "
     "(20261015_184242_evaluate_G5), written before the field existed, so even the untampered copy failed. Records "
     "without the field are now checked by recomputation only, records with it by hash and recomputation.")
@@ -357,6 +359,14 @@ def leakage_controls() -> list[dict]:
              "real_passes": ok_real, "caught": ok_real and not ok_wrong}]
 
 
+def label_shuffle(run_id: str | None):
+    """Level 3.5.3: the label-shuffle control's verdict, read from its own ledger run."""
+    if not run_id:
+        return "not run"
+    s = json.loads((ROOT / "experiments" / run_id / "summary.json").read_text())
+    return {k: v for k, v in s.items()} | {"run_dir": f"experiments/{run_id}"}
+
+
 def access_log_audit() -> dict:
     seal = json.loads((ROOT / "results/gates/G4_test_seal.json").read_text())
     lines = [l for l in (ROOT / "results/test_access.log").read_text().splitlines() if l.strip()]
@@ -365,6 +375,16 @@ def access_log_audit() -> dict:
     return {"entries": len(lines), "before_seal": before, "confirmatory_reads": s2,
             "verification_reads": sum("evaluate.py" in l for l in lines), "seal_timestamp": seal["timestamp"],
             "ok": not before and all(any(a in l for a in ("H1", "sens1_S2")) for l in s2)}
+
+
+def label_shuffle_lines(ls) -> str:
+    if not isinstance(ls, dict):
+        return "- Label-shuffle control: not run."
+    return (f"- Label-shuffle control ({ls['run_dir']}): S4D trained on permuted training labels, {ls['runs']} runs on "
+            f"UP-Fall and UCA-EHAR. Mean test macro-F1 {ls['mean_shuffled_test_macro_f1']:.2f} against a chance level of "
+            f"{ls['mean_chance_test_macro_f1']:.2f} and {ls['mean_stored_test_macro_f1']:.2f} for the true-label runs; "
+            f"validation {ls['mean_shuffled_val_macro_f1']:.2f} vs chance {ls['mean_chance_val_macro_f1']:.2f} vs "
+            f"{ls['mean_stored_val_macro_f1']:.2f}. Collapsed to chance on every run: {ls['all_collapsed']}.")
 
 
 def write_report(gate: dict, gate_path: Path) -> None:
@@ -383,6 +403,11 @@ def write_report(gate: dict, gate_path: Path) -> None:
                 f"{len(second)} analyses, permuting model labels removes the model share, the training-split "
                 f"normalisation is a train-only fit, and the test-access log matches the G4 seal. {caught} of "
                 f"{len(neg)} negative controls were caught by the auditor.")
+        ls = o["L3_5_leakage"]["label_shuffle_control"]
+        if isinstance(ls, dict):
+            head += (f" The label-shuffle control collapses to chance: test macro-F1 "
+                     f"{ls['mean_shuffled_test_macro_f1']:.1f} against {ls['mean_chance_test_macro_f1']:.1f} by chance "
+                     f"and {ls['mean_stored_test_macro_f1']:.1f} with the true labels.")
     else:
         head = "The verification FAILed; the failing checks are listed below. These results must not be used until resolved."
     L = ["# Verification report (gate G5)", "", head, "",
@@ -419,7 +444,7 @@ def write_report(gate: dict, gate_path: Path) -> None:
           f"{len(o['L3_5_leakage']['normalisation_problems'])}.",
           f"- Test-access log: {acc['entries']} entries, none before the seal ({acc['seal_timestamp']}); the confirmatory "
           "reads are the two pre-registered S2 analyses.",
-          "- Label-shuffle control: not run, because it needs training, which the user ruled out (2026-10-15).", "",
+          label_shuffle_lines(o["L3_5_leakage"]["label_shuffle_control"]), "",
           "## Negative controls (Level 5)", "", "| Tampering | Check | Caught |", "|---|---|---|"]
     L += [f"| {r['tampering']} | {r['check']} | {r['caught']} |" for r in neg]
     L += [f"| model labels permuted within cells ({p['set']}) | model share {p['permuted_model_share']:.4f} "
@@ -435,6 +460,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--workers", type=int, default=1)
     ap.add_argument("--evaluated", default=None, help="run_id of a scripts/evaluate.py run over select_cells()")
+    ap.add_argument("--label-shuffle", default=None, help="run_id of a scripts/label_shuffle_control.py run")
     a = ap.parse_args()
     gate_path = GATE
     if GATE.exists():  # never edit a gate file: a re-run gets its own name and states why
@@ -495,14 +521,15 @@ def main() -> None:
         obs["L3_5_leakage"] = {"normalisation_problems": norm_bad, "access_log": access_log_audit(),
                                "split_disjointness": "asserted for all 13 cached datasets by scripts/export_splits.py "
                                                      "(data/processed/harness_splits.json)",
-                               "label_shuffle_control": "not run: it needs training, which the user ruled out"}
+                               "label_shuffle_control": label_shuffle(a.label_shuffle)}
         log_s2_reread("the model-label permutation control")
         obs["L5_model_permutation"] = model_permutation()
         log_s2_reread("the auditor's --seeds check and its negative control")
         obs["L5_negative_controls"] = negative_controls(eval_dir)
         ok_rest, rest_out = audit("--ledger", "--data", "--synthetic", "--recompute", "--reproduce", "--seeds")
         obs["audit"] = {"pass": ok_rest, "output": rest_out.strip().splitlines()}
-        passed = (ok_prov and not mism and not l2_bad and not norm_bad and obs["L2_wellformed"]["seeds"]["groups_with_identical_seed_predictions"] == 0
+        ls = obs["L3_5_leakage"]["label_shuffle_control"]
+        passed = (ok_prov and (not isinstance(ls, dict) or ls["caught"]) and not mism and not l2_bad and not norm_bad and obs["L2_wellformed"]["seeds"]["groups_with_identical_seed_predictions"] == 0
                   and all(r["match"] for r in obs["L3_second_implementation"])
                   and all(obs["L3_4_figures"].values()) and obs["L3_5_leakage"]["access_log"]["ok"]
                   and all(r["caught"] for r in obs["L5_model_permutation"])
