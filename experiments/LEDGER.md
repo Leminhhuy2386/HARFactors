@@ -4996,3 +4996,5 @@ whar_arena_v1/vortexnet/utd_mhad/split-07 | IMPORT | fingerprint c98d3cdb212a | 
 20261016_045739_evaluate_G5 | END   | 414 of 414 evaluated | 00:06:55 | status=completed
 20261016_050540_run_analyses | START | config 3ca7acb2b562 | data 10383f130f63 | synthetic=false
 20261016_050540_run_analyses | END   | 36 files | 00:02:34 | status=completed
+20261016_050918_verify_G5 | START | config e1e0d270e419 | data 10383f130f63 | synthetic=false
+20261016_050918_verify_G5 | END   | G5 FAIL | 00:08:23 | status=completed

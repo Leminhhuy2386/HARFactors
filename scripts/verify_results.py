@@ -73,7 +73,10 @@ RERUN_REASON = (
     "wrong one in a degenerate file (dsads, constant predictions), so no metric changed and --recompute passed; metric "
     "records now carry the prediction file's sha256, --recompute checks it, and the control alters a correct "
     "prediction in a non-degenerate file. (4) The provenance control was void because of (1); it now also requires "
-    "the deleted file to be named. The tolerances are unchanged.")
+    "the deleted file to be named. The tolerances are unchanged. Rerun 2: rerun 1 FAILed only because --recompute "
+    "required the new hash field also in the 414 metric records of the first re-execution run "
+    "(20261015_184242_evaluate_G5), written before the field existed, so even the untampered copy failed. Records "
+    "without the field are now checked by recomputation only, records with it by hash and recomputation.")
 GATE = ROOT / "results" / "gates" / "G5_results_authenticity.json"
 
 

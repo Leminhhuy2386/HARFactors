@@ -32,3 +32,6 @@
 2026-10-16T05:01:45 | scripts/evaluate.py | 20261016_045739_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on utd_mhad from checkpoints
 2026-10-16T05:01:47 | scripts/evaluate.py | 20261016_045739_evaluate_G5 | verification (G5): regenerate 120 stored test predictions on wear from checkpoints
 2026-10-16T05:04:32 | scripts/evaluate.py | 20261016_045739_evaluate_G5 | verification (G5): regenerate 6 stored test predictions on wisdm from checkpoints
+2026-10-16T05:09:40 | scripts/verify_results.py | 20261016_050918_verify_G5 | verification (G5): re-read the S2 run records for the second implementation of every confirmatory analysis
+2026-10-16T05:13:49 | scripts/verify_results.py | 20261016_050918_verify_G5 | verification (G5): re-read the S2 run records for the model-label permutation control
+2026-10-16T05:14:49 | scripts/verify_results.py | 20261016_050918_verify_G5 | verification (G5): re-read the S2 run records for the auditor's --seeds check and its negative control
