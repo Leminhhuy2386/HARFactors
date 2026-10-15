@@ -1,0 +1,51 @@
+{
+ "gate": "G6_traceability",
+ "stage": "06_summary",
+ "timestamp": "2026-10-16T06:03:25",
+ "check": "every number in docs/summary.md re-derives from its artifact (scripts/audit.py --traceability)",
+ "reference_value": null,
+ "reference_source": "docs/summary_values.json, docs/artifact_index.md",
+ "observed_value": {
+  "values": 247,
+  "audit_output": [
+   "PASS  --traceability"
+  ],
+  "negative_control": {
+   "tampering": "H1 s2_P edited by +10 % in a copy",
+   "untampered_passes": true,
+   "caught": true,
+   "output": [
+    "FAIL  --traceability  (1 problems)",
+    "       H1.s2_P: printed 127.7 but the artifact gives 140.4"
+   ]
+  },
+  "source_artifacts": [
+   "data/processed/harness_splits.json",
+   "data/processed/manifest.json",
+   "data/processed/splits.json",
+   "results/gates/G3_baseline.json",
+   "results/gates/G5_results_authenticity_rerun3.json",
+   "results/metrics/confirmatory/H1.json",
+   "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+   "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+   "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+   "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+   "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+   "results/metrics/contrasts_robustness/data.json",
+   "results/metrics/factors/data.json"
+  ],
+  "sources_without_provenance": []
+ },
+ "tolerance": "every summary value re-derives exactly; the tampered copy fails; every source artifact has provenance or is a gate",
+ "verdict": "PASS",
+ "evidence": [
+  "docs/summary.md",
+  "docs/summary_values.json",
+  "docs/artifact_index.md",
+  "scripts/build_summary.py",
+  "scripts/audit.py",
+  "scripts/check_traceability.py"
+ ],
+ "notes": "The 30-dataset values derive from the WHAR Arena paper's published single runs (quoted numbers, docs/baselines_cited.json) through results/metrics/factors/data.json.",
+ "rerun_reason": "Stage 06 re-run after G5 rerun3, which adds the label-shuffle control; the summary gains its values"
+}

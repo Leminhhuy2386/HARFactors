@@ -1,8 +1,8 @@
 # Verification report (gate G5)
 
-All 408 re-executed runs (360 of them from the confirmatory set S2) regenerate their stored metrics from their checkpoints within the declared tolerance, 373 of them exactly. An independent REML gives the same variance components for all 6 analyses, permuting model labels removes the model share, the training-split normalisation is a train-only fit, and the test-access log matches the G4 seal. 9 of 9 negative controls were caught by the auditor.
+All 408 re-executed runs (360 of them from the confirmatory set S2) regenerate their stored metrics from their checkpoints within the declared tolerance, 373 of them exactly. An independent REML gives the same variance components for all 6 analyses, permuting model labels removes the model share, the training-split normalisation is a train-only fit, and the test-access log matches the G4 seal. 9 of 9 negative controls were caught by the auditor. The label-shuffle control collapses to chance: test macro-F1 4.9 against 8.7 by chance and 54.5 with the true labels.
 
-Gate file: `results/gates/G5_results_authenticity_rerun2.json` (verdict PASS). Earlier G5 files are kept; `G5_results_authenticity.json` (FAIL) explains the first run.
+Gate file: `results/gates/G5_results_authenticity_rerun3.json` (verdict PASS). Earlier G5 files are kept; `G5_results_authenticity.json` (FAIL) explains the first run.
 
 ## What was re-executed
 
@@ -33,8 +33,8 @@ Figure and table data regenerated in a temporary directory: results/figure_data/
 
 - Subject-disjoint splits: asserted for all 13 cached datasets when the splits were exported (G2).
 - Train-only normalisation: per-channel mean 0 and sd 1 on every re-executed training split; problems: 0.
-- Test-access log: 38 entries, none before the seal (2026-10-15T16:49:10); the confirmatory reads are the two pre-registered S2 analyses.
-- Label-shuffle control: not run, because it needs training, which the user ruled out (2026-10-15).
+- Test-access log: 41 entries, none before the seal (2026-10-15T16:49:10); the confirmatory reads are the two pre-registered S2 analyses.
+- Label-shuffle control (experiments/20261016_055019_label_shuffle_control): S4D trained on permuted training labels, 6 runs on UP-Fall and UCA-EHAR. Mean test macro-F1 4.91 against a chance level of 8.74 and 54.49 for the true-label runs; validation 6.80 vs chance 8.72 vs 85.90. Collapsed to chance on every run: True.
 
 ## Negative controls (Level 5)
 
@@ -67,4 +67,4 @@ PASS  --seeds
 
 ## Why this is a rerun
 
-Rerun 1, approved by the user on 2026-10-16. The first G5 FAILed for four reasons. (1) 7 imported files under results/metrics had no provenance; they are regenerated with provenance by their own scripts (profile.json by the new src/evaluation/profile_models.py). (2) One run differed from its record by exactly 2 windows, the declared limit, and the float32 comparison counted it as above the limit; the window difference is now counted as an integer, as the tolerance states. (3) The recompute negative control changed one wrong prediction into another wrong one in a degenerate file (dsads, constant predictions), so no metric changed and --recompute passed; metric records now carry the prediction file's sha256, --recompute checks it, and the control alters a correct prediction in a non-degenerate file. (4) The provenance control was void because of (1); it now also requires the deleted file to be named. The tolerances are unchanged. Rerun 2: rerun 1 FAILed only because --recompute required the new hash field also in the 414 metric records of the first re-execution run (20261015_184242_evaluate_G5), written before the field existed, so even the untampered copy failed. Records without the field are now checked by recomputation only, records with it by hash and recomputation.
+Rerun 1, approved by the user on 2026-10-16. The first G5 FAILed for four reasons. (1) 7 imported files under results/metrics had no provenance; they are regenerated with provenance by their own scripts (profile.json by the new src/evaluation/profile_models.py). (2) One run differed from its record by exactly 2 windows, the declared limit, and the float32 comparison counted it as above the limit; the window difference is now counted as an integer, as the tolerance states. (3) The recompute negative control changed one wrong prediction into another wrong one in a degenerate file (dsads, constant predictions), so no metric changed and --recompute passed; metric records now carry the prediction file's sha256, --recompute checks it, and the control alters a correct prediction in a non-degenerate file. (4) The provenance control was void because of (1); it now also requires the deleted file to be named. The tolerances are unchanged. Rerun 3 (approved by the user on 2026-10-16): adds the label-shuffle control of Level 3.5.3 (scripts/label_shuffle_control.py), which had not been run; nothing else changes. Rerun 2: rerun 1 FAILed only because --recompute required the new hash field also in the 414 metric records of the first re-execution run (20261015_184242_evaluate_G5), written before the field existed, so even the untampered copy failed. Records without the field are now checked by recomputation only, records with it by hash and recomputation.

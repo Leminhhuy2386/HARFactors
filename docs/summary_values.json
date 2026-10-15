@@ -3071,7 +3071,7 @@
  {
   "id": "g5.verdict",
   "description": "G5 verdict",
-  "artifact": "results/gates/G5_results_authenticity_rerun2.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
   "path": [
    "verdict"
   ],
@@ -3082,7 +3082,7 @@
  {
   "id": "g5.reexecuted",
   "description": "G5: runs re-executed from checkpoints (gating)",
-  "artifact": "results/gates/G5_results_authenticity_rerun2.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
   "path": [
    "observed_value",
    "L3_reexecution",
@@ -3095,7 +3095,7 @@
  {
   "id": "g5.exact",
   "description": "G5: re-executed runs equal to the stored metrics exactly",
-  "artifact": "results/gates/G5_results_authenticity_rerun2.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
   "path": [
    "observed_value",
    "L3_reexecution",
@@ -3108,7 +3108,7 @@
  {
   "id": "g5.s2",
   "description": "G5: S2 runs re-executed",
-  "artifact": "results/gates/G5_results_authenticity_rerun2.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
   "path": [
    "observed_value",
    "L3_reexecution",
@@ -3116,6 +3116,118 @@
   ],
   "format": "d",
   "printed": "360",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "ls.runs",
+  "description": "label-shuffle control: runs",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "path": [
+   "observed_value",
+   "L3_5_leakage",
+   "label_shuffle_control",
+   "runs"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "ls.mean_shuffled_test_macro_f1",
+  "description": "label-shuffle control: mean shuffled-label test macro-F1",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "path": [
+   "observed_value",
+   "L3_5_leakage",
+   "label_shuffle_control",
+   "mean_shuffled_test_macro_f1"
+  ],
+  "format": ".1f",
+  "printed": "4.9",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "ls.mean_chance_test_macro_f1",
+  "description": "label-shuffle control: mean chance test macro-F1",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "path": [
+   "observed_value",
+   "L3_5_leakage",
+   "label_shuffle_control",
+   "mean_chance_test_macro_f1"
+  ],
+  "format": ".1f",
+  "printed": "8.7",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "ls.mean_stored_test_macro_f1",
+  "description": "label-shuffle control: mean true-label test macro-F1 (stored runs)",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "path": [
+   "observed_value",
+   "L3_5_leakage",
+   "label_shuffle_control",
+   "mean_stored_test_macro_f1"
+  ],
+  "format": ".1f",
+  "printed": "54.5",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "ls.mean_shuffled_val_macro_f1",
+  "description": "label-shuffle control: mean shuffled-label validation macro-F1",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "path": [
+   "observed_value",
+   "L3_5_leakage",
+   "label_shuffle_control",
+   "mean_shuffled_val_macro_f1"
+  ],
+  "format": ".1f",
+  "printed": "6.8",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "ls.mean_chance_val_macro_f1",
+  "description": "label-shuffle control: mean chance validation macro-F1",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "path": [
+   "observed_value",
+   "L3_5_leakage",
+   "label_shuffle_control",
+   "mean_chance_val_macro_f1"
+  ],
+  "format": ".1f",
+  "printed": "8.7",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "ls.mean_stored_val_macro_f1",
+  "description": "label-shuffle control: mean true-label validation macro-F1 (stored runs)",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "path": [
+   "observed_value",
+   "L3_5_leakage",
+   "label_shuffle_control",
+   "mean_stored_val_macro_f1"
+  ],
+  "format": ".1f",
+  "printed": "85.9",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "ls.all_collapsed",
+  "description": "label-shuffle control: every run collapsed to chance",
+  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "path": [
+   "observed_value",
+   "L3_5_leakage",
+   "label_shuffle_control",
+   "all_collapsed"
+  ],
+  "format": "s",
+  "printed": "True",
   "produced_by": "scripts/verify_results.py"
  }
 ]
