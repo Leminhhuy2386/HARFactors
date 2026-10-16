@@ -218,6 +218,17 @@ def detail_spec() -> list[dict]:
     ep = "results/metrics/embedding/uci_har.json"
     if have(ep):
         add("emb.probe_windows", "embedding analysis: most training windows in a probe", ep, ["probe_windows"], ",d")
+    rp = "results/metrics/reproducibility/summary.json"
+    if have(rp):
+        for k, f in (("runs", ",d"), ("checkpoint", ",d"), ("reexecuted", ",d"), ("exact", ",d"),
+                     ("within_tolerance", ",d"), ("max_abs_delta_macro_f1", ".2f")):
+            add(f"repro.analysed.{k}", f"reproducibility, analysed S1 and S2 runs: {k}", rp, ["analysed_runs", k], f)
+        for k in ("runs", "checkpoint", "config_ok", "reexecuted", "exact", "within_tolerance"):
+            add(f"repro.all.{k}", f"reproducibility, all stored S1 and S2 runs: {k}", rp, ["total_S1_S2", k], ",d")
+        add("repro.s3.records", "S3 run records (no checkpoints)", rp, ["S3", "records"], "d")
+        if "retrained" in json.loads((ROOT / rp).read_text()):
+            add("repro.retrained.runs", "runs retrained for a missing checkpoint", rp, ["retrained", "runs"], "d")
+            add("repro.retrained.exact", "retrained runs equal to their record's macro-F1", rp, ["retrained", "exact"], "d")
     ts = "results/metrics/embedding/tsne_case.json"
     if have(ts):
         add("emb.tsne.split", "t-SNE case: split", ts, ["case", "split"], "d")

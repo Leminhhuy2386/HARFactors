@@ -1,0 +1,21 @@
+{
+ "produced_by": "scripts/reconstruct_order.py",
+ "command": "python scripts/reconstruct_order.py build dsads --tag colab --file-order sorted",
+ "run_id": "20261016_161427_reconstruct_order_dsads_colab",
+ "timestamp": "2026-10-16T16:16:20",
+ "duration_sec": 113.47,
+ "git_commit": "a218632-dirty",
+ "config_sha256": "5f0ce01e341f4fc23c65643560e345a2e6dd20c4ea4697caf98148b7d1aed9a4",
+ "config": {
+  "dataset": "dsads",
+  "mode": "build",
+  "file_order": "sorted",
+  "tag": "colab"
+ },
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "results/metrics/reproducibility/order_dsads_colab.json": "sha256:8fc00e1e293fd104726a8567ec8d4df1b461931b47436f5a1d4dfe02e6d20155"
+ },
+ "output_sha256": "c3233e2abbea0326e6754a8071de53f0d16796f1dd67fd95af5c79bd772998b1",
+ "synthetic": false
+}

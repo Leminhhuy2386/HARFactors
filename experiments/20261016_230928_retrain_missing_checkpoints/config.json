@@ -1,0 +1,43 @@
+{
+ "cells": [
+  [
+   "s4d",
+   "actrectut_gestures",
+   0,
+   0
+  ],
+  [
+   "s4d",
+   "actrectut_gestures",
+   0,
+   1
+  ],
+  [
+   "mamba",
+   "unimib_shar",
+   0,
+   0
+  ],
+  [
+   "mamba",
+   "unimib_shar",
+   0,
+   1
+  ],
+  [
+   "mamba",
+   "actrectut_gestures",
+   0,
+   0
+  ],
+  [
+   "mamba",
+   "actrectut_gestures",
+   0,
+   1
+  ]
+ ],
+ "datasets_dir": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era",
+ "results_dir": "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/experiments/20261016_230928_retrain_missing_checkpoints",
+ "device": "NVIDIA RTX A5000"
+}

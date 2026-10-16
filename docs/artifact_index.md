@@ -539,6 +539,21 @@ Claim → artifact → script. One row per value in docs/summary_values.json.
 | emb.median_network_dataset_rho_embedding | -0.50 | results/metrics/embedding/summary.json | median_network_dataset_rho_embedding | src/evaluation/embedding_analysis.py (aggregate) |
 | emb.network_dataset_negative_rho | 69 | results/metrics/embedding/summary.json | network_dataset_negative_rho | src/evaluation/embedding_analysis.py (aggregate) |
 | emb.probe_windows | 4,000 | results/metrics/embedding/uci_har.json | probe_windows | src/evaluation/embedding_analysis.py |
+| repro.analysed.runs | 2,988 | results/metrics/reproducibility/summary.json | analysed_runs/runs | src/evaluation/reproducibility.py |
+| repro.analysed.checkpoint | 2,982 | results/metrics/reproducibility/summary.json | analysed_runs/checkpoint | src/evaluation/reproducibility.py |
+| repro.analysed.reexecuted | 2,982 | results/metrics/reproducibility/summary.json | analysed_runs/reexecuted | src/evaluation/reproducibility.py |
+| repro.analysed.exact | 2,185 | results/metrics/reproducibility/summary.json | analysed_runs/exact | src/evaluation/reproducibility.py |
+| repro.analysed.within_tolerance | 2,668 | results/metrics/reproducibility/summary.json | analysed_runs/within_tolerance | src/evaluation/reproducibility.py |
+| repro.analysed.max_abs_delta_macro_f1 | 3.25 | results/metrics/reproducibility/summary.json | analysed_runs/max_abs_delta_macro_f1 | src/evaluation/reproducibility.py |
+| repro.all.runs | 3,408 | results/metrics/reproducibility/summary.json | total_S1_S2/runs | src/evaluation/reproducibility.py |
+| repro.all.checkpoint | 3,402 | results/metrics/reproducibility/summary.json | total_S1_S2/checkpoint | src/evaluation/reproducibility.py |
+| repro.all.config_ok | 3,402 | results/metrics/reproducibility/summary.json | total_S1_S2/config_ok | src/evaluation/reproducibility.py |
+| repro.all.reexecuted | 3,402 | results/metrics/reproducibility/summary.json | total_S1_S2/reexecuted | src/evaluation/reproducibility.py |
+| repro.all.exact | 2,363 | results/metrics/reproducibility/summary.json | total_S1_S2/exact | src/evaluation/reproducibility.py |
+| repro.all.within_tolerance | 3,048 | results/metrics/reproducibility/summary.json | total_S1_S2/within_tolerance | src/evaluation/reproducibility.py |
+| repro.s3.records | 510 | results/metrics/reproducibility/summary.json | S3/records | src/evaluation/reproducibility.py |
+| repro.retrained.runs | 6 | results/metrics/reproducibility/summary.json | retrained/runs | src/evaluation/reproducibility.py |
+| repro.retrained.exact | 5 | results/metrics/reproducibility/summary.json | retrained/exact | src/evaluation/reproducibility.py |
 | emb.tsne.split | 0 | results/metrics/embedding/tsne_case.json | case/split | src/evaluation/embedding_analysis.py (t-SNE case) |
 | emb.tsne.train_windows | 3000 | results/metrics/embedding/tsne_case.json | train/activity | src/evaluation/embedding_analysis.py (t-SNE case) |
 | emb.tsne.test_windows | 868 | results/metrics/embedding/tsne_case.json | test/activity | src/evaluation/embedding_analysis.py (t-SNE case) |

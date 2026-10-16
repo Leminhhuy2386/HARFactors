@@ -1,0 +1,16 @@
+node hpc22.local, job 86955, Fri Oct 16 15:43:41 +07 2026
+NVIDIA RTX A5000, 580.126.09
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+Traceback (most recent call last):
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/reconstruct_order.py", line 218, in <module>
+    main()
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/reconstruct_order.py", line 210, in main
+    build_cache(d, a.file_order, run_id, started)
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/reconstruct_order.py", line 153, in build_cache
+    rule = listing_rules(dataset, order, file_order)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/reconstruct_order.py", line 132, in listing_rules
+    acts = [f"a{by_name[nm]:02d}" for nm in order["vm_label_order_names"]]
+                ~~~~~~~^^^^
+KeyError: 'Ascending Stairs'

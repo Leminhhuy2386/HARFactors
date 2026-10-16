@@ -1,0 +1,49 @@
+{
+ "model_id": "lawnet_rec",
+ "class": "src.models.round8.Round8Net",
+ "config": {
+  "side": "law",
+  "blocks": "recurrence",
+  "d_model": 32,
+  "num_layers": 3
+ },
+ "built_by": "src.models.registry.build(model_id, input_channels=C, window_length=L, num_classes=K, channel_names=...)",
+ "sets": [
+  "S1",
+  "S2"
+ ],
+ "datasets": [
+  "actrectut_gestures",
+  "daphnet",
+  "dsads",
+  "hapt",
+  "motion_sense",
+  "opportunity",
+  "pamap2",
+  "sad",
+  "uca_ehar",
+  "uci_har",
+  "uma_fall",
+  "unimib_shar",
+  "up_fall",
+  "usc_had",
+  "utd_mhad",
+  "w_har",
+  "wear",
+  "wisdm"
+ ],
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "checkpoints": "experiments/checkpoints/lawnet_rec/<dataset>/seed-<s>/split-XX.pt (keys: model_id, config, fingerprint, seed, macro_f1, device, state_dict)",
+ "run_records": "experiments/whar_arena_v1/lawnet_rec/<dataset>/[seed-<s>/]split-XX.json",
+ "reference_input_gate_G1": {
+  "input_channels": 6,
+  "window_length": 150,
+  "num_classes": 27,
+  "params": 27553,
+  "embedding_dim": 64
+ }
+}

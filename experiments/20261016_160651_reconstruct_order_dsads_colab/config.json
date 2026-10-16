@@ -1,0 +1,13 @@
+{
+ "mode": "infer",
+ "datasets": [
+  "dsads"
+ ],
+ "datasets_dir": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era",
+ "file_order": "sorted",
+ "seeds": [
+  2
+ ],
+ "device": "NVIDIA L4",
+ "tag": "colab"
+}

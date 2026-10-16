@@ -180,12 +180,21 @@ def check_reproduce(k: int = 3, seed: int = 20261015) -> list[str]:
     if not files:
         return ["no prediction files to reproduce"]
     errs = []
+    from src.training import run_whar as R
     for f in random.Random(seed).sample(files, min(k, len(files))):
         model, dataset, seed_dir = f.parts[-4], f.parts[-3], f.parts[-2]
         cell = (model, dataset, int(seed_dir.split("-")[1]), int(f.stem.split("-")[1]))
+        run_dir = next(p for p in f.parents if p.parent.name == "experiments")
+        used = json.loads((run_dir / "config.json").read_text()).get("datasets_dir")
+        saved = (R.DATASETS_DIR, R.EXTRA_DATASETS_DIR)
+        if used:  # re-generate on the cache the prediction file was made on (some runs used a rebuilt cache)
+            R.DATASETS_DIR = R.EXTRA_DATASETS_DIR = Path(used)
         with tempfile.TemporaryDirectory() as t:
             E.ACCESS_LOG = Path(t) / "access.log"  # the audit's own re-reads are not part of the record
-            E.evaluate([cell], Path(t), "audit_reproduce", 0.0)
+            try:
+                E.evaluate([cell], Path(t), "audit_reproduce", 0.0)
+            finally:
+                R.DATASETS_DIR, R.EXTRA_DATASETS_DIR = saved
             new = Path(t) / "predictions" / model / dataset / seed_dir / f.name
             if not new.exists():
                 errs.append(f"could not re-generate {f.relative_to(ROOT)}")

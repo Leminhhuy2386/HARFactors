@@ -1,0 +1,39 @@
+{
+ "model_id": "mamba",
+ "class": "src.models.baselines.MambaClassifier",
+ "config": {
+  "d_model": 32,
+  "d_state": 16,
+  "num_layers": 2
+ },
+ "built_by": "src.models.registry.build(model_id, input_channels=C, window_length=L, num_classes=K, channel_names=...)",
+ "sets": [
+  "S1"
+ ],
+ "datasets": [
+  "actrectut_gestures",
+  "daphnet",
+  "dsads",
+  "hapt",
+  "opportunity",
+  "sad",
+  "uci_har",
+  "unimib_shar",
+  "utd_mhad",
+  "wisdm"
+ ],
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "checkpoints": "experiments/checkpoints/mamba/<dataset>/seed-<s>/split-XX.pt (keys: model_id, config, fingerprint, seed, macro_f1, device, state_dict)",
+ "run_records": "experiments/whar_arena_v1/mamba/<dataset>/[seed-<s>/]split-XX.json",
+ "reference_input_gate_G1": {
+  "input_channels": 6,
+  "window_length": 150,
+  "num_classes": 27,
+  "params": 21147,
+  "embedding_dim": 32
+ }
+}

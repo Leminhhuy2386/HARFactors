@@ -1,0 +1,19 @@
+{
+ "produced_by": "scripts/evaluate.py",
+ "command": "python scripts/evaluate.py --cells /work/huy.leminh/.cache/harfactors_scratch/cells_dsads_colab.json --run-id 20261016_161622_evaluate_dsads_colab_order",
+ "run_id": "20261016_161622_evaluate_dsads_colab_order",
+ "timestamp": "2026-10-16T16:18:08",
+ "duration_sec": 98.69,
+ "git_commit": "a218632-dirty",
+ "config_sha256": "ee58bdcf8a71b29309dc56b06efb9f403ab31b32c932c894970cd5fde95444ef",
+ "config": {
+  "cells": 48
+ },
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "experiments/checkpoints/hystnet_nomem/dsads/seed-2/split-00.pt": "sha256:02104b083499eb1ea8cc26e068c5e035da367dac8937f70b8939afce593c72be",
+  "experiments/whar_arena_v1/hystnet_nomem/dsads/seed-2/split-00.json": "sha256:1f4d419cbccfdeaac2384769fcddb33dbbf0aec6311cf600993e32764ddd1916"
+ },
+ "output_sha256": "98e7fb918a64fb652fe303bb56511beb5692615e215b0659581b8b0a7582fb81",
+ "synthetic": false
+}

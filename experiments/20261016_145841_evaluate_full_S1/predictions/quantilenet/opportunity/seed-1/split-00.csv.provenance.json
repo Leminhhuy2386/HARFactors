@@ -1,0 +1,19 @@
+{
+ "produced_by": "scripts/evaluate.py",
+ "command": "python scripts/evaluate.py --cells /work/huy.leminh/.cache/harfactors_scratch/cells_full_S1.json --run-id 20261016_145841_evaluate_full_S1",
+ "run_id": "20261016_145841_evaluate_full_S1",
+ "timestamp": "2026-10-16T15:02:56",
+ "duration_sec": 246.26,
+ "git_commit": "a218632-dirty",
+ "config_sha256": "c4ff2d8265822025859e89a8335b81e656649a595e86998b7f186c69ca554173",
+ "config": {
+  "cells": 1914
+ },
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "experiments/checkpoints/quantilenet/opportunity/seed-1/split-00.pt": "sha256:b1a2566fbb18ebccb5fafbcab00138b2865fdd3d405c4720565393dc59eac3f3",
+  "experiments/whar_arena_v1/quantilenet/opportunity/seed-1/split-00.json": "sha256:8bc580b48385d60d15ab5561e6adb5411fc5e8c89c4d4ec237bb08abd3a1af1a"
+ },
+ "output_sha256": "9c0f506ddd77ee8537342ea9b2271c1b5bcb7a04f8796752eb9238f81a295e3a",
+ "synthetic": false
+}

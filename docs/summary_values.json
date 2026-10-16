@@ -6951,6 +6951,186 @@
   "produced_by": "src/evaluation/embedding_analysis.py"
  },
  {
+  "id": "repro.analysed.runs",
+  "description": "reproducibility, analysed S1 and S2 runs: runs",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "analysed_runs",
+   "runs"
+  ],
+  "format": ",d",
+  "printed": "2,988",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.analysed.checkpoint",
+  "description": "reproducibility, analysed S1 and S2 runs: checkpoint",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "analysed_runs",
+   "checkpoint"
+  ],
+  "format": ",d",
+  "printed": "2,982",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.analysed.reexecuted",
+  "description": "reproducibility, analysed S1 and S2 runs: reexecuted",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "analysed_runs",
+   "reexecuted"
+  ],
+  "format": ",d",
+  "printed": "2,982",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.analysed.exact",
+  "description": "reproducibility, analysed S1 and S2 runs: exact",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "analysed_runs",
+   "exact"
+  ],
+  "format": ",d",
+  "printed": "2,185",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.analysed.within_tolerance",
+  "description": "reproducibility, analysed S1 and S2 runs: within_tolerance",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "analysed_runs",
+   "within_tolerance"
+  ],
+  "format": ",d",
+  "printed": "2,668",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.analysed.max_abs_delta_macro_f1",
+  "description": "reproducibility, analysed S1 and S2 runs: max_abs_delta_macro_f1",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "analysed_runs",
+   "max_abs_delta_macro_f1"
+  ],
+  "format": ".2f",
+  "printed": "3.25",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.all.runs",
+  "description": "reproducibility, all stored S1 and S2 runs: runs",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "total_S1_S2",
+   "runs"
+  ],
+  "format": ",d",
+  "printed": "3,408",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.all.checkpoint",
+  "description": "reproducibility, all stored S1 and S2 runs: checkpoint",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "total_S1_S2",
+   "checkpoint"
+  ],
+  "format": ",d",
+  "printed": "3,402",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.all.config_ok",
+  "description": "reproducibility, all stored S1 and S2 runs: config_ok",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "total_S1_S2",
+   "config_ok"
+  ],
+  "format": ",d",
+  "printed": "3,402",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.all.reexecuted",
+  "description": "reproducibility, all stored S1 and S2 runs: reexecuted",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "total_S1_S2",
+   "reexecuted"
+  ],
+  "format": ",d",
+  "printed": "3,402",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.all.exact",
+  "description": "reproducibility, all stored S1 and S2 runs: exact",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "total_S1_S2",
+   "exact"
+  ],
+  "format": ",d",
+  "printed": "2,363",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.all.within_tolerance",
+  "description": "reproducibility, all stored S1 and S2 runs: within_tolerance",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "total_S1_S2",
+   "within_tolerance"
+  ],
+  "format": ",d",
+  "printed": "3,048",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.s3.records",
+  "description": "S3 run records (no checkpoints)",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "S3",
+   "records"
+  ],
+  "format": "d",
+  "printed": "510",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.retrained.runs",
+  "description": "runs retrained for a missing checkpoint",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "retrained",
+   "runs"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
+  "id": "repro.retrained.exact",
+  "description": "retrained runs equal to their record's macro-F1",
+  "artifact": "results/metrics/reproducibility/summary.json",
+  "path": [
+   "retrained",
+   "exact"
+  ],
+  "format": "d",
+  "printed": "5",
+  "produced_by": "src/evaluation/reproducibility.py"
+ },
+ {
   "id": "emb.tsne.split",
   "description": "t-SNE case: split",
   "artifact": "results/metrics/embedding/tsne_case.json",

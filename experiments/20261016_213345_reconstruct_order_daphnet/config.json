@@ -1,0 +1,11 @@
+{
+ "mode": "reexecute",
+ "datasets": [
+  "daphnet"
+ ],
+ "datasets_dir": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era",
+ "file_order": "sorted",
+ "seeds": null,
+ "device": null,
+ "tag": ""
+}

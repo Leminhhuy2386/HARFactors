@@ -384,11 +384,8 @@ INPUT ./figures/fig02_contrasts_channels.pdf
 INPUT ./figures/fig02_contrasts_channels.pdf
 INPUT ./figures/fig02_contrasts_channels.pdf
 INPUT ./figures/fig02_contrasts_channels.pdf
-INPUT ./figures/fig06_memory.pdf
-INPUT ./figures/fig06_memory.pdf
-INPUT ./figures/fig06_memory.pdf
-INPUT ./figures/fig06_memory.pdf
-INPUT ./figures/fig06_memory.pdf
+INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
@@ -398,8 +395,11 @@ INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regula
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxmi5.vf
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/NewTXMI5.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
-INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
-INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./figures/fig06_memory.pdf
+INPUT ./figures/fig06_memory.pdf
+INPUT ./figures/fig06_memory.pdf
+INPUT ./figures/fig06_memory.pdf
+INPUT ./figures/fig06_memory.pdf
 INPUT ./figures/fig08_embedding.pdf
 INPUT ./figures/fig08_embedding.pdf
 INPUT ./figures/fig08_embedding.pdf

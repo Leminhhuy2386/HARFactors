@@ -1,0 +1,480 @@
+node hpc22.local, job 87005, Fri Oct 16 21:32:43 +07 2026
+NVIDIA RTX A5000, 580.126.09
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+2026-10-16 21:34:07,896 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 21:34:07,896 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 21:34:07,967 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:07,968 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 21:34:07,968 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 21:34:07,985 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:07,985 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 21:34:07,985 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 21:34:08,000 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:08,000 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 21:34:08,000 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 21:34:08,006 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:08,006 - whar-datasets - INFO - Loading windowing
+2026-10-16 21:34:08,165 - whar-datasets - INFO - Selecting activities
+2026-10-16 21:34:08,475 - whar-datasets - INFO - activity_ids from 0 to 1
+2026-10-16 21:34:08,475 - whar-datasets - INFO - subject_ids from 0 to 9
+2026-10-16 21:34:08,508 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:34:08,508 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:34:08,534 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:08,534 - whar-datasets - INFO - Loading samples
+2026-10-16 21:34:13,904 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:34:13,904 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:34:13,944 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:13,944 - whar-datasets - INFO - Loading samples
+2026-10-16 21:34:18,113 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:34:18,113 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:34:18,151 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:18,151 - whar-datasets - INFO - Loading samples
+2026-10-16 21:34:22,762 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:34:22,762 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:34:22,811 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:22,811 - whar-datasets - INFO - Loading samples
+2026-10-16 21:34:27,876 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:34:27,876 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:34:27,918 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:27,918 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+2026-10-16 21:34:32,258 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:34:32,259 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:34:32,305 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:34:32,306 - whar-datasets - INFO - Loading samples
+2026-10-16 21:34:36,492 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:34:36,492 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:34:36,493 - whar-datasets - INFO - Hash is not up to date
+2026-10-16 21:34:42,505 - whar-datasets - INFO - Computing samples
+2026-10-16 21:34:42,506 - whar-datasets - INFO - Getting normalization parameters
+2026-10-16 21:34:43,006 - whar-datasets - INFO - Normalizing and transforming windows (parallelized)
+Preparing windows (dask):   0%|          | 0/11161 [00:00<?, ?it/s]/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+Preparing windows (dask):   0%|          | 1/11161 [00:08<24:58:46,  8.06s/it]Preparing windows (dask):   0%|          | 2/11161 [00:08<11:50:23,  3.82s/it]Preparing windows (dask):   0%|          | 3/11161 [00:09<7:41:31,  2.48s/it] Preparing windows (dask):   1%|          | 61/11161 [00:09<12:08, 15.25it/s] Preparing windows (dask):   1%|          | 120/11161 [00:10<05:10, 35.52it/s]Preparing windows (dask):   2%|▏         | 179/11161 [00:10<02:56, 62.07it/s]Preparing windows (dask):   2%|▏         | 237/11161 [00:10<01:54, 95.27it/s]Preparing windows (dask):   3%|▎         | 296/11161 [00:10<01:19, 136.59it/s]Preparing windows (dask):   3%|▎         | 355/11161 [00:10<00:58, 184.77it/s]Preparing windows (dask):   4%|▎         | 414/11161 [00:10<00:45, 237.99it/s]Preparing windows (dask):   4%|▍         | 473/11161 [00:10<00:36, 293.21it/s]Preparing windows (dask):   5%|▍         | 532/11161 [00:10<00:30, 347.08it/s]Preparing windows (dask):   5%|▌         | 591/11161 [00:10<00:26, 396.52it/s]Preparing windows (dask):   6%|▌         | 650/11161 [00:10<00:23, 439.31it/s]Preparing windows (dask):   6%|▋         | 708/11161 [00:11<00:22, 473.79it/s]Preparing windows (dask):   7%|▋         | 767/11161 [00:11<00:20, 502.52it/s]Preparing windows (dask):   7%|▋         | 826/11161 [00:11<00:19, 524.62it/s]Preparing windows (dask):   8%|▊         | 885/11161 [00:11<00:18, 541.02it/s]Preparing windows (dask):   8%|▊         | 944/11161 [00:11<00:18, 552.47it/s]Preparing windows (dask):   9%|▉         | 1003/11161 [00:11<00:18, 551.28it/s]Preparing windows (dask):  10%|▉         | 1062/11161 [00:11<00:18, 560.83it/s]Preparing windows (dask):  10%|█         | 1121/11161 [00:11<00:17, 566.56it/s]Preparing windows (dask):  11%|█         | 1179/11161 [00:11<00:17, 570.32it/s]Preparing windows (dask):  11%|█         | 1237/11161 [00:11<00:17, 573.13it/s]Preparing windows (dask):  12%|█▏        | 1295/11161 [00:12<00:17, 573.70it/s]Preparing windows (dask):  12%|█▏        | 1354/11161 [00:12<00:17, 575.70it/s]Preparing windows (dask):  13%|█▎        | 1412/11161 [00:12<00:16, 576.40it/s]Preparing windows (dask):  13%|█▎        | 1470/11161 [00:12<00:16, 577.17it/s]Preparing windows (dask):  14%|█▎        | 1528/11161 [00:12<00:16, 577.40it/s]Preparing windows (dask):  14%|█▍        | 1587/11161 [00:12<00:16, 578.41it/s]Preparing windows (dask):  15%|█▍        | 1646/11161 [00:12<00:16, 579.06it/s]Preparing windows (dask):  15%|█▌        | 1705/11161 [00:12<00:16, 581.82it/s]Preparing windows (dask):  16%|█▌        | 1764/11161 [00:12<00:16, 583.37it/s]Preparing windows (dask):  16%|█▋        | 1823/11161 [00:12<00:15, 584.84it/s]Preparing windows (dask):  17%|█▋        | 1882/11161 [00:13<00:15, 585.44it/s]Preparing windows (dask):  17%|█▋        | 1941/11161 [00:13<00:15, 585.28it/s]Preparing windows (dask):  18%|█▊        | 2000/11161 [00:13<00:15, 584.98it/s]Preparing windows (dask):  18%|█▊        | 2059/11161 [00:13<00:15, 585.63it/s]Preparing windows (dask):  19%|█▉        | 2119/11161 [00:13<00:15, 587.75it/s]Preparing windows (dask):  20%|█▉        | 2178/11161 [00:13<00:15, 587.28it/s]Preparing windows (dask):  20%|██        | 2237/11161 [00:13<00:15, 587.81it/s]Preparing windows (dask):  21%|██        | 2296/11161 [00:13<00:15, 586.90it/s]Preparing windows (dask):  21%|██        | 2356/11161 [00:13<00:14, 588.39it/s]Preparing windows (dask):  22%|██▏       | 2415/11161 [00:13<00:14, 588.28it/s]Preparing windows (dask):  22%|██▏       | 2475/11161 [00:14<00:14, 588.93it/s]Preparing windows (dask):  23%|██▎       | 2534/11161 [00:14<00:14, 587.99it/s]Preparing windows (dask):  23%|██▎       | 2593/11161 [00:14<00:14, 587.93it/s]Preparing windows (dask):  24%|██▍       | 2652/11161 [00:14<00:14, 586.91it/s]Preparing windows (dask):  24%|██▍       | 2711/11161 [00:14<00:14, 586.32it/s]Preparing windows (dask):  25%|██▍       | 2770/11161 [00:14<00:14, 585.72it/s]Preparing windows (dask):  25%|██▌       | 2830/11161 [00:14<00:14, 586.99it/s]Preparing windows (dask):  26%|██▌       | 2889/11161 [00:14<00:14, 586.57it/s]Preparing windows (dask):  26%|██▋       | 2948/11161 [00:14<00:13, 587.26it/s]Preparing windows (dask):  27%|██▋       | 3007/11161 [00:14<00:13, 586.95it/s]Preparing windows (dask):  27%|██▋       | 3066/11161 [00:15<00:13, 586.04it/s]Preparing windows (dask):  28%|██▊       | 3125/11161 [00:15<00:13, 586.74it/s]Preparing windows (dask):  29%|██▊       | 3184/11161 [00:15<00:13, 586.09it/s]Preparing windows (dask):  29%|██▉       | 3243/11161 [00:15<00:13, 584.96it/s]Preparing windows (dask):  30%|██▉       | 3303/11161 [00:15<00:13, 588.38it/s]Preparing windows (dask):  30%|███       | 3362/11161 [00:15<00:13, 588.21it/s]Preparing windows (dask):  31%|███       | 3421/11161 [00:15<00:13, 588.67it/s]Preparing windows (dask):  31%|███       | 3480/11161 [00:15<00:13, 589.00it/s]Preparing windows (dask):  32%|███▏      | 3539/11161 [00:15<00:12, 588.82it/s]Preparing windows (dask):  32%|███▏      | 3598/11161 [00:15<00:12, 589.03it/s]Preparing windows (dask):  33%|███▎      | 3657/11161 [00:16<00:12, 589.05it/s]Preparing windows (dask):  33%|███▎      | 3716/11161 [00:16<00:12, 588.74it/s]Preparing windows (dask):  34%|███▍      | 3775/11161 [00:16<00:12, 587.42it/s]Preparing windows (dask):  34%|███▍      | 3834/11161 [00:16<00:12, 587.33it/s]Preparing windows (dask):  35%|███▍      | 3893/11161 [00:16<00:12, 587.01it/s]Preparing windows (dask):  35%|███▌      | 3952/11161 [00:16<00:12, 586.97it/s]Preparing windows (dask):  36%|███▌      | 4011/11161 [00:16<00:12, 586.26it/s]Preparing windows (dask):  36%|███▋      | 4070/11161 [00:16<00:12, 585.97it/s]Preparing windows (dask):  37%|███▋      | 4129/11161 [00:16<00:12, 585.45it/s]Preparing windows (dask):  38%|███▊      | 4189/11161 [00:16<00:11, 587.42it/s]Preparing windows (dask):  38%|███▊      | 4248/11161 [00:17<00:11, 587.45it/s]Preparing windows (dask):  39%|███▊      | 4307/11161 [00:17<00:11, 585.86it/s]Preparing windows (dask):  39%|███▉      | 4366/11161 [00:17<00:11, 585.51it/s]Preparing windows (dask):  40%|███▉      | 4425/11161 [00:17<00:11, 585.15it/s]Preparing windows (dask):  40%|████      | 4484/11161 [00:17<00:11, 585.03it/s]Preparing windows (dask):  41%|████      | 4543/11161 [00:17<00:11, 585.42it/s]Preparing windows (dask):  41%|████      | 4602/11161 [00:17<00:11, 585.86it/s]Preparing windows (dask):  42%|████▏     | 4661/11161 [00:17<00:11, 586.20it/s]Preparing windows (dask):  42%|████▏     | 4721/11161 [00:17<00:10, 587.54it/s]Preparing windows (dask):  43%|████▎     | 4780/11161 [00:17<00:10, 587.70it/s]Preparing windows (dask):  43%|████▎     | 4839/11161 [00:18<00:10, 586.60it/s]Preparing windows (dask):  44%|████▍     | 4898/11161 [00:18<00:10, 586.89it/s]Preparing windows (dask):  44%|████▍     | 4957/11161 [00:18<00:10, 586.09it/s]Preparing windows (dask):  45%|████▍     | 5016/11161 [00:18<00:10, 584.81it/s]Preparing windows (dask):  45%|████▌     | 5075/11161 [00:18<00:10, 584.81it/s]Preparing windows (dask):  46%|████▌     | 5134/11161 [00:18<00:10, 585.33it/s]Preparing windows (dask):  47%|████▋     | 5193/11161 [00:18<00:10, 585.64it/s]Preparing windows (dask):  47%|████▋     | 5252/11161 [00:18<00:10, 585.74it/s]Preparing windows (dask):  48%|████▊     | 5311/11161 [00:18<00:09, 585.00it/s]Preparing windows (dask):  48%|████▊     | 5370/11161 [00:18<00:09, 585.01it/s]Preparing windows (dask):  49%|████▊     | 5429/11161 [00:19<00:09, 586.45it/s]Preparing windows (dask):  49%|████▉     | 5488/11161 [00:19<00:09, 587.21it/s]Preparing windows (dask):  50%|████▉     | 5547/11161 [00:19<00:09, 586.01it/s]Preparing windows (dask):  50%|█████     | 5606/11161 [00:19<00:09, 585.48it/s]Preparing windows (dask):  51%|█████     | 5665/11161 [00:19<00:09, 585.02it/s]Preparing windows (dask):  51%|█████▏    | 5724/11161 [00:19<00:09, 585.44it/s]Preparing windows (dask):  52%|█████▏    | 5783/11161 [00:19<00:09, 586.16it/s]Preparing windows (dask):  52%|█████▏    | 5842/11161 [00:19<00:09, 586.20it/s]Preparing windows (dask):  53%|█████▎    | 5901/11161 [00:19<00:08, 586.91it/s]Preparing windows (dask):  53%|█████▎    | 5960/11161 [00:19<00:08, 587.49it/s]Preparing windows (dask):  54%|█████▍    | 6019/11161 [00:20<00:08, 586.78it/s]Preparing windows (dask):  54%|█████▍    | 6078/11161 [00:20<00:08, 587.06it/s]Preparing windows (dask):  55%|█████▍    | 6137/11161 [00:20<00:08, 587.02it/s]Preparing windows (dask):  56%|█████▌    | 6196/11161 [00:20<00:08, 586.60it/s]Preparing windows (dask):  56%|█████▌    | 6255/11161 [00:20<00:08, 586.11it/s]Preparing windows (dask):  57%|█████▋    | 6314/11161 [00:20<00:08, 586.41it/s]Preparing windows (dask):  57%|█████▋    | 6373/11161 [00:20<00:08, 586.42it/s]Preparing windows (dask):  58%|█████▊    | 6432/11161 [00:20<00:08, 586.29it/s]Preparing windows (dask):  58%|█████▊    | 6491/11161 [00:20<00:07, 585.57it/s]Preparing windows (dask):  59%|█████▊    | 6550/11161 [00:20<00:07, 586.02it/s]Preparing windows (dask):  59%|█████▉    | 6609/11161 [00:21<00:07, 586.56it/s]Preparing windows (dask):  60%|█████▉    | 6668/11161 [00:21<00:07, 586.90it/s]Preparing windows (dask):  60%|██████    | 6728/11161 [00:21<00:07, 588.68it/s]Preparing windows (dask):  61%|██████    | 6788/11161 [00:21<00:07, 589.30it/s]Preparing windows (dask):  61%|██████▏   | 6847/11161 [00:21<00:07, 588.50it/s]Preparing windows (dask):  62%|██████▏   | 6906/11161 [00:21<00:07, 588.45it/s]Preparing windows (dask):  62%|██████▏   | 6965/11161 [00:21<00:07, 587.59it/s]Preparing windows (dask):  63%|██████▎   | 7024/11161 [00:21<00:07, 584.18it/s]Preparing windows (dask):  63%|██████▎   | 7083/11161 [00:21<00:07, 580.38it/s]Preparing windows (dask):  64%|██████▍   | 7142/11161 [00:22<00:06, 577.86it/s]Preparing windows (dask):  65%|██████▍   | 7200/11161 [00:22<00:06, 576.60it/s]Preparing windows (dask):  65%|██████▌   | 7258/11161 [00:22<00:06, 577.23it/s]Preparing windows (dask):  66%|██████▌   | 7316/11161 [00:22<00:06, 576.87it/s]Preparing windows (dask):  66%|██████▌   | 7374/11161 [00:22<00:06, 577.47it/s]Preparing windows (dask):  67%|██████▋   | 7432/11161 [00:22<00:06, 577.40it/s]Preparing windows (dask):  67%|██████▋   | 7490/11161 [00:22<00:06, 577.79it/s]Preparing windows (dask):  68%|██████▊   | 7549/11161 [00:22<00:06, 578.93it/s]Preparing windows (dask):  68%|██████▊   | 7608/11161 [00:22<00:06, 579.73it/s]Preparing windows (dask):  69%|██████▊   | 7667/11161 [00:22<00:06, 580.01it/s]Preparing windows (dask):  69%|██████▉   | 7726/11161 [00:23<00:05, 580.21it/s]Preparing windows (dask):  70%|██████▉   | 7785/11161 [00:23<00:05, 580.37it/s]Preparing windows (dask):  70%|███████   | 7844/11161 [00:23<00:05, 579.02it/s]Preparing windows (dask):  71%|███████   | 7902/11161 [00:23<00:05, 578.92it/s]Preparing windows (dask):  71%|███████▏  | 7961/11161 [00:23<00:05, 579.34it/s]Preparing windows (dask):  72%|███████▏  | 8020/11161 [00:23<00:05, 579.73it/s]Preparing windows (dask):  72%|███████▏  | 8079/11161 [00:23<00:05, 580.48it/s]Preparing windows (dask):  73%|███████▎  | 8138/11161 [00:23<00:05, 580.95it/s]Preparing windows (dask):  73%|███████▎  | 8197/11161 [00:23<00:05, 580.98it/s]Preparing windows (dask):  74%|███████▍  | 8256/11161 [00:23<00:05, 580.56it/s]Preparing windows (dask):  75%|███████▍  | 8315/11161 [00:24<00:04, 579.95it/s]Preparing windows (dask):  75%|███████▌  | 8374/11161 [00:24<00:04, 580.49it/s]Preparing windows (dask):  76%|███████▌  | 8433/11161 [00:24<00:04, 580.20it/s]Preparing windows (dask):  76%|███████▌  | 8492/11161 [00:24<00:04, 579.95it/s]Preparing windows (dask):  77%|███████▋  | 8551/11161 [00:24<00:04, 580.11it/s]Preparing windows (dask):  77%|███████▋  | 8610/11161 [00:24<00:04, 579.99it/s]Preparing windows (dask):  78%|███████▊  | 8669/11161 [00:24<00:04, 580.26it/s]Preparing windows (dask):  78%|███████▊  | 8728/11161 [00:24<00:04, 580.65it/s]Preparing windows (dask):  79%|███████▊  | 8787/11161 [00:24<00:04, 580.20it/s]Preparing windows (dask):  79%|███████▉  | 8846/11161 [00:24<00:03, 580.84it/s]Preparing windows (dask):  80%|███████▉  | 8905/11161 [00:25<00:03, 580.95it/s]Preparing windows (dask):  80%|████████  | 8964/11161 [00:25<00:03, 579.61it/s]Preparing windows (dask):  81%|████████  | 9022/11161 [00:25<00:03, 579.72it/s]Preparing windows (dask):  81%|████████▏ | 9080/11161 [00:25<00:03, 579.70it/s]Preparing windows (dask):  82%|████████▏ | 9139/11161 [00:25<00:03, 580.23it/s]Preparing windows (dask):  82%|████████▏ | 9198/11161 [00:25<00:03, 580.15it/s]Preparing windows (dask):  83%|████████▎ | 9257/11161 [00:25<00:03, 579.36it/s]Preparing windows (dask):  83%|████████▎ | 9315/11161 [00:25<00:03, 579.42it/s]Preparing windows (dask):  84%|████████▍ | 9374/11161 [00:25<00:03, 580.15it/s]Preparing windows (dask):  85%|████████▍ | 9433/11161 [00:25<00:02, 580.90it/s]Preparing windows (dask):  85%|████████▌ | 9492/11161 [00:26<00:02, 580.76it/s]Preparing windows (dask):  86%|████████▌ | 9551/11161 [00:26<00:02, 580.87it/s]Preparing windows (dask):  86%|████████▌ | 9610/11161 [00:26<00:02, 581.27it/s]Preparing windows (dask):  87%|████████▋ | 9669/11161 [00:26<00:02, 583.37it/s]Preparing windows (dask):  87%|████████▋ | 9729/11161 [00:26<00:02, 586.17it/s]Preparing windows (dask):  88%|████████▊ | 9788/11161 [00:26<00:02, 587.31it/s]Preparing windows (dask):  88%|████████▊ | 9848/11161 [00:26<00:02, 588.31it/s]Preparing windows (dask):  89%|████████▉ | 9908/11161 [00:26<00:02, 589.03it/s]Preparing windows (dask):  89%|████████▉ | 9968/11161 [00:26<00:02, 590.53it/s]Preparing windows (dask):  90%|████████▉ | 10028/11161 [00:26<00:01, 589.32it/s]Preparing windows (dask):  90%|█████████ | 10087/11161 [00:27<00:01, 588.23it/s]Preparing windows (dask):  91%|█████████ | 10146/11161 [00:27<00:01, 587.91it/s]Preparing windows (dask):  91%|█████████▏| 10205/11161 [00:27<00:01, 586.86it/s]Preparing windows (dask):  92%|█████████▏| 10264/11161 [00:27<00:01, 586.51it/s]Preparing windows (dask):  92%|█████████▏| 10323/11161 [00:27<00:01, 585.52it/s]Preparing windows (dask):  93%|█████████▎| 10382/11161 [00:27<00:01, 584.94it/s]Preparing windows (dask):  94%|█████████▎| 10441/11161 [00:27<00:01, 585.02it/s]Preparing windows (dask):  94%|█████████▍| 10501/11161 [00:27<00:01, 587.07it/s]Preparing windows (dask):  95%|█████████▍| 10561/11161 [00:27<00:01, 588.98it/s]Preparing windows (dask):  95%|█████████▌| 10620/11161 [00:27<00:00, 588.53it/s]Preparing windows (dask):  96%|█████████▌| 10679/11161 [00:28<00:00, 587.70it/s]Preparing windows (dask):  96%|█████████▌| 10738/11161 [00:28<00:00, 586.96it/s]Preparing windows (dask):  97%|█████████▋| 10798/11161 [00:28<00:00, 588.75it/s]Preparing windows (dask):  97%|█████████▋| 10857/11161 [00:28<00:00, 587.56it/s]Preparing windows (dask):  98%|█████████▊| 10916/11161 [00:28<00:00, 585.62it/s]Preparing windows (dask):  98%|█████████▊| 10975/11161 [00:28<00:00, 583.84it/s]Preparing windows (dask):  99%|█████████▉| 11034/11161 [00:28<00:00, 584.57it/s]Preparing windows (dask):  99%|█████████▉| 11093/11161 [00:28<00:00, 584.79it/s]Preparing windows (dask): 100%|█████████▉| 11152/11161 [00:28<00:00, 585.57it/s]Preparing windows (dask): 11162it [00:28, 585.57it/s]                           Preparing windows (dask): 11162it [00:28, 386.14it/s]
+2026-10-16 21:35:12,082 - whar-datasets - INFO - Saving samples
+2026-10-16 21:35:12,562 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+2026-10-16 21:35:16,160 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:35:16,160 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:35:16,208 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:35:16,209 - whar-datasets - INFO - Loading samples
+2026-10-16 21:35:20,711 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:35:20,711 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:35:20,796 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:35:20,796 - whar-datasets - INFO - Loading samples
+2026-10-16 21:35:25,621 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:35:25,621 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:35:25,680 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:35:25,680 - whar-datasets - INFO - Loading samples
+2026-10-16 21:35:29,752 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 21:35:29,752 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 21:35:29,769 - whar-datasets - INFO - Hash is up to date
+2026-10-16 21:35:29,769 - whar-datasets - INFO - Loading samples
+daphnet recurrencenet seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet recurrencenet seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet recurrencenet seed 2: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet s4d seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet s4d seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet s4d seed 2: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet hystnet_sel_clock seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet hystnet_sel_clock seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet hystnet_sel_clock seed 2: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet quantilenet seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet quantilenet seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet quantilenet seed 2: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet mamba seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet mamba seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet mamba seed 2: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet hystnet_nomem seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet hystnet_nomem seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet hystnet_nomem seed 2: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet recstatnet seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet recstatnet seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet recstatnet seed 2: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet lawnet_rec seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet lawnet_rec seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet lawnet_rec seed 2: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet lawnet seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet lawnet seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:620: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+daphnet lawnet seed 2: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet statnet seed 0: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet statnet seed 1: done
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+daphnet statnet seed 2: done
+{
+ "dataset": "daphnet",
+ "method": "per-checkpoint label mapping and test group (by the record's test size where it is unique, else by accuracy); train-only z-score on all non-test windows",
+ "runs": 300,
+ "identified_by": {
+  "test size": 300
+ },
+ "test_size_equal": 300,
+ "within_tolerance": 264,
+ "median_abs_delta_macro_f1": 0.07912218570709229,
+ "max_abs_delta_macro_f1": 1.7387866973876953,
+ "mean_macro_f1": 41.69552880525589,
+ "mean_stored_macro_f1": 41.68767445286115
+}
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+2026-10-16 22:15:52,087 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 22:15:52,087 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 22:15:52,137 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:15:52,137 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 22:15:52,137 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 22:15:52,167 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:15:52,167 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 22:15:52,167 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 22:15:52,183 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:15:52,183 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 22:15:52,183 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 22:15:52,187 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:15:52,187 - whar-datasets - INFO - Loading windowing
+2026-10-16 22:15:52,341 - whar-datasets - INFO - Selecting activities
+2026-10-16 22:15:52,346 - whar-datasets - INFO - activity_ids from 0 to 5
+2026-10-16 22:15:52,346 - whar-datasets - INFO - subject_ids from 0 to 23
+2026-10-16 22:15:52,391 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:15:52,391 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:15:52,453 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:15:52,453 - whar-datasets - INFO - Loading samples
+2026-10-16 22:15:58,123 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:15:58,124 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:15:58,162 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:15:58,162 - whar-datasets - INFO - Loading samples
+2026-10-16 22:16:03,949 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:16:03,949 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:16:03,992 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:16:03,992 - whar-datasets - INFO - Loading samples
+2026-10-16 22:16:10,311 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:16:10,311 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:16:10,329 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:16:10,329 - whar-datasets - INFO - Loading samples
+2026-10-16 22:16:16,829 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:16:16,829 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:16:16,938 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:16:16,938 - whar-datasets - INFO - Loading samples
+2026-10-16 22:16:24,034 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:16:24,035 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:16:24,056 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:16:24,056 - whar-datasets - INFO - Loading samples
+2026-10-16 22:16:29,997 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:16:29,997 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:16:30,032 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:16:30,033 - whar-datasets - INFO - Loading samples
+2026-10-16 22:16:36,595 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:16:36,595 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:16:36,613 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:16:36,613 - whar-datasets - INFO - Loading samples
+2026-10-16 22:16:42,899 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:16:42,900 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:16:42,939 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:16:42,939 - whar-datasets - INFO - Loading samples
+2026-10-16 22:16:48,791 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:16:48,791 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:16:48,870 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:16:48,870 - whar-datasets - INFO - Loading samples
+2026-10-16 22:16:54,868 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:16:54,868 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:16:54,876 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:16:54,876 - whar-datasets - INFO - Loading samples
+motion_sense recurrencenet seed 0: done
+2026-10-16 22:17:09,506 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:17:09,507 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:17:09,522 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:17:09,522 - whar-datasets - INFO - Loading samples
+2026-10-16 22:17:16,099 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:17:16,099 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:17:16,102 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:17:16,102 - whar-datasets - INFO - Loading samples
+2026-10-16 22:17:23,127 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:17:23,127 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:17:23,180 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:17:23,180 - whar-datasets - INFO - Loading samples
+2026-10-16 22:17:29,915 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:17:29,915 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:17:29,958 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:17:29,958 - whar-datasets - INFO - Loading samples
+2026-10-16 22:17:36,497 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:17:36,498 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:17:36,581 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:17:36,582 - whar-datasets - INFO - Loading samples
+2026-10-16 22:17:42,191 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:17:42,191 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:17:42,208 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:17:42,208 - whar-datasets - INFO - Loading samples
+2026-10-16 22:17:48,270 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:17:48,270 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:17:48,315 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:17:48,315 - whar-datasets - INFO - Loading samples
+2026-10-16 22:17:54,450 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:17:54,450 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:17:54,478 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:17:54,478 - whar-datasets - INFO - Loading samples
+motion_sense recurrencenet seed 1: done
+2026-10-16 22:18:01,298 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:18:01,298 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:18:01,397 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:18:01,397 - whar-datasets - INFO - Loading samples
+2026-10-16 22:18:07,933 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:18:07,933 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:18:08,018 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:18:08,018 - whar-datasets - INFO - Loading samples
+motion_sense recurrencenet seed 2: done
+motion_sense s4d seed 0: done
+motion_sense s4d seed 1: done
+motion_sense s4d seed 2: done
+motion_sense recstatnet seed 0: done
+motion_sense recstatnet seed 1: done
+motion_sense recstatnet seed 2: done
+motion_sense lawnet_rec seed 0: done
+2026-10-16 22:22:46,862 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:22:46,862 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:22:46,904 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:22:46,904 - whar-datasets - INFO - Loading samples
+motion_sense lawnet_rec seed 1: done
+motion_sense lawnet_rec seed 2: done
+{
+ "dataset": "motion_sense",
+ "method": "per-checkpoint label mapping and test group (by the record's test size where it is unique, else by accuracy); train-only z-score on all non-test windows",
+ "runs": 120,
+ "identified_by": {
+  "test size, then accuracy": 93,
+  "test size": 27
+ },
+ "test_size_equal": 120,
+ "within_tolerance": 116,
+ "median_abs_delta_macro_f1": 0.0031262636184692383,
+ "max_abs_delta_macro_f1": 0.3584146499633789,
+ "mean_macro_f1": 92.11010113358498,
+ "mean_stored_macro_f1": 92.1060570081075
+}
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+2026-10-16 22:24:15,847 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 22:24:15,847 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 22:24:15,883 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:15,883 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 22:24:15,883 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 22:24:15,904 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:15,904 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 22:24:15,905 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 22:24:15,950 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:15,950 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 22:24:15,950 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 22:24:15,981 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:15,981 - whar-datasets - INFO - Loading windowing
+2026-10-16 22:24:16,116 - whar-datasets - INFO - Selecting activities
+2026-10-16 22:24:16,120 - whar-datasets - INFO - activity_ids from 0 to 18
+2026-10-16 22:24:16,120 - whar-datasets - INFO - subject_ids from 0 to 7
+2026-10-16 22:24:16,178 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:24:16,178 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:24:16,201 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:16,201 - whar-datasets - INFO - Loading samples
+2026-10-16 22:24:22,876 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:24:22,876 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:24:22,896 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:22,896 - whar-datasets - INFO - Loading samples
+2026-10-16 22:24:28,549 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:24:28,550 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:24:28,564 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:28,565 - whar-datasets - INFO - Loading samples
+2026-10-16 22:24:34,916 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:24:34,916 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:24:34,929 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:34,929 - whar-datasets - INFO - Loading samples
+2026-10-16 22:24:41,171 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:24:41,171 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:24:41,174 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:41,174 - whar-datasets - INFO - Loading samples
+2026-10-16 22:24:47,245 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:24:47,245 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:24:47,260 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:47,260 - whar-datasets - INFO - Loading samples
+2026-10-16 22:24:54,047 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:24:54,047 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:24:54,068 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:24:54,068 - whar-datasets - INFO - Loading samples
+2026-10-16 22:25:00,313 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:25:00,313 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:25:00,359 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:25:00,359 - whar-datasets - INFO - Loading samples
+2026-10-16 22:25:06,791 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 22:25:06,791 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 22:25:06,834 - whar-datasets - INFO - Hash is up to date
+2026-10-16 22:25:06,834 - whar-datasets - INFO - Loading samples
+dsads recurrencenet seed 0: done
+dsads recurrencenet seed 1: done
+dsads recurrencenet seed 2: done
+dsads s4d seed 0: done
+dsads s4d seed 1: done
+dsads s4d seed 2: done
+dsads hystnet_sel_clock seed 0: done
+dsads hystnet_sel_clock seed 1: done
+dsads hystnet_sel_clock seed 2: done
+dsads quantilenet seed 0: done
+dsads quantilenet seed 1: done
+dsads quantilenet seed 2: done
+dsads mamba seed 0: done
+dsads mamba seed 1: done
+dsads mamba seed 2: done
+dsads hystnet_nomem seed 0: done
+dsads hystnet_nomem seed 1: done
+dsads hystnet_nomem seed 2: done
+dsads recstatnet seed 0: done
+dsads recstatnet seed 1: done
+dsads recstatnet seed 2: done
+dsads lawnet_rec seed 0: done
+dsads lawnet_rec seed 1: done
+dsads lawnet_rec seed 2: done
+dsads lawnet seed 0: done
+dsads lawnet seed 1: done
+dsads lawnet seed 2: done
+dsads statnet seed 0: done
+dsads statnet seed 1: done
+dsads statnet seed 2: done
+{
+ "dataset": "dsads",
+ "method": "per-checkpoint label mapping and test group (by the record's test size where it is unique, else by accuracy); train-only z-score on all non-test windows",
+ "runs": 240,
+ "identified_by": {
+  "test size, then accuracy": 240
+ },
+ "test_size_equal": 240,
+ "within_tolerance": 28,
+ "median_abs_delta_macro_f1": 0.31481385231018066,
+ "max_abs_delta_macro_f1": 2.2454380989074707,
+ "mean_macro_f1": 83.90733321507771,
+ "mean_stored_macro_f1": 84.02196891605854
+}

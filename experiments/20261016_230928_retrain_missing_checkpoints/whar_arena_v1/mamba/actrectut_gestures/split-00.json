@@ -1,0 +1,54 @@
+{
+  "protocol_id": "whar_arena_v1",
+  "protocol_hash": "e8739ef2c5b36c99",
+  "model_id": "mamba",
+  "dataset_id": "actrectut_gestures",
+  "split_id": "split-00",
+  "train_seed": 0,
+  "fingerprint": "a1e10d70d73311159d68c3bca664f32230d95f886fe2a75308e4cc205fd4a4a8",
+  "status": "complete",
+  "metrics": {
+    "macro_f1": 0.26609787344932556,
+    "accuracy": 0.5039370059967041,
+    "balanced_accuracy": 0.41834524583062593,
+    "val_macro_f1": 0.75
+  },
+  "source": {
+    "kind": "local_training",
+    "framework": "torch",
+    "runner": "HARFactors/src/training/run_whar.py",
+    "split_identifier": "group_kfold_0",
+    "train_size": 334,
+    "val_size": 83,
+    "test_size": 381,
+    "best_epoch": 7,
+    "epochs_ran": 17
+  },
+  "model": {
+    "class": "MambaClassifier",
+    "config": {
+      "d_model": 32,
+      "d_state": 16,
+      "num_layers": 2
+    },
+    "params": 20940,
+    "input_channels": 15,
+    "window_length": 96,
+    "num_classes": 12,
+    "sampling_freq": 32
+  },
+  "whar_code": {
+    "whar-datasets": "144e006",
+    "whar-models": "9b65004",
+    "whar-arena": "19b3019"
+  },
+  "datasets_dir": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era",
+  "device": "NVIDIA RTX A5000",
+  "torch": "2.14.0+cu126",
+  "train_seconds": 9.7,
+  "fast_paths": false,
+  "peak_gpu_mb": 892.3,
+  "tau": null,
+  "hysteresis_widths": null,
+  "sensor_triples": null
+}

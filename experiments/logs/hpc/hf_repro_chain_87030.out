@@ -1,0 +1,4 @@
+node hpc08.local, job 87030, Fri Oct 16 23:42:11 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+slurmstepd: error: *** JOB 87030 ON hpc08 CANCELLED AT 2026-10-16T23:42:12 ***

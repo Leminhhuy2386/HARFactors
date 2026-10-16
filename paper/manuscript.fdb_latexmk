@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript"] 1792136281.80619 "manuscript.aux" "manuscript.bbl" "manuscript" 1792136282.86076 0
+["bibtex manuscript"] 1792169583.38378 "manuscript.aux" "manuscript.bbl" "manuscript" 1792169584.39494 0
   "./references.bib" 1792115993 11357 999b0212f3d7cd28dcdc9b1036bc083c ""
   "/home/huy.leminh/texlive/2026/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "manuscript.aux" 1792136282 10167 86f668e13d1a1785382dd718d067910d "pdflatex"
+  "manuscript.aux" 1792169584 10167 e8b441aeedd905f72d40d0009c219f01 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1792136281.94365 "manuscript.tex" "manuscript.pdf" "manuscript" 1792136282.86136 0
+["pdflatex"] 1792169583.50682 "manuscript.tex" "manuscript.pdf" "manuscript" 1792169584.39558 0
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -127,9 +127,9 @@
   "figures/fig07_split_spread.pdf" 1792136277 46838 2c2bfe1547227a3021a2d8fb27268531 ""
   "figures/fig08_embedding.pdf" 1792136278 219096 a27276d8f5c2ee0d4ebf412d8824314c ""
   "figures/fig09_validation.pdf" 1792136279 30152 21be35e6922366f39fa7d32ee6d12ab3 ""
-  "manuscript.aux" 1792136282 10167 86f668e13d1a1785382dd718d067910d "pdflatex"
-  "manuscript.bbl" 1792136281 7651 01d42d67b2d0f4bcfff7c4818e0b425a "bibtex manuscript"
-  "manuscript.tex" 1792136280 29220 010e5ac97bbc56bbad43791d7659555b ""
+  "manuscript.aux" 1792169584 10167 e8b441aeedd905f72d40d0009c219f01 "pdflatex"
+  "manuscript.bbl" 1792169583 7651 01d42d67b2d0f4bcfff7c4818e0b425a "bibtex manuscript"
+  "manuscript.tex" 1792169582 29836 a4ec7695b9139a59cec1952d5a9ce7f7 ""
   "tab01_variance_components.tex" 1792136266 652 e717c4cf5968f95c4401bdd7bb33ab68 ""
   "tab02_datasets.tex" 1792136273 1444 28786755c59b6d3bb5af3d3b6968eda2 ""
   "tab03_models.tex" 1792136275 1115 ea7612b10c884b7fbd68679bf44ff7e7 ""

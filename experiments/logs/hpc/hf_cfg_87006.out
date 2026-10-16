@@ -1,0 +1,8 @@
+node hpc01.local, job 87006, Fri Oct 16 21:32:41 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+Traceback (most recent call last):
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/export_configs.py", line 26, in <module>
+    from whar_arena.paths import PROTOCOL_PATH  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'whar_arena'

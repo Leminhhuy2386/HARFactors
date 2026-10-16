@@ -29,5 +29,8 @@ if [[ -n ${DEPEND:-} ]]; then ARGS+=(--dependency="$DEPEND"); fi
 if [[ -n ${QOS:-} ]]; then ARGS+=(--qos="$QOS"); fi
 
 CMD=$(printf '%q ' "$@")
-sbatch "${ARGS[@]}" --wrap="source scripts/hpc/env.sh && echo \"node \$(hostname), job \$SLURM_JOB_ID, \$(date)\" && (nvidia-smi --query-gpu=name,driver_version --format=csv,noheader 2>/dev/null || true) && $CMD"
+# no GPU requested: hide the node's GPUs, which Slurm does not fence off for a job without a GPU allocation
+HIDE=""
+if [[ ${GPUS:-1} == 0 || ( $PART != gpu && $PART != dgx-* ) ]]; then HIDE="export CUDA_VISIBLE_DEVICES='' && "; fi
+sbatch "${ARGS[@]}" --wrap="${HIDE}source scripts/hpc/env.sh && echo \"node \$(hostname), job \$SLURM_JOB_ID, \$(date)\" && (nvidia-smi --query-gpu=name,driver_version --format=csv,noheader 2>/dev/null || true) && $CMD"
 echo "log: $LOG_DIR/${NAME}_<jobid>.out   monitor: squeue -u $USER; tail -f $LOG_DIR/${NAME}_<jobid>.out"

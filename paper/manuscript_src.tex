@@ -224,13 +224,19 @@ benchmark's Random Forest, re-run with our code, reproduces its published macro-
 test windows; an independent REML implementation and negative controls (e.g.\ permuting network labels within cells)
 confirmed the analysis; and S4D retrained on permuted training labels (\val{ls.runs} runs on UP-Fall and UCA-EHAR)
 fell to chance, with a test macro-F1 of \val{ls.mean_shuffled_test_macro_f1} against \val{ls.mean_chance_test_macro_f1}
-by chance and \val{ls.mean_stored_test_macro_f1} with the true labels. Of the \val{H1.runs} confirmatory runs, \val{g5.s2} were regenerated on the
-caches the stored runs used, within that tolerance. Another \val{g5.rebuilt.runs}, on three datasets whose caches we
-rebuilt on another machine, agree at the dataset level (dataset means within
-\val{g5.rebuilt.max_abs_dataset_mean_delta_macro_f1} F1 points), but \val{g5.rebuilt.outside_tolerance} of them
-differ from their records by more than two test windows (at most \val{g5.rebuilt.max_abs_delta_macro_f1} points); the
-remaining runs (USC-HAR), and one development dataset (DSADS) whose cache on our cluster does not reproduce the stored
-runs, enter on their stored records.
+by chance and \val{ls.mean_stored_test_macro_f1} with the true labels. Of the \val{H1.runs} confirmatory runs, the gate
+regenerated \val{g5.s2} on the caches the stored runs used, within that tolerance. Beyond the gate, every analysed run
+with a checkpoint was re-executed (\val{repro.analysed.reexecuted} of \val{repro.analysed.runs}):
+\val{repro.analysed.exact} reproduce their records exactly, \val{repro.analysed.within_tolerance} within two test
+windows, and none differs by more than \val{repro.analysed.max_abs_delta_macro_f1} F1 points. The residual
+differences have one source. Several parsers number activities and subjects, and order recordings, in the order the
+file system lists them, and many stored runs were built on cloud machines whose listing order cannot be recreated.
+For DSADS we recovered that order from the checkpoints themselves, since each network is near-perfect on its own
+training subjects, which identifies its output labels and its test subjects, and rebuilt the cache accordingly; for
+USC-HAD and three datasets whose caches we rebuilt, the test sets are identical and only the draw of validation
+windows, and with it the train-only z-score, differs. The \val{repro.retrained.runs} runs without a checkpoint were retrained to obtain one;
+\val{repro.retrained.exact} of them reproduce their record's macro-F1 exactly, and the stored records remain the
+ones analysed.
 
 \section{Results}
 \subsection{Confirmatory test}

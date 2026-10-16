@@ -1,0 +1,19 @@
+{
+ "produced_by": "scripts/evaluate.py",
+ "command": "python scripts/evaluate.py --cells /work/huy.leminh/.cache/harfactors_scratch/cells_dsads.json --run-id 20261016_154730_evaluate_dsads_inferred_order",
+ "run_id": "20261016_154730_evaluate_dsads_inferred_order",
+ "timestamp": "2026-10-16T15:49:48",
+ "duration_sec": 130.53,
+ "git_commit": "a218632-dirty",
+ "config_sha256": "866ab7a4ce0ba10be0fefc93ba9597d198ec7cd14c101be0b74a155641dc9c50",
+ "config": {
+  "cells": 240
+ },
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "experiments/checkpoints/statnet/dsads/seed-2/split-00.pt": "sha256:032745eea7e5ead83333ae6629890ee14520e73dffa6177bbce50427045048ff",
+  "experiments/whar_arena_v1/statnet/dsads/seed-2/split-00.json": "sha256:e79a2a71e885dace5a424feff95c8995f2e178bb108ccd648a4e8c971a6aad5b"
+ },
+ "output_sha256": "9042667281c3f4ae8b50599beb0344db897439a3b1d6b6308ad77395097e651b",
+ "synthetic": false
+}

@@ -1,0 +1,331 @@
+node hpc22.local, job 87029, Fri Oct 16 23:09:13 +07 2026
+NVIDIA RTX A5000, 580.126.09
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+2026-10-16 23:09:39,871 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 23:09:39,871 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 23:09:39,895 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:39,895 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 23:09:39,895 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 23:09:39,939 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:39,939 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 23:09:39,939 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 23:09:39,972 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:39,972 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 23:09:39,972 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 23:09:40,027 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:40,027 - whar-datasets - INFO - Loading windowing
+2026-10-16 23:09:40,174 - whar-datasets - INFO - Selecting activities
+2026-10-16 23:09:40,179 - whar-datasets - INFO - activity_ids from 0 to 10
+2026-10-16 23:09:40,179 - whar-datasets - INFO - subject_ids from 0 to 1
+2026-10-16 23:09:40,182 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 23:09:40,183 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 23:09:40,193 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:40,193 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-00 epoch 001: val_macro_f1=0.0971
+split-00 epoch 002: val_macro_f1=0.3635
+split-00 epoch 003: val_macro_f1=0.5525
+split-00 epoch 004: val_macro_f1=0.6098
+split-00 epoch 005: val_macro_f1=0.6098
+split-00 epoch 006: val_macro_f1=0.6319
+split-00 epoch 007: val_macro_f1=0.7186
+split-00 epoch 008: val_macro_f1=0.7186
+split-00 epoch 009: val_macro_f1=0.7437
+split-00 epoch 010: val_macro_f1=0.7500
+split-00 epoch 011: val_macro_f1=0.7500
+split-00 epoch 012: val_macro_f1=0.7500
+split-00 epoch 013: val_macro_f1=0.7500
+split-00 epoch 014: val_macro_f1=0.7500
+split-00 epoch 015: val_macro_f1=0.7500
+split-00 epoch 016: val_macro_f1=0.7500
+split-00 epoch 017: val_macro_f1=0.7500
+split-00 epoch 018: val_macro_f1=0.7500
+split-00 epoch 019: val_macro_f1=0.7500
+split-00 epoch 020: val_macro_f1=0.7500
+=== s4d/actrectut_gestures/split-00 seed 0: macro_f1=0.3708 best_epoch=10 epochs=20 12s
+2026-10-16 23:09:52,179 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 23:09:52,179 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 23:09:52,198 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:52,198 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 001: val_macro_f1=0.1263
+split-01 epoch 002: val_macro_f1=0.3206
+split-01 epoch 003: val_macro_f1=0.4463
+split-01 epoch 004: val_macro_f1=0.5970
+split-01 epoch 005: val_macro_f1=0.6124
+split-01 epoch 006: val_macro_f1=0.6246
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 007: val_macro_f1=0.6359
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 008: val_macro_f1=0.6398
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 009: val_macro_f1=0.6464
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 010: val_macro_f1=0.6567
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 011: val_macro_f1=0.6567
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 012: val_macro_f1=0.6567
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 013: val_macro_f1=0.6523
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 014: val_macro_f1=0.6523
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 015: val_macro_f1=0.6523
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 016: val_macro_f1=0.6523
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 017: val_macro_f1=0.6523
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 018: val_macro_f1=0.6523
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 019: val_macro_f1=0.6523
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 020: val_macro_f1=0.6523
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+=== s4d/actrectut_gestures/split-01 seed 0: macro_f1=0.5043 best_epoch=10 epochs=20 2s
+2026-10-16 23:09:54,820 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 23:09:54,820 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 23:09:54,941 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:54,941 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 23:09:54,941 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 23:09:54,952 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:54,952 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 23:09:54,952 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 23:09:54,967 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:54,967 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 23:09:54,967 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 23:09:55,013 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:55,013 - whar-datasets - INFO - Loading windowing
+2026-10-16 23:09:55,148 - whar-datasets - INFO - Selecting activities
+2026-10-16 23:09:55,152 - whar-datasets - INFO - activity_ids from 0 to 16
+2026-10-16 23:09:55,152 - whar-datasets - INFO - subject_ids from 0 to 29
+2026-10-16 23:09:55,177 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 23:09:55,177 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 23:09:55,210 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:09:55,210 - whar-datasets - INFO - Loading samples
+split-00 epoch 001: val_macro_f1=0.1391
+split-00 epoch 002: val_macro_f1=0.2633
+split-00 epoch 003: val_macro_f1=0.3459
+split-00 epoch 004: val_macro_f1=0.4269
+split-00 epoch 005: val_macro_f1=0.4176
+split-00 epoch 006: val_macro_f1=0.5363
+split-00 epoch 007: val_macro_f1=0.5739
+split-00 epoch 008: val_macro_f1=0.5941
+split-00 epoch 009: val_macro_f1=0.6586
+split-00 epoch 010: val_macro_f1=0.6582
+split-00 epoch 011: val_macro_f1=0.6813
+split-00 epoch 012: val_macro_f1=0.6895
+split-00 epoch 013: val_macro_f1=0.6914
+split-00 epoch 014: val_macro_f1=0.6925
+split-00 epoch 015: val_macro_f1=0.7148
+split-00 epoch 016: val_macro_f1=0.6960
+split-00 epoch 017: val_macro_f1=0.7285
+split-00 epoch 018: val_macro_f1=0.7273
+split-00 epoch 019: val_macro_f1=0.7318
+split-00 epoch 020: val_macro_f1=0.7352
+split-00 epoch 021: val_macro_f1=0.7544
+split-00 epoch 022: val_macro_f1=0.7573
+split-00 epoch 023: val_macro_f1=0.7443
+split-00 epoch 024: val_macro_f1=0.7321
+split-00 epoch 025: val_macro_f1=0.7548
+split-00 epoch 026: val_macro_f1=0.7350
+split-00 epoch 027: val_macro_f1=0.7439
+split-00 epoch 028: val_macro_f1=0.7645
+split-00 epoch 029: val_macro_f1=0.7552
+split-00 epoch 030: val_macro_f1=0.7502
+split-00 epoch 031: val_macro_f1=0.7557
+split-00 epoch 032: val_macro_f1=0.7618
+split-00 epoch 033: val_macro_f1=0.7491
+split-00 epoch 034: val_macro_f1=0.7631
+split-00 epoch 035: val_macro_f1=0.7576
+split-00 epoch 036: val_macro_f1=0.7413
+split-00 epoch 037: val_macro_f1=0.7536
+split-00 epoch 038: val_macro_f1=0.7678
+split-00 epoch 039: val_macro_f1=0.7578
+split-00 epoch 040: val_macro_f1=0.7642
+split-00 epoch 041: val_macro_f1=0.7732
+split-00 epoch 042: val_macro_f1=0.7632
+split-00 epoch 043: val_macro_f1=0.7673
+split-00 epoch 044: val_macro_f1=0.7673
+split-00 epoch 045: val_macro_f1=0.7785
+split-00 epoch 046: val_macro_f1=0.7689
+split-00 epoch 047: val_macro_f1=0.7689
+split-00 epoch 048: val_macro_f1=0.7613
+split-00 epoch 049: val_macro_f1=0.7756
+split-00 epoch 050: val_macro_f1=0.7751
+split-00 epoch 051: val_macro_f1=0.7683
+split-00 epoch 052: val_macro_f1=0.7674
+split-00 epoch 053: val_macro_f1=0.7564
+split-00 epoch 054: val_macro_f1=0.7752
+split-00 epoch 055: val_macro_f1=0.7748
+=== mamba/unimib_shar/split-00 seed 0: macro_f1=0.5587 best_epoch=45 epochs=55 939s
+2026-10-16 23:25:36,273 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 23:25:36,273 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 23:25:36,305 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:25:36,305 - whar-datasets - INFO - Loading samples
+split-01 epoch 001: val_macro_f1=0.1326
+split-01 epoch 002: val_macro_f1=0.2738
+split-01 epoch 003: val_macro_f1=0.3707
+split-01 epoch 004: val_macro_f1=0.4443
+split-01 epoch 005: val_macro_f1=0.4647
+split-01 epoch 006: val_macro_f1=0.5263
+split-01 epoch 007: val_macro_f1=0.5759
+split-01 epoch 008: val_macro_f1=0.5851
+split-01 epoch 009: val_macro_f1=0.5954
+split-01 epoch 010: val_macro_f1=0.5905
+split-01 epoch 011: val_macro_f1=0.6488
+split-01 epoch 012: val_macro_f1=0.6406
+split-01 epoch 013: val_macro_f1=0.6554
+split-01 epoch 014: val_macro_f1=0.6552
+split-01 epoch 015: val_macro_f1=0.6588
+split-01 epoch 016: val_macro_f1=0.6971
+split-01 epoch 017: val_macro_f1=0.6966
+split-01 epoch 018: val_macro_f1=0.6887
+split-01 epoch 019: val_macro_f1=0.6990
+split-01 epoch 020: val_macro_f1=0.7035
+split-01 epoch 021: val_macro_f1=0.7240
+split-01 epoch 022: val_macro_f1=0.7120
+split-01 epoch 023: val_macro_f1=0.7262
+split-01 epoch 024: val_macro_f1=0.7325
+split-01 epoch 025: val_macro_f1=0.7244
+split-01 epoch 026: val_macro_f1=0.7306
+split-01 epoch 027: val_macro_f1=0.7292
+split-01 epoch 028: val_macro_f1=0.7545
+split-01 epoch 029: val_macro_f1=0.7336
+split-01 epoch 030: val_macro_f1=0.7467
+split-01 epoch 031: val_macro_f1=0.7496
+split-01 epoch 032: val_macro_f1=0.7604
+split-01 epoch 033: val_macro_f1=0.7335
+split-01 epoch 034: val_macro_f1=0.7571
+split-01 epoch 035: val_macro_f1=0.7560
+split-01 epoch 036: val_macro_f1=0.7567
+split-01 epoch 037: val_macro_f1=0.7639
+split-01 epoch 038: val_macro_f1=0.7622
+split-01 epoch 039: val_macro_f1=0.7517
+split-01 epoch 040: val_macro_f1=0.7781
+split-01 epoch 041: val_macro_f1=0.7693
+split-01 epoch 042: val_macro_f1=0.7589
+split-01 epoch 043: val_macro_f1=0.7682
+split-01 epoch 044: val_macro_f1=0.7725
+split-01 epoch 045: val_macro_f1=0.7709
+split-01 epoch 046: val_macro_f1=0.7595
+split-01 epoch 047: val_macro_f1=0.7768
+split-01 epoch 048: val_macro_f1=0.7822
+split-01 epoch 049: val_macro_f1=0.7785
+split-01 epoch 050: val_macro_f1=0.7829
+split-01 epoch 051: val_macro_f1=0.7779
+split-01 epoch 052: val_macro_f1=0.7949
+split-01 epoch 053: val_macro_f1=0.7843
+split-01 epoch 054: val_macro_f1=0.7821
+split-01 epoch 055: val_macro_f1=0.7799
+split-01 epoch 056: val_macro_f1=0.7847
+split-01 epoch 057: val_macro_f1=0.7794
+split-01 epoch 058: val_macro_f1=0.7761
+split-01 epoch 059: val_macro_f1=0.7808
+split-01 epoch 060: val_macro_f1=0.7747
+split-01 epoch 061: val_macro_f1=0.7702
+split-01 epoch 062: val_macro_f1=0.7760
+=== mamba/unimib_shar/split-01 seed 0: macro_f1=0.5434 best_epoch=52 epochs=62 950s
+2026-10-16 23:41:27,708 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 23:41:27,708 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 23:41:27,709 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:41:27,709 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 23:41:27,709 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 23:41:27,709 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:41:27,710 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 23:41:27,710 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 23:41:27,710 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:41:27,710 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 23:41:27,710 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 23:41:27,711 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:41:27,711 - whar-datasets - INFO - Loading windowing
+2026-10-16 23:41:27,718 - whar-datasets - INFO - Selecting activities
+2026-10-16 23:41:27,724 - whar-datasets - INFO - activity_ids from 0 to 10
+2026-10-16 23:41:27,724 - whar-datasets - INFO - subject_ids from 0 to 1
+2026-10-16 23:41:27,733 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 23:41:27,733 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 23:41:27,734 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:41:27,734 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-00 epoch 001: val_macro_f1=0.1334
+split-00 epoch 002: val_macro_f1=0.1904
+split-00 epoch 003: val_macro_f1=0.4537
+split-00 epoch 004: val_macro_f1=0.5835
+split-00 epoch 005: val_macro_f1=0.6569
+split-00 epoch 006: val_macro_f1=0.7219
+split-00 epoch 007: val_macro_f1=0.7500
+split-00 epoch 008: val_macro_f1=0.7500
+split-00 epoch 009: val_macro_f1=0.7500
+split-00 epoch 010: val_macro_f1=0.7500
+split-00 epoch 011: val_macro_f1=0.7500
+split-00 epoch 012: val_macro_f1=0.7500
+split-00 epoch 013: val_macro_f1=0.7500
+split-00 epoch 014: val_macro_f1=0.7500
+split-00 epoch 015: val_macro_f1=0.7500
+split-00 epoch 016: val_macro_f1=0.7500
+split-00 epoch 017: val_macro_f1=0.7500
+=== mamba/actrectut_gestures/split-00 seed 0: macro_f1=0.2661 best_epoch=7 epochs=17 10s
+2026-10-16 23:41:37,517 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 23:41:37,517 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 23:41:37,517 - whar-datasets - INFO - Hash is up to date
+2026-10-16 23:41:37,517 - whar-datasets - INFO - Loading samples
+split-01 epoch 001: val_macro_f1=0.0893
+split-01 epoch 002: val_macro_f1=0.1105
+split-01 epoch 003: val_macro_f1=0.1417
+split-01 epoch 004: val_macro_f1=0.3147
+split-01 epoch 005: val_macro_f1=0.4451
+split-01 epoch 006: val_macro_f1=0.5721
+split-01 epoch 007: val_macro_f1=0.5778
+split-01 epoch 008: val_macro_f1=0.5905
+split-01 epoch 009: val_macro_f1=0.6237
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 010: val_macro_f1=0.6281
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 011: val_macro_f1=0.6611
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 012: val_macro_f1=0.6611
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+split-01 epoch 013: val_macro_f1=0.6611
+split-01 epoch 014: val_macro_f1=0.6556
+split-01 epoch 015: val_macro_f1=0.6567
+split-01 epoch 016: val_macro_f1=0.6567
+split-01 epoch 017: val_macro_f1=0.6567
+split-01 epoch 018: val_macro_f1=0.6567
+split-01 epoch 019: val_macro_f1=0.6567
+split-01 epoch 020: val_macro_f1=0.6567
+split-01 epoch 021: val_macro_f1=0.6567
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+=== mamba/actrectut_gestures/split-01 seed 0: macro_f1=0.3677 best_epoch=11 epochs=21 11s
+s4d/actrectut_gestures seed 0 split 0: retrained 37.08 vs stored 37.08 (+0.00); config True, fingerprint True
+s4d/actrectut_gestures seed 0 split 1: retrained 50.43 vs stored 50.43 (+0.00); config True, fingerprint True
+mamba/unimib_shar seed 0 split 0: retrained 55.87 vs stored 55.87 (+0.00); config True, fingerprint True
+mamba/unimib_shar seed 0 split 1: retrained 54.34 vs stored 54.34 (+0.00); config True, fingerprint True
+mamba/actrectut_gestures seed 0 split 0: retrained 26.61 vs stored 26.61 (+0.00); config True, fingerprint True
+mamba/actrectut_gestures seed 0 split 1: retrained 36.77 vs stored 36.77 (+0.00); config True, fingerprint True

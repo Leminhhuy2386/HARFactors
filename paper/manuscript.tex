@@ -225,13 +225,19 @@ benchmark's Random Forest, re-run with our code, reproduces its published macro-
 test windows; an independent REML implementation and negative controls (e.g.\ permuting network labels within cells)
 confirmed the analysis; and S4D retrained on permuted training labels (6 runs on UP-Fall and UCA-EHAR)
 fell to chance, with a test macro-F1 of 4.9 against 8.7
-by chance and 54.5 with the true labels. Of the 828 confirmatory runs, 360 were regenerated on the
-caches the stored runs used, within that tolerance. Another 348, on three datasets whose caches we
-rebuilt on another machine, agree at the dataset level (dataset means within
-0.07 F1 points), but 36 of them
-differ from their records by more than two test windows (at most 3.25 points); the
-remaining runs (USC-HAR), and one development dataset (DSADS) whose cache on our cluster does not reproduce the stored
-runs, enter on their stored records.
+by chance and 54.5 with the true labels. Of the 828 confirmatory runs, the gate
+regenerated 360 on the caches the stored runs used, within that tolerance. Beyond the gate, every analysed run
+with a checkpoint was re-executed (2,982 of 2,988):
+2,185 reproduce their records exactly, 2,668 within two test
+windows, and none differs by more than 3.25 F1 points. The residual
+differences have one source. Several parsers number activities and subjects, and order recordings, in the order the
+file system lists them, and many stored runs were built on cloud machines whose listing order cannot be recreated.
+For DSADS we recovered that order from the checkpoints themselves, since each network is near-perfect on its own
+training subjects, which identifies its output labels and its test subjects, and rebuilt the cache accordingly; for
+USC-HAD and three datasets whose caches we rebuilt, the test sets are identical and only the draw of validation
+windows, and with it the train-only z-score, differs. The 6 runs without a checkpoint were retrained to obtain one;
+5 of them reproduce their record's macro-F1 exactly, and the stored records remain the
+ones analysed.
 
 \section{Results}
 \subsection{Confirmatory test}

@@ -14,8 +14,8 @@ verified. What blocks submission is listed under § Open items.
 | G3 baseline | PASS | G3_baseline.json | The Random Forest re-run equals Figure 6 to rounding |
 | G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
 | G5 authenticity | PASS | G5_results_authenticity_rerun6.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; permutation control on the better of two REML fits (since rerun 6); 50/50 sampled H1 bootstrap refits at the maximum; label-shuffle control collapsed (6/6). Rerun5 FAILed (optimizer, see below); rerun4 FAILed (rebuilt caches); the first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
-| G6 traceability | PASS | G6_traceability_rerun4.json | 538 values re-derive (expanded manuscript); the tampering control was caught |
-| G7 manuscript | PASS | G7_compile_citations_rerun7.json | Expanded draft with restyled figures: 10 pages, 9 figures, 3 tables, abstract 140 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
+| G6 traceability | PASS | G6_traceability_rerun6.json | 553 values re-derive (expanded manuscript, reproducibility values); the tampering control was caught |
+| G7 manuscript | PASS | G7_compile_citations_rerun9.json | Expanded draft, restyled figures, verification paragraph on the full re-execution: 10 pages, 9 figures, 3 tables, abstract 140 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
 
 ### Results
 
@@ -37,6 +37,46 @@ verified. What blocks submission is listed under § Open items.
   - Mamba − S4D: −2.45;
   - Random Forest margin vs channel count: +7.1 per sd (p < 0.001).
 - Every number is in `docs/summary.md` / `docs/summary_values.json`. The manuscript prints no other.
+
+### Reproducibility of every stored run (2026-10-16, user request)
+
+The user asked for every result to be reproducible, with checkpoints and configs for every network. Report:
+`docs/reproducibility_report.md`; numbers: `results/metrics/reproducibility/summary.json`.
+
+- **Inventory.** S1 and S2 hold 3,408 stored runs; 3,402 have a checkpoint, and every one of those carries the
+  registry's config and its record's config and fingerprint. `configs/` now has one file per network (10 population
+  networks, 17 WHAR Arena models of S3) and the protocol (digest e8739ef2c5b36c99, equal to every record's).
+- **Re-execution.** All 3,402 re-executed from their checkpoints: 2,363 reproduce their record exactly, 3,048 within
+  the G5 tolerance. Of the 2,988 analysed runs (daphnet and motion_sense excluded), 2,982 re-executed, 2,185 exact,
+  2,668 within tolerance, none more than 3.25 F1 points apart. The eight S1 datasets with a matching cache: 1,914 runs,
+  1,905 within tolerance (9 WISDM runs 3-5 windows apart).
+- **Why some runs do not match bit for bit.** Several whar-datasets parsers number activities and subjects, and order
+  recordings, as `os.listdir` returns them. Most stored runs were built on Colab/Kaggle VMs, which list files in ext4
+  hash order with a per-disk seed (two Colab VMs gave two orders for one dataset), so that order cannot be recreated:
+  no download would help (the data on the cluster are complete).
+  - DSADS: the order was recovered from the checkpoints (each network is near-perfect on its training subjects, so a
+    Hungarian match of its outputs gives its labels and the least accurate subject its test subject; unanimous over 80
+    checkpoints), the cache rebuilt in that order (`scripts/reconstruct_order.py`), and the Kaggle runs re-executed on
+    it (median |dF1| 0.32). Only the order of the 60 files within a recording stays unknown.
+  - Runs from several VMs per run set (DSADS on Colab, Daphnet, MotionSense): per-checkpoint re-execution, the test
+    group identified by the record's test size where that is unique (Daphnet 300/300) and the z-score fitted on every
+    non-test window.
+  - USC-HAD (ids from the files' metadata): cache built on the cluster, split sizes equal for all 10 splits; the test
+    sets are identical, only the validation draw (and so the train-only z-score) differs. The same holds for PAMAP2,
+    UMAFall and w-HAR on the PC-built caches.
+- **Six runs without a checkpoint** were retrained with the same harness, config, cache, split and seed
+  (`scripts/retrain_missing.py`; outputs under that run's directory; the stored records untouched). Five reproduce
+  their record's macro-F1 exactly; the sixth (S4D, ActRecTut, split 1) is 0.005 points apart.
+  - Disclosure: that job was submitted without a GPU (`--gres=gpu:0`), but Slurm does not hide a node's GPUs from such
+    a job, and PyTorch used hpc22's RTX A5000 for the 32-minute run. `scripts/hpc/submit.sh` now sets
+    `CUDA_VISIBLE_DEVICES=''` whenever no GPU is requested.
+- **Audit fix.** `audit --reproduce` re-generated sampled prediction files on the default cache; it now uses the cache
+  recorded in the run's config (a sampled DSADS file had been made on the rebuilt cache).
+- **Gates.** G6 rerun5/rerun6 and G7 rerun8/rerun9 PASS after the verification paragraph was rewritten with these
+  numbers (rerun6/rerun9 add the retrained runs); `audit --all` PASS. S3 (510 runs) stays records only: retraining it
+  was proposed and not approved.
+- **Disk.** Private caches outside the project: harfactors_verify 67 GB, harfactors_rebuilt 22 GB,
+  harfactors_rebuilt_colab 6.6 GB (normalised copies per test group); safe to delete, they rebuild from HAR.
 
 ### G5 rerun5 FAIL (2026-10-16): the optimizer in the model-permutation control
 

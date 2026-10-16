@@ -42,10 +42,13 @@ answer so far: who is tested matters far more than the architecture. Split off f
     - Every other result stays exploratory.
   - Then `docs/research_checklist.md`, `git init` and gate G1.
 - **Decided 2026-10-15:** keep 3 seeds and state it as a limitation in the letter. No more seeds are run.
-- **Waiting for the user's decision:** per-split verification of dsads and daphnet needs a Linux VM, because their
-  parsers are unsorted and the PC caches number subjects differently. Otherwise verify them by dataset means only.
+- **Reproducibility (2026-10-16, user request):** every stored S1/S2 run with a checkpoint (3,402) was re-executed;
+  the listing order of the cloud VMs was recovered from the checkpoints where needed (`scripts/reconstruct_order.py`),
+  and the six runs without a checkpoint were retrained for one (5 exact). `docs/reproducibility_report.md`;
+  `configs/` holds every network's config. S3 stays records only.
 - **Known gaps:**
-  - 6 runs have no checkpoint anywhere (S4D actrectut ×2, Mamba actrectut/unimib ×4);
+  - 6 runs had no checkpoint (S4D actrectut ×2, Mamba actrectut/unimib ×4): retrained 2026-10-16, checkpoints in
+    the retrain run's directory (the stored records stay the analysed ones);
   - `tests/test_edge_ssm.py` fails on `isochron_uniform` (not in the population).
 - **Framing:**
   - no claims about RILA-Net's merit (that is the IEEE Sensors Journal paper);

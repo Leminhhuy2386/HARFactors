@@ -512,3 +512,35 @@ shorten it). Nothing here is confirmatory, and no network was trained.
 5. **Learned memory parameters, first version superseded.** The first `model_anatomy` run read every checkpoint on
    disk (including extra seeds of some networks) and had no initial values to compare with; the second reads seeds
    0-2 only and compares with freshly initialised networks.
+
+## HARFactors, 2026-10-16: reproducibility of every stored run
+
+The user asked that every result be reproducible and that every network have its checkpoint and config.
+
+### Configurations run
+
+- `scripts/evaluate.py` on every S1 run with a checkpoint on the eight datasets whose cluster cache matches (1,914),
+  on USC-HAD's 120 S2 runs (cache built on the cluster with `scripts/prepare_data.py`), and on DSADS's 240 S1 runs (cache
+  rebuilt in the listing order inferred from the checkpoints).
+- `scripts/reconstruct_order.py`: `infer` (labels and test subjects from every checkpoint of a group), `build` (cache
+  rebuilt with `os.listdir` returning that order, from hard links to HAR's raw files) and `reexecute` (per checkpoint,
+  for run sets built on several VMs: DSADS on Colab, Daphnet, MotionSense).
+- `scripts/retrain_missing.py`: the six runs without a checkpoint, retrained in the run's own directory.
+- `src/evaluation/reproducibility.py`: the inventory and `docs/reproducibility_report.md`; `scripts/export_configs.py`:
+  `configs/`.
+
+### Deviations and decisions, with reasons
+
+1. **No download.** The original archives were first considered, to read their member order; the user pointed out
+   that the data are complete on the cluster, and the listing order on ext4 depends on a per-disk hash seed anyway
+   (a zero-seed half-MD4 hypothesis was tested and rejected), so the order was recovered from the checkpoints instead.
+2. **Test-group identification.** Per checkpoint, the least accurate subjects identify the test group when the network
+   is near-perfect on its training subjects (DSADS, MotionSense) but not on Daphnet (macro-F1 about 42 %); the record's
+   test size, a structural fact of the split, now identifies the group where one subset matches it.
+3. **Retraining.** The pre-registration rules out new training for the analyses; the six runs were retrained only to
+   give them checkpoints, in a separate directory, and the stored records stay the analysed ones. The job used a GPU
+   it had not been allocated (Slurm does not hide a node's GPUs from a job with `--gres=gpu:0`); `submit.sh` now hides
+   them.
+4. **Audit.** `--reproduce` now re-generates a sampled prediction file on the cache its run used.
+5. **S3** (17 WHAR Arena models, 510 runs) stays records only; retraining it (10-20 GPU hours) was not approved.
+

@@ -1,0 +1,6 @@
+node hpc01.local, job 87007, Fri Oct 16 21:33:41 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+wrote 10 + 17 model configs and the protocol (digest e8739ef2c5b36c99)

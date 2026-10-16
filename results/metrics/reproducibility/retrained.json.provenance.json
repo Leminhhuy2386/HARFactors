@@ -1,0 +1,63 @@
+{
+ "produced_by": "scripts/retrain_missing.py",
+ "command": "python scripts/retrain_missing.py",
+ "run_id": "20261016_230928_retrain_missing_checkpoints",
+ "timestamp": "2026-10-16T23:41:48",
+ "duration_sec": 1932.24,
+ "git_commit": "a218632-dirty",
+ "config_sha256": "8934a47106ddf9220365944709b52782259e3ca9efa7fd53f586cf26034a8062",
+ "config": {
+  "cells": [
+   [
+    "s4d",
+    "actrectut_gestures",
+    0,
+    0
+   ],
+   [
+    "s4d",
+    "actrectut_gestures",
+    0,
+    1
+   ],
+   [
+    "mamba",
+    "unimib_shar",
+    0,
+    0
+   ],
+   [
+    "mamba",
+    "unimib_shar",
+    0,
+    1
+   ],
+   [
+    "mamba",
+    "actrectut_gestures",
+    0,
+    0
+   ],
+   [
+    "mamba",
+    "actrectut_gestures",
+    0,
+    1
+   ]
+  ],
+  "datasets_dir": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era",
+  "results_dir": "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/experiments/20261016_230928_retrain_missing_checkpoints",
+  "device": "NVIDIA RTX A5000"
+ },
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "experiments/whar_arena_v1/mamba/actrectut_gestures/split-00.json": "sha256:3fe1ca719cdbcd02795a0613f6d4a472747b886e222434e0da0cf760e2e17379",
+  "experiments/whar_arena_v1/mamba/actrectut_gestures/split-01.json": "sha256:6f527d685270d916e76acdac010a41ae5c08c7796f8267a889b3b7b5e9fa2046",
+  "experiments/whar_arena_v1/mamba/unimib_shar/split-00.json": "sha256:183a140dc19a025a1317a78b0e11ff65e7107d9329b177b8a1ed93a94750e9e7",
+  "experiments/whar_arena_v1/mamba/unimib_shar/split-01.json": "sha256:44ebfd05f43cd4790d5d6f21f97152ed32e7b3b23a9313a3c31803038a1465b3",
+  "experiments/whar_arena_v1/s4d/actrectut_gestures/split-00.json": "sha256:8fe7754237f40d4bb6cdf53107a7af6eb67305a2f0c94b3b50f77f464b95712a",
+  "experiments/whar_arena_v1/s4d/actrectut_gestures/split-01.json": "sha256:76620d8069b20c4151cde18f3bba5e9e8cb0cd67e9f3677a1c538568c0d623cd"
+ },
+ "output_sha256": "814195566cc6e9c88d0af249d4175a0c612d2076d49bcaff0fddfb6fd54e489a",
+ "synthetic": false
+}

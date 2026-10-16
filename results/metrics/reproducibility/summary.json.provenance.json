@@ -1,0 +1,25 @@
+{
+ "produced_by": "src/evaluation/reproducibility.py",
+ "command": "python /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/evaluation/reproducibility.py",
+ "run_id": "20261016_235245_reproducibility",
+ "timestamp": "2026-10-16T23:52:51",
+ "duration_sec": 6.44,
+ "git_commit": "a218632-dirty",
+ "config_sha256": null,
+ "config": null,
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "experiments/20261015_184242_evaluate_G5/evaluated.json": "sha256:10ce12069a1ceef17d5182bbf500ed5c9824c111b1fef7c5ba35d16a1a203cbc",
+  "experiments/20261016_045739_evaluate_G5/evaluated.json": "sha256:f71429a22be66f5645021eab33120d56fea71cbbe579254f1e2349bc4c1cef46",
+  "experiments/20261016_064841_evaluate_G5/evaluated.json": "sha256:93055462e7cf13acba09ac9361a4e57e5ea70f4e85abe7a70d0685f38bef649b",
+  "experiments/20261016_145841_evaluate_full_S1/evaluated.json": "sha256:3439992b575a1cffbe9384e434358248e3653cb8f5127586d96343ea4939596e",
+  "experiments/20261016_153244_evaluate_usc_had/evaluated.json": "sha256:c0a6cce0b3ba4698c97ca04beb2e0ae2c1146650b4224366c288b3cf06bdc227",
+  "experiments/20261016_154730_evaluate_dsads_inferred_order/evaluated.json": "sha256:723b9cba4edcd822f44245647c1b74c3e85e8c56dc06b95d4b151f656001c584",
+  "results/metrics/reproducibility/reexecute_daphnet.json": "sha256:8a83b647c51e83038d67ab073fc4f16b0f9eda97b3204e37021ff4edac41bb17",
+  "results/metrics/reproducibility/reexecute_dsads.json": "sha256:8ab519e668ca81de2feca202f48f72cd39bd3ada8f8b96c79147bbb5d48fe60f",
+  "results/metrics/reproducibility/reexecute_motion_sense.json": "sha256:67de50945130b3fb3efad5e080ccecc28119c586894235444b363993698300cb",
+  "results/metrics/reproducibility/retrained.json": "sha256:814195566cc6e9c88d0af249d4175a0c612d2076d49bcaff0fddfb6fd54e489a"
+ },
+ "output_sha256": "103dd101993d8bbea4248846d22de50a7d315e237c7b9649db4b1afd8a792fdb",
+ "synthetic": false
+}

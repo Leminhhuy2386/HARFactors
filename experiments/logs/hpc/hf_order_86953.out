@@ -1,0 +1,94 @@
+node hpc22.local, job 86953, Fri Oct 16 15:21:41 +07 2026
+NVIDIA RTX A5000, 580.126.09
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+2026-10-16 15:21:53,802 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 15:21:53,803 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 15:21:53,803 - whar-datasets - INFO - Hash is up to date
+2026-10-16 15:21:53,803 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 15:21:53,803 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 15:21:53,804 - whar-datasets - INFO - Hash is up to date
+2026-10-16 15:21:53,804 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 15:21:53,804 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 15:21:53,804 - whar-datasets - INFO - Hash is up to date
+2026-10-16 15:21:53,804 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 15:21:53,804 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 15:21:53,805 - whar-datasets - INFO - Hash is up to date
+2026-10-16 15:21:53,805 - whar-datasets - INFO - Loading windowing
+2026-10-16 15:21:53,829 - whar-datasets - INFO - Selecting activities
+2026-10-16 15:21:53,833 - whar-datasets - INFO - activity_ids from 0 to 18
+2026-10-16 15:21:53,834 - whar-datasets - INFO - subject_ids from 0 to 7
+2026-10-16 15:21:53,895 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 15:21:53,895 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 15:21:53,896 - whar-datasets - INFO - Hash is up to date
+2026-10-16 15:21:53,896 - whar-datasets - INFO - Loading samples
+dsads recurrencenet: done
+dsads s4d: done
+dsads hystnet_sel_clock: done
+dsads quantilenet: done
+dsads mamba: done
+dsads hystnet_nomem: done
+dsads recstatnet: done
+dsads lawnet_rec: done
+dsads lawnet: done
+dsads statnet: done
+{
+ "dataset": "dsads",
+ "cache": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era/dsads",
+ "checkpoints": 80,
+ "label_order_unanimous": true,
+ "label_order_votes": 80,
+ "vm_label_order_as_cache_labels": [
+  4,
+  1,
+  6,
+  9,
+  2,
+  13,
+  17,
+  11,
+  3,
+  12,
+  5,
+  10,
+  14,
+  7,
+  16,
+  18,
+  8,
+  0,
+  15
+ ],
+ "vm_label_order_names": [
+  "Ascending Stairs",
+  "Standing",
+  "Standing In An Elevator Still",
+  "Walking On Treadmill Flat 4 Km H",
+  "Lying On Back",
+  "Exercising On A Cross Trainer",
+  "Jumping",
+  "Running On Treadmill 8 Km H",
+  "Lying On Right Side",
+  "Exercising On A Stepper",
+  "Descending Stairs",
+  "Walking On Treadmill 15\u00b0 Incline 4 Km H",
+  "Cycling On Exercise Bike Horizontal",
+  "Moving Around In An Elevator",
+  "Rowing",
+  "Playing Basketball",
+  "Walking In A Parking Lot",
+  "Sitting",
+  "Cycling On Exercise Bike Vertical"
+ ],
+ "vm_subject_order_as_cache_subjects": [
+  4,
+  3,
+  6,
+  1,
+  7,
+  0,
+  5,
+  2
+ ],
+ "subject_order_unanimous": true
+}

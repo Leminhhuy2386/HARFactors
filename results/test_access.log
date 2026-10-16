@@ -81,3 +81,26 @@
 2026-10-16T13:51:43 | scripts/verify_results.py | 20261016_134659_verify_G5 | verification (G5): re-read the S2 run records for the model-label permutation control
 2026-10-16T13:55:57 | scripts/verify_results.py | 20261016_134659_verify_G5 | verification (G5): re-read the S2 run records for the bootstrap refit check (informative)
 2026-10-16T13:57:44 | scripts/verify_results.py | 20261016_134659_verify_G5 | verification (G5): re-read the S2 run records for the auditor's --seeds check and its negative control
+2026-10-16T14:58:50 | scripts/evaluate.py | 20261016_145841_evaluate_full_S1 | verification (G5): regenerate 56 stored test predictions on actrectut_gestures from checkpoints
+2026-10-16T14:59:10 | scripts/evaluate.py | 20261016_145841_evaluate_full_S1 | verification (G5): regenerate 300 stored test predictions on hapt from checkpoints
+2026-10-16T15:02:42 | scripts/evaluate.py | 20261016_145841_evaluate_full_S1 | verification (G5): regenerate 120 stored test predictions on opportunity from checkpoints
+2026-10-16T15:05:28 | scripts/evaluate.py | 20261016_145841_evaluate_full_S1 | verification (G5): regenerate 300 stored test predictions on sad from checkpoints
+2026-10-16T15:09:18 | scripts/evaluate.py | 20261016_145841_evaluate_full_S1 | verification (G5): regenerate 300 stored test predictions on uci_har from checkpoints
+2026-10-16T15:12:13 | scripts/evaluate.py | 20261016_145841_evaluate_full_S1 | verification (G5): regenerate 298 stored test predictions on unimib_shar from checkpoints
+2026-10-16T15:14:42 | scripts/evaluate.py | 20261016_145841_evaluate_full_S1 | verification (G5): regenerate 240 stored test predictions on utd_mhad from checkpoints
+2026-10-16T15:15:31 | scripts/evaluate.py | 20261016_145841_evaluate_full_S1 | verification (G5): regenerate 300 stored test predictions on wisdm from checkpoints
+2026-10-16T15:20:49 | scripts/reconstruct_order.py | 20261016_152049_reconstruct_order_dsads | verification: every window of dsads classified by the stored checkpoints (listing order)
+2026-10-16T15:21:49 | scripts/reconstruct_order.py | 20261016_152149_reconstruct_order_dsads | verification: every window of dsads classified by the stored checkpoints (listing order)
+2026-10-16T15:32:52 | scripts/evaluate.py | 20261016_153244_evaluate_usc_had | verification (G5): regenerate 120 stored test predictions on usc_had from checkpoints
+2026-10-16T15:43:49 | scripts/reconstruct_order.py | 20261016_154349_reconstruct_order_dsads | verification: every window of dsads classified by the stored checkpoints (listing order)
+2026-10-16T15:44:50 | scripts/reconstruct_order.py | 20261016_154450_reconstruct_order_dsads | verification: every window of dsads classified by the stored checkpoints (listing order)
+2026-10-16T15:47:37 | scripts/evaluate.py | 20261016_154730_evaluate_dsads_inferred_order | verification (G5): regenerate 240 stored test predictions on dsads from checkpoints
+2026-10-16T16:06:51 | scripts/reconstruct_order.py | 20261016_160651_reconstruct_order_dsads_colab | verification: every window of dsads classified by the stored checkpoints (listing order)
+2026-10-16T16:14:27 | scripts/reconstruct_order.py | 20261016_161427_reconstruct_order_dsads_colab | verification: every window of dsads classified by the stored checkpoints (listing order)
+2026-10-16T16:16:29 | scripts/evaluate.py | 20261016_161622_evaluate_dsads_colab_order | verification (G5): regenerate 48 stored test predictions on dsads from checkpoints
+2026-10-16T16:31:22 | scripts/reconstruct_order.py | 20261016_163122_reconstruct_order_motion_sense | verification: every window of motion_sense classified by the stored checkpoints (listing order)
+2026-10-16T17:06:18 | scripts/reconstruct_order.py | 20261016_170618_reconstruct_order_daphnet | verification: every window of daphnet classified by the stored checkpoints (listing order)
+2026-10-16T17:52:50 | scripts/reconstruct_order.py | 20261016_175250_reconstruct_order_dsads | verification: every window of dsads classified by the stored checkpoints (listing order)
+2026-10-16T21:33:45 | scripts/reconstruct_order.py | 20261016_213345_reconstruct_order_daphnet | verification: every window of daphnet classified by the stored checkpoints (listing order)
+2026-10-16T22:15:48 | scripts/reconstruct_order.py | 20261016_221548_reconstruct_order_motion_sense | verification: every window of motion_sense classified by the stored checkpoints (listing order)
+2026-10-16T22:24:11 | scripts/reconstruct_order.py | 20261016_222411_reconstruct_order_dsads | verification: every window of dsads classified by the stored checkpoints (listing order)

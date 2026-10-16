@@ -1,0 +1,4816 @@
+{
+ "dataset": "dsads",
+ "method": "per-checkpoint label mapping and test group (by the record's test size where it is unique, else by accuracy); train-only z-score on all non-test windows",
+ "runs": 240,
+ "identified_by": {
+  "test size, then accuracy": 240
+ },
+ "test_size_equal": 240,
+ "within_tolerance": 28,
+ "median_abs_delta_macro_f1": 0.31481385231018066,
+ "max_abs_delta_macro_f1": 2.2454380989074707,
+ "mean_macro_f1": 83.90733321507771,
+ "mean_stored_macro_f1": 84.02196891605854,
+ "rows": [
+  {
+   "model": "recurrencenet",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8076871633529663,
+   "stored_macro_f1": 0.8172364234924316,
+   "accuracy": 0.8524720668792725,
+   "stored_accuracy": 0.859649121761322,
+   "delta_macro_f1_points": -0.9549260139465332,
+   "delta_windows": 27,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7554373741149902,
+   "stored_macro_f1": 0.7470877766609192,
+   "accuracy": 0.7961190938949585,
+   "stored_accuracy": 0.7902711033821106,
+   "delta_macro_f1_points": 0.8349597454071045,
+   "delta_windows": 22,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8928427696228027,
+   "stored_macro_f1": 0.8978082537651062,
+   "accuracy": 0.912014901638031,
+   "stored_accuracy": 0.9170653820037842,
+   "delta_macro_f1_points": -0.4965484142303467,
+   "delta_windows": 19,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9022716879844666,
+   "stored_macro_f1": 0.9047138094902039,
+   "accuracy": 0.9197235703468323,
+   "stored_accuracy": 0.9223816990852356,
+   "delta_macro_f1_points": -0.24421215057373047,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8223786354064941,
+   "stored_macro_f1": 0.8230093121528625,
+   "accuracy": 0.8460925221443176,
+   "stored_accuracy": 0.8490164875984192,
+   "delta_macro_f1_points": -0.06306767463684082,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8811412453651428,
+   "stored_macro_f1": 0.8830864429473877,
+   "accuracy": 0.8934077620506287,
+   "stored_accuracy": 0.8965975642204285,
+   "delta_macro_f1_points": -0.1945197582244873,
+   "delta_windows": 12,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.929164707660675,
+   "stored_macro_f1": 0.9278297424316406,
+   "accuracy": 0.9303562045097351,
+   "stored_accuracy": 0.9295587539672852,
+   "delta_macro_f1_points": 0.13349652290344238,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8902031779289246,
+   "stored_macro_f1": 0.8984166979789734,
+   "accuracy": 0.9072301983833313,
+   "stored_accuracy": 0.9125465154647827,
+   "delta_macro_f1_points": -0.8213520050048828,
+   "delta_windows": 20,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7185776233673096,
+   "stored_macro_f1": 0.7186047434806824,
+   "accuracy": 0.7878788113594055,
+   "stored_accuracy": 0.7889420390129089,
+   "delta_macro_f1_points": -0.0027120113372802734,
+   "delta_windows": 4,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6808144450187683,
+   "stored_macro_f1": 0.6810257434844971,
+   "accuracy": 0.7384369969367981,
+   "stored_accuracy": 0.740031898021698,
+   "delta_macro_f1_points": -0.021129846572875977,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.904705822467804,
+   "stored_macro_f1": 0.9056499004364014,
+   "accuracy": 0.9234449863433838,
+   "stored_accuracy": 0.9245082139968872,
+   "delta_macro_f1_points": -0.09440779685974121,
+   "delta_windows": 4,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9011228680610657,
+   "stored_macro_f1": 0.9064944386482239,
+   "accuracy": 0.919457733631134,
+   "stored_accuracy": 0.9245082139968872,
+   "delta_macro_f1_points": -0.5371570587158203,
+   "delta_windows": 19,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7751773595809937,
+   "stored_macro_f1": 0.7709508538246155,
+   "accuracy": 0.8022328615188599,
+   "stored_accuracy": 0.8019670248031616,
+   "delta_macro_f1_points": 0.4226505756378174,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9258618354797363,
+   "stored_macro_f1": 0.9258201718330383,
+   "accuracy": 0.9322168827056885,
+   "stored_accuracy": 0.932748556137085,
+   "delta_macro_f1_points": 0.004166364669799805,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9687454104423523,
+   "stored_macro_f1": 0.9664368629455566,
+   "accuracy": 0.9686337113380432,
+   "stored_accuracy": 0.9659755229949951,
+   "delta_macro_f1_points": 0.23085474967956543,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8959060311317444,
+   "stored_macro_f1": 0.9010263681411743,
+   "accuracy": 0.9146730303764343,
+   "stored_accuracy": 0.919457733631134,
+   "delta_macro_f1_points": -0.5120337009429932,
+   "delta_windows": 18,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 2,
+   "split": 0,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7909576892852783,
+   "stored_macro_f1": 0.7960267663002014,
+   "accuracy": 0.8240297436714172,
+   "stored_accuracy": 0.8293461203575134,
+   "delta_macro_f1_points": -0.5069077014923096,
+   "delta_windows": 20,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 2,
+   "split": 1,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8110635876655579,
+   "stored_macro_f1": 0.8128275275230408,
+   "accuracy": 0.8527379035949707,
+   "stored_accuracy": 0.8532695174217224,
+   "delta_macro_f1_points": -0.17639398574829102,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 2,
+   "split": 2,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6653971672058105,
+   "stored_macro_f1": 0.6670451760292053,
+   "accuracy": 0.7341839671134949,
+   "stored_accuracy": 0.7352471947669983,
+   "delta_macro_f1_points": -0.16480088233947754,
+   "delta_windows": 4,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 2,
+   "split": 3,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8528530597686768,
+   "stored_macro_f1": 0.8593772053718567,
+   "accuracy": 0.8718766570091248,
+   "stored_accuracy": 0.8748006224632263,
+   "delta_macro_f1_points": -0.6524145603179932,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 2,
+   "split": 4,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9480530619621277,
+   "stored_macro_f1": 0.9521541595458984,
+   "accuracy": 0.9489633440971375,
+   "stored_accuracy": 0.952684760093689,
+   "delta_macro_f1_points": -0.4101097583770752,
+   "delta_windows": 14,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 2,
+   "split": 5,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9155042767524719,
+   "stored_macro_f1": 0.9198240041732788,
+   "accuracy": 0.931951105594635,
+   "stored_accuracy": 0.9362041354179382,
+   "delta_macro_f1_points": -0.4319727420806885,
+   "delta_windows": 16,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 2,
+   "split": 6,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9001979827880859,
+   "stored_macro_f1": 0.901369571685791,
+   "accuracy": 0.9167995452880859,
+   "stored_accuracy": 0.9181286692619324,
+   "delta_macro_f1_points": -0.11715888977050781,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "recurrencenet",
+   "seed": 2,
+   "split": 7,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9483199119567871,
+   "stored_macro_f1": 0.9482008218765259,
+   "accuracy": 0.9537479877471924,
+   "stored_accuracy": 0.9540138244628906,
+   "delta_macro_f1_points": 0.011909008026123047,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "s4d",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7864051461219788,
+   "stored_macro_f1": 0.78070467710495,
+   "accuracy": 0.8357256650924683,
+   "stored_accuracy": 0.832270085811615,
+   "delta_macro_f1_points": 0.5700469017028809,
+   "delta_windows": 13,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7576753497123718,
+   "stored_macro_f1": 0.7519972324371338,
+   "accuracy": 0.7961190938949585,
+   "stored_accuracy": 0.792397677898407,
+   "delta_macro_f1_points": 0.5678117275238037,
+   "delta_windows": 14,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9037067294120789,
+   "stored_macro_f1": 0.9104621410369873,
+   "accuracy": 0.9242424368858337,
+   "stored_accuracy": 0.9300903677940369,
+   "delta_macro_f1_points": -0.6755411624908447,
+   "delta_windows": 22,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9010477662086487,
+   "stored_macro_f1": 0.9070745706558228,
+   "accuracy": 0.9183944463729858,
+   "stored_accuracy": 0.9245082139968872,
+   "delta_macro_f1_points": -0.6026804447174072,
+   "delta_windows": 23,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7544769048690796,
+   "stored_macro_f1": 0.7566965222358704,
+   "accuracy": 0.7889420390129089,
+   "stored_accuracy": 0.7931951284408569,
+   "delta_macro_f1_points": -0.22196173667907715,
+   "delta_windows": 16,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8998809456825256,
+   "stored_macro_f1": 0.8967867493629456,
+   "accuracy": 0.9098883867263794,
+   "stored_accuracy": 0.9074960350990295,
+   "delta_macro_f1_points": 0.3094196319580078,
+   "delta_windows": 9,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.849937915802002,
+   "stored_macro_f1": 0.8570515513420105,
+   "accuracy": 0.8758639097213745,
+   "stored_accuracy": 0.8798511624336243,
+   "delta_macro_f1_points": -0.7113635540008545,
+   "delta_windows": 15,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.952509343624115,
+   "stored_macro_f1": 0.9591512084007263,
+   "accuracy": 0.9537479877471924,
+   "stored_accuracy": 0.9598617553710938,
+   "delta_macro_f1_points": -0.6641864776611328,
+   "delta_windows": 23,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7794128656387329,
+   "stored_macro_f1": 0.7796674966812134,
+   "accuracy": 0.8237639665603638,
+   "stored_accuracy": 0.8237639665603638,
+   "delta_macro_f1_points": -0.025463104248046875,
+   "delta_windows": 0,
+   "within_tolerance": true
+  },
+  {
+   "model": "s4d",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6848011016845703,
+   "stored_macro_f1": 0.6833570003509521,
+   "accuracy": 0.7445507645606995,
+   "stored_accuracy": 0.7445507645606995,
+   "delta_macro_f1_points": 0.1444101333618164,
+   "delta_windows": 0,
+   "within_tolerance": true
+  },
+  {
+   "model": "s4d",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8443129658699036,
+   "stored_macro_f1": 0.846796452999115,
+   "accuracy": 0.8684210777282715,
+   "stored_accuracy": 0.8737373948097229,
+   "delta_macro_f1_points": -0.24834871292114258,
+   "delta_windows": 20,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9431271553039551,
+   "stored_macro_f1": 0.9493933320045471,
+   "accuracy": 0.9447102546691895,
+   "stored_accuracy": 0.9508240222930908,
+   "delta_macro_f1_points": -0.6266176700592041,
+   "delta_windows": 23,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7787672281265259,
+   "stored_macro_f1": 0.7817409634590149,
+   "accuracy": 0.8155236840248108,
+   "stored_accuracy": 0.8203083276748657,
+   "delta_macro_f1_points": -0.29737353324890137,
+   "delta_windows": 18,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9048441648483276,
+   "stored_macro_f1": 0.896923840045929,
+   "accuracy": 0.9154704809188843,
+   "stored_accuracy": 0.9101541638374329,
+   "delta_macro_f1_points": 0.7920324802398682,
+   "delta_windows": 20,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9408366680145264,
+   "stored_macro_f1": 0.9480602741241455,
+   "accuracy": 0.9423179030418396,
+   "stored_accuracy": 0.9486975073814392,
+   "delta_macro_f1_points": -0.7223606109619141,
+   "delta_windows": 24,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.844321608543396,
+   "stored_macro_f1": 0.8563739657402039,
+   "accuracy": 0.8572567701339722,
+   "stored_accuracy": 0.8662945032119751,
+   "delta_macro_f1_points": -1.2052357196807861,
+   "delta_windows": 34,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 2,
+   "split": 0,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8706733584403992,
+   "stored_macro_f1": 0.8703736662864685,
+   "accuracy": 0.8833067417144775,
+   "stored_accuracy": 0.8833067417144775,
+   "delta_macro_f1_points": 0.029969215393066406,
+   "delta_windows": 0,
+   "within_tolerance": true
+  },
+  {
+   "model": "s4d",
+   "seed": 2,
+   "split": 1,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8917123675346375,
+   "stored_macro_f1": 0.8952828645706177,
+   "accuracy": 0.908559262752533,
+   "stored_accuracy": 0.9114832282066345,
+   "delta_macro_f1_points": -0.35704970359802246,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 2,
+   "split": 2,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9030817151069641,
+   "stored_macro_f1": 0.9067778587341309,
+   "accuracy": 0.9242424368858337,
+   "stored_accuracy": 0.927698016166687,
+   "delta_macro_f1_points": -0.3696143627166748,
+   "delta_windows": 13,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 2,
+   "split": 3,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6603096723556519,
+   "stored_macro_f1": 0.6583433151245117,
+   "accuracy": 0.7256778478622437,
+   "stored_accuracy": 0.7235512733459473,
+   "delta_macro_f1_points": 0.19663572311401367,
+   "delta_windows": 8,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 2,
+   "split": 4,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8333713412284851,
+   "stored_macro_f1": 0.8351327180862427,
+   "accuracy": 0.8702817559242249,
+   "stored_accuracy": 0.8716108202934265,
+   "delta_macro_f1_points": -0.17613768577575684,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 2,
+   "split": 5,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.838403582572937,
+   "stored_macro_f1": 0.8492951393127441,
+   "accuracy": 0.8569909334182739,
+   "stored_accuracy": 0.8649654388427734,
+   "delta_macro_f1_points": -1.089155673980713,
+   "delta_windows": 30,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 2,
+   "split": 6,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9467800259590149,
+   "stored_macro_f1": 0.9486064910888672,
+   "accuracy": 0.948431670665741,
+   "stored_accuracy": 0.9497607946395874,
+   "delta_macro_f1_points": -0.1826465129852295,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "s4d",
+   "seed": 2,
+   "split": 7,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7345907688140869,
+   "stored_macro_f1": 0.7392423152923584,
+   "accuracy": 0.7713981866836548,
+   "stored_accuracy": 0.7780435681343079,
+   "delta_macro_f1_points": -0.46515464782714844,
+   "delta_windows": 25,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7547767758369446,
+   "stored_macro_f1": 0.7540725469589233,
+   "accuracy": 0.8096756935119629,
+   "stored_accuracy": 0.8094099164009094,
+   "delta_macro_f1_points": 0.07042288780212402,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6366626024246216,
+   "stored_macro_f1": 0.6396088004112244,
+   "accuracy": 0.7009569406509399,
+   "stored_accuracy": 0.7062732577323914,
+   "delta_macro_f1_points": -0.2946197986602783,
+   "delta_windows": 20,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8501051068305969,
+   "stored_macro_f1": 0.8550342917442322,
+   "accuracy": 0.8740031719207764,
+   "stored_accuracy": 0.8777245879173279,
+   "delta_macro_f1_points": -0.4929184913635254,
+   "delta_windows": 14,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.829382061958313,
+   "stored_macro_f1": 0.825039803981781,
+   "accuracy": 0.8506113886833191,
+   "stored_accuracy": 0.8482190370559692,
+   "delta_macro_f1_points": 0.43422579765319824,
+   "delta_windows": 9,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.787708044052124,
+   "stored_macro_f1": 0.7876685857772827,
+   "accuracy": 0.8192451000213623,
+   "stored_accuracy": 0.8211057782173157,
+   "delta_macro_f1_points": 0.003945827484130859,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7936928272247314,
+   "stored_macro_f1": 0.7965408563613892,
+   "accuracy": 0.8219032287597656,
+   "stored_accuracy": 0.8264220952987671,
+   "delta_macro_f1_points": -0.2848029136657715,
+   "delta_windows": 17,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8833955526351929,
+   "stored_macro_f1": 0.8902719616889954,
+   "accuracy": 0.8976607918739319,
+   "stored_accuracy": 0.9040403962135315,
+   "delta_macro_f1_points": -0.687640905380249,
+   "delta_windows": 24,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.851666271686554,
+   "stored_macro_f1": 0.8582980632781982,
+   "accuracy": 0.8697501420974731,
+   "stored_accuracy": 0.8745348453521729,
+   "delta_macro_f1_points": -0.6631791591644287,
+   "delta_windows": 18,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8198561072349548,
+   "stored_macro_f1": 0.816472589969635,
+   "accuracy": 0.8423711061477661,
+   "stored_accuracy": 0.8389154672622681,
+   "delta_macro_f1_points": 0.3383517265319824,
+   "delta_windows": 13,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6842336058616638,
+   "stored_macro_f1": 0.684604823589325,
+   "accuracy": 0.7410951852798462,
+   "stored_accuracy": 0.7416267991065979,
+   "delta_macro_f1_points": -0.03712177276611328,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8650979399681091,
+   "stored_macro_f1": 0.8689562082290649,
+   "accuracy": 0.8864965438842773,
+   "stored_accuracy": 0.8896863460540771,
+   "delta_macro_f1_points": -0.38582682609558105,
+   "delta_windows": 12,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8915796875953674,
+   "stored_macro_f1": 0.8921341300010681,
+   "accuracy": 0.9024454951286316,
+   "stored_accuracy": 0.9037745594978333,
+   "delta_macro_f1_points": -0.05544424057006836,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.804206371307373,
+   "stored_macro_f1": 0.8018908500671387,
+   "accuracy": 0.8317384123802185,
+   "stored_accuracy": 0.8330675363540649,
+   "delta_macro_f1_points": 0.2315521240234375,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9008042216300964,
+   "stored_macro_f1": 0.9012168049812317,
+   "accuracy": 0.9146730303764343,
+   "stored_accuracy": 0.9154704809188843,
+   "delta_macro_f1_points": -0.04125833511352539,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9159261584281921,
+   "stored_macro_f1": 0.9183704853057861,
+   "accuracy": 0.9237107634544373,
+   "stored_accuracy": 0.9263689517974854,
+   "delta_macro_f1_points": -0.24443268775939941,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8706901669502258,
+   "stored_macro_f1": 0.8773248791694641,
+   "accuracy": 0.880382776260376,
+   "stored_accuracy": 0.8883572816848755,
+   "delta_macro_f1_points": -0.6634712219238281,
+   "delta_windows": 30,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 2,
+   "split": 0,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9317443370819092,
+   "stored_macro_f1": 0.929222583770752,
+   "accuracy": 0.9316852688789368,
+   "stored_accuracy": 0.9295587539672852,
+   "delta_macro_f1_points": 0.25217533111572266,
+   "delta_windows": 8,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 2,
+   "split": 1,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8696562051773071,
+   "stored_macro_f1": 0.869090735912323,
+   "accuracy": 0.8958001136779785,
+   "stored_accuracy": 0.8958001136779785,
+   "delta_macro_f1_points": 0.056546926498413086,
+   "delta_windows": 0,
+   "within_tolerance": true
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 2,
+   "split": 2,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8349554538726807,
+   "stored_macro_f1": 0.8386192321777344,
+   "accuracy": 0.8726741075515747,
+   "stored_accuracy": 0.8755980730056763,
+   "delta_macro_f1_points": -0.3663778305053711,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 2,
+   "split": 3,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6843525767326355,
+   "stored_macro_f1": 0.6816641092300415,
+   "accuracy": 0.7442849278450012,
+   "stored_accuracy": 0.7429558634757996,
+   "delta_macro_f1_points": 0.2688467502593994,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 2,
+   "split": 4,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.857069730758667,
+   "stored_macro_f1": 0.8582296967506409,
+   "accuracy": 0.8934077620506287,
+   "stored_accuracy": 0.8942052125930786,
+   "delta_macro_f1_points": -0.1159965991973877,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 2,
+   "split": 5,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8778789043426514,
+   "stored_macro_f1": 0.8752988576889038,
+   "accuracy": 0.8931419253349304,
+   "stored_accuracy": 0.8910154104232788,
+   "delta_macro_f1_points": 0.25800466537475586,
+   "delta_windows": 8,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 2,
+   "split": 6,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9414297342300415,
+   "stored_macro_f1": 0.937201976776123,
+   "accuracy": 0.9433811902999878,
+   "stored_accuracy": 0.940191388130188,
+   "delta_macro_f1_points": 0.4227757453918457,
+   "delta_windows": 12,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "seed": 2,
+   "split": 7,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7652512788772583,
+   "stored_macro_f1": 0.7719612121582031,
+   "accuracy": 0.7934609055519104,
+   "stored_accuracy": 0.8014354109764099,
+   "delta_macro_f1_points": -0.6709933280944824,
+   "delta_windows": 30,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8375778794288635,
+   "stored_macro_f1": 0.8381247520446777,
+   "accuracy": 0.8745348453521729,
+   "stored_accuracy": 0.8748006224632263,
+   "delta_macro_f1_points": -0.0546872615814209,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "quantilenet",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6743671894073486,
+   "stored_macro_f1": 0.6752921938896179,
+   "accuracy": 0.740829348564148,
+   "stored_accuracy": 0.7424242496490479,
+   "delta_macro_f1_points": -0.09250044822692871,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.771594226360321,
+   "stored_macro_f1": 0.7767202854156494,
+   "accuracy": 0.8216374516487122,
+   "stored_accuracy": 0.8266879320144653,
+   "delta_macro_f1_points": -0.5126059055328369,
+   "delta_windows": 19,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9069375395774841,
+   "stored_macro_f1": 0.9124832153320312,
+   "accuracy": 0.9245082139968872,
+   "stored_accuracy": 0.9300903677940369,
+   "delta_macro_f1_points": -0.5545675754547119,
+   "delta_windows": 21,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7552375793457031,
+   "stored_macro_f1": 0.7621731758117676,
+   "accuracy": 0.7969165444374084,
+   "stored_accuracy": 0.8040935397148132,
+   "delta_macro_f1_points": -0.6935596466064453,
+   "delta_windows": 27,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8090949654579163,
+   "stored_macro_f1": 0.8086445927619934,
+   "accuracy": 0.8266879320144653,
+   "stored_accuracy": 0.8282828330993652,
+   "delta_macro_f1_points": 0.045037269592285156,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8571749329566956,
+   "stored_macro_f1": 0.8694515228271484,
+   "accuracy": 0.8769271373748779,
+   "stored_accuracy": 0.8875598311424255,
+   "delta_macro_f1_points": -1.227658987045288,
+   "delta_windows": 40,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8303564190864563,
+   "stored_macro_f1": 0.8316169381141663,
+   "accuracy": 0.8575226068496704,
+   "stored_accuracy": 0.8601807355880737,
+   "delta_macro_f1_points": -0.1260519027709961,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7546650767326355,
+   "stored_macro_f1": 0.7479254603385925,
+   "accuracy": 0.8125996589660645,
+   "stored_accuracy": 0.807283341884613,
+   "delta_macro_f1_points": 0.6739616394042969,
+   "delta_windows": 20,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7033765912055969,
+   "stored_macro_f1": 0.6862775683403015,
+   "accuracy": 0.7594364881515503,
+   "stored_accuracy": 0.7466772794723511,
+   "delta_macro_f1_points": 1.709902286529541,
+   "delta_windows": 48,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7883011102676392,
+   "stored_macro_f1": 0.7855979204177856,
+   "accuracy": 0.8298777341842651,
+   "stored_accuracy": 0.8290802836418152,
+   "delta_macro_f1_points": 0.27031898498535156,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8799924254417419,
+   "stored_macro_f1": 0.888656735420227,
+   "accuracy": 0.8997873663902283,
+   "stored_accuracy": 0.907761812210083,
+   "delta_macro_f1_points": -0.8664309978485107,
+   "delta_windows": 30,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7058664560317993,
+   "stored_macro_f1": 0.7055303454399109,
+   "accuracy": 0.7551833987236023,
+   "stored_accuracy": 0.7578415870666504,
+   "delta_macro_f1_points": 0.03361105918884277,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8963544964790344,
+   "stored_macro_f1": 0.8985755443572998,
+   "accuracy": 0.9109516143798828,
+   "stored_accuracy": 0.9125465154647827,
+   "delta_macro_f1_points": -0.22210478782653809,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8994555473327637,
+   "stored_macro_f1": 0.8983006477355957,
+   "accuracy": 0.912014901638031,
+   "stored_accuracy": 0.911217451095581,
+   "delta_macro_f1_points": 0.11548995971679688,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9062966704368591,
+   "stored_macro_f1": 0.9104752540588379,
+   "accuracy": 0.9088250994682312,
+   "stored_accuracy": 0.912812352180481,
+   "delta_macro_f1_points": -0.417858362197876,
+   "delta_windows": 15,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 2,
+   "split": 0,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8080112934112549,
+   "stored_macro_f1": 0.8063092231750488,
+   "accuracy": 0.8341307640075684,
+   "stored_accuracy": 0.8325358629226685,
+   "delta_macro_f1_points": 0.17020702362060547,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 2,
+   "split": 1,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8417113423347473,
+   "stored_macro_f1": 0.8412269353866577,
+   "accuracy": 0.8644338250160217,
+   "stored_accuracy": 0.8652312755584717,
+   "delta_macro_f1_points": 0.04844069480895996,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 2,
+   "split": 2,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8271706104278564,
+   "stored_macro_f1": 0.8310884237289429,
+   "accuracy": 0.8676236271858215,
+   "stored_accuracy": 0.8710792064666748,
+   "delta_macro_f1_points": -0.3917813301086426,
+   "delta_windows": 13,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 2,
+   "split": 3,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6236631870269775,
+   "stored_macro_f1": 0.6257297396659851,
+   "accuracy": 0.6953747868537903,
+   "stored_accuracy": 0.6969696879386902,
+   "delta_macro_f1_points": -0.20665526390075684,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 2,
+   "split": 4,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8476614952087402,
+   "stored_macro_f1": 0.8498374819755554,
+   "accuracy": 0.8827751278877258,
+   "stored_accuracy": 0.8849016427993774,
+   "delta_macro_f1_points": -0.21759867668151855,
+   "delta_windows": 8,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 2,
+   "split": 5,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.907187819480896,
+   "stored_macro_f1": 0.9080721139907837,
+   "accuracy": 0.9122806787490845,
+   "stored_accuracy": 0.9144072532653809,
+   "delta_macro_f1_points": -0.08842945098876953,
+   "delta_windows": 8,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 2,
+   "split": 6,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8712204098701477,
+   "stored_macro_f1": 0.8802722096443176,
+   "accuracy": 0.8817118406295776,
+   "stored_accuracy": 0.8891547322273254,
+   "delta_macro_f1_points": -0.9051799774169922,
+   "delta_windows": 28,
+   "within_tolerance": false
+  },
+  {
+   "model": "quantilenet",
+   "seed": 2,
+   "split": 7,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7736672759056091,
+   "stored_macro_f1": 0.7750037312507629,
+   "accuracy": 0.808080792427063,
+   "stored_accuracy": 0.8099415302276611,
+   "delta_macro_f1_points": -0.13364553451538086,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8571256399154663,
+   "stored_macro_f1": 0.8580384254455566,
+   "accuracy": 0.892876148223877,
+   "stored_accuracy": 0.8936735987663269,
+   "delta_macro_f1_points": -0.0912785530090332,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6234340071678162,
+   "stored_macro_f1": 0.621989905834198,
+   "accuracy": 0.6874003410339355,
+   "stored_accuracy": 0.6868686676025391,
+   "delta_macro_f1_points": 0.1444101333618164,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "mamba",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8226278424263,
+   "stored_macro_f1": 0.8260113596916199,
+   "accuracy": 0.8564593195915222,
+   "stored_accuracy": 0.860446572303772,
+   "delta_macro_f1_points": -0.3383517265319824,
+   "delta_windows": 15,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.837432861328125,
+   "stored_macro_f1": 0.8393480181694031,
+   "accuracy": 0.8676236271858215,
+   "stored_accuracy": 0.8705475926399231,
+   "delta_macro_f1_points": -0.19151568412780762,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6948469877243042,
+   "stored_macro_f1": 0.7006928324699402,
+   "accuracy": 0.751727819442749,
+   "stored_accuracy": 0.7575757503509521,
+   "delta_macro_f1_points": -0.5845844745635986,
+   "delta_windows": 22,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7868506908416748,
+   "stored_macro_f1": 0.7890061736106873,
+   "accuracy": 0.8213716149330139,
+   "stored_accuracy": 0.8232323527336121,
+   "delta_macro_f1_points": -0.21554827690124512,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9219813346862793,
+   "stored_macro_f1": 0.9288513660430908,
+   "accuracy": 0.9234449863433838,
+   "stored_accuracy": 0.9298245906829834,
+   "delta_macro_f1_points": -0.6870031356811523,
+   "delta_windows": 24,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9001689553260803,
+   "stored_macro_f1": 0.8996608853340149,
+   "accuracy": 0.9037745594978333,
+   "stored_accuracy": 0.9040403962135315,
+   "delta_macro_f1_points": 0.05080699920654297,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "mamba",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8523337841033936,
+   "stored_macro_f1": 0.8531503081321716,
+   "accuracy": 0.8872939944267273,
+   "stored_accuracy": 0.8883572816848755,
+   "delta_macro_f1_points": -0.08165240287780762,
+   "delta_windows": 4,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.5927214622497559,
+   "stored_macro_f1": 0.5884448885917664,
+   "accuracy": 0.6772993206977844,
+   "stored_accuracy": 0.6743753552436829,
+   "delta_macro_f1_points": 0.4276573657989502,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7273833155632019,
+   "stored_macro_f1": 0.7345224618911743,
+   "accuracy": 0.7695375084877014,
+   "stored_accuracy": 0.7756512761116028,
+   "delta_macro_f1_points": -0.7139146327972412,
+   "delta_windows": 23,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8342201113700867,
+   "stored_macro_f1": 0.8287439942359924,
+   "accuracy": 0.853003740310669,
+   "stored_accuracy": 0.8490164875984192,
+   "delta_macro_f1_points": 0.5476117134094238,
+   "delta_windows": 15,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7477220892906189,
+   "stored_macro_f1": 0.7489914894104004,
+   "accuracy": 0.7908027768135071,
+   "stored_accuracy": 0.7934609055519104,
+   "delta_macro_f1_points": -0.12694001197814941,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8096981048583984,
+   "stored_macro_f1": 0.8049848079681396,
+   "accuracy": 0.8386496305465698,
+   "stored_accuracy": 0.8359915018081665,
+   "delta_macro_f1_points": 0.4713296890258789,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8559520840644836,
+   "stored_macro_f1": 0.8490924835205078,
+   "accuracy": 0.8793194890022278,
+   "stored_accuracy": 0.8748006224632263,
+   "delta_macro_f1_points": 0.685960054397583,
+   "delta_windows": 17,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8755846619606018,
+   "stored_macro_f1": 0.877677321434021,
+   "accuracy": 0.8902179598808289,
+   "stored_accuracy": 0.8923444747924805,
+   "delta_macro_f1_points": -0.20926594734191895,
+   "delta_windows": 8,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 2,
+   "split": 0,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8100793957710266,
+   "stored_macro_f1": 0.8101603984832764,
+   "accuracy": 0.8431685566902161,
+   "stored_accuracy": 0.8423711061477661,
+   "delta_macro_f1_points": -0.008100271224975586,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 2,
+   "split": 1,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8316169381141663,
+   "stored_macro_f1": 0.8371934294700623,
+   "accuracy": 0.8538011908531189,
+   "stored_accuracy": 0.8583200573921204,
+   "delta_macro_f1_points": -0.5576491355895996,
+   "delta_windows": 17,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 2,
+   "split": 2,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8411563038825989,
+   "stored_macro_f1": 0.8432559967041016,
+   "accuracy": 0.8787878751754761,
+   "stored_accuracy": 0.8806486129760742,
+   "delta_macro_f1_points": -0.20996928215026855,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 2,
+   "split": 3,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6378448009490967,
+   "stored_macro_f1": 0.6364007592201233,
+   "accuracy": 0.7107921242713928,
+   "stored_accuracy": 0.7089314460754395,
+   "delta_macro_f1_points": 0.14440417289733887,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 2,
+   "split": 4,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7953096032142639,
+   "stored_macro_f1": 0.7943145036697388,
+   "accuracy": 0.8391813039779663,
+   "stored_accuracy": 0.8381180167198181,
+   "delta_macro_f1_points": 0.09950995445251465,
+   "delta_windows": 4,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 2,
+   "split": 5,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8169441223144531,
+   "stored_macro_f1": 0.8161153197288513,
+   "accuracy": 0.8410419821739197,
+   "stored_accuracy": 0.839712917804718,
+   "delta_macro_f1_points": 0.08288025856018066,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 2,
+   "split": 6,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.877032458782196,
+   "stored_macro_f1": 0.8801853060722351,
+   "accuracy": 0.8841041922569275,
+   "stored_accuracy": 0.8864965438842773,
+   "delta_macro_f1_points": -0.31528472900390625,
+   "delta_windows": 9,
+   "within_tolerance": false
+  },
+  {
+   "model": "mamba",
+   "seed": 2,
+   "split": 7,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7328087091445923,
+   "stored_macro_f1": 0.736343264579773,
+   "accuracy": 0.7727272510528564,
+   "stored_accuracy": 0.7777777910232544,
+   "delta_macro_f1_points": -0.3534555435180664,
+   "delta_windows": 19,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7095248699188232,
+   "stored_macro_f1": 0.7109024524688721,
+   "accuracy": 0.7652844190597534,
+   "stored_accuracy": 0.7666134834289551,
+   "delta_macro_f1_points": -0.1377582550048828,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6472446322441101,
+   "stored_macro_f1": 0.6426851749420166,
+   "accuracy": 0.7187666296958923,
+   "stored_accuracy": 0.7158426642417908,
+   "delta_macro_f1_points": 0.4559457302093506,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8194371461868286,
+   "stored_macro_f1": 0.8222586512565613,
+   "accuracy": 0.8575226068496704,
+   "stored_accuracy": 0.8607124090194702,
+   "delta_macro_f1_points": -0.2821505069732666,
+   "delta_windows": 12,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.87740558385849,
+   "stored_macro_f1": 0.8897528648376465,
+   "accuracy": 0.8952684998512268,
+   "stored_accuracy": 0.9069643616676331,
+   "delta_macro_f1_points": -1.2347280979156494,
+   "delta_windows": 44,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7626959085464478,
+   "stored_macro_f1": 0.764782726764679,
+   "accuracy": 0.79984050989151,
+   "stored_accuracy": 0.8035619258880615,
+   "delta_macro_f1_points": -0.20868182182312012,
+   "delta_windows": 14,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8323460817337036,
+   "stored_macro_f1": 0.8359678983688354,
+   "accuracy": 0.8607124090194702,
+   "stored_accuracy": 0.8649654388427734,
+   "delta_macro_f1_points": -0.3621816635131836,
+   "delta_windows": 16,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8339899182319641,
+   "stored_macro_f1": 0.8449784517288208,
+   "accuracy": 0.8609781861305237,
+   "stored_accuracy": 0.8694843053817749,
+   "delta_macro_f1_points": -1.098853349685669,
+   "delta_windows": 32,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8113835453987122,
+   "stored_macro_f1": 0.8141087889671326,
+   "accuracy": 0.8410419821739197,
+   "stored_accuracy": 0.8439659476280212,
+   "delta_macro_f1_points": -0.272524356842041,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7939525246620178,
+   "stored_macro_f1": 0.7938883304595947,
+   "accuracy": 0.8378521800041199,
+   "stored_accuracy": 0.8375864028930664,
+   "delta_macro_f1_points": 0.00641942024230957,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6359158754348755,
+   "stored_macro_f1": 0.6327720284461975,
+   "accuracy": 0.7068048715591431,
+   "stored_accuracy": 0.7044125199317932,
+   "delta_macro_f1_points": 0.31438469886779785,
+   "delta_windows": 9,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8415400385856628,
+   "stored_macro_f1": 0.8456059694290161,
+   "accuracy": 0.8769271373748779,
+   "stored_accuracy": 0.8809143900871277,
+   "delta_macro_f1_points": -0.40659308433532715,
+   "delta_windows": 15,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9021998047828674,
+   "stored_macro_f1": 0.9053435325622559,
+   "accuracy": 0.9181286692619324,
+   "stored_accuracy": 0.9215842485427856,
+   "delta_macro_f1_points": -0.3143727779388428,
+   "delta_windows": 13,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6496791839599609,
+   "stored_macro_f1": 0.6537821292877197,
+   "accuracy": 0.7163742780685425,
+   "stored_accuracy": 0.7211589813232422,
+   "delta_macro_f1_points": -0.4102945327758789,
+   "delta_windows": 18,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7382309436798096,
+   "stored_macro_f1": 0.7384228110313416,
+   "accuracy": 0.7719298005104065,
+   "stored_accuracy": 0.7721956372261047,
+   "delta_macro_f1_points": -0.019186735153198242,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8519849181175232,
+   "stored_macro_f1": 0.8524789214134216,
+   "accuracy": 0.872939944267273,
+   "stored_accuracy": 0.8734715580940247,
+   "delta_macro_f1_points": -0.04940032958984375,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8454664945602417,
+   "stored_macro_f1": 0.8506500124931335,
+   "accuracy": 0.8646996021270752,
+   "stored_accuracy": 0.8694843053817749,
+   "delta_macro_f1_points": -0.5183517932891846,
+   "delta_windows": 18,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 2,
+   "split": 0,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8516018390655518,
+   "stored_macro_f1": 0.8518497943878174,
+   "accuracy": 0.8681552410125732,
+   "stored_accuracy": 0.8681552410125732,
+   "delta_macro_f1_points": -0.0247955322265625,
+   "delta_windows": 0,
+   "within_tolerance": true
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 2,
+   "split": 1,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8137361407279968,
+   "stored_macro_f1": 0.8159780502319336,
+   "accuracy": 0.8468899726867676,
+   "stored_accuracy": 0.8500797152519226,
+   "delta_macro_f1_points": -0.22419095039367676,
+   "delta_windows": 12,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 2,
+   "split": 2,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8777984976768494,
+   "stored_macro_f1": 0.8794305920600891,
+   "accuracy": 0.8973950147628784,
+   "stored_accuracy": 0.8992556929588318,
+   "delta_macro_f1_points": -0.1632094383239746,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 2,
+   "split": 3,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6131718754768372,
+   "stored_macro_f1": 0.6207258105278015,
+   "accuracy": 0.6818181872367859,
+   "stored_accuracy": 0.6881977915763855,
+   "delta_macro_f1_points": -0.7553935050964355,
+   "delta_windows": 24,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 2,
+   "split": 4,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9250234365463257,
+   "stored_macro_f1": 0.9251512289047241,
+   "accuracy": 0.9417862892150879,
+   "stored_accuracy": 0.9420521259307861,
+   "delta_macro_f1_points": -0.01277923583984375,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 2,
+   "split": 5,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8218277096748352,
+   "stored_macro_f1": 0.8177553415298462,
+   "accuracy": 0.8466241359710693,
+   "stored_accuracy": 0.8426368832588196,
+   "delta_macro_f1_points": 0.40723681449890137,
+   "delta_windows": 15,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 2,
+   "split": 6,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.874092698097229,
+   "stored_macro_f1": 0.8811008930206299,
+   "accuracy": 0.8825092911720276,
+   "stored_accuracy": 0.888623058795929,
+   "delta_macro_f1_points": -0.7008194923400879,
+   "delta_windows": 23,
+   "within_tolerance": false
+  },
+  {
+   "model": "hystnet_nomem",
+   "seed": 2,
+   "split": 7,
+   "device": "NVIDIA L4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7782244682312012,
+   "stored_macro_f1": 0.7810258865356445,
+   "accuracy": 0.8078150153160095,
+   "stored_accuracy": 0.8133971095085144,
+   "delta_macro_f1_points": -0.28014183044433594,
+   "delta_windows": 21,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8556129336357117,
+   "stored_macro_f1": 0.8567933440208435,
+   "accuracy": 0.8923444747924805,
+   "stored_accuracy": 0.8931419253349304,
+   "delta_macro_f1_points": -0.1180410385131836,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7572291493415833,
+   "stored_macro_f1": 0.7485705614089966,
+   "accuracy": 0.8019670248031616,
+   "stored_accuracy": 0.7974481582641602,
+   "delta_macro_f1_points": 0.865858793258667,
+   "delta_windows": 17,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9100958108901978,
+   "stored_macro_f1": 0.9159287810325623,
+   "accuracy": 0.9290271401405334,
+   "stored_accuracy": 0.9340776205062866,
+   "delta_macro_f1_points": -0.5832970142364502,
+   "delta_windows": 19,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9015626311302185,
+   "stored_macro_f1": 0.9047210812568665,
+   "accuracy": 0.920255184173584,
+   "stored_accuracy": 0.9234449863433838,
+   "delta_macro_f1_points": -0.3158450126647949,
+   "delta_windows": 12,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7988072037696838,
+   "stored_macro_f1": 0.794858455657959,
+   "accuracy": 0.8195108771324158,
+   "stored_accuracy": 0.8203083276748657,
+   "delta_macro_f1_points": 0.39487481117248535,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9159528613090515,
+   "stored_macro_f1": 0.9199230670928955,
+   "accuracy": 0.9250398874282837,
+   "stored_accuracy": 0.9279638528823853,
+   "delta_macro_f1_points": -0.3970205783843994,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8734763264656067,
+   "stored_macro_f1": 0.8666390776634216,
+   "accuracy": 0.8833067417144775,
+   "stored_accuracy": 0.8787878751754761,
+   "delta_macro_f1_points": 0.6837248802185059,
+   "delta_windows": 17,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.897366464138031,
+   "stored_macro_f1": 0.8987305164337158,
+   "accuracy": 0.9162679314613342,
+   "stored_accuracy": 0.9165337681770325,
+   "delta_macro_f1_points": -0.13640522956848145,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "recstatnet",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8367692828178406,
+   "stored_macro_f1": 0.8454029560089111,
+   "accuracy": 0.8732057213783264,
+   "stored_accuracy": 0.8817118406295776,
+   "delta_macro_f1_points": -0.8633673191070557,
+   "delta_windows": 32,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.738601803779602,
+   "stored_macro_f1": 0.7347608804702759,
+   "accuracy": 0.7939925789833069,
+   "stored_accuracy": 0.7921318411827087,
+   "delta_macro_f1_points": 0.3840923309326172,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.898514986038208,
+   "stored_macro_f1": 0.9039218425750732,
+   "accuracy": 0.9189261198043823,
+   "stored_accuracy": 0.9242424368858337,
+   "delta_macro_f1_points": -0.5406856536865234,
+   "delta_windows": 20,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9029106497764587,
+   "stored_macro_f1": 0.9038040041923523,
+   "accuracy": 0.9218500852584839,
+   "stored_accuracy": 0.9229133725166321,
+   "delta_macro_f1_points": -0.08933544158935547,
+   "delta_windows": 4,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7844405174255371,
+   "stored_macro_f1": 0.7839013934135437,
+   "accuracy": 0.8141945600509644,
+   "stored_accuracy": 0.8168527483940125,
+   "delta_macro_f1_points": 0.05391240119934082,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9399049878120422,
+   "stored_macro_f1": 0.9430574178695679,
+   "accuracy": 0.9436469674110413,
+   "stored_accuracy": 0.9463051557540894,
+   "delta_macro_f1_points": -0.3152430057525635,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8901053071022034,
+   "stored_macro_f1": 0.8915440440177917,
+   "accuracy": 0.8971291780471802,
+   "stored_accuracy": 0.8992556929588318,
+   "delta_macro_f1_points": -0.1438736915588379,
+   "delta_windows": 8,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9031009674072266,
+   "stored_macro_f1": 0.9028428792953491,
+   "accuracy": 0.9205210208892822,
+   "stored_accuracy": 0.9199893474578857,
+   "delta_macro_f1_points": 0.02580881118774414,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "recstatnet",
+   "seed": 2,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8543809652328491,
+   "stored_macro_f1": 0.8555237650871277,
+   "accuracy": 0.892078697681427,
+   "stored_accuracy": 0.892876148223877,
+   "delta_macro_f1_points": -0.11427998542785645,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 2,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6790680885314941,
+   "stored_macro_f1": 0.6747294068336487,
+   "accuracy": 0.740031898021698,
+   "stored_accuracy": 0.7384369969367981,
+   "delta_macro_f1_points": 0.4338681697845459,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 2,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9114293456077576,
+   "stored_macro_f1": 0.9119013547897339,
+   "accuracy": 0.9250398874282837,
+   "stored_accuracy": 0.9263689517974854,
+   "delta_macro_f1_points": -0.047200918197631836,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 2,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8988738059997559,
+   "stored_macro_f1": 0.9049246907234192,
+   "accuracy": 0.9167995452880859,
+   "stored_accuracy": 0.9223816990852356,
+   "delta_macro_f1_points": -0.605088472366333,
+   "delta_windows": 21,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 2,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8195662498474121,
+   "stored_macro_f1": 0.8215004801750183,
+   "accuracy": 0.8407762050628662,
+   "stored_accuracy": 0.8431685566902161,
+   "delta_macro_f1_points": -0.19342303276062012,
+   "delta_windows": 9,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 2,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9263877868652344,
+   "stored_macro_f1": 0.930447518825531,
+   "accuracy": 0.9340776205062866,
+   "stored_accuracy": 0.9375331997871399,
+   "delta_macro_f1_points": -0.4059731960296631,
+   "delta_windows": 13,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 2,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8771846890449524,
+   "stored_macro_f1": 0.8733190298080444,
+   "accuracy": 0.8875598311424255,
+   "stored_accuracy": 0.8841041922569275,
+   "delta_macro_f1_points": 0.3865659236907959,
+   "delta_windows": 13,
+   "within_tolerance": false
+  },
+  {
+   "model": "recstatnet",
+   "seed": 2,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8738491535186768,
+   "stored_macro_f1": 0.8773093819618225,
+   "accuracy": 0.8910154104232788,
+   "stored_accuracy": 0.8939393758773804,
+   "delta_macro_f1_points": -0.3460228443145752,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7956388592720032,
+   "stored_macro_f1": 0.8006144165992737,
+   "accuracy": 0.8437001705169678,
+   "stored_accuracy": 0.8482190370559692,
+   "delta_macro_f1_points": -0.4975557327270508,
+   "delta_windows": 17,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7519676089286804,
+   "stored_macro_f1": 0.7412059307098389,
+   "accuracy": 0.7955874800682068,
+   "stored_accuracy": 0.7857522368431091,
+   "delta_macro_f1_points": 1.0761678218841553,
+   "delta_windows": 37,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9236696362495422,
+   "stored_macro_f1": 0.9137937426567078,
+   "accuracy": 0.9351409077644348,
+   "stored_accuracy": 0.9274322390556335,
+   "delta_macro_f1_points": 0.9875893592834473,
+   "delta_windows": 29,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.926856279373169,
+   "stored_macro_f1": 0.9274293184280396,
+   "accuracy": 0.9343434572219849,
+   "stored_accuracy": 0.9354066848754883,
+   "delta_macro_f1_points": -0.05730390548706055,
+   "delta_windows": 4,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8897320628166199,
+   "stored_macro_f1": 0.8832008242607117,
+   "accuracy": 0.8950026631355286,
+   "stored_accuracy": 0.8904837965965271,
+   "delta_macro_f1_points": 0.6531238555908203,
+   "delta_windows": 17,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9606179594993591,
+   "stored_macro_f1": 0.9536634683609009,
+   "accuracy": 0.9611908793449402,
+   "stored_accuracy": 0.9548112750053406,
+   "delta_macro_f1_points": 0.6954491138458252,
+   "delta_windows": 24,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9303558468818665,
+   "stored_macro_f1": 0.9310998320579529,
+   "accuracy": 0.9311536550521851,
+   "stored_accuracy": 0.9314194321632385,
+   "delta_macro_f1_points": -0.07439851760864258,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9241206645965576,
+   "stored_macro_f1": 0.931587815284729,
+   "accuracy": 0.9359383583068848,
+   "stored_accuracy": 0.9399255514144897,
+   "delta_macro_f1_points": -0.7467150688171387,
+   "delta_windows": 15,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8522535562515259,
+   "stored_macro_f1": 0.8532688617706299,
+   "accuracy": 0.8902179598808289,
+   "stored_accuracy": 0.8910154104232788,
+   "delta_macro_f1_points": -0.10153055191040039,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.769273579120636,
+   "stored_macro_f1": 0.7741208076477051,
+   "accuracy": 0.8094099164009094,
+   "stored_accuracy": 0.8131313323974609,
+   "delta_macro_f1_points": -0.4847228527069092,
+   "delta_windows": 14,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9618033170700073,
+   "stored_macro_f1": 0.958088219165802,
+   "accuracy": 0.9630515575408936,
+   "stored_accuracy": 0.9595959782600403,
+   "delta_macro_f1_points": 0.3715097904205322,
+   "delta_windows": 13,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9542840719223022,
+   "stored_macro_f1": 0.9555423855781555,
+   "accuracy": 0.9564061760902405,
+   "stored_accuracy": 0.9582668542861938,
+   "delta_macro_f1_points": -0.12583136558532715,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8928022980690002,
+   "stored_macro_f1": 0.9075176119804382,
+   "accuracy": 0.8979266285896301,
+   "stored_accuracy": 0.912014901638031,
+   "delta_macro_f1_points": -1.4715313911437988,
+   "delta_windows": 53,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9314085245132446,
+   "stored_macro_f1": 0.9368648529052734,
+   "accuracy": 0.9375331997871399,
+   "stored_accuracy": 0.9417862892150879,
+   "delta_macro_f1_points": -0.5456328392028809,
+   "delta_windows": 16,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9771161079406738,
+   "stored_macro_f1": 0.9762524962425232,
+   "accuracy": 0.9768739938735962,
+   "stored_accuracy": 0.9758107662200928,
+   "delta_macro_f1_points": 0.08636116981506348,
+   "delta_windows": 4,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9113222360610962,
+   "stored_macro_f1": 0.9123324155807495,
+   "accuracy": 0.9279638528823853,
+   "stored_accuracy": 0.928495466709137,
+   "delta_macro_f1_points": -0.10101795196533203,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 2,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8854155540466309,
+   "stored_macro_f1": 0.8947243094444275,
+   "accuracy": 0.9061669111251831,
+   "stored_accuracy": 0.9144072532653809,
+   "delta_macro_f1_points": -0.9308755397796631,
+   "delta_windows": 31,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 2,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6925854682922363,
+   "stored_macro_f1": 0.6944479942321777,
+   "accuracy": 0.7485380172729492,
+   "stored_accuracy": 0.7498670816421509,
+   "delta_macro_f1_points": -0.18625259399414062,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 2,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9537686705589294,
+   "stored_macro_f1": 0.9520243406295776,
+   "accuracy": 0.956671953201294,
+   "stored_accuracy": 0.9542796611785889,
+   "delta_macro_f1_points": 0.17443299293518066,
+   "delta_windows": 9,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 2,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9719274640083313,
+   "stored_macro_f1": 0.9699284434318542,
+   "accuracy": 0.9723551273345947,
+   "stored_accuracy": 0.9704943895339966,
+   "delta_macro_f1_points": 0.19990205764770508,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 2,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8917917013168335,
+   "stored_macro_f1": 0.8916416168212891,
+   "accuracy": 0.9000531435012817,
+   "stored_accuracy": 0.9019138813018799,
+   "delta_macro_f1_points": 0.01500844955444336,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 2,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9501464366912842,
+   "stored_macro_f1": 0.9523016214370728,
+   "accuracy": 0.9537479877471924,
+   "stored_accuracy": 0.9561403393745422,
+   "delta_macro_f1_points": -0.21551847457885742,
+   "delta_windows": 9,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 2,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9641704559326172,
+   "stored_macro_f1": 0.958209216594696,
+   "accuracy": 0.9635831713676453,
+   "stored_accuracy": 0.9574694037437439,
+   "delta_macro_f1_points": 0.5961239337921143,
+   "delta_windows": 23,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet_rec",
+   "seed": 2,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8689754605293274,
+   "stored_macro_f1": 0.8816607594490051,
+   "accuracy": 0.8841041922569275,
+   "stored_accuracy": 0.8944710493087769,
+   "delta_macro_f1_points": -1.2685298919677734,
+   "delta_windows": 39,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8584197163581848,
+   "stored_macro_f1": 0.859704852104187,
+   "accuracy": 0.888623058795929,
+   "stored_accuracy": 0.8915470242500305,
+   "delta_macro_f1_points": -0.12851357460021973,
+   "delta_windows": 11,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8022713661193848,
+   "stored_macro_f1": 0.7798169851303101,
+   "accuracy": 0.8357256650924683,
+   "stored_accuracy": 0.8168527483940125,
+   "delta_macro_f1_points": 2.2454380989074707,
+   "delta_windows": 71,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.889214038848877,
+   "stored_macro_f1": 0.8923355937004089,
+   "accuracy": 0.9066985845565796,
+   "stored_accuracy": 0.9093567132949829,
+   "delta_macro_f1_points": -0.31215548515319824,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.969520092010498,
+   "stored_macro_f1": 0.9684193134307861,
+   "accuracy": 0.9704943895339966,
+   "stored_accuracy": 0.9696969985961914,
+   "delta_macro_f1_points": 0.1100778579711914,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8371984362602234,
+   "stored_macro_f1": 0.833429753780365,
+   "accuracy": 0.8538011908531189,
+   "stored_accuracy": 0.8532695174217224,
+   "delta_macro_f1_points": 0.37686824798583984,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "lawnet",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.896507978439331,
+   "stored_macro_f1": 0.898382306098938,
+   "accuracy": 0.9040403962135315,
+   "stored_accuracy": 0.9072301983833313,
+   "delta_macro_f1_points": -0.18743276596069336,
+   "delta_windows": 12,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.938046395778656,
+   "stored_macro_f1": 0.9353206753730774,
+   "accuracy": 0.9417862892150879,
+   "stored_accuracy": 0.940191388130188,
+   "delta_macro_f1_points": 0.27257204055786133,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8636664152145386,
+   "stored_macro_f1": 0.8705247640609741,
+   "accuracy": 0.8851674795150757,
+   "stored_accuracy": 0.8902179598808289,
+   "delta_macro_f1_points": -0.6858348846435547,
+   "delta_windows": 19,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.847642719745636,
+   "stored_macro_f1": 0.8426244854927063,
+   "accuracy": 0.8838383555412292,
+   "stored_accuracy": 0.8787878751754761,
+   "delta_macro_f1_points": 0.5018234252929688,
+   "delta_windows": 19,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7513319253921509,
+   "stored_macro_f1": 0.7484377026557922,
+   "accuracy": 0.7921318411827087,
+   "stored_accuracy": 0.7908027768135071,
+   "delta_macro_f1_points": 0.28942227363586426,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.830467700958252,
+   "stored_macro_f1": 0.8183851838111877,
+   "accuracy": 0.8538011908531189,
+   "stored_accuracy": 0.8415736556053162,
+   "delta_macro_f1_points": 1.208251714706421,
+   "delta_windows": 46,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9383705258369446,
+   "stored_macro_f1": 0.9366239309310913,
+   "accuracy": 0.9407230019569397,
+   "stored_accuracy": 0.9391281008720398,
+   "delta_macro_f1_points": 0.17465949058532715,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8727685213088989,
+   "stored_macro_f1": 0.8606368899345398,
+   "accuracy": 0.8838383555412292,
+   "stored_accuracy": 0.8732057213783264,
+   "delta_macro_f1_points": 1.213163137435913,
+   "delta_windows": 40,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8931425213813782,
+   "stored_macro_f1": 0.8941941261291504,
+   "accuracy": 0.8981924653053284,
+   "stored_accuracy": 0.9000531435012817,
+   "delta_macro_f1_points": -0.10516047477722168,
+   "delta_windows": 7,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9416964650154114,
+   "stored_macro_f1": 0.9359274506568909,
+   "accuracy": 0.940191388130188,
+   "stored_accuracy": 0.9354066848754883,
+   "delta_macro_f1_points": 0.5769014358520508,
+   "delta_windows": 18,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8998088836669922,
+   "stored_macro_f1": 0.9070318937301636,
+   "accuracy": 0.9074960350990295,
+   "stored_accuracy": 0.9122806787490845,
+   "delta_macro_f1_points": -0.7223010063171387,
+   "delta_windows": 18,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 2,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8508030772209167,
+   "stored_macro_f1": 0.8514046669006348,
+   "accuracy": 0.888623058795929,
+   "stored_accuracy": 0.8888888955116272,
+   "delta_macro_f1_points": -0.06015896797180176,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "lawnet",
+   "seed": 2,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.689620316028595,
+   "stored_macro_f1": 0.6852043271064758,
+   "accuracy": 0.7498670816421509,
+   "stored_accuracy": 0.747474730014801,
+   "delta_macro_f1_points": 0.44159889221191406,
+   "delta_windows": 9,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 2,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8795982003211975,
+   "stored_macro_f1": 0.859988272190094,
+   "accuracy": 0.8899521827697754,
+   "stored_accuracy": 0.8748006224632263,
+   "delta_macro_f1_points": 1.9609928131103516,
+   "delta_windows": 57,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 2,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9717819094657898,
+   "stored_macro_f1": 0.9739686250686646,
+   "accuracy": 0.9723551273345947,
+   "stored_accuracy": 0.9747474789619446,
+   "delta_macro_f1_points": -0.21867156028747559,
+   "delta_windows": 9,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 2,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8590795397758484,
+   "stored_macro_f1": 0.8590928912162781,
+   "accuracy": 0.859649121761322,
+   "stored_accuracy": 0.860446572303772,
+   "delta_macro_f1_points": -0.00133514404296875,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 2,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8811578154563904,
+   "stored_macro_f1": 0.886032223701477,
+   "accuracy": 0.8904837965965271,
+   "stored_accuracy": 0.8950026631355286,
+   "delta_macro_f1_points": -0.487440824508667,
+   "delta_windows": 17,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 2,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9547497630119324,
+   "stored_macro_f1": 0.9516874551773071,
+   "accuracy": 0.9556087255477905,
+   "stored_accuracy": 0.9534822106361389,
+   "delta_macro_f1_points": 0.3062307834625244,
+   "delta_windows": 8,
+   "within_tolerance": false
+  },
+  {
+   "model": "lawnet",
+   "seed": 2,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8912355303764343,
+   "stored_macro_f1": 0.8994746208190918,
+   "accuracy": 0.9059011340141296,
+   "stored_accuracy": 0.9096225500106812,
+   "delta_macro_f1_points": -0.8239090442657471,
+   "delta_windows": 14,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 0,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9237658977508545,
+   "stored_macro_f1": 0.9253810048103333,
+   "accuracy": 0.9423179030418396,
+   "stored_accuracy": 0.9436469674110413,
+   "delta_macro_f1_points": -0.16151070594787598,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 0,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.640401303768158,
+   "stored_macro_f1": 0.6371146440505981,
+   "accuracy": 0.6897926926612854,
+   "stored_accuracy": 0.6892610192298889,
+   "delta_macro_f1_points": 0.32866597175598145,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "statnet",
+   "seed": 0,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8634891510009766,
+   "stored_macro_f1": 0.873482882976532,
+   "accuracy": 0.8814460635185242,
+   "stored_accuracy": 0.8904837965965271,
+   "delta_macro_f1_points": -0.999373197555542,
+   "delta_windows": 34,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 0,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8562182188034058,
+   "stored_macro_f1": 0.8623316884040833,
+   "accuracy": 0.8907495737075806,
+   "stored_accuracy": 0.8947368264198303,
+   "delta_macro_f1_points": -0.611346960067749,
+   "delta_windows": 15,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 0,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7728835344314575,
+   "stored_macro_f1": 0.7725690007209778,
+   "accuracy": 0.7979797720909119,
+   "stored_accuracy": 0.8001063466072083,
+   "delta_macro_f1_points": 0.03145337104797363,
+   "delta_windows": 8,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 0,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8873396515846252,
+   "stored_macro_f1": 0.891045331954956,
+   "accuracy": 0.9064327478408813,
+   "stored_accuracy": 0.9090909361839294,
+   "delta_macro_f1_points": -0.37056803703308105,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 0,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8818556070327759,
+   "stored_macro_f1": 0.8822777271270752,
+   "accuracy": 0.8910154104232788,
+   "stored_accuracy": 0.8910154104232788,
+   "delta_macro_f1_points": -0.04221200942993164,
+   "delta_windows": 0,
+   "within_tolerance": true
+  },
+  {
+   "model": "statnet",
+   "seed": 0,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8670958280563354,
+   "stored_macro_f1": 0.8663414120674133,
+   "accuracy": 0.8841041922569275,
+   "stored_accuracy": 0.8833067417144775,
+   "delta_macro_f1_points": 0.07544159889221191,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 1,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.837353527545929,
+   "stored_macro_f1": 0.8385311365127563,
+   "accuracy": 0.8742690086364746,
+   "stored_accuracy": 0.8748006224632263,
+   "delta_macro_f1_points": -0.11776089668273926,
+   "delta_windows": 2,
+   "within_tolerance": true
+  },
+  {
+   "model": "statnet",
+   "seed": 1,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.6717358827590942,
+   "stored_macro_f1": 0.6702289581298828,
+   "accuracy": 0.7299308776855469,
+   "stored_accuracy": 0.7286018133163452,
+   "delta_macro_f1_points": 0.15069246292114258,
+   "delta_windows": 5,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 1,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8295055627822876,
+   "stored_macro_f1": 0.8377702832221985,
+   "accuracy": 0.8673577904701233,
+   "stored_accuracy": 0.8750664591789246,
+   "delta_macro_f1_points": -0.8264720439910889,
+   "delta_windows": 29,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 1,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8279384970664978,
+   "stored_macro_f1": 0.8350768685340881,
+   "accuracy": 0.8591175079345703,
+   "stored_accuracy": 0.8662945032119751,
+   "delta_macro_f1_points": -0.7138371467590332,
+   "delta_windows": 27,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 1,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7912927865982056,
+   "stored_macro_f1": 0.7935543656349182,
+   "accuracy": 0.8024986982345581,
+   "stored_accuracy": 0.8078150153160095,
+   "delta_macro_f1_points": -0.22615790367126465,
+   "delta_windows": 20,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 1,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8953873515129089,
+   "stored_macro_f1": 0.9002203941345215,
+   "accuracy": 0.912014901638031,
+   "stored_accuracy": 0.9167995452880859,
+   "delta_macro_f1_points": -0.4833042621612549,
+   "delta_windows": 18,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 1,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8599442839622498,
+   "stored_macro_f1": 0.8550671935081482,
+   "accuracy": 0.8697501420974731,
+   "stored_accuracy": 0.8681552410125732,
+   "delta_macro_f1_points": 0.48770904541015625,
+   "delta_windows": 6,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 1,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8374267816543579,
+   "stored_macro_f1": 0.8347951173782349,
+   "accuracy": 0.8654970526695251,
+   "stored_accuracy": 0.8646996021270752,
+   "delta_macro_f1_points": 0.2631664276123047,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 2,
+   "split": 0,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    4
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8575050234794617,
+   "stored_macro_f1": 0.8585288524627686,
+   "accuracy": 0.8931419253349304,
+   "stored_accuracy": 0.8939393758773804,
+   "delta_macro_f1_points": -0.10238289833068848,
+   "delta_windows": 3,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 2,
+   "split": 1,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    3
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7141575217247009,
+   "stored_macro_f1": 0.7070117592811584,
+   "accuracy": 0.7687400579452515,
+   "stored_accuracy": 0.7647528052330017,
+   "delta_macro_f1_points": 0.714576244354248,
+   "delta_windows": 15,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 2,
+   "split": 2,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    6
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9088378548622131,
+   "stored_macro_f1": 0.9159350991249084,
+   "accuracy": 0.9269005656242371,
+   "stored_accuracy": 0.9348750710487366,
+   "delta_macro_f1_points": -0.7097244262695312,
+   "delta_windows": 30,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 2,
+   "split": 3,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    1
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.9480370879173279,
+   "stored_macro_f1": 0.9516677856445312,
+   "accuracy": 0.951887309551239,
+   "stored_accuracy": 0.9550771117210388,
+   "delta_macro_f1_points": -0.3630697727203369,
+   "delta_windows": 12,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 2,
+   "split": 4,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    7
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7510389685630798,
+   "stored_macro_f1": 0.7550116777420044,
+   "accuracy": 0.7860180735588074,
+   "stored_accuracy": 0.7905369400978088,
+   "delta_macro_f1_points": -0.39727091789245605,
+   "delta_windows": 17,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 2,
+   "split": 5,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    0
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.8558923006057739,
+   "stored_macro_f1": 0.8564397692680359,
+   "accuracy": 0.8806486129760742,
+   "stored_accuracy": 0.8809143900871277,
+   "delta_macro_f1_points": -0.05474686622619629,
+   "delta_windows": 1,
+   "within_tolerance": true
+  },
+  {
+   "model": "statnet",
+   "seed": 2,
+   "split": 6,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    5
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.854348361492157,
+   "stored_macro_f1": 0.8581058979034424,
+   "accuracy": 0.8705475926399231,
+   "stored_accuracy": 0.8732057213783264,
+   "delta_macro_f1_points": -0.37575364112854004,
+   "delta_windows": 10,
+   "within_tolerance": false
+  },
+  {
+   "model": "statnet",
+   "seed": 2,
+   "split": 7,
+   "device": "Tesla T4",
+   "test_subjects_cache_ids": [
+    2
+   ],
+   "test_group_identified_by": "test size, then accuracy",
+   "test_size": 3762,
+   "stored_test_size": 3762,
+   "test_size_equal": true,
+   "macro_f1": 0.7990668416023254,
+   "stored_macro_f1": 0.7949410676956177,
+   "accuracy": 0.8264220952987671,
+   "stored_accuracy": 0.8227006793022156,
+   "delta_macro_f1_points": 0.41257739067077637,
+   "delta_windows": 14,
+   "within_tolerance": false
+  }
+ ]
+}

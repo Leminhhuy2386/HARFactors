@@ -1,0 +1,141 @@
+{
+ "dataset": "dsads",
+ "datasets_dir": "/work/huy.leminh/.cache/harfactors_rebuilt/datasets_paper_era",
+ "file_order": "sorted",
+ "activity_dirs": [
+  "a05",
+  "a02",
+  "a07",
+  "a10",
+  "a03",
+  "a14",
+  "a18",
+  "a12",
+  "a04",
+  "a13",
+  "a06",
+  "a11",
+  "a15",
+  "a08",
+  "a17",
+  "a19",
+  "a09",
+  "a01",
+  "a16"
+ ],
+ "split_sizes": [
+  {
+   "split": 0,
+   "rebuilt": [
+    21068,
+    5266,
+    3762
+   ],
+   "stored": [
+    21068,
+    5266,
+    3762
+   ],
+   "equal": true
+  },
+  {
+   "split": 1,
+   "rebuilt": [
+    21068,
+    5266,
+    3762
+   ],
+   "stored": [
+    21068,
+    5266,
+    3762
+   ],
+   "equal": true
+  },
+  {
+   "split": 2,
+   "rebuilt": [
+    21068,
+    5266,
+    3762
+   ],
+   "stored": [
+    21068,
+    5266,
+    3762
+   ],
+   "equal": true
+  },
+  {
+   "split": 3,
+   "rebuilt": [
+    21068,
+    5266,
+    3762
+   ],
+   "stored": [
+    21068,
+    5266,
+    3762
+   ],
+   "equal": true
+  },
+  {
+   "split": 4,
+   "rebuilt": [
+    21068,
+    5266,
+    3762
+   ],
+   "stored": [
+    21068,
+    5266,
+    3762
+   ],
+   "equal": true
+  },
+  {
+   "split": 5,
+   "rebuilt": [
+    21068,
+    5266,
+    3762
+   ],
+   "stored": [
+    21068,
+    5266,
+    3762
+   ],
+   "equal": true
+  },
+  {
+   "split": 6,
+   "rebuilt": [
+    21068,
+    5266,
+    3762
+   ],
+   "stored": [
+    21068,
+    5266,
+    3762
+   ],
+   "equal": true
+  },
+  {
+   "split": 7,
+   "rebuilt": [
+    21068,
+    5266,
+    3762
+   ],
+   "stored": [
+    21068,
+    5266,
+    3762
+   ],
+   "equal": true
+  }
+ ],
+ "all_sizes_equal": true
+}
