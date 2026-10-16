@@ -49,7 +49,8 @@ answer so far: who is tested matters far more than the architecture. Split off f
 ## On the HPC (copy uploaded 2026-10-15)
 
 - A copy of this project lives at `/work/huy.leminh/code/Dr.Huy/HAR/HARFactors` (login `ssh hpc-gw`, Slurm).
-  The shared data mirror is `/work/huy.leminh/code/Dr.Huy/HAR`: the 13 paper-era caches (the 10 development datasets
+  The shared data mirror is `/work/huy.leminh/code/Dr.Huy/HAR`: 16 paper-era caches (13 uploaded 2026-10-15, plus
+  pamap2, uma_fall and w_har copied 2026-10-16; the 10 development datasets
   among them) and the raw files of all 30 WHAR datasets.
 - **The environment is installed** (2026-10-15, `scripts/hpc/setup.sh` with hash-checked local wheels). Jobs run on the compute nodes
   (hpc21-24 GPU, dgx A100, hpc01-20 CPU). `hpc-gw` is for Claude Code and internet access only.

@@ -6,7 +6,7 @@ Cluster login: `ssh hpc-gw` (10.20.8.11, user `huy.leminh`; `~/.ssh/config` on t
 
 ```
 /work/huy.leminh/code/Dr.Huy/HAR/          = $HAR_DIR, mirrors D:\Projects\HAR on the PC
-├── datasets_paper_era/<id>/               the 13 paper-era caches (read-only; never edit by hand)
+├── datasets_paper_era/<id>/               the 16 paper-era caches (read-only; never edit by hand)
 ├── datasets/<id>/data/                    raw files of all 30 WHAR datasets (no processed folders)
 ├── HARFactors/                            this project (a copy of D:\Projects\HARFactors)
 └── CortexHAR/                             the deployment project (its board work stays on the PC)
@@ -15,6 +15,10 @@ Cluster login: `ssh hpc-gw` (10.20.8.11, user `huy.leminh`; `~/.ssh/config` on t
 Everything WHAR in `D:\Projects\HAR` that the paper-era protocol uses is here (65.5 GiB, 33,532 files, every file
 matched to the PC by count and size on 2026-10-15):
 
+- **Added 2026-10-16** (user-approved): pamap2, uma_fall and w_har, copied from the PC's existing caches (built
+  2026-10-15; data/ is plain files here, not hard links). Their sha256 values are checked against the PC manifests in
+  `/work/huy.leminh/.cache/harfactors_scratch/pc_downloads/caches_2026-10-16/`. The harness reproduces all 29 split
+  sizes of the stored runs (Slurm job 86814).
 - **Paper-era caches** (`datasets_paper_era/`, 28.5 GiB), copies of the 13 PC caches: actrectut_gestures, daphnet,
   dsads, hapt, opportunity, sad, uca_ehar, uci_har, unimib_shar, up_fall, utd_mhad, wear, wisdm. The 10 development
   datasets are among them. The same split sizes and windows apply. dsads and daphnet carry the PC's (Windows)

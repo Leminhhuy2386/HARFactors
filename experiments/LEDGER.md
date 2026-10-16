@@ -5004,3 +5004,7 @@ whar_arena_v1/vortexnet/utd_mhad/split-07 | IMPORT | fingerprint c98d3cdb212a | 
 20261016_055019_label_shuffle_control | END   | collapsed=True shuffled test F1 4.91 vs chance 8.74 | 00:03:45 | status=completed
 20261016_055618_verify_G5 | START | config e1e0d270e419 | data 10383f130f63 | synthetic=false
 20261016_055618_verify_G5 | END   | G5 PASS | 00:07:02 | status=completed
+20261016_064841_evaluate_G5 | START | config f3a728fb6f7e | data 10383f130f63 | synthetic=false
+20261016_064841_evaluate_G5 | END   | 762 of 762 evaluated | 00:10:07 | status=completed
+20261016_065908_verify_G5 | START | config ed735bfcb9e4 | data 10383f130f63 | synthetic=false
+20261016_065908_verify_G5 | END   | G5 FAIL | 00:06:59 | status=completed

@@ -38,6 +38,29 @@ verified. What blocks submission is listed under § Open items.
   - Random Forest margin vs channel count: +7.1 per sd (p < 0.001).
 - Every number is in `docs/summary.md` / `docs/summary_values.json`. The manuscript prints no other.
 
+### G5 rerun4 FAIL (2026-10-16, after adding the pamap2, uma_fall and w_har caches)
+
+- **Caches.** Copied from the PC: sha256 OK for 853 files; the harness reproduces all 29 split sizes.
+- **Re-execution.** The S2 runs of pamap2, uma_fall and w_har were re-executed: 762 cells (Slurm job 86815).
+  - 720 of 756 gating runs are within the declared tolerance (≤ 2 windows, ≤ 2 F1 points).
+  - **36 are outside, all on the three new datasets**: pamap2 31, uma_fall 2, w_har 3.
+  - The test sizes are identical. The differences are small and of both signs.
+
+    | Dataset | Mean ΔF1 | Max \|ΔF1\| | Largest gap |
+    |---|---|---|---|
+    | pamap2 | −0.07 | 0.67 | 12 windows of about 1,700 |
+    | uma_fall | −0.002 | 0.46 | |
+    | w_har | −0.002 | 3.25 | a 250-window test split |
+
+  - Likely cause: the stored runs of these datasets used caches built on cloud VMs, while the caches now on the cluster
+    were built on the PC on 2026-10-15. The splits are the same; the inputs differ at float level.
+- **Verdict.** `G5_results_authenticity_rerun4.json` FAIL is kept, and the tolerance was not changed. `audit
+  --authenticity` now reports it.
+- **Products of the same job chain.** G6_traceability_rerun3 and G7_compile_citations_rerun5 were produced
+  automatically from a summary based on the FAIL gate. They are superseded and not valid. `docs/summary*`,
+  `docs/artifact_index.md` and `paper/manuscript.*` were restored to the G5 rerun3 / G6 rerun2 / G7 rerun4 state.
+- **Waiting for the user's decision** on how to treat these three datasets.
+
 ### Open items (the user's decisions)
 
 1. ~~Label-shuffle control~~: **resolved 2026-10-16** (approved by the user).
