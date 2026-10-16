@@ -1,0 +1,233 @@
+{
+ "rows": [
+  {
+   "model": "recurrencenet",
+   "name": "RecurrenceNet",
+   "memory": "recurrence",
+   "side": "none",
+   "d_model": 32,
+   "layers": 3,
+   "embedding_dim": 32,
+   "params_ref": 24675,
+   "params_min": 23886,
+   "params_max": 28013,
+   "datasets": 18,
+   "s2": true,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 23496,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   }
+  },
+  {
+   "model": "s4d",
+   "name": "S4D",
+   "memory": "S4D (diagonal SSM)",
+   "side": "none",
+   "d_model": 64,
+   "layers": 2,
+   "embedding_dim": 64,
+   "params_ref": 27675,
+   "params_min": 26118,
+   "params_max": 34373,
+   "datasets": 18,
+   "s2": true,
+   "params_by_part": {
+    "encoder": 448,
+    "blocks": 25344,
+    "side": 0,
+    "norm": 128,
+    "head": 1755
+   }
+  },
+  {
+   "model": "hystnet_sel_clock",
+   "name": "HysteresisNet",
+   "memory": "play operators",
+   "side": "none",
+   "d_model": 32,
+   "layers": 3,
+   "embedding_dim": 32,
+   "params_ref": 23579,
+   "params_min": 22790,
+   "params_max": 26917,
+   "datasets": 10,
+   "s2": false,
+   "params_by_part": {
+    "encoder": 256,
+    "blocks": 22368,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   }
+  },
+  {
+   "model": "quantilenet",
+   "name": "QuantileNet",
+   "memory": "quantile trackers",
+   "side": "none",
+   "d_model": 32,
+   "layers": 3,
+   "embedding_dim": 32,
+   "params_ref": 20763,
+   "params_min": 19974,
+   "params_max": 24101,
+   "datasets": 10,
+   "s2": false,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 19584,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   }
+  },
+  {
+   "model": "mamba",
+   "name": "Mamba",
+   "memory": "Mamba (S6)",
+   "side": "none",
+   "d_model": 32,
+   "layers": 2,
+   "embedding_dim": 32,
+   "params_ref": 21147,
+   "params_min": 20358,
+   "params_max": 24485,
+   "datasets": 10,
+   "s2": false,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 19968,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   }
+  },
+  {
+   "model": "hystnet_nomem",
+   "name": "No memory",
+   "memory": "none (play width 0)",
+   "side": "none",
+   "d_model": 32,
+   "layers": 3,
+   "embedding_dim": 32,
+   "params_ref": 19995,
+   "params_min": 19206,
+   "params_max": 23333,
+   "datasets": 10,
+   "s2": false,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 18816,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   }
+  },
+  {
+   "model": "recstatnet",
+   "name": "RN + stats",
+   "memory": "recurrence",
+   "side": "channel stats",
+   "d_model": 32,
+   "layers": 3,
+   "embedding_dim": 64,
+   "params_ref": 26451,
+   "params_min": 24582,
+   "params_max": 46357,
+   "datasets": 18,
+   "s2": true,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 23496,
+    "side": 848,
+    "norm": 128,
+    "head": 1755
+   }
+  },
+  {
+   "model": "lawnet_rec",
+   "name": "RN + laws",
+   "memory": "recurrence",
+   "side": "law invariants",
+   "d_model": 32,
+   "layers": 3,
+   "embedding_dim": 64,
+   "params_ref": 27553,
+   "params_min": 25316,
+   "params_max": 49437,
+   "datasets": 18,
+   "s2": true,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 23496,
+    "side": 1950,
+    "norm": 128,
+    "head": 1755
+   }
+  },
+  {
+   "model": "lawnet",
+   "name": "Laws (no mem.)",
+   "memory": "none (plain block)",
+   "side": "law invariants",
+   "d_model": 48,
+   "layers": 3,
+   "embedding_dim": 80,
+   "params_ref": 19033,
+   "params_min": 16412,
+   "params_max": 42597,
+   "datasets": 10,
+   "s2": false,
+   "params_by_part": {
+    "encoder": 336,
+    "blocks": 14400,
+    "side": 1950,
+    "norm": 160,
+    "head": 2187
+   }
+  },
+  {
+   "model": "statnet",
+   "name": "Stats (no mem.)",
+   "memory": "none (plain block)",
+   "side": "channel stats",
+   "d_model": 48,
+   "layers": 3,
+   "embedding_dim": 80,
+   "params_ref": 17931,
+   "params_min": 15678,
+   "params_max": 39517,
+   "datasets": 10,
+   "s2": false,
+   "params_by_part": {
+    "encoder": 336,
+    "blocks": 14400,
+    "side": 848,
+    "norm": 160,
+    "head": 2187
+   }
+  }
+ ],
+ "summary": {
+  "params_ref_min": 17931,
+  "params_ref_max": 27675,
+  "params_all_min": 15678,
+  "params_all_max": 49437
+ },
+ "reference_input": {
+  "input_channels": 6,
+  "window_length": 150,
+  "num_classes": 27,
+  "channel_names": [
+   "acc_x",
+   "acc_y",
+   "acc_z",
+   "gyr_x",
+   "gyr_y",
+   "gyr_z"
+  ]
+ }
+}

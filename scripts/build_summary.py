@@ -128,6 +128,101 @@ def spec() -> list[dict]:
                        ("mean_stored_val_macro_f1", "true-label validation macro-F1 (stored runs)")):
             add(f"ls.{k}", f"label-shuffle control: mean {lab}", g5, ls + [k], ".1f")
         add("ls.all_collapsed", "label-shuffle control: every run collapsed to chance", g5, ls + ["all_collapsed"], "s")
+    s += detail_spec()
+    return s
+
+
+def detail_spec() -> list[dict]:
+    """Descriptive and exploratory values of the expanded manuscript (datasets, networks, memories, split spread,
+    embeddings) and every number of Tables II and III. Each artifact enters only once it exists."""
+    s = []
+    add = lambda i, d, a, p, f: s.append({"id": i, "description": d, "artifact": a, "path": p, "format": f})  # noqa: E731
+    have = lambda a: (ROOT / a).exists()  # noqa: E731
+    t2 = "results/table_data/tab02_datasets.json"
+    if have(t2):
+        for i, r in enumerate(json.loads((ROOT / t2).read_text())["rows"]):
+            for k, f in (("channels", "d"), ("subjects", "d"), ("classes", "d"), ("hz", "g"), ("windows", ",d"),
+                         ("splits", "d")):
+                add(f"tab02.{r['dataset']}.{k}", f"Table II, {r['dataset']}: {k}", t2, ["rows", i, k], f)
+        for k, f, lab in (("channels_min", "d", "fewest channels"), ("channels_max", "d", "most channels"),
+                          ("subjects_min", "d", "fewest subjects"), ("subjects_max", "d", "most subjects"),
+                          ("classes_min", "d", "fewest classes"), ("classes_max", "d", "most classes"),
+                          ("hz_min", "g", "lowest sampling rate"), ("hz_max", "g", "highest sampling rate"),
+                          ("windows_total", ",d", "windows over the 18 datasets"), ("datasets", "d", "datasets")):
+            add(f"datasets.{k}", f"S1 and S2 datasets: {lab}", t2, ["summary", k], f)
+    t3 = "results/table_data/tab03_models.json"
+    if have(t3):
+        for i, r in enumerate(json.loads((ROOT / t3).read_text())["rows"]):
+            for k, f in (("d_model", "d"), ("layers", "d"), ("embedding_dim", "d"), ("params_ref", ",d"),
+                         ("params_min", ",d"), ("params_max", ",d")):
+                add(f"tab03.{r['model']}.{k}", f"Table III, {r['model']}: {k}", t3, ["rows", i, k], f)
+        for k, f, lab in (("params_ref_min", ",d", "fewest parameters, reference input"),
+                          ("params_ref_max", ",d", "most parameters, reference input"),
+                          ("params_all_min", ",d", "fewest parameters over all datasets"),
+                          ("params_all_max", ",d", "most parameters over all datasets")):
+            add(f"models.{k}", f"ten networks: {lab}", t3, ["summary", k], f)
+    an = "results/metrics/model_anatomy/data.json"
+    if have(an):
+        add("learned.checkpoints", "learned memory parameters: checkpoints read", an, ["learned", "checkpoints_read"], ",d")
+        for k, lab in (("s4d", "S4D time constant / window"), ("s4d_a_real", "S4D decay rate"),
+                       ("hystnet_sel_clock", "play base width"), ("quantilenet_tau", "quantile level"),
+                       ("quantilenet_eta", "quantile step"), ("recurrencenet", "recurrence radius")):
+            for q in ("p05", "p50", "p95"):
+                add(f"learned.{k}.{q}", f"learned {lab}: {q}", an, ["learned", k, "quantiles", q], ".2g")
+                add(f"learned.{k}.init_{q}", f"initial {lab}: {q}", an, ["learned", k, "init_quantiles", q], ".2g")
+            add(f"learned.{k}.n", f"learned {lab}: values", an, ["learned", k, "n"], ",d")
+        for k, lab in (("quantilenet_tau", "quantile level"), ("recurrencenet", "recurrence radius"),
+                       ("s4d_a_real", "S4D decay rate (log10 ratio)")):
+            for q in ("p50", "p95"):
+                add(f"learned.{k}.change_{q}", f"change from initialisation, {lab}: {q}", an,
+                    ["learned", k, "exact_change", "quantiles", q], ".2g")
+            add(f"learned.{k}.change_below_005", f"change from initialisation below 0.05, {lab} (%)", an,
+                ["learned", k, "exact_change", "share_below_0.05"], "pct")
+        add("learned.s4d.above_window", "S4D modes whose time constant exceeds the window (%)", an,
+            ["learned", "s4d_fraction_of_window_above_1"], "pct")
+        add("learned.s4d.init_above_window", "S4D modes whose initial time constant exceeds the window (%)", an,
+            ["learned", "s4d_init_fraction_of_window_above_1"], "pct")
+    sp = "results/metrics/split_spread/data.json"
+    if have(sp):
+        add("spread.datasets", "split spread: datasets", sp, ["n_datasets"], "d")
+        add("spread.split_above_model", "split spread: datasets whose split-mean sd exceeds the network-mean sd", sp,
+            ["datasets_split_sd_above_model_sd"], "d")
+        add("spread.median_ratio", "split spread: median ratio of split-mean sd to network-mean sd", sp,
+            ["median_ratio_split_sd_to_model_sd"], ".1f")
+        for d in ("uci_har", "up_fall"):
+            for k in ("sd_split_means", "sd_model_means", "range_split_means", "range_model_means", "mean_seed_sd"):
+                add(f"spread.{d}.{k}", f"split spread, {d}: {k}", sp, ["datasets", d, k], ".1f")
+        if "validation" in json.loads((ROOT / sp).read_text()):
+            for k, f in (("median_gap", ".1f"), ("min_gap", ".1f"), ("max_gap", ".1f"), ("datasets_val_above_test", "d"),
+                         ("runs_val_above_test", ",d"), ("runs", ",d"), ("median_rho_network_means", "+.2f"),
+                         ("datasets_with_rho_network", "d"), ("datasets_best_by_val_is_best_by_test", "d"),
+                         ("datasets", "d"),
+                         ("median_test_loss_choosing_by_val", ".1f")):
+                add(f"val.{k}", f"validation vs test: {k.replace('_', ' ')}", sp, ["validation", k], f)
+    em = "results/metrics/embedding/summary.json"
+    if have(em):
+        for k, f in (("datasets", "d"), ("datasets_with_more_than_3_splits", "d"),
+                     ("pooled_within_dataset_rank_rho_embedding_ccs_f1", "+.2f"),
+                     ("pooled_within_dataset_rank_p_embedding", "p3"),
+                     ("pooled_within_dataset_rank_rho_sensor_ccs_f1", "+.2f"),
+                     ("pooled_within_dataset_rank_p_sensor", "p3"), ("median_dataset_rho_embedding", "+.2f"),
+                     ("median_dataset_rho_sensor", "+.2f"), ("datasets_negative_rho_embedding", "d"),
+                     ("datasets_negative_rho_sensor", "d"), ("median_subject_probe_over_chance_embedding", ".1f"),
+                     ("median_subject_probe_over_chance_sensor", ".1f"), ("median_activity_probe_embedding", "pct"),
+                     ("probe_cases", ",d"), ("regenerated_cases", ",d"), ("regenerated_exact", ",d"),
+                     ("max_abs_regenerated_minus_stored_macro_f1", ".2f"),
+                     ("pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1", "+.2f"),
+                     ("pooled_within_dataset_rank_p_embedding_per_dim", "p3"), ("network_dataset_cases", "d"),
+                     ("median_network_dataset_rho_embedding", "+.2f"), ("network_dataset_negative_rho", "d")):
+            add(f"emb.{k}", f"embedding analysis: {k.replace('_', ' ')}", em, [k], f)
+    ep = "results/metrics/embedding/uci_har.json"
+    if have(ep):
+        add("emb.probe_windows", "embedding analysis: most training windows in a probe", ep, ["probe_windows"], ",d")
+    ts = "results/metrics/embedding/tsne_case.json"
+    if have(ts):
+        add("emb.tsne.split", "t-SNE case: split", ts, ["case", "split"], "d")
+        add("emb.tsne.train_windows", "t-SNE case: training windows shown", ts, ["train", "activity"], "len")
+        add("emb.tsne.test_windows", "t-SNE case: test windows shown", ts, ["test", "activity"], "len")
     return s
 
 

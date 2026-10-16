@@ -1,0 +1,30 @@
+node hpc22.local, job 86844, Fri Oct 16 08:54:40 +07 2026
+NVIDIA RTX A5000, 580.126.09
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+2026-10-16 08:54:53,779 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 08:54:53,779 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 08:54:53,780 - whar-datasets - INFO - Hash is up to date
+2026-10-16 08:54:53,780 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 08:54:53,780 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 08:54:53,781 - whar-datasets - INFO - Hash is up to date
+2026-10-16 08:54:53,781 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 08:54:53,781 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 08:54:53,782 - whar-datasets - INFO - Hash is up to date
+2026-10-16 08:54:53,782 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 08:54:53,782 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 08:54:53,784 - whar-datasets - INFO - Hash is up to date
+2026-10-16 08:54:53,784 - whar-datasets - INFO - Loading windowing
+2026-10-16 08:54:53,793 - whar-datasets - INFO - Selecting activities
+2026-10-16 08:54:53,798 - whar-datasets - INFO - activity_ids from 0 to 10
+2026-10-16 08:54:53,798 - whar-datasets - INFO - subject_ids from 0 to 1
+2026-10-16 08:54:53,801 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 08:54:53,801 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 08:54:53,803 - whar-datasets - INFO - Hash is up to date
+2026-10-16 08:54:53,803 - whar-datasets - INFO - Loading samples
+actrectut_gestures split 0: done
+2026-10-16 08:54:57,028 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 08:54:57,028 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 08:54:57,029 - whar-datasets - INFO - Hash is up to date
+2026-10-16 08:54:57,029 - whar-datasets - INFO - Loading samples
+actrectut_gestures split 1: done

@@ -59,3 +59,21 @@
 2026-10-16T06:59:18 | scripts/verify_results.py | 20261016_065908_verify_G5 | verification (G5): re-read the S2 run records for the second implementation of every confirmatory analysis
 2026-10-16T07:02:52 | scripts/verify_results.py | 20261016_065908_verify_G5 | verification (G5): re-read the S2 run records for the model-label permutation control
 2026-10-16T07:03:43 | scripts/verify_results.py | 20261016_065908_verify_G5 | verification (G5): re-read the S2 run records for the auditor's --seeds check and its negative control
+2026-10-16T08:54:11 | src/evaluation/split_spread.py | - | exploratory description of the stored S1 and S2 runs, after the confirmatory analysis
+2026-10-16T08:54:49 | src/evaluation/embedding_analysis.py | 20261016_085449_embedding_actrectut_gestures | exploratory embedding analysis: test windows of actrectut_gestures embedded by stored checkpoints
+2026-10-16T08:55:25 | src/evaluation/embedding_analysis.py | 20261016_085525_embedding_actrectut_gestures | exploratory embedding analysis: test windows of actrectut_gestures embedded by stored checkpoints
+2026-10-16T08:55:44 | src/evaluation/embedding_analysis.py | 20261016_085544_embedding_wisdm | exploratory embedding analysis: test windows of wisdm embedded by stored checkpoints
+2026-10-16T08:55:44 | src/evaluation/embedding_analysis.py | 20261016_085544_embedding_opportunity | exploratory embedding analysis: test windows of opportunity embedded by stored checkpoints
+2026-10-16T08:55:44 | src/evaluation/embedding_analysis.py | 20261016_085544_embedding_uci_har | exploratory embedding analysis: test windows of uci_har embedded by stored checkpoints
+2026-10-16T08:55:44 | src/evaluation/embedding_analysis.py | 20261016_085544_embedding_sad | exploratory embedding analysis: test windows of sad embedded by stored checkpoints
+2026-10-16T09:01:53 | src/evaluation/embedding_analysis.py | 20261016_090153_embedding_uca_ehar | exploratory embedding analysis: test windows of uca_ehar embedded by stored checkpoints
+2026-10-16T09:11:00 | src/evaluation/embedding_analysis.py | 20261016_091100_embedding_unimib_shar | exploratory embedding analysis: test windows of unimib_shar embedded by stored checkpoints
+2026-10-16T09:12:02 | src/evaluation/embedding_analysis.py | 20261016_091202_embedding_hapt | exploratory embedding analysis: test windows of hapt embedded by stored checkpoints
+2026-10-16T09:16:48 | src/evaluation/embedding_analysis.py | 20261016_091648_embedding_up_fall | exploratory embedding analysis: test windows of up_fall embedded by stored checkpoints
+2026-10-16T09:23:11 | src/evaluation/embedding_analysis.py | 20261016_092311_embedding_utd_mhad | exploratory embedding analysis: test windows of utd_mhad embedded by stored checkpoints
+2026-10-16T09:24:33 | src/evaluation/embedding_analysis.py | 20261016_092433_embedding_wear | exploratory embedding analysis: test windows of wear embedded by stored checkpoints
+2026-10-16T09:31:13 | src/evaluation/split_spread.py | - | exploratory description of the stored S1 and S2 runs, after the confirmatory analysis
+2026-10-16T09:32:13 | src/evaluation/split_spread.py | - | exploratory description of the stored S1 and S2 runs, after the confirmatory analysis
+2026-10-16T09:44:27 | scripts/verify_results.py | 20261016_094418_verify_G5 | verification (G5): re-read the S2 run records for the second implementation of every confirmatory analysis
+2026-10-16T09:48:17 | scripts/verify_results.py | 20261016_094418_verify_G5 | verification (G5): re-read the S2 run records for the model-label permutation control
+2026-10-16T09:49:21 | scripts/verify_results.py | 20261016_094418_verify_G5 | verification (G5): re-read the S2 run records for the auditor's --seeds check and its negative control

@@ -13,7 +13,7 @@ verified. What blocks submission is listed under § Open items.
 | G2 data | PASS | G2_data.json | S1/S2/S3 complete; ActRecTut sizes equal the authors' files; UTD-MHAD 861 sequences |
 | G3 baseline | PASS | G3_baseline.json | The Random Forest re-run equals Figure 6 to rounding |
 | G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
-| G5 authenticity | PASS | G5_results_authenticity_rerun3.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; label-shuffle control collapsed (6/6). The first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
+| G5 authenticity | PASS (latest: rerun5 FAIL, see below) | G5_results_authenticity_rerun3.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; label-shuffle control collapsed (6/6). The first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
 | G6 traceability | PASS | G6_traceability_rerun2.json | 247 values re-derive; the tampering control was caught |
 | G7 manuscript | PASS | G7_compile_citations_rerun4.json | Official IEEE_lsens.cls (2023): 3 pages, 2 figures, abstract 140 words, 0 problems |
 
@@ -37,6 +37,64 @@ verified. What blocks submission is listed under § Open items.
   - Mamba − S4D: −2.45;
   - Random Forest margin vs channel count: +7.1 per sd (p < 0.001).
 - Every number is in `docs/summary.md` / `docs/summary_values.json`. The manuscript prints no other.
+
+### G5 rerun5 FAIL (2026-10-16): the optimizer in the model-permutation control
+
+- **Run.** Slurm 86864 on hpc22 (Intel Xeon Gold 6226R, CPU cores of a GPU node, 8 threads), after the expansion
+  below. Re-execution passed (408 of 408 gating runs within tolerance, 373 exact, 0 mismatches); the independent REML
+  agrees on every analysis; 9 of 9 negative controls caught; the rebuilt-cache datasets are informative.
+- **What failed.** The S2 model-permutation control: with the model labels shuffled within cells, the network-related
+  share should vanish (criterion ≤ 0.03); it came out 0.110 (rerun3/4: 0.0011). The chain stopped at the PASS guard,
+  so no G6 or G7 file was written, and `docs/summary*` were restored to the G5 rerun3 / G6 rerun2 state.
+- **Diagnosis** (`docs/diagnostics/`, read-only script and its output):
+  - statsmodels' default optimizer reported convergence at M = 16.3, a point whose restricted log-likelihood is
+    13.75 worse than the optimum (-l_R 1881.20 against 1867.45). At the optimum M = MD = MP ≈ 0, as the independent
+    numpy REML finds.
+  - Whether the default optimizer stops there depends on the BLAS thread count: with 4 threads on the same node it
+    failed to converge, the Powell fallback found the optimum (share 0.0011). Other permutation seeds give shares
+    from 0.002 to 0.099 for the same reason.
+  - The real-data fits are not affected: on every analysis the independent REML matches statsmodels (H1: R 8.19 in
+    both). The bootstrap resamples are fitted by statsmodels only; they were not checked against the independent
+    implementation.
+- **Waiting for the user's decision** (the gate rules say a FAIL is not fixed without the user). Proposed: in the
+  control only, keep whichever of statsmodels and the independent REML reaches the higher restricted likelihood
+  (record both), check a sample of the H1 bootstrap refits against the independent REML, then run G5 rerun6 and
+  G6/G7 with the reason recorded. Not proposed: re-running unchanged on another node until it passes.
+
+### Expansion of 2026-10-16: more figures, exploratory analyses (user request)
+
+The user asked for many more figures (sensors, experiments, detailed network structure) and a deeper analysis of the
+embeddings and other characteristics. Exceeding the page count is acceptable for this draft (the user will shorten it).
+Everything below is descriptive or exploratory; no network was trained. Details: `docs/experiment_record.md`
+(§ HARFactors, 2026-10-16).
+
+- **New analyses** (each with provenance and ledger runs):
+  - `split_spread`: split means vs network means per dataset. In 15 of 16 datasets the split means vary more than
+    the network means (median ratio of sds 2.6); the exception is ActRecTut (two subjects). Also validation
+    (training subjects) vs test (unseen subjects): validation is higher in 2,307 of 2,388 runs, by a median of 17.1
+    points per dataset (4.6 to 47.8), and picks the test-best network in 3 of 13 datasets.
+  - `model_anatomy`: parameters per part (all ten equal to G1); memory parameters of 766 S1 checkpoints against
+    freshly initialised networks. They barely move: quantile levels by a median of 0.0047 (97 % by < 0.05),
+    recurrence radii by 0.014, S4D decay rates by 0.028 in log10; play widths and S4D time constants keep their
+    initial distributions.
+  - `embedding_analysis` (inference only, seed-0 checkpoints, 11 datasets, 754 network-split cases; regenerated
+    macro-F1 equal to the stored one in 686, at most 0.20 points apart): the test group's class-conditional shift in
+    the embedding goes with lower split F1 (pooled within-dataset rho -0.46, p < 0.001; negative in 10 of 10
+    datasets), more closely than the same shift in sensor features (rho -0.32); a linear probe identifies the
+    training subject at a median 3.2 times chance from the embeddings (4.0 from window statistics).
+- **New figures and tables** (`src/visualization/detail_figures.py`): Fig. design (pipeline, run grid, UCI-HAR test
+  groups), sensors (18 datasets), architecture (skeleton, block, ten networks), memories (operators on a synthetic
+  input; learned vs initial parameters), split spread (with network x split heatmaps), validation vs test,
+  embeddings (t-SNE case, shift vs F1, subject probes); Table of datasets and table of networks.
+- **Manuscript:** new sections Datasets and sensors, Networks, Embedding analysis, and results on spread, validation,
+  memories and embeddings; six new references, verified (`paper/references_verified.json`). Ten pages.
+- **Format limits:** page and figure limits waived for the working draft (`paper/format_limits.json`); the
+  150-word abstract limit stays. Restore them before submission.
+- **Jobs:** the CPU partitions were full, so the embedding and figure jobs ran on idle CPU cores of the GPU nodes
+  without a GPU (`--gres=gpu:0`; `docs/hpc.md` allows the `gpu` partition for regenerating predictions).
+- **Gates:** the pending rerun5 chain (Slurm 86823) was cancelled before it started, so that its negative controls
+  would not see the embedding runs' open ledger lines; G5 rerun5, G6, G7 and the audit ran once afterwards (Slurm
+  86864), with nothing else running.
 
 ### G5 rerun4 FAIL (2026-10-16, after adding the pamap2, uma_fall and w_har caches)
 
@@ -81,6 +139,11 @@ verified. What blocks submission is listed under § Open items.
    - PC downloads: `/work/huy.leminh/.cache/harfactors_scratch/pc_downloads/2026-10-16/` (36 files, SOURCES.txt).
      They stay outside the project (copyright).
 5. **dsads:** on the HPC cache its checkpoints score at chance. Its runs (in S1) rest on their records.
+6. **G5 rerun5 FAIL** (2026-10-16): the S2 model-permutation control; an optimizer issue, not a data issue (see
+   § G5 rerun5 FAIL). Waiting for the user's decision on the proposed fix.
+7. **Expanded manuscript** (2026-10-16): Figs. 3-9 and Tables II-III are drawn and written into
+   `paper/manuscript_src.tex`; it compiles (10 pages, every number traceable in a dry run), but is not yet rendered
+   to `paper/manuscript.tex` nor checked by G6/G7, which wait for G5.
 
 ### Copy back to the PC
 

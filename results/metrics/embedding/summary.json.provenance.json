@@ -1,0 +1,26 @@
+{
+ "produced_by": "src/evaluation/embedding_analysis.py (aggregate)",
+ "command": "python /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/evaluation/embedding_analysis.py --aggregate",
+ "run_id": "20261016_093014_embedding_aggregate",
+ "timestamp": "2026-10-16T09:30:14",
+ "duration_sec": 0.08,
+ "git_commit": "fbdb03d-dirty",
+ "config_sha256": null,
+ "config": null,
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "results/metrics/embedding/actrectut_gestures.json": "sha256:d8df823da7c0459943b900aa1d414945d376a453a9776dffee32a7b6fe4b0ad6",
+  "results/metrics/embedding/hapt.json": "sha256:884717571a1bfcfc8018e4cc7aa121d2c459e4c073b55c4a444353cbb58b4640",
+  "results/metrics/embedding/opportunity.json": "sha256:89c277cd3d6c9c3e8bcef49e3ef4bdf7988566e74600091439e1f2606a31e312",
+  "results/metrics/embedding/sad.json": "sha256:e7e7ca12ca56759c396474f5ab104ff1df4bd5d8374236fa3f37bc6d90b5898d",
+  "results/metrics/embedding/uca_ehar.json": "sha256:a10b5948ee19a4fdac409157d2944c2ea1c2675c573af01fb55374a0e10b9459",
+  "results/metrics/embedding/uci_har.json": "sha256:7484bea8be90d59108e877752629843f2c83831b1d35b40fa2e2e44f699bccc3",
+  "results/metrics/embedding/unimib_shar.json": "sha256:db9836baa4acc981dd909b0c54ca238cf6ae94e0e3a2649dd2913bb76a87f7c5",
+  "results/metrics/embedding/up_fall.json": "sha256:eac1474fc5e089bfc81dd203249abdbf78e9c309fb2854600a491985534e7f8e",
+  "results/metrics/embedding/utd_mhad.json": "sha256:3d4409f3e24405d3166c58f834be79f3ffe968066f4da29a839c3cd6a000f8cb",
+  "results/metrics/embedding/wear.json": "sha256:97195a4ae273a922d71da80c820cb43d4c7207800db6012d1e3a99f0e3fe2b93",
+  "results/metrics/embedding/wisdm.json": "sha256:22c4385d18bf426f7293dc8d5fc39f1d111d2996a9b081e4bee235853ce20b7b"
+ },
+ "output_sha256": "86b70e791f8414d2aaecf0ae13437c9d3ad892bb7f9e6677d05ff5c5ed406335",
+ "synthetic": false
+}

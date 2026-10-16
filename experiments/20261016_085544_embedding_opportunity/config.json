@@ -1,0 +1,9 @@
+{
+ "datasets": [
+  "opportunity"
+ ],
+ "aggregate": false,
+ "seed": 20261016,
+ "probe_windows": 4000,
+ "datasets_dir": "/work/huy.leminh/.cache/harfactors_verify/datasets_paper_era"
+}

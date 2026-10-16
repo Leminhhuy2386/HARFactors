@@ -194,16 +194,27 @@ def within_rank(values: dict) -> dict:
 def aggregate(run_id: str, started: float) -> None:
     """Across datasets: does the test group's shift track the split's macro-F1? How much subject identity is decodable?"""
     files = sorted(p for p in OUT.glob("*.json") if p.stem in S1_DATASETS + S2_DATASETS)
-    per_ds, probes = {}, []
+    per_ds, probes, deltas, model_rho = {}, [], [], []
     for f in files:
         d = json.loads(f.read_text())
         ok = [r for r in d["rows"] if r["status"] == "ok"]
+        for r in ok:  # CCS grows with sqrt(dimension): the per-dimension version compares networks of 32, 64, 80
+            r["embedding_ccs_per_dim"] = r["embedding_ccs"] / math.sqrt(r["embedding_dim"])
+            deltas.append(abs(r["macro_f1"] - r["stored_macro_f1"]))
         splits = sorted({r["split"] for r in ok})
         by = lambda key: [st.mean(r[key] for r in ok if r["split"] == s) for s in splits]  # noqa: E731
-        f1, ce, cs = by("macro_f1"), by("embedding_ccs"), by("sensor_ccs")
+        f1, ce, cs, cd = by("macro_f1"), by("embedding_ccs"), by("sensor_ccs"), by("embedding_ccs_per_dim")
         rho = lambda a: float(stats.spearmanr(a, f1).statistic) if len(splits) > 3 else float("nan")  # noqa: E731
         per_ds[d["dataset"]] = {"splits": len(splits), "mean_macro_f1_per_split": f1, "embedding_ccs_per_split": ce,
-                                "sensor_ccs_per_split": cs, "rho_embedding_ccs_f1": rho(ce), "rho_sensor_ccs_f1": rho(cs)}
+                                "sensor_ccs_per_split": cs, "embedding_ccs_per_dim_per_split": cd,
+                                "rho_embedding_ccs_f1": rho(ce), "rho_sensor_ccs_f1": rho(cs),
+                                "rho_embedding_ccs_per_dim_f1": rho(cd)}
+        if len(splits) > 3:  # within one network: its own shift against its own split F1
+            for m in sorted({r["model"] for r in ok}):
+                mine = sorted((r for r in ok if r["model"] == m), key=lambda r: r["split"])
+                if len(mine) > 3:
+                    model_rho.append({"dataset": d["dataset"], "model": m, "rho": float(stats.spearmanr(
+                        [r["embedding_ccs"] for r in mine], [r["macro_f1"] for r in mine]).statistic)})
         for r in ok:
             probes.append({"dataset": d["dataset"], "model": r["model"], "subject_probe": r["embedding_subject_probe"],
                            "sensor_subject_probe": r["sensor_subject_probe"], "chance": r["subject_chance"],
@@ -217,7 +228,17 @@ def aggregate(run_id: str, started: float) -> None:
     rho_s = [v["rho_sensor_ccs_f1"] for v in usable.values()]
     ratio = [p["subject_probe"] / p["chance"] for p in probes if not math.isnan(p["subject_probe"])]
     sratio = [p["sensor_subject_probe"] / p["chance"] for p in probes if not math.isnan(p["sensor_subject_probe"])]
+    pooled_d = stats.spearmanr(
+        np.concatenate([stats.rankdata(v["embedding_ccs_per_dim_per_split"]) for v in usable.values()]),
+        np.concatenate([stats.rankdata(v["mean_macro_f1_per_split"]) for v in usable.values()]))
+    mr = [r["rho"] for r in model_rho if not math.isnan(r["rho"])]
     summary = {
+        "regenerated_cases": len(deltas), "max_abs_regenerated_minus_stored_macro_f1": float(max(deltas)),
+        "regenerated_exact": int(sum(x < 1e-9 for x in deltas)),
+        "pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1": float(pooled_d.statistic),
+        "pooled_within_dataset_rank_p_embedding_per_dim": float(pooled_d.pvalue),
+        "network_dataset_cases": len(mr), "median_network_dataset_rho_embedding": float(np.median(mr)),
+        "network_dataset_negative_rho": int(sum(x < 0 for x in mr)),
         "datasets": len(per_ds), "datasets_with_more_than_3_splits": len(usable),
         "pooled_within_dataset_rank_rho_embedding_ccs_f1": float(pooled_e.statistic),
         "pooled_within_dataset_rank_p_embedding": float(pooled_e.pvalue),
@@ -229,12 +250,13 @@ def aggregate(run_id: str, started: float) -> None:
         "median_subject_probe_over_chance_embedding": float(np.median(ratio)),
         "median_subject_probe_over_chance_sensor": float(np.median(sratio)),
         "median_activity_probe_embedding": float(np.median([p["activity_probe"] for p in probes])),
-        "probe_cases": len(probes), "per_dataset": per_ds, "probes": probes,
+        "probe_cases": len(probes), "per_dataset": per_ds, "probes": probes, "network_dataset_rho": model_rho,
     }
     f = OUT / "summary.json"
     f.write_text(json.dumps(summary, indent=1, default=float) + "\n")
     PV.write(f, run_id=run_id, started=started, inputs=files, produced_by="src/evaluation/embedding_analysis.py (aggregate)")
-    print(json.dumps({k: v for k, v in summary.items() if k not in ("per_dataset", "probes")}, indent=1))
+    print(json.dumps({k: v for k, v in summary.items() if k not in ("per_dataset", "probes", "network_dataset_rho")},
+                     indent=1))
 
 
 def main() -> None:

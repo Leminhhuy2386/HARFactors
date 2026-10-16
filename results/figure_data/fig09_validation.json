@@ -1,0 +1,307 @@
+{
+ "order": [
+  "uci_har",
+  "hapt",
+  "sad",
+  "wear",
+  "dsads",
+  "uca_ehar",
+  "opportunity",
+  "usc_had",
+  "wisdm",
+  "w_har",
+  "pamap2",
+  "up_fall",
+  "uma_fall"
+ ],
+ "per_dataset": {
+  "uci_har": {
+   "val_mean": 99.328521947066,
+   "test_mean": 94.74892818927765,
+   "gap": 4.579593757788345,
+   "runs_with_val_above_test": 274,
+   "runs": 300,
+   "rho_split_means": -0.6363636363636362,
+   "rho_network_means": 0.6969696969696969,
+   "val_network_means": {
+    "hystnet_nomem": 99.05661682287852,
+    "hystnet_sel_clock": 99.2149309317271,
+    "lawnet": 99.45167044798534,
+    "lawnet_rec": 99.5572304725647,
+    "mamba": 99.30307726065318,
+    "quantilenet": 99.14924780527751,
+    "recstatnet": 99.58294828732808,
+    "recurrencenet": 99.54808294773102,
+    "s4d": 99.21169360478719,
+    "statnet": 99.20972088972728
+   },
+   "best_network_by_val": "recstatnet",
+   "best_network_by_test": "lawnet_rec",
+   "test_loss_choosing_by_val": 0.43063342571258545
+  },
+  "hapt": {
+   "val_mean": 89.86556071043015,
+   "test_mean": 82.86146086454391,
+   "gap": 7.0040998458862305,
+   "runs_with_val_above_test": 263,
+   "runs": 300,
+   "rho_split_means": -0.5030303030303029,
+   "rho_network_means": 0.9272727272727272,
+   "val_network_means": {
+    "hystnet_nomem": 88.4162465731303,
+    "hystnet_sel_clock": 90.68589409192403,
+    "lawnet": 88.89398217201233,
+    "lawnet_rec": 90.28728028138478,
+    "mamba": 90.43081601460774,
+    "quantilenet": 89.35841858386993,
+    "recstatnet": 90.92492500940959,
+    "recurrencenet": 89.9659236272176,
+    "s4d": 90.47449469566345,
+    "statnet": 89.21762605508168
+   },
+   "best_network_by_val": "recstatnet",
+   "best_network_by_test": "recstatnet",
+   "test_loss_choosing_by_val": 0.0
+  },
+  "sad": {
+   "val_mean": 99.97594904899597,
+   "test_mean": 90.83637721339862,
+   "gap": 9.139571835597351,
+   "runs_with_val_above_test": 283,
+   "runs": 300,
+   "rho_split_means": -0.19999999999999998,
+   "rho_network_means": 0.6,
+   "val_network_means": {
+    "hystnet_nomem": 99.97325996557872,
+    "hystnet_sel_clock": 99.97082491715749,
+    "lawnet": 99.98863120873769,
+    "lawnet_rec": 99.9864000082016,
+    "mamba": 99.96180693308513,
+    "quantilenet": 99.9642523129781,
+    "recstatnet": 99.98879194259644,
+    "recurrencenet": 99.96392746766408,
+    "s4d": 99.97080524762471,
+    "statnet": 99.99079048633575
+   },
+   "best_network_by_val": "statnet",
+   "best_network_by_test": "lawnet_rec",
+   "test_loss_choosing_by_val": 5.680082241694137
+  },
+  "wear": {
+   "val_mean": 98.34717109799385,
+   "test_mean": 85.66641688346863,
+   "gap": 12.680754214525223,
+   "runs_with_val_above_test": 120,
+   "runs": 120,
+   "rho_split_means": -0.17575757575757575,
+   "rho_network_means": -0.39999999999999997,
+   "val_network_means": {
+    "lawnet_rec": 98.36362302303314,
+    "recstatnet": 98.46508125464122,
+    "recurrencenet": 97.99851854642232,
+    "s4d": 98.56146156787872
+   },
+   "best_network_by_val": "s4d",
+   "best_network_by_test": "lawnet_rec",
+   "test_loss_choosing_by_val": 2.41221686204274
+  },
+  "dsads": {
+   "val_mean": 99.86614796022575,
+   "test_mean": 84.02196891605854,
+   "gap": 15.844179044167205,
+   "runs_with_val_above_test": 240,
+   "runs": 240,
+   "rho_split_means": 0.07142857142857144,
+   "rho_network_means": -0.5515151515151515,
+   "val_network_means": {
+    "hystnet_nomem": 99.8881533741951,
+    "hystnet_sel_clock": 99.85516270001729,
+    "lawnet": 99.85827654600143,
+    "lawnet_rec": 99.84248007337253,
+    "mamba": 99.89453728000323,
+    "quantilenet": 99.85610271493594,
+    "recstatnet": 99.85552653670311,
+    "recurrencenet": 99.83665694793065,
+    "s4d": 99.87217461069424,
+    "statnet": 99.90240881840388
+   },
+   "best_network_by_val": "statnet",
+   "best_network_by_test": "lawnet_rec",
+   "test_loss_choosing_by_val": 6.575380762418106
+  },
+  "uca_ehar": {
+   "val_mean": 77.93267572919528,
+   "test_mean": 61.86356199284395,
+   "gap": 16.069113736351333,
+   "runs_with_val_above_test": 119,
+   "runs": 120,
+   "rho_split_means": -0.709090909090909,
+   "rho_network_means": -0.19999999999999998,
+   "val_network_means": {
+    "lawnet_rec": 77.7955424785614,
+    "recstatnet": 78.32961400349934,
+    "recurrencenet": 77.02649454275767,
+    "s4d": 78.57905189196269
+   },
+   "best_network_by_val": "s4d",
+   "best_network_by_test": "recstatnet",
+   "test_loss_choosing_by_val": 4.915607670942947
+  },
+  "opportunity": {
+   "val_mean": 79.23941562573116,
+   "test_mean": 62.13583262016376,
+   "gap": 17.103583005567394,
+   "runs_with_val_above_test": 120,
+   "runs": 120,
+   "rho_split_means": 0.7999999999999999,
+   "rho_network_means": 0.17575757575757575,
+   "val_network_means": {
+    "hystnet_nomem": 79.23419326543808,
+    "hystnet_sel_clock": 79.22533303499222,
+    "lawnet": 79.20731256405513,
+    "lawnet_rec": 79.3578917781512,
+    "mamba": 79.23466712236404,
+    "quantilenet": 79.21037326256435,
+    "recstatnet": 79.24760729074478,
+    "recurrencenet": 79.30652052164078,
+    "s4d": 79.2393684387207,
+    "statnet": 79.13088897864024
+   },
+   "best_network_by_val": "lawnet_rec",
+   "best_network_by_test": "recstatnet",
+   "test_loss_choosing_by_val": 1.379841069380447
+  },
+  "usc_had": {
+   "val_mean": 92.9601721962293,
+   "test_mean": 74.78109247982502,
+   "gap": 18.179079716404274,
+   "runs_with_val_above_test": 120,
+   "runs": 120,
+   "rho_split_means": 0.33333333333333326,
+   "rho_network_means": 0.7999999999999999,
+   "val_network_means": {
+    "lawnet_rec": 93.4035489956538,
+    "recstatnet": 92.53932118415833,
+    "recurrencenet": 93.20503354072571,
+    "s4d": 92.69278506437938
+   },
+   "best_network_by_val": "lawnet_rec",
+   "best_network_by_test": "lawnet_rec",
+   "test_loss_choosing_by_val": 0.0
+  },
+  "wisdm": {
+   "val_mean": 96.79747106631596,
+   "test_mean": 78.55996710062027,
+   "gap": 18.237503965695694,
+   "runs_with_val_above_test": 300,
+   "runs": 300,
+   "rho_split_means": -0.43030303030303024,
+   "rho_network_means": 0.4424242424242424,
+   "val_network_means": {
+    "hystnet_nomem": 92.37752497196198,
+    "hystnet_sel_clock": 98.01797290643056,
+    "lawnet": 95.89475591977437,
+    "lawnet_rec": 97.77404487133026,
+    "mamba": 98.74421139558156,
+    "quantilenet": 97.7803122997284,
+    "recstatnet": 97.67111957073212,
+    "recurrencenet": 97.58892953395844,
+    "s4d": 98.38186363379161,
+    "statnet": 93.7439755598704
+   },
+   "best_network_by_val": "mamba",
+   "best_network_by_test": "s4d",
+   "test_loss_choosing_by_val": 5.139932235082
+  },
+  "w_har": {
+   "val_mean": 82.71210119128227,
+   "test_mean": 50.13309935728709,
+   "gap": 32.579001833995186,
+   "runs_with_val_above_test": 120,
+   "runs": 120,
+   "rho_split_means": -0.5757575757575757,
+   "rho_network_means": 0.7999999999999999,
+   "val_network_means": {
+    "lawnet_rec": 82.62682517369588,
+    "recstatnet": 83.75761290391286,
+    "recurrencenet": 82.1577787399292,
+    "s4d": 82.30618794759114
+   },
+   "best_network_by_val": "recstatnet",
+   "best_network_by_test": "recstatnet",
+   "test_loss_choosing_by_val": 0.0
+  },
+  "pamap2": {
+   "val_mean": 91.39775826975152,
+   "test_mean": 56.48868209509938,
+   "gap": 34.90907617465214,
+   "runs_with_val_above_test": 108,
+   "runs": 108,
+   "rho_split_means": 0.48333333333333334,
+   "rho_network_means": -0.7999999999999999,
+   "val_network_means": {
+    "lawnet_rec": 91.04466968112521,
+    "recstatnet": 91.40151187225625,
+    "recurrencenet": 91.54549770885043,
+    "s4d": 91.59935381677415
+   },
+   "best_network_by_val": "s4d",
+   "best_network_by_test": "lawnet_rec",
+   "test_loss_choosing_by_val": 5.74709309471978
+  },
+  "up_fall": {
+   "val_mean": 95.2086807290713,
+   "test_mean": 49.21970769762993,
+   "gap": 45.988973031441375,
+   "runs_with_val_above_test": 120,
+   "runs": 120,
+   "rho_split_means": -0.35757575757575755,
+   "rho_network_means": -0.39999999999999997,
+   "val_network_means": {
+    "lawnet_rec": 94.57045038541158,
+    "recstatnet": 96.33440832297008,
+    "recurrencenet": 93.15521736939748,
+    "s4d": 96.77464683850606
+   },
+   "best_network_by_val": "s4d",
+   "best_network_by_test": "lawnet_rec",
+   "test_loss_choosing_by_val": 9.688736448685326
+  },
+  "uma_fall": {
+   "val_mean": 95.8841713766257,
+   "test_mean": 48.047093972563744,
+   "gap": 47.83707740406196,
+   "runs_with_val_above_test": 120,
+   "runs": 120,
+   "rho_split_means": -0.3939393939393939,
+   "rho_network_means": 0.0,
+   "val_network_means": {
+    "lawnet_rec": 95.84964474042256,
+    "recstatnet": 96.41469478607178,
+    "recurrencenet": 95.20168979962666,
+    "s4d": 96.07065618038177
+   },
+   "best_network_by_val": "recstatnet",
+   "best_network_by_test": "lawnet_rec",
+   "test_loss_choosing_by_val": 2.7366033693154677
+  }
+ },
+ "summary": {
+  "median_gap": 17.103583005567394,
+  "min_gap": 4.579593757788345,
+  "max_gap": 47.83707740406196,
+  "datasets_val_above_test": 13,
+  "runs_val_above_test": 2307,
+  "runs": 2388,
+  "datasets": 13,
+  "datasets_without_complete_val": [
+   "actrectut_gestures",
+   "unimib_shar",
+   "utd_mhad"
+  ],
+  "median_rho_network_means": 0.17575757575757575,
+  "datasets_with_rho_network": 13,
+  "datasets_best_by_val_is_best_by_test": 3,
+  "median_test_loss_choosing_by_val": 2.7366033693154677
+ }
+}

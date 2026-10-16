@@ -1,0 +1,40 @@
+node hpc22.local, job 86843, Fri Oct 16 08:54:10 +07 2026
+NVIDIA RTX A5000, 580.126.09
+== src.evaluation.split_spread
+{
+ "n_datasets": 16,
+ "datasets_split_sd_above_model_sd": 15,
+ "median_ratio_split_sd_to_model_sd": 2.5763553288953975
+}
+utd_mhad             S1 splits  8 sd(split)  12.66  sd(model)  2.43  seed sd  3.16
+uci_har              S1 splits 10 sd(split)   3.04  sd(model)  1.46  seed sd  0.85
+unimib_shar          S1 splits 10 sd(split)   7.13  sd(model)  4.17  seed sd  1.82
+actrectut_gestures   S1 splits  2 sd(split)   0.34  sd(model)  8.51  seed sd  5.61
+opportunity          S1 splits  4 sd(split)  16.45  sd(model)  1.35  seed sd  3.04
+sad                  S1 splits 10 sd(split)  10.79  sd(model)  5.24  seed sd  3.93
+hapt                 S1 splits 10 sd(split)   3.94  sd(model)  1.27  seed sd  2.92
+dsads                S1 splits  8 sd(split)   5.54  sd(model)  3.28  seed sd  4.95
+wisdm                S1 splits 10 sd(split)   6.47  sd(model)  5.15  seed sd  2.72
+pamap2               S2 splits  9 sd(split)  21.15  sd(model)  3.55  seed sd  2.51
+up_fall              S2 splits 10 sd(split)   8.29  sd(model)  4.42  seed sd  4.01
+uma_fall             S2 splits 10 sd(split)  13.13  sd(model)  4.27  seed sd  2.52
+usc_had              S2 splits 10 sd(split)  10.01  sd(model)  2.08  seed sd  2.91
+wear                 S2 splits 10 sd(split)   8.76  sd(model)  0.99  seed sd  1.09
+uca_ehar             S2 splits 10 sd(split)   7.31  sd(model)  2.07  seed sd  2.78
+w_har                S2 splits 10 sd(split)   5.34  sd(model)  2.96  seed sd  3.23
+recurrencenet      Round6Net      RecurrenceBlock  L=3 D=32 emb=32 params=24675 {'encoder': 224, 'blocks': 23496, 'side': 0, 'norm': 64, 'head': 891}
+s4d                S4DClassifier  S4DBlock         L=2 D=64 emb=64 params=27675 {'encoder': 448, 'blocks': 25344, 'side': 0, 'norm': 128, 'head': 1755}
+hystnet_sel_clock  HysteresisNet  HysteresisBlock  L=3 D=32 emb=32 params=23579 {'encoder': 256, 'blocks': 22368, 'side': 0, 'norm': 64, 'head': 891}
+quantilenet        QuantileNet    QuantileBlock    L=3 D=32 emb=32 params=20763 {'encoder': 224, 'blocks': 19584, 'side': 0, 'norm': 64, 'head': 891}
+mamba              MambaClassifier MambaBlock       L=2 D=32 emb=32 params=21147 {'encoder': 224, 'blocks': 19968, 'side': 0, 'norm': 64, 'head': 891}
+hystnet_nomem      HysteresisNet  HysteresisBlock  L=3 D=32 emb=32 params=19995 {'encoder': 224, 'blocks': 18816, 'side': 0, 'norm': 64, 'head': 891}
+recstatnet         Round8Net      RecurrenceBlock  L=3 D=32 emb=64 params=26451 {'encoder': 224, 'blocks': 23496, 'side': 848, 'norm': 128, 'head': 1755}
+lawnet_rec         Round8Net      RecurrenceBlock  L=3 D=32 emb=64 params=27553 {'encoder': 224, 'blocks': 23496, 'side': 1950, 'norm': 128, 'head': 1755}
+lawnet             Round8Net      PlainBlock       L=3 D=48 emb=80 params=19033 {'encoder': 336, 'blocks': 14400, 'side': 1950, 'norm': 160, 'head': 2187}
+statnet            Round8Net      PlainBlock       L=3 D=48 emb=80 params=17931 {'encoder': 336, 'blocks': 14400, 'side': 848, 'norm': 160, 'head': 2187}
+checkpoints read: 814
+s4d {'p05': 0.1813, 'p25': 0.5212, 'p50': 1.7461, 'p75': 5.3476, 'p95': 12.6506}
+hystnet_sel_clock {'p05': 0.0383, 'p25': 0.1081, 'p50': 0.3602, 'p75': 0.9616, 'p95': 1.8886}
+quantilenet_tau {'p05': 0.0995, 'p25': 0.3112, 'p50': 0.5001, 'p75': 0.6955, 'p95': 0.9008}
+quantilenet_eta {'p05': 0.0159, 'p25': 0.0301, 'p50': 0.0519, 'p75': 0.0851, 'p95': 0.1559}
+recurrencenet {'p05': 0.469, 'p25': 0.4991, 'p50': 0.5097, 'p75': 0.523, 'p95': 0.5524}

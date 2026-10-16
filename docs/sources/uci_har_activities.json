@@ -1,0 +1,5 @@
+{
+ "note": "Activity names of the harness's UCI-HAR class indices (the t-SNE case of the embedding analysis), copied from the paper-era cache's metadata/activity_df.csv on the cluster (the harness factorises the activity ids in order of appearance).",
+ "source": {"file": "<WHAR_DATASETS_DIR>/uci_har/metadata/activity_df.csv", "sha256": "3b9be463bc272d4a0a62bb745af9bf626260889a84b7fea6320ca2493cf4ba7c", "read_on": "2026-10-16"},
+ "activities": {"0": "Walking", "1": "Walking Upstairs", "2": "Walking Downstairs", "3": "Sitting", "4": "Standing", "5": "Laying"}
+}

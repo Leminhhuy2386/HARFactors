@@ -1,0 +1,546 @@
+{
+ "tsne_case": {
+  "dataset": "uci_har",
+  "model": "s4d",
+  "split": 0
+ },
+ "per_dataset_rho": {
+  "actrectut_gestures": {
+   "rho_embedding_ccs_f1": NaN,
+   "rho_sensor_ccs_f1": NaN,
+   "splits": 2
+  },
+  "hapt": {
+   "rho_embedding_ccs_f1": -0.09090909090909088,
+   "rho_sensor_ccs_f1": 0.17575757575757575,
+   "splits": 10
+  },
+  "opportunity": {
+   "rho_embedding_ccs_f1": -1.0,
+   "rho_sensor_ccs_f1": -0.7999999999999999,
+   "splits": 4
+  },
+  "sad": {
+   "rho_embedding_ccs_f1": -0.8909090909090909,
+   "rho_sensor_ccs_f1": -0.43030303030303024,
+   "splits": 10
+  },
+  "uca_ehar": {
+   "rho_embedding_ccs_f1": -0.17575757575757575,
+   "rho_sensor_ccs_f1": -0.2121212121212121,
+   "splits": 10
+  },
+  "uci_har": {
+   "rho_embedding_ccs_f1": -0.7454545454545454,
+   "rho_sensor_ccs_f1": -0.4787878787878787,
+   "splits": 10
+  },
+  "unimib_shar": {
+   "rho_embedding_ccs_f1": -0.8303030303030302,
+   "rho_sensor_ccs_f1": -0.7575757575757575,
+   "splits": 10
+  },
+  "up_fall": {
+   "rho_embedding_ccs_f1": -0.4787878787878787,
+   "rho_sensor_ccs_f1": -0.29696969696969694,
+   "splits": 10
+  },
+  "utd_mhad": {
+   "rho_embedding_ccs_f1": -0.30952380952380953,
+   "rho_sensor_ccs_f1": -0.4761904761904762,
+   "splits": 8
+  },
+  "wear": {
+   "rho_embedding_ccs_f1": -0.8060606060606059,
+   "rho_sensor_ccs_f1": -0.8303030303030302,
+   "splits": 10
+  },
+  "wisdm": {
+   "rho_embedding_ccs_f1": -0.4424242424242424,
+   "rho_sensor_ccs_f1": -0.28484848484848485,
+   "splits": 10
+  }
+ },
+ "probe_ratio_median": {
+  "actrectut_gestures": {
+   "embedding": NaN,
+   "sensor": NaN
+  },
+  "hapt": {
+   "embedding": 8.246486469251348,
+   "sensor": 6.834936304033731
+  },
+  "opportunity": {
+   "embedding": 2.70479470023966,
+   "sensor": 2.997560118832551
+  },
+  "sad": {
+   "embedding": 1.3204336474826541,
+   "sensor": 4.850598756822263
+  },
+  "uca_ehar": {
+   "embedding": 6.452763805438185,
+   "sensor": 8.434047350687509
+  },
+  "uci_har": {
+   "embedding": 3.7733890371875343,
+   "sensor": 4.66387714945911
+  },
+  "unimib_shar": {
+   "embedding": 5.157600189233834,
+   "sensor": 3.6509561795806804
+  },
+  "up_fall": {
+   "embedding": 12.100854491272177,
+   "sensor": 14.187253286100091
+  },
+  "utd_mhad": {
+   "embedding": 3.560615912271973,
+   "sensor": 3.3022745577105077
+  },
+  "wear": {
+   "embedding": 1.1742533077018782,
+   "sensor": 2.1544253936435696
+  },
+  "wisdm": {
+   "embedding": 1.0479505536101335,
+   "sensor": 2.2355226959379735
+  }
+ },
+ "summary": {
+  "regenerated_cases": 754,
+  "max_abs_regenerated_minus_stored_macro_f1": 0.20331740379333496,
+  "regenerated_exact": 686,
+  "pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1": -0.45109296423733825,
+  "pooled_within_dataset_rank_p_embedding_per_dim": 6.4004846201717856e-06,
+  "network_dataset_cases": 82,
+  "median_network_dataset_rho_embedding": -0.4969696969696969,
+  "network_dataset_negative_rho": 69,
+  "datasets": 11,
+  "datasets_with_more_than_3_splits": 10,
+  "pooled_within_dataset_rank_rho_embedding_ccs_f1": -0.4577138052904451,
+  "pooled_within_dataset_rank_p_embedding": 4.4900403883300995e-06,
+  "pooled_within_dataset_rank_rho_sensor_ccs_f1": -0.31866835852963615,
+  "pooled_within_dataset_rank_p_sensor": 0.0019621429983425116,
+  "median_dataset_rho_embedding": -0.6121212121212121,
+  "median_dataset_rho_sensor": -0.45324675324675323,
+  "datasets_negative_rho_embedding": 10,
+  "datasets_negative_rho_sensor": 9,
+  "median_subject_probe_over_chance_embedding": 3.180310368937879,
+  "median_subject_probe_over_chance_sensor": 4.034595772264216,
+  "median_activity_probe_embedding": 0.9920886013976606,
+  "probe_cases": 754,
+  "network_dataset_rho": [
+   {
+    "dataset": "hapt",
+    "model": "hystnet_nomem",
+    "rho": -0.24848484848484845
+   },
+   {
+    "dataset": "hapt",
+    "model": "hystnet_sel_clock",
+    "rho": -0.11515151515151514
+   },
+   {
+    "dataset": "hapt",
+    "model": "lawnet",
+    "rho": 0.38181818181818183
+   },
+   {
+    "dataset": "hapt",
+    "model": "lawnet_rec",
+    "rho": 0.406060606060606
+   },
+   {
+    "dataset": "hapt",
+    "model": "mamba",
+    "rho": -0.309090909090909
+   },
+   {
+    "dataset": "hapt",
+    "model": "quantilenet",
+    "rho": 0.06666666666666665
+   },
+   {
+    "dataset": "hapt",
+    "model": "recstatnet",
+    "rho": -0.24848484848484845
+   },
+   {
+    "dataset": "hapt",
+    "model": "recurrencenet",
+    "rho": -0.11515151515151514
+   },
+   {
+    "dataset": "hapt",
+    "model": "s4d",
+    "rho": 0.04242424242424241
+   },
+   {
+    "dataset": "hapt",
+    "model": "statnet",
+    "rho": 0.0303030303030303
+   },
+   {
+    "dataset": "opportunity",
+    "model": "hystnet_nomem",
+    "rho": -1.0
+   },
+   {
+    "dataset": "opportunity",
+    "model": "hystnet_sel_clock",
+    "rho": -0.7999999999999999
+   },
+   {
+    "dataset": "opportunity",
+    "model": "lawnet",
+    "rho": -1.0
+   },
+   {
+    "dataset": "opportunity",
+    "model": "lawnet_rec",
+    "rho": -0.7999999999999999
+   },
+   {
+    "dataset": "opportunity",
+    "model": "mamba",
+    "rho": -1.0
+   },
+   {
+    "dataset": "opportunity",
+    "model": "quantilenet",
+    "rho": -1.0
+   },
+   {
+    "dataset": "opportunity",
+    "model": "recstatnet",
+    "rho": -1.0
+   },
+   {
+    "dataset": "opportunity",
+    "model": "recurrencenet",
+    "rho": -1.0
+   },
+   {
+    "dataset": "opportunity",
+    "model": "s4d",
+    "rho": -1.0
+   },
+   {
+    "dataset": "opportunity",
+    "model": "statnet",
+    "rho": -1.0
+   },
+   {
+    "dataset": "sad",
+    "model": "hystnet_nomem",
+    "rho": -0.8303030303030302
+   },
+   {
+    "dataset": "sad",
+    "model": "hystnet_sel_clock",
+    "rho": -0.9393939393939393
+   },
+   {
+    "dataset": "sad",
+    "model": "lawnet",
+    "rho": 0.21884599572482327
+   },
+   {
+    "dataset": "sad",
+    "model": "lawnet_rec",
+    "rho": 0.2613993837824278
+   },
+   {
+    "dataset": "sad",
+    "model": "mamba",
+    "rho": -0.9515151515151514
+   },
+   {
+    "dataset": "sad",
+    "model": "quantilenet",
+    "rho": -0.7939393939393938
+   },
+   {
+    "dataset": "sad",
+    "model": "recstatnet",
+    "rho": -0.17575757575757575
+   },
+   {
+    "dataset": "sad",
+    "model": "recurrencenet",
+    "rho": -0.7575757575757575
+   },
+   {
+    "dataset": "sad",
+    "model": "s4d",
+    "rho": -0.4545454545454545
+   },
+   {
+    "dataset": "sad",
+    "model": "statnet",
+    "rho": -0.43030303030303024
+   },
+   {
+    "dataset": "uca_ehar",
+    "model": "lawnet_rec",
+    "rho": -0.16363636363636364
+   },
+   {
+    "dataset": "uca_ehar",
+    "model": "recstatnet",
+    "rho": 0.05454545454545454
+   },
+   {
+    "dataset": "uca_ehar",
+    "model": "recurrencenet",
+    "rho": -0.6242424242424242
+   },
+   {
+    "dataset": "uca_ehar",
+    "model": "s4d",
+    "rho": -0.2121212121212121
+   },
+   {
+    "dataset": "uci_har",
+    "model": "hystnet_nomem",
+    "rho": -0.5030303030303029
+   },
+   {
+    "dataset": "uci_har",
+    "model": "hystnet_sel_clock",
+    "rho": -0.709090909090909
+   },
+   {
+    "dataset": "uci_har",
+    "model": "lawnet",
+    "rho": -0.6121212121212121
+   },
+   {
+    "dataset": "uci_har",
+    "model": "lawnet_rec",
+    "rho": -0.41818181818181815
+   },
+   {
+    "dataset": "uci_har",
+    "model": "mamba",
+    "rho": -0.6848484848484848
+   },
+   {
+    "dataset": "uci_har",
+    "model": "quantilenet",
+    "rho": -0.7939393939393938
+   },
+   {
+    "dataset": "uci_har",
+    "model": "recstatnet",
+    "rho": -0.6848484848484848
+   },
+   {
+    "dataset": "uci_har",
+    "model": "recurrencenet",
+    "rho": -0.7454545454545454
+   },
+   {
+    "dataset": "uci_har",
+    "model": "s4d",
+    "rho": -0.7333333333333332
+   },
+   {
+    "dataset": "uci_har",
+    "model": "statnet",
+    "rho": -0.5272727272727272
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "hystnet_nomem",
+    "rho": -0.6969696969696969
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "hystnet_sel_clock",
+    "rho": -0.7454545454545454
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "lawnet",
+    "rho": -0.4666666666666666
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "lawnet_rec",
+    "rho": -0.6969696969696969
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "mamba",
+    "rho": -0.9523809523809524
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "quantilenet",
+    "rho": -0.8303030303030302
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "recstatnet",
+    "rho": -0.6242424242424242
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "recurrencenet",
+    "rho": -0.8666666666666665
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "s4d",
+    "rho": -0.8303030303030302
+   },
+   {
+    "dataset": "unimib_shar",
+    "model": "statnet",
+    "rho": -0.41818181818181815
+   },
+   {
+    "dataset": "up_fall",
+    "model": "lawnet_rec",
+    "rho": -0.8666666666666665
+   },
+   {
+    "dataset": "up_fall",
+    "model": "recstatnet",
+    "rho": -0.406060606060606
+   },
+   {
+    "dataset": "up_fall",
+    "model": "recurrencenet",
+    "rho": -0.6242424242424242
+   },
+   {
+    "dataset": "up_fall",
+    "model": "s4d",
+    "rho": -0.4666666666666666
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "hystnet_nomem",
+    "rho": -0.261904761904762
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "hystnet_sel_clock",
+    "rho": 0.04761904761904763
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "lawnet",
+    "rho": -0.3571428571428572
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "lawnet_rec",
+    "rho": 0.0
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "mamba",
+    "rho": -0.07142857142857144
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "quantilenet",
+    "rho": 0.261904761904762
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "recstatnet",
+    "rho": -0.2142857142857143
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "recurrencenet",
+    "rho": 0.19047619047619052
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "s4d",
+    "rho": 0.04761904761904763
+   },
+   {
+    "dataset": "utd_mhad",
+    "model": "statnet",
+    "rho": -0.30952380952380953
+   },
+   {
+    "dataset": "wear",
+    "model": "lawnet_rec",
+    "rho": -0.7696969696969697
+   },
+   {
+    "dataset": "wear",
+    "model": "recstatnet",
+    "rho": -0.8666666666666665
+   },
+   {
+    "dataset": "wear",
+    "model": "recurrencenet",
+    "rho": -0.7696969696969697
+   },
+   {
+    "dataset": "wear",
+    "model": "s4d",
+    "rho": -0.9030303030303028
+   },
+   {
+    "dataset": "wisdm",
+    "model": "hystnet_nomem",
+    "rho": -0.18787878787878787
+   },
+   {
+    "dataset": "wisdm",
+    "model": "hystnet_sel_clock",
+    "rho": -0.6363636363636362
+   },
+   {
+    "dataset": "wisdm",
+    "model": "lawnet",
+    "rho": -0.05454545454545454
+   },
+   {
+    "dataset": "wisdm",
+    "model": "lawnet_rec",
+    "rho": -0.309090909090909
+   },
+   {
+    "dataset": "wisdm",
+    "model": "mamba",
+    "rho": -0.7818181818181817
+   },
+   {
+    "dataset": "wisdm",
+    "model": "quantilenet",
+    "rho": -0.3939393939393939
+   },
+   {
+    "dataset": "wisdm",
+    "model": "recstatnet",
+    "rho": -0.07878787878787878
+   },
+   {
+    "dataset": "wisdm",
+    "model": "recurrencenet",
+    "rho": -0.3939393939393939
+   },
+   {
+    "dataset": "wisdm",
+    "model": "s4d",
+    "rho": -0.49090909090909085
+   },
+   {
+    "dataset": "wisdm",
+    "model": "statnet",
+    "rho": -0.19999999999999998
+   }
+  ]
+ }
+}

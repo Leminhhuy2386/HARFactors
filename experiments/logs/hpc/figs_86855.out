@@ -1,0 +1,19 @@
+node hpc22.local, job 86855, Fri Oct 16 09:35:40 +07 2026
+NVIDIA RTX A5000, 580.126.09
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/visualization/detail_figures.py", line 728, in <module>
+    main()
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/visualization/detail_figures.py", line 718, in main
+    out = fn(run_id, started)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/visualization/detail_figures.py", line 154, in fig03
+    b = fig.add_subplot(gs[1, 0])
+                        ~~^^^^^^
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/matplotlib/gridspec.py", line 243, in __getitem__
+    [_normalize(k1, nrows, 0), _normalize(k2, ncols, 1)],
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/matplotlib/gridspec.py", line 231, in _normalize
+    raise IndexError(f"index {orig_key} is out of bounds for "
+IndexError: index 1 is out of bounds for axis 0 with size 1

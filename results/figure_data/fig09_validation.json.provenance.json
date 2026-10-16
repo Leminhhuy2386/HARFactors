@@ -1,0 +1,16 @@
+{
+ "produced_by": "src/visualization/detail_figures.py",
+ "command": "python /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/visualization/detail_figures.py",
+ "run_id": "20261016_093813_detail_figures",
+ "timestamp": "2026-10-16T09:38:23",
+ "duration_sec": 9.71,
+ "git_commit": "fbdb03d-dirty",
+ "config_sha256": null,
+ "config": null,
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "results/metrics/split_spread/data.json": "sha256:4229bf12a016daba37b35bf62a75d87737ee96918be4ba4df3f90889cf6c07ec"
+ },
+ "output_sha256": "23cbd59db3c1f397c07007c243234d93d8b9b23976efaa33b263d7e69a4680b3",
+ "synthetic": false
+}

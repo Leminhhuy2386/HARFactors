@@ -1,0 +1,427 @@
+{
+ "rows": [
+  {
+   "dataset": "unimib_shar",
+   "name": "UniMiB-SHAR",
+   "set": "S1",
+   "device": [
+    "Phone"
+   ],
+   "modalities": [
+    "Acc"
+   ],
+   "channels": 3,
+   "table3_channels": 3,
+   "subjects": 30,
+   "subjects_source": "harness splits",
+   "classes": 17,
+   "hz": 50,
+   "window": 150,
+   "windows": 7195,
+   "splits": 10,
+   "networks": 10,
+   "excluded": false
+  },
+  {
+   "dataset": "wisdm",
+   "name": "WISDM",
+   "set": "S1",
+   "device": [
+    "Phone"
+   ],
+   "modalities": [
+    "Acc"
+   ],
+   "channels": 3,
+   "table3_channels": 3,
+   "subjects": 36,
+   "subjects_source": "harness splits",
+   "classes": 6,
+   "hz": 20,
+   "window": 60,
+   "windows": 34097,
+   "splits": 10,
+   "networks": 10,
+   "excluded": false
+  },
+  {
+   "dataset": "hapt",
+   "name": "HAPT",
+   "set": "S1",
+   "device": [
+    "Phone"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr"
+   ],
+   "channels": 6,
+   "table3_channels": 6,
+   "subjects": 30,
+   "subjects_source": "harness splits",
+   "classes": 12,
+   "hz": 50,
+   "window": 150,
+   "windows": 9056,
+   "splits": 10,
+   "networks": 10,
+   "excluded": false
+  },
+  {
+   "dataset": "utd_mhad",
+   "name": "UTD-MHAD",
+   "set": "S1",
+   "device": [
+    "Node"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr"
+   ],
+   "channels": 6,
+   "table3_channels": 6,
+   "subjects": 8,
+   "subjects_source": "harness splits",
+   "classes": 27,
+   "hz": 50,
+   "window": 150,
+   "windows": 783,
+   "splits": 8,
+   "networks": 10,
+   "excluded": false
+  },
+  {
+   "dataset": "daphnet",
+   "name": "Daphnet",
+   "set": "S1",
+   "device": [
+    "Node"
+   ],
+   "modalities": [
+    "Acc"
+   ],
+   "channels": 9,
+   "table3_channels": 9,
+   "subjects": 10,
+   "subjects_source": "harness splits",
+   "classes": 3,
+   "hz": 64,
+   "window": 192,
+   "windows": 11160,
+   "splits": 10,
+   "networks": 10,
+   "excluded": true
+  },
+  {
+   "dataset": "uci_har",
+   "name": "UCI-HAR",
+   "set": "S1",
+   "device": [
+    "Phone"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr"
+   ],
+   "channels": 9,
+   "table3_channels": 9,
+   "subjects": 30,
+   "subjects_source": "harness splits",
+   "classes": 6,
+   "hz": 50,
+   "window": 150,
+   "windows": 8188,
+   "splits": 10,
+   "networks": 10,
+   "excluded": false
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "name": "ActRecTut",
+   "set": "S1",
+   "device": [
+    "Node"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr"
+   ],
+   "channels": 15,
+   "table3_channels": 15,
+   "subjects": 2,
+   "subjects_source": "harness splits",
+   "classes": 12,
+   "hz": 32,
+   "window": 96,
+   "windows": 798,
+   "splits": 2,
+   "networks": 10,
+   "excluded": false
+  },
+  {
+   "dataset": "dsads",
+   "name": "DSADS",
+   "set": "S1",
+   "device": [
+    "Node"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr",
+    "Mag"
+   ],
+   "channels": 45,
+   "table3_channels": 45,
+   "subjects": 8,
+   "subjects_source": "harness splits",
+   "classes": 19,
+   "hz": 25,
+   "window": 75,
+   "windows": 30096,
+   "splits": 8,
+   "networks": 10,
+   "excluded": false
+  },
+  {
+   "dataset": "sad",
+   "name": "SAD",
+   "set": "S1",
+   "device": [
+    "Phone"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr",
+    "Mag"
+   ],
+   "channels": 60,
+   "table3_channels": 60,
+   "subjects": 10,
+   "subjects_source": "harness splits",
+   "classes": 7,
+   "hz": 50,
+   "window": 150,
+   "windows": 8260,
+   "splits": 10,
+   "networks": 10,
+   "excluded": false
+  },
+  {
+   "dataset": "opportunity",
+   "name": "Opportunity",
+   "set": "S1",
+   "device": [
+    "Node"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr",
+    "Mag"
+   ],
+   "channels": 133,
+   "table3_channels": 133,
+   "subjects": 4,
+   "subjects_source": "harness splits",
+   "classes": 5,
+   "hz": 30,
+   "window": 90,
+   "windows": 10550,
+   "splits": 4,
+   "networks": 10,
+   "excluded": false
+  },
+  {
+   "dataset": "usc_had",
+   "name": "USC-HAD",
+   "set": "S2",
+   "device": [
+    "Node"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr"
+   ],
+   "channels": 6,
+   "table3_channels": 6,
+   "subjects": 14,
+   "subjects_source": "whar-datasets config",
+   "classes": 12,
+   "hz": 100,
+   "window": 300,
+   "windows": 17386,
+   "splits": 10,
+   "networks": 4,
+   "excluded": false
+  },
+  {
+   "dataset": "uca_ehar",
+   "name": "UCA-EHAR",
+   "set": "S2",
+   "device": [
+    "Glasses"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr",
+    "Baro"
+   ],
+   "channels": 7,
+   "table3_channels": 7,
+   "subjects": 20,
+   "subjects_source": "harness splits",
+   "classes": 12,
+   "hz": 25,
+   "window": 75,
+   "windows": 16554,
+   "splits": 10,
+   "networks": 4,
+   "excluded": false
+  },
+  {
+   "dataset": "w_har",
+   "name": "w-HAR",
+   "set": "S2",
+   "device": [
+    "Node"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr",
+    "Mag",
+    "Stretch"
+   ],
+   "channels": 7,
+   "table3_channels": 7,
+   "subjects": 22,
+   "subjects_source": "harness splits",
+   "classes": 9,
+   "hz": 250,
+   "window": 750,
+   "windows": 5092,
+   "splits": 10,
+   "networks": 4,
+   "excluded": false
+  },
+  {
+   "dataset": "wear",
+   "name": "WEAR",
+   "set": "S2",
+   "device": [
+    "Watch"
+   ],
+   "modalities": [
+    "Acc"
+   ],
+   "channels": 12,
+   "table3_channels": 12,
+   "subjects": 24,
+   "subjects_source": "harness splits",
+   "classes": 18,
+   "hz": 50,
+   "window": 150,
+   "windows": 26739,
+   "splits": 10,
+   "networks": 4,
+   "excluded": false
+  },
+  {
+   "dataset": "motion_sense",
+   "name": "MotionSense",
+   "set": "S2",
+   "device": [
+    "Phone"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr"
+   ],
+   "channels": 18,
+   "table3_channels": 18,
+   "subjects": 24,
+   "subjects_source": "whar-datasets config",
+   "classes": 6,
+   "hz": 50,
+   "window": 150,
+   "windows": 18300,
+   "splits": 10,
+   "networks": 4,
+   "excluded": true
+  },
+  {
+   "dataset": "uma_fall",
+   "name": "UMAFall",
+   "set": "S2",
+   "device": [
+    "Node",
+    "Phone"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr",
+    "Mag"
+   ],
+   "channels": 39,
+   "table3_channels": 39,
+   "subjects": 19,
+   "subjects_source": "harness splits",
+   "classes": 15,
+   "hz": 200,
+   "window": 600,
+   "windows": 6240,
+   "splits": 10,
+   "networks": 4,
+   "excluded": false
+  },
+  {
+   "dataset": "up_fall",
+   "name": "UP-Fall",
+   "set": "S2",
+   "device": [
+    "Node",
+    "Helmet"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr",
+    "ALS",
+    "EEG"
+   ],
+   "channels": 42,
+   "table3_channels": 42,
+   "subjects": 17,
+   "subjects_source": "harness splits",
+   "classes": 11,
+   "hz": 20,
+   "window": 60,
+   "windows": 8974,
+   "splits": 10,
+   "networks": 4,
+   "excluded": false
+  },
+  {
+   "dataset": "pamap2",
+   "name": "PAMAP2",
+   "set": "S2",
+   "device": [
+    "Node"
+   ],
+   "modalities": [
+    "Acc",
+    "Gyr",
+    "Mag",
+    "ECG"
+   ],
+   "channels": 52,
+   "table3_channels": 52,
+   "subjects": 9,
+   "subjects_source": "harness splits",
+   "classes": 13,
+   "hz": 100,
+   "window": 300,
+   "windows": 12786,
+   "splits": 9,
+   "networks": 4,
+   "excluded": false
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+node hpc22.local, job 86852, Fri Oct 16 09:31:10 +07 2026
+NVIDIA RTX A5000, 580.126.09
+== src.evaluation.split_spread
+Traceback (most recent call last):
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/scripts/run_analyses.py", line 59, in <module>
+    runpy.run_module(mod, run_name="__main__")
+  File "<frozen runpy>", line 229, in run_module
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/evaluation/split_spread.py", line 96, in <module>
+    main()
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/evaluation/split_spread.py", line 47, in main
+    val = V.load(spec, "val_macro_f1", [d]).rename(columns={"y": "v"})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/evaluation/variance_components.py", line 66, in load
+    "y": 100 * json.loads(f.read_text())["metrics"][outcome]})
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'val_macro_f1'

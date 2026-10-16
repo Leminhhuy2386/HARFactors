@@ -1,0 +1,7 @@
+{
+ "venue": "IEEE Sensors Letters",
+ "venue_limits": {"pages": 4, "figures": 5, "abstract_words": 150},
+ "enforced": {"pages": null, "figures": null, "abstract_words": 150},
+ "decision": "Page and figure limits are not enforced for this working draft: the user asked on 2026-10-16 (chat) for many more figures (sensors, experiments, detailed model structure, embedding analysis) and said that exceeding the page count is fine and that they will shorten the manuscript later. The abstract limit stays. Restore the venue limits (set 'enforced' to 'venue_limits') before submission.",
+ "decided_on": "2026-10-16"
+}

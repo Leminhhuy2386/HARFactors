@@ -1,0 +1,7002 @@
+{
+ "regenerated_cases": 754,
+ "max_abs_regenerated_minus_stored_macro_f1": 0.20331740379333496,
+ "regenerated_exact": 686,
+ "pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1": -0.45109296423733825,
+ "pooled_within_dataset_rank_p_embedding_per_dim": 6.4004846201717856e-06,
+ "network_dataset_cases": 82,
+ "median_network_dataset_rho_embedding": -0.4969696969696969,
+ "network_dataset_negative_rho": 69,
+ "datasets": 11,
+ "datasets_with_more_than_3_splits": 10,
+ "pooled_within_dataset_rank_rho_embedding_ccs_f1": -0.4577138052904451,
+ "pooled_within_dataset_rank_p_embedding": 4.4900403883300995e-06,
+ "pooled_within_dataset_rank_rho_sensor_ccs_f1": -0.31866835852963615,
+ "pooled_within_dataset_rank_p_sensor": 0.0019621429983425116,
+ "median_dataset_rho_embedding": -0.6121212121212121,
+ "median_dataset_rho_sensor": -0.45324675324675323,
+ "datasets_negative_rho_embedding": 10,
+ "datasets_negative_rho_sensor": 9,
+ "median_subject_probe_over_chance_embedding": 3.180310368937879,
+ "median_subject_probe_over_chance_sensor": 4.034595772264216,
+ "median_activity_probe_embedding": 0.9920886013976606,
+ "probe_cases": 754,
+ "per_dataset": {
+  "actrectut_gestures": {
+   "splits": 2,
+   "mean_macro_f1_per_split": [
+    45.190124958753586,
+    42.30462126433849
+   ],
+   "embedding_ccs_per_split": [
+    13.685834355652332,
+    13.836931146681309
+   ],
+   "sensor_ccs_per_split": [
+    10.618883192539215,
+    11.348333775997162
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    1.9824215226919775,
+    1.999615062374319
+   ],
+   "rho_embedding_ccs_f1": NaN,
+   "rho_sensor_ccs_f1": NaN,
+   "rho_embedding_ccs_per_dim_f1": NaN
+  },
+  "hapt": {
+   "splits": 10,
+   "mean_macro_f1_per_split": [
+    86.38381123542786,
+    80.97944915294647,
+    86.38337194919586,
+    74.02644872665405,
+    83.7599527835846,
+    82.22633719444275,
+    83.44252943992615,
+    83.83419215679169,
+    78.07013392448425,
+    84.21519339084625
+   ],
+   "embedding_ccs_per_split": [
+    3.9169904068112373,
+    2.6135809356516058,
+    3.1085978746414185,
+    3.5402313351631163,
+    4.69244913160801,
+    3.4812354097763696,
+    4.259506645798683,
+    3.2077339073022206,
+    4.741321295499802,
+    3.8346278101205824
+   ],
+   "sensor_ccs_per_split": [
+    1.8974934816360474,
+    1.6659647605635903,
+    2.764757533868154,
+    2.1290291331031104,
+    2.842411736647288,
+    1.9552782376607258,
+    2.3038191497325897,
+    1.6980355034271877,
+    2.6174590587615967,
+    2.6712897519270578
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    0.5628364765097161,
+    0.37470706789661645,
+    0.45041672478630745,
+    0.5095409554689748,
+    0.671880535228481,
+    0.5023114945740597,
+    0.6126810354889486,
+    0.4610751937297759,
+    0.6850793916392596,
+    0.5503794630637002
+   ],
+   "rho_embedding_ccs_f1": -0.09090909090909088,
+   "rho_sensor_ccs_f1": 0.17575757575757575,
+   "rho_embedding_ccs_per_dim_f1": -0.09090909090909088
+  },
+  "opportunity": {
+   "splits": 4,
+   "mean_macro_f1_per_split": [
+    75.73383927345276,
+    71.63528084754944,
+    61.020342111587524,
+    38.740116357803345
+   ],
+   "embedding_ccs_per_split": [
+    6.094157642126083,
+    6.710972481966019,
+    11.170463192462922,
+    16.435556602478027
+   ],
+   "sensor_ccs_per_split": [
+    13.596810579299927,
+    12.57344651222229,
+    16.35546898841858,
+    19.887829303741455
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    0.8739869442672432,
+    0.9624693195286306,
+    1.6416626308965738,
+    2.4165011192426653
+   ],
+   "rho_embedding_ccs_f1": -1.0,
+   "rho_sensor_ccs_f1": -0.7999999999999999,
+   "rho_embedding_ccs_per_dim_f1": -1.0
+  },
+  "sad": {
+   "splits": 10,
+   "mean_macro_f1_per_split": [
+    94.81409430503845,
+    92.66311228275299,
+    86.74305558204651,
+    87.93896079063416,
+    97.63642609119415,
+    93.66009294986725,
+    92.13089108467102,
+    65.2373856306076,
+    92.71935224533081,
+    98.90682637691498
+   ],
+   "embedding_ccs_per_split": [
+    8.043269542285374,
+    9.80613433292934,
+    9.852485353606088,
+    10.504717135429383,
+    7.256109292166574,
+    9.244207790919713,
+    11.171262277875627,
+    19.99741772242955,
+    10.177898366110666,
+    6.449255960328238
+   ],
+   "sensor_ccs_per_split": [
+    12.538026469094413,
+    17.30092797960554,
+    11.252492087227958,
+    13.263804163251605,
+    11.325517790658134,
+    14.1943051474435,
+    12.212571144104004,
+    22.692229407174246,
+    15.730576515197754,
+    10.828335353306361
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    1.1985806195336484,
+    1.4601746410733545,
+    1.495775758521568,
+    1.587029740494849,
+    1.049663158623777,
+    1.3786031100260319,
+    1.6950753071524114,
+    3.022153687727325,
+    1.5150440731609887,
+    0.9374062935997473
+   ],
+   "rho_embedding_ccs_f1": -0.8909090909090909,
+   "rho_sensor_ccs_f1": -0.43030303030303024,
+   "rho_embedding_ccs_per_dim_f1": -0.8909090909090909
+  },
+  "uca_ehar": {
+   "splits": 10,
+   "mean_macro_f1_per_split": [
+    65.60995727777481,
+    64.03980404138565,
+    69.73411291837692,
+    61.50456517934799,
+    63.29004466533661,
+    66.01679027080536,
+    45.672496408224106,
+    64.28374648094177,
+    72.08448499441147,
+    54.78938966989517
+   ],
+   "embedding_ccs_per_split": [
+    5.633756670084867,
+    5.5796554659803705,
+    5.042189908524355,
+    5.156940078193491,
+    5.763970707853635,
+    5.424734411140283,
+    7.328444927930832,
+    5.259523976932872,
+    5.366898104548454,
+    4.396068082915412
+   ],
+   "sensor_ccs_per_split": [
+    3.362053155899048,
+    3.3624293506145477,
+    3.2459560434023538,
+    2.123867327516729,
+    3.0091475347677865,
+    3.3007488350073495,
+    4.0647969245910645,
+    2.868351101875305,
+    2.98192165295283,
+    3.283473491668701
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    0.7607015009592467,
+    0.7538847987111156,
+    0.6843866085559345,
+    0.7002459680994424,
+    0.7846111016569566,
+    0.7306648434838567,
+    0.9990633186640818,
+    0.7138058699246757,
+    0.7268501962389797,
+    0.5943605012122206
+   ],
+   "rho_embedding_ccs_f1": -0.17575757575757575,
+   "rho_sensor_ccs_f1": -0.2121212121212121,
+   "rho_embedding_ccs_per_dim_f1": -0.17575757575757575
+  },
+  "uci_har": {
+   "splits": 10,
+   "mean_macro_f1_per_split": [
+    97.97860085964203,
+    95.98627805709839,
+    95.81901371479034,
+    94.13968503475189,
+    88.30477595329285,
+    93.64511787891388,
+    99.42517280578613,
+    91.92854285240173,
+    96.17056488990784,
+    93.30950498580933
+   ],
+   "embedding_ccs_per_split": [
+    2.6200090487798056,
+    3.3334663033485414,
+    3.220616761843363,
+    2.837067222595215,
+    4.651126897335052,
+    2.812382526199023,
+    2.183198082447052,
+    3.4292771354317666,
+    3.0951529175043104,
+    3.281785444418589
+   ],
+   "sensor_ccs_per_split": [
+    1.5288881361484528,
+    2.2765179673830667,
+    2.259342392285665,
+    1.8926126758257549,
+    3.5959574977556863,
+    1.7633525331815083,
+    2.0069133639335632,
+    2.5722888509432473,
+    2.736406624317169,
+    2.282865752776464
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    0.37789571795153193,
+    0.47538676326935136,
+    0.46121263810884106,
+    0.40948756211914716,
+    0.6767158856602975,
+    0.40513630739922735,
+    0.30926815427099724,
+    0.497352767924249,
+    0.4425910618194474,
+    0.47334802613170873
+   ],
+   "rho_embedding_ccs_f1": -0.7454545454545454,
+   "rho_sensor_ccs_f1": -0.4787878787878787,
+   "rho_embedding_ccs_per_dim_f1": -0.7454545454545454
+  },
+  "unimib_shar": {
+   "splits": 10,
+   "mean_macro_f1_per_split": [
+    57.30192164580027,
+    53.60705422030555,
+    55.50590127706528,
+    43.05900990962982,
+    57.627660036087036,
+    60.869643688201904,
+    63.58844757080078,
+    69.37723517417908,
+    57.259973883628845,
+    64.47212517261505
+   ],
+   "embedding_ccs_per_split": [
+    3.780551023732603,
+    3.7409933447058683,
+    4.732951743462507,
+    4.265616875536302,
+    3.123311022449942,
+    2.8206127713708318,
+    2.517902141458848,
+    3.042816152292139,
+    3.196961691099055,
+    2.6214945645893324
+   ],
+   "sensor_ccs_per_split": [
+    1.5553759476717781,
+    1.6364617242532618,
+    2.3135410757625805,
+    2.116611873402315,
+    1.580438627916224,
+    1.2057605631211226,
+    1.016896228579914,
+    1.4497854604440576,
+    1.3175032173886019,
+    1.1751764802371754
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    0.5295568399040037,
+    0.5250559899504263,
+    0.6781321970245848,
+    0.6124246939690877,
+    0.4491405501350981,
+    0.4031622949864742,
+    0.360713048894669,
+    0.4336808411816224,
+    0.4612828001068299,
+    0.3771057502839447
+   ],
+   "rho_embedding_ccs_f1": -0.8303030303030302,
+   "rho_sensor_ccs_f1": -0.7575757575757575,
+   "rho_embedding_ccs_per_dim_f1": -0.8303030303030302
+  },
+  "up_fall": {
+   "splits": 10,
+   "mean_macro_f1_per_split": [
+    54.66707721352577,
+    51.09249874949455,
+    55.158039182424545,
+    48.132725805044174,
+    47.56482467055321,
+    47.07291200757027,
+    55.12894317507744,
+    49.91258159279823,
+    51.219964027404785,
+    30.24476394057274
+   ],
+   "embedding_ccs_per_split": [
+    6.886755417693745,
+    7.423424980857155,
+    7.191788716749711,
+    8.04965462467887,
+    7.576257380572232,
+    7.059109687805176,
+    7.094500330361453,
+    8.226898838173259,
+    7.731574096462943,
+    10.394549711184068
+   ],
+   "sensor_ccs_per_split": [
+    6.997601270675659,
+    6.835174257105047,
+    8.15014037218961,
+    7.281797127290205,
+    9.709086244756525,
+    6.040494008497759,
+    6.133181745355779,
+    8.298642418601297,
+    8.320617719130082,
+    10.293374495072799
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    0.9329383069611985,
+    1.0060473745351952,
+    0.9737917519520077,
+    1.0886787638517534,
+    1.0314356759799392,
+    0.955439749649929,
+    0.9581820456545398,
+    1.1086499039159015,
+    1.0474655753989257,
+    1.4147605371272498
+   ],
+   "rho_embedding_ccs_f1": -0.4787878787878787,
+   "rho_sensor_ccs_f1": -0.29696969696969694,
+   "rho_embedding_ccs_per_dim_f1": -0.4787878787878787
+  },
+  "utd_mhad": {
+   "splits": 8,
+   "mean_macro_f1_per_split": [
+    86.96880221366882,
+    43.96681219339371,
+    69.71415936946869,
+    69.07987594604492,
+    75.32582461833954,
+    80.17164468765259,
+    77.19250559806824,
+    73.68836402893066
+   ],
+   "embedding_ccs_per_split": [
+    7.624516036333861,
+    7.716430248532976,
+    7.667040018240611,
+    8.47136428923834,
+    8.330412259468666,
+    7.526418489880032,
+    8.717481850660764,
+    8.521149690945943
+   ],
+   "sensor_ccs_per_split": [
+    3.9615375686574867,
+    4.856038740703037,
+    4.624107162157695,
+    5.986951896122524,
+    4.645444594896757,
+    4.704632246935809,
+    5.233660487028269,
+    5.252361668480767
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    1.1065720949623616,
+    1.1116777461752814,
+    1.1124606598381708,
+    1.2197016511540857,
+    1.205612513786749,
+    1.0829212088556286,
+    1.2587165504438542,
+    1.2327082156706581
+   ],
+   "rho_embedding_ccs_f1": -0.30952380952380953,
+   "rho_sensor_ccs_f1": -0.4761904761904762,
+   "rho_embedding_ccs_per_dim_f1": -0.261904761904762
+  },
+  "wear": {
+   "splits": 10,
+   "mean_macro_f1_per_split": [
+    81.91847801208496,
+    91.97918027639389,
+    79.83166724443436,
+    92.69174635410309,
+    84.63824987411499,
+    77.16539353132248,
+    95.37652134895325,
+    93.12622547149658,
+    91.30942672491074,
+    68.22774112224579
+   ],
+   "embedding_ccs_per_split": [
+    4.47448726826244,
+    3.0032542099555335,
+    4.540553741984898,
+    3.2723260306649737,
+    3.9854931549893484,
+    4.9372616807619725,
+    3.361447461777263,
+    3.4102781034178205,
+    3.3407969996333122,
+    6.518216447697745
+   ],
+   "sensor_ccs_per_split": [
+    3.2129726078775196,
+    2.3802610768212213,
+    3.5351375142733255,
+    2.734911368952857,
+    3.5279330809911094,
+    3.425417853726281,
+    2.360842181576623,
+    2.7917214367124767,
+    2.626276307635837,
+    5.735520972145928
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    0.606483579422332,
+    0.40577072425121996,
+    0.6156748045107534,
+    0.43995475849329213,
+    0.5398837573675864,
+    0.6675734383605243,
+    0.4526058868913235,
+    0.4599418587962776,
+    0.44911310967834467,
+    0.8844569074233055
+   ],
+   "rho_embedding_ccs_f1": -0.8060606060606059,
+   "rho_sensor_ccs_f1": -0.8303030303030302,
+   "rho_embedding_ccs_per_dim_f1": -0.8060606060606059
+  },
+  "wisdm": {
+   "splits": 10,
+   "mean_macro_f1_per_split": [
+    79.69366014003754,
+    80.30141413211823,
+    78.93672525882721,
+    72.75653839111328,
+    87.0545345544815,
+    84.69701528549194,
+    83.40541958808899,
+    78.2828438282013,
+    65.73136240243912,
+    75.76682686805725
+   ],
+   "embedding_ccs_per_split": [
+    5.104484077294668,
+    3.6477316856384276,
+    4.119446182250977,
+    4.203619921207428,
+    3.9194437821706134,
+    5.101535417636236,
+    3.7020783563454946,
+    4.706752187013626,
+    7.721343370278676,
+    4.004205765326818
+   ],
+   "sensor_ccs_per_split": [
+    2.2394853631655374,
+    1.1128368278344472,
+    1.5734722415606182,
+    2.0048882762591043,
+    1.534748375415802,
+    2.245405544837316,
+    1.4997453292210896,
+    1.9237078825632732,
+    2.5753649969895682,
+    1.1644127170244853
+   ],
+   "embedding_ccs_per_dim_per_split": [
+    0.7331897274723375,
+    0.528803741384172,
+    0.6013281932389959,
+    0.6075576284672817,
+    0.5593533444815306,
+    0.7338564529777793,
+    0.533720018795315,
+    0.6782848057807864,
+    1.1189213396360205,
+    0.5772278715456409
+   ],
+   "rho_embedding_ccs_f1": -0.4424242424242424,
+   "rho_sensor_ccs_f1": -0.28484848484848485,
+   "rho_embedding_ccs_per_dim_f1": -0.406060606060606
+  }
+ },
+ "probes": [
+  {
+   "dataset": "actrectut_gestures",
+   "model": "recurrencenet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8777777777777778
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "hystnet_sel_clock",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8777777777777778
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "quantilenet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8810754275870555
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "hystnet_nomem",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8751322751322752
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "recstatnet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8777777777777778
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "lawnet_rec",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8751322751322752
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "lawnet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8751322751322752
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "statnet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8724867724867725
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "recurrencenet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8888888888888888
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "hystnet_sel_clock",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8888888888888888
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "quantilenet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8853046594982079
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "hystnet_nomem",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8853046594982079
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "recstatnet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8838383838383839
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "lawnet_rec",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8888888888888888
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "lawnet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8853046594982079
+  },
+  {
+   "dataset": "actrectut_gestures",
+   "model": "statnet",
+   "subject_probe": NaN,
+   "sensor_subject_probe": NaN,
+   "chance": 1.0,
+   "activity_probe": 0.8802541544477028
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.24660428608549625,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.942878162643995
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.3401657887208941,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9710501643848614
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.17114286246829116,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9971033246441747
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.2021812832928948,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9384901781978013
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.1946159291998048,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9754972906412611
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.2524235231328123,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8409514874328803
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.3642449780768633,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9731117104377978
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.3643904792944635,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8810050419570619
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.39408188632347013,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8770559391144231
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.3961253208760725,
+   "sensor_subject_probe": 0.2658756173587823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.884171963015893
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.23396322921192297,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9908467760271013
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.3576344176657489,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9056740911867758
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.20403282574960496,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9870479947403025
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.23963580522508957,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8689597860445722
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.20024334311437497,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9006623338355113
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.2509145560509252,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8229015472372475
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.39529444528621244,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9638365674565991
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.37033756530242895,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8440367908030492
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.3973300008798979,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8268625046501988
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.4211234429164901,
+   "sensor_subject_probe": 0.2576179110681632,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8469410515146597
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.23249449560989888,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9247957131361416
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.35585362824522776,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9402156905884788
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.17377445468359565,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9866985084398512
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.17704199580371327,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9809295380274666
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.1993379359592351,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9871683275504989
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.27639623360975824,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9140546740286751
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.38883811307449956,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9599911593149155
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.3544323928256269,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9196660201686698
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.4201056303358517,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.898217152455945
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.4240970757451681,
+   "sensor_subject_probe": 0.2569835307987228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9065276553238758
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.19238531522091368,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9854795174265963
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.33544138425544545,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.97218209622194
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.1457224278318808,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9879912142898702
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.18777428363402077,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9462914525682479
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.1713222674230648,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9602153630770803
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.2347746078465671,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8587209178778242
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.3761256477126687,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9749721031398607
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.3390300976392229,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9822382316719508
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.38261744799364134,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.954573387261962
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.40128520367675286,
+   "sensor_subject_probe": 0.24468496529632255,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9529029450410605
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.2557698890748806,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9125491290229789
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.34428449240741243,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9522640589350991
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.22357944643152455,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8895237313895296
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.21546362278490108,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.940552809077948
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.17857233973808656,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9359049693405982
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.22446446259060288,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9408885475903488
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.3928935411006483,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9422372144615722
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.3427351810652808,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9807368714007945
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.41243047821377143,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8960941817659255
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.4164758827033672,
+   "sensor_subject_probe": 0.24467723833536204,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9359806022645474
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.2406563478871125,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9923086366948642
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.33710691247499897,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9699092959047779
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.2243369073679206,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8920026781820795
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.20634933166294656,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9789345601204335
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.1923208475277452,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9237557865289072
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.2530839750901321,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9419605005280901
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.3808974722855327,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9964826303552837
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.3383080335403313,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9834781507190061
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.38442738975876006,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9568926822695912
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.4132565032056971,
+   "sensor_subject_probe": 0.25939323699674993,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.929999630924455
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.24467992183345247,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9920882619736888
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.3436313567739997,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.966999059986474
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.19988614663620569,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9759692592898753
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.20739087265093067,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9645233935692832
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.22427943038181716,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9542368373908952
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.24894764706333963,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9403943262562445
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.38327982245971265,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9779418960676401
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.33681680208692816,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9911480745815283
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.4229403975975049,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9148173455171461
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.4059641769595415,
+   "sensor_subject_probe": 0.2465178408808217,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.893314109545641
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.22306085365544462,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.903094203174219
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.35492161977292863,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9279017720277737
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.19303707866566905,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9421811934500358
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.21006658568889292,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9162207912241715
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.19374129254539943,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9815377025161937
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.25964457870626234,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8711367549934371
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.3710040322970374,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9684657950330992
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.356245704495996,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9877956725606848
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.41878956263539857,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8433423525387043
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.4218098197674927,
+   "sensor_subject_probe": 0.25944898665137694,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8609531116400869
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.2254340595421536,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9906010335248944
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.33445461596441556,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.94565999325894
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.20934882595928053,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9338289023321269
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.2301918778057529,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9065208573498368
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.1753205630885418,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9947628055759113
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.21175465154071163,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9255234054901721
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.3598047019245687,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.7803579107693763
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.34616089870340133,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9585050143366476
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.3916028701725504,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8734466474897274
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.42994846265015146,
+   "sensor_subject_probe": 0.240174609544726,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8841124787440112
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "subject_probe": 0.21386161938384768,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9779200881212528
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "subject_probe": 0.35059971681620067,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9810334598955861
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.17690856190167367,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9840819505372242
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "subject_probe": 0.20342327110455727,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9408175126939787
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "subject_probe": 0.23484145242462198,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9687180617665782
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.2586464712692755,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8737395765534854
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "subject_probe": 0.3819541249816281,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9733874899010905
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "subject_probe": 0.37239259831849364,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9903075503904787
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "subject_probe": 0.4075818726460596,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9060160170665378
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "subject_probe": 0.3913921295930924,
+   "sensor_subject_probe": 0.24930804727784986,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8720126272068547
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recurrencenet",
+   "subject_probe": 0.8192980195696333,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9997512437810945
+  },
+  {
+   "dataset": "opportunity",
+   "model": "s4d",
+   "subject_probe": 0.9770614276049058,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9997560975609756
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.88138024144087,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.999748743718593
+  },
+  {
+   "dataset": "opportunity",
+   "model": "quantilenet",
+   "subject_probe": 0.8425381234009172,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9987968790274518
+  },
+  {
+   "dataset": "opportunity",
+   "model": "mamba",
+   "subject_probe": 0.7734471331228683,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.996862322936432
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.8324879643148874,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9981704858186623
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recstatnet",
+   "subject_probe": 0.9595275150633009,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9997549019607843
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet_rec",
+   "subject_probe": 0.9029615123712142,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9997534516765286
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet",
+   "subject_probe": 0.9088592110117061,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.999271137026239
+  },
+  {
+   "dataset": "opportunity",
+   "model": "statnet",
+   "subject_probe": 0.9423977641379592,
+   "sensor_subject_probe": 0.9997584541062802,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9995114539816858
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recurrencenet",
+   "subject_probe": 0.8573237391716706,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9937906481365859
+  },
+  {
+   "dataset": "opportunity",
+   "model": "s4d",
+   "subject_probe": 0.9788564036920434,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9995458337047745
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.8170383307122703,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9892532315229855
+  },
+  {
+   "dataset": "opportunity",
+   "model": "quantilenet",
+   "subject_probe": 0.9002349544552258,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9875536018046489
+  },
+  {
+   "dataset": "opportunity",
+   "model": "mamba",
+   "subject_probe": 0.771941920578347,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9998808956646021
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.8273729843081514,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9942131698967563
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recstatnet",
+   "subject_probe": 0.9639514958636805,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9992855915547902
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet_rec",
+   "subject_probe": 0.9315396252550195,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9995504742000867
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet",
+   "subject_probe": 0.9487054221997356,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9966101059289596
+  },
+  {
+   "dataset": "opportunity",
+   "model": "statnet",
+   "subject_probe": 0.9834522301628219,
+   "sensor_subject_probe": 1.0,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9917176713060801
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recurrencenet",
+   "subject_probe": 0.9175075328921483,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9931024124651371
+  },
+  {
+   "dataset": "opportunity",
+   "model": "s4d",
+   "subject_probe": 0.9534468174841678,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9933954716860112
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.817131519955166,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "opportunity",
+   "model": "quantilenet",
+   "subject_probe": 0.8250259980542888,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9922907372345003
+  },
+  {
+   "dataset": "opportunity",
+   "model": "mamba",
+   "subject_probe": 0.724346678487945,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9980154537726267
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.8355149416275679,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9829379256981932
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recstatnet",
+   "subject_probe": 0.9740635430100307,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9862570104574734
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet_rec",
+   "subject_probe": 0.916930541165739,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.999395226361631
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet",
+   "subject_probe": 0.9566321510742091,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9835438380978316
+  },
+  {
+   "dataset": "opportunity",
+   "model": "statnet",
+   "subject_probe": 0.9590986843209427,
+   "sensor_subject_probe": 0.9986149584487535,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9878558723171086
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recurrencenet",
+   "subject_probe": 0.820458584089172,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.998914208769766
+  },
+  {
+   "dataset": "opportunity",
+   "model": "s4d",
+   "subject_probe": 0.9608096390241916,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9986693185266367
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.8413922586204738,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.998882600624499
+  },
+  {
+   "dataset": "opportunity",
+   "model": "quantilenet",
+   "subject_probe": 0.7475921237687161,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9967912235573291
+  },
+  {
+   "dataset": "opportunity",
+   "model": "mamba",
+   "subject_probe": 0.7113216825827982,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9960304153498174
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.7911662846264481,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9975054748263023
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recstatnet",
+   "subject_probe": 0.9490196571307862,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9991052960231043
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet_rec",
+   "subject_probe": 0.8802991013830747,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.9998737373737374
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet",
+   "subject_probe": 0.9268581866179496,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.996066695381465
+  },
+  {
+   "dataset": "opportunity",
+   "model": "statnet",
+   "subject_probe": 0.9441555495979131,
+   "sensor_subject_probe": 0.9971264367816092,
+   "chance": 0.3333333333333333,
+   "activity_probe": 0.995265477308521
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.13287913308913324,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.17438668389803275,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.05616368565002789,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.0681848966025253,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.025880905589252438,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.05125791425511843,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.16550929464783604,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.2831837164797222,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.21041737024954263,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.17862407742955277,
+   "sensor_subject_probe": 0.5535951054177105,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.10257591374913702,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.20839372007344,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9990083907872446
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.0812978430690552,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997498123592694
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.08026114047485261,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.009955034898047953,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.0597327991425025,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.1575275939220423,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.2698125038346031,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997471554993679
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.2523369283374492,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997502497502497
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.2157211016397638,
+   "sensor_subject_probe": 0.5943167387313576,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9992768024083067
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.1322457281682348,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997462572951028
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.2328468581522789,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9985179786200195
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.0989554660414364,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.0744782507603557,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.026879293312885428,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.07057873710563758,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.21814840791239426,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9995090819833088
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.2901098261965777,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.28890050873959017,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.18385413734567915,
+   "sensor_subject_probe": 0.4753557119977678,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997566317838891
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.10221256282134722,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.11355527674131194,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.04859413478641281,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.06597276509926153,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.021120502574004822,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.047321935676408966,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.17415306943846726,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.27438643026216575,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.2894080615123897,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9995069351838481
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.19116773460985367,
+   "sensor_subject_probe": 0.5439001879384141,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9992614118708689
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.08967623911302554,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.16463041705439088,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.07740222587063282,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.04054958085870787,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.03200672947567243,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9994963662939039
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.06432242794949702,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.21493240583374265,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997536945812807
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.272762305616663,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.2640512551927195,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.24825632316785512,
+   "sensor_subject_probe": 0.537766710642517,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997594997594997
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.17035785261021966,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9987138307770739
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.20427772865434102,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.999748490945674
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.06038487161775008,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.054931136662083054,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.03908730233482502,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9992565531888905
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.05883948380397814,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.21762380287836772,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997402597402597
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.29819534600924247,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.25858810005680394,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9994795715233672
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.23858246979256986,
+   "sensor_subject_probe": 0.4904406656424315,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.049975436164244144,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.21143433854894927,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.029571784600445454,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.03860052553532066,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.013882305886450308,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.050426016819133695,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.19335617666313237,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.2582658083235289,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.26134128129987344,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.22592429850625606,
+   "sensor_subject_probe": 0.5857163410084053,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.1113220377082048,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.2881538104235586,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9980287017237289
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.08493327508662031,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.07201213495959917,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997658079625292
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.03149206104160404,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9995165578921925
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.0377150467311746,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.2069810336917896,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.2458768988362312,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.2576083923259074,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.17161170479264326,
+   "sensor_subject_probe": 0.5284256549589429,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.13095319863273414,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.17281818319112002,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.03899008199649749,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.057060375754102624,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.999488415379232
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.030775741489944816,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.034137222643912876,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.1985959036317576,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.24846001169772958,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.31373190115756705,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.1905676031304857,
+   "sensor_subject_probe": 0.47665724466591086,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.999490133793259
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "subject_probe": 0.10211184419119948,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9997524139638525
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "subject_probe": 0.20384839420517623,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.999498241422087
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.1359021055185475,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9992305521717286
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "subject_probe": 0.08795764813124185,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "subject_probe": 0.03416390728032597,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.08875178241867195,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9962184131121286
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "subject_probe": 0.17720865034462882,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.3001420207181285,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.99949609473419
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "subject_probe": 0.29658311584276714,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 0.9994987329816549
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "subject_probe": 0.2522363369596563,
+   "sensor_subject_probe": 0.5401441242068746,
+   "chance": 0.1111111111111111,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.2631589051063482,
+   "sensor_subject_probe": 0.44832414615174115,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8966206963351023
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.4271996527840861,
+   "sensor_subject_probe": 0.44832414615174115,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8875297699609291
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.3715063415860425,
+   "sensor_subject_probe": 0.44832414615174115,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.7829925232748427
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.3537762764726453,
+   "sensor_subject_probe": 0.44832414615174115,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8016183688172043
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.28902673436531967,
+   "sensor_subject_probe": 0.4750175025343947,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8540365318418442
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.38516918938595057,
+   "sensor_subject_probe": 0.4750175025343947,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8639765335600159
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.42516019493067697,
+   "sensor_subject_probe": 0.4750175025343947,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8912349808656136
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.34410583513691745,
+   "sensor_subject_probe": 0.4750175025343947,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.906235684605564
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.24764588338426513,
+   "sensor_subject_probe": 0.42908232233716925,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8873391954717819
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.3496900007825472,
+   "sensor_subject_probe": 0.42908232233716925,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.892232249100107
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.3592460373106871,
+   "sensor_subject_probe": 0.42908232233716925,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8068291512986324
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.3187143585325827,
+   "sensor_subject_probe": 0.42908232233716925,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8813957465203305
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.3202662202208209,
+   "sensor_subject_probe": 0.48456334279576985,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8955113399195075
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.42269313342562387,
+   "sensor_subject_probe": 0.48456334279576985,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8664643386065204
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.3912583980192539,
+   "sensor_subject_probe": 0.48456334279576985,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.7697631569849914
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.32592991126373017,
+   "sensor_subject_probe": 0.48456334279576985,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8505028951941144
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.26663302368069597,
+   "sensor_subject_probe": 0.468947167376667,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.9205827613238187
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.395882310171704,
+   "sensor_subject_probe": 0.468947167376667,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.843335483502058
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.40957209047274556,
+   "sensor_subject_probe": 0.468947167376667,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.7830036376059725
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.33864275248647047,
+   "sensor_subject_probe": 0.468947167376667,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.9273376217418074
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.31819331759705394,
+   "sensor_subject_probe": 0.4356092247905654,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8644903484124792
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.4460996942259084,
+   "sensor_subject_probe": 0.4356092247905654,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8098420682344099
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.4227257795836307,
+   "sensor_subject_probe": 0.4356092247905654,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8517704371645878
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.37820222483116905,
+   "sensor_subject_probe": 0.4356092247905654,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.7956451759540871
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.2894382854009609,
+   "sensor_subject_probe": 0.5028835902253701,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.9073095241294599
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.3577277188491112,
+   "sensor_subject_probe": 0.5028835902253701,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.9644600850089139
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.4045187432947922,
+   "sensor_subject_probe": 0.5028835902253701,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.7997455739688814
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.37926816645071915,
+   "sensor_subject_probe": 0.5028835902253701,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.9140481630887173
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.2759800758612144,
+   "sensor_subject_probe": 0.4692446682327588,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8437874770802232
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.39168012327505575,
+   "sensor_subject_probe": 0.4692446682327588,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8049539441699577
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.3784696830176748,
+   "sensor_subject_probe": 0.4692446682327588,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.7711283365114245
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.3391452732866988,
+   "sensor_subject_probe": 0.4692446682327588,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8284832363048974
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.2657211498077892,
+   "sensor_subject_probe": 0.4476087786927239,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.7717197750166798
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.3748640009768838,
+   "sensor_subject_probe": 0.4476087786927239,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8964262781072181
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.37375164683155027,
+   "sensor_subject_probe": 0.4476087786927239,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.7893329697389503
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.33906393396277584,
+   "sensor_subject_probe": 0.4476087786927239,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8423786042338807
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "subject_probe": 0.28182969434268423,
+   "sensor_subject_probe": 0.468169204921945,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8101030247487587
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "subject_probe": 0.3722287959190503,
+   "sensor_subject_probe": 0.468169204921945,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.8522093454433008
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "subject_probe": 0.38598880456440016,
+   "sensor_subject_probe": 0.468169204921945,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.7830081494772568
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.34267483097570545,
+   "sensor_subject_probe": 0.468169204921945,
+   "chance": 0.05555555555555555,
+   "activity_probe": 0.82303694548462
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.08376756539237729,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9997780736795384
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.18087784331185308,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9993165162696651
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.07113537378869023,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.07368439666076895,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9911560449554994
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.04946690343388025,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9965693085256332
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.11609355586576768,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9770344821757179
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.17588199720117725,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.998856881572931
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.16910754184137908,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9947727401369786
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.2208037305898347,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9984187062450206
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.23156327317692757,
+   "sensor_subject_probe": 0.17300600253451096,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9571634959611863
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.10288560739850874,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.998599333145927
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.15674495116063442,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.09484461792217805,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9977265461033502
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.08442674802499653,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9951568165360395
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.05594153151490323,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9955892679126528
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.0894271522581038,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9991111739923285
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.21394568062265495,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9997747747747748
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.18173559749908177,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9995584988962473
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.21678127585102286,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9971651727050275
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.24551910350171813,
+   "sensor_subject_probe": 0.1724663789069046,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9598066693386498
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.09796337979512838,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9960936279563845
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.1514478775375634,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.08058089285103905,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.060421915571602,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.999561403508772
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.06504825787596785,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.1059532407952813,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9929251877006373
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.2124958129360998,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9997835497835498
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.1862259719018509,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9997801231310466
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.21760603195094658,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.22079260541085233,
+   "sensor_subject_probe": 0.17828820170991275,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.991151142891498
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.09640716006270354,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9990990990990992
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.1406807148765112,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9986314559842032
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.09254949265844112,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9968637476371974
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.0756491322852017,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9944131446948424
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.04900632986151431,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.10533145009025985,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9990115412915092
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.1937105914742617,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.15030580464842466,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.21201053220656954,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9995590828924161
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.2394466888312803,
+   "sensor_subject_probe": 0.1744984547419183,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9974199911085265
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.10108105266440778,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9997841105354058
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.17145880322632137,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9988077606258176
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.08058366464487378,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9997865983781477
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.1009567422813138,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9899104782459798
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.06649930344784251,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9938898664059955
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.12273717815379134,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9803073126731779
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.20419697518478516,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.18189310063368894,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.22385736788470684,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9986332103462855
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.2320478139540383,
+   "sensor_subject_probe": 0.16354942403223693,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9886642200547606
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.10900394539915614,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9969624705675905
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.1840775883354114,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.07359183470648896,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9955373898700169
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.06556573870462808,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9970567916248019
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.06419562208938802,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.13882958417441724,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9941379546076018
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.210706749339637,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9995285242809996
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.17928226028732672,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.23566724692933208,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9972246127986081
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.2199599549289298,
+   "sensor_subject_probe": 0.16084455640191433,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9919365079365079
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.09979951070987424,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9997868712702472
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.15748948030260182,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.09263495844184122,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9991193306913254
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.08296221539039834,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9954111002498099
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.0664953294960572,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9965361074936346
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.12835287084488992,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9903498463063866
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.1922928722253138,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9979736690603884
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.204954059889423,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9950343196443846
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.2140590534852544,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9970383580501846
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.2605460463840278,
+   "sensor_subject_probe": 0.18523636523290407,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9919586470574395
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.09896530623217392,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9923174206881896
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.18397636315765656,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9970409089634034
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.06533451598635524,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9990685675332612
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.07007950972393866,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9969745880770523
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.04948528854468447,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9995596653456627
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.11180921432574015,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9967796741109988
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.2117826656747574,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.17229249931388071,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9967552395037611
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.21370842229342865,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9997871434653044
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.22214496551223023,
+   "sensor_subject_probe": 0.1471863968123759,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9971132035392928
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.1265628014933928,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9995464852607711
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.16279546798145536,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.998858636116058
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.07769264407156823,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9957785380876375
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.054543684839938315,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9990662758373929
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.06445137596634033,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9962254516759007
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.12437405068842329,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9905718427240885
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.2094368989024886,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9955002946100073
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.21689711911038106,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9931888879766572
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.20252534753400886,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9988530021965228
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.26898968037166826,
+   "sensor_subject_probe": 0.1494294730468228,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9958065143138671
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "subject_probe": 0.12338524505381357,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9965865258585178
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "subject_probe": 0.17922579568740182,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.06535622638796837,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "subject_probe": 0.07750739339376435,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9988579670870581
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "subject_probe": 0.06320965879904891,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9993015787029872
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.1350093817460093,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9970542246844762
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "subject_probe": 0.22883854271687265,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9973085043309763
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "subject_probe": 0.1724171363185087,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "subject_probe": 0.21229338438742948,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9928914532586761
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "subject_probe": 0.2537010564829693,
+   "sensor_subject_probe": 0.181317832121829,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.999464092945258
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.16439838219309078,
+   "sensor_subject_probe": 0.13421065476967295,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8833530016032087
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.2034382444649937,
+   "sensor_subject_probe": 0.13421065476967295,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8762589970179036
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.1196973719884827,
+   "sensor_subject_probe": 0.13421065476967295,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9792592472600825
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.13581962096917619,
+   "sensor_subject_probe": 0.13421065476967295,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9048444128884592
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.2022756876250805,
+   "sensor_subject_probe": 0.13421065476967295,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.610061933313849
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.18159267184961714,
+   "sensor_subject_probe": 0.13421065476967295,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9313782518871898
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.18007921977730948,
+   "sensor_subject_probe": 0.13421065476967295,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9022934860013682
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.26842370753893624,
+   "sensor_subject_probe": 0.13421065476967295,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6791569148235527
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.2941379608851103,
+   "sensor_subject_probe": 0.13421065476967295,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6017900406715474
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.1391919547372176,
+   "sensor_subject_probe": 0.1306386680623837,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9099154920270138
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.2128948762480063,
+   "sensor_subject_probe": 0.1306386680623837,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9134549553486774
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.1015619919370274,
+   "sensor_subject_probe": 0.1306386680623837,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9986016904892485
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.16482789393250633,
+   "sensor_subject_probe": 0.1306386680623837,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8660917583544168
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.22922060608467176,
+   "sensor_subject_probe": 0.1306386680623837,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.5845084180608211
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.18764250825422318,
+   "sensor_subject_probe": 0.1306386680623837,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9409427046878652
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.2055560942713923,
+   "sensor_subject_probe": 0.1306386680623837,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8855165131093112
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.30554083049742853,
+   "sensor_subject_probe": 0.1306386680623837,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6871173190772327
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.28043656509124243,
+   "sensor_subject_probe": 0.1306386680623837,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6350080387582363
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.13938869235961568,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8999091635509499
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.1854793054523322,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9014183205200218
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.10419431821522142,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.963528518826576
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.14505840373063605,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8611906106238653
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "mamba",
+   "subject_probe": 0.0776231019281713,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9425976935616188
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.21945975708090748,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6184292580977246
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.1735337289668383,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.7694234057757795
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.20950036895618493,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.775620381313093
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.25652371274342095,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6810855331005289
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.2414633344364591,
+   "sensor_subject_probe": 0.14717361811511034,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.5934231816893473
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.13521407420046805,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.933986767776419
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.1824659937629965,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.899446392171676
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.14181799644206897,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.874453318440037
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.11921819671136459,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9000480549913575
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "mamba",
+   "subject_probe": 0.08422807848695471,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9733474948340034
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.21944139461441736,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.609096301303786
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.15748672708717606,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9061294145210621
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.19256358529350376,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9643807670616664
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.30072854978097546,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.654947468411289
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.27489222278914294,
+   "sensor_subject_probe": 0.1352205992437289,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6163463589969885
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.142162491233918,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8819531881003789
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.18850165855255074,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9436738687544758
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.15114662372190146,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8997431922598788
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.1346672288717189,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8792321441454245
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "mamba",
+   "subject_probe": 0.10461434905361697,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9446160801375294
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.22085898848120067,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.5566561587946103
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.20324265690211357,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8810389331461133
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.19288502831698387,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9353554595590973
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.3125917276563562,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6455248498541789
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.26903696858281295,
+   "sensor_subject_probe": 0.1364767910641526,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.598487224082807
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.1627779359490217,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.856486581691105
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.20882888091277568,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9027348306886882
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.13218146200642492,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9778090021754718
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.16032763598592772,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8045959414641102
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "mamba",
+   "subject_probe": 0.09122057974806888,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.982089908122107
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.23198906668239583,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6007078487134141
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.19816848175743448,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9103834284970928
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.23021027607489053,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8695426664198197
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.30276678842392496,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6843916266476657
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.3010563150528625,
+   "sensor_subject_probe": 0.12499182694664912,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.5683710477941196
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.1451190077082966,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8640161937251262
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.21884960068936457,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8946495613657652
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.12836338904149974,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9796613594420402
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.14127503669445035,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8892398263818697
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "mamba",
+   "subject_probe": 0.11984779837796437,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.871427393733534
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.219804549877456,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6206169942017064
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.1976922766164798,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.84927361031349
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.21430524997856237,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9404523694304195
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.28713661837565185,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6615381213430084
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.2857644850821269,
+   "sensor_subject_probe": 0.14302971721784374,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.5901686681287311
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.1358266481879465,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9667846049132988
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.19190044822958457,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8830417062973749
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.11055515137925485,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9587278331357083
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.14377649699373696,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8914913565042332
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "mamba",
+   "subject_probe": 0.11479705082143814,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9429529091278603
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.23327625650240033,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.615661071497986
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.1857021845414216,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.7972945957919949
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.1988527649121045,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9624984114890867
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.2971971618754651,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6646130058108906
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.2742031181065987,
+   "sensor_subject_probe": 0.12892978234633418,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6140431953903264
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.14180698180255036,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.907216494564462
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.19967110075189728,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.920159809624924
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.14008345881301582,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9517346769033407
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.14762310727658357,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.85316836928001
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "mamba",
+   "subject_probe": 0.10459070463263646,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9739141413043866
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.23305289006707072,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6155315161953194
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.1798525296353969,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9645013915545806
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.19276766254649308,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8288105703673185
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.28253121241507584,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.638031198741389
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.2661937778504405,
+   "sensor_subject_probe": 0.1261312315645364,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.5939649426281103
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "subject_probe": 0.14141031766800177,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.951613478493585
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "subject_probe": 0.19014401023218094,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9366199184135132
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.1317975736864462,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9061872381145403
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "subject_probe": 0.15939220274123395,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8491140061637054
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "mamba",
+   "subject_probe": 0.0868658404272348,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9886380076804372
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.21168357259986934,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.5832693834354666
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "subject_probe": 0.20401558191130284,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.9090614689138604
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "subject_probe": 0.19286699072595412,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.8690120130609683
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "subject_probe": 0.29469389921358435,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.667684932304347
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "subject_probe": 0.25937556145445845,
+   "sensor_subject_probe": 0.14275567313475823,
+   "chance": 0.037037037037037035,
+   "activity_probe": 0.6161561057485235
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.6764954069984694,
+   "sensor_subject_probe": 0.9465826630939552,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.873498805748572,
+   "sensor_subject_probe": 0.9465826630939552,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.8150545955991501,
+   "sensor_subject_probe": 0.9465826630939552,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.7820545731771081,
+   "sensor_subject_probe": 0.9465826630939552,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.7138621736766579,
+   "sensor_subject_probe": 0.9488519701013481,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9997345719973457
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.8593064157913333,
+   "sensor_subject_probe": 0.9488519701013481,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9932396633469849
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.7979600183814343,
+   "sensor_subject_probe": 0.9488519701013481,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9990723562152134
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.8191640179385644,
+   "sensor_subject_probe": 0.9488519701013481,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9998814744577458
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.7383184575700782,
+   "sensor_subject_probe": 0.9251769658473434,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.8430332276079244,
+   "sensor_subject_probe": 0.9251769658473434,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.8042494368494868,
+   "sensor_subject_probe": 0.9251769658473434,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9988519076946147
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.7785498039232219,
+   "sensor_subject_probe": 0.9251769658473434,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.6875344607456381,
+   "sensor_subject_probe": 0.945051108386057,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.7999640280362766,
+   "sensor_subject_probe": 0.945051108386057,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.8091978286534702,
+   "sensor_subject_probe": 0.945051108386057,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.7654416910482599,
+   "sensor_subject_probe": 0.945051108386057,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9998747808665165
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.6388241953868915,
+   "sensor_subject_probe": 0.9429155413753527,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.853505081597708,
+   "sensor_subject_probe": 0.9429155413753527,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9990224828934505
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.8271793885467348,
+   "sensor_subject_probe": 0.9429155413753527,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9973941153186435
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.7968058177748031,
+   "sensor_subject_probe": 0.9429155413753527,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9992841803865425
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.7211290698255576,
+   "sensor_subject_probe": 0.9335938306753387,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9980808686560899
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.8917607960377044,
+   "sensor_subject_probe": 0.9335938306753387,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9971348096348095
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.8505910452889457,
+   "sensor_subject_probe": 0.9335938306753387,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.999117387466902
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.7719208824465246,
+   "sensor_subject_probe": 0.9335938306753387,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.6687970827134323,
+   "sensor_subject_probe": 0.9285325433650793,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9997552703283623
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.8757965056404963,
+   "sensor_subject_probe": 0.9285325433650793,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.7987219225261758,
+   "sensor_subject_probe": 0.9285325433650793,
+   "chance": 0.06666666666666667,
+   "activity_probe": 0.9981356528600497
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.7873508178617675,
+   "sensor_subject_probe": 0.9285325433650793,
+   "chance": 0.06666666666666667,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.7083384186642483,
+   "sensor_subject_probe": 0.9428972511393601,
+   "chance": 0.0625,
+   "activity_probe": 0.9998766498088073
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.8703641447421884,
+   "sensor_subject_probe": 0.9428972511393601,
+   "chance": 0.0625,
+   "activity_probe": 0.9972727272727273
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.8331972016099389,
+   "sensor_subject_probe": 0.9428972511393601,
+   "chance": 0.0625,
+   "activity_probe": 0.999750757550133
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.7994590021769696,
+   "sensor_subject_probe": 0.9428972511393601,
+   "chance": 0.0625,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.7056832770843626,
+   "sensor_subject_probe": 0.9374889927032226,
+   "chance": 0.0625,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.871884293819039,
+   "sensor_subject_probe": 0.9374889927032226,
+   "chance": 0.0625,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.8137507399096031,
+   "sensor_subject_probe": 0.9374889927032226,
+   "chance": 0.0625,
+   "activity_probe": 0.9998791102514507
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.7678862798343202,
+   "sensor_subject_probe": 0.9374889927032226,
+   "chance": 0.0625,
+   "activity_probe": 0.9988164267772013
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "subject_probe": 0.7122526261611801,
+   "sensor_subject_probe": 0.9395381912740606,
+   "chance": 0.0625,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "subject_probe": 0.8994448606377697,
+   "sensor_subject_probe": 0.9395381912740606,
+   "chance": 0.0625,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "subject_probe": 0.8257215210490298,
+   "sensor_subject_probe": 0.9395381912740606,
+   "chance": 0.0625,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "subject_probe": 0.7903853930352716,
+   "sensor_subject_probe": 0.9395381912740606,
+   "chance": 0.0625,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recurrencenet",
+   "subject_probe": 0.3563208463208463,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9984567901234569
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "s4d",
+   "subject_probe": 0.6027875227875229,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9931267847934514
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.3837800687800688,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "quantilenet",
+   "subject_probe": 0.40910753410753414,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "mamba",
+   "subject_probe": 0.34684211184211183,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.44660166160166165,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9531046558068531
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recstatnet",
+   "subject_probe": 0.5892893042893043,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9914902998236331
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.49431253431253425,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9922127255460588
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet",
+   "subject_probe": 0.6745836545836547,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9903889320555987
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "statnet",
+   "subject_probe": 0.7618125018125017,
+   "sensor_subject_probe": 0.48723572223572226,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9688449435761264
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recurrencenet",
+   "subject_probe": 0.4194035370620041,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9968200523756079
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "s4d",
+   "subject_probe": 0.5138509844318165,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9973961840628507
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.34461113442007507,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "quantilenet",
+   "subject_probe": 0.36379948680948077,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "mamba",
+   "subject_probe": 0.3525455252313154,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.45526703096821164,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9942822561123216
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recstatnet",
+   "subject_probe": 0.5811960406218389,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9950563839452728
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.5326226472488946,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9983164983164983
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet",
+   "subject_probe": 0.6191733988090398,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.957357732658481
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "statnet",
+   "subject_probe": 0.6965203732490624,
+   "sensor_subject_probe": 0.4775216329199254,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9859612853352102
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recurrencenet",
+   "subject_probe": 0.429954895717001,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9986282578875171
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "s4d",
+   "subject_probe": 0.6195584764942806,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9986282578875171
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.31740609385726054,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "quantilenet",
+   "subject_probe": 0.37440397664955694,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "mamba",
+   "subject_probe": 0.42703671415935823,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9944615912208504
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.43504152671498214,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9901684091498906
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recstatnet",
+   "subject_probe": 0.6009622433801,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9957792550385143
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.5673389121586838,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9829878044474994
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet",
+   "subject_probe": 0.7278788725375475,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9936899862825789
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "statnet",
+   "subject_probe": 0.7592890444037126,
+   "sensor_subject_probe": 0.4693856310435832,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9733167210338346
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recurrencenet",
+   "subject_probe": 0.3760507379722115,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9975308641975309
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "s4d",
+   "subject_probe": 0.5428657511857943,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.970138842179905
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.2718206305713609,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "quantilenet",
+   "subject_probe": 0.3381146067012732,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "mamba",
+   "subject_probe": 0.37828359535831624,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9887517146776406
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.4290528317451212,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9824014018280857
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recstatnet",
+   "subject_probe": 0.5467734550105976,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9975308641975309
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.5115689609345755,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9965378421900161
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet",
+   "subject_probe": 0.6566877174276627,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9866784457565456
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "statnet",
+   "subject_probe": 0.6795101401032333,
+   "sensor_subject_probe": 0.40466583817299917,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9695194833906116
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recurrencenet",
+   "subject_probe": 0.3985702405973589,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9983164983164983
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "s4d",
+   "subject_probe": 0.5848725932858315,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9919932282677381
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.341260774510331,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "quantilenet",
+   "subject_probe": 0.4108569812707264,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "mamba",
+   "subject_probe": 0.3627975710471275,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9916796872134562
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.5100596077722883,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9800560416502445
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recstatnet",
+   "subject_probe": 0.5528161903615988,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9749280794037828
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.557332221367661,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9950226906748646
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet",
+   "subject_probe": 0.6369149745807683,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9738818959800299
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "statnet",
+   "subject_probe": 0.686700420002777,
+   "sensor_subject_probe": 0.44991478769885457,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9668894004186938
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recurrencenet",
+   "subject_probe": 0.4519012419228208,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.995224171539961
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "s4d",
+   "subject_probe": 0.6265583042565612,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9870045484080571
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.37179429782581136,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9871669915529564
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "quantilenet",
+   "subject_probe": 0.3415426776088829,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "mamba",
+   "subject_probe": 0.38454520527328373,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9914717348927875
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.4898246392317098,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9461197870067266
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recstatnet",
+   "subject_probe": 0.6317847216772645,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.975762530733291
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.5302969934621412,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9747781961613642
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet",
+   "subject_probe": 0.7094069190923872,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9610845511430307
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "statnet",
+   "subject_probe": 0.744024414512299,
+   "sensor_subject_probe": 0.47526932002261685,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9338933609888775
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recurrencenet",
+   "subject_probe": 0.4533930744426108,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9916466249799583
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "s4d",
+   "subject_probe": 0.554814819591632,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.32628762206345224,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "quantilenet",
+   "subject_probe": 0.41306238774122483,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "mamba",
+   "subject_probe": 0.3298077767197647,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9952380952380954
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.4347351298704202,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9940781440781442
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recstatnet",
+   "subject_probe": 0.5925196069786371,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9912938912938913
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.5072592243054183,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9981481481481481
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet",
+   "subject_probe": 0.6933100730889904,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9910854577521243
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "statnet",
+   "subject_probe": 0.7437225865661704,
+   "sensor_subject_probe": 0.46948127305648324,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9802248677248678
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recurrencenet",
+   "subject_probe": 0.4513176254656353,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "s4d",
+   "subject_probe": 0.6515166153886974,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9897716567250617
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.33939075778271377,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9979423868312757
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "quantilenet",
+   "subject_probe": 0.4306667051544753,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "mamba",
+   "subject_probe": 0.41375675359764413,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9854663291043219
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.5275130491931354,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9919298808187696
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recstatnet",
+   "subject_probe": 0.6144411843863004,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9947089947089948
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet_rec",
+   "subject_probe": 0.5857680299679613,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9973544973544974
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet",
+   "subject_probe": 0.6934078498987591,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9791074666074666
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "statnet",
+   "subject_probe": 0.7318440713658869,
+   "sensor_subject_probe": 0.47402574343223325,
+   "chance": 0.14285714285714285,
+   "activity_probe": 0.9757795138619512
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.05345675337699835,
+   "sensor_subject_probe": 0.10328547570989148,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9873066318127902
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.06418267708078408,
+   "sensor_subject_probe": 0.10328547570989148,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9926172864549682
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.09621870971305749,
+   "sensor_subject_probe": 0.10328547570989148,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9797318346864563
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.0631089783973893,
+   "sensor_subject_probe": 0.10328547570989148,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9930234590866337
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.06034936209297654,
+   "sensor_subject_probe": 0.10166528924588561,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9841605562685677
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.054864477981580465,
+   "sensor_subject_probe": 0.10166528924588561,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.994370310281243
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.06820924344936252,
+   "sensor_subject_probe": 0.10166528924588561,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9901603473683274
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.06102771412543475,
+   "sensor_subject_probe": 0.10166528924588561,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9836456747810871
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.0527912947003549,
+   "sensor_subject_probe": 0.0834547652993285,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9854053263054041
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.05365660949462244,
+   "sensor_subject_probe": 0.0834547652993285,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9989482487217115
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.06464957826485997,
+   "sensor_subject_probe": 0.0834547652993285,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.983424830791833
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.053054949972847876,
+   "sensor_subject_probe": 0.0834547652993285,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9858898460797008
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.0433318853844653,
+   "sensor_subject_probe": 0.10724552537460152,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9879497910192229
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.04903277148257232,
+   "sensor_subject_probe": 0.10724552537460152,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9983807496194341
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.08806083858008569,
+   "sensor_subject_probe": 0.10724552537460152,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9586694862450919
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.04676536245630065,
+   "sensor_subject_probe": 0.10724552537460152,
+   "chance": 0.047619047619047616,
+   "activity_probe": 0.9928363225611047
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.038727904747155664,
+   "sensor_subject_probe": 0.09620728294145596,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9920889408216325
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.03563869829649195,
+   "sensor_subject_probe": 0.09620728294145596,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9971571009916445
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.06731728989383473,
+   "sensor_subject_probe": 0.09620728294145596,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9851792310200876
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.05890887060440702,
+   "sensor_subject_probe": 0.09620728294145596,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9875028728148136
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.04293023654829471,
+   "sensor_subject_probe": 0.10360606103972098,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9977517984175412
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.05068232582405899,
+   "sensor_subject_probe": 0.10360606103972098,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9932781852762217
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.06467989070532575,
+   "sensor_subject_probe": 0.10360606103972098,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9832537057177162
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.05552544462712867,
+   "sensor_subject_probe": 0.10360606103972098,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9901377977367702
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.05021352583440309,
+   "sensor_subject_probe": 0.09726617260815536,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9898993437382768
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.05882819758519238,
+   "sensor_subject_probe": 0.09726617260815536,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9891355268092554
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.07421836427306198,
+   "sensor_subject_probe": 0.09726617260815536,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9760093610951434
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.07996544985842524,
+   "sensor_subject_probe": 0.09726617260815536,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9784006659632138
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.031101103564764906,
+   "sensor_subject_probe": 0.10267441283458491,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9973152659503316
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.05248782498557778,
+   "sensor_subject_probe": 0.10267441283458491,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9968894462698468
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.07541338115531131,
+   "sensor_subject_probe": 0.10267441283458491,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9693286362888269
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.06447850237343075,
+   "sensor_subject_probe": 0.10267441283458491,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.992582501762769
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.04067958447907771,
+   "sensor_subject_probe": 0.11006844202100563,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9774292634543653
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.04384573953584924,
+   "sensor_subject_probe": 0.11006844202100563,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.996716089258059
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.09150733519259324,
+   "sensor_subject_probe": 0.11006844202100563,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9830300485083927
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.06075531561275846,
+   "sensor_subject_probe": 0.11006844202100563,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9940140518128389
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "subject_probe": 0.03333593156923604,
+   "sensor_subject_probe": 0.07570646856383781,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9876433452310286
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "subject_probe": 0.034957065078277255,
+   "sensor_subject_probe": 0.07570646856383781,
+   "chance": 0.045454545454545456,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "subject_probe": 0.054262475714592966,
+   "sensor_subject_probe": 0.07570646856383781,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.989763791470614
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "subject_probe": 0.03562860945281102,
+   "sensor_subject_probe": 0.07570646856383781,
+   "chance": 0.045454545454545456,
+   "activity_probe": 0.9881711897110077
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.036498218650981656,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.9905494377719455
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.0409184778039168,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.9963116598720713
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.02095356485475894,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.9975157004611411
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.009688503180086459,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.9973542051859173
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.007966841639028223,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.9985690767919704
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.03718604078992328,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.9063115574982561
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.030289779626459217,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.9974639436251875
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.0446032313312062,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.9926741892949836
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.05586355690839476,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.9135617890523472
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.07185212473675406,
+   "sensor_subject_probe": 0.07925893449709202,
+   "chance": 0.03125,
+   "activity_probe": 0.8955770859497099
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.03695440103037387,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.9925102840147783
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.03050213322313614,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.9967812226146111
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.024438698627917806,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.9985875706214689
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.030806706262185225,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.9887441278659223
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.0075929898175473515,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.9998962870773699
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.045954597028391005,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.8784569270382258
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.019128183875462917,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.9887438411795771
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.034111069444626656,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.9966808000293669
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.042831387538345055,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.9297331055253784
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.0581953834634153,
+   "sensor_subject_probe": 0.08319436689112183,
+   "chance": 0.03125,
+   "activity_probe": 0.9003026301442262
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.030976122944602145,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 0.9985566491985113
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.020057049202189963,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.014966789369689159,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 0.997636961533018
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.02570250552972108,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 0.9946579791849741
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.006532884274951133,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 1.0
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.032530026170347455,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 0.8897921863357929
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.06182833267075846,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 0.9861430437332586
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.03738316123847814,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 0.999108734402852
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.06619296666605455,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 0.9328678867520525
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.05920358520882183,
+   "sensor_subject_probe": 0.0770624396935707,
+   "chance": 0.03125,
+   "activity_probe": 0.8728999841514765
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.0162118108630132,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.9974299890428711
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.020382132321759172,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.9990180138880621
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.006704730457310784,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.9972242993188766
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.028492588882120327,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.9907017950990391
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.008145872552914216,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.9992458521870287
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.0341972158846056,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.8671708967265045
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.017047994316382046,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.997412388544054
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.015099261579406739,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.9782436974149343
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.025504676219098812,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.9056532425948011
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.03780430786243255,
+   "sensor_subject_probe": 0.06852560351014797,
+   "chance": 0.03125,
+   "activity_probe": 0.8894888920652545
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.04190704260475342,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.9941262848751835
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.038038818877581274,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.9997559712240287
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.027367332935713206,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.9978902953586498
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.03151290816057565,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.9648611862329716
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.00786886542650352,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.9916691781609733
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.05316286092448015,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.8741235336878276
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.03457845157031725,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.9758905802386488
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.02087429231420903,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.9951850673754845
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.05012001335538083,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.930505098979808
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.05312138062477458,
+   "sensor_subject_probe": 0.06627249509286184,
+   "chance": 0.03125,
+   "activity_probe": 0.8555427222027755
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.03221863969118447,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.9811814186947029
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.04260526505369113,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.9990369967150153
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.019223517246780286,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.997889086807394
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.02917426516142313,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.996478936008293
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.0033602851562412684,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.9992907801418439
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.05965112357046001,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.8883822859727971
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.029895679396025162,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.9949240225683921
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.03435012547485728,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.9730517614187485
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.04626331972934104,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.9178936587756513
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.056944727526467925,
+   "sensor_subject_probe": 0.08213930267646277,
+   "chance": 0.03125,
+   "activity_probe": 0.8857211098007625
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.020414173710362575,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9950461673220321
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.037498149507796785,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9992657856093979
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.014491888653787562,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9929181064058858
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.02119737099823843,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9957827709575389
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.004960750730205707,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9992877492877493
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.039396041728484064,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9081527977533143
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.0376385055262584,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.991355116223778
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.030485667716173937,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9937754606991009
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.04054724036411731,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9337384519536127
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.07280292977725178,
+   "sensor_subject_probe": 0.053091307333969634,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9049836817565694
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.03714740375328183,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9744889917625797
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.035886353442460446,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9991319444444445
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.025854817053015546,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9987331665038518
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.030387528137164596,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9861265167481251
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.0016894290727674658,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9981023161688056
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.057281996317078816,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.8930359741952474
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.03235039696322928,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9948512095828321
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.02545344959312424,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9765749038689021
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.0517451127476285,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.8985281895048716
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.06946062237363436,
+   "sensor_subject_probe": 0.0690371539257943,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.8743989837382067
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.022310907074995848,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9856721933561627
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.03196788696270146,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9985119047619048
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.03755556438177462,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9966883122553294
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.030075149569707943,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9839155009040725
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.007565657551341684,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9963520527595721
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.04427365166385122,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.8850233517561733
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.02448392317873604,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9929349923311893
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.03560302889185947,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9944913827019893
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.04701160088501455,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9098750777466343
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.055926261960290546,
+   "sensor_subject_probe": 0.04580594501959667,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.8755789898606648
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "subject_probe": 0.029259661497018353,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9948045809746725
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "subject_probe": 0.03468763181369227,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.999231950844854
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "subject_probe": 0.013394477277603458,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9832782538952828
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "subject_probe": 0.025051456233133325,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9947225466594549
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "subject_probe": 0.019301566542604606,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9978696728893665
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "subject_probe": 0.03920218132238419,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.8636553616746657
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "subject_probe": 0.02728451446371029,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9952562121363061
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "subject_probe": 0.03567015616288966,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9947399885106623
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "subject_probe": 0.04988502277539553,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.9502795759240902
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "subject_probe": 0.05662015212154977,
+   "sensor_subject_probe": 0.0634293265723922,
+   "chance": 0.030303030303030304,
+   "activity_probe": 0.8719140160680965
+  }
+ ],
+ "network_dataset_rho": [
+  {
+   "dataset": "hapt",
+   "model": "hystnet_nomem",
+   "rho": -0.24848484848484845
+  },
+  {
+   "dataset": "hapt",
+   "model": "hystnet_sel_clock",
+   "rho": -0.11515151515151514
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet",
+   "rho": 0.38181818181818183
+  },
+  {
+   "dataset": "hapt",
+   "model": "lawnet_rec",
+   "rho": 0.406060606060606
+  },
+  {
+   "dataset": "hapt",
+   "model": "mamba",
+   "rho": -0.309090909090909
+  },
+  {
+   "dataset": "hapt",
+   "model": "quantilenet",
+   "rho": 0.06666666666666665
+  },
+  {
+   "dataset": "hapt",
+   "model": "recstatnet",
+   "rho": -0.24848484848484845
+  },
+  {
+   "dataset": "hapt",
+   "model": "recurrencenet",
+   "rho": -0.11515151515151514
+  },
+  {
+   "dataset": "hapt",
+   "model": "s4d",
+   "rho": 0.04242424242424241
+  },
+  {
+   "dataset": "hapt",
+   "model": "statnet",
+   "rho": 0.0303030303030303
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_nomem",
+   "rho": -1.0
+  },
+  {
+   "dataset": "opportunity",
+   "model": "hystnet_sel_clock",
+   "rho": -0.7999999999999999
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet",
+   "rho": -1.0
+  },
+  {
+   "dataset": "opportunity",
+   "model": "lawnet_rec",
+   "rho": -0.7999999999999999
+  },
+  {
+   "dataset": "opportunity",
+   "model": "mamba",
+   "rho": -1.0
+  },
+  {
+   "dataset": "opportunity",
+   "model": "quantilenet",
+   "rho": -1.0
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recstatnet",
+   "rho": -1.0
+  },
+  {
+   "dataset": "opportunity",
+   "model": "recurrencenet",
+   "rho": -1.0
+  },
+  {
+   "dataset": "opportunity",
+   "model": "s4d",
+   "rho": -1.0
+  },
+  {
+   "dataset": "opportunity",
+   "model": "statnet",
+   "rho": -1.0
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_nomem",
+   "rho": -0.8303030303030302
+  },
+  {
+   "dataset": "sad",
+   "model": "hystnet_sel_clock",
+   "rho": -0.9393939393939393
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet",
+   "rho": 0.21884599572482327
+  },
+  {
+   "dataset": "sad",
+   "model": "lawnet_rec",
+   "rho": 0.2613993837824278
+  },
+  {
+   "dataset": "sad",
+   "model": "mamba",
+   "rho": -0.9515151515151514
+  },
+  {
+   "dataset": "sad",
+   "model": "quantilenet",
+   "rho": -0.7939393939393938
+  },
+  {
+   "dataset": "sad",
+   "model": "recstatnet",
+   "rho": -0.17575757575757575
+  },
+  {
+   "dataset": "sad",
+   "model": "recurrencenet",
+   "rho": -0.7575757575757575
+  },
+  {
+   "dataset": "sad",
+   "model": "s4d",
+   "rho": -0.4545454545454545
+  },
+  {
+   "dataset": "sad",
+   "model": "statnet",
+   "rho": -0.43030303030303024
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "lawnet_rec",
+   "rho": -0.16363636363636364
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recstatnet",
+   "rho": 0.05454545454545454
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "recurrencenet",
+   "rho": -0.6242424242424242
+  },
+  {
+   "dataset": "uca_ehar",
+   "model": "s4d",
+   "rho": -0.2121212121212121
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_nomem",
+   "rho": -0.5030303030303029
+  },
+  {
+   "dataset": "uci_har",
+   "model": "hystnet_sel_clock",
+   "rho": -0.709090909090909
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet",
+   "rho": -0.6121212121212121
+  },
+  {
+   "dataset": "uci_har",
+   "model": "lawnet_rec",
+   "rho": -0.41818181818181815
+  },
+  {
+   "dataset": "uci_har",
+   "model": "mamba",
+   "rho": -0.6848484848484848
+  },
+  {
+   "dataset": "uci_har",
+   "model": "quantilenet",
+   "rho": -0.7939393939393938
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recstatnet",
+   "rho": -0.6848484848484848
+  },
+  {
+   "dataset": "uci_har",
+   "model": "recurrencenet",
+   "rho": -0.7454545454545454
+  },
+  {
+   "dataset": "uci_har",
+   "model": "s4d",
+   "rho": -0.7333333333333332
+  },
+  {
+   "dataset": "uci_har",
+   "model": "statnet",
+   "rho": -0.5272727272727272
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_nomem",
+   "rho": -0.6969696969696969
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "hystnet_sel_clock",
+   "rho": -0.7454545454545454
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet",
+   "rho": -0.4666666666666666
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "lawnet_rec",
+   "rho": -0.6969696969696969
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "mamba",
+   "rho": -0.9523809523809524
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "quantilenet",
+   "rho": -0.8303030303030302
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recstatnet",
+   "rho": -0.6242424242424242
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "recurrencenet",
+   "rho": -0.8666666666666665
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "s4d",
+   "rho": -0.8303030303030302
+  },
+  {
+   "dataset": "unimib_shar",
+   "model": "statnet",
+   "rho": -0.41818181818181815
+  },
+  {
+   "dataset": "up_fall",
+   "model": "lawnet_rec",
+   "rho": -0.8666666666666665
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recstatnet",
+   "rho": -0.406060606060606
+  },
+  {
+   "dataset": "up_fall",
+   "model": "recurrencenet",
+   "rho": -0.6242424242424242
+  },
+  {
+   "dataset": "up_fall",
+   "model": "s4d",
+   "rho": -0.4666666666666666
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_nomem",
+   "rho": -0.261904761904762
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "hystnet_sel_clock",
+   "rho": 0.04761904761904763
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet",
+   "rho": -0.3571428571428572
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "lawnet_rec",
+   "rho": 0.0
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "mamba",
+   "rho": -0.07142857142857144
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "quantilenet",
+   "rho": 0.261904761904762
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recstatnet",
+   "rho": -0.2142857142857143
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "recurrencenet",
+   "rho": 0.19047619047619052
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "s4d",
+   "rho": 0.04761904761904763
+  },
+  {
+   "dataset": "utd_mhad",
+   "model": "statnet",
+   "rho": -0.30952380952380953
+  },
+  {
+   "dataset": "wear",
+   "model": "lawnet_rec",
+   "rho": -0.7696969696969697
+  },
+  {
+   "dataset": "wear",
+   "model": "recstatnet",
+   "rho": -0.8666666666666665
+  },
+  {
+   "dataset": "wear",
+   "model": "recurrencenet",
+   "rho": -0.7696969696969697
+  },
+  {
+   "dataset": "wear",
+   "model": "s4d",
+   "rho": -0.9030303030303028
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_nomem",
+   "rho": -0.18787878787878787
+  },
+  {
+   "dataset": "wisdm",
+   "model": "hystnet_sel_clock",
+   "rho": -0.6363636363636362
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet",
+   "rho": -0.05454545454545454
+  },
+  {
+   "dataset": "wisdm",
+   "model": "lawnet_rec",
+   "rho": -0.309090909090909
+  },
+  {
+   "dataset": "wisdm",
+   "model": "mamba",
+   "rho": -0.7818181818181817
+  },
+  {
+   "dataset": "wisdm",
+   "model": "quantilenet",
+   "rho": -0.3939393939393939
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recstatnet",
+   "rho": -0.07878787878787878
+  },
+  {
+   "dataset": "wisdm",
+   "model": "recurrencenet",
+   "rho": -0.3939393939393939
+  },
+  {
+   "dataset": "wisdm",
+   "model": "s4d",
+   "rho": -0.49090909090909085
+  },
+  {
+   "dataset": "wisdm",
+   "model": "statnet",
+   "rho": -0.19999999999999998
+  }
+ ]
+}

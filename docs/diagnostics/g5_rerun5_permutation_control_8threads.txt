@@ -1,0 +1,11 @@
+node hpc22.local, job 86870, Fri Oct 16 09:55:40 +07 2026
+hpc22.local Model name:          Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz
+rows 828 relabelled rows 624 perm sha a5fe19df17fdfae0
+statsmodels default {'M': 16.3267, 'MD': 2.6038, 'MP': 0.07, 'P': 130.1241, 'e': 23.8883} neg_reml 1881.2004
+numpy REML True {'P': 128.3125, 'M': 0.0, 'MD': 0.0, 'MP': 0.0, 'e': 24.3926} neg_reml 1867.4504
+real statsmodels {'M': 4.7739, 'MD': 3.9554, 'MP': 6.864, 'P': 127.6587, 'e': 11.6674}
+other permutation seed 1 share 0.002
+other permutation seed 2 share 0.0192
+other permutation seed 3 share 0.0703
+G5 rerun5 permuted solution: neg_reml 1881.2004 (lower is better)
+threads None 64

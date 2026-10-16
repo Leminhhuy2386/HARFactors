@@ -1,0 +1,215 @@
+node hpc22.local, job 86854, Fri Oct 16 09:32:10 +07 2026
+NVIDIA RTX A5000, 580.126.09
+== src.evaluation.split_spread
+{
+ "n_datasets": 16,
+ "validation": {
+  "median_gap": 17.103583005567394,
+  "min_gap": 4.579593757788345,
+  "max_gap": 47.83707740406196,
+  "datasets_val_above_test": 13,
+  "runs_val_above_test": 2307,
+  "runs": 2388,
+  "datasets": 13,
+  "datasets_without_complete_val": [
+   "actrectut_gestures",
+   "unimib_shar",
+   "utd_mhad"
+  ],
+  "median_rho_network_means": 0.17575757575757575,
+  "datasets_with_rho_network": 13,
+  "datasets_best_by_val_is_best_by_test": 3,
+  "median_test_loss_choosing_by_val": 2.7366033693154677
+ },
+ "datasets_split_sd_above_model_sd": 15,
+ "median_ratio_split_sd_to_model_sd": 2.5763553288953975
+}
+utd_mhad             validation macro-F1 missing in some runs: not analysed
+uci_har              val  99.3 test  94.7 gap  +4.6  rho(net) 0.6969696969696969  best val recstatnet / test lawnet_rec
+unimib_shar          validation macro-F1 missing in some runs: not analysed
+actrectut_gestures   validation macro-F1 missing in some runs: not analysed
+opportunity          val  79.2 test  62.1 gap +17.1  rho(net) 0.17575757575757575  best val lawnet_rec / test recstatnet
+sad                  val 100.0 test  90.8 gap  +9.1  rho(net) 0.6  best val statnet / test lawnet_rec
+hapt                 val  89.9 test  82.9 gap  +7.0  rho(net) 0.9272727272727272  best val recstatnet / test recstatnet
+dsads                val  99.9 test  84.0 gap +15.8  rho(net) -0.5515151515151515  best val statnet / test lawnet_rec
+wisdm                val  96.8 test  78.6 gap +18.2  rho(net) 0.4424242424242424  best val mamba / test s4d
+pamap2               val  91.4 test  56.5 gap +34.9  rho(net) -0.7999999999999999  best val s4d / test lawnet_rec
+up_fall              val  95.2 test  49.2 gap +46.0  rho(net) -0.39999999999999997  best val s4d / test lawnet_rec
+uma_fall             val  95.9 test  48.0 gap +47.8  rho(net) 0.0  best val recstatnet / test lawnet_rec
+usc_had              val  93.0 test  74.8 gap +18.2  rho(net) 0.7999999999999999  best val lawnet_rec / test lawnet_rec
+wear                 val  98.3 test  85.7 gap +12.7  rho(net) -0.39999999999999997  best val s4d / test lawnet_rec
+uca_ehar             val  77.9 test  61.9 gap +16.1  rho(net) -0.19999999999999998  best val s4d / test recstatnet
+w_har                val  82.7 test  50.1 gap +32.6  rho(net) 0.7999999999999999  best val recstatnet / test recstatnet
+utd_mhad             S1 splits  8 sd(split)  12.66  sd(model)  2.43  seed sd  3.16
+uci_har              S1 splits 10 sd(split)   3.04  sd(model)  1.46  seed sd  0.85
+unimib_shar          S1 splits 10 sd(split)   7.13  sd(model)  4.17  seed sd  1.82
+actrectut_gestures   S1 splits  2 sd(split)   0.34  sd(model)  8.51  seed sd  5.61
+opportunity          S1 splits  4 sd(split)  16.45  sd(model)  1.35  seed sd  3.04
+sad                  S1 splits 10 sd(split)  10.79  sd(model)  5.24  seed sd  3.93
+hapt                 S1 splits 10 sd(split)   3.94  sd(model)  1.27  seed sd  2.92
+dsads                S1 splits  8 sd(split)   5.54  sd(model)  3.28  seed sd  4.95
+wisdm                S1 splits 10 sd(split)   6.47  sd(model)  5.15  seed sd  2.72
+pamap2               S2 splits  9 sd(split)  21.15  sd(model)  3.55  seed sd  2.51
+up_fall              S2 splits 10 sd(split)   8.29  sd(model)  4.42  seed sd  4.01
+uma_fall             S2 splits 10 sd(split)  13.13  sd(model)  4.27  seed sd  2.52
+usc_had              S2 splits 10 sd(split)  10.01  sd(model)  2.08  seed sd  2.91
+wear                 S2 splits 10 sd(split)   8.76  sd(model)  0.99  seed sd  1.09
+uca_ehar             S2 splits 10 sd(split)   7.31  sd(model)  2.07  seed sd  2.78
+w_har                S2 splits 10 sd(split)   5.34  sd(model)  2.96  seed sd  3.23
+recurrencenet      Round6Net      RecurrenceBlock  L=3 D=32 emb=32 params=24675 {'encoder': 224, 'blocks': 23496, 'side': 0, 'norm': 64, 'head': 891}
+s4d                S4DClassifier  S4DBlock         L=2 D=64 emb=64 params=27675 {'encoder': 448, 'blocks': 25344, 'side': 0, 'norm': 128, 'head': 1755}
+hystnet_sel_clock  HysteresisNet  HysteresisBlock  L=3 D=32 emb=32 params=23579 {'encoder': 256, 'blocks': 22368, 'side': 0, 'norm': 64, 'head': 891}
+quantilenet        QuantileNet    QuantileBlock    L=3 D=32 emb=32 params=20763 {'encoder': 224, 'blocks': 19584, 'side': 0, 'norm': 64, 'head': 891}
+mamba              MambaClassifier MambaBlock       L=2 D=32 emb=32 params=21147 {'encoder': 224, 'blocks': 19968, 'side': 0, 'norm': 64, 'head': 891}
+hystnet_nomem      HysteresisNet  HysteresisBlock  L=3 D=32 emb=32 params=19995 {'encoder': 224, 'blocks': 18816, 'side': 0, 'norm': 64, 'head': 891}
+recstatnet         Round8Net      RecurrenceBlock  L=3 D=32 emb=64 params=26451 {'encoder': 224, 'blocks': 23496, 'side': 848, 'norm': 128, 'head': 1755}
+lawnet_rec         Round8Net      RecurrenceBlock  L=3 D=32 emb=64 params=27553 {'encoder': 224, 'blocks': 23496, 'side': 1950, 'norm': 128, 'head': 1755}
+lawnet             Round8Net      PlainBlock       L=3 D=48 emb=80 params=19033 {'encoder': 336, 'blocks': 14400, 'side': 1950, 'norm': 160, 'head': 2187}
+statnet            Round8Net      PlainBlock       L=3 D=48 emb=80 params=17931 {'encoder': 336, 'blocks': 14400, 'side': 848, 'norm': 160, 'head': 2187}
+checkpoints read: 766
+s4d learned {'p05': 0.182, 'p25': 0.5247, 'p50': 1.7827, 'p75': 5.4043, 'p95': 12.7826}
+    initial {'p05': 0.1792, 'p25': 0.5035, 'p50': 1.6235, 'p75': 5.0662, 'p95': 12.7681}
+s4d_a_real learned {'p05': 0.3717, 'p25': 0.4618, 'p50': 0.4951, 'p75': 0.5258, 'p95': 0.6223}
+           initial {'p05': 0.5, 'p25': 0.5, 'p50': 0.5, 'p75': 0.5, 'p95': 0.5}
+           |log10(learned / initial)| {'p05': 0.0024, 'p25': 0.0122, 'p50': 0.028, 'p75': 0.06, 'p95': 0.1571} share < 0.05: 0.694
+hystnet_sel_clock learned {'p05': 0.0386, 'p25': 0.1088, 'p50': 0.3606, 'p75': 0.9572, 'p95': 1.8914}
+                  initial {'p05': 0.0388, 'p25': 0.1016, 'p50': 0.3478, 'p75': 0.9463, 'p95': 1.9329}
+quantilenet_tau learned {'p05': 0.0996, 'p25': 0.3112, 'p50': 0.5001, 'p75': 0.6955, 'p95': 0.9007}
+                initial {'p05': 0.1, 'p25': 0.4, 'p50': 0.5, 'p75': 0.6, 'p95': 0.9}
+                |learned - initial| {'p05': 0.0003, 'p25': 0.0017, 'p50': 0.0047, 'p75': 0.012, 'p95': 0.0407} share < 0.05: 0.969
+quantilenet_eta learned {'p05': 0.016, 'p25': 0.0301, 'p50': 0.0521, 'p75': 0.086, 'p95': 0.1587}
+                initial {'p05': 0.0156, 'p25': 0.0298, 'p50': 0.0498, 'p75': 0.0754, 'p95': 0.1289}
+recurrencenet learned {'p05': 0.469, 'p25': 0.4991, 'p50': 0.5097, 'p75': 0.523, 'p95': 0.5524}
+              initial {'p05': 0.5, 'p25': 0.5, 'p50': 0.5, 'p75': 0.5, 'p95': 0.5}
+              |learned - initial| {'p05': 0.0013, 'p25': 0.0062, 'p50': 0.0141, 'p75': 0.0284, 'p95': 0.0574} share < 0.05: 0.92
+fig03 written
+fig04 written
+fig05 written
+fig06 written
+fig07 written
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+fig08 written
+fig09 written
+run 20261016_093224_detail_figures
+values 533
+datasets.channels_max = 133
+datasets.channels_min = 3
+datasets.classes_max = 27
+datasets.classes_min = 3
+datasets.datasets = 18
+datasets.hz_max = 250
+datasets.hz_min = 20
+datasets.subjects_max = 36
+datasets.subjects_min = 2
+datasets.windows_total = 232,254
+emb.datasets = 11
+emb.datasets_negative_rho_embedding = 10
+emb.datasets_negative_rho_sensor = 9
+emb.datasets_with_more_than_3_splits = 10
+emb.max_abs_regenerated_minus_stored_macro_f1 = 0.20
+emb.median_activity_probe_embedding = 99
+emb.median_dataset_rho_embedding = -0.61
+emb.median_dataset_rho_sensor = -0.45
+emb.median_network_dataset_rho_embedding = -0.50
+emb.median_subject_probe_over_chance_embedding = 3.2
+emb.median_subject_probe_over_chance_sensor = 4.0
+emb.network_dataset_cases = 82
+emb.network_dataset_negative_rho = 69
+emb.pooled_within_dataset_rank_p_embedding = < 0.001
+emb.pooled_within_dataset_rank_p_embedding_per_dim = < 0.001
+emb.pooled_within_dataset_rank_p_sensor = = 0.002
+emb.pooled_within_dataset_rank_rho_embedding_ccs_f1 = -0.46
+emb.pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1 = -0.45
+emb.pooled_within_dataset_rank_rho_sensor_ccs_f1 = -0.32
+emb.probe_cases = 754
+emb.probe_windows = 4,000
+emb.regenerated_cases = 754
+emb.regenerated_exact = 686
+emb.tsne.split = 0
+emb.tsne.test_windows = 868
+emb.tsne.train_windows = 3000
+learned.checkpoints = 766
+learned.hystnet_sel_clock.init_p05 = 0.039
+learned.hystnet_sel_clock.init_p50 = 0.35
+learned.hystnet_sel_clock.init_p95 = 1.9
+learned.hystnet_sel_clock.n = 73,728
+learned.hystnet_sel_clock.p05 = 0.039
+learned.hystnet_sel_clock.p50 = 0.36
+learned.hystnet_sel_clock.p95 = 1.9
+learned.quantilenet_eta.init_p05 = 0.016
+learned.quantilenet_eta.init_p50 = 0.05
+learned.quantilenet_eta.init_p95 = 0.13
+learned.quantilenet_eta.n = 73,728
+learned.quantilenet_eta.p05 = 0.016
+learned.quantilenet_eta.p50 = 0.052
+learned.quantilenet_eta.p95 = 0.16
+learned.quantilenet_tau.change_below_005 = 97
+learned.quantilenet_tau.change_p50 = 0.0047
+learned.quantilenet_tau.change_p95 = 0.041
+learned.quantilenet_tau.init_p05 = 0.1
+learned.quantilenet_tau.init_p50 = 0.5
+learned.quantilenet_tau.init_p95 = 0.9
+learned.quantilenet_tau.n = 73,728
+learned.quantilenet_tau.p05 = 0.1
+learned.quantilenet_tau.p50 = 0.5
+learned.quantilenet_tau.p95 = 0.9
+learned.recurrencenet.change_below_005 = 92
+learned.recurrencenet.change_p50 = 0.014
+learned.recurrencenet.change_p95 = 0.057
+learned.recurrencenet.init_p05 = 0.5
+learned.recurrencenet.init_p50 = 0.5
+learned.recurrencenet.init_p95 = 0.5
+learned.recurrencenet.n = 4,608
+learned.recurrencenet.p05 = 0.47
+learned.recurrencenet.p50 = 0.51
+learned.recurrencenet.p95 = 0.55
+learned.s4d.above_window = 62
+learned.s4d.init_above_window = 60
+learned.s4d.init_p05 = 0.18
+learned.s4d.init_p50 = 1.6
+learned.s4d.init_p95 = 13
+learned.s4d.n = 389,120
+learned.s4d.p05 = 0.18
+learned.s4d.p50 = 1.8
+learned.s4d.p95 = 13
+learned.s4d_a_real.change_below_005 = 69
+learned.s4d_a_real.change_p50 = 0.028
+learned.s4d_a_real.change_p95 = 0.16
+learned.s4d_a_real.init_p05 = 0.5
+learned.s4d_a_real.init_p50 = 0.5
+learned.s4d_a_real.init_p95 = 0.5
+learned.s4d_a_real.n = 389,120
+learned.s4d_a_real.p05 = 0.37
+learned.s4d_a_real.p50 = 0.5
+learned.s4d_a_real.p95 = 0.62
+models.params_all_max = 49,437
+models.params_all_min = 15,678
+models.params_ref_max = 27,675
+models.params_ref_min = 17,931
+spread.datasets = 16
+spread.median_ratio = 2.6
+spread.split_above_model = 15
+spread.uci_har.mean_seed_sd = 0.8
+spread.uci_har.range_model_means = 4.1
+spread.uci_har.range_split_means = 10.6
+spread.uci_har.sd_model_means = 1.5
+spread.uci_har.sd_split_means = 3.0
+spread.up_fall.mean_seed_sd = 4.0
+spread.up_fall.range_model_means = 9.7
+spread.up_fall.range_split_means = 28.5
+spread.up_fall.sd_model_means = 4.4
+spread.up_fall.sd_split_means = 8.3
+val.datasets = 13
+val.datasets_best_by_val_is_best_by_test = 3
+val.datasets_val_above_test = 13
+val.datasets_with_rho_network = 13
+val.max_gap = 47.8
+val.median_gap = 17.1
+val.median_rho_network_means = +0.18
+val.median_test_loss_choosing_by_val = 2.7
+val.min_gap = 4.6
+val.runs = 2,388
+val.runs_val_above_test = 2,307

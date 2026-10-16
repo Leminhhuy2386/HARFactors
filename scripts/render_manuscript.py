@@ -1,7 +1,7 @@
 """Render paper/manuscript.tex from paper/manuscript_src.tex (agents/07_paper.md).
 
 Every \\val{<id>} marker is replaced by the string docs/summary_values.json prints for <id>; an unknown id stops the
-render. The letter's figures and table are copied from figures/ and tables/ into paper/ (never redrawn here).
+render. The letter's figures and tables are copied from figures/ and tables/ into paper/ (never redrawn here).
 
     uv run --no-sync python scripts/render_manuscript.py
 """
@@ -15,8 +15,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "paper"
-FIGS = ["fig01_variance_components.pdf", "fig02_contrasts_channels.pdf"]
-TABLES = ["tab01_variance_components.tex"]
+FIGS = ["fig01_variance_components.pdf", "fig02_contrasts_channels.pdf", "fig03_design.pdf", "fig04_sensors.pdf",
+        "fig05_architecture.pdf", "fig06_memory.pdf", "fig07_split_spread.pdf", "fig08_embedding.pdf", "fig09_validation.pdf"]
+TABLES = ["tab01_variance_components.tex", "tab02_datasets.tex", "tab03_models.tex"]
 
 
 def main() -> None:

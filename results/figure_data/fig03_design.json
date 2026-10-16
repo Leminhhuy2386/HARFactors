@@ -1,0 +1,341 @@
+{
+ "stages": [
+  [
+   "Datasets and networks",
+   "S1, development: 10 data-\nsets \u00d7 10 networks \u00d7 3 seeds\n= 2,460 runs\nS2, held-out: 8 datasets\n\u00d7 4 networks \u00d7 3 seeds\n= 948 runs\nS3: 4 datasets \u00d7 17 WHAR\nArena models \u00d7 1 run = 510"
+  ],
+  [
+   "Person-disjoint splits",
+   "subjects in k \u2264 10 groups\n(harness, LKSO); each\ngroup is the test set\nonce; training and\nvalidation windows from\nthe other subjects"
+  ],
+  [
+   "Training (stored runs)",
+   "3-s windows; z-score\nfitted on the training\nwindows; early stopping\non validation; the same\nsplits for every network\nand seed"
+  ],
+  [
+   "Outcome per run",
+   "macro-F1 over the test\ngroup's windows (absent\nclasses count 0);\nbalanced accuracy as a\nsensitivity outcome"
+  ],
+  [
+   "Variance decomposition",
+   "crossed random effects\nwithin each dataset:\n$y=\\mu_d+P+M+MD+MP+e$\n$R=\\sigma^2_P/(\\sigma^2_M+\\sigma^2_{MD}+\\sigma^2_{MP})$\nH1 (confirmatory):\nR > 1 on S2"
+  ]
+ ],
+ "runs": {
+  "S1": 2460,
+  "S2": 948,
+  "S3": 510
+ },
+ "analysed": {
+  "H1": 828,
+  "sens2_S1_macro_f1": 2160,
+  "sens4_S3_macro_f1": 510
+ },
+ "grid_models": [
+  "recurrencenet",
+  "s4d",
+  "hystnet_sel_clock",
+  "quantilenet",
+  "mamba",
+  "hystnet_nomem",
+  "recstatnet",
+  "lawnet_rec",
+  "lawnet",
+  "statnet",
+  "whar17"
+ ],
+ "grid_datasets": [
+  "utd_mhad",
+  "uci_har",
+  "unimib_shar",
+  "actrectut_gestures",
+  "opportunity",
+  "sad",
+  "hapt",
+  "dsads",
+  "wisdm",
+  "daphnet",
+  "pamap2",
+  "up_fall",
+  "uma_fall",
+  "usc_had",
+  "motion_sense",
+  "wear",
+  "uca_ehar",
+  "w_har"
+ ],
+ "grid_set_code": [
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0
+  ],
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0
+  ],
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0
+  ],
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0
+  ],
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ ],
+ "uci_har_test_subjects": {
+  "split-00": [
+   0,
+   10,
+   20
+  ],
+  "split-01": [
+   1,
+   11,
+   21
+  ],
+  "split-02": [
+   2,
+   12,
+   22
+  ],
+  "split-03": [
+   3,
+   13,
+   23
+  ],
+  "split-04": [
+   4,
+   14,
+   24
+  ],
+  "split-05": [
+   5,
+   15,
+   25
+  ],
+  "split-06": [
+   6,
+   16,
+   26
+  ],
+  "split-07": [
+   7,
+   17,
+   27
+  ],
+  "split-08": [
+   8,
+   18,
+   28
+  ],
+  "split-09": [
+   9,
+   19,
+   29
+  ]
+ }
+}

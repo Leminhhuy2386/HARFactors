@@ -1,0 +1,25 @@
+{
+ "reference_input": {
+  "input_channels": 6,
+  "window_length": 150,
+  "num_classes": 27,
+  "channel_names": [
+   "acc_x",
+   "acc_y",
+   "acc_z",
+   "gyr_x",
+   "gyr_y",
+   "gyr_z"
+  ]
+ },
+ "datasets": [
+  "utd_mhad",
+  "uci_har",
+  "unimib_shar",
+  "actrectut_gestures",
+  "opportunity",
+  "sad",
+  "hapt",
+  "wisdm"
+ ]
+}

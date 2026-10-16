@@ -1,0 +1,44 @@
+node hpc21.local, job 86845, Fri Oct 16 08:55:12 +07 2026
+NVIDIA RTX A5000, 580.126.09
+OK actrectut_gestures
+2026-10-16 08:55:32,957 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 08:55:32,957 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 08:55:32,958 - whar-datasets - INFO - Hash is up to date
+2026-10-16 08:55:32,958 - whar-datasets - INFO - Loading samples
+actrectut_gestures split 1: done
+OK opportunity
+OK uca_ehar
+OK sad
+OK uci_har
+OK wisdm
+OK up_fall
+OK unimib_shar
+OK utd_mhad
+OK hapt
+OK wear
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+{
+ "regenerated_cases": 754,
+ "max_abs_regenerated_minus_stored_macro_f1": 0.20331740379333496,
+ "regenerated_exact": 686,
+ "pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1": -0.45109296423733825,
+ "pooled_within_dataset_rank_p_embedding_per_dim": 6.4004846201717856e-06,
+ "network_dataset_cases": 82,
+ "median_network_dataset_rho_embedding": -0.4969696969696969,
+ "network_dataset_negative_rho": 69,
+ "datasets": 11,
+ "datasets_with_more_than_3_splits": 10,
+ "pooled_within_dataset_rank_rho_embedding_ccs_f1": -0.4577138052904451,
+ "pooled_within_dataset_rank_p_embedding": 4.4900403883300995e-06,
+ "pooled_within_dataset_rank_rho_sensor_ccs_f1": -0.31866835852963615,
+ "pooled_within_dataset_rank_p_sensor": 0.0019621429983425116,
+ "median_dataset_rho_embedding": -0.6121212121212121,
+ "median_dataset_rho_sensor": -0.45324675324675323,
+ "datasets_negative_rho_embedding": 10,
+ "datasets_negative_rho_sensor": 9,
+ "median_subject_probe_over_chance_embedding": 3.180310368937879,
+ "median_subject_probe_over_chance_sensor": 4.034595772264216,
+ "median_activity_probe_embedding": 0.9920886013976606,
+ "probe_cases": 754
+}

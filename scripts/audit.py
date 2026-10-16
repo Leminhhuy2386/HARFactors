@@ -67,6 +67,12 @@ def check_provenance() -> list[str]:
     return errs
 
 
+def format_limits(paper: Path) -> dict:
+    """Enforced format limits: the venue's, unless paper/format_limits.json records a decision to waive some."""
+    f = paper / "format_limits.json"
+    return json.loads(f.read_text())["enforced"] if f.exists() else {"pages": 4, "figures": 5, "abstract_words": 150}
+
+
 def check_ledger() -> list[str]:
     """Ledger, run files and run directories agree exactly; every START has an END."""
     errs = []
@@ -286,8 +292,9 @@ def check_manuscript() -> list[str]:
             if pat in log:
                 errs.append(f"LaTeX log: '{pat}' present")
         pages = re.search(r"Output written on manuscript.pdf \((\d+) page", log)
-        if pages and int(pages.group(1)) > 4:
-            errs.append(f"{pages.group(1)} pages > 4 (IEEE Sensors Letters limit)")
+        limit = format_limits(paper)["pages"]  # None: waived for the working draft (paper/format_limits.json)
+        if pages and limit is not None and int(pages.group(1)) > limit:
+            errs.append(f"{pages.group(1)} pages > {limit} (IEEE Sensors Letters limit)")
     src = tex.read_text()
     body = src.split("\\begin{document}", 1)[-1]
     bib = (paper / "references.bib").read_text()
@@ -310,6 +317,7 @@ def check_manuscript() -> list[str]:
              and l not in refs]
     values = {e["printed"].lstrip("=< ").lstrip("+") for e in json.loads((ROOT / "docs/summary_values.json").read_text())}
     values |= {v.replace("-", "−") for v in values} | {v.lstrip("−-") for v in values}
+    values |= {v.replace(",", "") for v in values}  # numbers are read without thousands separators (below)
     for inc in re.findall(r"\\input\{([^}]+)\}", body):  # tables are \input files: check their numbers too
         f = paper / (inc if inc.endswith(".tex") else inc + ".tex")
         body += "\n" + (f.read_text() if f.exists() else "")

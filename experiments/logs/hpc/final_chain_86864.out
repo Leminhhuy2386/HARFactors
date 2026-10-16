@@ -1,0 +1,621 @@
+node hpc22.local, job 86864, Fri Oct 16 09:44:10 +07 2026
+NVIDIA RTX A5000, 580.126.09
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+figures and table written; run 20261016_094816_letter_figures
+2026-10-16 09:51:09,485 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 09:51:09,486 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 09:51:09,487 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:09,487 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 09:51:09,487 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 09:51:09,487 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:09,487 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 09:51:09,487 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 09:51:09,488 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:09,488 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 09:51:09,488 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 09:51:09,489 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:09,489 - whar-datasets - INFO - Loading windowing
+2026-10-16 09:51:09,493 - whar-datasets - INFO - Selecting activities
+2026-10-16 09:51:09,497 - whar-datasets - INFO - activity_ids from 0 to 10
+2026-10-16 09:51:09,498 - whar-datasets - INFO - subject_ids from 0 to 1
+2026-10-16 09:51:09,500 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:51:09,501 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:51:09,501 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:09,501 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+actrectut_gestures split 1: 1 runs
+figures and table written; run 20261016_095109_letter_figures
+figures and table written; run 20261016_095111_letter_figures
+2026-10-16 09:51:12,327 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 09:51:12,327 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 09:51:12,328 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:12,328 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 09:51:12,328 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 09:51:12,329 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:12,329 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 09:51:12,329 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 09:51:12,331 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:12,331 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 09:51:12,331 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 09:51:12,332 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:12,332 - whar-datasets - INFO - Loading windowing
+2026-10-16 09:51:12,338 - whar-datasets - INFO - Selecting activities
+2026-10-16 09:51:12,341 - whar-datasets - INFO - activity_ids from 0 to 26
+2026-10-16 09:51:12,341 - whar-datasets - INFO - subject_ids from 0 to 7
+2026-10-16 09:51:12,352 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:51:12,352 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:51:12,354 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:51:12,354 - whar-datasets - INFO - Loading samples
+G5 FAIL
+{
+ "L1_provenance": {
+  "pass": true,
+  "output": [
+   "PASS  --provenance"
+  ]
+ },
+ "L3_reexecution": {
+  "gating_cells": 408,
+  "evaluated": 408,
+  "no_checkpoint": [],
+  "exact_match": 373,
+  "within_tolerance": 408,
+  "mismatches": [],
+  "max_abs_delta_macro_f1_points": 0.3486216068267822,
+  "s2_runs_reexecuted": 360,
+  "informative_rebuilt": {
+   "datasets": {
+    "pamap2": {
+     "runs": 108,
+     "exact": 22,
+     "outside_tolerance": 31,
+     "mean_delta_macro_f1": -0.0675219628545973,
+     "max_abs_delta_macro_f1": 0.6682634353637695,
+     "max_windows": 12
+    },
+    "uma_fall": {
+     "runs": 120,
+     "exact": 69,
+     "outside_tolerance": 2,
+     "mean_delta_macro_f1": -0.001538693904876709,
+     "max_abs_delta_macro_f1": 0.4582703113555908,
+     "max_windows": 3
+    },
+    "w_har": {
+     "runs": 120,
+     "exact": 88,
+     "outside_tolerance": 3,
+     "mean_delta_macro_f1": -0.0016431758801142375,
+     "max_abs_delta_macro_f1": 3.2450467348098755,
+     "max_windows": 11
+    }
+   },
+   "runs": 348,
+   "exact": 179,
+   "outside_tolerance": 36,
+   "max_abs_dataset_mean_delta_macro_f1": 0.0675219628545973,
+   "max_abs_delta_macro_f1": 3.2450467348098755,
+   "test_sizes_equal": true
+  },
+  "informative_dsads": [
+   {
+    "model": "statnet",
+    "seed": 1,
+    "split": 1,
+    "status": "evaluated",
+    "macro_f1": 0.05263157933950424,
+    "stored_macro_f1": 0.6702289581298828,
+    "test_size": 3762,
+    "stored_test_size": 3762
+   },
+   {
+    "model": "hystnet_nomem",
+    "seed": 0,
+    "split": 1,
+    "status": "evaluated",
+    "macro_f1": 0.05263157933950424,
+    "stored_macro_f1": 0.6426851749420166,
+    "test_size": 3762,
+    "stored_test_size": 3762
+   },
+   {
+    "model": "lawnet",
+    "seed": 0,
+    "split": 3,
+    "status": "evaluated",
+    "macro_f1": 0.05263157933950424,
+    "stored_macro_f1": 0.9684193134307861,
+    "test_size": 3762,
+    "stored_test_size": 3762
+   },
+   {
+    "model": "hystnet_sel_clock",
+    "seed": 0,
+    "split": 4,
+    "status": "evaluated",
+    "macro_f1": 0.05263157933950424,
+    "stored_macro_f1": 0.7876685857772827,
+    "test_size": 3762,
+    "stored_test_size": 3762
+   },
+   {
+    "model": "recurrencenet",
+    "seed": 0,
+    "split": 4,
+    "status": "evaluated",
+    "macro_f1": 0.05249900743365288,
+    "stored_macro_f1": 0.8230093121528625,
+    "test_size": 3762,
+    "stored_test_size": 3762
+   },
+   {
+    "model": "hystnet_nomem",
+    "seed": 2,
+    "split": 6,
+    "status": "evaluated",
+    "macro_f1": 0.05263157933950424,
+    "stored_macro_f1": 0.8811008930206299,
+    "test_size": 3762,
+    "stored_test_size": 3762
+   }
+  ]
+ },
+ "L3_second_implementation": [
+  {
+   "analysis": "H1",
+   "components": {
+    "M": {
+     "statsmodels": 4.773939628028107,
+     "numpy_reml": 4.764803050686079
+    },
+    "MD": {
+     "statsmodels": 3.9554494789299777,
+     "numpy_reml": 3.9541405149835835
+    },
+    "MP": {
+     "statsmodels": 6.864011549805682,
+     "numpy_reml": 6.863790027587176
+    },
+    "P": {
+     "statsmodels": 127.65871187628933,
+     "numpy_reml": 127.65621695616274
+    },
+    "e": {
+     "statsmodels": 11.667372312119944,
+     "numpy_reml": 11.667650432885862
+    }
+   },
+   "R_statsmodels": 8.186714026418368,
+   "R_numpy_reml": 8.192158082674519,
+   "converged": true,
+   "match": true
+  },
+  {
+   "analysis": "sens1_S2_balanced_accuracy",
+   "components": {
+    "M": {
+     "statsmodels": 6.52617976093258,
+     "numpy_reml": 6.5358426200283555
+    },
+    "MD": {
+     "statsmodels": 4.445368683735392,
+     "numpy_reml": 4.4458213156241015
+    },
+    "MP": {
+     "statsmodels": 10.127735249523157,
+     "numpy_reml": 10.127925643834343
+    },
+    "P": {
+     "statsmodels": 86.27215084070596,
+     "numpy_reml": 86.26915137000535
+    },
+    "e": {
+     "statsmodels": 16.557743845663314,
+     "numpy_reml": 16.557608045690245
+    }
+   },
+   "R_statsmodels": 4.08886633741304,
+   "R_numpy_reml": 4.086728026860229,
+   "converged": true,
+   "match": true
+  },
+  {
+   "analysis": "sens2_S1_balanced_accuracy",
+   "components": {
+    "M": {
+     "statsmodels": 5.548372436168804,
+     "numpy_reml": 5.54538786812612
+    },
+    "MD": {
+     "statsmodels": 9.629144804475615,
+     "numpy_reml": 9.62953790743037
+    },
+    "MP": {
+     "statsmodels": 5.54473904522708,
+     "numpy_reml": 5.544419415082556
+    },
+    "P": {
+     "statsmodels": 39.212981255051645,
+     "numpy_reml": 39.213375624350476
+    },
+    "e": {
+     "statsmodels": 15.274631808088545,
+     "numpy_reml": 15.274803460877388
+    }
+   },
+   "R_statsmodels": 1.8923123386803773,
+   "R_numpy_reml": 1.8925972449200272,
+   "converged": true,
+   "match": true
+  },
+  {
+   "analysis": "sens2_S1_macro_f1",
+   "components": {
+    "M": {
+     "statsmodels": 5.916712428409565,
+     "numpy_reml": 5.911711245467583
+    },
+    "MD": {
+     "statsmodels": 7.7688375817948945,
+     "numpy_reml": 7.7690520302059305
+    },
+    "MP": {
+     "statsmodels": 6.6667795791585585,
+     "numpy_reml": 6.667209922351436
+    },
+    "P": {
+     "statsmodels": 66.24692189967652,
+     "numpy_reml": 66.25481306053602
+    },
+    "e": {
+     "statsmodels": 17.606465714663166,
+     "numpy_reml": 17.6062462120075
+    }
+   },
+   "R_statsmodels": 3.2550043772040698,
+   "R_numpy_reml": 3.256089066746312,
+   "converged": true,
+   "match": true
+  },
+  {
+   "analysis": "sens3_S1_without_actrectut",
+   "components": {
+    "M": {
+     "statsmodels": 5.510275170313153,
+     "numpy_reml": 5.514868775229994
+    },
+    "MD": {
+     "statsmodels": 5.14109047716621,
+     "numpy_reml": 5.140739216829237
+    },
+    "MP": {
+     "statsmodels": 6.502427725910742,
+     "numpy_reml": 6.5024111835574505
+    },
+    "P": {
+     "statsmodels": 67.3648558673713,
+     "numpy_reml": 67.37955074113147
+    },
+    "e": {
+     "statsmodels": 16.958856763936485,
+     "numpy_reml": 16.958565298503714
+    }
+   },
+   "R_statsmodels": 3.927111304247801,
+   "R_numpy_reml": 3.927000550091748,
+   "converged": true,
+   "match": true
+  },
+  {
+   "analysis": "sens4_S3_macro_f1",
+   "components": {
+    "M": {
+     "statsmodels": 100.16017293105875,
+     "numpy_reml": 100.1569230229363
+    },
+    "MD": {
+     "statsmodels": 50.994675476029656,
+     "numpy_reml": 50.994314342028616
+    },
+    "P": {
+     "statsmodels": 37.51626719672539,
+     "numpy_reml": 37.51751200474977
+    },
+    "e": {
+     "statsmodels": 29.170514057772074,
+     "numpy_reml": 29.170518433096536
+    }
+   },
+   "R_statsmodels": 0.20804764612097246,
+   "R_numpy_reml": 0.2080587106015363,
+   "converged": true,
+   "match": true
+  }
+ ],
+ "L3_4_figures": {
+  "results/figure_data/fig01_variance_components.json": true,
+  "results/figure_data/fig02_contrasts_channels.json": true,
+  "results/table_data/tab01_variance_components.csv": true
+ },
+ "L3_5_leakage": {
+  "normalisation_problems": [],
+  "access_log": {
+   "entries": 77,
+   "before_seal": [],
+   "confirmatory_reads": [
+    "2026-10-15T16:49:41 | scripts/run_confirmatory.py | 20261015_164940_vc_H1 | pre-registered H1 (confirmatory test of H1); sealed by G4 at 2026-10-15T16:49:10",
+    "2026-10-15T16:55:40 | scripts/run_confirmatory.py | 20261015_165538_vc_sens1_S2_balanced_accuracy | pre-registered sens1_S2_balanced_accuracy (sensitivity 1); sealed by G4 at 2026-10-15T16:49:10"
+   ],
+   "verification_reads": 40,
+   "seal_timestamp": "2026-10-15T16:49:10",
+   "ok": true
+  },
+  "split_disjointness": "asserted for all 13 cached datasets by scripts/export_splits.py (data/processed/harness_splits.json)",
+  "label_shuffle_control": {
+   "run_id": "20261016_055019_label_shuffle_control",
+   "model": "s4d",
+   "runs": 6,
+   "tolerance": "every run: shuffled-label macro-F1 <= chance + 5.0 points on validation and on test; the stored true-label run >= shuffled + 20.0 points on validation",
+   "all_collapsed": true,
+   "all_real_far_above": true,
+   "mean_shuffled_test_macro_f1": 4.906073429932197,
+   "mean_chance_test_macro_f1": 8.74371704335014,
+   "mean_stored_test_macro_f1": 54.48788901170095,
+   "mean_shuffled_val_macro_f1": 6.799650440613429,
+   "mean_chance_val_macro_f1": 8.724295237412056,
+   "mean_stored_val_macro_f1": 85.89686354001363,
+   "rows": [
+    {
+     "dataset": "uca_ehar",
+     "split": 0,
+     "train_windows": 11752,
+     "shuffled_val_macro_f1": 5.806256458163261,
+     "shuffled_test_macro_f1": 7.047124952077866,
+     "chance_val_macro_f1": 8.398743137717247,
+     "chance_test_macro_f1": 8.278488576412201,
+     "stored_val_macro_f1": 72.80569672584534,
+     "stored_test_macro_f1": 57.31191039085388,
+     "best_epoch": 1,
+     "epochs_ran": 11,
+     "seconds": 44.7,
+     "collapsed": true,
+     "real_far_above": true
+    },
+    {
+     "dataset": "uca_ehar",
+     "split": 1,
+     "train_windows": 11278,
+     "shuffled_val_macro_f1": 5.8643873780965805,
+     "shuffled_test_macro_f1": 1.9649459049105644,
+     "chance_val_macro_f1": 8.306407399475574,
+     "chance_test_macro_f1": 8.34948766976595,
+     "stored_val_macro_f1": 78.20489406585693,
+     "stored_test_macro_f1": 59.31740403175354,
+     "best_epoch": 5,
+     "epochs_ran": 15,
+     "seconds": 52.5,
+     "collapsed": true,
+     "real_far_above": true
+    },
+    {
+     "dataset": "uca_ehar",
+     "split": 2,
+     "train_windows": 11704,
+     "shuffled_val_macro_f1": 5.648544430732727,
+     "shuffled_test_macro_f1": 4.290895536541939,
+     "chance_val_macro_f1": 8.286196902394295,
+     "chance_test_macro_f1": 8.397541493177414,
+     "stored_val_macro_f1": 75.79183578491211,
+     "stored_test_macro_f1": 70.44807076454163,
+     "best_epoch": 3,
+     "epochs_ran": 13,
+     "seconds": 49.2,
+     "collapsed": true,
+     "real_far_above": true
+    },
+    {
+     "dataset": "up_fall",
+     "split": 0,
+     "train_windows": 6294,
+     "shuffled_val_macro_f1": 8.312258124351501,
+     "shuffled_test_macro_f1": 4.159129783511162,
+     "chance_val_macro_f1": 9.020586609840393,
+     "chance_test_macro_f1": 9.123034410178661,
+     "stored_val_macro_f1": 95.55544257164001,
+     "stored_test_macro_f1": 47.17935621738434,
+     "best_epoch": 7,
+     "epochs_ran": 17,
+     "seconds": 29.2,
+     "collapsed": true,
+     "real_far_above": true
+    },
+    {
+     "dataset": "up_fall",
+     "split": 1,
+     "train_windows": 6319,
+     "shuffled_val_macro_f1": 7.365931570529938,
+     "shuffled_test_macro_f1": 8.341041207313538,
+     "chance_val_macro_f1": 9.209656357765198,
+     "chance_test_macro_f1": 9.11224726587534,
+     "stored_val_macro_f1": 96.6661810874939,
+     "stored_test_macro_f1": 41.85842573642731,
+     "best_epoch": 4,
+     "epochs_ran": 14,
+     "seconds": 25.4,
+     "collapsed": true,
+     "real_far_above": true
+    },
+    {
+     "dataset": "up_fall",
+     "split": 2,
+     "train_windows": 6317,
+     "shuffled_val_macro_f1": 7.800524681806564,
+     "shuffled_test_macro_f1": 3.6333031952381134,
+     "chance_val_macro_f1": 9.124181017279625,
+     "chance_test_macro_f1": 9.201502844691277,
+     "stored_val_macro_f1": 96.3571310043335,
+     "stored_test_macro_f1": 50.812166929244995,
+     "best_epoch": 1,
+     "epochs_ran": 11,
+     "seconds": 19.5,
+     "collapsed": true,
+     "real_far_above": true
+    }
+   ],
+   "caught": true,
+   "run_dir": "experiments/20261016_055019_label_shuffle_control"
+  }
+ },
+ "L5_model_permutation": [
+  {
+   "set": "S2",
+   "permuted_model_share": 0.1098214710201044,
+   "permuted_components": {
+    "M": 16.32673673807694,
+    "MD": 2.603830939217106,
+    "MP": 0.06996318843225441,
+    "P": 130.12406950798848,
+    "e": 23.888296733154043
+   },
+   "real_model_share": 0.10065487031762244,
+   "caught": false
+  },
+  {
+   "set": "S1",
+   "permuted_model_share": 1.3652548484802164e-09,
+   "permuted_components": {
+    "M": 8.995583212713654e-08,
+    "MD": 3.870641913232688e-09,
+    "MP": 4.532227856668424e-08,
+    "P": 66.32155102088687,
+    "e": 35.599897983288805
+   },
+   "real_model_share": 0.1953091455584748,
+   "caught": true
+  }
+ ],
+ "L5_negative_controls": [
+  {
+   "tampering": "one prediction value altered",
+   "check": "--recompute",
+   "untampered_passes": true,
+   "caught": true
+  },
+  {
+   "tampering": "a provenance record deleted",
+   "check": "--provenance",
+   "untampered_passes": false,
+   "deleted_file_named": true,
+   "caught": true
+  },
+  {
+   "tampering": "a ledger run directory removed",
+   "check": "--ledger",
+   "untampered_passes": true,
+   "caught": true
+  },
+  {
+   "tampering": "a stored variance component edited",
+   "check": "--seeds",
+   "untampered_passes": true,
+   "caught": true
+  },
+  {
+   "tampering": "a checkpoint replaced by a fresh initialisation",
+   "check": "--reproduce (re-execution)",
+   "caught": true
+  },
+  {
+   "tampering": "a value in results/table_data hand-edited",
+   "check": "Level 3.4 regeneration",
+   "untampered_passes": true,
+   "caught": true
+  },
+  {
+   "tampering": "a metric file corrupted, figures regenerated",
+   "check": "Level 3.4: figure data must change",
+   "caught": true
+  },
+  {
+   "tampering": "one test window moved into train",
+   "check": "split disjointness (Level 3.5.1)",
+   "real_passes": true,
+   "caught": true
+  },
+  {
+   "tampering": "normalisation fitted on train + test",
+   "check": "train-only normalisation (Level 3.5.2)",
+   "real_passes": true,
+   "caught": true
+  }
+ ],
+ "audit": {
+  "pass": true,
+  "output": [
+   "PASS  --ledger",
+   "PASS  --data",
+   "PASS  --synthetic",
+   "PASS  --recompute",
+   "sad split 5: 1 runs",
+   "wisdm split 8: 1 runs",
+   "uca_ehar split 7: 1 runs",
+   "PASS  --reproduce",
+   "PASS  --seeds",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\\s'",
+   "  df = pd.read_csv(full_path, sep=\"\\s+\", skiprows=3)",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true",
+   "  warnings.warn(\"y_pred contains classes not in y_true\")",
+   "/work/huy.lem
+GATE FAIL

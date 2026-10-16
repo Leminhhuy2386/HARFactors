@@ -19,6 +19,10 @@ answer so far: who is tested matters far more than the architecture. Split off f
     - the author block;
     - (`IEEE_lsens.cls`: in place 2026-10-16).
     - Submission formalities: authors, subject category, graphical abstract, reviewers, ORCID, EDICS.
+- **Expansion of 2026-10-16 (user request: many more figures; page limit waived for the draft):** new exploratory
+  analyses (split spread, validation vs test, learned memory parameters, embeddings) and Figs. 3-9, Tables II-III in
+  `paper/manuscript_src.tex`. **G5 rerun5 FAILed** on the S2 model-permutation control (statsmodels optimizer stops
+  at a non-maximum depending on BLAS threads; `RUN_REPORT.md` § G5 rerun5 FAIL). Waiting for the user's decision.
 - **What exists (history).** Imported from Edge_SSM:
   - the 2,460-run population (10 models × 10 datasets × 3 seeds) with its checkpoints;
   - the exploratory factor analysis and its figures.

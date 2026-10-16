@@ -7,7 +7,9 @@
 #   scripts/hpc/submit.sh har_analyses normal 00:20:00 -- uv run --no-sync python scripts/run_analyses.py
 #
 # Partitions (2026-10-15): gpu = hpc21-24, 1 GPU each (often full; jobs queue); normal/small/tiny = hpc01-20, CPU
-# only; dgx-* (A100) was down. Override resources with CPUS, MEM, GPUS (default 1 on gpu partitions), NODE.
+# only; dgx-* (A100) was down. Override resources with CPUS, MEM, GPUS (default 1 on gpu partitions), NODE;
+# DEPEND passes --dependency (e.g. DEPEND=afterok:86828), QOS --qos (the gpu partition accepts every QOS:
+# QOS=tiny GPUS=0 runs CPU work on the GPU nodes' idle cores, at most 2 h).
 set -euo pipefail
 [[ $# -ge 5 && $4 == "--" ]] || { sed -n '2,10p' "$0"; exit 2; }
 NAME=$1; PART=$2; WALL=$3; shift 4
@@ -23,6 +25,8 @@ ARGS=(-p "$PART" --job-name="$NAME" --cpus-per-task="$CPUS" --mem="$MEM" --time=
       --output="$LOG_DIR/${NAME}_%j.out" --chdir="$PROJECT_DIR")
 if [[ $PART == gpu || $PART == dgx-* ]]; then ARGS+=(--gres="gpu:${GPUS:-1}"); fi
 if [[ -n ${NODE:-} ]]; then ARGS+=(--nodelist="$NODE"); fi
+if [[ -n ${DEPEND:-} ]]; then ARGS+=(--dependency="$DEPEND"); fi
+if [[ -n ${QOS:-} ]]; then ARGS+=(--qos="$QOS"); fi
 
 CMD=$(printf '%q ' "$@")
 sbatch "${ARGS[@]}" --wrap="source scripts/hpc/env.sh && echo \"node \$(hostname), job \$SLURM_JOB_ID, \$(date)\" && (nvidia-smi --query-gpu=name,driver_version --format=csv,noheader 2>/dev/null || true) && $CMD"

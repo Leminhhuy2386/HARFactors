@@ -474,3 +474,41 @@ The analysis code was developed on synthetic data (`tests/test_variance_componen
 
 All analyses ran on CPU nodes (hpc01/02, Intel, 8-16 cores): the H1 bootstrap took 4 min 25 s and the S3 bootstrap
 47 s. The S1 bootstraps took about 40 min each with 8 workers.
+
+## HARFactors, 2026-10-16: descriptive and exploratory expansion (more figures)
+
+The user asked for many more figures (sensors, experiments, detailed network structure) and for a deeper analysis of
+the embeddings and other characteristics; exceeding the page count is acceptable for this draft (the user will
+shorten it). Nothing here is confirmatory, and no network was trained.
+
+### Configurations run
+
+- `src/evaluation/split_spread.py` (a `scripts/run_analyses.py` step): per dataset of S1 and S2 that passes the
+  inclusion rule, the means of splits, of networks and of (network, split) cells, from the stored runs.
+- `src/evaluation/model_anatomy.py`: parameter counts per part with the reference input of gate G1 (checked equal to
+  G1), sizes per dataset from the run records, the memory operators on a synthetic input (illustration), and the
+  memory parameters of every S1 checkpoint (seeds 0-2) of eight datasets against the same networks freshly
+  initialised.
+- `src/evaluation/embedding_analysis.py`: seed-0 checkpoints of every split of eleven datasets (eight of S1 with ten
+  networks, up_fall, wear and uca_ehar of S2 with four), inference only, on the cluster caches that reproduce the
+  stored runs; class-conditional shift of the test group in the embedding and in a sensor-feature space, linear
+  probes for subject and activity, one t-SNE case fixed in the code before the run (UCI-HAR, S4D, split 0).
+- `src/visualization/detail_figures.py`: Figs. 3-8 and Tables II-III of the manuscript, from saved results only.
+
+### Deviations and decisions, with reasons
+
+1. **Format limits.** The page and figure limits of IEEE Sensors Letters are waived for the working draft
+   (`paper/format_limits.json`, read by `scripts/check_manuscript.py` and `scripts/audit.py --manuscript`); the
+   150-word abstract limit stays. Restore the limits before submission.
+2. **G5 rerun5 chain postponed.** The pending chain (Slurm 86823) was cancelled before it started: run while the
+   embedding jobs write to the ledger, its negative controls would see START lines without END. G5 rerun5, G6, G7 and
+   the audit run once, after the new analyses, with nothing else running.
+3. **Where the jobs ran.** The CPU partitions were full (all of hpc01-08 allocated for days). The embedding analysis
+   regenerates predictions from checkpoints, which `docs/hpc.md` allows on the `gpu` partition; it ran there on idle
+   CPU cores without a GPU (`--gres=gpu:0`), as one job of 16 cores (the partition's QOS allows one running job).
+4. **Aggregation code amended during the run.** `aggregate()` gained the regeneration check, a per-dimension shift and
+   per-network correlations while dataset runs were in progress; `analyse_dataset()` was not touched, so every
+   dataset file comes from the same analysis code. The file was replaced atomically after a syntax check.
+5. **Learned memory parameters, first version superseded.** The first `model_anatomy` run read every checkpoint on
+   disk (including extra seeds of some networks) and had no initial values to compare with; the second reads seeds
+   0-2 only and compares with freshly initialised networks.

@@ -1,0 +1,68 @@
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+2026-10-16 09:24:38,907 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 09:24:38,907 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 09:24:38,909 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:24:38,909 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 09:24:38,909 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 09:24:38,910 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:24:38,911 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 09:24:38,911 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 09:24:38,912 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:24:38,912 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 09:24:38,912 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 09:24:38,914 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:24:38,914 - whar-datasets - INFO - Loading windowing
+2026-10-16 09:24:38,944 - whar-datasets - INFO - Selecting activities
+2026-10-16 09:24:38,950 - whar-datasets - INFO - activity_ids from 0 to 17
+2026-10-16 09:24:38,950 - whar-datasets - INFO - subject_ids from 0 to 23
+2026-10-16 09:24:39,027 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:24:39,027 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:24:39,029 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:24:39,029 - whar-datasets - INFO - Loading samples
+wear split 0: done
+2026-10-16 09:25:16,596 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:25:16,596 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:25:16,598 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:25:16,598 - whar-datasets - INFO - Loading samples
+wear split 1: done
+2026-10-16 09:25:51,099 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:25:51,099 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:25:51,101 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:25:51,101 - whar-datasets - INFO - Loading samples
+wear split 2: done
+2026-10-16 09:26:28,839 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:26:28,840 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:26:28,842 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:26:28,842 - whar-datasets - INFO - Loading samples
+wear split 3: done
+2026-10-16 09:27:01,777 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:27:01,777 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:27:01,779 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:27:01,779 - whar-datasets - INFO - Loading samples
+wear split 4: done
+2026-10-16 09:27:33,398 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:27:33,398 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:27:33,401 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:27:33,401 - whar-datasets - INFO - Loading samples
+wear split 5: done
+2026-10-16 09:28:03,588 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:28:03,588 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:28:03,591 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:28:03,591 - whar-datasets - INFO - Loading samples
+wear split 6: done
+2026-10-16 09:28:34,892 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:28:34,893 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:28:34,895 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:28:34,895 - whar-datasets - INFO - Loading samples
+wear split 7: done
+2026-10-16 09:29:05,434 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:29:05,434 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:29:05,436 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:29:05,437 - whar-datasets - INFO - Loading samples
+wear split 8: done
+2026-10-16 09:29:35,340 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:29:35,340 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:29:35,342 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:29:35,342 - whar-datasets - INFO - Loading samples
+wear split 9: done

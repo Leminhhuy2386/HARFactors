@@ -1,0 +1,8 @@
+node hpc22.local, job 86862, Fri Oct 16 09:41:40 +07 2026
+NVIDIA RTX A5000, 580.126.09
+missing ids: ['g5.rebuilt.max_abs_dataset_mean_delta_macro_f1', 'g5.rebuilt.max_abs_delta_macro_f1', 'g5.rebuilt.outside_tolerance', 'g5.rebuilt.runs']
+latexmk exit 0 pages 10
+abstract words 140
+['page-01.png', 'page-02.png', 'page-03.png', 'page-04.png', 'page-05.png', 'page-06.png', 'page-07.png', 'page-08.png', 'page-09.png', 'page-10.png']
+numbers not traceable: []
+undefined refs: [] unreferenced: []

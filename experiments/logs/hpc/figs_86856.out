@@ -1,0 +1,14 @@
+node hpc22.local, job 86856, Fri Oct 16 09:36:10 +07 2026
+NVIDIA RTX A5000, 580.126.09
+fig03 written
+fig04 written
+fig05 written
+fig06 written
+fig07 written
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+fig08 written
+fig09 written
+run 20261016_093613_detail_figures

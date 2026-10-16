@@ -1,0 +1,219 @@
+{
+ "structure": {
+  "recurrencenet": {
+   "class": "Round6Net",
+   "block": "RecurrenceBlock",
+   "layers": 3,
+   "d_model": 32,
+   "embedding_dim": 32,
+   "params": 24675,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 23496,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   },
+   "params_per_block": 7832,
+   "g1_params": 24675,
+   "equal_to_g1": true,
+   "s2": true
+  },
+  "s4d": {
+   "class": "S4DClassifier",
+   "block": "S4DBlock",
+   "layers": 2,
+   "d_model": 64,
+   "embedding_dim": 64,
+   "params": 27675,
+   "params_by_part": {
+    "encoder": 448,
+    "blocks": 25344,
+    "side": 0,
+    "norm": 128,
+    "head": 1755
+   },
+   "params_per_block": 12672,
+   "g1_params": 27675,
+   "equal_to_g1": true,
+   "s2": true
+  },
+  "hystnet_sel_clock": {
+   "class": "HysteresisNet",
+   "block": "HysteresisBlock",
+   "layers": 3,
+   "d_model": 32,
+   "embedding_dim": 32,
+   "params": 23579,
+   "params_by_part": {
+    "encoder": 256,
+    "blocks": 22368,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   },
+   "params_per_block": 7456,
+   "g1_params": 23579,
+   "equal_to_g1": true,
+   "s2": false
+  },
+  "quantilenet": {
+   "class": "QuantileNet",
+   "block": "QuantileBlock",
+   "layers": 3,
+   "d_model": 32,
+   "embedding_dim": 32,
+   "params": 20763,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 19584,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   },
+   "params_per_block": 6528,
+   "g1_params": 20763,
+   "equal_to_g1": true,
+   "s2": false
+  },
+  "mamba": {
+   "class": "MambaClassifier",
+   "block": "MambaBlock",
+   "layers": 2,
+   "d_model": 32,
+   "embedding_dim": 32,
+   "params": 21147,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 19968,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   },
+   "params_per_block": 9984,
+   "g1_params": 21147,
+   "equal_to_g1": true,
+   "s2": false
+  },
+  "hystnet_nomem": {
+   "class": "HysteresisNet",
+   "block": "HysteresisBlock",
+   "layers": 3,
+   "d_model": 32,
+   "embedding_dim": 32,
+   "params": 19995,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 18816,
+    "side": 0,
+    "norm": 64,
+    "head": 891
+   },
+   "params_per_block": 6272,
+   "g1_params": 19995,
+   "equal_to_g1": true,
+   "s2": false
+  },
+  "recstatnet": {
+   "class": "Round8Net",
+   "block": "RecurrenceBlock",
+   "layers": 3,
+   "d_model": 32,
+   "embedding_dim": 64,
+   "params": 26451,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 23496,
+    "side": 848,
+    "norm": 128,
+    "head": 1755
+   },
+   "params_per_block": 7832,
+   "g1_params": 26451,
+   "equal_to_g1": true,
+   "s2": true
+  },
+  "lawnet_rec": {
+   "class": "Round8Net",
+   "block": "RecurrenceBlock",
+   "layers": 3,
+   "d_model": 32,
+   "embedding_dim": 64,
+   "params": 27553,
+   "params_by_part": {
+    "encoder": 224,
+    "blocks": 23496,
+    "side": 1950,
+    "norm": 128,
+    "head": 1755
+   },
+   "params_per_block": 7832,
+   "g1_params": 27553,
+   "equal_to_g1": true,
+   "s2": true
+  },
+  "lawnet": {
+   "class": "Round8Net",
+   "block": "PlainBlock",
+   "layers": 3,
+   "d_model": 48,
+   "embedding_dim": 80,
+   "params": 19033,
+   "params_by_part": {
+    "encoder": 336,
+    "blocks": 14400,
+    "side": 1950,
+    "norm": 160,
+    "head": 2187
+   },
+   "params_per_block": 4800,
+   "g1_params": 19033,
+   "equal_to_g1": true,
+   "s2": false
+  },
+  "statnet": {
+   "class": "Round8Net",
+   "block": "PlainBlock",
+   "layers": 3,
+   "d_model": 48,
+   "embedding_dim": 80,
+   "params": 17931,
+   "params_by_part": {
+    "encoder": 336,
+    "blocks": 14400,
+    "side": 848,
+    "norm": 160,
+    "head": 2187
+   },
+   "params_per_block": 4800,
+   "g1_params": 17931,
+   "equal_to_g1": true,
+   "s2": false
+  }
+ },
+ "memory": {
+  "recurrencenet": "recurrence",
+  "s4d": "S4D (diagonal SSM)",
+  "hystnet_sel_clock": "play operators",
+  "quantilenet": "quantile trackers",
+  "mamba": "Mamba (S6)",
+  "hystnet_nomem": "none (play width 0)",
+  "recstatnet": "recurrence",
+  "lawnet_rec": "recurrence",
+  "lawnet": "none (plain block)",
+  "statnet": "none (plain block)"
+ },
+ "side": {
+  "recstatnet": "channel stats",
+  "statnet": "channel stats",
+  "lawnet_rec": "law invariants",
+  "lawnet": "law invariants"
+ },
+ "operators": [
+  "recurrence: $r_t(\\tau)=\\sigma((\\epsilon-\\Vert z_t-z_{t-\\tau}\\Vert)/T)$ and $r_t(\\tau)\\,r_{t-1}(\\tau)$, ten lags",
+  "play operator: $y_t=\\min(\\max(y_{t-1},u_t-r),u_t+r)$, four widths $r$ ($r=0$: no memory)",
+  "quantile tracker: $q_t=q_{t-1}+\\eta\\,(\\tau-\\mathbf{1}[u_t<q_{t-1}])$, four levels $\\tau$",
+  "S4D block: LayerNorm, diagonal state-space convolution + skip, GELU, 1\u00d71 conv, GLU, + x",
+  "Mamba block: LayerNorm, in-projection, depthwise conv, SiLU, selective scan, gate, out-projection, + x"
+ ]
+}

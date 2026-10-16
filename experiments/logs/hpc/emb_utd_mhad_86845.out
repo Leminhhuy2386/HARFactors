@@ -1,0 +1,132 @@
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/third_party/whar-datasets/src/whar_datasets/config/cfg_hugadb.py:40: SyntaxWarning: invalid escape sequence '\s'
+  df = pd.read_csv(full_path, sep="\s+", skiprows=3)
+2026-10-16 09:23:16,925 - whar-datasets - INFO - Running DownloadingStep
+2026-10-16 09:23:16,925 - whar-datasets - INFO - Checking hash for DownloadingStep
+2026-10-16 09:23:16,927 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:16,927 - whar-datasets - INFO - Running ExtractingStep
+2026-10-16 09:23:16,927 - whar-datasets - INFO - Checking hash for ExtractingStep
+2026-10-16 09:23:16,928 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:16,928 - whar-datasets - INFO - Running ParsingStep
+2026-10-16 09:23:16,928 - whar-datasets - INFO - Checking hash for ParsingStep
+2026-10-16 09:23:16,929 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:16,929 - whar-datasets - INFO - Running WindowingStep
+2026-10-16 09:23:16,929 - whar-datasets - INFO - Checking hash for WindowingStep
+2026-10-16 09:23:16,931 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:16,931 - whar-datasets - INFO - Loading windowing
+2026-10-16 09:23:16,941 - whar-datasets - INFO - Selecting activities
+2026-10-16 09:23:16,948 - whar-datasets - INFO - activity_ids from 0 to 26
+2026-10-16 09:23:16,948 - whar-datasets - INFO - subject_ids from 0 to 7
+2026-10-16 09:23:16,959 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:23:16,959 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:23:16,961 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:16,961 - whar-datasets - INFO - Loading samples
+utd_mhad split 0: done
+2026-10-16 09:23:25,432 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:23:25,432 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:23:25,440 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:25,440 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+utd_mhad split 1: done
+2026-10-16 09:23:34,060 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:23:34,060 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:23:34,062 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:34,062 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+utd_mhad split 2: done
+2026-10-16 09:23:42,231 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:23:42,231 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:23:42,233 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:42,233 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+utd_mhad split 3: done
+2026-10-16 09:23:50,416 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:23:50,416 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:23:50,420 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:50,420 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+utd_mhad split 4: done
+2026-10-16 09:23:58,765 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:23:58,766 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:23:58,787 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:23:58,787 - whar-datasets - INFO - Loading samples
+utd_mhad split 5: done
+2026-10-16 09:24:07,232 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:24:07,232 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:24:07,234 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:24:07,234 - whar-datasets - INFO - Loading samples
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+utd_mhad split 6: done
+2026-10-16 09:24:15,169 - whar-datasets - INFO - Running SamplingStep
+2026-10-16 09:24:15,169 - whar-datasets - INFO - Checking hash for SamplingStep
+2026-10-16 09:24:15,184 - whar-datasets - INFO - Hash is up to date
+2026-10-16 09:24:15,184 - whar-datasets - INFO - Loading samples
+utd_mhad split 7: done

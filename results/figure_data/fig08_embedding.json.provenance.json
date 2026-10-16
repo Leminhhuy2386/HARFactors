@@ -1,0 +1,19 @@
+{
+ "produced_by": "src/visualization/detail_figures.py",
+ "command": "python /work/huy.leminh/code/Dr.Huy/HAR/HARFactors/src/visualization/detail_figures.py",
+ "run_id": "20261016_093813_detail_figures",
+ "timestamp": "2026-10-16T09:38:22",
+ "duration_sec": 8.79,
+ "git_commit": "fbdb03d-dirty",
+ "config_sha256": null,
+ "config": null,
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "docs/sources/arena_table3_sensors.json": "sha256:6982ab162b076f248027bc1b35c2086bfd4576fc8aaee8ea560df63a3e343474",
+  "docs/sources/uci_har_activities.json": "sha256:0647b624a9b6e7fabfbfbe2ec515b3b330aa363296b3f488d2cf13dcc911e438",
+  "results/metrics/embedding/summary.json": "sha256:86b70e791f8414d2aaecf0ae13437c9d3ad892bb7f9e6677d05ff5c5ed406335",
+  "results/metrics/embedding/tsne_case.json": "sha256:09124825610740e063e0f411b4dedecb1e9cae02153e7e75902147627783734a"
+ },
+ "output_sha256": "50c8468b4954598563e009f11e373f4482b2966fcb9fbfa418851a319001c91a",
+ "synthetic": false
+}

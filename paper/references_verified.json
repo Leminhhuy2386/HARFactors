@@ -239,5 +239,64 @@
     "method": "WebSearch (JMLR pages https://www.jmlr.org/papers/v7/demsar06a.html and https://jmlr2020.csail.mit.edu/papers/volume7/demsar06a/demsar06a.pdf: JMLR vol. 7, pp. 1-30, 2006). Direct WebFetch of jmlr.org returned HTTP 403.",
     "status": "verified",
     "note": "JMLR has no DOI for this paper; cite by the URL."
+  },
+  "vandermaaten2008visualizing": {
+    "resolved_title": "Visualizing Data using t-SNE",
+    "resolved_venue": "Journal of Machine Learning Research 9(86):2579-2605",
+    "year": 2008,
+    "authors": ["Laurens van der Maaten", "Geoffrey Hinton"],
+    "checked_on": "2026-10-16",
+    "method": "WebSearch: JMLR listing https://www.jmlr.org/papers/v9/vandermaaten08a.html (volume 9, issue 86, pages 2579-2605, 2008).",
+    "status": "verified"
+  },
+  "alain2016understanding": {
+    "arxiv": "1610.01644",
+    "resolved_title": "Understanding intermediate layers using linear classifier probes",
+    "resolved_venue": "arXiv preprint arXiv:1610.01644 (v1 5 Oct 2016, v4 22 Nov 2018)",
+    "year": 2016,
+    "authors": ["Guillaume Alain", "Yoshua Bengio"],
+    "checked_on": "2026-10-16",
+    "method": "WebSearch: arXiv abstract https://arxiv.org/abs/1610.01644v4 and PDF https://arxiv.org/pdf/1610.01644.",
+    "status": "verified",
+    "note": "Cited as an arXiv preprint; no venue claimed."
+  },
+  "eckmann1987recurrence": {
+    "doi": "10.1209/0295-5075/4/9/004",
+    "resolved_title": "Recurrence Plots of Dynamical Systems",
+    "resolved_venue": "Europhysics Letters 4(9):973-977",
+    "year": 1987,
+    "authors": ["J.-P. Eckmann", "S. Oliffson Kamphorst", "D. Ruelle"],
+    "checked_on": "2026-10-16",
+    "method": "WebSearch: IHES PDF https://www.ihes.fr/~ruelle/PUBLICATIONS/[92].pdf (authors, affiliations, received 23 June 1987); DOI and volume 4(9) 973-977 from the Wikipedia reference and the University of Fribourg record.",
+    "status": "verified"
+  },
+  "robbins1951stochastic": {
+    "doi": "10.1214/aoms/1177729586",
+    "resolved_title": "A Stochastic Approximation Method",
+    "resolved_venue": "The Annals of Mathematical Statistics 22(3):400-407",
+    "year": 1951,
+    "authors": ["Herbert Robbins", "Sutton Monro"],
+    "checked_on": "2026-10-16",
+    "method": "WebSearch: Project Euclid record https://projecteuclid.org/euclid.aoms/1177729586 (22(3) 400-407, September 1951, DOI 10.1214/aoms/1177729586); JSTOR stable 2236626.",
+    "status": "verified"
+  },
+  "brokate1996hysteresis": {
+    "isbn": "9780387947631",
+    "resolved_title": "Hysteresis and Phase Transitions",
+    "resolved_venue": "Springer, Applied Mathematical Sciences 121, New York",
+    "year": 1996,
+    "authors": ["Martin Brokate", "Jürgen Sprekels"],
+    "checked_on": "2026-10-16",
+    "method": "WebSearch: Springer page https://link.springer.com/book/9780387947631 (Applied Mathematical Sciences, volume 121, 1996); Université de Nantes catalogue (New York: Springer, 1996, ISBN 0-387-94763-9).",
+    "status": "verified"
+  },
+  "zhang2013domain": {
+    "resolved_title": "Domain Adaptation under Target and Conditional Shift",
+    "resolved_venue": "Proceedings of the 30th International Conference on Machine Learning, PMLR 28(3):819-827",
+    "year": 2013,
+    "authors": ["Kun Zhang", "Bernhard Schölkopf", "Krikamol Muandet", "Zhikun Wang"],
+    "checked_on": "2026-10-16",
+    "method": "WebSearch: PMLR record https://proceedings.mlr.press/v28/zhang13d.html (PMLR 28(3):819-827, 2013); MPI-IS listing.",
+    "status": "verified"
   }
 }

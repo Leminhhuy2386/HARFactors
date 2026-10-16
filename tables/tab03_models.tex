@@ -1,0 +1,16 @@
+\begin{tabular}{@{}llllrrrr@{}}
+\toprule
+Network & Memory & Side path & Sets & $D{\times}N$ & Emb. & Params (ref.) & Range over datasets \\
+\midrule
+RecurrenceNet & recurrence & none & S1, S2 & 32$\times$3 & 32 & 24,675 & 23,886--28,013 \\
+S4D & S4D (diagonal SSM) & none & S1, S2 & 64$\times$2 & 64 & 27,675 & 26,118--34,373 \\
+HysteresisNet & play operators & none & S1 & 32$\times$3 & 32 & 23,579 & 22,790--26,917 \\
+QuantileNet & quantile trackers & none & S1 & 32$\times$3 & 32 & 20,763 & 19,974--24,101 \\
+Mamba & Mamba (S6) & none & S1 & 32$\times$2 & 32 & 21,147 & 20,358--24,485 \\
+No memory & none (play width 0) & none & S1 & 32$\times$3 & 32 & 19,995 & 19,206--23,333 \\
+RN + stats & recurrence & channel stats & S1, S2 & 32$\times$3 & 64 & 26,451 & 24,582--46,357 \\
+RN + laws & recurrence & law invariants & S1, S2 & 32$\times$3 & 64 & 27,553 & 25,316--49,437 \\
+Laws (no mem.) & none (plain block) & law invariants & S1 & 48$\times$3 & 80 & 19,033 & 16,412--42,597 \\
+Stats (no mem.) & none (plain block) & channel stats & S1 & 48$\times$3 & 80 & 17,931 & 15,678--39,517 \\
+\bottomrule
+\end{tabular}

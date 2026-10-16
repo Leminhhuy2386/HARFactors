@@ -2,7 +2,8 @@
 % the string docs/summary_values.json prints for it; the manuscript holds no hand-typed result.
 % Class: IEEE_lsens.cls from the IEEE Template Selector (IEEE Sensors Letters, LSENS-AuthorTemplates.zip, 2023-06-29;
 % sha256 660780da...; docs/sources/pc_downloads note in RUN_REPORT.md). Rules: at most 4 pages including at least one
-% column of references, at most 5 figures, abstract at most 150 words with a graphical abstract.
+% column of references, at most 5 figures, abstract at most 150 words with a graphical abstract. The page and figure
+% limits are waived for this working draft (paper/format_limits.json, the user's decision of 2026-10-16).
 \documentclass{IEEE_lsens}
 \usepackage{textcomp}
 \usepackage{graphicx}
@@ -14,6 +15,14 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{url}
+% many full-width figures (working draft): let floats take more of a page so they stay near their text
+\setcounter{dbltopnumber}{3}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.75}
 
 \begin{document}
 
@@ -61,9 +70,42 @@ This letter measures them. Under one fixed protocol it decomposes the variance o
 subjects, the network, their interactions and the training seed; it tests the ordering of these terms with a
 pre-registered analysis on held-out datasets; it checks the result with a ceiling-free metric, development data and
 the benchmark's independent architectures; and it reports, as exploratory, which design choices and which sensing
-properties of a dataset go with large accuracy differences.
+properties of a dataset go with large accuracy differences, what the networks' temporal memories learned, and how far
+the test subjects lie from the training subjects in the networks' embedding space.
 
 \section{Methods}
+\subsection{Datasets and sensors}
+The 18 datasets of the stored runs (Table~\ref{tab:datasets}, Fig.~\ref{fig:sensors}) were recorded with smartphones,
+body-worn inertial nodes, a smartwatch, smart glasses and a helmet. Every dataset has accelerometers; most add
+gyroscopes, several magnetometers, and single datasets a barometer, an ambient-light sensor, stretch sensors, ECG or
+EEG. They span \val{datasets.channels_min} to \val{datasets.channels_max} channels, \val{datasets.subjects_min} to
+\val{datasets.subjects_max} subjects, \val{datasets.classes_min} to \val{datasets.classes_max} classes and
+\val{datasets.hz_min} to \val{datasets.hz_max}\,Hz, with \val{datasets.windows_total} windows in all. Devices and
+modalities are quoted from the benchmark's dataset table~\cite{burzer2026arena}; channel and class counts, sampling
+rates and window counts are read from the stored runs, and subject counts from the harness's splits (for USC-HAD and
+MotionSense, whose caches we do not hold, from the dataset configurations).
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig04_sensors.pdf}
+\caption{Sensor configuration of the datasets of S1 (development) and S2 (held-out). (a) Devices and sensor
+modalities, quoted from the benchmark's dataset table~\cite{burzer2026arena}; (b)--(f) channels, subjects, classes,
+sampling rate and number of 3-s windows (logarithmic axes in (b), (e) and (f)), read from the stored runs and the
+harness's splits. Faded and hatched: excluded from the variance analyses by the pre-registered inclusion rule.}
+\label{fig:sensors}
+\end{figure*}
+
+\begin{table*}[t]
+\caption{Datasets of the stored runs}
+\label{tab:datasets}
+\centering
+\footnotesize
+\input{tab02_datasets.tex}\\[2pt]
+\parbox{\textwidth}{\footnotesize $C$: channels; Subj.: subjects; Cl.: classes; Hz: sampling rate; Windows: 3-s windows,
+each in one test group; Splits: test-subject groups. $^\dagger$Excluded from the variance analyses by the
+pre-registered inclusion rule.}
+\end{table*}
+
 \subsection{Protocol and stored runs}
 All runs follow WHAR Arena v1 with its paper-era code~\cite{burzer2026arena,burzer2025whar}: 3-s windows with 50\,\%
 overlap at the native sampling rate; $k=10$ subject groups, each split testing on one group
@@ -77,7 +119,57 @@ networks on eight datasets never used for this question, with three seeds; S3, t
 (deep networks such as DeepConvLSTM~\cite{ordonez2016deep,hammerla2016deep}, and Random Forest~\cite{breiman2001random},
 SVM and k-NN on tsfresh features~\cite{christ2018tsfresh}) re-run with the same code on four datasets, one run per
 split. A pre-registered inclusion rule removed datasets whose stored runs disagree on split sizes, because their split
-indices do not name the same subjects across runs (one dataset each in S1 and S2).
+indices do not name the same subjects across runs (one dataset each in S1 and S2). Fig.~\ref{fig:design} summarises
+the design, the runs analysed and how subjects are assigned to test groups.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig03_design.pdf}
+\caption{Study design. (a) From the stored runs to the variance decomposition. (b) The runs: networks (rows) by
+datasets (columns), coloured by run set; each cell gives splits $\times$ seeds, and hatched cells are excluded by the
+inclusion rule. (c) The person-disjoint test groups of UCI-HAR: each split tests on three subjects that never enter its
+training or validation data.}
+\label{fig:design}
+\end{figure*}
+
+\subsection{Networks}
+The ten networks of S1 and S2 share one skeleton (Fig.~\ref{fig:arch}, Table~\ref{tab:models}). A linear encoder maps
+the $C$ channels of each sample to $D$ features, $N$ residual blocks process the sequence, and the features are
+averaged over the window, joined in four networks by a window-level side path, normalised (LayerNorm) and classified by
+a linear head. The vector the head receives is the network's embedding (Section~\ref{sec:emb}). In a residual block, a
+LayerNorm and a linear map give per-channel signals $u$ that feed a memory; $u$ and the memory's outputs are
+concatenated, mixed linearly and passed through a GELU into the residual sum. RecurrenceNet's memory keeps soft rows of
+a recurrence plot~\cite{eckmann1987recurrence} over ten lags: whether a learned two-dimensional projection of the
+signal is back where it was $\tau$ samples earlier. HysteresisNet keeps four play operators per channel, whose output
+moves only when the input leaves a band of half-width $r$ around it~\cite{brokate1996hysteresis} (here with
+input-dependent widths and a clock channel). QuantileNet keeps four online quantile trackers per channel, stochastic
+approximation steps~\cite{robbins1951stochastic} that settle on a running quantile of level $\tau$. The no-memory
+control sets every play width to zero, which makes each operator the identity, and the two networks without memory
+use plain blocks. S4D~\cite{gu2022parameterization} and Mamba~\cite{gu2023mamba} use their own blocks, a diagonal
+state-space convolution and a selective scan. The side paths read per-channel window statistics (mean, standard
+deviation, minimum and maximum, the kind of features behind the Random Forest) or invariants of each three-axis
+sensor's temporal operator and of the couplings between sensors (``laws''). With the reference input of gate G1 (that
+of UTD-MHAD), the networks have \val{models.params_ref_min} to \val{models.params_ref_max} parameters, and on the
+datasets of S1 and S2 \val{models.params_all_min} to \val{models.params_all_max}.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig05_architecture.pdf}
+\caption{The networks of S1 and S2. (a) The shared skeleton; the embedding analysed in Section~\ref{sec:emb} is the
+head's input. (b) The residual block, whose memory differs between networks (S4D and Mamba use their own blocks).
+(c) Memory, side path, width $D$, depth $N$ and parameter count of each network with the reference input of gate G1.}
+\label{fig:arch}
+\end{figure*}
+
+\begin{table}[t]
+\caption{The ten networks}
+\label{tab:models}
+\centering
+\setlength{\tabcolsep}{2pt}
+\resizebox{\columnwidth}{!}{\input{tab03_models.tex}}\\[2pt]
+\parbox{\columnwidth}{\footnotesize Emb.: embedding dimension. Params (ref.): with the reference input of gate G1;
+range over the datasets of S1 and S2.}
+\end{table}
 
 \subsection{Variance model and pre-registered test}
 For run $(m,d,s,r)$ of network $m$ on split $s$ of dataset $d$ with seed $r$,
@@ -94,11 +186,36 @@ and logged S2's single read. S2's per-dataset means were known from an earlier s
 not. For S3 (one run per split) the interaction and the seed cannot be separated, so the conservative
 $R'=\sigma^2_P/(\sigma^2_M+\sigma^2_{MD}+\sigma^2_e)$ is reported.
 
-\subsection{Exploratory analyses and verification}
+\subsection{Exploratory analyses}
 Component contrasts on S1 pair two networks by split, average the seeds, and summarise over datasets with a
 $t$-interval and a Wilcoxon test~\cite{wilcoxon1945individual,demsar2006statistical}. Over the benchmark's 30 datasets
 we regress the published single-run results on standardised dataset properties (ordinary least squares); these
-associations are correlational, and their $p$-values are not corrected for multiplicity. For verification, the
+associations are correlational, and their $p$-values are not corrected for multiplicity. Within each dataset of S1 and
+S2 we compare the spread of the split means (over networks and seeds) with that of the network means (over splits and
+seeds). From the stored checkpoints of eight S1 datasets we read what the memories learned and compare it with the
+same networks freshly initialised: S4D's mode time constants and decay rates, the play widths, the quantile levels
+and steps, and the recurrence radii. None of these analyses was pre-registered.
+
+\subsection{Embedding analysis}\label{sec:emb}
+This analysis is exploratory and uses inference only. For the seed-0 checkpoint of every split of the
+\val{emb.datasets} datasets whose caches on our cluster reproduce the stored runs (eight of S1 with the ten networks,
+three of S2 with four), the harness rebuilds the split and the network embeds every training and test window; the
+regenerated macro-F1 equals the stored one in \val{emb.regenerated_exact} of \val{emb.regenerated_cases} cases (largest
+difference \val{emb.max_abs_regenerated_minus_stored_macro_f1} points). Three quantities describe each network and
+split. First, the class-conditional shift of the test group~\cite{zhang2013domain}: for every class present in both,
+the distance between the test and the training class means, in units of the training class's root-mean-square spread
+per dimension, averaged over classes. The same shift is computed in a sensor-feature space that no network shapes
+(per-channel mean, standard deviation, minimum and maximum of the normalised window). Second, the subject information
+in the training embeddings: the balanced accuracy of a linear probe~\cite{alain2016understanding} (logistic
+regression) that predicts the training subject, in five folds grouped by recording session so that overlapping
+windows never straddle folds, on at most \val{emb.probe_windows} windows, against chance (one over the number of
+training subjects). Third, the same probe for the activity. Within each dataset we rank-correlate the test group's
+shift, averaged over networks, with the split's macro-F1 (Spearman), and we pool the within-dataset ranks over
+datasets with more than three splits. One case, fixed before the analysis (UCI-HAR, S4D, split~0), is mapped to two
+dimensions with t-SNE~\cite{vandermaaten2008visualizing}.
+
+\subsection{Verification}
+For verification, the
 benchmark's Random Forest, re-run with our code, reproduces its published macro-F1 on four datasets (e.g.\
 \val{g3.rf.uci_har.rerun} against \val{g3.rf.uci_har.figure6} on UCI-HAR); test predictions were regenerated from
 \val{g5.reexecuted} checkpoints, \val{g5.exact} of which reproduced the stored metrics exactly and all within two
@@ -151,6 +268,45 @@ it reverses: $R'=\val{sens4_S3_macro_f1.R}$ [\val{sens4_S3_macro_f1.R_lo}, \val{
 $\sigma^2_M=\val{sens4_S3_macro_f1.s2_M}$ against $\sigma^2_P=\val{sens4_S3_macro_f1.s2_P}$. These architectures range
 from k-NN to attention networks; their differences are far larger than those between the shared-skeleton networks.
 
+\subsection{Spread across test groups and networks}
+The decomposition's result is visible in the raw means (Fig.~\ref{fig:spread}a). In \val{spread.split_above_model}
+of \val{spread.datasets} datasets of S1 and S2 the split means vary more than the network means, by a median factor of
+\val{spread.median_ratio} in standard deviation; the exception is ActRecTut, whose two splits each test one of its two
+subjects. On UCI-HAR the split means have a standard deviation of \val{spread.uci_har.sd_split_means} F1 points against
+\val{spread.uci_har.sd_model_means} for the network means, and on UP-Fall \val{spread.up_fall.sd_split_means} against
+\val{spread.up_fall.sd_model_means}. In the network $\times$ split cells (Fig.~\ref{fig:spread}b, c) the columns
+dominate: a test group that is hard for one network is hard for the others.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig07_split_spread.pdf}
+\caption{Exploratory. (a) Within each dataset of S1 and S2, the means of the splits (circles; over networks and
+seeds) and of the networks (diamonds; over splits and seeds); right, the standard deviation of each. (b, c) Network
+$\times$ split cell means (over seeds) of UCI-HAR and UP-Fall, as deviations from the dataset mean.}
+\label{fig:spread}
+\end{figure*}
+
+\subsection{Validation on the training subjects}
+Each run's validation windows come from its training subjects, so its validation score measures accuracy on people
+the network has seen (Fig.~\ref{fig:val}). On the \val{val.datasets} datasets whose runs all recorded it, the
+validation macro-F1 exceeds the test macro-F1 in \val{val.runs_val_above_test} of \val{val.runs} runs, by a median of
+\val{val.median_gap} points per dataset (from \val{val.min_gap} to \val{val.max_gap}); the four largest gaps are on
+held-out datasets. Validation is also a weak guide to which network generalises: the rank correlation between the
+networks' validation and test means has a median of $\val{val.median_rho_network_means}$ over datasets, and the
+network best on validation is the best on test in \val{val.datasets_best_by_val_is_best_by_test} of
+\val{val.datasets} datasets (a median loss of \val{val.median_test_loss_choosing_by_val} test points when chosen by
+validation).
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig09_validation.pdf}
+\caption{Exploratory. (a) Per dataset, the mean validation macro-F1 (windows of the training subjects) and the mean
+test macro-F1 (unseen subjects) of the stored runs, and their gap. (b) Spearman correlation between the networks'
+validation and test means (S1 blue, S2 orange); right, whether the network best on validation is also best on test,
+or how many test points the choice loses. Datasets whose runs did not all record a validation score are omitted.}
+\label{fig:val}
+\end{figure*}
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig02_contrasts_channels.pdf}
@@ -173,6 +329,60 @@ training subjects go with a larger gap between the best and the median deep netw
 ($\val{ols.gap.subjects.beta}$ per standard deviation, $p\val{ols.gap.subjects.p}$). No property predicts how hard a
 dataset is ($R^2=\val{ols.level.r2}$).
 
+\subsection{What the memories learned}
+The memories' own parameters barely move in training (Fig.~\ref{fig:memory}; \val{learned.checkpoints} checkpoints of
+eight S1 datasets, each against the same network freshly initialised). The quantile levels change by a median of
+\val{learned.quantilenet_tau.change_p50} (95th percentile \val{learned.quantilenet_tau.change_p95}), the recurrence
+radii by \val{learned.recurrencenet.change_p50} (\val{learned.recurrencenet.change_p95}), and S4D's decay rates by a
+median of \val{learned.s4d_a_real.change_p50} in $\log_{10}$. The play widths (median
+\val{learned.hystnet_sel_clock.p50}, initially \val{learned.hystnet_sel_clock.init_p50}) and S4D's mode time constants
+(median \val{learned.s4d.p50} window lengths, initially \val{learned.s4d.init_p50}; \val{learned.s4d.above_window}\,\%
+longer than the window, initially \val{learned.s4d.init_above_window}\,\%) keep the distributions they start with.
+The time and amplitude scales at which each memory works are thus fixed by its design and initialisation; whatever
+memory adds (Fig.~\ref{fig:explore}a), it adds at the scales it was given.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig06_memory.pdf}
+\caption{The temporal memories. (a--c) The operators of HysteresisNet, QuantileNet and RecurrenceNet at their initial
+settings on a synthetic 3-s input (an illustration, not data). (d--f) Their parameters after training (bars) against
+the same networks freshly initialised (outline), over all stored checkpoints of eight S1 datasets: S4D's mode time
+constants in window lengths, the play widths, and the quantile levels.}
+\label{fig:memory}
+\end{figure*}
+
+\subsection{Embeddings}
+In the networks' embedding space, the hard test groups are the distant ones (Fig.~\ref{fig:emb}). Within datasets,
+the splits whose test subjects lie further from the training subjects, class by class, are the splits on which the
+networks score lower: the pooled within-dataset rank correlation is
+$\rho=\val{emb.pooled_within_dataset_rank_rho_embedding_ccs_f1}$ ($p\val{emb.pooled_within_dataset_rank_p_embedding}$),
+negative in \val{emb.datasets_negative_rho_embedding} of \val{emb.datasets_with_more_than_3_splits} datasets (median
+$\val{emb.median_dataset_rho_embedding}$) and, for single networks, in \val{emb.network_dataset_negative_rho} of
+\val{emb.network_dataset_cases} network--dataset pairs (median $\val{emb.median_network_dataset_rho_embedding}$).
+Measured per embedding dimension, so that networks of different width weigh alike, it is
+$\rho=\val{emb.pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1}$. The same shift measured on window statistics
+of the normalised signal, which no network shapes, tracks accuracy less closely
+($\rho=\val{emb.pooled_within_dataset_rank_rho_sensor_ccs_f1}$, $p\val{emb.pooled_within_dataset_rank_p_sensor}$;
+negative in \val{emb.datasets_negative_rho_sensor} datasets). The training embeddings still carry the subject's
+identity: a linear probe identifies the training subject at a median \val{emb.median_subject_probe_over_chance_embedding}
+times chance, against \val{emb.median_subject_probe_over_chance_sensor} times from the window statistics, while the
+activity probe reaches a median balanced accuracy of \val{emb.median_activity_probe_embedding}\,\%. The networks thus
+reduce the subject information in their features without removing it. These associations are exploratory and
+correlational.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig08_embedding.pdf}
+\caption{Exploratory embedding analysis (seed-0 checkpoints, inference only). (a, b) t-SNE of the embeddings of one
+case fixed in advance (UCI-HAR, S4D, split~0): training windows (small, faded; a seeded subsample) and the test
+windows of the three unseen subjects (outlined), coloured by activity (a) and by subject (b). (c) Per dataset, Spearman
+correlation over splits between the test group's class-conditional shift (mean over networks) and the split's
+macro-F1, in the embedding and in a sensor-feature space. (d) Balanced accuracy of a linear probe that identifies the
+training subject, over chance, from the embeddings (all cases and median) and from the window statistics (median).}
+\label{fig:emb}
+\end{figure*}
+
+\clearpage  % working draft: place every pending figure before the discussion and the references
 \section{Discussion and Limitations}
 Here ``comparable'' networks share one design and differ in single components, so that their dataset means differ
 by a few points. For such networks, who is tested decides more of a reported macro-F1 than which network is used.
@@ -186,10 +396,20 @@ and the subject effect matters when choosing between designs that are already co
 associations point at the sensing system: with many channels, hand-crafted features stay competitive, and with few
 recorded subjects the choice of network matters more.
 
+The exploratory analyses agree with the decomposition and say where the subject effect sits. Within datasets, test
+groups spread accuracy more than networks do (Fig.~\ref{fig:spread}). Validation on the training subjects overstates the
+person-disjoint score, on some datasets by tens of points, and ranks the networks differently (Fig.~\ref{fig:val}), so
+early stopping and model selection should hold out whole subjects. A test group is hard when its windows, class by
+class, lie far from the training subjects' in the space the classifier reads, a space that still identifies the
+training subjects (Fig.~\ref{fig:emb}), whereas the temporal memories keep the scales they start with
+(Fig.~\ref{fig:memory}). Together these suggest that, for comparable networks, the training subjects and how
+representations align them are more promising levers for accuracy on new people than another temporal operator.
+
 The analysis covers one protocol, and three seeds per run. The S1 and S2 networks share one skeleton, so their
 components are controlled but not independent designs. S2's means were known before the registration. The 30-dataset
 results re-analyse published single runs and are correlational, and subjects and channels co-vary across datasets.
-The intervals resample test-subject groups and treat the networks as fixed: they say how precisely $R$ is known for
+The embedding analysis uses the seed-0 checkpoints of eleven datasets, and the validation analysis only the datasets
+whose runs recorded a validation score. The intervals resample test-subject groups and treat the networks as fixed: they say how precisely $R$ is known for
 these networks, not for networks in general, and S3 shows that another population of networks can reverse it.
 
 \section{Conclusion}

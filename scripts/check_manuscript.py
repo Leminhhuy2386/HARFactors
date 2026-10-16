@@ -19,7 +19,8 @@ ROOT = Path(__file__).resolve().parents[1]
 GATES = ROOT / "results" / "gates"
 TOLERANCE = ("latexmk exit 0; zero undefined references and citations; every \\cite in references.bib; every bib entry "
              "verified with a matching title; every number in summary_values.json or a declared design constant; "
-             "at most 4 pages, at most 5 figures and an abstract of at most 150 words (IEEE Sensors Letters)")
+             "the format limits paper/format_limits.json enforces (IEEE Sensors Letters: 4 pages, 5 figures, abstract "
+             "150 words; page and figure limits waived for the working draft by the user's decision of 2026-10-16)")
 
 
 def main() -> None:
@@ -44,20 +45,25 @@ def main() -> None:
     m = re.search(r"\\begin\{abstract\}(?:\[[^\]]*\])?(.*?)\\end\{abstract\}", tex, re.S)
     words = len(re.sub(r"\\[a-zA-Z]+|[{}$\\,]", " ", m.group(1)).replace("--", " ").split()) if m else None
     figures = len(re.findall(r"\\begin\{figure\*?\}", tex))
-    if words is None or words > 150:
-        problems.append(f"abstract has {words} words (limit 150)")
-    if figures > 5:
-        problems.append(f"{figures} figures (limit 5)")
+    lim_f = ROOT / "paper/format_limits.json"
+    limits = json.loads(lim_f.read_text())["enforced"] if lim_f.exists() else {"pages": 4, "figures": 5,
+                                                                                "abstract_words": 150}
+    if words is None or words > limits["abstract_words"]:
+        problems.append(f"abstract has {words} words (limit {limits['abstract_words']})")
+    if limits["figures"] is not None and figures > limits["figures"]:
+        problems.append(f"{figures} figures (limit {limits['figures']})")
     gate = {"gate": "G7_compile_citations", "stage": "07_paper", "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "check": "the manuscript compiles; citations, references and numbers check out",
             "reference_value": None, "reference_source": "paper/references_verified.json, docs/summary_values.json",
             "observed_value": {"latexmk_exit_code": p.returncode, "pages": int(pages.group(1)) if pages else None,
                                "latex_warnings": warnings[:30], "audit_manuscript_exit": a.returncode,
                                "audit_problems": problems, "abstract_words": words, "figures": figures,
+                               "format_limits_enforced": limits,
                                "class": re.search(r"\\documentclass(\[[^\]]*\])?\{([^}]+)\}", tex).group(2)},
             "tolerance": TOLERANCE,
             "verdict": "PASS" if p.returncode == 0 and a.returncode == 0 and not problems else "FAIL",
             "evidence": ["paper/manuscript.tex", "paper/manuscript.pdf", "paper/manuscript.log", "paper/references.bib",
+                         "paper/format_limits.json",
                          "paper/references_verified.json", "scripts/audit.py", "scripts/check_manuscript.py"],
             "notes": "IEEE_lsens.cls from the IEEE Template Selector (2023 author templates) since rerun 3; IEEEtran "
                      "[journal,9pt] before."}

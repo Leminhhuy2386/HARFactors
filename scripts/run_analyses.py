@@ -23,7 +23,8 @@ STEPS = [("src.evaluation.profile_models", []), ("src.evaluation.compare_arena",
          ("src.evaluation.factor_analysis", []), ("src.evaluation.heldout_analysis", []),
          ("src.evaluation.pareto", []), ("src.evaluation.pareto", ["--heldout"]), ("src.evaluation.vs_benchmark", []),
          ("src.evaluation.seeds_summary", []), ("src.evaluation.p5_summary", []),
-         ("src.evaluation.p5_summary", ["recurrencenet"]), ("src.evaluation.contrasts_robustness", [])]
+         ("src.evaluation.p5_summary", ["recurrencenet"]), ("src.evaluation.contrasts_robustness", []),
+         ("src.evaluation.split_spread", [])]
 
 
 def written_since(t0: float) -> list[Path]:
