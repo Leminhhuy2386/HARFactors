@@ -105,9 +105,13 @@ benchmark's Random Forest, re-run with our code, reproduces its published macro-
 test windows; an independent REML implementation and negative controls (e.g.\ permuting network labels within cells)
 confirmed the analysis; and S4D retrained on permuted training labels (\val{ls.runs} runs on UP-Fall and UCA-EHAR)
 fell to chance, with a test macro-F1 of \val{ls.mean_shuffled_test_macro_f1} against \val{ls.mean_chance_test_macro_f1}
-by chance and \val{ls.mean_stored_test_macro_f1} with the true labels. The regenerated runs include \val{g5.s2} of the \val{H1.runs} confirmatory runs (the
-datasets cached on our cluster); the others, and one development dataset (DSADS) whose cache on the cluster does not
-reproduce the stored runs, enter on their stored records.
+by chance and \val{ls.mean_stored_test_macro_f1} with the true labels. Of the \val{H1.runs} confirmatory runs, \val{g5.s2} were regenerated on the
+caches the stored runs used, within that tolerance. Another \val{g5.rebuilt.runs}, on three datasets whose caches we
+rebuilt on another machine, agree at the dataset level (dataset means within
+\val{g5.rebuilt.max_abs_dataset_mean_delta_macro_f1} F1 points), but \val{g5.rebuilt.outside_tolerance} of them
+differ from their records by more than two test windows (at most \val{g5.rebuilt.max_abs_delta_macro_f1} points); the
+remaining runs (USC-HAR), and one development dataset (DSADS) whose cache on our cluster does not reproduce the stored
+runs, enter on their stored records.
 
 \section{Results}
 \subsection{Confirmatory test}

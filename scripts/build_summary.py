@@ -109,8 +109,15 @@ def spec() -> list[dict]:
     add("g5.exact", "G5: re-executed runs equal to the stored metrics exactly", g5,
         ["observed_value", "L3_reexecution", "exact_match"], "d")
     add("g5.s2", "G5: S2 runs re-executed", g5, ["observed_value", "L3_reexecution", "s2_runs_reexecuted"], "d")
-    ls = ["observed_value", "L3_5_leakage", "label_shuffle_control"]
     g5_json = json.loads((ROOT / g5).read_text())
+    rb = ["observed_value", "L3_reexecution", "informative_rebuilt"]
+    if isinstance(g5_json["observed_value"]["L3_reexecution"].get("informative_rebuilt"), dict):
+        for k, f, lab in (("runs", "d", "S2 runs re-executed on rebuilt caches"), ("exact", "d", "of them exact"),
+                          ("outside_tolerance", "d", "of them outside the gating tolerance"),
+                          ("max_abs_dataset_mean_delta_macro_f1", ".2f", "largest |dataset-mean delta macro-F1|"),
+                          ("max_abs_delta_macro_f1", ".2f", "largest |single-run delta macro-F1|")):
+            add(f"g5.rebuilt.{k}", f"G5 informative, rebuilt caches: {lab}", g5, rb + [k], f)
+    ls = ["observed_value", "L3_5_leakage", "label_shuffle_control"]
     if isinstance(get(g5_json, ls), dict):
         add("ls.runs", "label-shuffle control: runs", g5, ls + ["runs"], "d")
         for k, lab in (("mean_shuffled_test_macro_f1", "shuffled-label test macro-F1"),
@@ -202,6 +209,11 @@ def write_summary(v: dict, values: list) -> None:
               for d in ["utd_mhad", "uci_har", "unimib_shar", "actrectut_gestures"]) + ".",
           f"- G5 {v['g5.verdict']}: {v['g5.reexecuted']} runs re-executed from checkpoints ({v['g5.s2']} of them in "
           f"S2), {v['g5.exact']} equal to the stored metrics exactly.",
+          (f"- Informative: {v['g5.rebuilt.runs']} S2 runs re-executed on caches rebuilt on another machine "
+           f"(pamap2, uma_fall, w_har): {v['g5.rebuilt.exact']} exact, {v['g5.rebuilt.outside_tolerance']} outside the "
+           f"gating tolerance; dataset means within {v['g5.rebuilt.max_abs_dataset_mean_delta_macro_f1']} F1 points; "
+           f"largest single-run difference {v['g5.rebuilt.max_abs_delta_macro_f1']}." if "g5.rebuilt.runs" in v
+           else "- No S2 run re-executed on a rebuilt cache."),
           (f"- Label-shuffle control (S4D, {v['ls.runs']} runs on UP-Fall and UCA-EHAR, permuted training labels): test "
            f"macro-F1 {v['ls.mean_shuffled_test_macro_f1']} against chance {v['ls.mean_chance_test_macro_f1']} and "
            f"{v['ls.mean_stored_test_macro_f1']} with true labels; validation {v['ls.mean_shuffled_val_macro_f1']} vs "

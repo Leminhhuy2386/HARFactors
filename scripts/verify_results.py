@@ -41,6 +41,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+import statistics as st  # noqa: E402
+
 import numpy as np  # noqa: E402
 
 from src.data.sets import S1, S2, SETS  # noqa: E402
@@ -49,9 +51,12 @@ from src.evaluation import variance_components as V  # noqa: E402
 from src.utils import provenance as PV  # noqa: E402
 
 SEED = 20261015
-# S2 datasets with a paper-era cache on the cluster; pamap2, uma_fall and w_har were built on the PC and copied on
-# 2026-10-16 (user-approved). usc_had and motion_sense (unsorted parsers) are not re-executable here.
-S2_REEXEC = ["up_fall", "wear", "uca_ehar", "pamap2", "uma_fall", "w_har"]
+# S2 datasets whose cluster cache is the one the stored runs can be re-executed on (gating).
+S2_REEXEC = ["up_fall", "wear", "uca_ehar"]
+# S2 datasets re-executed on caches rebuilt on the PC (2026-10-15) and copied on 2026-10-16; the stored runs used
+# cloud-VM caches. Informative since rerun 5 (user's decision of 2026-10-16), like dsads. usc_had and motion_sense
+# (unsorted parsers) are not re-executable here.
+S2_REBUILT = ["pamap2", "uma_fall", "w_har"]
 S1_REEXEC = ["utd_mhad", "uci_har", "unimib_shar", "actrectut_gestures", "opportunity", "sad", "hapt", "wisdm"]
 INFORMATIVE = ["dsads"]
 PER_DATASET = 6
@@ -77,7 +82,11 @@ RERUN_REASON = (
     "prediction in a non-degenerate file. (4) The provenance control was void because of (1); it now also requires "
     "the deleted file to be named. The tolerances are unchanged. Rerun 3 (approved by the user on 2026-10-16): adds "
     "the label-shuffle control of Level 3.5.3 (scripts/label_shuffle_control.py), which had not been run; nothing "
-    "else changes. Rerun 4 (approved by the user on 2026-10-16): pamap2, uma_fall and w_har received paper-era caches "
+    "else changes. Rerun 5 (the user's decision of 2026-10-16): rerun 4 FAILed because 36 S2 runs of pamap2, uma_fall "
+    "and w_har, re-executed on caches rebuilt on the PC (the stored runs used cloud-VM caches), exceeded the 2-window "
+    "tolerance, while every dataset mean agrees within 0.1 F1 points and every test size is equal. These three "
+    "datasets are now informative, like dsads; the gating set is that of rerun 3; both results are reported; no "
+    "tolerance changed. Rerun 4 (approved by the user on 2026-10-16): pamap2, uma_fall and w_har received paper-era caches "
     "(built on the PC with scripts/prepare_data.py, split sizes checked, copied to the cluster), so their S2 runs are "
     "re-executed too; the set of re-executed cells grows accordingly and nothing else changes. Rerun 2: rerun 1 FAILed only because --recompute "
     "required the new hash field also in the 414 metric records of the first re-execution run "
@@ -111,7 +120,30 @@ def select_cells() -> tuple[list, list]:
         pool = [(m, d, s, i) for m in S1["models"] for s in S1["seeds"] for i in range(S1["datasets"][d])]
         pick = rng.sample(pool, PER_DATASET)
         (informative if d in INFORMATIVE else gating).extend(pick)
+    informative += [(m, d, s, i) for m in S2["models"] for d in S2_REBUILT for s in S2["seeds"]
+                    for i in range(S2["datasets"][d])]
     return gating, informative
+
+
+def rebuilt_summary(rows: list[dict]) -> dict:
+    """Informative: S2 runs re-executed on the rebuilt caches, judged by the gating tolerance and at dataset level."""
+    ev = [r for r in rows if r["status"] == "evaluated"]
+    per = {}
+    for d in S2_REBUILT:
+        rs = [r for r in ev if r["dataset"] == d]
+        if not rs:
+            continue
+        df = [100 * (r["macro_f1"] - r["stored_macro_f1"]) for r in rs]
+        per[d] = {"runs": len(rs), "exact": sum(r["macro_f1"] == r["stored_macro_f1"] and r["accuracy"] == r["stored_accuracy"]
+                                                for r in rs),
+                  "outside_tolerance": sum(not run_matches(r) for r in rs), "mean_delta_macro_f1": st.mean(df),
+                  "max_abs_delta_macro_f1": max(map(abs, df)),
+                  "max_windows": max(round(abs(r["accuracy"] - r["stored_accuracy"]) * r["test_size"]) for r in rs)}
+    return {"datasets": per, "runs": len(ev), "exact": sum(p["exact"] for p in per.values()),
+            "outside_tolerance": sum(p["outside_tolerance"] for p in per.values()),
+            "max_abs_dataset_mean_delta_macro_f1": max((abs(p["mean_delta_macro_f1"]) for p in per.values()), default=None),
+            "max_abs_delta_macro_f1": max((p["max_abs_delta_macro_f1"] for p in per.values()), default=None),
+            "test_sizes_equal": all(r["test_size"] == r["stored_test_size"] for r in ev)}
 
 
 def run_matches(r: dict) -> bool:
@@ -381,6 +413,19 @@ def access_log_audit() -> dict:
             "ok": not before and all(any(a in l for a in ("H1", "sens1_S2")) for l in s2)}
 
 
+def rebuilt_lines(rb) -> str:
+    if not rb or not rb.get("runs"):
+        return "- No S2 run was re-executed on a rebuilt cache."
+    parts = ", ".join(f"{d} {p['runs']} runs ({p['exact']} exact, {p['outside_tolerance']} outside; dataset mean "
+                      f"{p['mean_delta_macro_f1']:+.3f} F1 points; largest |delta| {p['max_abs_delta_macro_f1']:.2f}, "
+                      f"{p['max_windows']} windows)" for d, p in rb["datasets"].items())
+    return ("- Informative, not gating (since rerun 5, the user's decision): the S2 runs of "
+            f"{', '.join(rb['datasets'])}, re-executed on caches rebuilt on the PC on 2026-10-15 (the stored runs used "
+            f"cloud-VM caches): {rb['runs']} runs, {rb['exact']} exact, {rb['outside_tolerance']} outside the gating "
+            f"tolerance; every test size equal: {rb['test_sizes_equal']}. Per dataset: {parts}. The same splits, inputs "
+            "that differ at float level: the dataset means agree, single runs differ slightly.")
+
+
 def label_shuffle_lines(ls) -> str:
     if not isinstance(ls, dict):
         return "- Label-shuffle control: not run."
@@ -427,6 +472,7 @@ def write_report(gate: dict, gate_path: Path) -> None:
          "- Not re-executable here, verified by their stored records only: S2's usc_had (unsorted parser, no matching "
          "cache); the six runs without a checkpoint (S4D on ActRecTut x2, Mamba on ActRecTut and UniMiB x4); dsads "
          "(below); motion_sense and daphnet (excluded from the analyses).",
+         rebuilt_lines(l3.get("informative_rebuilt")),
          "- dsads (informative, not gating): " + ", ".join(
              f"{d['model']} seed {d['seed']} split {d['split']}: {100 * d['macro_f1']:.1f} vs stored "
              f"{100 * d['stored_macro_f1']:.1f}" for d in l3["informative_dsads"]) +
@@ -488,7 +534,7 @@ def main() -> None:
         obs["L1_provenance"] = {"pass": ok_prov, "output": prov_out.strip().splitlines()[:12]}
         if a.evaluated:  # re-execution done by its own ledger run over exactly these cells
             prior = ROOT / "experiments" / a.evaluated
-            if [tuple(c) for c in json.loads((prior / "config.json").read_text())["cells"]] != gating + informative:
+            if {tuple(c) for c in json.loads((prior / "config.json").read_text())["cells"]} != set(gating + informative):
                 raise SystemExit("the evaluated run did not cover select_cells()")
             res = json.loads((prior / "evaluated.json").read_text())
             eval_dir = prior
@@ -516,9 +562,10 @@ def main() -> None:
             "max_abs_delta_macro_f1_points": max((abs(r["macro_f1"] - r["stored_macro_f1"]) * 100 for r in evaluated),
                                                  default=None),
             "s2_runs_reexecuted": sum(r["dataset"] in S2_REEXEC for r in evaluated),
+            "informative_rebuilt": rebuilt_summary([r for r in inf if r["dataset"] in S2_REBUILT]),
             "informative_dsads": [{k: r.get(k) for k in ("model", "seed", "split", "status", "macro_f1",
                                                          "stored_macro_f1", "test_size", "stored_test_size")}
-                                  for r in inf]}
+                                  for r in inf if r["dataset"] in INFORMATIVE]}
         log_s2_reread("the second implementation of every confirmatory analysis")
         obs["L3_second_implementation"] = second_implementation()
         obs["L3_4_figures"] = regenerate_figures()
