@@ -13,9 +13,9 @@ verified. What blocks submission is listed under § Open items.
 | G2 data | PASS | G2_data.json | S1/S2/S3 complete; ActRecTut sizes equal the authors' files; UTD-MHAD 861 sequences |
 | G3 baseline | PASS | G3_baseline.json | The Random Forest re-run equals Figure 6 to rounding |
 | G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
-| G5 authenticity | PASS (latest: rerun5 FAIL, see below) | G5_results_authenticity_rerun3.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; label-shuffle control collapsed (6/6). The first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
-| G6 traceability | PASS | G6_traceability_rerun2.json | 247 values re-derive; the tampering control was caught |
-| G7 manuscript | PASS | G7_compile_citations_rerun4.json | Official IEEE_lsens.cls (2023): 3 pages, 2 figures, abstract 140 words, 0 problems |
+| G5 authenticity | PASS | G5_results_authenticity_rerun6.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; permutation control on the better of two REML fits (since rerun 6); 50/50 sampled H1 bootstrap refits at the maximum; label-shuffle control collapsed (6/6). Rerun5 FAILed (optimizer, see below); rerun4 FAILed (rebuilt caches); the first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
+| G6 traceability | PASS | G6_traceability_rerun4.json | 538 values re-derive (expanded manuscript); the tampering control was caught |
+| G7 manuscript | PASS | G7_compile_citations_rerun6.json | Expanded draft: 10 pages, 9 figures, 3 tables, abstract 140 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
 
 ### Results
 
@@ -56,10 +56,11 @@ verified. What blocks submission is listed under § Open items.
   - The real-data fits are not affected: on every analysis the independent REML matches statsmodels (H1: R 8.19 in
     both). The bootstrap resamples are fitted by statsmodels only; they were not checked against the independent
     implementation.
-- **Waiting for the user's decision** (the gate rules say a FAIL is not fixed without the user). Proposed: in the
-  control only, keep whichever of statsmodels and the independent REML reaches the higher restricted likelihood
-  (record both), check a sample of the H1 bootstrap refits against the independent REML, then run G5 rerun6 and
-  G6/G7 with the reason recorded. Not proposed: re-running unchanged on another node until it passes.
+- **Resolved (the user approved the fix on 2026-10-16).** The control now fits with statsmodels and with the
+  independent REML and keeps the solution with the higher restricted likelihood (both recorded); the threshold is
+  unchanged. A seeded sample of 50 of the 1,000 H1 bootstrap refits was checked against the independent REML: statsmodels
+  reached the maximum in all 50 (largest shortfall 8e-7; R within 0.03 %). G5 rerun6 PASS (Slurm 86918, hpc22), then
+  G6 rerun4 PASS, G7 rerun6 PASS and `audit --all` PASS on every check.
 
 ### Expansion of 2026-10-16: more figures, exploratory analyses (user request)
 
@@ -139,11 +140,10 @@ Everything below is descriptive or exploratory; no network was trained. Details:
    - PC downloads: `/work/huy.leminh/.cache/harfactors_scratch/pc_downloads/2026-10-16/` (36 files, SOURCES.txt).
      They stay outside the project (copyright).
 5. **dsads:** on the HPC cache its checkpoints score at chance. Its runs (in S1) rest on their records.
-6. **G5 rerun5 FAIL** (2026-10-16): the S2 model-permutation control; an optimizer issue, not a data issue (see
-   § G5 rerun5 FAIL). Waiting for the user's decision on the proposed fix.
-7. **Expanded manuscript** (2026-10-16): Figs. 3-9 and Tables II-III are drawn and written into
-   `paper/manuscript_src.tex`; it compiles (10 pages, every number traceable in a dry run), but is not yet rendered
-   to `paper/manuscript.tex` nor checked by G6/G7, which wait for G5.
+6. ~~G5 rerun5 FAIL~~: **resolved 2026-10-16** (fix approved by the user; G5 rerun6 PASS).
+7. **Expanded manuscript** (2026-10-16): rendered and checked (G6 rerun4, G7 rerun6 PASS): 10 pages, 9 figures,
+   3 tables. The page and figure limits are waived for the draft; the user will shorten it, and the venue limits
+   must be restored in `paper/format_limits.json` before submission.
 
 ### Copy back to the PC
 

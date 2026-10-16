@@ -44,6 +44,7 @@ sys.path.insert(0, str(ROOT))
 import statistics as st  # noqa: E402
 
 import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
 
 from src.data.sets import S1, S2, SETS  # noqa: E402
 from src.evaluation import reml_numpy as RN  # noqa: E402
@@ -67,7 +68,10 @@ TOL = {
     "second_implementation": "every component within max(2 % of its value, 0.05) and R within 2 %",
     "normalisation": "every re-executed training split: per-channel |mean| <= 1e-3 and |sd - 1| <= 1e-2",
     "model_permutation": "with model labels permuted within (dataset, split, seed) cells, (s2_M + s2_MD + s2_MP) / "
-                         "within-dataset variance <= 0.03",
+                         "within-dataset variance <= 0.03, from the fit (statsmodels or the independent REML) with "
+                         "the higher restricted likelihood (since rerun 6; both recorded)",
+    "bootstrap_check": "informative: a seeded sample of the H1 bootstrap refits, statsmodels against the independent "
+                       "REML on the same restricted likelihood",
     "negative_controls": "every tampered copy fails the check that guards it",
 }
 OUT_REPORT = ROOT / "docs" / "verification_report.md"
@@ -91,7 +95,13 @@ RERUN_REASON = (
     "re-executed too; the set of re-executed cells grows accordingly and nothing else changes. Rerun 2: rerun 1 FAILed only because --recompute "
     "required the new hash field also in the 414 metric records of the first re-execution run "
     "(20261015_184242_evaluate_G5), written before the field existed, so even the untampered copy failed. Records "
-    "without the field are now checked by recomputation only, records with it by hash and recomputation.")
+    "without the field are now checked by recomputation only, records with it by hash and recomputation. Rerun 6 "
+    "(approved by the user on 2026-10-16): rerun 5 FAILed on the S2 model-permutation control only. statsmodels' "
+    "default optimizer reported convergence at a point whose restricted log-likelihood is 13.75 below the optimum "
+    "(s2_M 16.3 instead of 0), depending on the BLAS thread count (docs/diagnostics/). The control now fits with "
+    "statsmodels and with the independent REML and keeps the solution with the higher restricted likelihood, both "
+    "recorded; the threshold is unchanged. A seeded sample of 50 H1 bootstrap refits is checked against the "
+    "independent REML (informative).")
 GATE = ROOT / "results" / "gates" / "G5_results_authenticity.json"
 
 
@@ -200,21 +210,94 @@ def second_implementation() -> list[dict]:
     return rows
 
 
+def neg_reml_at(df: pd.DataFrame, comp: dict, has_seeds: bool = True) -> float:
+    """The restricted negative log-likelihood of the independent implementation, evaluated at given components, so
+    that solutions of statsmodels and of the independent REML compare on one objective."""
+    ker = RN.kernels(df, has_seeds)
+    names = list(ker)
+    logv = np.log(np.maximum([comp[n] for n in names] + [comp["e"]], np.exp(RN.FLOOR)))
+    X = pd.get_dummies(df["dataset"]).to_numpy(float)
+    return float(RN.neg_reml(logv, df["y"].to_numpy(float), X, [ker[n] for n in names]))
+
+
+def best_fit(df: pd.DataFrame, has_seeds: bool = True) -> dict:
+    """statsmodels and the independent REML; the solution with the higher restricted likelihood counts, both are
+    recorded (since rerun 6: statsmodels' default optimizer can report convergence at a non-maximum)."""
+    sm, rn = V.fit(df, has_seeds), RN.fit(df, has_seeds)
+    sm_neg = neg_reml_at(df, sm["components"], has_seeds) if sm["converged"] else float("inf")
+    rn_neg = neg_reml_at(df, rn["components"], has_seeds)
+    chosen = "statsmodels" if sm_neg <= rn_neg else "numpy_reml"
+    return {"chosen": chosen, "components": (sm if chosen == "statsmodels" else rn)["components"],
+            "statsmodels": {"converged": sm["converged"], "method": sm.get("method"), "neg_reml": sm_neg,
+                            "components": sm.get("components")},
+            "numpy_reml": {"converged": rn["converged"], "neg_reml": rn_neg, "components": rn["components"]}}
+
+
+def model_share(c: dict) -> float:
+    return (c["M"] + c["MD"] + c["MP"]) / sum(c.values())
+
+
 def model_permutation() -> list[dict]:
     rows = []
     for name, spec in (("S2", S2), ("S1", S1)):
         inc = V.inclusion(spec)
         df = V.load(spec, "macro_f1", [d for d, v in inc.items() if v["included"]])
-        perm = RN.permute_models(df, SEED)
-        f = V.fit(perm, True)
-        c = f["components"]
-        within = sum(c.values())
-        share = (c["M"] + c["MD"] + c["MP"]) / within
-        real = V.fit(df, True)["components"]
-        rows.append({"set": name, "permuted_model_share": share, "permuted_components": c,
-                     "real_model_share": (real["M"] + real["MD"] + real["MP"]) / sum(real.values()),
+        perm = best_fit(RN.permute_models(df, SEED), True)
+        real = best_fit(df, True)
+        share = model_share(perm["components"])
+        rows.append({"set": name, "permuted_model_share": share, "permuted_components": perm["components"],
+                     "permuted_fits": perm, "real_model_share": model_share(real["components"]), "real_fits": real,
                      "caught": share <= 0.03})
     return rows
+
+
+def _resample_frame(df: pd.DataFrame, draw: list) -> pd.DataFrame:
+    """The data frame of one bootstrap resample, built as src/evaluation/variance_components._fit_resample builds it."""
+    by = {k: g for k, g in df.groupby(["dataset", "split"])}
+    parts = []
+    for j, (d, s) in enumerate(draw):
+        g = by[(d, s)].copy()
+        g["split"] = f"{s}#{j}"
+        parts.append(g)
+    return pd.concat(parts, ignore_index=True)
+
+
+def _check_resample(args) -> dict:
+    i, frame = args
+    f = best_fit(frame, True)
+    sm, rn = f["statsmodels"], f["numpy_reml"]
+    best = min(sm["neg_reml"], rn["neg_reml"])
+    r = lambda c: c["P"] / (c["M"] + c["MD"] + c["MP"]) if c and (c["M"] + c["MD"] + c["MP"]) > 0 else float("inf")  # noqa: E731
+    return {"resample": i, "statsmodels_method": sm["method"], "statsmodels_converged": sm["converged"],
+            "statsmodels_shortfall": sm["neg_reml"] - best, "numpy_shortfall": rn["neg_reml"] - best,
+            "R_statsmodels": r(sm["components"]), "R_numpy_reml": r(rn["components"])}
+
+
+BOOT_CHECK = 50  # bootstrap resamples of H1 refitted by both implementations (seeded sample of the 1,000)
+
+
+def bootstrap_check(workers: int) -> dict:
+    """Informative: is statsmodels at the maximum of the restricted likelihood in the H1 bootstrap refits? A seeded
+    sample of the confirmatory resamples (same draws, same construction, one BLAS thread per worker as in the
+    confirmatory run) is refitted by statsmodels and by the independent REML."""
+    from concurrent.futures import ProcessPoolExecutor
+    r = json.loads((ROOT / "results/metrics/confirmatory/H1.json").read_text())
+    df = V.load(S2, r["outcome"], r["datasets"])
+    draws = V.resamples(df, r["bootstrap"]["resamples"])
+    pick = sorted(random.Random(SEED).sample(range(len(draws)), BOOT_CHECK))
+    args = [(i, _resample_frame(df, draws[i])) for i in pick]
+    with ProcessPoolExecutor(max(1, workers), initializer=V._one_blas_thread) as ex:
+        rows = list(ex.map(_check_resample, args))
+    at_max = [x for x in rows if x["statsmodels_shortfall"] <= 0.01]
+    rel = [abs(x["R_statsmodels"] - x["R_numpy_reml"]) / x["R_numpy_reml"] for x in rows
+           if x["statsmodels_converged"] and np.isfinite(x["R_numpy_reml"]) and x["R_numpy_reml"] > 0]
+    return {"resamples_checked": len(rows), "of": len(draws), "seed": SEED,
+            "statsmodels_at_maximum": len(at_max), "criterion": "restricted -log-likelihood within 0.01 of the better "
+                                                                 "of the two fits",
+            "max_statsmodels_shortfall": max(x["statsmodels_shortfall"] for x in rows),
+            "max_relative_R_difference": max(rel) if rel else None,
+            "median_relative_R_difference": float(np.median(rel)) if rel else None, "rows": rows,
+            "note": "informative: the pre-registered estimator is statsmodels; this measures how often it stops short"}
 
 
 def regenerate_figures() -> dict:
@@ -498,7 +581,15 @@ def write_report(gate: dict, gate_path: Path) -> None:
           "## Negative controls (Level 5)", "", "| Tampering | Check | Caught |", "|---|---|---|"]
     L += [f"| {r['tampering']} | {r['check']} | {r['caught']} |" for r in neg]
     L += [f"| model labels permuted within cells ({p['set']}) | model share {p['permuted_model_share']:.4f} "
-          f"(real {p['real_model_share']:.3f}) | {p['caught']} |" for p in perm]
+          f"(real {p['real_model_share']:.3f}; fit kept: {p.get('permuted_fits', {}).get('chosen', 'statsmodels')}) "
+          f"| {p['caught']} |" for p in perm]
+    bc = o.get("L3_bootstrap_check")
+    if isinstance(bc, dict):
+        L += ["", f"Bootstrap refit check (informative): of {bc['resamples_checked']} H1 resamples (seeded sample of "
+                  f"{bc['of']}), statsmodels reached the maximum of the restricted likelihood in "
+                  f"{bc['statsmodels_at_maximum']}; largest shortfall {bc['max_statsmodels_shortfall']:.3f}; largest "
+                  f"relative difference in R from the independent REML {bc['max_relative_R_difference']:.3f} (median "
+                  f"{bc['median_relative_R_difference']:.4f})."]
     L += ["", "The traceability control (an edited number in a metric file) belongs to gate G6.", "",
           "## Auditor", "", "```", *[x for x in o["audit"]["output"] if x.startswith(("PASS", "FAIL", "SKIPPED"))], "```", ""]
     if gate.get("rerun_reason"):
@@ -575,6 +666,8 @@ def main() -> None:
                                "label_shuffle_control": label_shuffle(a.label_shuffle)}
         log_s2_reread("the model-label permutation control")
         obs["L5_model_permutation"] = model_permutation()
+        log_s2_reread("the bootstrap refit check (informative)")
+        obs["L3_bootstrap_check"] = bootstrap_check(a.workers)
         log_s2_reread("the auditor's --seeds check and its negative control")
         obs["L5_negative_controls"] = negative_controls(eval_dir)
         ok_rest, rest_out = audit("--ledger", "--data", "--synthetic", "--recompute", "--reproduce", "--seeds")

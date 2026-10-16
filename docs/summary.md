@@ -48,6 +48,7 @@ S3's R is the conservative R′ = s2_P / (s2_M + s2_MD + s2_e) (one run per spli
 
 - G3: Random Forest re-run vs Figure 6: utd_mhad 51.20 vs 51.20, uci_har 84.69 vs 84.69, unimib_shar 44.49 vs 44.49, actrectut_gestures 41.89 vs 41.89.
 - G5 PASS: 408 runs re-executed from checkpoints (360 of them in S2), 373 equal to the stored metrics exactly.
+- Informative: 348 S2 runs re-executed on caches rebuilt on another machine (pamap2, uma_fall, w_har): 179 exact, 36 outside the gating tolerance; dataset means within 0.07 F1 points; largest single-run difference 3.25.
 - Label-shuffle control (S4D, 6 runs on UP-Fall and UCA-EHAR, permuted training labels): test macro-F1 4.9 against chance 8.7 and 54.5 with true labels; validation 6.8 vs 8.7 vs 85.9; collapsed on every run: True.
 
 ## 5. Excluded runs (agents/08_review.md, check 9)

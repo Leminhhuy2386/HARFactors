@@ -3071,7 +3071,7 @@
  {
   "id": "g5.verdict",
   "description": "G5 verdict",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "verdict"
   ],
@@ -3082,7 +3082,7 @@
  {
   "id": "g5.reexecuted",
   "description": "G5: runs re-executed from checkpoints (gating)",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_reexecution",
@@ -3095,7 +3095,7 @@
  {
   "id": "g5.exact",
   "description": "G5: re-executed runs equal to the stored metrics exactly",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_reexecution",
@@ -3108,7 +3108,7 @@
  {
   "id": "g5.s2",
   "description": "G5: S2 runs re-executed",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_reexecution",
@@ -3119,9 +3119,79 @@
   "produced_by": "scripts/verify_results.py"
  },
  {
+  "id": "g5.rebuilt.runs",
+  "description": "G5 informative, rebuilt caches: S2 runs re-executed on rebuilt caches",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
+  "path": [
+   "observed_value",
+   "L3_reexecution",
+   "informative_rebuilt",
+   "runs"
+  ],
+  "format": "d",
+  "printed": "348",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "g5.rebuilt.exact",
+  "description": "G5 informative, rebuilt caches: of them exact",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
+  "path": [
+   "observed_value",
+   "L3_reexecution",
+   "informative_rebuilt",
+   "exact"
+  ],
+  "format": "d",
+  "printed": "179",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "g5.rebuilt.outside_tolerance",
+  "description": "G5 informative, rebuilt caches: of them outside the gating tolerance",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
+  "path": [
+   "observed_value",
+   "L3_reexecution",
+   "informative_rebuilt",
+   "outside_tolerance"
+  ],
+  "format": "d",
+  "printed": "36",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "g5.rebuilt.max_abs_dataset_mean_delta_macro_f1",
+  "description": "G5 informative, rebuilt caches: largest |dataset-mean delta macro-F1|",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
+  "path": [
+   "observed_value",
+   "L3_reexecution",
+   "informative_rebuilt",
+   "max_abs_dataset_mean_delta_macro_f1"
+  ],
+  "format": ".2f",
+  "printed": "0.07",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "g5.rebuilt.max_abs_delta_macro_f1",
+  "description": "G5 informative, rebuilt caches: largest |single-run delta macro-F1|",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
+  "path": [
+   "observed_value",
+   "L3_reexecution",
+   "informative_rebuilt",
+   "max_abs_delta_macro_f1"
+  ],
+  "format": ".2f",
+  "printed": "3.25",
+  "produced_by": "scripts/verify_results.py"
+ },
+ {
   "id": "ls.runs",
   "description": "label-shuffle control: runs",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_5_leakage",
@@ -3135,7 +3205,7 @@
  {
   "id": "ls.mean_shuffled_test_macro_f1",
   "description": "label-shuffle control: mean shuffled-label test macro-F1",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_5_leakage",
@@ -3149,7 +3219,7 @@
  {
   "id": "ls.mean_chance_test_macro_f1",
   "description": "label-shuffle control: mean chance test macro-F1",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_5_leakage",
@@ -3163,7 +3233,7 @@
  {
   "id": "ls.mean_stored_test_macro_f1",
   "description": "label-shuffle control: mean true-label test macro-F1 (stored runs)",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_5_leakage",
@@ -3177,7 +3247,7 @@
  {
   "id": "ls.mean_shuffled_val_macro_f1",
   "description": "label-shuffle control: mean shuffled-label validation macro-F1",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_5_leakage",
@@ -3191,7 +3261,7 @@
  {
   "id": "ls.mean_chance_val_macro_f1",
   "description": "label-shuffle control: mean chance validation macro-F1",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_5_leakage",
@@ -3205,7 +3275,7 @@
  {
   "id": "ls.mean_stored_val_macro_f1",
   "description": "label-shuffle control: mean true-label validation macro-F1 (stored runs)",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_5_leakage",
@@ -3219,7 +3289,7 @@
  {
   "id": "ls.all_collapsed",
   "description": "label-shuffle control: every run collapsed to chance",
-  "artifact": "results/gates/G5_results_authenticity_rerun3.json",
+  "artifact": "results/gates/G5_results_authenticity_rerun6.json",
   "path": [
    "observed_value",
    "L3_5_leakage",
@@ -3229,5 +3299,3691 @@
   "format": "s",
   "printed": "True",
   "produced_by": "scripts/verify_results.py"
+ },
+ {
+  "id": "tab02.unimib_shar.channels",
+  "description": "Table II, unimib_shar: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   0,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.unimib_shar.subjects",
+  "description": "Table II, unimib_shar: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   0,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "30",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.unimib_shar.classes",
+  "description": "Table II, unimib_shar: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   0,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "17",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.unimib_shar.hz",
+  "description": "Table II, unimib_shar: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   0,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "50",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.unimib_shar.windows",
+  "description": "Table II, unimib_shar: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   0,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "7,195",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.unimib_shar.splits",
+  "description": "Table II, unimib_shar: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   0,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wisdm.channels",
+  "description": "Table II, wisdm: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   1,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wisdm.subjects",
+  "description": "Table II, wisdm: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   1,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "36",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wisdm.classes",
+  "description": "Table II, wisdm: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   1,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wisdm.hz",
+  "description": "Table II, wisdm: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   1,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "20",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wisdm.windows",
+  "description": "Table II, wisdm: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   1,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "34,097",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wisdm.splits",
+  "description": "Table II, wisdm: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   1,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.hapt.channels",
+  "description": "Table II, hapt: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   2,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.hapt.subjects",
+  "description": "Table II, hapt: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   2,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "30",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.hapt.classes",
+  "description": "Table II, hapt: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   2,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "12",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.hapt.hz",
+  "description": "Table II, hapt: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   2,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "50",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.hapt.windows",
+  "description": "Table II, hapt: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   2,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "9,056",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.hapt.splits",
+  "description": "Table II, hapt: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   2,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.utd_mhad.channels",
+  "description": "Table II, utd_mhad: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   3,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.utd_mhad.subjects",
+  "description": "Table II, utd_mhad: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   3,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "8",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.utd_mhad.classes",
+  "description": "Table II, utd_mhad: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   3,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "27",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.utd_mhad.hz",
+  "description": "Table II, utd_mhad: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   3,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "50",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.utd_mhad.windows",
+  "description": "Table II, utd_mhad: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   3,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "783",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.utd_mhad.splits",
+  "description": "Table II, utd_mhad: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   3,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "8",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.daphnet.channels",
+  "description": "Table II, daphnet: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   4,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.daphnet.subjects",
+  "description": "Table II, daphnet: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   4,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.daphnet.classes",
+  "description": "Table II, daphnet: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   4,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.daphnet.hz",
+  "description": "Table II, daphnet: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   4,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "64",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.daphnet.windows",
+  "description": "Table II, daphnet: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   4,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "11,160",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.daphnet.splits",
+  "description": "Table II, daphnet: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   4,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uci_har.channels",
+  "description": "Table II, uci_har: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   5,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uci_har.subjects",
+  "description": "Table II, uci_har: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   5,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "30",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uci_har.classes",
+  "description": "Table II, uci_har: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   5,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uci_har.hz",
+  "description": "Table II, uci_har: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   5,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "50",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uci_har.windows",
+  "description": "Table II, uci_har: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   5,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "8,188",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uci_har.splits",
+  "description": "Table II, uci_har: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   5,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.actrectut_gestures.channels",
+  "description": "Table II, actrectut_gestures: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   6,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "15",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.actrectut_gestures.subjects",
+  "description": "Table II, actrectut_gestures: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   6,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "2",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.actrectut_gestures.classes",
+  "description": "Table II, actrectut_gestures: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   6,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "12",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.actrectut_gestures.hz",
+  "description": "Table II, actrectut_gestures: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   6,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.actrectut_gestures.windows",
+  "description": "Table II, actrectut_gestures: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   6,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "798",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.actrectut_gestures.splits",
+  "description": "Table II, actrectut_gestures: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   6,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "2",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.dsads.channels",
+  "description": "Table II, dsads: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   7,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "45",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.dsads.subjects",
+  "description": "Table II, dsads: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   7,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "8",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.dsads.classes",
+  "description": "Table II, dsads: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   7,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "19",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.dsads.hz",
+  "description": "Table II, dsads: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   7,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "25",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.dsads.windows",
+  "description": "Table II, dsads: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   7,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "30,096",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.dsads.splits",
+  "description": "Table II, dsads: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   7,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "8",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.sad.channels",
+  "description": "Table II, sad: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   8,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "60",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.sad.subjects",
+  "description": "Table II, sad: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   8,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.sad.classes",
+  "description": "Table II, sad: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   8,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "7",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.sad.hz",
+  "description": "Table II, sad: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   8,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "50",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.sad.windows",
+  "description": "Table II, sad: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   8,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "8,260",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.sad.splits",
+  "description": "Table II, sad: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   8,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.opportunity.channels",
+  "description": "Table II, opportunity: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   9,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "133",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.opportunity.subjects",
+  "description": "Table II, opportunity: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   9,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "4",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.opportunity.classes",
+  "description": "Table II, opportunity: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   9,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "5",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.opportunity.hz",
+  "description": "Table II, opportunity: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   9,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "30",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.opportunity.windows",
+  "description": "Table II, opportunity: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   9,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "10,550",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.opportunity.splits",
+  "description": "Table II, opportunity: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   9,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "4",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.usc_had.channels",
+  "description": "Table II, usc_had: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   10,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.usc_had.subjects",
+  "description": "Table II, usc_had: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   10,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "14",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.usc_had.classes",
+  "description": "Table II, usc_had: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   10,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "12",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.usc_had.hz",
+  "description": "Table II, usc_had: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   10,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "100",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.usc_had.windows",
+  "description": "Table II, usc_had: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   10,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "17,386",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.usc_had.splits",
+  "description": "Table II, usc_had: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   10,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uca_ehar.channels",
+  "description": "Table II, uca_ehar: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   11,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "7",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uca_ehar.subjects",
+  "description": "Table II, uca_ehar: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   11,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "20",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uca_ehar.classes",
+  "description": "Table II, uca_ehar: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   11,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "12",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uca_ehar.hz",
+  "description": "Table II, uca_ehar: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   11,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "25",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uca_ehar.windows",
+  "description": "Table II, uca_ehar: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   11,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "16,554",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uca_ehar.splits",
+  "description": "Table II, uca_ehar: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   11,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.w_har.channels",
+  "description": "Table II, w_har: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   12,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "7",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.w_har.subjects",
+  "description": "Table II, w_har: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   12,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "22",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.w_har.classes",
+  "description": "Table II, w_har: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   12,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.w_har.hz",
+  "description": "Table II, w_har: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   12,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "250",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.w_har.windows",
+  "description": "Table II, w_har: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   12,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "5,092",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.w_har.splits",
+  "description": "Table II, w_har: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   12,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wear.channels",
+  "description": "Table II, wear: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   13,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "12",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wear.subjects",
+  "description": "Table II, wear: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   13,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "24",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wear.classes",
+  "description": "Table II, wear: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   13,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "18",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wear.hz",
+  "description": "Table II, wear: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   13,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "50",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wear.windows",
+  "description": "Table II, wear: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   13,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "26,739",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.wear.splits",
+  "description": "Table II, wear: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   13,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.motion_sense.channels",
+  "description": "Table II, motion_sense: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   14,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "18",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.motion_sense.subjects",
+  "description": "Table II, motion_sense: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   14,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "24",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.motion_sense.classes",
+  "description": "Table II, motion_sense: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   14,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.motion_sense.hz",
+  "description": "Table II, motion_sense: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   14,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "50",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.motion_sense.windows",
+  "description": "Table II, motion_sense: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   14,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "18,300",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.motion_sense.splits",
+  "description": "Table II, motion_sense: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   14,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uma_fall.channels",
+  "description": "Table II, uma_fall: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   15,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "39",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uma_fall.subjects",
+  "description": "Table II, uma_fall: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   15,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "19",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uma_fall.classes",
+  "description": "Table II, uma_fall: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   15,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "15",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uma_fall.hz",
+  "description": "Table II, uma_fall: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   15,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "200",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uma_fall.windows",
+  "description": "Table II, uma_fall: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   15,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "6,240",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.uma_fall.splits",
+  "description": "Table II, uma_fall: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   15,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.up_fall.channels",
+  "description": "Table II, up_fall: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   16,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "42",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.up_fall.subjects",
+  "description": "Table II, up_fall: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   16,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "17",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.up_fall.classes",
+  "description": "Table II, up_fall: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   16,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "11",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.up_fall.hz",
+  "description": "Table II, up_fall: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   16,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "20",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.up_fall.windows",
+  "description": "Table II, up_fall: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   16,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "8,974",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.up_fall.splits",
+  "description": "Table II, up_fall: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   16,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.pamap2.channels",
+  "description": "Table II, pamap2: channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   17,
+   "channels"
+  ],
+  "format": "d",
+  "printed": "52",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.pamap2.subjects",
+  "description": "Table II, pamap2: subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   17,
+   "subjects"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.pamap2.classes",
+  "description": "Table II, pamap2: classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   17,
+   "classes"
+  ],
+  "format": "d",
+  "printed": "13",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.pamap2.hz",
+  "description": "Table II, pamap2: hz",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   17,
+   "hz"
+  ],
+  "format": "g",
+  "printed": "100",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.pamap2.windows",
+  "description": "Table II, pamap2: windows",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   17,
+   "windows"
+  ],
+  "format": ",d",
+  "printed": "12,786",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab02.pamap2.splits",
+  "description": "Table II, pamap2: splits",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "rows",
+   17,
+   "splits"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.channels_min",
+  "description": "S1 and S2 datasets: fewest channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "channels_min"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.channels_max",
+  "description": "S1 and S2 datasets: most channels",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "channels_max"
+  ],
+  "format": "d",
+  "printed": "133",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.subjects_min",
+  "description": "S1 and S2 datasets: fewest subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "subjects_min"
+  ],
+  "format": "d",
+  "printed": "2",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.subjects_max",
+  "description": "S1 and S2 datasets: most subjects",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "subjects_max"
+  ],
+  "format": "d",
+  "printed": "36",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.classes_min",
+  "description": "S1 and S2 datasets: fewest classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "classes_min"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.classes_max",
+  "description": "S1 and S2 datasets: most classes",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "classes_max"
+  ],
+  "format": "d",
+  "printed": "27",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.hz_min",
+  "description": "S1 and S2 datasets: lowest sampling rate",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "hz_min"
+  ],
+  "format": "g",
+  "printed": "20",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.hz_max",
+  "description": "S1 and S2 datasets: highest sampling rate",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "hz_max"
+  ],
+  "format": "g",
+  "printed": "250",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.windows_total",
+  "description": "S1 and S2 datasets: windows over the 18 datasets",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "windows_total"
+  ],
+  "format": ",d",
+  "printed": "232,254",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "datasets.datasets",
+  "description": "S1 and S2 datasets: datasets",
+  "artifact": "results/table_data/tab02_datasets.json",
+  "path": [
+   "summary",
+   "datasets"
+  ],
+  "format": "d",
+  "printed": "18",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recurrencenet.d_model",
+  "description": "Table III, recurrencenet: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   0,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recurrencenet.layers",
+  "description": "Table III, recurrencenet: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   0,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recurrencenet.embedding_dim",
+  "description": "Table III, recurrencenet: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   0,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recurrencenet.params_ref",
+  "description": "Table III, recurrencenet: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   0,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "24,675",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recurrencenet.params_min",
+  "description": "Table III, recurrencenet: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   0,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "23,886",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recurrencenet.params_max",
+  "description": "Table III, recurrencenet: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   0,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "28,013",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.s4d.d_model",
+  "description": "Table III, s4d: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   1,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "64",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.s4d.layers",
+  "description": "Table III, s4d: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   1,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "2",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.s4d.embedding_dim",
+  "description": "Table III, s4d: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   1,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "64",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.s4d.params_ref",
+  "description": "Table III, s4d: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   1,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "27,675",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.s4d.params_min",
+  "description": "Table III, s4d: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   1,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "26,118",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.s4d.params_max",
+  "description": "Table III, s4d: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   1,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "34,373",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_sel_clock.d_model",
+  "description": "Table III, hystnet_sel_clock: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   2,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_sel_clock.layers",
+  "description": "Table III, hystnet_sel_clock: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   2,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_sel_clock.embedding_dim",
+  "description": "Table III, hystnet_sel_clock: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   2,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_sel_clock.params_ref",
+  "description": "Table III, hystnet_sel_clock: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   2,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "23,579",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_sel_clock.params_min",
+  "description": "Table III, hystnet_sel_clock: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   2,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "22,790",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_sel_clock.params_max",
+  "description": "Table III, hystnet_sel_clock: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   2,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "26,917",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.quantilenet.d_model",
+  "description": "Table III, quantilenet: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   3,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.quantilenet.layers",
+  "description": "Table III, quantilenet: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   3,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.quantilenet.embedding_dim",
+  "description": "Table III, quantilenet: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   3,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.quantilenet.params_ref",
+  "description": "Table III, quantilenet: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   3,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "20,763",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.quantilenet.params_min",
+  "description": "Table III, quantilenet: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   3,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "19,974",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.quantilenet.params_max",
+  "description": "Table III, quantilenet: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   3,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "24,101",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.mamba.d_model",
+  "description": "Table III, mamba: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   4,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.mamba.layers",
+  "description": "Table III, mamba: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   4,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "2",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.mamba.embedding_dim",
+  "description": "Table III, mamba: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   4,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.mamba.params_ref",
+  "description": "Table III, mamba: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   4,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "21,147",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.mamba.params_min",
+  "description": "Table III, mamba: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   4,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "20,358",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.mamba.params_max",
+  "description": "Table III, mamba: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   4,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "24,485",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_nomem.d_model",
+  "description": "Table III, hystnet_nomem: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   5,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_nomem.layers",
+  "description": "Table III, hystnet_nomem: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   5,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_nomem.embedding_dim",
+  "description": "Table III, hystnet_nomem: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   5,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_nomem.params_ref",
+  "description": "Table III, hystnet_nomem: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   5,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "19,995",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_nomem.params_min",
+  "description": "Table III, hystnet_nomem: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   5,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "19,206",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.hystnet_nomem.params_max",
+  "description": "Table III, hystnet_nomem: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   5,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "23,333",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recstatnet.d_model",
+  "description": "Table III, recstatnet: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   6,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recstatnet.layers",
+  "description": "Table III, recstatnet: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   6,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recstatnet.embedding_dim",
+  "description": "Table III, recstatnet: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   6,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "64",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recstatnet.params_ref",
+  "description": "Table III, recstatnet: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   6,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "26,451",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recstatnet.params_min",
+  "description": "Table III, recstatnet: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   6,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "24,582",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.recstatnet.params_max",
+  "description": "Table III, recstatnet: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   6,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "46,357",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet_rec.d_model",
+  "description": "Table III, lawnet_rec: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   7,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "32",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet_rec.layers",
+  "description": "Table III, lawnet_rec: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   7,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet_rec.embedding_dim",
+  "description": "Table III, lawnet_rec: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   7,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "64",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet_rec.params_ref",
+  "description": "Table III, lawnet_rec: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   7,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "27,553",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet_rec.params_min",
+  "description": "Table III, lawnet_rec: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   7,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "25,316",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet_rec.params_max",
+  "description": "Table III, lawnet_rec: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   7,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "49,437",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet.d_model",
+  "description": "Table III, lawnet: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   8,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "48",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet.layers",
+  "description": "Table III, lawnet: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   8,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet.embedding_dim",
+  "description": "Table III, lawnet: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   8,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "80",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet.params_ref",
+  "description": "Table III, lawnet: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   8,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "19,033",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet.params_min",
+  "description": "Table III, lawnet: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   8,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "16,412",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.lawnet.params_max",
+  "description": "Table III, lawnet: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   8,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "42,597",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.statnet.d_model",
+  "description": "Table III, statnet: d_model",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   9,
+   "d_model"
+  ],
+  "format": "d",
+  "printed": "48",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.statnet.layers",
+  "description": "Table III, statnet: layers",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   9,
+   "layers"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.statnet.embedding_dim",
+  "description": "Table III, statnet: embedding_dim",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   9,
+   "embedding_dim"
+  ],
+  "format": "d",
+  "printed": "80",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.statnet.params_ref",
+  "description": "Table III, statnet: params_ref",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   9,
+   "params_ref"
+  ],
+  "format": ",d",
+  "printed": "17,931",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.statnet.params_min",
+  "description": "Table III, statnet: params_min",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   9,
+   "params_min"
+  ],
+  "format": ",d",
+  "printed": "15,678",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "tab03.statnet.params_max",
+  "description": "Table III, statnet: params_max",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "rows",
+   9,
+   "params_max"
+  ],
+  "format": ",d",
+  "printed": "39,517",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "models.params_ref_min",
+  "description": "ten networks: fewest parameters, reference input",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "summary",
+   "params_ref_min"
+  ],
+  "format": ",d",
+  "printed": "17,931",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "models.params_ref_max",
+  "description": "ten networks: most parameters, reference input",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "summary",
+   "params_ref_max"
+  ],
+  "format": ",d",
+  "printed": "27,675",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "models.params_all_min",
+  "description": "ten networks: fewest parameters over all datasets",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "summary",
+   "params_all_min"
+  ],
+  "format": ",d",
+  "printed": "15,678",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "models.params_all_max",
+  "description": "ten networks: most parameters over all datasets",
+  "artifact": "results/table_data/tab03_models.json",
+  "path": [
+   "summary",
+   "params_all_max"
+  ],
+  "format": ",d",
+  "printed": "49,437",
+  "produced_by": "src/visualization/detail_figures.py"
+ },
+ {
+  "id": "learned.checkpoints",
+  "description": "learned memory parameters: checkpoints read",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "checkpoints_read"
+  ],
+  "format": ",d",
+  "printed": "766",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d.p05",
+  "description": "learned S4D time constant / window: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d",
+   "quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.18",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d.init_p05",
+  "description": "initial S4D time constant / window: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d",
+   "init_quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.18",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d.p50",
+  "description": "learned S4D time constant / window: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d",
+   "quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "1.8",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d.init_p50",
+  "description": "initial S4D time constant / window: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d",
+   "init_quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "1.6",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d.p95",
+  "description": "learned S4D time constant / window: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d",
+   "quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "13",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d.init_p95",
+  "description": "initial S4D time constant / window: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d",
+   "init_quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "13",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d.n",
+  "description": "learned S4D time constant / window: values",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d",
+   "n"
+  ],
+  "format": ",d",
+  "printed": "389,120",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.p05",
+  "description": "learned S4D decay rate: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.37",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.init_p05",
+  "description": "initial S4D decay rate: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "init_quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.5",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.p50",
+  "description": "learned S4D decay rate: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.5",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.init_p50",
+  "description": "initial S4D decay rate: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "init_quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.5",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.p95",
+  "description": "learned S4D decay rate: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.62",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.init_p95",
+  "description": "initial S4D decay rate: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "init_quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.5",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.n",
+  "description": "learned S4D decay rate: values",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "n"
+  ],
+  "format": ",d",
+  "printed": "389,120",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.hystnet_sel_clock.p05",
+  "description": "learned play base width: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "hystnet_sel_clock",
+   "quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.039",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.hystnet_sel_clock.init_p05",
+  "description": "initial play base width: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "hystnet_sel_clock",
+   "init_quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.039",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.hystnet_sel_clock.p50",
+  "description": "learned play base width: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "hystnet_sel_clock",
+   "quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.36",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.hystnet_sel_clock.init_p50",
+  "description": "initial play base width: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "hystnet_sel_clock",
+   "init_quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.35",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.hystnet_sel_clock.p95",
+  "description": "learned play base width: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "hystnet_sel_clock",
+   "quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "1.9",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.hystnet_sel_clock.init_p95",
+  "description": "initial play base width: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "hystnet_sel_clock",
+   "init_quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "1.9",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.hystnet_sel_clock.n",
+  "description": "learned play base width: values",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "hystnet_sel_clock",
+   "n"
+  ],
+  "format": ",d",
+  "printed": "73,728",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.p05",
+  "description": "learned quantile level: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.1",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.init_p05",
+  "description": "initial quantile level: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "init_quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.1",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.p50",
+  "description": "learned quantile level: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.5",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.init_p50",
+  "description": "initial quantile level: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "init_quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.5",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.p95",
+  "description": "learned quantile level: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.9",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.init_p95",
+  "description": "initial quantile level: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "init_quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.9",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.n",
+  "description": "learned quantile level: values",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "n"
+  ],
+  "format": ",d",
+  "printed": "73,728",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_eta.p05",
+  "description": "learned quantile step: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_eta",
+   "quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.016",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_eta.init_p05",
+  "description": "initial quantile step: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_eta",
+   "init_quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.016",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_eta.p50",
+  "description": "learned quantile step: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_eta",
+   "quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.052",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_eta.init_p50",
+  "description": "initial quantile step: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_eta",
+   "init_quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.05",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_eta.p95",
+  "description": "learned quantile step: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_eta",
+   "quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.16",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_eta.init_p95",
+  "description": "initial quantile step: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_eta",
+   "init_quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.13",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_eta.n",
+  "description": "learned quantile step: values",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_eta",
+   "n"
+  ],
+  "format": ",d",
+  "printed": "73,728",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.p05",
+  "description": "learned recurrence radius: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.47",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.init_p05",
+  "description": "initial recurrence radius: p05",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "init_quantiles",
+   "p05"
+  ],
+  "format": ".2g",
+  "printed": "0.5",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.p50",
+  "description": "learned recurrence radius: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.51",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.init_p50",
+  "description": "initial recurrence radius: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "init_quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.5",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.p95",
+  "description": "learned recurrence radius: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.55",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.init_p95",
+  "description": "initial recurrence radius: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "init_quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.5",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.n",
+  "description": "learned recurrence radius: values",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "n"
+  ],
+  "format": ",d",
+  "printed": "4,608",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.change_p50",
+  "description": "change from initialisation, quantile level: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "exact_change",
+   "quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.0047",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.change_p95",
+  "description": "change from initialisation, quantile level: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "exact_change",
+   "quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.041",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.quantilenet_tau.change_below_005",
+  "description": "change from initialisation below 0.05, quantile level (%)",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "quantilenet_tau",
+   "exact_change",
+   "share_below_0.05"
+  ],
+  "format": "pct",
+  "printed": "97",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.change_p50",
+  "description": "change from initialisation, recurrence radius: p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "exact_change",
+   "quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.014",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.change_p95",
+  "description": "change from initialisation, recurrence radius: p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "exact_change",
+   "quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.057",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.recurrencenet.change_below_005",
+  "description": "change from initialisation below 0.05, recurrence radius (%)",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "recurrencenet",
+   "exact_change",
+   "share_below_0.05"
+  ],
+  "format": "pct",
+  "printed": "92",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.change_p50",
+  "description": "change from initialisation, S4D decay rate (log10 ratio): p50",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "exact_change",
+   "quantiles",
+   "p50"
+  ],
+  "format": ".2g",
+  "printed": "0.028",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.change_p95",
+  "description": "change from initialisation, S4D decay rate (log10 ratio): p95",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "exact_change",
+   "quantiles",
+   "p95"
+  ],
+  "format": ".2g",
+  "printed": "0.16",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d_a_real.change_below_005",
+  "description": "change from initialisation below 0.05, S4D decay rate (log10 ratio) (%)",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_a_real",
+   "exact_change",
+   "share_below_0.05"
+  ],
+  "format": "pct",
+  "printed": "69",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d.above_window",
+  "description": "S4D modes whose time constant exceeds the window (%)",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_fraction_of_window_above_1"
+  ],
+  "format": "pct",
+  "printed": "62",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "learned.s4d.init_above_window",
+  "description": "S4D modes whose initial time constant exceeds the window (%)",
+  "artifact": "results/metrics/model_anatomy/data.json",
+  "path": [
+   "learned",
+   "s4d_init_fraction_of_window_above_1"
+  ],
+  "format": "pct",
+  "printed": "60",
+  "produced_by": "src/evaluation/model_anatomy.py"
+ },
+ {
+  "id": "spread.datasets",
+  "description": "split spread: datasets",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "n_datasets"
+  ],
+  "format": "d",
+  "printed": "16",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.split_above_model",
+  "description": "split spread: datasets whose split-mean sd exceeds the network-mean sd",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets_split_sd_above_model_sd"
+  ],
+  "format": "d",
+  "printed": "15",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.median_ratio",
+  "description": "split spread: median ratio of split-mean sd to network-mean sd",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "median_ratio_split_sd_to_model_sd"
+  ],
+  "format": ".1f",
+  "printed": "2.6",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.uci_har.sd_split_means",
+  "description": "split spread, uci_har: sd_split_means",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "uci_har",
+   "sd_split_means"
+  ],
+  "format": ".1f",
+  "printed": "3.0",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.uci_har.sd_model_means",
+  "description": "split spread, uci_har: sd_model_means",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "uci_har",
+   "sd_model_means"
+  ],
+  "format": ".1f",
+  "printed": "1.5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.uci_har.range_split_means",
+  "description": "split spread, uci_har: range_split_means",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "uci_har",
+   "range_split_means"
+  ],
+  "format": ".1f",
+  "printed": "10.6",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.uci_har.range_model_means",
+  "description": "split spread, uci_har: range_model_means",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "uci_har",
+   "range_model_means"
+  ],
+  "format": ".1f",
+  "printed": "4.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.uci_har.mean_seed_sd",
+  "description": "split spread, uci_har: mean_seed_sd",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "uci_har",
+   "mean_seed_sd"
+  ],
+  "format": ".1f",
+  "printed": "0.8",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.up_fall.sd_split_means",
+  "description": "split spread, up_fall: sd_split_means",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "up_fall",
+   "sd_split_means"
+  ],
+  "format": ".1f",
+  "printed": "8.3",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.up_fall.sd_model_means",
+  "description": "split spread, up_fall: sd_model_means",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "up_fall",
+   "sd_model_means"
+  ],
+  "format": ".1f",
+  "printed": "4.4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.up_fall.range_split_means",
+  "description": "split spread, up_fall: range_split_means",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "up_fall",
+   "range_split_means"
+  ],
+  "format": ".1f",
+  "printed": "28.5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.up_fall.range_model_means",
+  "description": "split spread, up_fall: range_model_means",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "up_fall",
+   "range_model_means"
+  ],
+  "format": ".1f",
+  "printed": "9.7",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "spread.up_fall.mean_seed_sd",
+  "description": "split spread, up_fall: mean_seed_sd",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "datasets",
+   "up_fall",
+   "mean_seed_sd"
+  ],
+  "format": ".1f",
+  "printed": "4.0",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.median_gap",
+  "description": "validation vs test: median gap",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "median_gap"
+  ],
+  "format": ".1f",
+  "printed": "17.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.min_gap",
+  "description": "validation vs test: min gap",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "min_gap"
+  ],
+  "format": ".1f",
+  "printed": "4.6",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.max_gap",
+  "description": "validation vs test: max gap",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "max_gap"
+  ],
+  "format": ".1f",
+  "printed": "47.8",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.datasets_val_above_test",
+  "description": "validation vs test: datasets val above test",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "datasets_val_above_test"
+  ],
+  "format": "d",
+  "printed": "13",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.runs_val_above_test",
+  "description": "validation vs test: runs val above test",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "runs_val_above_test"
+  ],
+  "format": ",d",
+  "printed": "2,307",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.runs",
+  "description": "validation vs test: runs",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "runs"
+  ],
+  "format": ",d",
+  "printed": "2,388",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.median_rho_network_means",
+  "description": "validation vs test: median rho network means",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "median_rho_network_means"
+  ],
+  "format": "+.2f",
+  "printed": "+0.18",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.datasets_with_rho_network",
+  "description": "validation vs test: datasets with rho network",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "datasets_with_rho_network"
+  ],
+  "format": "d",
+  "printed": "13",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.datasets_best_by_val_is_best_by_test",
+  "description": "validation vs test: datasets best by val is best by test",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "datasets_best_by_val_is_best_by_test"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.datasets",
+  "description": "validation vs test: datasets",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "datasets"
+  ],
+  "format": "d",
+  "printed": "13",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "val.median_test_loss_choosing_by_val",
+  "description": "validation vs test: median test loss choosing by val",
+  "artifact": "results/metrics/split_spread/data.json",
+  "path": [
+   "validation",
+   "median_test_loss_choosing_by_val"
+  ],
+  "format": ".1f",
+  "printed": "2.7",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.split_spread)"
+ },
+ {
+  "id": "emb.datasets",
+  "description": "embedding analysis: datasets",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "datasets"
+  ],
+  "format": "d",
+  "printed": "11",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.datasets_with_more_than_3_splits",
+  "description": "embedding analysis: datasets with more than 3 splits",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "datasets_with_more_than_3_splits"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.pooled_within_dataset_rank_rho_embedding_ccs_f1",
+  "description": "embedding analysis: pooled within dataset rank rho embedding ccs f1",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "pooled_within_dataset_rank_rho_embedding_ccs_f1"
+  ],
+  "format": "+.2f",
+  "printed": "-0.46",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.pooled_within_dataset_rank_p_embedding",
+  "description": "embedding analysis: pooled within dataset rank p embedding",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "pooled_within_dataset_rank_p_embedding"
+  ],
+  "format": "p3",
+  "printed": "< 0.001",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.pooled_within_dataset_rank_rho_sensor_ccs_f1",
+  "description": "embedding analysis: pooled within dataset rank rho sensor ccs f1",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "pooled_within_dataset_rank_rho_sensor_ccs_f1"
+  ],
+  "format": "+.2f",
+  "printed": "-0.32",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.pooled_within_dataset_rank_p_sensor",
+  "description": "embedding analysis: pooled within dataset rank p sensor",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "pooled_within_dataset_rank_p_sensor"
+  ],
+  "format": "p3",
+  "printed": "= 0.002",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.median_dataset_rho_embedding",
+  "description": "embedding analysis: median dataset rho embedding",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "median_dataset_rho_embedding"
+  ],
+  "format": "+.2f",
+  "printed": "-0.61",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.median_dataset_rho_sensor",
+  "description": "embedding analysis: median dataset rho sensor",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "median_dataset_rho_sensor"
+  ],
+  "format": "+.2f",
+  "printed": "-0.45",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.datasets_negative_rho_embedding",
+  "description": "embedding analysis: datasets negative rho embedding",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "datasets_negative_rho_embedding"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.datasets_negative_rho_sensor",
+  "description": "embedding analysis: datasets negative rho sensor",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "datasets_negative_rho_sensor"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.median_subject_probe_over_chance_embedding",
+  "description": "embedding analysis: median subject probe over chance embedding",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "median_subject_probe_over_chance_embedding"
+  ],
+  "format": ".1f",
+  "printed": "3.2",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.median_subject_probe_over_chance_sensor",
+  "description": "embedding analysis: median subject probe over chance sensor",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "median_subject_probe_over_chance_sensor"
+  ],
+  "format": ".1f",
+  "printed": "4.0",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.median_activity_probe_embedding",
+  "description": "embedding analysis: median activity probe embedding",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "median_activity_probe_embedding"
+  ],
+  "format": "pct",
+  "printed": "99",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.probe_cases",
+  "description": "embedding analysis: probe cases",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "probe_cases"
+  ],
+  "format": ",d",
+  "printed": "754",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.regenerated_cases",
+  "description": "embedding analysis: regenerated cases",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "regenerated_cases"
+  ],
+  "format": ",d",
+  "printed": "754",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.regenerated_exact",
+  "description": "embedding analysis: regenerated exact",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "regenerated_exact"
+  ],
+  "format": ",d",
+  "printed": "686",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.max_abs_regenerated_minus_stored_macro_f1",
+  "description": "embedding analysis: max abs regenerated minus stored macro f1",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "max_abs_regenerated_minus_stored_macro_f1"
+  ],
+  "format": ".2f",
+  "printed": "0.20",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1",
+  "description": "embedding analysis: pooled within dataset rank rho embedding ccs per dim f1",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1"
+  ],
+  "format": "+.2f",
+  "printed": "-0.45",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.pooled_within_dataset_rank_p_embedding_per_dim",
+  "description": "embedding analysis: pooled within dataset rank p embedding per dim",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "pooled_within_dataset_rank_p_embedding_per_dim"
+  ],
+  "format": "p3",
+  "printed": "< 0.001",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.network_dataset_cases",
+  "description": "embedding analysis: network dataset cases",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "network_dataset_cases"
+  ],
+  "format": "d",
+  "printed": "82",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.median_network_dataset_rho_embedding",
+  "description": "embedding analysis: median network dataset rho embedding",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "median_network_dataset_rho_embedding"
+  ],
+  "format": "+.2f",
+  "printed": "-0.50",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.network_dataset_negative_rho",
+  "description": "embedding analysis: network dataset negative rho",
+  "artifact": "results/metrics/embedding/summary.json",
+  "path": [
+   "network_dataset_negative_rho"
+  ],
+  "format": "d",
+  "printed": "69",
+  "produced_by": "src/evaluation/embedding_analysis.py (aggregate)"
+ },
+ {
+  "id": "emb.probe_windows",
+  "description": "embedding analysis: most training windows in a probe",
+  "artifact": "results/metrics/embedding/uci_har.json",
+  "path": [
+   "probe_windows"
+  ],
+  "format": ",d",
+  "printed": "4,000",
+  "produced_by": "src/evaluation/embedding_analysis.py"
+ },
+ {
+  "id": "emb.tsne.split",
+  "description": "t-SNE case: split",
+  "artifact": "results/metrics/embedding/tsne_case.json",
+  "path": [
+   "case",
+   "split"
+  ],
+  "format": "d",
+  "printed": "0",
+  "produced_by": "src/evaluation/embedding_analysis.py (t-SNE case)"
+ },
+ {
+  "id": "emb.tsne.train_windows",
+  "description": "t-SNE case: training windows shown",
+  "artifact": "results/metrics/embedding/tsne_case.json",
+  "path": [
+   "train",
+   "activity"
+  ],
+  "format": "len",
+  "printed": "3000",
+  "produced_by": "src/evaluation/embedding_analysis.py (t-SNE case)"
+ },
+ {
+  "id": "emb.tsne.test_windows",
+  "description": "t-SNE case: test windows shown",
+  "artifact": "results/metrics/embedding/tsne_case.json",
+  "path": [
+   "test",
+   "activity"
+  ],
+  "format": "len",
+  "printed": "868",
+  "produced_by": "src/evaluation/embedding_analysis.py (t-SNE case)"
  }
 ]

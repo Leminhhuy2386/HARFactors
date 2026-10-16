@@ -239,15 +239,306 @@ Claim → artifact → script. One row per value in docs/summary_values.json.
 | g3.rf.unimib_shar.rerun | 44.49 | results/gates/G3_baseline.json | observed_value/anchor_random_forest/2/rerun_mean | scripts/check_baseline_anchor.py |
 | g3.rf.actrectut_gestures.figure6 | 41.89 | results/gates/G3_baseline.json | observed_value/anchor_random_forest/3/figure6 | scripts/check_baseline_anchor.py |
 | g3.rf.actrectut_gestures.rerun | 41.89 | results/gates/G3_baseline.json | observed_value/anchor_random_forest/3/rerun_mean | scripts/check_baseline_anchor.py |
-| g5.verdict | PASS | results/gates/G5_results_authenticity_rerun3.json | verdict | scripts/verify_results.py |
-| g5.reexecuted | 408 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_reexecution/evaluated | scripts/verify_results.py |
-| g5.exact | 373 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_reexecution/exact_match | scripts/verify_results.py |
-| g5.s2 | 360 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_reexecution/s2_runs_reexecuted | scripts/verify_results.py |
-| ls.runs | 6 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_5_leakage/label_shuffle_control/runs | scripts/verify_results.py |
-| ls.mean_shuffled_test_macro_f1 | 4.9 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_5_leakage/label_shuffle_control/mean_shuffled_test_macro_f1 | scripts/verify_results.py |
-| ls.mean_chance_test_macro_f1 | 8.7 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_5_leakage/label_shuffle_control/mean_chance_test_macro_f1 | scripts/verify_results.py |
-| ls.mean_stored_test_macro_f1 | 54.5 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_5_leakage/label_shuffle_control/mean_stored_test_macro_f1 | scripts/verify_results.py |
-| ls.mean_shuffled_val_macro_f1 | 6.8 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_5_leakage/label_shuffle_control/mean_shuffled_val_macro_f1 | scripts/verify_results.py |
-| ls.mean_chance_val_macro_f1 | 8.7 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_5_leakage/label_shuffle_control/mean_chance_val_macro_f1 | scripts/verify_results.py |
-| ls.mean_stored_val_macro_f1 | 85.9 | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_5_leakage/label_shuffle_control/mean_stored_val_macro_f1 | scripts/verify_results.py |
-| ls.all_collapsed | True | results/gates/G5_results_authenticity_rerun3.json | observed_value/L3_5_leakage/label_shuffle_control/all_collapsed | scripts/verify_results.py |
+| g5.verdict | PASS | results/gates/G5_results_authenticity_rerun6.json | verdict | scripts/verify_results.py |
+| g5.reexecuted | 408 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_reexecution/evaluated | scripts/verify_results.py |
+| g5.exact | 373 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_reexecution/exact_match | scripts/verify_results.py |
+| g5.s2 | 360 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_reexecution/s2_runs_reexecuted | scripts/verify_results.py |
+| g5.rebuilt.runs | 348 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_reexecution/informative_rebuilt/runs | scripts/verify_results.py |
+| g5.rebuilt.exact | 179 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_reexecution/informative_rebuilt/exact | scripts/verify_results.py |
+| g5.rebuilt.outside_tolerance | 36 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_reexecution/informative_rebuilt/outside_tolerance | scripts/verify_results.py |
+| g5.rebuilt.max_abs_dataset_mean_delta_macro_f1 | 0.07 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_reexecution/informative_rebuilt/max_abs_dataset_mean_delta_macro_f1 | scripts/verify_results.py |
+| g5.rebuilt.max_abs_delta_macro_f1 | 3.25 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_reexecution/informative_rebuilt/max_abs_delta_macro_f1 | scripts/verify_results.py |
+| ls.runs | 6 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_5_leakage/label_shuffle_control/runs | scripts/verify_results.py |
+| ls.mean_shuffled_test_macro_f1 | 4.9 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_5_leakage/label_shuffle_control/mean_shuffled_test_macro_f1 | scripts/verify_results.py |
+| ls.mean_chance_test_macro_f1 | 8.7 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_5_leakage/label_shuffle_control/mean_chance_test_macro_f1 | scripts/verify_results.py |
+| ls.mean_stored_test_macro_f1 | 54.5 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_5_leakage/label_shuffle_control/mean_stored_test_macro_f1 | scripts/verify_results.py |
+| ls.mean_shuffled_val_macro_f1 | 6.8 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_5_leakage/label_shuffle_control/mean_shuffled_val_macro_f1 | scripts/verify_results.py |
+| ls.mean_chance_val_macro_f1 | 8.7 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_5_leakage/label_shuffle_control/mean_chance_val_macro_f1 | scripts/verify_results.py |
+| ls.mean_stored_val_macro_f1 | 85.9 | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_5_leakage/label_shuffle_control/mean_stored_val_macro_f1 | scripts/verify_results.py |
+| ls.all_collapsed | True | results/gates/G5_results_authenticity_rerun6.json | observed_value/L3_5_leakage/label_shuffle_control/all_collapsed | scripts/verify_results.py |
+| tab02.unimib_shar.channels | 3 | results/table_data/tab02_datasets.json | rows/0/channels | src/visualization/detail_figures.py |
+| tab02.unimib_shar.subjects | 30 | results/table_data/tab02_datasets.json | rows/0/subjects | src/visualization/detail_figures.py |
+| tab02.unimib_shar.classes | 17 | results/table_data/tab02_datasets.json | rows/0/classes | src/visualization/detail_figures.py |
+| tab02.unimib_shar.hz | 50 | results/table_data/tab02_datasets.json | rows/0/hz | src/visualization/detail_figures.py |
+| tab02.unimib_shar.windows | 7,195 | results/table_data/tab02_datasets.json | rows/0/windows | src/visualization/detail_figures.py |
+| tab02.unimib_shar.splits | 10 | results/table_data/tab02_datasets.json | rows/0/splits | src/visualization/detail_figures.py |
+| tab02.wisdm.channels | 3 | results/table_data/tab02_datasets.json | rows/1/channels | src/visualization/detail_figures.py |
+| tab02.wisdm.subjects | 36 | results/table_data/tab02_datasets.json | rows/1/subjects | src/visualization/detail_figures.py |
+| tab02.wisdm.classes | 6 | results/table_data/tab02_datasets.json | rows/1/classes | src/visualization/detail_figures.py |
+| tab02.wisdm.hz | 20 | results/table_data/tab02_datasets.json | rows/1/hz | src/visualization/detail_figures.py |
+| tab02.wisdm.windows | 34,097 | results/table_data/tab02_datasets.json | rows/1/windows | src/visualization/detail_figures.py |
+| tab02.wisdm.splits | 10 | results/table_data/tab02_datasets.json | rows/1/splits | src/visualization/detail_figures.py |
+| tab02.hapt.channels | 6 | results/table_data/tab02_datasets.json | rows/2/channels | src/visualization/detail_figures.py |
+| tab02.hapt.subjects | 30 | results/table_data/tab02_datasets.json | rows/2/subjects | src/visualization/detail_figures.py |
+| tab02.hapt.classes | 12 | results/table_data/tab02_datasets.json | rows/2/classes | src/visualization/detail_figures.py |
+| tab02.hapt.hz | 50 | results/table_data/tab02_datasets.json | rows/2/hz | src/visualization/detail_figures.py |
+| tab02.hapt.windows | 9,056 | results/table_data/tab02_datasets.json | rows/2/windows | src/visualization/detail_figures.py |
+| tab02.hapt.splits | 10 | results/table_data/tab02_datasets.json | rows/2/splits | src/visualization/detail_figures.py |
+| tab02.utd_mhad.channels | 6 | results/table_data/tab02_datasets.json | rows/3/channels | src/visualization/detail_figures.py |
+| tab02.utd_mhad.subjects | 8 | results/table_data/tab02_datasets.json | rows/3/subjects | src/visualization/detail_figures.py |
+| tab02.utd_mhad.classes | 27 | results/table_data/tab02_datasets.json | rows/3/classes | src/visualization/detail_figures.py |
+| tab02.utd_mhad.hz | 50 | results/table_data/tab02_datasets.json | rows/3/hz | src/visualization/detail_figures.py |
+| tab02.utd_mhad.windows | 783 | results/table_data/tab02_datasets.json | rows/3/windows | src/visualization/detail_figures.py |
+| tab02.utd_mhad.splits | 8 | results/table_data/tab02_datasets.json | rows/3/splits | src/visualization/detail_figures.py |
+| tab02.daphnet.channels | 9 | results/table_data/tab02_datasets.json | rows/4/channels | src/visualization/detail_figures.py |
+| tab02.daphnet.subjects | 10 | results/table_data/tab02_datasets.json | rows/4/subjects | src/visualization/detail_figures.py |
+| tab02.daphnet.classes | 3 | results/table_data/tab02_datasets.json | rows/4/classes | src/visualization/detail_figures.py |
+| tab02.daphnet.hz | 64 | results/table_data/tab02_datasets.json | rows/4/hz | src/visualization/detail_figures.py |
+| tab02.daphnet.windows | 11,160 | results/table_data/tab02_datasets.json | rows/4/windows | src/visualization/detail_figures.py |
+| tab02.daphnet.splits | 10 | results/table_data/tab02_datasets.json | rows/4/splits | src/visualization/detail_figures.py |
+| tab02.uci_har.channels | 9 | results/table_data/tab02_datasets.json | rows/5/channels | src/visualization/detail_figures.py |
+| tab02.uci_har.subjects | 30 | results/table_data/tab02_datasets.json | rows/5/subjects | src/visualization/detail_figures.py |
+| tab02.uci_har.classes | 6 | results/table_data/tab02_datasets.json | rows/5/classes | src/visualization/detail_figures.py |
+| tab02.uci_har.hz | 50 | results/table_data/tab02_datasets.json | rows/5/hz | src/visualization/detail_figures.py |
+| tab02.uci_har.windows | 8,188 | results/table_data/tab02_datasets.json | rows/5/windows | src/visualization/detail_figures.py |
+| tab02.uci_har.splits | 10 | results/table_data/tab02_datasets.json | rows/5/splits | src/visualization/detail_figures.py |
+| tab02.actrectut_gestures.channels | 15 | results/table_data/tab02_datasets.json | rows/6/channels | src/visualization/detail_figures.py |
+| tab02.actrectut_gestures.subjects | 2 | results/table_data/tab02_datasets.json | rows/6/subjects | src/visualization/detail_figures.py |
+| tab02.actrectut_gestures.classes | 12 | results/table_data/tab02_datasets.json | rows/6/classes | src/visualization/detail_figures.py |
+| tab02.actrectut_gestures.hz | 32 | results/table_data/tab02_datasets.json | rows/6/hz | src/visualization/detail_figures.py |
+| tab02.actrectut_gestures.windows | 798 | results/table_data/tab02_datasets.json | rows/6/windows | src/visualization/detail_figures.py |
+| tab02.actrectut_gestures.splits | 2 | results/table_data/tab02_datasets.json | rows/6/splits | src/visualization/detail_figures.py |
+| tab02.dsads.channels | 45 | results/table_data/tab02_datasets.json | rows/7/channels | src/visualization/detail_figures.py |
+| tab02.dsads.subjects | 8 | results/table_data/tab02_datasets.json | rows/7/subjects | src/visualization/detail_figures.py |
+| tab02.dsads.classes | 19 | results/table_data/tab02_datasets.json | rows/7/classes | src/visualization/detail_figures.py |
+| tab02.dsads.hz | 25 | results/table_data/tab02_datasets.json | rows/7/hz | src/visualization/detail_figures.py |
+| tab02.dsads.windows | 30,096 | results/table_data/tab02_datasets.json | rows/7/windows | src/visualization/detail_figures.py |
+| tab02.dsads.splits | 8 | results/table_data/tab02_datasets.json | rows/7/splits | src/visualization/detail_figures.py |
+| tab02.sad.channels | 60 | results/table_data/tab02_datasets.json | rows/8/channels | src/visualization/detail_figures.py |
+| tab02.sad.subjects | 10 | results/table_data/tab02_datasets.json | rows/8/subjects | src/visualization/detail_figures.py |
+| tab02.sad.classes | 7 | results/table_data/tab02_datasets.json | rows/8/classes | src/visualization/detail_figures.py |
+| tab02.sad.hz | 50 | results/table_data/tab02_datasets.json | rows/8/hz | src/visualization/detail_figures.py |
+| tab02.sad.windows | 8,260 | results/table_data/tab02_datasets.json | rows/8/windows | src/visualization/detail_figures.py |
+| tab02.sad.splits | 10 | results/table_data/tab02_datasets.json | rows/8/splits | src/visualization/detail_figures.py |
+| tab02.opportunity.channels | 133 | results/table_data/tab02_datasets.json | rows/9/channels | src/visualization/detail_figures.py |
+| tab02.opportunity.subjects | 4 | results/table_data/tab02_datasets.json | rows/9/subjects | src/visualization/detail_figures.py |
+| tab02.opportunity.classes | 5 | results/table_data/tab02_datasets.json | rows/9/classes | src/visualization/detail_figures.py |
+| tab02.opportunity.hz | 30 | results/table_data/tab02_datasets.json | rows/9/hz | src/visualization/detail_figures.py |
+| tab02.opportunity.windows | 10,550 | results/table_data/tab02_datasets.json | rows/9/windows | src/visualization/detail_figures.py |
+| tab02.opportunity.splits | 4 | results/table_data/tab02_datasets.json | rows/9/splits | src/visualization/detail_figures.py |
+| tab02.usc_had.channels | 6 | results/table_data/tab02_datasets.json | rows/10/channels | src/visualization/detail_figures.py |
+| tab02.usc_had.subjects | 14 | results/table_data/tab02_datasets.json | rows/10/subjects | src/visualization/detail_figures.py |
+| tab02.usc_had.classes | 12 | results/table_data/tab02_datasets.json | rows/10/classes | src/visualization/detail_figures.py |
+| tab02.usc_had.hz | 100 | results/table_data/tab02_datasets.json | rows/10/hz | src/visualization/detail_figures.py |
+| tab02.usc_had.windows | 17,386 | results/table_data/tab02_datasets.json | rows/10/windows | src/visualization/detail_figures.py |
+| tab02.usc_had.splits | 10 | results/table_data/tab02_datasets.json | rows/10/splits | src/visualization/detail_figures.py |
+| tab02.uca_ehar.channels | 7 | results/table_data/tab02_datasets.json | rows/11/channels | src/visualization/detail_figures.py |
+| tab02.uca_ehar.subjects | 20 | results/table_data/tab02_datasets.json | rows/11/subjects | src/visualization/detail_figures.py |
+| tab02.uca_ehar.classes | 12 | results/table_data/tab02_datasets.json | rows/11/classes | src/visualization/detail_figures.py |
+| tab02.uca_ehar.hz | 25 | results/table_data/tab02_datasets.json | rows/11/hz | src/visualization/detail_figures.py |
+| tab02.uca_ehar.windows | 16,554 | results/table_data/tab02_datasets.json | rows/11/windows | src/visualization/detail_figures.py |
+| tab02.uca_ehar.splits | 10 | results/table_data/tab02_datasets.json | rows/11/splits | src/visualization/detail_figures.py |
+| tab02.w_har.channels | 7 | results/table_data/tab02_datasets.json | rows/12/channels | src/visualization/detail_figures.py |
+| tab02.w_har.subjects | 22 | results/table_data/tab02_datasets.json | rows/12/subjects | src/visualization/detail_figures.py |
+| tab02.w_har.classes | 9 | results/table_data/tab02_datasets.json | rows/12/classes | src/visualization/detail_figures.py |
+| tab02.w_har.hz | 250 | results/table_data/tab02_datasets.json | rows/12/hz | src/visualization/detail_figures.py |
+| tab02.w_har.windows | 5,092 | results/table_data/tab02_datasets.json | rows/12/windows | src/visualization/detail_figures.py |
+| tab02.w_har.splits | 10 | results/table_data/tab02_datasets.json | rows/12/splits | src/visualization/detail_figures.py |
+| tab02.wear.channels | 12 | results/table_data/tab02_datasets.json | rows/13/channels | src/visualization/detail_figures.py |
+| tab02.wear.subjects | 24 | results/table_data/tab02_datasets.json | rows/13/subjects | src/visualization/detail_figures.py |
+| tab02.wear.classes | 18 | results/table_data/tab02_datasets.json | rows/13/classes | src/visualization/detail_figures.py |
+| tab02.wear.hz | 50 | results/table_data/tab02_datasets.json | rows/13/hz | src/visualization/detail_figures.py |
+| tab02.wear.windows | 26,739 | results/table_data/tab02_datasets.json | rows/13/windows | src/visualization/detail_figures.py |
+| tab02.wear.splits | 10 | results/table_data/tab02_datasets.json | rows/13/splits | src/visualization/detail_figures.py |
+| tab02.motion_sense.channels | 18 | results/table_data/tab02_datasets.json | rows/14/channels | src/visualization/detail_figures.py |
+| tab02.motion_sense.subjects | 24 | results/table_data/tab02_datasets.json | rows/14/subjects | src/visualization/detail_figures.py |
+| tab02.motion_sense.classes | 6 | results/table_data/tab02_datasets.json | rows/14/classes | src/visualization/detail_figures.py |
+| tab02.motion_sense.hz | 50 | results/table_data/tab02_datasets.json | rows/14/hz | src/visualization/detail_figures.py |
+| tab02.motion_sense.windows | 18,300 | results/table_data/tab02_datasets.json | rows/14/windows | src/visualization/detail_figures.py |
+| tab02.motion_sense.splits | 10 | results/table_data/tab02_datasets.json | rows/14/splits | src/visualization/detail_figures.py |
+| tab02.uma_fall.channels | 39 | results/table_data/tab02_datasets.json | rows/15/channels | src/visualization/detail_figures.py |
+| tab02.uma_fall.subjects | 19 | results/table_data/tab02_datasets.json | rows/15/subjects | src/visualization/detail_figures.py |
+| tab02.uma_fall.classes | 15 | results/table_data/tab02_datasets.json | rows/15/classes | src/visualization/detail_figures.py |
+| tab02.uma_fall.hz | 200 | results/table_data/tab02_datasets.json | rows/15/hz | src/visualization/detail_figures.py |
+| tab02.uma_fall.windows | 6,240 | results/table_data/tab02_datasets.json | rows/15/windows | src/visualization/detail_figures.py |
+| tab02.uma_fall.splits | 10 | results/table_data/tab02_datasets.json | rows/15/splits | src/visualization/detail_figures.py |
+| tab02.up_fall.channels | 42 | results/table_data/tab02_datasets.json | rows/16/channels | src/visualization/detail_figures.py |
+| tab02.up_fall.subjects | 17 | results/table_data/tab02_datasets.json | rows/16/subjects | src/visualization/detail_figures.py |
+| tab02.up_fall.classes | 11 | results/table_data/tab02_datasets.json | rows/16/classes | src/visualization/detail_figures.py |
+| tab02.up_fall.hz | 20 | results/table_data/tab02_datasets.json | rows/16/hz | src/visualization/detail_figures.py |
+| tab02.up_fall.windows | 8,974 | results/table_data/tab02_datasets.json | rows/16/windows | src/visualization/detail_figures.py |
+| tab02.up_fall.splits | 10 | results/table_data/tab02_datasets.json | rows/16/splits | src/visualization/detail_figures.py |
+| tab02.pamap2.channels | 52 | results/table_data/tab02_datasets.json | rows/17/channels | src/visualization/detail_figures.py |
+| tab02.pamap2.subjects | 9 | results/table_data/tab02_datasets.json | rows/17/subjects | src/visualization/detail_figures.py |
+| tab02.pamap2.classes | 13 | results/table_data/tab02_datasets.json | rows/17/classes | src/visualization/detail_figures.py |
+| tab02.pamap2.hz | 100 | results/table_data/tab02_datasets.json | rows/17/hz | src/visualization/detail_figures.py |
+| tab02.pamap2.windows | 12,786 | results/table_data/tab02_datasets.json | rows/17/windows | src/visualization/detail_figures.py |
+| tab02.pamap2.splits | 9 | results/table_data/tab02_datasets.json | rows/17/splits | src/visualization/detail_figures.py |
+| datasets.channels_min | 3 | results/table_data/tab02_datasets.json | summary/channels_min | src/visualization/detail_figures.py |
+| datasets.channels_max | 133 | results/table_data/tab02_datasets.json | summary/channels_max | src/visualization/detail_figures.py |
+| datasets.subjects_min | 2 | results/table_data/tab02_datasets.json | summary/subjects_min | src/visualization/detail_figures.py |
+| datasets.subjects_max | 36 | results/table_data/tab02_datasets.json | summary/subjects_max | src/visualization/detail_figures.py |
+| datasets.classes_min | 3 | results/table_data/tab02_datasets.json | summary/classes_min | src/visualization/detail_figures.py |
+| datasets.classes_max | 27 | results/table_data/tab02_datasets.json | summary/classes_max | src/visualization/detail_figures.py |
+| datasets.hz_min | 20 | results/table_data/tab02_datasets.json | summary/hz_min | src/visualization/detail_figures.py |
+| datasets.hz_max | 250 | results/table_data/tab02_datasets.json | summary/hz_max | src/visualization/detail_figures.py |
+| datasets.windows_total | 232,254 | results/table_data/tab02_datasets.json | summary/windows_total | src/visualization/detail_figures.py |
+| datasets.datasets | 18 | results/table_data/tab02_datasets.json | summary/datasets | src/visualization/detail_figures.py |
+| tab03.recurrencenet.d_model | 32 | results/table_data/tab03_models.json | rows/0/d_model | src/visualization/detail_figures.py |
+| tab03.recurrencenet.layers | 3 | results/table_data/tab03_models.json | rows/0/layers | src/visualization/detail_figures.py |
+| tab03.recurrencenet.embedding_dim | 32 | results/table_data/tab03_models.json | rows/0/embedding_dim | src/visualization/detail_figures.py |
+| tab03.recurrencenet.params_ref | 24,675 | results/table_data/tab03_models.json | rows/0/params_ref | src/visualization/detail_figures.py |
+| tab03.recurrencenet.params_min | 23,886 | results/table_data/tab03_models.json | rows/0/params_min | src/visualization/detail_figures.py |
+| tab03.recurrencenet.params_max | 28,013 | results/table_data/tab03_models.json | rows/0/params_max | src/visualization/detail_figures.py |
+| tab03.s4d.d_model | 64 | results/table_data/tab03_models.json | rows/1/d_model | src/visualization/detail_figures.py |
+| tab03.s4d.layers | 2 | results/table_data/tab03_models.json | rows/1/layers | src/visualization/detail_figures.py |
+| tab03.s4d.embedding_dim | 64 | results/table_data/tab03_models.json | rows/1/embedding_dim | src/visualization/detail_figures.py |
+| tab03.s4d.params_ref | 27,675 | results/table_data/tab03_models.json | rows/1/params_ref | src/visualization/detail_figures.py |
+| tab03.s4d.params_min | 26,118 | results/table_data/tab03_models.json | rows/1/params_min | src/visualization/detail_figures.py |
+| tab03.s4d.params_max | 34,373 | results/table_data/tab03_models.json | rows/1/params_max | src/visualization/detail_figures.py |
+| tab03.hystnet_sel_clock.d_model | 32 | results/table_data/tab03_models.json | rows/2/d_model | src/visualization/detail_figures.py |
+| tab03.hystnet_sel_clock.layers | 3 | results/table_data/tab03_models.json | rows/2/layers | src/visualization/detail_figures.py |
+| tab03.hystnet_sel_clock.embedding_dim | 32 | results/table_data/tab03_models.json | rows/2/embedding_dim | src/visualization/detail_figures.py |
+| tab03.hystnet_sel_clock.params_ref | 23,579 | results/table_data/tab03_models.json | rows/2/params_ref | src/visualization/detail_figures.py |
+| tab03.hystnet_sel_clock.params_min | 22,790 | results/table_data/tab03_models.json | rows/2/params_min | src/visualization/detail_figures.py |
+| tab03.hystnet_sel_clock.params_max | 26,917 | results/table_data/tab03_models.json | rows/2/params_max | src/visualization/detail_figures.py |
+| tab03.quantilenet.d_model | 32 | results/table_data/tab03_models.json | rows/3/d_model | src/visualization/detail_figures.py |
+| tab03.quantilenet.layers | 3 | results/table_data/tab03_models.json | rows/3/layers | src/visualization/detail_figures.py |
+| tab03.quantilenet.embedding_dim | 32 | results/table_data/tab03_models.json | rows/3/embedding_dim | src/visualization/detail_figures.py |
+| tab03.quantilenet.params_ref | 20,763 | results/table_data/tab03_models.json | rows/3/params_ref | src/visualization/detail_figures.py |
+| tab03.quantilenet.params_min | 19,974 | results/table_data/tab03_models.json | rows/3/params_min | src/visualization/detail_figures.py |
+| tab03.quantilenet.params_max | 24,101 | results/table_data/tab03_models.json | rows/3/params_max | src/visualization/detail_figures.py |
+| tab03.mamba.d_model | 32 | results/table_data/tab03_models.json | rows/4/d_model | src/visualization/detail_figures.py |
+| tab03.mamba.layers | 2 | results/table_data/tab03_models.json | rows/4/layers | src/visualization/detail_figures.py |
+| tab03.mamba.embedding_dim | 32 | results/table_data/tab03_models.json | rows/4/embedding_dim | src/visualization/detail_figures.py |
+| tab03.mamba.params_ref | 21,147 | results/table_data/tab03_models.json | rows/4/params_ref | src/visualization/detail_figures.py |
+| tab03.mamba.params_min | 20,358 | results/table_data/tab03_models.json | rows/4/params_min | src/visualization/detail_figures.py |
+| tab03.mamba.params_max | 24,485 | results/table_data/tab03_models.json | rows/4/params_max | src/visualization/detail_figures.py |
+| tab03.hystnet_nomem.d_model | 32 | results/table_data/tab03_models.json | rows/5/d_model | src/visualization/detail_figures.py |
+| tab03.hystnet_nomem.layers | 3 | results/table_data/tab03_models.json | rows/5/layers | src/visualization/detail_figures.py |
+| tab03.hystnet_nomem.embedding_dim | 32 | results/table_data/tab03_models.json | rows/5/embedding_dim | src/visualization/detail_figures.py |
+| tab03.hystnet_nomem.params_ref | 19,995 | results/table_data/tab03_models.json | rows/5/params_ref | src/visualization/detail_figures.py |
+| tab03.hystnet_nomem.params_min | 19,206 | results/table_data/tab03_models.json | rows/5/params_min | src/visualization/detail_figures.py |
+| tab03.hystnet_nomem.params_max | 23,333 | results/table_data/tab03_models.json | rows/5/params_max | src/visualization/detail_figures.py |
+| tab03.recstatnet.d_model | 32 | results/table_data/tab03_models.json | rows/6/d_model | src/visualization/detail_figures.py |
+| tab03.recstatnet.layers | 3 | results/table_data/tab03_models.json | rows/6/layers | src/visualization/detail_figures.py |
+| tab03.recstatnet.embedding_dim | 64 | results/table_data/tab03_models.json | rows/6/embedding_dim | src/visualization/detail_figures.py |
+| tab03.recstatnet.params_ref | 26,451 | results/table_data/tab03_models.json | rows/6/params_ref | src/visualization/detail_figures.py |
+| tab03.recstatnet.params_min | 24,582 | results/table_data/tab03_models.json | rows/6/params_min | src/visualization/detail_figures.py |
+| tab03.recstatnet.params_max | 46,357 | results/table_data/tab03_models.json | rows/6/params_max | src/visualization/detail_figures.py |
+| tab03.lawnet_rec.d_model | 32 | results/table_data/tab03_models.json | rows/7/d_model | src/visualization/detail_figures.py |
+| tab03.lawnet_rec.layers | 3 | results/table_data/tab03_models.json | rows/7/layers | src/visualization/detail_figures.py |
+| tab03.lawnet_rec.embedding_dim | 64 | results/table_data/tab03_models.json | rows/7/embedding_dim | src/visualization/detail_figures.py |
+| tab03.lawnet_rec.params_ref | 27,553 | results/table_data/tab03_models.json | rows/7/params_ref | src/visualization/detail_figures.py |
+| tab03.lawnet_rec.params_min | 25,316 | results/table_data/tab03_models.json | rows/7/params_min | src/visualization/detail_figures.py |
+| tab03.lawnet_rec.params_max | 49,437 | results/table_data/tab03_models.json | rows/7/params_max | src/visualization/detail_figures.py |
+| tab03.lawnet.d_model | 48 | results/table_data/tab03_models.json | rows/8/d_model | src/visualization/detail_figures.py |
+| tab03.lawnet.layers | 3 | results/table_data/tab03_models.json | rows/8/layers | src/visualization/detail_figures.py |
+| tab03.lawnet.embedding_dim | 80 | results/table_data/tab03_models.json | rows/8/embedding_dim | src/visualization/detail_figures.py |
+| tab03.lawnet.params_ref | 19,033 | results/table_data/tab03_models.json | rows/8/params_ref | src/visualization/detail_figures.py |
+| tab03.lawnet.params_min | 16,412 | results/table_data/tab03_models.json | rows/8/params_min | src/visualization/detail_figures.py |
+| tab03.lawnet.params_max | 42,597 | results/table_data/tab03_models.json | rows/8/params_max | src/visualization/detail_figures.py |
+| tab03.statnet.d_model | 48 | results/table_data/tab03_models.json | rows/9/d_model | src/visualization/detail_figures.py |
+| tab03.statnet.layers | 3 | results/table_data/tab03_models.json | rows/9/layers | src/visualization/detail_figures.py |
+| tab03.statnet.embedding_dim | 80 | results/table_data/tab03_models.json | rows/9/embedding_dim | src/visualization/detail_figures.py |
+| tab03.statnet.params_ref | 17,931 | results/table_data/tab03_models.json | rows/9/params_ref | src/visualization/detail_figures.py |
+| tab03.statnet.params_min | 15,678 | results/table_data/tab03_models.json | rows/9/params_min | src/visualization/detail_figures.py |
+| tab03.statnet.params_max | 39,517 | results/table_data/tab03_models.json | rows/9/params_max | src/visualization/detail_figures.py |
+| models.params_ref_min | 17,931 | results/table_data/tab03_models.json | summary/params_ref_min | src/visualization/detail_figures.py |
+| models.params_ref_max | 27,675 | results/table_data/tab03_models.json | summary/params_ref_max | src/visualization/detail_figures.py |
+| models.params_all_min | 15,678 | results/table_data/tab03_models.json | summary/params_all_min | src/visualization/detail_figures.py |
+| models.params_all_max | 49,437 | results/table_data/tab03_models.json | summary/params_all_max | src/visualization/detail_figures.py |
+| learned.checkpoints | 766 | results/metrics/model_anatomy/data.json | learned/checkpoints_read | src/evaluation/model_anatomy.py |
+| learned.s4d.p05 | 0.18 | results/metrics/model_anatomy/data.json | learned/s4d/quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.s4d.init_p05 | 0.18 | results/metrics/model_anatomy/data.json | learned/s4d/init_quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.s4d.p50 | 1.8 | results/metrics/model_anatomy/data.json | learned/s4d/quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.s4d.init_p50 | 1.6 | results/metrics/model_anatomy/data.json | learned/s4d/init_quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.s4d.p95 | 13 | results/metrics/model_anatomy/data.json | learned/s4d/quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.s4d.init_p95 | 13 | results/metrics/model_anatomy/data.json | learned/s4d/init_quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.s4d.n | 389,120 | results/metrics/model_anatomy/data.json | learned/s4d/n | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.p05 | 0.37 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.init_p05 | 0.5 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/init_quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.p50 | 0.5 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.init_p50 | 0.5 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/init_quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.p95 | 0.62 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.init_p95 | 0.5 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/init_quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.n | 389,120 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/n | src/evaluation/model_anatomy.py |
+| learned.hystnet_sel_clock.p05 | 0.039 | results/metrics/model_anatomy/data.json | learned/hystnet_sel_clock/quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.hystnet_sel_clock.init_p05 | 0.039 | results/metrics/model_anatomy/data.json | learned/hystnet_sel_clock/init_quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.hystnet_sel_clock.p50 | 0.36 | results/metrics/model_anatomy/data.json | learned/hystnet_sel_clock/quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.hystnet_sel_clock.init_p50 | 0.35 | results/metrics/model_anatomy/data.json | learned/hystnet_sel_clock/init_quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.hystnet_sel_clock.p95 | 1.9 | results/metrics/model_anatomy/data.json | learned/hystnet_sel_clock/quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.hystnet_sel_clock.init_p95 | 1.9 | results/metrics/model_anatomy/data.json | learned/hystnet_sel_clock/init_quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.hystnet_sel_clock.n | 73,728 | results/metrics/model_anatomy/data.json | learned/hystnet_sel_clock/n | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.p05 | 0.1 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.init_p05 | 0.1 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/init_quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.p50 | 0.5 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.init_p50 | 0.5 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/init_quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.p95 | 0.9 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.init_p95 | 0.9 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/init_quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.n | 73,728 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/n | src/evaluation/model_anatomy.py |
+| learned.quantilenet_eta.p05 | 0.016 | results/metrics/model_anatomy/data.json | learned/quantilenet_eta/quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_eta.init_p05 | 0.016 | results/metrics/model_anatomy/data.json | learned/quantilenet_eta/init_quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_eta.p50 | 0.052 | results/metrics/model_anatomy/data.json | learned/quantilenet_eta/quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_eta.init_p50 | 0.05 | results/metrics/model_anatomy/data.json | learned/quantilenet_eta/init_quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_eta.p95 | 0.16 | results/metrics/model_anatomy/data.json | learned/quantilenet_eta/quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_eta.init_p95 | 0.13 | results/metrics/model_anatomy/data.json | learned/quantilenet_eta/init_quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_eta.n | 73,728 | results/metrics/model_anatomy/data.json | learned/quantilenet_eta/n | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.p05 | 0.47 | results/metrics/model_anatomy/data.json | learned/recurrencenet/quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.init_p05 | 0.5 | results/metrics/model_anatomy/data.json | learned/recurrencenet/init_quantiles/p05 | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.p50 | 0.51 | results/metrics/model_anatomy/data.json | learned/recurrencenet/quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.init_p50 | 0.5 | results/metrics/model_anatomy/data.json | learned/recurrencenet/init_quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.p95 | 0.55 | results/metrics/model_anatomy/data.json | learned/recurrencenet/quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.init_p95 | 0.5 | results/metrics/model_anatomy/data.json | learned/recurrencenet/init_quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.n | 4,608 | results/metrics/model_anatomy/data.json | learned/recurrencenet/n | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.change_p50 | 0.0047 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/exact_change/quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.change_p95 | 0.041 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/exact_change/quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.quantilenet_tau.change_below_005 | 97 | results/metrics/model_anatomy/data.json | learned/quantilenet_tau/exact_change/share_below_0.05 | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.change_p50 | 0.014 | results/metrics/model_anatomy/data.json | learned/recurrencenet/exact_change/quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.change_p95 | 0.057 | results/metrics/model_anatomy/data.json | learned/recurrencenet/exact_change/quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.recurrencenet.change_below_005 | 92 | results/metrics/model_anatomy/data.json | learned/recurrencenet/exact_change/share_below_0.05 | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.change_p50 | 0.028 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/exact_change/quantiles/p50 | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.change_p95 | 0.16 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/exact_change/quantiles/p95 | src/evaluation/model_anatomy.py |
+| learned.s4d_a_real.change_below_005 | 69 | results/metrics/model_anatomy/data.json | learned/s4d_a_real/exact_change/share_below_0.05 | src/evaluation/model_anatomy.py |
+| learned.s4d.above_window | 62 | results/metrics/model_anatomy/data.json | learned/s4d_fraction_of_window_above_1 | src/evaluation/model_anatomy.py |
+| learned.s4d.init_above_window | 60 | results/metrics/model_anatomy/data.json | learned/s4d_init_fraction_of_window_above_1 | src/evaluation/model_anatomy.py |
+| spread.datasets | 16 | results/metrics/split_spread/data.json | n_datasets | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.split_above_model | 15 | results/metrics/split_spread/data.json | datasets_split_sd_above_model_sd | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.median_ratio | 2.6 | results/metrics/split_spread/data.json | median_ratio_split_sd_to_model_sd | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.uci_har.sd_split_means | 3.0 | results/metrics/split_spread/data.json | datasets/uci_har/sd_split_means | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.uci_har.sd_model_means | 1.5 | results/metrics/split_spread/data.json | datasets/uci_har/sd_model_means | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.uci_har.range_split_means | 10.6 | results/metrics/split_spread/data.json | datasets/uci_har/range_split_means | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.uci_har.range_model_means | 4.1 | results/metrics/split_spread/data.json | datasets/uci_har/range_model_means | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.uci_har.mean_seed_sd | 0.8 | results/metrics/split_spread/data.json | datasets/uci_har/mean_seed_sd | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.up_fall.sd_split_means | 8.3 | results/metrics/split_spread/data.json | datasets/up_fall/sd_split_means | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.up_fall.sd_model_means | 4.4 | results/metrics/split_spread/data.json | datasets/up_fall/sd_model_means | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.up_fall.range_split_means | 28.5 | results/metrics/split_spread/data.json | datasets/up_fall/range_split_means | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.up_fall.range_model_means | 9.7 | results/metrics/split_spread/data.json | datasets/up_fall/range_model_means | scripts/run_analyses.py (src.evaluation.split_spread) |
+| spread.up_fall.mean_seed_sd | 4.0 | results/metrics/split_spread/data.json | datasets/up_fall/mean_seed_sd | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.median_gap | 17.1 | results/metrics/split_spread/data.json | validation/median_gap | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.min_gap | 4.6 | results/metrics/split_spread/data.json | validation/min_gap | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.max_gap | 47.8 | results/metrics/split_spread/data.json | validation/max_gap | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.datasets_val_above_test | 13 | results/metrics/split_spread/data.json | validation/datasets_val_above_test | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.runs_val_above_test | 2,307 | results/metrics/split_spread/data.json | validation/runs_val_above_test | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.runs | 2,388 | results/metrics/split_spread/data.json | validation/runs | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.median_rho_network_means | +0.18 | results/metrics/split_spread/data.json | validation/median_rho_network_means | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.datasets_with_rho_network | 13 | results/metrics/split_spread/data.json | validation/datasets_with_rho_network | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.datasets_best_by_val_is_best_by_test | 3 | results/metrics/split_spread/data.json | validation/datasets_best_by_val_is_best_by_test | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.datasets | 13 | results/metrics/split_spread/data.json | validation/datasets | scripts/run_analyses.py (src.evaluation.split_spread) |
+| val.median_test_loss_choosing_by_val | 2.7 | results/metrics/split_spread/data.json | validation/median_test_loss_choosing_by_val | scripts/run_analyses.py (src.evaluation.split_spread) |
+| emb.datasets | 11 | results/metrics/embedding/summary.json | datasets | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.datasets_with_more_than_3_splits | 10 | results/metrics/embedding/summary.json | datasets_with_more_than_3_splits | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.pooled_within_dataset_rank_rho_embedding_ccs_f1 | -0.46 | results/metrics/embedding/summary.json | pooled_within_dataset_rank_rho_embedding_ccs_f1 | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.pooled_within_dataset_rank_p_embedding | < 0.001 | results/metrics/embedding/summary.json | pooled_within_dataset_rank_p_embedding | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.pooled_within_dataset_rank_rho_sensor_ccs_f1 | -0.32 | results/metrics/embedding/summary.json | pooled_within_dataset_rank_rho_sensor_ccs_f1 | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.pooled_within_dataset_rank_p_sensor | = 0.002 | results/metrics/embedding/summary.json | pooled_within_dataset_rank_p_sensor | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.median_dataset_rho_embedding | -0.61 | results/metrics/embedding/summary.json | median_dataset_rho_embedding | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.median_dataset_rho_sensor | -0.45 | results/metrics/embedding/summary.json | median_dataset_rho_sensor | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.datasets_negative_rho_embedding | 10 | results/metrics/embedding/summary.json | datasets_negative_rho_embedding | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.datasets_negative_rho_sensor | 9 | results/metrics/embedding/summary.json | datasets_negative_rho_sensor | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.median_subject_probe_over_chance_embedding | 3.2 | results/metrics/embedding/summary.json | median_subject_probe_over_chance_embedding | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.median_subject_probe_over_chance_sensor | 4.0 | results/metrics/embedding/summary.json | median_subject_probe_over_chance_sensor | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.median_activity_probe_embedding | 99 | results/metrics/embedding/summary.json | median_activity_probe_embedding | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.probe_cases | 754 | results/metrics/embedding/summary.json | probe_cases | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.regenerated_cases | 754 | results/metrics/embedding/summary.json | regenerated_cases | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.regenerated_exact | 686 | results/metrics/embedding/summary.json | regenerated_exact | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.max_abs_regenerated_minus_stored_macro_f1 | 0.20 | results/metrics/embedding/summary.json | max_abs_regenerated_minus_stored_macro_f1 | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1 | -0.45 | results/metrics/embedding/summary.json | pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1 | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.pooled_within_dataset_rank_p_embedding_per_dim | < 0.001 | results/metrics/embedding/summary.json | pooled_within_dataset_rank_p_embedding_per_dim | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.network_dataset_cases | 82 | results/metrics/embedding/summary.json | network_dataset_cases | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.median_network_dataset_rho_embedding | -0.50 | results/metrics/embedding/summary.json | median_network_dataset_rho_embedding | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.network_dataset_negative_rho | 69 | results/metrics/embedding/summary.json | network_dataset_negative_rho | src/evaluation/embedding_analysis.py (aggregate) |
+| emb.probe_windows | 4,000 | results/metrics/embedding/uci_har.json | probe_windows | src/evaluation/embedding_analysis.py |
+| emb.tsne.split | 0 | results/metrics/embedding/tsne_case.json | case/split | src/evaluation/embedding_analysis.py (t-SNE case) |
+| emb.tsne.train_windows | 3000 | results/metrics/embedding/tsne_case.json | train/activity | src/evaluation/embedding_analysis.py (t-SNE case) |
+| emb.tsne.test_windows | 868 | results/metrics/embedding/tsne_case.json | test/activity | src/evaluation/embedding_analysis.py (t-SNE case) |

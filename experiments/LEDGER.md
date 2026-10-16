@@ -5046,3 +5046,5 @@ whar_arena_v1/vortexnet/utd_mhad/split-07 | IMPORT | fingerprint c98d3cdb212a | 
 20261016_093217_model_anatomy | END   | model anatomy: structure, sizes, toy operators, learned memory parameters | 00:00:03 | status=completed
 20261016_094418_verify_G5 | START | config 841a3df655c6 | data 10383f130f63 | synthetic=false
 20261016_094418_verify_G5 | END   | G5 FAIL | 00:07:45 | status=completed
+20261016_134659_verify_G5 | START | config e4fe4ba11a9d | data 10383f130f63 | synthetic=false
+20261016_134659_verify_G5 | END   | G5 PASS | 00:14:22 | status=completed

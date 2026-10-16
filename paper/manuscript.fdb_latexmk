@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript"] 1792105450.1657 "manuscript.aux" "manuscript.bbl" "manuscript" 1792105451.10137 0
-  "./references.bib" 1792057439 9385 d69ab60d65ada64cbc8ab5edafb983b6 ""
+["bibtex manuscript"] 1792134093.46791 "manuscript.aux" "manuscript.bbl" "manuscript" 1792134094.60383 0
+  "./references.bib" 1792115993 11357 999b0212f3d7cd28dcdc9b1036bc083c ""
   "/home/huy.leminh/texlive/2026/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "manuscript.aux" 1792105450 3922 d43c6df17bb773196050b660a2f33d0c "pdflatex"
+  "manuscript.aux" 1792134094 9882 ae9db22b3bc022dc44c453dc8f0502e0 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1792105450.29761 "manuscript.tex" "manuscript.pdf" "manuscript" 1792105451.10189 0
+["pdflatex"] 1792134093.60407 "manuscript.tex" "manuscript.pdf" "manuscript" 1792134094.60438 0
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -71,6 +71,7 @@
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxmia.vf" 1724614892 2052 32313fcb5c0cec3f7956da7328e62ee4 ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxsy.vf" 1724614892 1792 7cf99effbd74f7851ca7683a6d12b685 ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxsy5.vf" 1724614892 1856 05afd1fb7a543fb973348907ffdabf53 ""
+  "/home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxsy7.vf" 1724614892 1940 bf4bac1135a7513fb45cfd9280176019 ""
   "/home/huy.leminh/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/home/huy.leminh/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/home/huy.leminh/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex" 1215376579 2553 4b99aa9667b708dd355926023d705446 ""
@@ -119,10 +120,19 @@
   "IEEE_lsens.cls" 1792104099 214510 832b5a4695db10df88e7211f1c5ef489 ""
   "figures/fig01_variance_components.pdf" 1792102101 15951 164baea39e17cbecb2df1b2a9138d9eb ""
   "figures/fig02_contrasts_channels.pdf" 1792102102 30739 9abc016fdb1ec10209c5d114570737cb ""
-  "manuscript.aux" 1792105450 3922 d43c6df17bb773196050b660a2f33d0c "pdflatex"
-  "manuscript.bbl" 1792105450 6122 645e1a4a08cbaa211010f929ed975f01 "bibtex manuscript"
-  "manuscript.tex" 1792105448 13827 c8d89e5267c30c0a276ad4a3e0684fec ""
+  "figures/fig03_design.pdf" 1792118294 45822 37e0d59bcbbba4fb93de3ab59841afbf ""
+  "figures/fig04_sensors.pdf" 1792118296 36464 709fe7d60ad0edccb4a953fcc30c2f4c ""
+  "figures/fig05_architecture.pdf" 1792118297 39051 f2ce2ef20c369c1c3bcffc03550adb2c ""
+  "figures/fig06_memory.pdf" 1792118299 39738 945ab1bccbefe857b7f2e8917f613472 ""
+  "figures/fig07_split_spread.pdf" 1792118300 45752 5fe181a52a154a77ddb7fada7c1e41d3 ""
+  "figures/fig08_embedding.pdf" 1792118301 221385 a30bd9d5eaf14f61de3e32811ec58f2d ""
+  "figures/fig09_validation.pdf" 1792118302 29867 b22ef41de9394e57e1b8e6e4c883e053 ""
+  "manuscript.aux" 1792134094 9882 ae9db22b3bc022dc44c453dc8f0502e0 "pdflatex"
+  "manuscript.bbl" 1792134093 7651 01d42d67b2d0f4bcfff7c4818e0b425a "bibtex manuscript"
+  "manuscript.tex" 1792134090 28936 6a1438072c4643b4f7e3c232fafbcf82 ""
   "tab01_variance_components.tex" 1792102102 652 e717c4cf5968f95c4401bdd7bb33ab68 ""
+  "tab02_datasets.tex" 1792118297 1444 28786755c59b6d3bb5af3d3b6968eda2 ""
+  "tab03_models.tex" 1792118298 1115 ea7612b10c884b7fbd68679bf44ff7e7 ""
   (generated)
   "manuscript.aux"
   "manuscript.log"

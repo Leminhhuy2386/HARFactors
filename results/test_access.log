@@ -77,3 +77,7 @@
 2026-10-16T09:44:27 | scripts/verify_results.py | 20261016_094418_verify_G5 | verification (G5): re-read the S2 run records for the second implementation of every confirmatory analysis
 2026-10-16T09:48:17 | scripts/verify_results.py | 20261016_094418_verify_G5 | verification (G5): re-read the S2 run records for the model-label permutation control
 2026-10-16T09:49:21 | scripts/verify_results.py | 20261016_094418_verify_G5 | verification (G5): re-read the S2 run records for the auditor's --seeds check and its negative control
+2026-10-16T13:47:54 | scripts/verify_results.py | 20261016_134659_verify_G5 | verification (G5): re-read the S2 run records for the second implementation of every confirmatory analysis
+2026-10-16T13:51:43 | scripts/verify_results.py | 20261016_134659_verify_G5 | verification (G5): re-read the S2 run records for the model-label permutation control
+2026-10-16T13:55:57 | scripts/verify_results.py | 20261016_134659_verify_G5 | verification (G5): re-read the S2 run records for the bootstrap refit check (informative)
+2026-10-16T13:57:44 | scripts/verify_results.py | 20261016_134659_verify_G5 | verification (G5): re-read the S2 run records for the auditor's --seeds check and its negative control

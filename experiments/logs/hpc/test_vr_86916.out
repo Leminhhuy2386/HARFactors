@@ -1,0 +1,13 @@
+node hpc21.local, job 86916, Fri Oct 16 13:41:13 +07 2026
+NVIDIA RTX A5000, 580.126.09
+S2 perm share 0.0 caught True kept numpy_reml sm default 1881.2 rn 1867.45 | real share 0.1006 kept numpy_reml 265 s
+S1 perm share 0.0 caught True kept statsmodels sm powell 5069.03 rn 5069.031 | real share 0.1953 kept numpy_reml 265 s
+{'resamples_checked': 8, 'of': 1000, 'seed': 20261015, 'statsmodels_at_maximum': 8, 'criterion': 'restricted -log-likelihood within 0.01 of the better of the two fits', 'max_statsmodels_shortfall': 5.935917215538211e-07, 'max_relative_R_difference': 0.00029575048788758526, 'median_relative_R_difference': 8.095718747269072e-05, 'note': 'informative: the pre-registered estimator is statsmodels; this measures how often it stops short'} 283 s
+{'resample': 10, 'statsmodels_method': 'default', 'statsmodels_converged': True, 'statsmodels_shortfall': 4.576440915116109e-08, 'numpy_shortfall': 0.0, 'R_statsmodels': 7.642561667644648, 'R_numpy_reml': 7.642533580116401}
+{'resample': 203, 'statsmodels_method': 'default', 'statsmodels_converged': True, 'statsmodels_shortfall': 0.0, 'numpy_shortfall': 1.527700987935532e-08, 'R_statsmodels': 7.434401940655342, 'R_numpy_reml': 7.434542363051056}
+{'resample': 216, 'statsmodels_method': 'default', 'statsmodels_converged': True, 'statsmodels_shortfall': 1.285375219595153e-07, 'numpy_shortfall': 0.0, 'R_statsmodels': 7.972398490588261, 'R_numpy_reml': 7.973546147960826}
+{'resample': 450, 'statsmodels_method': 'default', 'statsmodels_converged': True, 'statsmodels_shortfall': 2.142107859981479e-07, 'numpy_shortfall': 0.0, 'R_statsmodels': 10.540345602740732, 'R_numpy_reml': 10.542334904400846}
+{'resample': 492, 'statsmodels_method': 'default', 'statsmodels_converged': True, 'statsmodels_shortfall': 4.775756679009646e-09, 'numpy_shortfall': 0.0, 'R_statsmodels': 8.963282543447942, 'R_numpy_reml': 8.963759469441298}
+{'resample': 839, 'statsmodels_method': 'default', 'statsmodels_converged': True, 'statsmodels_shortfall': 4.2699912228272296e-07, 'numpy_shortfall': 0.0, 'R_statsmodels': 9.872129868582064, 'R_numpy_reml': 9.875050419561564}
+{'resample': 843, 'statsmodels_method': 'default', 'statsmodels_converged': True, 'statsmodels_shortfall': 5.935917215538211e-07, 'numpy_shortfall': 0.0, 'R_statsmodels': 8.958983859687091, 'R_numpy_reml': 8.958010049178792}
+{'resample': 936, 'statsmodels_method': 'default', 'statsmodels_converged': True, 'statsmodels_shortfall': 0.0, 'numpy_shortfall': 6.787809070374351e-08, 'R_statsmodels': 6.929917420394643, 'R_numpy_reml': 6.930034121060757}
