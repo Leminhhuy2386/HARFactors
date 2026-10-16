@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript"] 1792134093.46791 "manuscript.aux" "manuscript.bbl" "manuscript" 1792134094.60383 0
+["bibtex manuscript"] 1792136281.80619 "manuscript.aux" "manuscript.bbl" "manuscript" 1792136282.86076 0
   "./references.bib" 1792115993 11357 999b0212f3d7cd28dcdc9b1036bc083c ""
   "/home/huy.leminh/texlive/2026/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "manuscript.aux" 1792134094 9882 ae9db22b3bc022dc44c453dc8f0502e0 "pdflatex"
+  "manuscript.aux" 1792136282 10167 86f668e13d1a1785382dd718d067910d "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1792134093.60407 "manuscript.tex" "manuscript.pdf" "manuscript" 1792134094.60438 0
+["pdflatex"] 1792136281.94365 "manuscript.tex" "manuscript.pdf" "manuscript" 1792136282.86136 0
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -118,21 +118,21 @@
   "/home/huy.leminh/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1773314043 3636776 12b4d193080c3c7f91613b2f0296856c ""
   "/home/huy.leminh/texlive/2026/texmf.cnf" 1773313742.69006 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "IEEE_lsens.cls" 1792104099 214510 832b5a4695db10df88e7211f1c5ef489 ""
-  "figures/fig01_variance_components.pdf" 1792102101 15951 164baea39e17cbecb2df1b2a9138d9eb ""
-  "figures/fig02_contrasts_channels.pdf" 1792102102 30739 9abc016fdb1ec10209c5d114570737cb ""
-  "figures/fig03_design.pdf" 1792118294 45822 37e0d59bcbbba4fb93de3ab59841afbf ""
-  "figures/fig04_sensors.pdf" 1792118296 36464 709fe7d60ad0edccb4a953fcc30c2f4c ""
-  "figures/fig05_architecture.pdf" 1792118297 39051 f2ce2ef20c369c1c3bcffc03550adb2c ""
-  "figures/fig06_memory.pdf" 1792118299 39738 945ab1bccbefe857b7f2e8917f613472 ""
-  "figures/fig07_split_spread.pdf" 1792118300 45752 5fe181a52a154a77ddb7fada7c1e41d3 ""
-  "figures/fig08_embedding.pdf" 1792118301 221385 a30bd9d5eaf14f61de3e32811ec58f2d ""
-  "figures/fig09_validation.pdf" 1792118302 29867 b22ef41de9394e57e1b8e6e4c883e053 ""
-  "manuscript.aux" 1792134094 9882 ae9db22b3bc022dc44c453dc8f0502e0 "pdflatex"
-  "manuscript.bbl" 1792134093 7651 01d42d67b2d0f4bcfff7c4818e0b425a "bibtex manuscript"
-  "manuscript.tex" 1792134090 28936 6a1438072c4643b4f7e3c232fafbcf82 ""
-  "tab01_variance_components.tex" 1792102102 652 e717c4cf5968f95c4401bdd7bb33ab68 ""
-  "tab02_datasets.tex" 1792118297 1444 28786755c59b6d3bb5af3d3b6968eda2 ""
-  "tab03_models.tex" 1792118298 1115 ea7612b10c884b7fbd68679bf44ff7e7 ""
+  "figures/fig01_variance_components.pdf" 1792136265 20827 ac9ba97c74b34c8004aea5a5983eceb2 ""
+  "figures/fig02_contrasts_channels.pdf" 1792136266 30993 42eae2f0d5be3747d231b98991e372cd ""
+  "figures/fig03_design.pdf" 1792136271 46914 d7b91876c0a4e9c43f4a58be6a2df03f ""
+  "figures/fig04_sensors.pdf" 1792136272 37256 868e1209ba1efe0913c20bcb63aa5f2a ""
+  "figures/fig05_architecture.pdf" 1792136274 56378 3c56f03a38e7083469b0d55a9fbae912 ""
+  "figures/fig06_memory.pdf" 1792136276 43865 13f9ded7fc1795b7b66d151dbcfb52d6 ""
+  "figures/fig07_split_spread.pdf" 1792136277 46838 2c2bfe1547227a3021a2d8fb27268531 ""
+  "figures/fig08_embedding.pdf" 1792136278 219096 a27276d8f5c2ee0d4ebf412d8824314c ""
+  "figures/fig09_validation.pdf" 1792136279 30152 21be35e6922366f39fa7d32ee6d12ab3 ""
+  "manuscript.aux" 1792136282 10167 86f668e13d1a1785382dd718d067910d "pdflatex"
+  "manuscript.bbl" 1792136281 7651 01d42d67b2d0f4bcfff7c4818e0b425a "bibtex manuscript"
+  "manuscript.tex" 1792136280 29220 010e5ac97bbc56bbad43791d7659555b ""
+  "tab01_variance_components.tex" 1792136266 652 e717c4cf5968f95c4401bdd7bb33ab68 ""
+  "tab02_datasets.tex" 1792136273 1444 28786755c59b6d3bb5af3d3b6968eda2 ""
+  "tab03_models.tex" 1792136275 1115 ea7612b10c884b7fbd68679bf44ff7e7 ""
   (generated)
   "manuscript.aux"
   "manuscript.log"

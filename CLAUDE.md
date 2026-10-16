@@ -23,6 +23,7 @@ answer so far: who is tested matters far more than the architecture. Split off f
   analyses (split spread, validation vs test, learned memory parameters, embeddings) and Figs. 3-9, Tables II-III in
   `paper/manuscript_src.tex`. G5 rerun5 FAILed on the S2 model-permutation control (statsmodels optimizer stopped at
   a non-maximum); with the user's approved fix, G5 rerun6, G6 rerun4, G7 rerun6 and `audit --all` PASS (10 pages).
+  Figures restyled (deeper validated palette, Fig. 3 as a dataflow diagram): G7 rerun7 PASS.
   Restore the venue limits in `paper/format_limits.json` before submission.
 - **What exists (history).** Imported from Edge_SSM:
   - the 2,460-run population (10 models × 10 datasets × 3 seeds) with its checkpoints;

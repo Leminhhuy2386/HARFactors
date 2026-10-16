@@ -15,7 +15,7 @@ verified. What blocks submission is listed under § Open items.
 | G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
 | G5 authenticity | PASS | G5_results_authenticity_rerun6.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; permutation control on the better of two REML fits (since rerun 6); 50/50 sampled H1 bootstrap refits at the maximum; label-shuffle control collapsed (6/6). Rerun5 FAILed (optimizer, see below); rerun4 FAILed (rebuilt caches); the first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
 | G6 traceability | PASS | G6_traceability_rerun4.json | 538 values re-derive (expanded manuscript); the tampering control was caught |
-| G7 manuscript | PASS | G7_compile_citations_rerun6.json | Expanded draft: 10 pages, 9 figures, 3 tables, abstract 140 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
+| G7 manuscript | PASS | G7_compile_citations_rerun7.json | Expanded draft with restyled figures: 10 pages, 9 figures, 3 tables, abstract 140 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
 
 ### Results
 
@@ -93,6 +93,12 @@ Everything below is descriptive or exploratory; no network was trained. Details:
   150-word abstract limit stays. Restore them before submission.
 - **Jobs:** the CPU partitions were full, so the embedding and figure jobs ran on idle CPU cores of the GPU nodes
   without a GPU (`--gres=gpu:0`; `docs/hpc.md` allows the `gpu` partition for regenerating predictions).
+- **Figures restyled** (user request, 2026-10-16): the dataviz reference hues at their deeper steps (validated with
+  the dataviz validator on the light surface: worst adjacent CVD delta E 8.4, normal-vision 19.3), black ink for text
+  and axes, thicker marks, no faded layers, the seed term in neutral grey; colour now also encodes whether an
+  interval clears its threshold (Figs. 1 and 2, stated in the captions). The network figure was redrawn as a
+  dataflow diagram (tensor shapes on the edges, the residual block with its skip connection, a table of the memory
+  update rules). Numbers unchanged; G7 rerun7 and `audit --all` PASS.
 - **Gates:** the pending rerun5 chain (Slurm 86823) was cancelled before it started, so that its negative controls
   would not see the embedding runs' open ledger lines; G5 rerun5, G6, G7 and the audit ran once afterwards (Slurm
   86864), with nothing else running.

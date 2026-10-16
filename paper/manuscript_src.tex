@@ -155,9 +155,11 @@ datasets of S1 and S2 \val{models.params_all_min} to \val{models.params_all_max}
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig05_architecture.pdf}
-\caption{The networks of S1 and S2. (a) The shared skeleton; the embedding analysed in Section~\ref{sec:emb} is the
-head's input. (b) The residual block, whose memory differs between networks (S4D and Mamba use their own blocks).
-(c) Memory, side path, width $D$, depth $N$ and parameter count of each network with the reference input of gate G1.}
+\caption{The networks of S1 and S2 as a dataflow diagram. (a) The shared skeleton, with the tensor shapes on its
+edges ($C$ channels, $L$ samples, width $D$, $K$ classes); the embedding analysed in Section~\ref{sec:emb} is the
+head's input. (b) The residual block with its skip connection; the memory returns $F$ features per channel. (c) Each
+memory's update per channel and time step, the state it keeps, and the networks that use it (sizes in
+Table~\ref{tab:models}).}
 \label{fig:arch}
 \end{figure*}
 
@@ -241,8 +243,9 @@ and the secondary criterion ($\pi_P$ lower bound $\ge 40$\,\%) is met.
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig01_variance_components.pdf}
-\caption{Where the within-dataset variance of the stored runs lies. Left: shares by source (numbers in \%). Right:
-$R$ with its 97.5\,\% bootstrap interval; the dashed line is the pre-registered threshold. $R$ exceeds 1 in every
+\caption{Where the within-dataset variance of the stored runs lies. Left: shares by source (numbers in \%; the seed
+term, grey, is the residual). Right: $R$ with its 97.5\,\% bootstrap interval, blue where the interval lies above 1
+and orange otherwise; the dashed line is the pre-registered threshold. $R$ exceeds 1 in every
 analysis of the shared-skeleton networks (on S1 with balanced accuracy its interval includes 1), and the network
 dominates across the 17 heterogeneous published architectures (S3, conservative $R'$).}
 \label{fig:vc}
@@ -311,7 +314,8 @@ or how many test points the choice loses. Datasets whose runs did not all record
 \centering
 \includegraphics[width=\columnwidth]{figures/fig02_contrasts_channels.pdf}
 \caption{Exploratory. (a) Temporal memory against none, and memory types against S4D, over the development datasets
-whose runs pair by subject (mean and 95\,\% CI; datasets won). (b) Over the benchmark's 30 datasets (published single
+whose runs pair by subject (mean and 95\,\% CI, blue where the CI lies above 0, orange below 0, grey across 0;
+datasets won). (b) Over the benchmark's 30 datasets (published single
 runs), the Random Forest's margin over the best deep network rises with the number of sensor channels.}
 \label{fig:explore}
 \end{figure}

@@ -369,8 +369,6 @@ INPUT ./figures/fig01_variance_components.pdf
 INPUT ./tab01_variance_components.tex
 INPUT ./tab01_variance_components.tex
 INPUT tab01_variance_components.tex
-INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
-INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT ./figures/fig07_split_spread.pdf
 INPUT ./figures/fig07_split_spread.pdf
 INPUT ./figures/fig07_split_spread.pdf
@@ -391,11 +389,6 @@ INPUT ./figures/fig06_memory.pdf
 INPUT ./figures/fig06_memory.pdf
 INPUT ./figures/fig06_memory.pdf
 INPUT ./figures/fig06_memory.pdf
-INPUT ./figures/fig08_embedding.pdf
-INPUT ./figures/fig08_embedding.pdf
-INPUT ./figures/fig08_embedding.pdf
-INPUT ./figures/fig08_embedding.pdf
-INPUT ./figures/fig08_embedding.pdf
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
@@ -405,6 +398,13 @@ INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regula
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/public/newtx/ntxmi5.vf
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/NewTXMI5.tfm
 INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
+INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT /home/huy.leminh/texlive/2026/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./figures/fig08_embedding.pdf
+INPUT ./figures/fig08_embedding.pdf
+INPUT ./figures/fig08_embedding.pdf
+INPUT ./figures/fig08_embedding.pdf
+INPUT ./figures/fig08_embedding.pdf
 INPUT ./manuscript.bbl
 INPUT ./manuscript.bbl
 INPUT manuscript.bbl

@@ -1,0 +1,17 @@
+node hpc22.local, job 86938, Fri Oct 16 14:35:11 +07 2026
+NVIDIA RTX A5000, 580.126.09
+figures and table written; run 20261016_143514_letter_figures
+fig03 written
+fig04 written
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+fig05 written
+fig06 written
+fig07 written
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/work/huy.leminh/code/Dr.Huy/HAR/HARFactors/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+fig08 written
+fig09 written
+run 20261016_143519_detail_figures

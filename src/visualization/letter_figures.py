@@ -8,8 +8,10 @@
     tab01_variance_components.{csv,tex}  the numbers behind Fig. 1
 
 Every figure and table also writes its numbers to results/figure_data/ or results/table_data/, with provenance.
-Colours: the dataviz reference palette in fixed slot order (validated: scratch validator run, adjacent pairs, light);
-the three slots below 3:1 contrast are relieved by direct labels and by Table I.
+Colours: the dataviz reference hues in fixed slot order, at their deeper steps for print (blue 500, orange, aqua,
+yellow, magenta, violet, red; validated with the dataviz validator, light surface, adjacent pairs: worst CVD delta E 8.4,
+normal-vision 19.3, only yellow below 3:1 contrast, relieved by direct labels and Table I). The seed (residual) term is
+neutral grey: it is unexplained variation, not a category.
 
     uv run python -m src.visualization.letter_figures
 """
@@ -33,8 +35,9 @@ from src.utils import provenance as PV  # noqa: E402
 CONF = PATHS.METRICS / "confirmatory"
 FIG_DATA = PATHS.RESULTS / "figure_data"
 TAB_DATA = PATHS.RESULTS / "table_data"
-SLOTS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4"]  # reference palette, slots 1-5
-INK, INK2, GRID = "#0b0b0b", "#52514e", "#d9d8d4"
+SLOTS = ["#256abf", "#d95926", "#199e70", "#c98500", "#d55181", "#4a3aa7", "#e34948"]  # slots 1-7, deeper steps
+INK, INK2, GRID = "#0b0b0b", "#3d3c39", "#dedcd5"
+RESIDUAL = "#8c8a84"  # neutral grey for the seed (residual) term
 SOURCES = [("P", "test-subject group"), ("M", "model"), ("MD", "model × dataset"), ("MP", "model × split"),
            ("e", "seed (residual)")]
 ROWS = [("H1", "S2 F1 (H1)"), ("sens1_S2_balanced_accuracy", "S2 bal. acc."), ("sens2_S1_macro_f1", "S1 F1"),
@@ -47,7 +50,11 @@ MEMORY = [("recurrencenet-hystnet_nomem", "RecurrenceNet"), ("s4d-hystnet_nomem"
 
 plt.rcParams.update({"font.size": 8, "axes.titlesize": 8, "axes.labelsize": 8, "xtick.labelsize": 7,
                      "ytick.labelsize": 7, "legend.fontsize": 7, "pdf.fonttype": 42, "ps.fonttype": 42,
-                     "axes.edgecolor": INK2, "axes.labelcolor": INK, "xtick.color": INK2, "ytick.color": INK2,
+                     "axes.edgecolor": INK, "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK,
+                     "xtick.labelcolor": INK, "ytick.labelcolor": INK, "axes.linewidth": 0.8,
+                     "xtick.major.width": 0.8, "ytick.major.width": 0.8, "xtick.minor.width": 0.6,
+                     "ytick.minor.width": 0.6, "lines.linewidth": 1.5, "grid.linewidth": 0.5,
+                     "legend.frameon": False, "mathtext.fontset": "dejavusans",
                      "axes.spines.top": False, "axes.spines.right": False, "font.family": "DejaVu Sans"})
 
 
@@ -91,13 +98,15 @@ def fig01(rows, run_id, started, inputs) -> None:
     fig, (a, b) = plt.subplots(1, 2, figsize=(3.5, 2.45), gridspec_kw={"width_ratios": [1.55, 1], "wspace": 0.16},
                                sharey=True)
     y = np.arange(len(rows))[::-1]
+    colours = SLOTS[:4] + [RESIDUAL]
     for i, (k, name) in enumerate(SOURCES):
         left = np.array([sum(r["shares"][kk] for kk, _ in SOURCES[:i]) for r in rows])
         w = np.array([r["shares"][k] for r in rows])
-        a.barh(y, w, left=left, height=0.62, color=SLOTS[i], edgecolor="white", linewidth=1.0, label=name)
+        a.barh(y, w, left=left, height=0.64, color=colours[i], edgecolor="white", linewidth=1.0, label=name)
         for yy, l, ww in zip(y, left, w):
             if ww >= 0.08:  # direct labels: relief for the low-contrast slots
-                a.text(l + ww / 2, yy, f"{100 * ww:.0f}", ha="center", va="center", fontsize=6.5, color=INK)
+                a.text(l + ww / 2, yy, f"{100 * ww:.0f}", ha="center", va="center", fontsize=6.5,
+                       fontweight="bold", color=INK if k == "MP" else "white")
     a.set_yticks(y, [r["label"] for r in rows])
     a.set_xlim(0, 1)
     a.set_xticks([0, 0.5, 1], ["0", "50", "100"])
@@ -106,9 +115,11 @@ def fig01(rows, run_id, started, inputs) -> None:
              columnspacing=0.8, handletextpad=0.4)
     for yy, r in zip(y, rows):
         lo, hi = r["R_interval"]
-        b.plot([lo, hi], [yy, yy], color=INK2, linewidth=1.2, solid_capstyle="round")
-        b.plot([r["R"]], [yy], "o", color=SLOTS[0], markersize=4.5, markeredgecolor="white", markeredgewidth=0.8)
-    b.axvline(1, color=INK, linewidth=0.8, linestyle=(0, (3, 2)))
+        b.plot([lo, hi], [yy, yy], color=INK, linewidth=1.6, solid_capstyle="butt")
+        b.plot([lo, hi], [yy, yy], "|", color=INK, markersize=5, markeredgewidth=1.2)
+        b.plot([r["R"]], [yy], "o", color=SLOTS[0] if r["R_interval"][0] > 1 else SLOTS[1], markersize=6,
+               markeredgecolor="white", markeredgewidth=1.0, zorder=3)
+    b.axvline(1, color=SLOTS[6], linewidth=1.0, linestyle=(0, (3, 2)))
     b.set_xscale("log")
     b.set_xlim(0.04, 30)
     b.set_xticks([0.1, 1, 10], ["0.1", "1", "10"])
@@ -134,8 +145,10 @@ def fig02(run_id, started) -> dict:
                        "wins": c["wins"], "n": c["n"], "p": c["p"]})
     ypos = [9, 8, 7, 6, 5, 2.6, 1.6, 0.6, -0.4]
     for yy, f in zip(ypos, forest):
-        a.plot([f["lo"], f["hi"]], [yy, yy], color=INK2, linewidth=1.2, solid_capstyle="round")
-        a.plot([f["mean"]], [yy], "o", color=SLOTS[0], markersize=4.5, markeredgecolor="white", markeredgewidth=0.8)
+        a.plot([f["lo"], f["hi"]], [yy, yy], color=INK, linewidth=1.6, solid_capstyle="butt")
+        a.plot([f["lo"], f["hi"]], [yy, yy], "|", color=INK, markersize=5, markeredgewidth=1.2)
+        a.plot([f["mean"]], [yy], "o", color=SLOTS[0] if f["lo"] > 0 else (SLOTS[1] if f["hi"] < 0 else RESIDUAL),
+               markersize=6, markeredgecolor="white", markeredgewidth=1.0, zorder=3)
         a.text(10.6, yy, f"{f['mean']:+.1f} ({f['wins']}/{f['n']})", va="center", ha="left", fontsize=6.5, color=INK)
     a.axvline(0, color=INK, linewidth=0.8, linestyle=(0, (3, 2)))
     a.set_yticks(ypos + [10.1, 3.7], [f["label"] for f in forest] + ["memory − none", "type − S4D"])
@@ -157,7 +170,7 @@ def fig02(run_id, started) -> dict:
     ols = fac["ols"][out]
     j = 1 + ["log2 subjects", "log2 channels", "log2 classes", "log2 samples/window"].index("log2 channels")
     b.axhline(0, color=INK, linewidth=0.8, linestyle=(0, (3, 2)))
-    b.scatter(x, yv, s=16, color=SLOTS[0], edgecolor="white", linewidth=0.6, zorder=3)
+    b.scatter(x, yv, s=26, color=SLOTS[0], edgecolor="white", linewidth=0.8, zorder=3)
     names = {e["dataset"]: e["dataset_name"] for e in json.loads((PATHS.DOCS / "baselines_cited.json").read_text())["entries"]}
     for d, xx, yy in zip(ds, x, yv):
         if yy > 5:

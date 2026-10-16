@@ -209,11 +209,43 @@
   "lawnet_rec": "law invariants",
   "lawnet": "law invariants"
  },
- "operators": [
-  "recurrence: $r_t(\\tau)=\\sigma((\\epsilon-\\Vert z_t-z_{t-\\tau}\\Vert)/T)$ and $r_t(\\tau)\\,r_{t-1}(\\tau)$, ten lags",
-  "play operator: $y_t=\\min(\\max(y_{t-1},u_t-r),u_t+r)$, four widths $r$ ($r=0$: no memory)",
-  "quantile tracker: $q_t=q_{t-1}+\\eta\\,(\\tau-\\mathbf{1}[u_t<q_{t-1}])$, four levels $\\tau$",
-  "S4D block: LayerNorm, diagonal state-space convolution + skip, GELU, 1\u00d71 conv, GLU, + x",
-  "Mamba block: LayerNorm, in-projection, depthwise conv, SiLU, selective scan, gate, out-projection, + x"
- ]
+ "memory_table": [
+  [
+   "Recurrence plot",
+   "$r_t(\\tau)=\\sigma\\left((\\epsilon-\\Vert z_t-z_{t-\\tau}\\Vert)/T\\right)$ and $r_t(\\tau)\\,r_{t-1}(\\tau)$,\n$z_t$: 8 learned 2-D projections of $u_t$; 10 lags $\\tau\\leq48$",
+   "48-sample buffer",
+   "RecurrenceNet, RN + stats,\nRN + laws"
+  ],
+  [
+   "Play operator",
+   "$y_t=\\min\\left(\\max(y_{t-1},\\,u_t-r),\\,u_t+r\\right)$, 4 widths $r$\n(HysteresisNet: $r$ depends on $u_t$, plus a clock channel)",
+   "4 values $y$",
+   "HysteresisNet;\nNo memory ($r=0$)"
+  ],
+  [
+   "Quantile tracker",
+   "$q_t=q_{t-1}+\\eta\\,(\\tau-\\mathbf{1}[u_t<q_{t-1}])$, 4 levels $\\tau$",
+   "4 values $q$",
+   "QuantileNet"
+  ],
+  [
+   "Diagonal SSM",
+   "$s_t=\\bar{A}\\,s_{t-1}+\\bar{B}\\,u_t$, $y_t=\\mathrm{Re}(C\\,s_t)+Du_t$; FFT convolution",
+   "16 complex modes",
+   "S4D"
+  ],
+  [
+   "Selective scan",
+   "$s_t=\\bar{A}_t\\,s_{t-1}+\\bar{B}_t\\,u_t$, $y_t=C_t\\,s_t$; $\\Delta_t, B_t, C_t$ computed from $u_t$",
+   "16 states",
+   "Mamba"
+  ],
+  [
+   "None",
+   "plain block: the memory and the concatenation are absent",
+   "none",
+   "Laws, Stats (no mem.)"
+  ]
+ ],
+ "note": "dataflow diagram; parameter counts are in Table III (results/table_data/tab03_models.json)"
 }

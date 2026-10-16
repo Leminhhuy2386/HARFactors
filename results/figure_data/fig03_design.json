@@ -1,7 +1,7 @@
 {
  "stages": [
   [
-   "Datasets and networks",
+   "Data and networks",
    "S1, development: 10 data-\nsets \u00d7 10 networks \u00d7 3 seeds\n= 2,460 runs\nS2, held-out: 8 datasets\n\u00d7 4 networks \u00d7 3 seeds\n= 948 runs\nS3: 4 datasets \u00d7 17 WHAR\nArena models \u00d7 1 run = 510"
   ],
   [
@@ -17,7 +17,7 @@
    "macro-F1 over the test\ngroup's windows (absent\nclasses count 0);\nbalanced accuracy as a\nsensitivity outcome"
   ],
   [
-   "Variance decomposition",
+   "Variance model",
    "crossed random effects\nwithin each dataset:\n$y=\\mu_d+P+M+MD+MP+e$\n$R=\\sigma^2_P/(\\sigma^2_M+\\sigma^2_{MD}+\\sigma^2_{MP})$\nH1 (confirmatory):\nR > 1 on S2"
   ]
  ],
