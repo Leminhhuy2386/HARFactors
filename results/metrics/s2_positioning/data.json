@@ -1,0 +1,282 @@
+{
+ "datasets": [
+  "pamap2",
+  "up_fall",
+  "uma_fall",
+  "usc_had",
+  "wear",
+  "uca_ehar",
+  "w_har"
+ ],
+ "n_datasets": 7,
+ "per_dataset": {
+  "pamap2": {
+   "name": "PAMAP2",
+   "networks": {
+    "RecurrenceNet": 52.58371283610662,
+    "S4D": 54.527778288832415,
+    "RN + stats": 58.56836587190628,
+    "RN + laws": 60.274871383552195
+   },
+   "range_networks": 7.691158547445575,
+   "sd_networks": 3.547498770994355,
+   "published": {
+    "CNN-HAR": 62.06,
+    "TinyHAR": 62.2,
+    "Triple-Cross-Attn": 61.94,
+    "DANA": 60.27,
+    "TinierHAR": 59.63,
+    "Attend+Discriminate": 62.25,
+    "DynamicWHAR": 64.24,
+    "Random Forest": 65.06,
+    "DeepConvLSTM-Attn": 57.58,
+    "MLP-HAR": 63.09,
+    "DeepConvLSTM": 55.81,
+    "MLP-Mixer": 47.81,
+    "Guan-LSTM": 51.82,
+    "DeepConvShallowLSTM": 55.91,
+    "SA-HAR": 58.97,
+    "SVM": 48.05,
+    "k-NN": 48.97
+   },
+   "range_published": 17.25,
+   "best_published": 65.06
+  },
+  "up_fall": {
+   "name": "UP-Fall",
+   "networks": {
+    "RecurrenceNet": 49.78420282403628,
+    "S4D": 42.81607126196226,
+    "RN + stats": 51.773748993873596,
+    "RN + laws": 52.50480771064758
+   },
+   "range_networks": 9.688736448685326,
+   "sd_networks": 4.421169656188043,
+   "published": {
+    "CNN-HAR": 55.02,
+    "TinyHAR": 60.96,
+    "Triple-Cross-Attn": 58.66,
+    "DANA": 52.62,
+    "TinierHAR": 55.65,
+    "Attend+Discriminate": 54.49,
+    "DynamicWHAR": 61.12,
+    "Random Forest": 72.77,
+    "DeepConvLSTM-Attn": 52.24,
+    "MLP-HAR": 56.54,
+    "DeepConvLSTM": 52.87,
+    "MLP-Mixer": 43.16,
+    "Guan-LSTM": 45.67,
+    "DeepConvShallowLSTM": 54.53,
+    "SA-HAR": 51.73,
+    "SVM": 46.85,
+    "k-NN": 40.43
+   },
+   "range_published": 32.339999999999996,
+   "best_published": 72.77
+  },
+  "uma_fall": {
+   "name": "UMAFall",
+   "networks": {
+    "RecurrenceNet": 46.60438617070516,
+    "S4D": 42.858108431100845,
+    "RN + stats": 49.99463895956675,
+    "RN + laws": 52.73124232888222
+   },
+   "range_networks": 9.873133897781372,
+   "sd_networks": 4.271656745395797,
+   "published": {
+    "CNN-HAR": 49.99,
+    "TinyHAR": 50.17,
+    "Triple-Cross-Attn": 52.43,
+    "DANA": 51.85,
+    "TinierHAR": 51.22,
+    "Attend+Discriminate": 50.6,
+    "DynamicWHAR": 56.18,
+    "Random Forest": 54.19,
+    "DeepConvLSTM-Attn": 45.71,
+    "MLP-HAR": 49.06,
+    "DeepConvLSTM": 45.49,
+    "MLP-Mixer": 33.05,
+    "Guan-LSTM": 37.31,
+    "DeepConvShallowLSTM": 40.82,
+    "SA-HAR": 41.88,
+    "SVM": 29.76,
+    "k-NN": 29.19
+   },
+   "range_published": 26.99,
+   "best_published": 56.18
+  },
+  "usc_had": {
+   "name": "USC-HAD",
+   "networks": {
+    "RecurrenceNet": 73.32386821508408,
+    "S4D": 76.21411949396133,
+    "RN + stats": 72.70118365685146,
+    "RN + laws": 76.88519855340321
+   },
+   "range_networks": 4.1840148965517585,
+   "sd_networks": 2.076082212706275,
+   "published": {
+    "CNN-HAR": 76.16,
+    "TinyHAR": 78.09,
+    "Triple-Cross-Attn": 74.34,
+    "DANA": 71.11,
+    "TinierHAR": 75.67,
+    "Attend+Discriminate": 73.32,
+    "DynamicWHAR": 75.7,
+    "Random Forest": 72.68,
+    "DeepConvLSTM-Attn": 70.99,
+    "MLP-HAR": 76.52,
+    "DeepConvLSTM": 73.5,
+    "MLP-Mixer": 78.83,
+    "Guan-LSTM": 68.88,
+    "DeepConvShallowLSTM": 62.88,
+    "SA-HAR": 69.82,
+    "SVM": 37.74,
+    "k-NN": 43.25
+   },
+   "range_published": 41.089999999999996,
+   "best_published": 78.83
+  },
+  "wear": {
+   "name": "WEAR",
+   "networks": {
+    "RecurrenceNet": 85.66277305285136,
+    "S4D": 84.40217912197113,
+    "RN + stats": 85.78631937503815,
+    "RN + laws": 86.81439598401387
+   },
+   "range_networks": 2.41221686204274,
+   "sd_networks": 0.988356045473326,
+   "published": {
+    "CNN-HAR": 86.9,
+    "TinyHAR": 86.48,
+    "Triple-Cross-Attn": 88.52,
+    "DANA": 87.01,
+    "TinierHAR": 87.04,
+    "Attend+Discriminate": 85.63,
+    "DynamicWHAR": 89.65,
+    "Random Forest": 87.34,
+    "DeepConvLSTM-Attn": 84.16,
+    "MLP-HAR": 85.28,
+    "DeepConvLSTM": 83.33,
+    "MLP-Mixer": 83.99,
+    "Guan-LSTM": 82.81,
+    "DeepConvShallowLSTM": 81.13,
+    "SA-HAR": 84.24,
+    "SVM": 75.92,
+    "k-NN": 69.67
+   },
+   "range_published": 19.980000000000004,
+   "best_published": 89.65
+  },
+  "uca_ehar": {
+   "name": "UCA-EHAR",
+   "networks": {
+    "RecurrenceNet": 61.72991385062536,
+    "S4D": 59.084296921888985,
+    "RN + stats": 63.99990459283193,
+    "RN + laws": 62.64013260602951
+   },
+   "range_networks": 4.915607670942947,
+   "sd_networks": 2.074383264357192,
+   "published": {
+    "CNN-HAR": 58.66,
+    "TinyHAR": 57.97,
+    "Triple-Cross-Attn": 58.09,
+    "DANA": 60.1,
+    "TinierHAR": 55.99,
+    "Attend+Discriminate": 59.85,
+    "DynamicWHAR": 57.36,
+    "Random Forest": 47.59,
+    "DeepConvLSTM-Attn": 56.83,
+    "MLP-HAR": 53.0,
+    "DeepConvLSTM": 56.33,
+    "MLP-Mixer": 57.87,
+    "Guan-LSTM": 59.47,
+    "DeepConvShallowLSTM": 42.85,
+    "SA-HAR": 50.35,
+    "SVM": 36.68,
+    "k-NN": 31.73
+   },
+   "range_published": 28.37,
+   "best_published": 60.1
+  },
+  "w_har": {
+   "name": "w-HAR",
+   "networks": {
+    "RecurrenceNet": 50.12624382972717,
+    "S4D": 46.29339267810186,
+    "RN + stats": 53.50340584913889,
+    "RN + laws": 50.60935507218043
+   },
+   "range_networks": 7.210013171037033,
+   "sd_networks": 2.962497805086375,
+   "published": {
+    "CNN-HAR": 52.72,
+    "TinyHAR": 52.16,
+    "Triple-Cross-Attn": 49.83,
+    "DANA": 49.31,
+    "TinierHAR": 49.14,
+    "Attend+Discriminate": 48.63,
+    "DynamicWHAR": 49.91,
+    "Random Forest": 53.07,
+    "DeepConvLSTM-Attn": 48.81,
+    "MLP-HAR": 46.28,
+    "DeepConvLSTM": 47.23,
+    "MLP-Mixer": 48.88,
+    "Guan-LSTM": 39.09,
+    "DeepConvShallowLSTM": 35.78,
+    "SA-HAR": 50.97,
+    "SVM": 31.48,
+    "k-NN": 32.43
+   },
+   "range_published": 21.59,
+   "best_published": 53.07
+  }
+ },
+ "network_means": {
+  "RecurrenceNet": 59.97358582559086,
+  "S4D": 58.02799231397412,
+  "RN + stats": 62.33250961417244,
+  "RN + laws": 63.208571948387004
+ },
+ "published_means": {
+  "CNN-HAR": 63.072857142857146,
+  "TinyHAR": 64.00428571428571,
+  "Triple-Cross-Attn": 63.40142857142857,
+  "DANA": 61.752857142857145,
+  "TinierHAR": 62.04857142857143,
+  "Attend+Discriminate": 62.11,
+  "DynamicWHAR": 64.88,
+  "Random Forest": 64.67142857142858,
+  "DeepConvLSTM-Attn": 59.47428571428571,
+  "MLP-HAR": 61.395714285714284,
+  "DeepConvLSTM": 59.222857142857144,
+  "MLP-Mixer": 56.22714285714286,
+  "Guan-LSTM": 55.00714285714286,
+  "DeepConvShallowLSTM": 53.41428571428571,
+  "SA-HAR": 58.28,
+  "SVM": 43.78285714285715,
+  "k-NN": 42.238571428571426
+ },
+ "networks_mean_min": 58.02799231397412,
+ "networks_mean_max": 63.208571948387004,
+ "published_mean_min": 42.238571428571426,
+ "published_mean_max": 64.88,
+ "published_mean_5th": 63.072857142857146,
+ "published_mean_12th": 58.28,
+ "rank_among_published": {
+  "RecurrenceNet": 10,
+  "S4D": 13,
+  "RN + stats": 6,
+  "RN + laws": 5
+ },
+ "best_rank": 5,
+ "worst_rank": 13,
+ "n_published": 17,
+ "median_range_networks": 7.210013171037033,
+ "max_range_networks": 9.873133897781372,
+ "widest_dataset": "UMAFall",
+ "median_range_published": 26.99
+}

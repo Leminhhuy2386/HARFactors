@@ -476,5 +476,17 @@
   "method": "WebSearch (x2): ijcai.org https://www.ijcai.org/proceedings/2017/0268.pdf and proceedings index https://www.ijcai.org/proceedings/2017/ (main track, pp. 1930-1936); https://www.ijcai.org/Proceedings/2017/268 and mlanthology record (DOI 10.24963/ijcai.2017/268). Abstract: features of conventional networks 'highly discriminate user-information unintentionally'.",
   "status": "verified",
   "note": "WebFetch returned HTTP 403 for every host tried on 2026-10-17 (doi.org, arxiv.org, ar5iv, ijcai.org, mlanthology.org, repository.bilkent.edu.tr), and curl fails on TLS (exit 60; curl -k not used), so both lookups are WebSearch results from the named domains."
+ },
+ "le2026rila": {
+  "resolved_title": "RILA-Net: Recurrence-Plot Layers and Invariant Window Laws for Microcontroller-Sized Wearable Activity Recognition, Tested on Pre-Registered Held-Out Datasets",
+  "resolved_venue": "Unpublished companion manuscript, in preparation for the IEEE Sensors Journal (not yet submitted on 2026-10-17)",
+  "year": 2026,
+  "authors": [
+   "Minhhuy Le"
+  ],
+  "checked_on": "2026-10-17",
+  "method": "The authors' own manuscript: \\title and \\author of paper/manuscript.tex in the private repository github.com/Leminhhuy2386/RILA at commit 1742ef66774a9973574caba8f5e263b274f845df (2026-10-17), cloned read-only by SSH at the user's request; its CLAUDE.md gives the target journal and the verdict NOT_READY_FOR_SUBMISSION. No DOI or preprint exists.",
+  "status": "verified",
+  "note": "Co-authors are not yet listed in the companion manuscript (its author block is marked TODO); update the author list here and in references.bib when it is fixed. The companion manuscript cites this letter as @unpublished{harfactors} under an earlier working title."
  }
 }

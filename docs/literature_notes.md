@@ -240,3 +240,14 @@ the live page before submission.
    - submit through the IEEE Author Portal;
    - suggest at least two reviewers from other institutions;
    - ORCID is required.
+
+## Added 2026-10-17
+
+- `jordao2018human`, `barshan2016investigating`, `varoquaux2018cross`, `iwasawa2017privacy`: verified by two
+  WebSearch lookups each (WebFetch and curl were blocked that day); see `paper/references_verified.json`.
+- `le2026rila`: the companion manuscript (unpublished, in preparation for IEEE Sensors Journal). Title and author
+  were read from its `paper/manuscript.tex` (private GitHub `Leminhhuy2386/RILA`, commit 1742ef6). Its co-authors are
+  not yet fixed there.
+- Not cited, to read before submission:
+  - Shi et al., arXiv:2609.30721 (ICTAI 2026), on statistical confidence with overlapping windows;
+  - the 2026 Int. J. Med. Inform. GLMM study of split strategies (ScienceDirect S1386505626002042).

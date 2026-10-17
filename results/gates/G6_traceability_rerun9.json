@@ -1,0 +1,64 @@
+{
+ "gate": "G6_traceability",
+ "stage": "06_summary",
+ "timestamp": "2026-10-17T10:54:19",
+ "check": "every number in docs/summary.md re-derives from its artifact (scripts/audit.py --traceability)",
+ "reference_value": null,
+ "reference_source": "docs/summary_values.json, docs/artifact_index.md",
+ "observed_value": {
+  "values": 780,
+  "audit_output": [
+   "PASS  --traceability"
+  ],
+  "negative_control": {
+   "tampering": "H1 s2_P edited by +10 % in a copy",
+   "untampered_passes": true,
+   "caught": true,
+   "output": [
+    "FAIL  --traceability  (1 problems)",
+    "       H1.s2_P: printed 127.7 but the artifact gives 140.4"
+   ]
+  },
+  "source_artifacts": [
+   "data/processed/harness_splits.json",
+   "data/processed/manifest.json",
+   "data/processed/splits.json",
+   "results/gates/G3_baseline.json",
+   "results/gates/G5_results_authenticity_rerun6.json",
+   "results/metrics/confirmatory/H1.json",
+   "results/metrics/confirmatory/sens1_S2_balanced_accuracy.json",
+   "results/metrics/confirmatory/sens2_S1_balanced_accuracy.json",
+   "results/metrics/confirmatory/sens2_S1_macro_f1.json",
+   "results/metrics/confirmatory/sens3_S1_without_actrectut.json",
+   "results/metrics/confirmatory/sens4_S3_macro_f1.json",
+   "results/metrics/contrasts_robustness/data.json",
+   "results/metrics/embedding/summary.json",
+   "results/metrics/embedding/tsne_case.json",
+   "results/metrics/embedding/uci_har.json",
+   "results/metrics/error_budget/data.json",
+   "results/metrics/factor_multiplicity/data.json",
+   "results/metrics/factors/data.json",
+   "results/metrics/model_anatomy/data.json",
+   "results/metrics/network_population/data.json",
+   "results/metrics/reproducibility/summary.json",
+   "results/metrics/s2_positioning/data.json",
+   "results/metrics/split_spread/data.json",
+   "results/metrics/validation_reliability/data.json",
+   "results/table_data/tab02_datasets.json",
+   "results/table_data/tab03_models.json"
+  ],
+  "sources_without_provenance": []
+ },
+ "tolerance": "every summary value re-derives exactly; the tampered copy fails; every source artifact has provenance or is a gate",
+ "verdict": "PASS",
+ "evidence": [
+  "docs/summary.md",
+  "docs/summary_values.json",
+  "docs/artifact_index.md",
+  "scripts/build_summary.py",
+  "scripts/audit.py",
+  "scripts/check_traceability.py"
+ ],
+ "notes": "The 30-dataset values derive from the WHAR Arena paper's published single runs (quoted numbers, docs/baselines_cited.json) through results/metrics/factors/data.json.",
+ "rerun_reason": "Companion-study citation and overlap cut (user request of 2026-10-17): Fig. 2 reduced to the channel panel; G6 rerun8 preceded it"
+}

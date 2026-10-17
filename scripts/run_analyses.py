@@ -25,7 +25,8 @@ STEPS = [("src.evaluation.profile_models", []), ("src.evaluation.compare_arena",
          ("src.evaluation.seeds_summary", []), ("src.evaluation.p5_summary", []),
          ("src.evaluation.p5_summary", ["recurrencenet"]), ("src.evaluation.contrasts_robustness", []),
          ("src.evaluation.split_spread", []), ("src.evaluation.validation_reliability", []),
-         ("src.evaluation.factor_multiplicity", []), ("src.evaluation.error_budget", [])]
+         ("src.evaluation.factor_multiplicity", []), ("src.evaluation.error_budget", []),
+         ("src.evaluation.s2_positioning", [])]
 # results a step reads besides the stored runs (they enter its provenance record)
 EXTRA_INPUTS = {"src.evaluation.vs_benchmark": ["results/metrics/pareto/costs.json"],
                 "src.evaluation.factor_multiplicity": ["results/metrics/factors/data.json"],

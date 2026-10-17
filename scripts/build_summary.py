@@ -295,6 +295,13 @@ def review_spec() -> list[dict]:
                      ("best_on_seed0_is_best_on_seeds12", "d"), ("best_on_even_is_best_on_odd", "d"),
                      ("median_odd_loss_choosing_by_val", ".1f"), ("median_odd_loss_choosing_by_even", ".1f")):
             add(f"valrel.{k}", f"validation reliability: {k.replace('_', ' ')}", vr, [k], f)
+    sp2 = "results/metrics/s2_positioning/data.json"
+    if have(sp2):
+        for k, f in (("n_datasets", "d"), ("networks_mean_min", ".1f"), ("networks_mean_max", ".1f"),
+                     ("published_mean_min", ".1f"), ("published_mean_max", ".1f"), ("best_rank", "d"),
+                     ("worst_rank", "d"), ("n_published", "d"), ("median_range_networks", ".1f"),
+                     ("max_range_networks", ".1f"), ("widest_dataset", "s"), ("median_range_published", ".1f")):
+            add(f"s2pos.{k}", f"S2 networks against the published benchmark: {k.replace('_', ' ')}", sp2, [k], f)
     fm = "results/metrics/factor_multiplicity/data.json"
     if have(fm):
         for k, f in (("n_tests", "d"), ("n_significant_holm", "d"), ("n_significant_uncorrected", "d"),

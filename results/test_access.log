@@ -105,3 +105,4 @@
 2026-10-16T22:15:48 | scripts/reconstruct_order.py | 20261016_221548_reconstruct_order_motion_sense | verification: every window of motion_sense classified by the stored checkpoints (listing order)
 2026-10-16T22:24:11 | scripts/reconstruct_order.py | 20261016_222411_reconstruct_order_dsads | verification: every window of dsads classified by the stored checkpoints (listing order)
 2026-10-17T06:18:03 | src/evaluation/validation_reliability.py | - | exploratory reliability of the networks' test ranking (S1 and S2), after the confirmatory analysis
+2026-10-17T09:55:20 | src/evaluation/s2_positioning.py | - | exploratory description of the S2 network means against the published benchmark, after the confirmatory analysis

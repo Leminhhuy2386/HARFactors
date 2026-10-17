@@ -586,3 +586,51 @@ marks them (r).
 - The embedding result leads with the sensor-feature space; the embedding-space correlation is called partly circular.
 - New references (verified, `paper/references_verified.json`): Jordao et al. 2018, Barshan & Yurtman 2016, Varoquaux
   2018, Iwasawa et al. 2017.
+
+### Later the same day: why these networks (user request)
+
+- **Question.** Why were the four S2 networks used, and not only the benchmark's networks? The user also asked not to
+  cite the companion study.
+- **Answer in the letter (Section II-D).** It states the requirements of a confirmatory estimate and shows that only
+  S2 meets them among the stored runs; the benchmark has one run per split and published means only. The section also
+  states that three S2 networks share one memory, so S2 measures side paths and one alternative memory.
+- **Provenance.** The S2 runs are disclosed as produced earlier by the authors for a held-out evaluation of these
+  networks, with their known means and paired differences.
+- **`src/evaluation/s2_positioning.py`** (exploratory, (r)) locates the four networks against the published benchmark
+  on H1's datasets:
+  - means 58.0-63.2;
+  - median within-dataset range 7.2 points, against 27.0 for the 17 published networks;
+  - ranks 5-13 of 17 if inserted.
+
+  It compares three-seed means with published single runs, as a location and not a ranking.
+- **Risk to raise with the user.** If the companion study publishes the same S2 results, an editor may ask for the
+  overlap to be disclosed at submission (IEEE prior-publication policy), even without a citation.
+
+### Later the same day: companion-study citation and overlap (user request)
+
+The user first asked not to cite the RILA-Net study, then decided to cite it and declare the overlap. At the user's
+request the RILA repository (private GitHub `Leminhhuy2386/RILA`, commit 1742ef6) was cloned read-only to
+`/work/huy.leminh/.cache/harfactors_scratch/rila_ref`, outside this project. Nothing in it was run or changed.
+
+**What it showed:**
+- RILA-Net is RN + laws.
+- The companion manuscript's four primary models are S2's four networks, and its confirmatory results come from the
+  same 948 S2 runs.
+- It reports the component contrasts (memory vs none, memory type, side paths) and the learned recurrence radii.
+- It cites this letter as `@unpublished{harfactors}` under an earlier title.
+- After its G5 it retrained 176 runs it could not re-execute. Compared with this project's records, these differ in:
+  - 3 runs of H1's datasets: recstatnet/w_har x2 (mean -1.44 F1), recurrencenet/usc_had x1 (-4.29);
+  - 24 DSADS seed-2 runs of three networks (split-level differences up to 28 points: the retrained splits name other
+    subjects);
+  - MotionSense and Daphnet runs, both excluded here.
+
+**Changes to the letter:**
+- `le2026rila` added: unpublished, in preparation for IEEE Sensors Journal, verified against the companion
+  manuscript's own title page.
+- The memory contrasts (Fig. 2a and their paragraph) and the section "What the memories learned" (former Fig. 9)
+  were removed, and the companion study is cited instead.
+- Fig. 2 is now the channel-count panel only (`figures/fig02_channels.pdf`); the superseded
+  `fig02_contrasts_channels` outputs and figure data were deleted.
+- Section II-D and the network description cite the companion study.
+- The verification paragraph states the record differences.
+- `paper/cover_letter.md` declares the overlap.

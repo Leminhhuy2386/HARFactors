@@ -14,8 +14,8 @@ verified. What blocks submission is listed under § Open items.
 | G3 baseline | PASS | G3_baseline.json | The Random Forest re-run equals Figure 6 to rounding |
 | G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
 | G5 authenticity | PASS | G5_results_authenticity_rerun6.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; permutation control on the better of two REML fits (since rerun 6); 50/50 sampled H1 bootstrap refits at the maximum; label-shuffle control collapsed (6/6). Rerun5 FAILed (optimizer, see below); rerun4 FAILed (rebuilt caches); the first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
-| G6 traceability | PASS | G6_traceability_rerun7.json | 768 values re-derive (revision of 2026-10-17: network-population, error-budget, validation-reliability and multiplicity values); the tampering control was caught |
-| G7 manuscript | PASS | G7_compile_citations_rerun10.json | Revision of 2026-10-17: contributions stated, review errors corrected, Fig. 5 and Table 4 added, four verified references: 12 pages, 10 figures, 4 tables, abstract 149 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
+| G6 traceability | PASS | G6_traceability_rerun9.json | 780 values re-derive (revision of 2026-10-17 with the S2 positioning values; re-run after Fig. 2 was reduced); the tampering control was caught |
+| G7 manuscript | PASS | G7_compile_citations_rerun14.json | Revision of 2026-10-17 (contributions, review errors, Fig. 5, Table 4, Section II-D, companion study cited, overlap removed): 12 pages, 9 figures, 4 tables, abstract 149 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
 
 ### Results
 
@@ -63,6 +63,51 @@ the novelty and contributions clearly and to fix the errors found (page limits s
   - four references added (Jordao 2018, Barshan & Yurtman 2016, Varoquaux 2018, Iwasawa 2017).
 - **Gates:** G6 rerun7 PASS, G7 rerun10 PASS (12 pages, abstract 149 words), `audit --all` 10/10 PASS (Slurm 87069).
   G5 was not re-run: no run changed, and the new aggregates read verified runs.
+
+### Companion-study citation and overlap (2026-10-17, user request)
+
+- **Decision.** The user reversed the no-citation decision: the letter cites the RILA-Net manuscript as `le2026rila`
+  (unpublished, in preparation for IEEE Sensors Journal) and declares the overlap.
+- **Read-only check of the RILA repository.** The repository (private GitHub, commit 1742ef6) was cloned outside the
+  project, at the user's request. It showed:
+  - RN + laws is RILA-Net, and the four S2 networks are its primary models;
+  - the same runs are used for its confirmatory results;
+  - it reports the component contrasts and the learned recurrence radii;
+  - it retrained 176 runs. These differ from this project's records in 3 H1 runs, in 24 DSADS seed-2 runs, and in
+    the excluded MotionSense and Daphnet runs.
+- **Manuscript changes:**
+  - the memory contrasts and the section "What the memories learned" (former Fig. 9) were removed, and the companion
+    study is cited instead;
+  - Fig. 2 now shows only the channel-count panel; the superseded outputs were deleted;
+  - Section II-D, the network description and the verification paragraph now cite the companion study and state
+    the record differences.
+- **Cover letter:** `paper/cover_letter.md` drafts the declaration, with the authors' fields left in brackets.
+- **Gates:** G6 rerun9 PASS, G7 rerun13 PASS, G7 rerun14 PASS (12 pages; a dataset-name fix), `audit --all` 10/10
+  PASS (Slurm 87084, 87085).
+
+### Network-choice rationale (2026-10-17, user request)
+
+The user asked for three things: explain scientifically why the four S2 networks were used rather than only the
+benchmark's networks; treat the S2 runs as this letter's results; and not cite the RILA-Net study.
+- **New Section II-D, "Why these networks".** A confirmatory estimate needs four properties:
+  - (i) several seeds per split;
+  - (ii) per-split, paired results on datasets that did not suggest H1;
+  - (iii) controlled single-component differences at similar size;
+  - (iv) no new training.
+
+  The benchmark offers one run per split and published means and SDs only, and per-split records exist only for four
+  development datasets (S3). S2 is the only stored set that meets all four. The section also states that three of
+  the four networks share RecurrenceNet's memory.
+- **Provenance disclosure, without the citation.** The section says the S2 runs were "produced by us before this study,
+  in a held-out evaluation of these networks". Their known means and paired differences are disclosed. This keeps
+  the pre-registration's disclosure (`docs/preregistration.md` § Data) in substance, and the companion study is not
+  named.
+- **New exploratory analysis `s2_positioning`** (r), ledger run of `scripts/run_analyses.py --only s2_positioning`:
+  - the four networks' means span 58.0-63.2 on H1's 7 datasets;
+  - the median within-dataset range is 7.2 points (at most 9.9, UMAFall), against 27.0 for the 17 published
+    networks;
+  - placed among those, they would rank 5th to 13th.
+- **Gates:** G6 rerun8 PASS (780 values), G7 rerun11 PASS (13 pages), G7 rerun12 PASS after a one-sentence fix, `audit --all` 10/10 PASS (Slurm 87079).
 
 ### Reproducibility of every stored run (2026-10-16, user request)
 

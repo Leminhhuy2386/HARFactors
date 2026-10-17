@@ -10101,6 +10101,138 @@
   "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
  },
  {
+  "id": "s2pos.n_datasets",
+  "description": "S2 networks against the published benchmark: n datasets",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "n_datasets"
+  ],
+  "format": "d",
+  "printed": "7",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.networks_mean_min",
+  "description": "S2 networks against the published benchmark: networks mean min",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "networks_mean_min"
+  ],
+  "format": ".1f",
+  "printed": "58.0",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.networks_mean_max",
+  "description": "S2 networks against the published benchmark: networks mean max",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "networks_mean_max"
+  ],
+  "format": ".1f",
+  "printed": "63.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.published_mean_min",
+  "description": "S2 networks against the published benchmark: published mean min",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "published_mean_min"
+  ],
+  "format": ".1f",
+  "printed": "42.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.published_mean_max",
+  "description": "S2 networks against the published benchmark: published mean max",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "published_mean_max"
+  ],
+  "format": ".1f",
+  "printed": "64.9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.best_rank",
+  "description": "S2 networks against the published benchmark: best rank",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "best_rank"
+  ],
+  "format": "d",
+  "printed": "5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.worst_rank",
+  "description": "S2 networks against the published benchmark: worst rank",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "worst_rank"
+  ],
+  "format": "d",
+  "printed": "13",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.n_published",
+  "description": "S2 networks against the published benchmark: n published",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "n_published"
+  ],
+  "format": "d",
+  "printed": "17",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.median_range_networks",
+  "description": "S2 networks against the published benchmark: median range networks",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "median_range_networks"
+  ],
+  "format": ".1f",
+  "printed": "7.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.max_range_networks",
+  "description": "S2 networks against the published benchmark: max range networks",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "max_range_networks"
+  ],
+  "format": ".1f",
+  "printed": "9.9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.widest_dataset",
+  "description": "S2 networks against the published benchmark: widest dataset",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "widest_dataset"
+  ],
+  "format": "s",
+  "printed": "UMAFall",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
+  "id": "s2pos.median_range_published",
+  "description": "S2 networks against the published benchmark: median range published",
+  "artifact": "results/metrics/s2_positioning/data.json",
+  "path": [
+   "median_range_published"
+  ],
+  "format": ".1f",
+  "printed": "27.0",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)"
+ },
+ {
   "id": "fm.n_tests",
   "description": "30-dataset regressions: n tests",
   "artifact": "results/metrics/factor_multiplicity/data.json",

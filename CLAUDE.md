@@ -30,6 +30,10 @@ answer so far: who is tested matters far more than the architecture. Split off f
   - new exploratory analyses (r), not pre-registered: S3 by network population, error budget, validation vs test
     reliability, and Holm over the 30-dataset OLS;
   - new Fig. 5 and Table 4; G6 rerun7, G7 rerun10 and `audit --all` PASS (12 pages).
+  - then Section II-D "Why these networks" (requirements (i)-(iv), S2 positioning against the benchmark, no
+    RILA-Net citation); G6 rerun8, G7 rerun11-12 and `audit --all` PASS (13 pages).
+  - then RILA-Net cited, memory contrasts and the learned-memory section removed, Fig. 2 reduced to the
+    channel panel, record differences stated, cover letter drafted (`paper/cover_letter.md`).
 - **What exists (history).** Imported from Edge_SSM:
   - the 2,460-run population (10 models × 10 datasets × 3 seeds) with its checkpoints;
   - the exploratory factor analysis and its figures.
@@ -84,8 +88,14 @@ answer so far: who is tested matters far more than the architecture. Split off f
 
 ## Rules
 
-- **The architecture is not the subject.** Make no claim about RILA-Net's merit; that is `D:\Projects\RILA` (IEEE
-  Sensors Journal), which this letter cites.
+- **The architecture is not the subject.** Make no claim about RILA-Net's merit; that is `D:\Projects\RILA`
+  (IEEE Sensors Journal; private GitHub `Leminhhuy2386/RILA`).
+  - The letter cites it as `le2026rila` (unpublished, in preparation), as decided on 2026-10-17 after a brief
+    no-citation draft.
+  - RN + laws is RILA-Net; S1/S2 are the companion study's runs.
+  - The memory contrasts and the learned-memory analysis were removed as duplicates of that paper.
+  - The overlap and the differing records (3 H1 runs, DSADS seed-2) are declared in the manuscript and in
+    `paper/cover_letter.md`.
 - **Correlational evidence stays correlational.** The data factors over 30 datasets are correlational (subjects and
   channels correlate, ρ −0.50). Never phrase them causally.
 - **The 30-dataset part re-analyses published single runs** (`docs/sources/arena_extracted.json`). Say so.

@@ -2,8 +2,7 @@
 
     fig01_variance_components.{pdf,png}  within-dataset variance shares by source and R with its 97.5 % interval, for
                                          the confirmatory test (H1, S2) and the pre-registered sensitivity analyses
-    fig02_contrasts_channels.{pdf,png}   (a) memory contrasts over the datasets of S1 (exploratory, daphnet excluded);
-                                         (b) Random Forest margin over the best deep model vs channel count, over the
+    fig02_channels.{pdf,png}             Random Forest margin over the best deep model vs channel count, over the
                                          WHAR Arena paper's 30 datasets (re-analysis of published single runs)
     tab01_variance_components.{csv,tex}  the numbers behind Fig. 1
 
@@ -43,10 +42,6 @@ SOURCES = [("P", "test-subject group"), ("M", "model"), ("MD", "model × dataset
 ROWS = [("H1", "S2 F1 (H1)"), ("sens1_S2_balanced_accuracy", "S2 bal. acc."), ("sens2_S1_macro_f1", "S1 F1"),
         ("sens2_S1_balanced_accuracy", "S1 bal. acc."), ("sens3_S1_without_actrectut", "S1 F1, no ActRecTut"),
         ("sens4_S3_macro_f1", "S3 F1 (17 models)")]
-MEMORY = [("recurrencenet-hystnet_nomem", "RecurrenceNet"), ("s4d-hystnet_nomem", "S4D"),
-          ("hystnet_sel_clock-hystnet_nomem", "HysteresisNet"), ("quantilenet-hystnet_nomem", "QuantileNet"),
-          ("mamba-hystnet_nomem", "Mamba"), ("recurrencenet-s4d", "RecurrenceNet"),
-          ("hystnet_sel_clock-s4d", "HysteresisNet"), ("quantilenet-s4d", "QuantileNet"), ("mamba-s4d", "Mamba")]
 
 plt.rcParams.update({"font.size": 8, "axes.titlesize": 8, "axes.labelsize": 8, "xtick.labelsize": 7,
                      "ytick.labelsize": 7, "legend.fontsize": 7, "pdf.fonttype": 42, "ps.fonttype": 42,
@@ -132,37 +127,12 @@ def fig01(rows, run_id, started, inputs) -> None:
 
 
 def fig02(run_id, started) -> dict:
-    con_f = PATHS.METRICS / "contrasts_robustness" / "data.json"
+    """The Random Forest's margin over the best deep network against channel count, over the WHAR Arena paper's 30
+    datasets. The memory contrasts that were panel (a) until 2026-10-17 left the letter: the architecture is the
+    companion study's subject."""
     fac_f = PATHS.METRICS / "factors" / "data.json"
-    con = json.loads(con_f.read_text())
     fac = json.loads(fac_f.read_text())["data"]
-    fig, (a, b) = plt.subplots(2, 1, figsize=(3.5, 3.6), gridspec_kw={"height_ratios": [1.25, 1], "hspace": 0.55})
-    forest = []
-    for i, (key, label) in enumerate(MEMORY):
-        c = con[key]["without_daphnet"]
-        group = "memory − none" if key.endswith("nomem") else "memory type − S4D"
-        forest.append({"contrast": key, "label": label, "group": group, "mean": c["mean"], "lo": c["lo"], "hi": c["hi"],
-                       "wins": c["wins"], "n": c["n"], "p": c["p"]})
-    ypos = [9, 8, 7, 6, 5, 2.6, 1.6, 0.6, -0.4]
-    for yy, f in zip(ypos, forest):
-        a.plot([f["lo"], f["hi"]], [yy, yy], color=INK, linewidth=1.6, solid_capstyle="butt")
-        a.plot([f["lo"], f["hi"]], [yy, yy], "|", color=INK, markersize=5, markeredgewidth=1.2)
-        a.plot([f["mean"]], [yy], "o", color=SLOTS[0] if f["lo"] > 0 else (SLOTS[1] if f["hi"] < 0 else RESIDUAL),
-               markersize=6, markeredgecolor="white", markeredgewidth=1.0, zorder=3)
-        a.text(10.6, yy, f"{f['mean']:+.1f} ({f['wins']}/{f['n']})", va="center", ha="left", fontsize=6.5, color=INK)
-    a.axvline(0, color=INK, linewidth=0.8, linestyle=(0, (3, 2)))
-    a.set_yticks(ypos + [10.1, 3.7], [f["label"] for f in forest] + ["memory − none", "type − S4D"])
-    for lab in a.get_yticklabels()[-2:]:
-        lab.set_fontweight("bold")
-        lab.set_color(INK)
-    a.set_xlim(-6.5, 10.5)
-    a.set_ylim(-1.0, 10.7)
-    a.set_xlabel("macro-F1 difference, points (mean over 9 datasets, 95 % CI)")
-    a.tick_params(axis="y", length=0)
-    a.grid(axis="x", color=GRID, linewidth=0.5)
-    a.set_axisbelow(True)
-    a.set_title("(a)", loc="left", fontweight="bold")
-
+    fig, b = plt.subplots(figsize=(3.5, 1.9))
     out = "RF − best deep (classical margin)"
     ds = sorted(fac["outcome"][out])
     x = [fac["pred"]["log2 channels"][d] for d in ds]
@@ -185,13 +155,11 @@ def fig02(run_id, started) -> dict:
     b.set_ylim(min(yv) - 2, max(yv) + 5)
     b.grid(color=GRID, linewidth=0.5)
     b.set_axisbelow(True)
-    b.set_title("(b)", loc="left", fontweight="bold")
-    save(fig, "fig02_contrasts_channels")
-    data = {"forest_without_daphnet": forest,
-            "scatter": [{"dataset": d, "log2_channels": xx, "rf_minus_best_deep": yy} for d, xx, yy in zip(ds, x, yv)],
+    save(fig, "fig02_channels")
+    data = {"scatter": [{"dataset": d, "log2_channels": xx, "rf_minus_best_deep": yy} for d, xx, yy in zip(ds, x, yv)],
             "ols_log2_channels": {"beta_per_sd": ols["beta"][j], "p": ols["p"][j], "r2": ols["r2"]},
-            "note": "(b) re-analyses the WHAR Arena paper's published single runs (Figure 6): derived from quoted numbers"}
-    record(FIG_DATA / "fig02_contrasts_channels.json", data, run_id, started, [con_f, fac_f])
+            "note": "re-analyses the WHAR Arena paper's published single runs (Figure 6): derived from quoted numbers"}
+    record(FIG_DATA / "fig02_channels.json", data, run_id, started, [fac_f])
     return data
 
 

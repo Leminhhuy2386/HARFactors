@@ -1,0 +1,41 @@
+node hpc04.local, job 87077, Sat Oct 17 09:54:58 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+== src.evaluation.s2_positioning
+{
+ "datasets": [
+  "pamap2",
+  "up_fall",
+  "uma_fall",
+  "usc_had",
+  "wear",
+  "uca_ehar",
+  "w_har"
+ ],
+ "n_datasets": 7,
+ "network_means": {
+  "RecurrenceNet": 59.97358582559086,
+  "S4D": 58.02799231397412,
+  "RN + stats": 62.33250961417244,
+  "RN + laws": 63.208571948387004
+ },
+ "networks_mean_min": 58.02799231397412,
+ "networks_mean_max": 63.208571948387004,
+ "published_mean_min": 42.238571428571426,
+ "published_mean_max": 64.88,
+ "published_mean_5th": 63.072857142857146,
+ "published_mean_12th": 58.28,
+ "rank_among_published": {
+  "RecurrenceNet": 10,
+  "S4D": 13,
+  "RN + stats": 6,
+  "RN + laws": 5
+ },
+ "best_rank": 5,
+ "worst_rank": 13,
+ "n_published": 17,
+ "median_range_networks": 7.210013171037033,
+ "max_range_networks": 9.873133897781372,
+ "widest_dataset": "UMAFall",
+ "median_range_published": 26.99
+}

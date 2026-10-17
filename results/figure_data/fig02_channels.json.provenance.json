@@ -1,17 +1,16 @@
 {
  "produced_by": "src/visualization/letter_figures.py",
  "command": "python src.visualization.letter_figures",
- "run_id": "20261017_062724_letter_figures",
- "timestamp": "2026-10-17T06:27:27",
- "duration_sec": 3.32,
- "git_commit": "5118099-dirty",
+ "run_id": "20261017_105347_letter_figures",
+ "timestamp": "2026-10-17T10:53:50",
+ "duration_sec": 3.04,
+ "git_commit": "7492edd-dirty",
  "config_sha256": null,
  "config": null,
  "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
  "input_files": {
-  "results/metrics/contrasts_robustness/data.json": "sha256:37812ed920afe0b5f2d6cbf2f45fb867a233380bc1b349f2685e57b48d829181",
   "results/metrics/factors/data.json": "sha256:b81297406ffef017366f201e4e754b6096f1920da5b69f610b67ae13124d6c38"
  },
- "output_sha256": "41396b11dc81fa3a3a45de18535dfd9c4bdd9047136ae198051fc0534abf49c6",
+ "output_sha256": "c15de63ca29c96de424ec675a54ef8d40955e210d8ed4844141745ce3511b38e",
  "synthetic": false
 }

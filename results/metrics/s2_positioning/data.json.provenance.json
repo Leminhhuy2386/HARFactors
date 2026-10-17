@@ -1,0 +1,22 @@
+{
+ "produced_by": "scripts/run_analyses.py (src.evaluation.s2_positioning)",
+ "command": "python src.evaluation.s2_positioning",
+ "run_id": "20261017_095500_run_analyses",
+ "timestamp": "2026-10-17T09:55:21",
+ "duration_sec": 21.17,
+ "git_commit": "7492edd-dirty",
+ "config_sha256": "76976a4acad7caa6961991c0b20136cc810b4881ec87cee1ae9c89d1cc60bca5",
+ "config": {
+  "steps": [
+   "src.evaluation.s2_positioning"
+  ]
+ },
+ "data_manifest_sha256": "10383f130f63b67a978b39e7d0fd3d9dc2fa6e825d703d1dd771606eca22d220",
+ "input_files": {
+  "data/processed/manifest.json": "sha256:9352e9c400f1b9b54b4fd45206e57c594761c3c84d42a6b908f789bd335c1fd5",
+  "results/metrics/profile.json": "sha256:9534a51c6b6da4d03cf362f841de6023054ce3c8dfe6a523fe35ff57346fa7c7",
+  "src/evaluation/s2_positioning.py": "sha256:33c409fd204fa7cb3d70fe49195b0a78a4895712f787c00e38cca4636d405b6b"
+ },
+ "output_sha256": "71b5d569e8d673878d3050c27c0a97ae177a0c5e425598b431d28ca7aac9af5a",
+ "synthetic": false
+}
