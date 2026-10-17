@@ -25,6 +25,11 @@ answer so far: who is tested matters far more than the architecture. Split off f
   a non-maximum); with the user's approved fix, G5 rerun6, G6 rerun4, G7 rerun6 and `audit --all` PASS (10 pages).
   Figures restyled (deeper validated palette, Fig. 3 as a dataflow diagram): G7 rerun7 PASS.
   Restore the venue limits in `paper/format_limits.json` before submission.
+- **Revision of 2026-10-17 (user request: state the novelty and contributions; fix the review's errors):**
+  - review in `docs/review_novelty_2026-10-17.md`;
+  - new exploratory analyses (r), not pre-registered: S3 by network population, error budget, validation vs test
+    reliability, and Holm over the 30-dataset OLS;
+  - new Fig. 5 and Table 4; G6 rerun7, G7 rerun10 and `audit --all` PASS (12 pages).
 - **What exists (history).** Imported from Edge_SSM:
   - the 2,460-run population (10 models × 10 datasets × 3 seeds) with its checkpoints;
   - the exploratory factor analysis and its figures.

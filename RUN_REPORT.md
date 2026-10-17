@@ -14,8 +14,8 @@ verified. What blocks submission is listed under § Open items.
 | G3 baseline | PASS | G3_baseline.json | The Random Forest re-run equals Figure 6 to rounding |
 | G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
 | G5 authenticity | PASS | G5_results_authenticity_rerun6.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; permutation control on the better of two REML fits (since rerun 6); 50/50 sampled H1 bootstrap refits at the maximum; label-shuffle control collapsed (6/6). Rerun5 FAILed (optimizer, see below); rerun4 FAILed (rebuilt caches); the first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
-| G6 traceability | PASS | G6_traceability_rerun6.json | 553 values re-derive (expanded manuscript, reproducibility values); the tampering control was caught |
-| G7 manuscript | PASS | G7_compile_citations_rerun9.json | Expanded draft, restyled figures, verification paragraph on the full re-execution: 10 pages, 9 figures, 3 tables, abstract 140 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
+| G6 traceability | PASS | G6_traceability_rerun7.json | 768 values re-derive (revision of 2026-10-17: network-population, error-budget, validation-reliability and multiplicity values); the tampering control was caught |
+| G7 manuscript | PASS | G7_compile_citations_rerun10.json | Revision of 2026-10-17: contributions stated, review errors corrected, Fig. 5 and Table 4 added, four verified references: 12 pages, 10 figures, 4 tables, abstract 149 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
 
 ### Results
 
@@ -37,6 +37,32 @@ verified. What blocks submission is listed under § Open items.
   - Mamba − S4D: −2.45;
   - Random Forest margin vs channel count: +7.1 per sd (p < 0.001).
 - Every number is in `docs/summary.md` / `docs/summary_values.json`. The manuscript prints no other.
+
+### Revision of 2026-10-17: novelty and contributions (user request)
+
+The user asked for a review focused on novelty (`docs/review_novelty_2026-10-17.md`), then for the manuscript to state
+the novelty and contributions clearly and to fix the errors found (page limits still waived). Details:
+`docs/experiment_record.md` § 2026-10-17.
+- **New exploratory analyses** (not pre-registered; marked (r) in the letter; no training):
+  - `network_population`: S3 by network population, ledger `20261017_061812_network_population`;
+  - `validation_reliability`, `factor_multiplicity` and `error_budget`: ledger `20261017_061800_run_analyses`.
+- **Findings:**
+  - R' stays above 1 for the best 3-12 published networks (no interval excludes 1). Every interval lies below 1 from
+    the 13th network on. The 14 deep networks give R' = 0.34, with network x dataset as the largest term.
+  - Error budget (S2): a paired 10 x 3 design detects 4.1 F1 points (reliability 0.89). An unpaired single-split
+    comparison would need 47.9 (reliability 0.06).
+  - Validation vs test: median rho +0.18, against +0.80 between seeds and between split halves.
+  - Holm over the 16 OLS tests: 2 survive. The subjects-gap association does not.
+- **Text:**
+  - new title, abstract and contribution list;
+  - S4D contrast described with its width, depth and size;
+  - S2 disclosure includes the paired differences;
+  - P described as the effect of the subject partition;
+  - validation overlap stated;
+  - the embedding result leads with the sensor space;
+  - four references added (Jordao 2018, Barshan & Yurtman 2016, Varoquaux 2018, Iwasawa 2017).
+- **Gates:** G6 rerun7 PASS, G7 rerun10 PASS (12 pages, abstract 149 words), `audit --all` 10/10 PASS (Slurm 87069).
+  G5 was not re-run: no run changed, and the new aggregates read verified runs.
 
 ### Reproducibility of every stored run (2026-10-16, user request)
 

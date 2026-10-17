@@ -1,0 +1,7 @@
+{
+ "steps": [
+  "src.evaluation.validation_reliability",
+  "src.evaluation.factor_multiplicity",
+  "src.evaluation.error_budget"
+ ]
+}

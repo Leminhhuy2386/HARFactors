@@ -29,8 +29,8 @@
 \markboth{}{}  % volume, issue and article number are set by the journal
 \IEEELSENSarticlesubject{Sensor Applications}  % subject category: to be confirmed by the authors (EDICS)
 
-\title{How Much of Wearable Activity-Recognition Accuracy Is the Network? A Pre-Registered Variance Decomposition
-Under Person-Disjoint Evaluation}
+\title{Who Is Tested or Which Network? A Pre-Registered Variance Decomposition and Error Budget for Person-Disjoint
+Wearable Activity Recognition}
 
 \author{\IEEEauthorblockN{[Authors to be added by the authors]}%
 \IEEEauthorblockA{[Affiliations to be added by the authors]}}
@@ -38,19 +38,22 @@ Under Person-Disjoint Evaluation}
 % Graphical abstract: Fig. 1 (figures/fig01_variance_components.pdf); the authors may replace it.
 \IEEEtitleabstractindextext{%
 \begin{abstract}[figures/fig01_variance_components.pdf]
-Wearable activity-recognition systems are compared by macro-F1 on people unseen in training, but how much of that
-figure reflects the network rather than the people tested is unknown. We decompose the variance of stored runs of one
-person-disjoint protocol (WHAR Arena v1) with a linear mixed model and a pre-registered test. On \val{H1.datasets}
-held-out datasets (\val{H1.runs} runs of four networks, three seeds), the test-subject group accounts for
-\val{H1.pi_P}\,\% of the within-dataset variance, \val{H1.R} times (97.5\,\% interval \val{H1.R_lo}--\val{H1.R_hi})
-all network-related variance; the pre-registered criterion was met. The ordering holds with a ceiling-free metric and
-on development datasets, where that metric leaves it unresolved, and it reverses across 17 heterogeneous published
-architectures. For comparable networks, reported accuracy depends more on who is tested than on the network:
-comparisons must be paired by split and report the spread across subjects.
+Wearable activity-recognition networks are ranked by macro-F1 on unseen people, yet the network's share of that
+score has not been separated from that of who is tested. We decompose stored runs of one person-disjoint protocol
+(WHAR Arena v1) with a crossed mixed model. A pre-registered test on \val{H1.datasets} held-out datasets
+(\val{H1.runs} runs) found that the test-subject group carries \val{H1.R} times (97.5\,\% interval
+\val{H1.R_lo}--\val{H1.R_hi}) the variance of four shared-skeleton networks. Among the benchmark's published networks
+the ratio stays near or above 1 for the best and falls to \val{pop.top17.R} across all 17. The components give an
+error budget: paired over 10 test groups and 3 seeds, a comparison detects
+\val{eb.S2.paired_10x3.detectable_difference} F1 points; unpaired on one split,
+\val{eb.S2.unpaired_1x1.detectable_difference}. Validation windows drawn from the training subjects rank networks
+poorly (median Spearman $\val{valrel.median_rho_val_test}$; $\val{valrel.median_rho_test_halves}$ between test halves).
+Comparisons should be paired, sized by test subjects and validated on held-out subjects.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Wearable sensors, inertial sensors, human activity recognition, person-disjoint evaluation, variance components.
+Wearable sensors, inertial sensors, human activity recognition, person-disjoint evaluation, variance components,
+benchmark evaluation.
 \end{IEEEkeywords}}
 
 \maketitle
@@ -60,18 +63,37 @@ Wearable sensors, inertial sensors, human activity recognition, person-disjoint 
 macro-F1 on subjects held out from training~\cite{bulling2014tutorial}. Evaluating on unseen people removes the
 optimism of random cross-validation~\cite{hammerla2015lets}, and how people are partitioned between training and test
 data changes the reported accuracy~\cite{lockhart2014limitations}. People move differently~\cite{qian2021latent} and
-devices sense differently~\cite{stisen2015smart}, so a test set of a few subjects carries its own variation. WHAR
+devices sense differently~\cite{stisen2015smart}, so a test set of a few subjects carries its own variation. That
+variation is large: datasets differ in how much their subjects vary~\cite{barshan2016investigating}, and under
+leave-one-subject-out evaluation the spread over subjects makes confidence intervals too wide to compare
+methods~\cite{jordao2018human}, as small test samples do in other fields~\cite{varoquaux2018cross}. WHAR
 Arena~\cite{burzer2026arena} fixed one person-disjoint protocol across 30 datasets and found the state of the art
 distributed over architectures rather than held by one; it reports one training run per split, so it cannot separate
-the effect of who is tested from the training seed. Machine-learning benchmarks are known to depend on such sources of
-variation~\cite{bouthillier2021accounting}, but their sizes in wearable HAR are unknown.
+the effect of who is tested from the training seed. Machine-learning benchmarks depend on several such sources of
+variation~\cite{bouthillier2021accounting}. What is missing for wearable HAR is their separation: how much of the
+variance of a reported score belongs to the test subjects, to the network, to their interaction and to the seed, and
+therefore which of them a comparison must control. Earlier work narrowed the intervals by estimating them from the
+training samples instead of the subjects~\cite{jordao2018human}; we keep the subject variance and separate it from the
+network terms, which shows what pairing by split removes and what it leaves.
 
-This letter measures them. Under one fixed protocol it decomposes the variance of macro-F1 into the group of test
-subjects, the network, their interactions and the training seed; it tests the ordering of these terms with a
-pre-registered analysis on held-out datasets; it checks the result with a ceiling-free metric, development data and
-the benchmark's independent architectures; and it reports, as exploratory, which design choices and which sensing
-properties of a dataset go with large accuracy differences, what the networks' temporal memories learned, and how far
-the test subjects lie from the training subjects in the networks' embedding space.
+This letter makes four contributions.
+\begin{itemize}
+\item A crossed variance-components decomposition of person-disjoint macro-F1 into the test-subject group, the
+network, the network $\times$ dataset and network $\times$ split interactions and the training seed, with a
+pre-registered test on held-out datasets: for networks that differ in single components, the test-subject group
+carries most of the within-dataset variance.
+\item Evidence that this ratio is a property of the networks compared. Among the benchmark's published networks it
+stays near or above 1 for the best ones and reverses once weaker networks enter, so the letter states where ``who is
+tested'' outweighs ``which network'', and where it does not.
+\item An error budget for comparisons, derived from the components: the noise of paired and unpaired comparisons, the
+smallest detectable difference and the reliability, by number of test-subject groups and seeds.
+\item Evidence that the protocol's validation set, drawn window by window from the training subjects, overstates the
+person-disjoint score and ranks networks far worse than the test ranks them against itself, so that early stopping
+and model selection in the benchmark rest on a weak signal.
+\end{itemize}
+Exploratory analyses (the spread of test groups and networks, sensing properties of the datasets, what the temporal
+memories learned, and how far the test subjects lie from the training subjects in the embedding space) support these
+results; all are labelled exploratory.
 
 \section{Methods}
 \subsection{Datasets and sensors}
@@ -110,12 +132,14 @@ pre-registered inclusion rule.}
 All runs follow WHAR Arena v1 with its paper-era code~\cite{burzer2026arena,burzer2025whar}: 3-s windows with 50\,\%
 overlap at the native sampling rate; $k=10$ subject groups, each split testing on one group
 (\val{subjects_per_split.min} to \val{subjects_per_split.max} subjects) that never appears in training or validation;
-validation from 20\,\% of the training subjects' windows; a z-score fitted on the training split; macro-F1 over all
+validation from 20\,\% of the training subjects' windows, drawn window by window, so that a validation window can
+share half its samples with a training window; a z-score fitted on the training split; macro-F1 over all
 classes, with classes absent from a test split counted as 0. Apart from a label-permutation control, no network was
 trained for this letter: we analyse stored runs and their checkpoints. Three sets enter (Table~\ref{tab:vc}): S1, ten networks that share one skeleton and differ
 in single components (with and without temporal memory, e.g.\ S4D~\cite{gu2022efficiently,gu2022parameterization} and
 Mamba~\cite{gu2023mamba}, or window statistics), on ten development datasets with three seeds; S2, four of these
-networks on eight datasets never used for this question, with three seeds; S3, the benchmark's 17 published models
+networks (RecurrenceNet, its two variants with a side path, and S4D) on eight datasets not used to find the effect,
+with three seeds; S3, the benchmark's 17 published models
 (deep networks such as DeepConvLSTM~\cite{ordonez2016deep,hammerla2016deep}, and Random Forest~\cite{breiman2001random},
 SVM and k-NN on tsfresh features~\cite{christ2018tsfresh}) re-run with the same code on four datasets, one run per
 split. A pre-registered inclusion rule removed datasets whose stored runs disagree on split sizes, because their split
@@ -176,27 +200,52 @@ range over the datasets of S1 and S2.}
 \subsection{Variance model and pre-registered test}
 For run $(m,d,s,r)$ of network $m$ on split $s$ of dataset $d$ with seed $r$,
 \begin{equation}
-y_{mdsr} = \mu_d + P_{ds} + M_m + (MD)_{md} + (MP)_{mds} + e_{mdsr},
+y_{mdsr} = \mu_d + P_{ds} + M_m + (MD)_{md} + (MP)_{mds} + e_{mdsr},\label{eq:model}
 \end{equation}
 with $\mu_d$ fixed and the other terms independent zero-mean random effects, fitted by REML~\cite{patterson1971recovery}
 in statsmodels~\cite{seabold2010statsmodels}. The estimand is $R=\sigma^2_P/(\sigma^2_M+\sigma^2_{MD}+\sigma^2_{MP})$,
 the variance of the test-subject group over all network-related variance; $\pi_P$ is $\sigma^2_P$'s share of the
-within-dataset variance. Intervals are percentile 97.5\,\% intervals from 1000 cluster-bootstrap resamples that draw
-splits within datasets~\cite{field2007bootstrapping}. Before any variance analysis of S2, we registered H1 ($R>1$ on
-S2), with success if the interval's lower bound exceeds 1 and failure if $R\le 1$, sealed the analysis code by hash,
-and logged S2's single read. S2's per-dataset means were known from an earlier study; its variance components were
-not. For S3 (one run per split) the interaction and the seed cannot be separated, so the conservative
+within-dataset variance. A split changes the test subjects and, with them, the training and validation subjects, so
+$P$ is the effect of the subject partition. On the datasets of S2, with nine or ten groups, any two splits share most
+of their training subjects, so $P$ is mainly the effect of the test group. Intervals are percentile 97.5\,\% intervals from 1000 cluster-bootstrap
+resamples that draw splits within datasets~\cite{field2007bootstrapping}; they treat the networks as fixed. Before any
+variance analysis of S2, we registered H1 ($R>1$ on S2), with success if the interval's lower bound exceeds 1 and
+failure if $R\le 1$, sealed the analysis code by hash, and logged S2's single read. S2's per-dataset means and its
+paired network differences were known from an earlier study; its variance components were not. For S3 (one run per
+split) the interaction and the seed cannot be separated, so the conservative
 $R'=\sigma^2_P/(\sigma^2_M+\sigma^2_{MD}+\sigma^2_e)$ is reported.
 
 \subsection{Exploratory analyses}
-Component contrasts on S1 pair two networks by split, average the seeds, and summarise over datasets with a
-$t$-interval and a Wilcoxon test~\cite{wilcoxon1945individual,demsar2006statistical}. Over the benchmark's 30 datasets
-we regress the published single-run results on standardised dataset properties (ordinary least squares); these
-associations are correlational, and their $p$-values are not corrected for multiplicity. Within each dataset of S1 and
-S2 we compare the spread of the split means (over networks and seeds) with that of the network means (over splits and
+None of the following analyses was pre-registered; four were added after an internal review, and are marked (r).
+
+\emph{Network population (r).} We refit S3's model to sub-populations of its networks: the \val{pop.deep.n_models} deep networks, and the
+$k$ best networks for $k$ from 3 to 17, ranked by their mean published macro-F1 on the \val{pop.arena_datasets} Arena
+datasets outside S3~\cite{burzer2026arena}, so that the ranking reads no score of the runs analysed. Each point
+estimate keeps the better of the statsmodels fit and an independent REML implementation; intervals use the bootstrap
+of H1.
+
+\emph{Error budget (r).} Under \eqref{eq:model}, the difference between two networks on one dataset, averaged over $k$ test-subject
+groups and $n$ seeds, has a true part with variance $2(\sigma^2_M+\sigma^2_{MD})$ over pairs of networks and a noise
+part with variance $2(\sigma^2_{MP}+\sigma^2_e/n)/k$ when both networks run on the same splits (paired), and
+$2(\sigma^2_P+\sigma^2_{MP}+\sigma^2_e/n)/k$ when they run on different test subjects (unpaired, e.g.\ two studies
+that each report one hold-out split). From the point estimates we derive the noise SD, the smallest true difference a
+two-sided test at \val{eb.alpha_pct}\,\% detects with \val{eb.power_pct}\,\% power, and the reliability (true over
+true plus noise variance). $k$ beyond 10 means more groups of the same size, that is, more recorded subjects.
+
+\emph{Validation against the test (r).} For each dataset of S1 and S2 whose runs all recorded a validation score, we
+rank-correlate the networks' validation and test means, and compare this with how well the test ranking agrees with
+itself: test means of seed 0 against seeds 1--2 (same splits), and of the even against the odd splits (other test
+subjects).
+
+\emph{Further analyses.} Component contrasts on S1 pair two networks by split, average the seeds, and summarise over
+datasets with a $t$-interval and a Wilcoxon test~\cite{wilcoxon1945individual,demsar2006statistical}. Over the
+benchmark's 30 datasets we regress the published single-run results on standardised dataset properties (ordinary least
+squares; four properties, four outcomes); these associations are correlational, and we report Holm-adjusted
+$p$-values over the \val{fm.n_tests} coefficient tests~\cite{holm1979simple} (r). Within each dataset of S1 and S2 we
+compare the spread of the split means (over networks and seeds) with that of the network means (over splits and
 seeds). From the stored checkpoints of eight S1 datasets we read what the memories learned and compare it with the
 same networks freshly initialised: S4D's mode time constants and decay rates, the play widths, the quantile levels
-and steps, and the recurrence radii. None of these analyses was pre-registered.
+and steps, and the recurrence radii.
 
 \subsection{Embedding analysis}\label{sec:emb}
 This analysis is exploratory and uses inference only. For the seed-0 checkpoint of every split of the
@@ -253,7 +302,8 @@ and the secondary criterion ($\pi_P$ lower bound $\ge 40$\,\%) is met.
 term, grey, is the residual). Right: $R$ with its 97.5\,\% bootstrap interval, blue where the interval lies above 1
 and orange otherwise; the dashed line is the pre-registered threshold. $R$ exceeds 1 in every
 analysis of the shared-skeleton networks (on S1 with balanced accuracy its interval includes 1), and the network
-dominates across the 17 heterogeneous published architectures (S3, conservative $R'$).}
+dominates across the 17 heterogeneous published architectures (S3, conservative $R'$; by population in
+Fig.~\ref{fig:pop}a).}
 \label{fig:vc}
 \end{figure}
 
@@ -275,7 +325,64 @@ estimate stays above 1 but the interval does not exclude it ($R=\val{sens2_S1_ba
 [\val{sens2_S1_balanced_accuracy.R_lo}, \val{sens2_S1_balanced_accuracy.R_hi}]). Across the benchmark's 17 published architectures
 it reverses: $R'=\val{sens4_S3_macro_f1.R}$ [\val{sens4_S3_macro_f1.R_lo}, \val{sens4_S3_macro_f1.R_hi}], with
 $\sigma^2_M=\val{sens4_S3_macro_f1.s2_M}$ against $\sigma^2_P=\val{sens4_S3_macro_f1.s2_P}$. These architectures range
-from k-NN to attention networks; their differences are far larger than those between the shared-skeleton networks.
+from k-NN to attention networks; Section~\ref{sec:pop} shows which of them cause the reversal.
+
+\subsection{Which networks are compared}\label{sec:pop}
+This analysis is exploratory (r). The reversal on S3 comes from the networks at the bottom of the benchmark
+(Fig.~\ref{fig:pop}a). Ranked by their published macro-F1 on other datasets, the best $k$ networks keep $R'$ above 1
+up to $k=\val{pop.largest_k_above_1}$: for the best five $R'=\val{pop.top5.R}$ [\val{pop.top5.R_lo},
+\val{pop.top5.R_hi}], for the best \val{pop.top12.n_models} $R'=\val{pop.top12.R}$ [\val{pop.top12.R_lo},
+\val{pop.top12.R_hi}], although no interval excludes 1 (\val{pop.k_interval_above_1} of \val{pop.k_populations}
+populations). Adding the three weakest deep networks of the ranking (DeepConvShallowLSTM, Guan-LSTM, SA-HAR) lowers it
+to $\val{pop.top15.R}$, and SVM and k-NN to $\val{pop.top17.R}$; from the \val{pop.top13.n_models}th network on, every
+interval lies below 1 (\val{pop.k_interval_below_1} populations). The classical baselines alone do not explain the
+reversal: the \val{pop.deep.n_models} deep networks give $R'=\val{pop.deep.R}$ [\val{pop.deep.R_lo},
+\val{pop.deep.R_hi}], and their largest term is the network $\times$ dataset interaction
+($\sigma^2_{MD}=\val{pop.deep.s2_MD}$, against $\sigma^2_M=\val{pop.deep.s2_M}$ and $\sigma^2_P=\val{pop.deep.s2_P}$;
+Fig.~\ref{fig:pop}b). Across the published deep networks, which network suits which dataset outweighs both who is
+tested and which network is best overall.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig10_population_budget.pdf}
+\caption{Exploratory, added after review. (a) $R'$ of S3 with its 97.5\,\% bootstrap interval for the $k$ best of the
+benchmark's 17 networks, ranked by their mean published macro-F1 on the \val{pop.arena_datasets} Arena datasets
+outside S3 (circles), and for its \val{pop.deep.n_models} deep networks (diamond); blue where the interval lies above
+1, orange below 1, grey across 1. Dotted: $R$ of the pre-registered test (S2). (b) Variance components of S2 and of
+three S3 populations: the test-subject group dominates among comparable networks, the network $\times$ dataset
+interaction among the deep ones. (c) The smallest network difference a paired comparison detects (two-sided
+\val{eb.alpha_pct}\,\% test, \val{eb.power_pct}\,\% power) by number of test-subject groups and seeds, from S2's
+components; dashed beyond the protocol's ten groups (more subjects); dotted, the SD of the true difference between two
+networks. An unpaired single-split comparison would need \val{eb.S2.unpaired_1x1.detectable_difference} points.}
+\label{fig:pop}
+\end{figure*}
+
+\subsection{Error budget of a comparison}
+This analysis is exploratory (r). With S2's components (Table~\ref{tab:budget}, Fig.~\ref{fig:pop}c), the true
+difference between two of its networks on a dataset has an SD of \val{eb.S2.true_sd} F1 points. A comparison on one
+split and one seed has a noise SD of \val{eb.S2.paired_1x1.noise_sd} points when both networks see the same test
+subjects, and of \val{eb.S2.unpaired_1x1.noise_sd} when they do not, as when two studies each report one hold-out
+split: reliabilities of \val{eb.S2.paired_1x1.reliability} and \val{eb.S2.unpaired_1x1.reliability}. The protocol's ten
+groups and three seeds, paired, bring the noise SD to \val{eb.S2.paired_10x3.noise_sd} points (detectable difference
+\val{eb.S2.paired_10x3.detectable_difference}, reliability \val{eb.S2.paired_10x3.reliability}): a typical difference
+between comparable networks lies at the limit of what one dataset can show. More seeds would remove at most
+\val{eb.S2.seed_gain}\,\% of this noise, because the network $\times$ split interaction sets a floor of
+\val{eb.S2.paired_10xinf.noise_sd} points; twice as many test-subject groups would remove \val{eb.S2.group_gain}\,\%.
+A single network's dataset mean estimates its accuracy on new people of the same population with a standard error of
+\val{eb.S2.se_mean} points, close to the typical difference between two networks. The development set S1 gives the
+same picture (Table~\ref{tab:budget}).
+
+\begin{table}[t]
+\caption{Error budget of a comparison between two networks (F1 points)}
+\label{tab:budget}
+\centering
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{\input{tab04_error_budget.tex}}\\[2pt]
+\parbox{\columnwidth}{\footnotesize Exploratory, from the point estimates of Table~\ref{tab:vc}. Comparison: test-subject
+groups $\times$ seeds; paired: both networks on the same splits. SD: noise SD of the difference; Detect.: smallest true
+difference detected by a two-sided \val{eb.alpha_pct}\,\% test with \val{eb.power_pct}\,\% power; Rel.: reliability,
+true over true plus noise variance. Twenty groups means more recorded subjects.}
+\end{table}
 
 \subsection{Spread across test groups and networks}
 The decomposition's result is visible in the raw means (Fig.~\ref{fig:spread}a). In \val{spread.split_above_model}
@@ -295,16 +402,22 @@ $\times$ split cell means (over seeds) of UCI-HAR and UP-Fall, as deviations fro
 \label{fig:spread}
 \end{figure*}
 
-\subsection{Validation on the training subjects}
-Each run's validation windows come from its training subjects, so its validation score measures accuracy on people
-the network has seen (Fig.~\ref{fig:val}). On the \val{val.datasets} datasets whose runs all recorded it, the
-validation macro-F1 exceeds the test macro-F1 in \val{val.runs_val_above_test} of \val{val.runs} runs, by a median of
-\val{val.median_gap} points per dataset (from \val{val.min_gap} to \val{val.max_gap}); the four largest gaps are on
-held-out datasets. Validation is also a weak guide to which network generalises: the rank correlation between the
-networks' validation and test means has a median of $\val{val.median_rho_network_means}$ over datasets, and the
-network best on validation is the best on test in \val{val.datasets_best_by_val_is_best_by_test} of
-\val{val.datasets} datasets (a median loss of \val{val.median_test_loss_choosing_by_val} test points when chosen by
-validation).
+\subsection{Validation on the training subjects}\label{sec:val}
+Each run's validation windows are drawn, window by window, from its training subjects' recordings: they come from
+people the network has seen and can overlap its training windows, so the gap below mixes both
+effects~\cite{hammerla2015lets} (Fig.~\ref{fig:val}). On the \val{val.datasets} datasets whose runs all recorded it,
+the validation macro-F1 exceeds the test macro-F1 in \val{val.runs_val_above_test} of \val{val.runs} runs, by a median
+of \val{val.median_gap} points per dataset (from \val{val.min_gap} to \val{val.max_gap}); the four largest gaps are on
+held-out datasets. The validation score is also a poor guide to the networks' test ranking, whereas the test ranking
+agrees with itself (r). The rank correlation between the networks' validation and test means has a median of
+$\val{valrel.median_rho_val_test}$ over the \val{valrel.n_datasets} datasets, against $\val{valrel.median_rho_test_seeds}$
+between the test means of different seeds and $\val{valrel.median_rho_test_halves}$ between those of different test
+subjects (even against odd splits); it is below the split-half value in \val{valrel.datasets_val_below_halves}
+datasets. The network best on validation is the best on test in \val{valrel.best_by_val_is_best_on_test} of
+\val{valrel.n_datasets} datasets, the network best on the even splits the best on the odd ones in
+\val{valrel.best_on_even_is_best_on_odd}. On the odd splits, choosing by validation loses a median of
+\val{valrel.median_odd_loss_choosing_by_val} points, choosing by the even splits
+\val{valrel.median_odd_loss_choosing_by_even}.
 
 \begin{figure*}[t]
 \centering
@@ -329,15 +442,24 @@ runs), the Random Forest's margin over the best deep network rises with the numb
 \subsection{Exploratory findings}
 Within S1, the one design choice worth several points is temporal memory (Fig.~\ref{fig:explore}a): S4D gains
 $\val{contrast.s4d-hystnet_nomem.9.mean}$ [$\val{contrast.s4d-hystnet_nomem.9.lo}$,
-$\val{contrast.s4d-hystnet_nomem.9.hi}$] points over the same network without memory
-(\val{contrast.s4d-hystnet_nomem.9.wins} of 9 datasets), while the type of memory moves macro-F1 by at most a few
-points (Mamba $-$ S4D: $\val{contrast.mamba-s4d.9.mean}$ [$\val{contrast.mamba-s4d.9.lo}$,
-$\val{contrast.mamba-s4d.9.hi}$]). Over the 30 datasets, a larger channel count goes with a larger margin of the
-feature-based Random Forest over the best deep network ($\val{ols.rf.channels.beta}$ points per standard deviation of
-$\log_2$ channels, $p\val{ols.rf.channels.p}$, other properties held fixed; Fig.~\ref{fig:explore}b), and fewer
-training subjects go with a larger gap between the best and the median deep network
-($\val{ols.gap.subjects.beta}$ per standard deviation, $p\val{ols.gap.subjects.p}$). No property predicts how hard a
-dataset is ($R^2=\val{ols.level.r2}$).
+$\val{contrast.s4d-hystnet_nomem.9.hi}$] points over the no-memory control
+(\val{contrast.s4d-hystnet_nomem.9.wins} of 9 datasets). This contrast changes more than the memory: the control is
+the shared skeleton with zero play widths ($D\times N=\val{tab03.hystnet_nomem.d_model}\times
+\val{tab03.hystnet_nomem.layers}$, \val{tab03.hystnet_nomem.params_ref} parameters on the reference input), whereas S4D
+uses its own, wider and shallower blocks ($\val{tab03.s4d.d_model}\times\val{tab03.s4d.layers}$,
+\val{tab03.s4d.params_ref} parameters). The type of memory moves macro-F1 by at most a few points (Mamba $-$ S4D:
+$\val{contrast.mamba-s4d.9.mean}$ [$\val{contrast.mamba-s4d.9.lo}$, $\val{contrast.mamba-s4d.9.hi}$]).
+
+Over the 30 datasets, a larger channel count goes with a larger margin of the feature-based Random Forest over the
+best deep network ($\val{ols.rf.channels.beta}$ points per standard deviation of $\log_2$ channels, other properties
+held fixed, Holm-adjusted $p\val{fm.rf_channels_p_holm}$; Fig.~\ref{fig:explore}b). Of the \val{fm.n_tests} tests,
+\val{fm.n_significant_holm} survive the correction: this one and the association of channel count with the spread
+over test-subject groups (adjusted $p\val{fm.spread_channels_p_holm}$). Fewer subjects go with a larger gap between the
+best and the median deep network ($\val{ols.gap.subjects.beta}$ per standard deviation, uncorrected
+$p\val{ols.gap.subjects.p}$), but not after the correction (adjusted $p\val{fm.gap_subjects_p_holm}$); this gap, a
+maximum over noisy means, also rises with the spread over test groups ($\rho=\val{fm.gap_spread.rho}$,
+$p\val{fm.gap_spread.p}$), so it may reflect noisier estimates rather than larger network differences (r). No property
+predicts how hard a dataset is ($R^2=\val{ols.level.r2}$).
 
 \subsection{What the memories learned}
 The memories' own parameters barely move in training (Fig.~\ref{fig:memory}; \val{learned.checkpoints} checkpoints of
@@ -362,23 +484,22 @@ constants in window lengths, the play widths, and the quantile levels.}
 \end{figure*}
 
 \subsection{Embeddings}
-In the networks' embedding space, the hard test groups are the distant ones (Fig.~\ref{fig:emb}). Within datasets,
-the splits whose test subjects lie further from the training subjects, class by class, are the splits on which the
-networks score lower: the pooled within-dataset rank correlation is
-$\rho=\val{emb.pooled_within_dataset_rank_rho_embedding_ccs_f1}$ ($p\val{emb.pooled_within_dataset_rank_p_embedding}$),
-negative in \val{emb.datasets_negative_rho_embedding} of \val{emb.datasets_with_more_than_3_splits} datasets (median
-$\val{emb.median_dataset_rho_embedding}$) and, for single networks, in \val{emb.network_dataset_negative_rho} of
-\val{emb.network_dataset_cases} network--dataset pairs (median $\val{emb.median_network_dataset_rho_embedding}$).
-Measured per embedding dimension, so that networks of different width weigh alike, it is
-$\rho=\val{emb.pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1}$. The same shift measured on window statistics
-of the normalised signal, which no network shapes, tracks accuracy less closely
-($\rho=\val{emb.pooled_within_dataset_rank_rho_sensor_ccs_f1}$, $p\val{emb.pooled_within_dataset_rank_p_sensor}$;
-negative in \val{emb.datasets_negative_rho_sensor} datasets). The training embeddings still carry the subject's
-identity: a linear probe identifies the training subject at a median \val{emb.median_subject_probe_over_chance_embedding}
-times chance, against \val{emb.median_subject_probe_over_chance_sensor} times from the window statistics, while the
-activity probe reaches a median balanced accuracy of \val{emb.median_activity_probe_embedding}\,\%. The networks thus
-reduce the subject information in their features without removing it. These associations are exploratory and
-correlational.
+The hard test groups are the distant ones (Fig.~\ref{fig:emb}). In a sensor-feature space that no network shapes
+(window statistics of the normalised signal), the splits whose test subjects lie further from the training subjects,
+class by class, are the splits on which the networks score lower: the pooled within-dataset rank correlation is
+$\rho=\val{emb.pooled_within_dataset_rank_rho_sensor_ccs_f1}$ ($p\val{emb.pooled_within_dataset_rank_p_sensor}$),
+negative in \val{emb.datasets_negative_rho_sensor} datasets. In the networks' embeddings the association is stronger,
+as it must partly be in the space the classifier reads: $\rho=\val{emb.pooled_within_dataset_rank_rho_embedding_ccs_f1}$
+($p\val{emb.pooled_within_dataset_rank_p_embedding}$), negative in \val{emb.datasets_negative_rho_embedding} of
+\val{emb.datasets_with_more_than_3_splits} datasets (median $\val{emb.median_dataset_rho_embedding}$) and, for single
+networks, in \val{emb.network_dataset_negative_rho} of \val{emb.network_dataset_cases} network--dataset pairs (median
+$\val{emb.median_network_dataset_rho_embedding}$); per embedding dimension, so that networks of different width weigh
+alike, $\rho=\val{emb.pooled_within_dataset_rank_rho_embedding_ccs_per_dim_f1}$. The training embeddings still carry
+the subject's identity, as known for deep HAR features~\cite{iwasawa2017privacy}: a linear probe identifies the
+training subject at a median \val{emb.median_subject_probe_over_chance_embedding} times chance, against
+\val{emb.median_subject_probe_over_chance_sensor} times from the window statistics, while the activity probe reaches a
+median balanced accuracy of \val{emb.median_activity_probe_embedding}\,\%. The networks thus reduce the subject
+information in their features without removing it. These associations are exploratory and correlational.
 
 \begin{figure*}[t]
 \centering
@@ -393,39 +514,57 @@ training subject, over chance, from the embeddings (all cases and median) and fr
 \end{figure*}
 
 \clearpage  % working draft: place every pending figure before the discussion and the references
+\raggedbottom  % working draft: do not stretch the short column after the float page
 \section{Discussion and Limitations}
-Here ``comparable'' networks share one design and differ in single components, so that their dataset means differ
-by a few points. For such networks, who is tested decides more of a reported macro-F1 than which network is used.
-The variance between test-subject groups governs the absolute level, and with it every comparison made across
-studies, splits or subject groups. A comparison paired by split cancels it, but is then limited by the network
-$\times$ split interaction and the seed, which on S2 are as large as the network terms themselves (Table~\ref{tab:vc}).
-For a wearable sensing study this gives three rules. Record enough subjects to estimate the spread across test-subject
-groups, and report it. Compare networks paired on the same splits, never by means over different subjects. Average
-several training seeds. The reversal on S3 bounds the claim: a weak baseline is told apart from a strong network easily,
-and the subject effect matters when choosing between designs that are already competitive. The exploratory
-associations point at the sensing system: with many channels, hand-crafted features stay competitive, and with few
-recorded subjects the choice of network matters more.
+\emph{What is new.} That accuracy varies widely between people was known~\cite{barshan2016investigating,jordao2018human};
+how that variation compares with the differences between networks, and what it implies for a comparison, was not.
+The decomposition answers both under one protocol. For networks that differ in single components, so that their
+dataset means differ by a few points, who is tested decides more of a reported macro-F1 than which network is used,
+as the pre-registered test confirmed on held-out data. The ratio is not a constant of wearable HAR but a property of
+the networks compared: it holds near or above 1 among the benchmark's best published networks and reverses once
+weaker ones enter, and among the published deep networks the largest term is the network $\times$ dataset
+interaction, a quantitative form of the benchmark's finding that no architecture leads everywhere~\cite{burzer2026arena}.
 
-The exploratory analyses agree with the decomposition and say where the subject effect sits. Within datasets, test
-groups spread accuracy more than networks do (Fig.~\ref{fig:spread}). Validation on the training subjects overstates the
-person-disjoint score, on some datasets by tens of points, and ranks the networks differently (Fig.~\ref{fig:val}), so
-early stopping and model selection should hold out whole subjects. A test group is hard when its windows, class by
-class, lie far from the training subjects' in the space the classifier reads, a space that still identifies the
-training subjects (Fig.~\ref{fig:emb}), whereas the temporal memories keep the scales they start with
-(Fig.~\ref{fig:memory}). Together these suggest that, for comparable networks, the training subjects and how
-representations align them are more promising levers for accuracy on new people than another temporal operator.
+\emph{What it implies for a study.} The variance between test-subject groups governs the absolute level, and with it
+every comparison made across studies, splits or subject groups: an unpaired comparison on one hold-out split has a
+reliability of \val{eb.S2.unpaired_1x1.reliability} (Table~\ref{tab:budget}). A comparison paired by split cancels it,
+but is then limited by the network $\times$ split interaction and the seed, which on S2 are as large as the network
+terms themselves (Table~\ref{tab:vc}). Hence four rules for a wearable sensing study. Compare networks paired on the
+same splits, never by means over different subjects. Size the comparison by test subjects: with the protocol's ten
+groups and three seeds, about \val{eb.S2.paired_10x3.detectable_difference} F1 points are detectable on one dataset,
+and further seeds cannot go below the floor that the network $\times$ split interaction sets. Select networks and stop
+training on held-out subjects, since validation windows of the training subjects rank networks far worse than the test
+ranks them against itself (Section~\ref{sec:val}). Report the spread across test-subject groups, and the standard
+error of a mean as an estimate for new people (\val{eb.S2.se_mean} points on S2), with every score.
 
-The analysis covers one protocol, and three seeds per run. The S1 and S2 networks share one skeleton, so their
-components are controlled but not independent designs. S2's means were known before the registration. The 30-dataset
-results re-analyse published single runs and are correlational, and subjects and channels co-vary across datasets.
-The embedding analysis uses the seed-0 checkpoints of eleven datasets, and the validation analysis only the datasets
-whose runs recorded a validation score. The intervals resample test-subject groups and treat the networks as fixed: they say how precisely $R$ is known for
-these networks, not for networks in general, and S3 shows that another population of networks can reverse it.
+\emph{Exploratory evidence.} Within datasets, test groups spread accuracy more than networks do
+(Fig.~\ref{fig:spread}). A test group is hard when its windows, class by class, lie far from the training subjects',
+already in features that no network shapes, and the networks' embeddings still identify the training subjects
+(Fig.~\ref{fig:emb}), whereas the temporal memories keep the scales they start with (Fig.~\ref{fig:memory}). Together
+these suggest that, for comparable networks, the training subjects and how representations align them are more
+promising levers for accuracy on new people than another temporal operator. Over the benchmark's 30 datasets, the one
+association that survives correction and concerns the comparison of models points at the sensing system: with many
+channels, hand-crafted features stay competitive.
+
+\emph{Limitations.} The analysis covers one protocol, and three seeds per run. The S1 and S2 networks share one
+skeleton, so their components are controlled but not independent designs. S2's means and paired network differences
+were known before the registration. Only H1 was pre-registered: the network-population, error-budget and validation
+analyses were added after an internal review and are exploratory. S3 has one run per split on four datasets, so its
+seed and interaction terms are merged. The error budget uses point estimates, and $\sigma^2_M$ from four networks is
+imprecise. $P$ is the effect of the subject partition, mainly but not only of the test group. The 30-dataset results
+re-analyse published single runs and are correlational, and subjects and channels co-vary across datasets. The
+embedding analysis uses the seed-0 checkpoints of eleven datasets, and the validation analysis only the datasets whose
+runs recorded a validation score; on S2, with four networks, its rank correlations are coarse. The intervals resample
+test-subject groups and treat the networks as fixed: they say how precisely $R$ is known for these networks, not for
+networks in general, and the S3 populations show how it changes with the networks compared.
 
 \section{Conclusion}
 Under a fixed person-disjoint protocol, who is tested accounts for most of the variance of macro-F1 among comparable
-wearable HAR networks, as a pre-registered test on held-out datasets confirmed; across heterogeneous architectures
-the network dominates. Studies of wearable sensing systems should size and report their test subjects accordingly.
+wearable HAR networks, as a pre-registered test on held-out datasets confirmed; among the benchmark's best published
+networks the two are of similar size, and once weaker networks enter, the network dominates. The variance components
+turn this into an error budget: comparisons must be paired by split, sized by test subjects rather than seeds, and
+selected on held-out subjects, and studies of wearable sensing systems should report the spread across their test
+subjects.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

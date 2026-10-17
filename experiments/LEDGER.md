@@ -5082,3 +5082,7 @@ whar_arena_v1/vortexnet/utd_mhad/split-07 | IMPORT | fingerprint c98d3cdb212a | 
 20261016_222411_reconstruct_order_dsads | END   | reexecute: dsads | 00:30:28 | status=completed
 20261016_230928_retrain_missing_checkpoints | START | config 8934a47106dd | data 10383f130f63 | synthetic=false
 20261016_230928_retrain_missing_checkpoints | END   | 6 runs retrained for their checkpoints | 00:32:12 | status=completed
+20261017_061800_run_analyses | START | config b08619fc6ef7 | data 10383f130f63 | synthetic=false
+20261017_061800_run_analyses | END   | 4 files | 00:00:10 | status=completed
+20261017_061812_network_population | START | config cb54691a9922 | data 10383f130f63 | synthetic=false
+20261017_061812_network_population | END   | S3 by network population: 16 fits with 1000 resamples each | 00:06:03 | status=completed

@@ -104,3 +104,4 @@
 2026-10-16T21:33:45 | scripts/reconstruct_order.py | 20261016_213345_reconstruct_order_daphnet | verification: every window of daphnet classified by the stored checkpoints (listing order)
 2026-10-16T22:15:48 | scripts/reconstruct_order.py | 20261016_221548_reconstruct_order_motion_sense | verification: every window of motion_sense classified by the stored checkpoints (listing order)
 2026-10-16T22:24:11 | scripts/reconstruct_order.py | 20261016_222411_reconstruct_order_dsads | verification: every window of dsads classified by the stored checkpoints (listing order)
+2026-10-17T06:18:03 | src/evaluation/validation_reliability.py | - | exploratory reliability of the networks' test ranking (S1 and S2), after the confirmatory analysis

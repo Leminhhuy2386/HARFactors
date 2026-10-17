@@ -16,8 +16,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "paper"
 FIGS = ["fig01_variance_components.pdf", "fig02_contrasts_channels.pdf", "fig03_design.pdf", "fig04_sensors.pdf",
-        "fig05_architecture.pdf", "fig06_memory.pdf", "fig07_split_spread.pdf", "fig08_embedding.pdf", "fig09_validation.pdf"]
-TABLES = ["tab01_variance_components.tex", "tab02_datasets.tex", "tab03_models.tex"]
+        "fig05_architecture.pdf", "fig06_memory.pdf", "fig07_split_spread.pdf", "fig08_embedding.pdf", "fig09_validation.pdf",
+        "fig10_population_budget.pdf"]
+TABLES = ["tab01_variance_components.tex", "tab02_datasets.tex", "tab03_models.tex", "tab04_error_budget.tex"]
 
 
 def main() -> None:

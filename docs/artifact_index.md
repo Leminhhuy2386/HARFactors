@@ -557,3 +557,218 @@ Claim → artifact → script. One row per value in docs/summary_values.json.
 | emb.tsne.split | 0 | results/metrics/embedding/tsne_case.json | case/split | src/evaluation/embedding_analysis.py (t-SNE case) |
 | emb.tsne.train_windows | 3000 | results/metrics/embedding/tsne_case.json | train/activity | src/evaluation/embedding_analysis.py (t-SNE case) |
 | emb.tsne.test_windows | 868 | results/metrics/embedding/tsne_case.json | test/activity | src/evaluation/embedding_analysis.py (t-SNE case) |
+| pop.deep.R | 0.34 | results/metrics/network_population/data.json | populations/deep/point/R | src/evaluation/network_population.py |
+| pop.deep.R_lo | 0.10 | results/metrics/network_population/data.json | populations/deep/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.deep.R_hi | 0.64 | results/metrics/network_population/data.json | populations/deep/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.deep.n_models | 14 | results/metrics/network_population/data.json | populations/deep/n_models | src/evaluation/network_population.py |
+| pop.deep.runs | 420 | results/metrics/network_population/data.json | populations/deep/n_runs | src/evaluation/network_population.py |
+| pop.deep.s2_P | 42.7 | results/metrics/network_population/data.json | populations/deep/point/components/P | src/evaluation/network_population.py |
+| pop.deep.s2_M | 37.5 | results/metrics/network_population/data.json | populations/deep/point/components/M | src/evaluation/network_population.py |
+| pop.deep.s2_MD | 56.4 | results/metrics/network_population/data.json | populations/deep/point/components/MD | src/evaluation/network_population.py |
+| pop.deep.s2_e | 29.9 | results/metrics/network_population/data.json | populations/deep/point/components/e | src/evaluation/network_population.py |
+| pop.top3.R | 2.69 | results/metrics/network_population/data.json | populations/top3/point/R | src/evaluation/network_population.py |
+| pop.top3.R_lo | 0.54 | results/metrics/network_population/data.json | populations/top3/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top3.R_hi | 5.47 | results/metrics/network_population/data.json | populations/top3/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top3.n_models | 3 | results/metrics/network_population/data.json | populations/top3/n_models | src/evaluation/network_population.py |
+| pop.top3.runs | 90 | results/metrics/network_population/data.json | populations/top3/n_runs | src/evaluation/network_population.py |
+| pop.top3.s2_P | 55.3 | results/metrics/network_population/data.json | populations/top3/point/components/P | src/evaluation/network_population.py |
+| pop.top3.s2_M | 0.0 | results/metrics/network_population/data.json | populations/top3/point/components/M | src/evaluation/network_population.py |
+| pop.top3.s2_MD | 8.8 | results/metrics/network_population/data.json | populations/top3/point/components/MD | src/evaluation/network_population.py |
+| pop.top3.s2_e | 11.8 | results/metrics/network_population/data.json | populations/top3/point/components/e | src/evaluation/network_population.py |
+| pop.top4.R | 2.52 | results/metrics/network_population/data.json | populations/top4/point/R | src/evaluation/network_population.py |
+| pop.top4.R_lo | 0.57 | results/metrics/network_population/data.json | populations/top4/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top4.R_hi | 4.76 | results/metrics/network_population/data.json | populations/top4/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top4.n_models | 4 | results/metrics/network_population/data.json | populations/top4/n_models | src/evaluation/network_population.py |
+| pop.top4.runs | 120 | results/metrics/network_population/data.json | populations/top4/n_runs | src/evaluation/network_population.py |
+| pop.top4.s2_P | 52.6 | results/metrics/network_population/data.json | populations/top4/point/components/P | src/evaluation/network_population.py |
+| pop.top4.s2_M | 0.0 | results/metrics/network_population/data.json | populations/top4/point/components/M | src/evaluation/network_population.py |
+| pop.top4.s2_MD | 9.1 | results/metrics/network_population/data.json | populations/top4/point/components/MD | src/evaluation/network_population.py |
+| pop.top4.s2_e | 11.8 | results/metrics/network_population/data.json | populations/top4/point/components/e | src/evaluation/network_population.py |
+| pop.top5.R | 1.86 | results/metrics/network_population/data.json | populations/top5/point/R | src/evaluation/network_population.py |
+| pop.top5.R_lo | 0.36 | results/metrics/network_population/data.json | populations/top5/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top5.R_hi | 3.94 | results/metrics/network_population/data.json | populations/top5/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top5.n_models | 5 | results/metrics/network_population/data.json | populations/top5/n_models | src/evaluation/network_population.py |
+| pop.top5.runs | 150 | results/metrics/network_population/data.json | populations/top5/n_runs | src/evaluation/network_population.py |
+| pop.top5.s2_P | 53.5 | results/metrics/network_population/data.json | populations/top5/point/components/P | src/evaluation/network_population.py |
+| pop.top5.s2_M | 3.6 | results/metrics/network_population/data.json | populations/top5/point/components/M | src/evaluation/network_population.py |
+| pop.top5.s2_MD | 12.6 | results/metrics/network_population/data.json | populations/top5/point/components/MD | src/evaluation/network_population.py |
+| pop.top5.s2_e | 12.6 | results/metrics/network_population/data.json | populations/top5/point/components/e | src/evaluation/network_population.py |
+| pop.top6.R | 2.12 | results/metrics/network_population/data.json | populations/top6/point/R | src/evaluation/network_population.py |
+| pop.top6.R_lo | 0.42 | results/metrics/network_population/data.json | populations/top6/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top6.R_hi | 4.44 | results/metrics/network_population/data.json | populations/top6/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top6.n_models | 6 | results/metrics/network_population/data.json | populations/top6/n_models | src/evaluation/network_population.py |
+| pop.top6.runs | 180 | results/metrics/network_population/data.json | populations/top6/n_runs | src/evaluation/network_population.py |
+| pop.top6.s2_P | 54.2 | results/metrics/network_population/data.json | populations/top6/point/components/P | src/evaluation/network_population.py |
+| pop.top6.s2_M | 2.8 | results/metrics/network_population/data.json | populations/top6/point/components/M | src/evaluation/network_population.py |
+| pop.top6.s2_MD | 9.9 | results/metrics/network_population/data.json | populations/top6/point/components/MD | src/evaluation/network_population.py |
+| pop.top6.s2_e | 13.0 | results/metrics/network_population/data.json | populations/top6/point/components/e | src/evaluation/network_population.py |
+| pop.top7.R | 1.13 | results/metrics/network_population/data.json | populations/top7/point/R | src/evaluation/network_population.py |
+| pop.top7.R_lo | 0.25 | results/metrics/network_population/data.json | populations/top7/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top7.R_hi | 2.19 | results/metrics/network_population/data.json | populations/top7/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top7.n_models | 7 | results/metrics/network_population/data.json | populations/top7/n_models | src/evaluation/network_population.py |
+| pop.top7.runs | 210 | results/metrics/network_population/data.json | populations/top7/n_runs | src/evaluation/network_population.py |
+| pop.top7.s2_P | 52.6 | results/metrics/network_population/data.json | populations/top7/point/components/P | src/evaluation/network_population.py |
+| pop.top7.s2_M | 23.5 | results/metrics/network_population/data.json | populations/top7/point/components/M | src/evaluation/network_population.py |
+| pop.top7.s2_MD | 8.4 | results/metrics/network_population/data.json | populations/top7/point/components/MD | src/evaluation/network_population.py |
+| pop.top7.s2_e | 14.8 | results/metrics/network_population/data.json | populations/top7/point/components/e | src/evaluation/network_population.py |
+| pop.top8.R | 1.28 | results/metrics/network_population/data.json | populations/top8/point/R | src/evaluation/network_population.py |
+| pop.top8.R_lo | 0.28 | results/metrics/network_population/data.json | populations/top8/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top8.R_hi | 2.42 | results/metrics/network_population/data.json | populations/top8/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top8.n_models | 8 | results/metrics/network_population/data.json | populations/top8/n_models | src/evaluation/network_population.py |
+| pop.top8.runs | 240 | results/metrics/network_population/data.json | populations/top8/n_runs | src/evaluation/network_population.py |
+| pop.top8.s2_P | 55.2 | results/metrics/network_population/data.json | populations/top8/point/components/P | src/evaluation/network_population.py |
+| pop.top8.s2_M | 20.1 | results/metrics/network_population/data.json | populations/top8/point/components/M | src/evaluation/network_population.py |
+| pop.top8.s2_MD | 8.1 | results/metrics/network_population/data.json | populations/top8/point/components/MD | src/evaluation/network_population.py |
+| pop.top8.s2_e | 15.2 | results/metrics/network_population/data.json | populations/top8/point/components/e | src/evaluation/network_population.py |
+| pop.top9.R | 1.10 | results/metrics/network_population/data.json | populations/top9/point/R | src/evaluation/network_population.py |
+| pop.top9.R_lo | 0.27 | results/metrics/network_population/data.json | populations/top9/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top9.R_hi | 1.97 | results/metrics/network_population/data.json | populations/top9/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top9.n_models | 9 | results/metrics/network_population/data.json | populations/top9/n_models | src/evaluation/network_population.py |
+| pop.top9.runs | 270 | results/metrics/network_population/data.json | populations/top9/n_runs | src/evaluation/network_population.py |
+| pop.top9.s2_P | 52.2 | results/metrics/network_population/data.json | populations/top9/point/components/P | src/evaluation/network_population.py |
+| pop.top9.s2_M | 19.9 | results/metrics/network_population/data.json | populations/top9/point/components/M | src/evaluation/network_population.py |
+| pop.top9.s2_MD | 12.6 | results/metrics/network_population/data.json | populations/top9/point/components/MD | src/evaluation/network_population.py |
+| pop.top9.s2_e | 14.8 | results/metrics/network_population/data.json | populations/top9/point/components/e | src/evaluation/network_population.py |
+| pop.top10.R | 1.17 | results/metrics/network_population/data.json | populations/top10/point/R | src/evaluation/network_population.py |
+| pop.top10.R_lo | 0.29 | results/metrics/network_population/data.json | populations/top10/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top10.R_hi | 2.12 | results/metrics/network_population/data.json | populations/top10/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top10.n_models | 10 | results/metrics/network_population/data.json | populations/top10/n_models | src/evaluation/network_population.py |
+| pop.top10.runs | 300 | results/metrics/network_population/data.json | populations/top10/n_runs | src/evaluation/network_population.py |
+| pop.top10.s2_P | 52.8 | results/metrics/network_population/data.json | populations/top10/point/components/P | src/evaluation/network_population.py |
+| pop.top10.s2_M | 17.3 | results/metrics/network_population/data.json | populations/top10/point/components/M | src/evaluation/network_population.py |
+| pop.top10.s2_MD | 13.1 | results/metrics/network_population/data.json | populations/top10/point/components/MD | src/evaluation/network_population.py |
+| pop.top10.s2_e | 14.8 | results/metrics/network_population/data.json | populations/top10/point/components/e | src/evaluation/network_population.py |
+| pop.top11.R | 1.24 | results/metrics/network_population/data.json | populations/top11/point/R | src/evaluation/network_population.py |
+| pop.top11.R_lo | 0.32 | results/metrics/network_population/data.json | populations/top11/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top11.R_hi | 2.27 | results/metrics/network_population/data.json | populations/top11/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top11.n_models | 11 | results/metrics/network_population/data.json | populations/top11/n_models | src/evaluation/network_population.py |
+| pop.top11.runs | 330 | results/metrics/network_population/data.json | populations/top11/n_runs | src/evaluation/network_population.py |
+| pop.top11.s2_P | 54.3 | results/metrics/network_population/data.json | populations/top11/point/components/P | src/evaluation/network_population.py |
+| pop.top11.s2_M | 16.5 | results/metrics/network_population/data.json | populations/top11/point/components/M | src/evaluation/network_population.py |
+| pop.top11.s2_MD | 12.0 | results/metrics/network_population/data.json | populations/top11/point/components/MD | src/evaluation/network_population.py |
+| pop.top11.s2_e | 15.4 | results/metrics/network_population/data.json | populations/top11/point/components/e | src/evaluation/network_population.py |
+| pop.top12.R | 1.26 | results/metrics/network_population/data.json | populations/top12/point/R | src/evaluation/network_population.py |
+| pop.top12.R_lo | 0.32 | results/metrics/network_population/data.json | populations/top12/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top12.R_hi | 2.25 | results/metrics/network_population/data.json | populations/top12/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top12.n_models | 12 | results/metrics/network_population/data.json | populations/top12/n_models | src/evaluation/network_population.py |
+| pop.top12.runs | 360 | results/metrics/network_population/data.json | populations/top12/n_runs | src/evaluation/network_population.py |
+| pop.top12.s2_P | 52.9 | results/metrics/network_population/data.json | populations/top12/point/components/P | src/evaluation/network_population.py |
+| pop.top12.s2_M | 14.5 | results/metrics/network_population/data.json | populations/top12/point/components/M | src/evaluation/network_population.py |
+| pop.top12.s2_MD | 13.0 | results/metrics/network_population/data.json | populations/top12/point/components/MD | src/evaluation/network_population.py |
+| pop.top12.s2_e | 14.5 | results/metrics/network_population/data.json | populations/top12/point/components/e | src/evaluation/network_population.py |
+| pop.top13.R | 0.58 | results/metrics/network_population/data.json | populations/top13/point/R | src/evaluation/network_population.py |
+| pop.top13.R_lo | 0.16 | results/metrics/network_population/data.json | populations/top13/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top13.R_hi | 1.00 | results/metrics/network_population/data.json | populations/top13/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top13.n_models | 13 | results/metrics/network_population/data.json | populations/top13/n_models | src/evaluation/network_population.py |
+| pop.top13.runs | 390 | results/metrics/network_population/data.json | populations/top13/n_runs | src/evaluation/network_population.py |
+| pop.top13.s2_P | 48.5 | results/metrics/network_population/data.json | populations/top13/point/components/P | src/evaluation/network_population.py |
+| pop.top13.s2_M | 31.3 | results/metrics/network_population/data.json | populations/top13/point/components/M | src/evaluation/network_population.py |
+| pop.top13.s2_MD | 36.5 | results/metrics/network_population/data.json | populations/top13/point/components/MD | src/evaluation/network_population.py |
+| pop.top13.s2_e | 15.3 | results/metrics/network_population/data.json | populations/top13/point/components/e | src/evaluation/network_population.py |
+| pop.top14.R | 0.36 | results/metrics/network_population/data.json | populations/top14/point/R | src/evaluation/network_population.py |
+| pop.top14.R_lo | 0.10 | results/metrics/network_population/data.json | populations/top14/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top14.R_hi | 0.69 | results/metrics/network_population/data.json | populations/top14/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top14.n_models | 14 | results/metrics/network_population/data.json | populations/top14/n_models | src/evaluation/network_population.py |
+| pop.top14.runs | 420 | results/metrics/network_population/data.json | populations/top14/n_runs | src/evaluation/network_population.py |
+| pop.top14.s2_P | 43.3 | results/metrics/network_population/data.json | populations/top14/point/components/P | src/evaluation/network_population.py |
+| pop.top14.s2_M | 38.9 | results/metrics/network_population/data.json | populations/top14/point/components/M | src/evaluation/network_population.py |
+| pop.top14.s2_MD | 50.7 | results/metrics/network_population/data.json | populations/top14/point/components/MD | src/evaluation/network_population.py |
+| pop.top14.s2_e | 29.4 | results/metrics/network_population/data.json | populations/top14/point/components/e | src/evaluation/network_population.py |
+| pop.top15.R | 0.36 | results/metrics/network_population/data.json | populations/top15/point/R | src/evaluation/network_population.py |
+| pop.top15.R_lo | 0.10 | results/metrics/network_population/data.json | populations/top15/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top15.R_hi | 0.65 | results/metrics/network_population/data.json | populations/top15/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top15.n_models | 15 | results/metrics/network_population/data.json | populations/top15/n_models | src/evaluation/network_population.py |
+| pop.top15.runs | 450 | results/metrics/network_population/data.json | populations/top15/n_runs | src/evaluation/network_population.py |
+| pop.top15.s2_P | 42.9 | results/metrics/network_population/data.json | populations/top15/point/components/P | src/evaluation/network_population.py |
+| pop.top15.s2_M | 38.0 | results/metrics/network_population/data.json | populations/top15/point/components/M | src/evaluation/network_population.py |
+| pop.top15.s2_MD | 52.6 | results/metrics/network_population/data.json | populations/top15/point/components/MD | src/evaluation/network_population.py |
+| pop.top15.s2_e | 29.5 | results/metrics/network_population/data.json | populations/top15/point/components/e | src/evaluation/network_population.py |
+| pop.top16.R | 0.24 | results/metrics/network_population/data.json | populations/top16/point/R | src/evaluation/network_population.py |
+| pop.top16.R_lo | 0.07 | results/metrics/network_population/data.json | populations/top16/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top16.R_hi | 0.42 | results/metrics/network_population/data.json | populations/top16/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top16.n_models | 16 | results/metrics/network_population/data.json | populations/top16/n_models | src/evaluation/network_population.py |
+| pop.top16.runs | 480 | results/metrics/network_population/data.json | populations/top16/n_runs | src/evaluation/network_population.py |
+| pop.top16.s2_P | 39.2 | results/metrics/network_population/data.json | populations/top16/point/components/P | src/evaluation/network_population.py |
+| pop.top16.s2_M | 78.8 | results/metrics/network_population/data.json | populations/top16/point/components/M | src/evaluation/network_population.py |
+| pop.top16.s2_MD | 53.2 | results/metrics/network_population/data.json | populations/top16/point/components/MD | src/evaluation/network_population.py |
+| pop.top16.s2_e | 29.9 | results/metrics/network_population/data.json | populations/top16/point/components/e | src/evaluation/network_population.py |
+| pop.top17.R | 0.21 | results/metrics/network_population/data.json | populations/top17/point/R | src/evaluation/network_population.py |
+| pop.top17.R_lo | 0.06 | results/metrics/network_population/data.json | populations/top17/bootstrap/R_interval/0 | src/evaluation/network_population.py |
+| pop.top17.R_hi | 0.36 | results/metrics/network_population/data.json | populations/top17/bootstrap/R_interval/1 | src/evaluation/network_population.py |
+| pop.top17.n_models | 17 | results/metrics/network_population/data.json | populations/top17/n_models | src/evaluation/network_population.py |
+| pop.top17.runs | 510 | results/metrics/network_population/data.json | populations/top17/n_runs | src/evaluation/network_population.py |
+| pop.top17.s2_P | 37.5 | results/metrics/network_population/data.json | populations/top17/point/components/P | src/evaluation/network_population.py |
+| pop.top17.s2_M | 100.2 | results/metrics/network_population/data.json | populations/top17/point/components/M | src/evaluation/network_population.py |
+| pop.top17.s2_MD | 51.0 | results/metrics/network_population/data.json | populations/top17/point/components/MD | src/evaluation/network_population.py |
+| pop.top17.s2_e | 29.2 | results/metrics/network_population/data.json | populations/top17/point/components/e | src/evaluation/network_population.py |
+| pop.arena_datasets | 26 | results/metrics/network_population/data.json | ranking/arena_datasets_used | src/evaluation/network_population.py |
+| pop.largest_k_above_1 | 12 | results/metrics/network_population/data.json | largest_k_with_R_above_1 | src/evaluation/network_population.py |
+| pop.k_interval_above_1 | 0 | results/metrics/network_population/data.json | top_k_with_interval_above_1 | src/evaluation/network_population.py |
+| pop.k_interval_below_1 | 5 | results/metrics/network_population/data.json | top_k_with_interval_below_1 | src/evaluation/network_population.py |
+| pop.k_populations | 15 | results/metrics/network_population/data.json | top_k_populations | src/evaluation/network_population.py |
+| pop.deep.share_MD | 46 | results/metrics/network_population/data.json | deep_share_MD_of_network_related | src/evaluation/network_population.py |
+| eb.power_pct | 80 | results/metrics/error_budget/data.json | power_pct | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.alpha_pct | 5 | results/metrics/error_budget/data.json | alpha_pct | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.true_sd | 4.2 | results/metrics/error_budget/data.json | analyses/S2/true_difference_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.se_mean | 3.7 | results/metrics/error_budget/data.json | analyses/S2/se_dataset_mean_10x3 | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.seed_gain | 20 | results/metrics/error_budget/data.json | analyses/S2/seed_gain_3_to_inf | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.group_gain | 29 | results/metrics/error_budget/data.json | analyses/S2/group_gain_10_to_20 | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.unpaired_1x1.noise_sd | 17.1 | results/metrics/error_budget/data.json | analyses/S2/designs/unpaired_1x1/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.unpaired_1x1.detectable_difference | 47.9 | results/metrics/error_budget/data.json | analyses/S2/designs/unpaired_1x1/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.unpaired_1x1.reliability | 0.06 | results/metrics/error_budget/data.json | analyses/S2/designs/unpaired_1x1/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_1x1.noise_sd | 6.1 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_1x1/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_1x1.detectable_difference | 17.1 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_1x1/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_1x1.reliability | 0.32 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_1x1/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_10x1.noise_sd | 1.9 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_10x1/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_10x1.detectable_difference | 5.4 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_10x1/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_10x1.reliability | 0.82 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_10x1/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_10x3.noise_sd | 1.5 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_10x3/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_10x3.detectable_difference | 4.1 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_10x3/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_10x3.reliability | 0.89 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_10x3/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_10xinf.noise_sd | 1.2 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_10xinf/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_10xinf.detectable_difference | 3.3 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_10xinf/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_10xinf.reliability | 0.93 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_10xinf/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_20x3.noise_sd | 1.0 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_20x3/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_20x3.detectable_difference | 2.9 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_20x3/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S2.paired_20x3.reliability | 0.94 | results/metrics/error_budget/data.json | analyses/S2/designs/paired_20x3/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.true_sd | 5.2 | results/metrics/error_budget/data.json | analyses/S1/true_difference_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.se_mean | 2.8 | results/metrics/error_budget/data.json | analyses/S1/se_dataset_mean_10x3 | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.seed_gain | 27 | results/metrics/error_budget/data.json | analyses/S1/seed_gain_3_to_inf | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.group_gain | 29 | results/metrics/error_budget/data.json | analyses/S1/group_gain_10_to_20 | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.unpaired_1x1.noise_sd | 13.5 | results/metrics/error_budget/data.json | analyses/S1/designs/unpaired_1x1/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.unpaired_1x1.detectable_difference | 37.7 | results/metrics/error_budget/data.json | analyses/S1/designs/unpaired_1x1/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.unpaired_1x1.reliability | 0.13 | results/metrics/error_budget/data.json | analyses/S1/designs/unpaired_1x1/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_1x1.noise_sd | 7.0 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_1x1/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_1x1.detectable_difference | 19.5 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_1x1/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_1x1.reliability | 0.36 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_1x1/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_10x1.noise_sd | 2.2 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_10x1/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_10x1.detectable_difference | 6.2 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_10x1/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_10x1.reliability | 0.85 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_10x1/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_10x3.noise_sd | 1.6 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_10x3/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_10x3.detectable_difference | 4.4 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_10x3/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_10x3.reliability | 0.92 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_10x3/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_10xinf.noise_sd | 1.2 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_10xinf/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_10xinf.detectable_difference | 3.2 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_10xinf/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_10xinf.reliability | 0.95 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_10xinf/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_20x3.noise_sd | 1.1 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_20x3/noise_sd | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_20x3.detectable_difference | 3.1 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_20x3/detectable_difference | scripts/run_analyses.py (src.evaluation.error_budget) |
+| eb.S1.paired_20x3.reliability | 0.96 | results/metrics/error_budget/data.json | analyses/S1/designs/paired_20x3/reliability | scripts/run_analyses.py (src.evaluation.error_budget) |
+| valrel.n_datasets | 13 | results/metrics/validation_reliability/data.json | n_datasets | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.median_rho_val_test | +0.18 | results/metrics/validation_reliability/data.json | median_rho_val_test | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.median_rho_test_seeds | +0.80 | results/metrics/validation_reliability/data.json | median_rho_test_seeds | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.median_rho_test_halves | +0.80 | results/metrics/validation_reliability/data.json | median_rho_test_halves | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.datasets_val_below_halves | 9 | results/metrics/validation_reliability/data.json | datasets_val_below_halves | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.datasets_val_below_seeds | 9 | results/metrics/validation_reliability/data.json | datasets_val_below_seeds | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.best_by_val_is_best_on_test | 3 | results/metrics/validation_reliability/data.json | best_by_val_is_best_on_test | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.best_on_seed0_is_best_on_seeds12 | 7 | results/metrics/validation_reliability/data.json | best_on_seed0_is_best_on_seeds12 | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.best_on_even_is_best_on_odd | 7 | results/metrics/validation_reliability/data.json | best_on_even_is_best_on_odd | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.median_odd_loss_choosing_by_val | 3.3 | results/metrics/validation_reliability/data.json | median_odd_loss_choosing_by_val | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| valrel.median_odd_loss_choosing_by_even | 0.0 | results/metrics/validation_reliability/data.json | median_odd_loss_choosing_by_even | scripts/run_analyses.py (src.evaluation.validation_reliability) |
+| fm.n_tests | 16 | results/metrics/factor_multiplicity/data.json | n_tests | scripts/run_analyses.py (src.evaluation.error_budget) |
+| fm.n_significant_holm | 2 | results/metrics/factor_multiplicity/data.json | n_significant_holm | scripts/run_analyses.py (src.evaluation.error_budget) |
+| fm.n_significant_uncorrected | 4 | results/metrics/factor_multiplicity/data.json | n_significant_uncorrected | scripts/run_analyses.py (src.evaluation.error_budget) |
+| fm.gap_subjects_p_holm | = 0.058 | results/metrics/factor_multiplicity/data.json | gap_subjects_p_holm | scripts/run_analyses.py (src.evaluation.error_budget) |
+| fm.rf_channels_p_holm | < 0.001 | results/metrics/factor_multiplicity/data.json | rf_channels_p_holm | scripts/run_analyses.py (src.evaluation.error_budget) |
+| fm.spread_channels_p_holm | = 0.025 | results/metrics/factor_multiplicity/data.json | spread_channels_p_holm | scripts/run_analyses.py (src.evaluation.error_budget) |
+| fm.gap_spread.rho | +0.60 | results/metrics/factor_multiplicity/data.json | gap_vs_split_spread/rho | scripts/run_analyses.py (src.evaluation.error_budget) |
+| fm.gap_spread.p | < 0.001 | results/metrics/factor_multiplicity/data.json | gap_vs_split_spread/p | scripts/run_analyses.py (src.evaluation.error_budget) |

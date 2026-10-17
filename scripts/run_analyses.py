@@ -24,7 +24,13 @@ STEPS = [("src.evaluation.profile_models", []), ("src.evaluation.compare_arena",
          ("src.evaluation.pareto", []), ("src.evaluation.pareto", ["--heldout"]), ("src.evaluation.vs_benchmark", []),
          ("src.evaluation.seeds_summary", []), ("src.evaluation.p5_summary", []),
          ("src.evaluation.p5_summary", ["recurrencenet"]), ("src.evaluation.contrasts_robustness", []),
-         ("src.evaluation.split_spread", [])]
+         ("src.evaluation.split_spread", []), ("src.evaluation.validation_reliability", []),
+         ("src.evaluation.factor_multiplicity", []), ("src.evaluation.error_budget", [])]
+# results a step reads besides the stored runs (they enter its provenance record)
+EXTRA_INPUTS = {"src.evaluation.vs_benchmark": ["results/metrics/pareto/costs.json"],
+                "src.evaluation.factor_multiplicity": ["results/metrics/factors/data.json"],
+                "src.evaluation.error_budget": ["results/metrics/confirmatory/H1.json",
+                                                "results/metrics/confirmatory/sens2_S1_macro_f1.json"]}
 
 
 def written_since(t0: float) -> list[Path]:
@@ -67,8 +73,7 @@ if __name__ == "__main__":
                 inputs = [ROOT / "data/processed/manifest.json", src]
                 if mod != "src.evaluation.profile_models":  # every later step reads params via compare_arena.PROFILE
                     inputs.append(ROOT / "results/metrics/profile.json")
-                if mod == "src.evaluation.vs_benchmark":
-                    inputs.append(ROOT / "results/metrics/pareto/costs.json")
+                inputs += [ROOT / p for p in EXTRA_INPUTS.get(mod, [])]
                 for f in written_since(t0):
                     PV.write(f, run_id=run_id, started=started, config=config, produced_by=f"scripts/run_analyses.py ({mod}"
                              + (" " + " ".join(args) if args else "") + ")", inputs=inputs)

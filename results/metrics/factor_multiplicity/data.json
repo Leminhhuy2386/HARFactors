@@ -1,0 +1,96 @@
+{
+ "tests": {
+  "RF − best deep (classical margin) | log2 channels": {
+   "p": 1.0739993385237916e-05,
+   "p_holm": 0.00017183989416380666,
+   "significant_holm": true
+  },
+  "RF − best deep (classical margin) | log2 classes": {
+   "p": 0.07298124734975457,
+   "p_holm": 0.8757749681970548,
+   "significant_holm": false
+  },
+  "RF − best deep (classical margin) | log2 samples/window": {
+   "p": 0.7640794253496394,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "RF − best deep (classical margin) | log2 subjects": {
+   "p": 0.026730368305890626,
+   "p_holm": 0.3474947879765781,
+   "significant_holm": false
+  },
+  "best − median deep (does the model matter) | log2 channels": {
+   "p": 0.4334198808439185,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "best − median deep (does the model matter) | log2 classes": {
+   "p": 0.8176647529240478,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "best − median deep (does the model matter) | log2 samples/window": {
+   "p": 0.9051019680035546,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "best − median deep (does the model matter) | log2 subjects": {
+   "p": 0.0041370515291718766,
+   "p_holm": 0.057918721408406273,
+   "significant_holm": false
+  },
+  "mean split sd of deep models (person spread) | log2 channels": {
+   "p": 0.001649855376503427,
+   "p_holm": 0.024747830647551403,
+   "significant_holm": true
+  },
+  "mean split sd of deep models (person spread) | log2 classes": {
+   "p": 0.7231954229740246,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "mean split sd of deep models (person spread) | log2 samples/window": {
+   "p": 0.20905969597753515,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "mean split sd of deep models (person spread) | log2 subjects": {
+   "p": 0.5422603105226318,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "median deep F1 (level) | log2 channels": {
+   "p": 0.4969818397502295,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "median deep F1 (level) | log2 classes": {
+   "p": 0.901581482516446,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "median deep F1 (level) | log2 samples/window": {
+   "p": 0.6420829893535134,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  "median deep F1 (level) | log2 subjects": {
+   "p": 0.7014075638722018,
+   "p_holm": 1.0,
+   "significant_holm": false
+  }
+ },
+ "n_tests": 16,
+ "alpha": 0.05,
+ "n_significant_holm": 2,
+ "n_significant_uncorrected": 4,
+ "gap_subjects_p_holm": 0.057918721408406273,
+ "rf_channels_p_holm": 0.00017183989416380666,
+ "spread_channels_p_holm": 0.024747830647551403,
+ "gap_vs_split_spread": {
+  "datasets": 30,
+  "rho": 0.5968854282536151,
+  "p": 0.0004979726681510417
+ }
+}

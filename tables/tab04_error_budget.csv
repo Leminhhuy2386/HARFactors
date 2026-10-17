@@ -1,0 +1,7 @@
+design,k,n,paired,S2_noise_sd,S2_detectable_difference,S2_reliability,S1_noise_sd,S1_detectable_difference,S1_reliability
+unpaired_1x1,1,1,False,17.0991,47.9047,0.0563,13.4551,37.6957,0.1313
+paired_1x1,1,1,True,6.0879,17.0558,0.3202,6.9675,19.5201,0.3605
+paired_10x1,10,1,True,1.9252,5.3935,0.8249,2.2033,6.1728,0.8494
+paired_10x3,10,3,True,1.4665,4.1085,0.8903,1.5834,4.436,0.9161
+paired_10xinf,10,inf,True,1.1717,3.2825,0.9271,1.1547,3.235,0.9535
+paired_20x3,20,3,True,1.037,2.9052,0.942,1.1196,3.1367,0.9562

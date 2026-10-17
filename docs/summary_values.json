@@ -7165,5 +7165,3029 @@
   "format": "len",
   "printed": "868",
   "produced_by": "src/evaluation/embedding_analysis.py (t-SNE case)"
+ },
+ {
+  "id": "pop.deep.R",
+  "description": "S3, the deep networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "deep",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "0.34",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.deep.R_lo",
+  "description": "S3, the deep networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "deep",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.10",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.deep.R_hi",
+  "description": "S3, the deep networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "deep",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "0.64",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.deep.n_models",
+  "description": "S3, the deep networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "deep",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "14",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.deep.runs",
+  "description": "S3, the deep networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "deep",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "420",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.deep.s2_P",
+  "description": "S3, the deep networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "deep",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "42.7",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.deep.s2_M",
+  "description": "S3, the deep networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "deep",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "37.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.deep.s2_MD",
+  "description": "S3, the deep networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "deep",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "56.4",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.deep.s2_e",
+  "description": "S3, the deep networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "deep",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "29.9",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top3.R",
+  "description": "S3, the best 3 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top3",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "2.69",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top3.R_lo",
+  "description": "S3, the best 3 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top3",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.54",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top3.R_hi",
+  "description": "S3, the best 3 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top3",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "5.47",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top3.n_models",
+  "description": "S3, the best 3 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top3",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top3.runs",
+  "description": "S3, the best 3 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top3",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "90",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top3.s2_P",
+  "description": "S3, the best 3 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top3",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "55.3",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top3.s2_M",
+  "description": "S3, the best 3 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top3",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "0.0",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top3.s2_MD",
+  "description": "S3, the best 3 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top3",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "8.8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top3.s2_e",
+  "description": "S3, the best 3 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top3",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "11.8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top4.R",
+  "description": "S3, the best 4 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top4",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "2.52",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top4.R_lo",
+  "description": "S3, the best 4 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top4",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.57",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top4.R_hi",
+  "description": "S3, the best 4 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top4",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "4.76",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top4.n_models",
+  "description": "S3, the best 4 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top4",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "4",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top4.runs",
+  "description": "S3, the best 4 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top4",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "120",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top4.s2_P",
+  "description": "S3, the best 4 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top4",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "52.6",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top4.s2_M",
+  "description": "S3, the best 4 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top4",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "0.0",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top4.s2_MD",
+  "description": "S3, the best 4 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top4",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "9.1",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top4.s2_e",
+  "description": "S3, the best 4 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top4",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "11.8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top5.R",
+  "description": "S3, the best 5 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top5",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "1.86",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top5.R_lo",
+  "description": "S3, the best 5 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top5",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.36",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top5.R_hi",
+  "description": "S3, the best 5 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top5",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "3.94",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top5.n_models",
+  "description": "S3, the best 5 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top5",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top5.runs",
+  "description": "S3, the best 5 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top5",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "150",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top5.s2_P",
+  "description": "S3, the best 5 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top5",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "53.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top5.s2_M",
+  "description": "S3, the best 5 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top5",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "3.6",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top5.s2_MD",
+  "description": "S3, the best 5 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top5",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "12.6",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top5.s2_e",
+  "description": "S3, the best 5 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top5",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "12.6",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top6.R",
+  "description": "S3, the best 6 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top6",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "2.12",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top6.R_lo",
+  "description": "S3, the best 6 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top6",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.42",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top6.R_hi",
+  "description": "S3, the best 6 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top6",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "4.44",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top6.n_models",
+  "description": "S3, the best 6 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top6",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "6",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top6.runs",
+  "description": "S3, the best 6 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top6",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "180",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top6.s2_P",
+  "description": "S3, the best 6 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top6",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "54.2",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top6.s2_M",
+  "description": "S3, the best 6 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top6",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "2.8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top6.s2_MD",
+  "description": "S3, the best 6 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top6",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "9.9",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top6.s2_e",
+  "description": "S3, the best 6 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top6",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "13.0",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top7.R",
+  "description": "S3, the best 7 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top7",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "1.13",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top7.R_lo",
+  "description": "S3, the best 7 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top7",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.25",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top7.R_hi",
+  "description": "S3, the best 7 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top7",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "2.19",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top7.n_models",
+  "description": "S3, the best 7 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top7",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "7",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top7.runs",
+  "description": "S3, the best 7 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top7",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "210",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top7.s2_P",
+  "description": "S3, the best 7 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top7",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "52.6",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top7.s2_M",
+  "description": "S3, the best 7 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top7",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "23.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top7.s2_MD",
+  "description": "S3, the best 7 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top7",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "8.4",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top7.s2_e",
+  "description": "S3, the best 7 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top7",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "14.8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top8.R",
+  "description": "S3, the best 8 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top8",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "1.28",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top8.R_lo",
+  "description": "S3, the best 8 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top8",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.28",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top8.R_hi",
+  "description": "S3, the best 8 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top8",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "2.42",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top8.n_models",
+  "description": "S3, the best 8 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top8",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top8.runs",
+  "description": "S3, the best 8 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top8",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "240",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top8.s2_P",
+  "description": "S3, the best 8 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top8",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "55.2",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top8.s2_M",
+  "description": "S3, the best 8 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top8",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "20.1",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top8.s2_MD",
+  "description": "S3, the best 8 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top8",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "8.1",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top8.s2_e",
+  "description": "S3, the best 8 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top8",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "15.2",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top9.R",
+  "description": "S3, the best 9 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top9",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "1.10",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top9.R_lo",
+  "description": "S3, the best 9 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top9",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.27",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top9.R_hi",
+  "description": "S3, the best 9 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top9",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "1.97",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top9.n_models",
+  "description": "S3, the best 9 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top9",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top9.runs",
+  "description": "S3, the best 9 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top9",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "270",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top9.s2_P",
+  "description": "S3, the best 9 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top9",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "52.2",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top9.s2_M",
+  "description": "S3, the best 9 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top9",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "19.9",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top9.s2_MD",
+  "description": "S3, the best 9 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top9",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "12.6",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top9.s2_e",
+  "description": "S3, the best 9 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top9",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "14.8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top10.R",
+  "description": "S3, the best 10 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top10",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "1.17",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top10.R_lo",
+  "description": "S3, the best 10 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top10",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.29",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top10.R_hi",
+  "description": "S3, the best 10 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top10",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "2.12",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top10.n_models",
+  "description": "S3, the best 10 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top10",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "10",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top10.runs",
+  "description": "S3, the best 10 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top10",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "300",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top10.s2_P",
+  "description": "S3, the best 10 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top10",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "52.8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top10.s2_M",
+  "description": "S3, the best 10 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top10",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "17.3",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top10.s2_MD",
+  "description": "S3, the best 10 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top10",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "13.1",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top10.s2_e",
+  "description": "S3, the best 10 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top10",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "14.8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top11.R",
+  "description": "S3, the best 11 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top11",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "1.24",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top11.R_lo",
+  "description": "S3, the best 11 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top11",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.32",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top11.R_hi",
+  "description": "S3, the best 11 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top11",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "2.27",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top11.n_models",
+  "description": "S3, the best 11 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top11",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "11",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top11.runs",
+  "description": "S3, the best 11 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top11",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "330",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top11.s2_P",
+  "description": "S3, the best 11 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top11",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "54.3",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top11.s2_M",
+  "description": "S3, the best 11 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top11",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "16.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top11.s2_MD",
+  "description": "S3, the best 11 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top11",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "12.0",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top11.s2_e",
+  "description": "S3, the best 11 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top11",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "15.4",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top12.R",
+  "description": "S3, the best 12 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top12",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "1.26",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top12.R_lo",
+  "description": "S3, the best 12 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top12",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.32",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top12.R_hi",
+  "description": "S3, the best 12 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top12",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "2.25",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top12.n_models",
+  "description": "S3, the best 12 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top12",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "12",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top12.runs",
+  "description": "S3, the best 12 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top12",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "360",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top12.s2_P",
+  "description": "S3, the best 12 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top12",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "52.9",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top12.s2_M",
+  "description": "S3, the best 12 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top12",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "14.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top12.s2_MD",
+  "description": "S3, the best 12 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top12",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "13.0",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top12.s2_e",
+  "description": "S3, the best 12 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top12",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "14.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top13.R",
+  "description": "S3, the best 13 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top13",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "0.58",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top13.R_lo",
+  "description": "S3, the best 13 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top13",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.16",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top13.R_hi",
+  "description": "S3, the best 13 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top13",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "1.00",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top13.n_models",
+  "description": "S3, the best 13 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top13",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "13",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top13.runs",
+  "description": "S3, the best 13 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top13",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "390",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top13.s2_P",
+  "description": "S3, the best 13 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top13",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "48.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top13.s2_M",
+  "description": "S3, the best 13 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top13",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "31.3",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top13.s2_MD",
+  "description": "S3, the best 13 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top13",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "36.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top13.s2_e",
+  "description": "S3, the best 13 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top13",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "15.3",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top14.R",
+  "description": "S3, the best 14 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top14",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "0.36",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top14.R_lo",
+  "description": "S3, the best 14 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top14",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.10",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top14.R_hi",
+  "description": "S3, the best 14 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top14",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "0.69",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top14.n_models",
+  "description": "S3, the best 14 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top14",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "14",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top14.runs",
+  "description": "S3, the best 14 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top14",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "420",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top14.s2_P",
+  "description": "S3, the best 14 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top14",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "43.3",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top14.s2_M",
+  "description": "S3, the best 14 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top14",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "38.9",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top14.s2_MD",
+  "description": "S3, the best 14 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top14",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "50.7",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top14.s2_e",
+  "description": "S3, the best 14 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top14",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "29.4",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top15.R",
+  "description": "S3, the best 15 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top15",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "0.36",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top15.R_lo",
+  "description": "S3, the best 15 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top15",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.10",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top15.R_hi",
+  "description": "S3, the best 15 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top15",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "0.65",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top15.n_models",
+  "description": "S3, the best 15 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top15",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "15",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top15.runs",
+  "description": "S3, the best 15 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top15",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "450",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top15.s2_P",
+  "description": "S3, the best 15 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top15",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "42.9",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top15.s2_M",
+  "description": "S3, the best 15 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top15",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "38.0",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top15.s2_MD",
+  "description": "S3, the best 15 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top15",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "52.6",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top15.s2_e",
+  "description": "S3, the best 15 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top15",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "29.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top16.R",
+  "description": "S3, the best 16 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top16",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "0.24",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top16.R_lo",
+  "description": "S3, the best 16 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top16",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.07",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top16.R_hi",
+  "description": "S3, the best 16 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top16",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "0.42",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top16.n_models",
+  "description": "S3, the best 16 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top16",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "16",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top16.runs",
+  "description": "S3, the best 16 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top16",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "480",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top16.s2_P",
+  "description": "S3, the best 16 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top16",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "39.2",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top16.s2_M",
+  "description": "S3, the best 16 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top16",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "78.8",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top16.s2_MD",
+  "description": "S3, the best 16 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top16",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "53.2",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top16.s2_e",
+  "description": "S3, the best 16 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top16",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "29.9",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top17.R",
+  "description": "S3, the best 17 networks: R'",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top17",
+   "point",
+   "R"
+  ],
+  "format": ".2f",
+  "printed": "0.21",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top17.R_lo",
+  "description": "S3, the best 17 networks: R', 97.5 % lower bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top17",
+   "bootstrap",
+   "R_interval",
+   0
+  ],
+  "format": ".2f",
+  "printed": "0.06",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top17.R_hi",
+  "description": "S3, the best 17 networks: R', 97.5 % upper bound",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top17",
+   "bootstrap",
+   "R_interval",
+   1
+  ],
+  "format": ".2f",
+  "printed": "0.36",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top17.n_models",
+  "description": "S3, the best 17 networks: networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top17",
+   "n_models"
+  ],
+  "format": "d",
+  "printed": "17",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top17.runs",
+  "description": "S3, the best 17 networks: runs",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top17",
+   "n_runs"
+  ],
+  "format": "d",
+  "printed": "510",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top17.s2_P",
+  "description": "S3, the best 17 networks: variance component P",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top17",
+   "point",
+   "components",
+   "P"
+  ],
+  "format": ".1f",
+  "printed": "37.5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top17.s2_M",
+  "description": "S3, the best 17 networks: variance component M",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top17",
+   "point",
+   "components",
+   "M"
+  ],
+  "format": ".1f",
+  "printed": "100.2",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top17.s2_MD",
+  "description": "S3, the best 17 networks: variance component MD",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top17",
+   "point",
+   "components",
+   "MD"
+  ],
+  "format": ".1f",
+  "printed": "51.0",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.top17.s2_e",
+  "description": "S3, the best 17 networks: variance component e",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "populations",
+   "top17",
+   "point",
+   "components",
+   "e"
+  ],
+  "format": ".1f",
+  "printed": "29.2",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.arena_datasets",
+  "description": "Arena datasets outside S3 used to rank the networks",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "ranking",
+   "arena_datasets_used"
+  ],
+  "format": "len",
+  "printed": "26",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.largest_k_above_1",
+  "description": "largest best-k population with R' above 1",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "largest_k_with_R_above_1"
+  ],
+  "format": "d",
+  "printed": "12",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.k_interval_above_1",
+  "description": "best-k populations whose interval lies above 1",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "top_k_with_interval_above_1"
+  ],
+  "format": "d",
+  "printed": "0",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.k_interval_below_1",
+  "description": "best-k populations whose interval lies below 1",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "top_k_with_interval_below_1"
+  ],
+  "format": "d",
+  "printed": "5",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.k_populations",
+  "description": "best-k populations fitted",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "top_k_populations"
+  ],
+  "format": "d",
+  "printed": "15",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "pop.deep.share_MD",
+  "description": "14 deep networks: network x dataset share of the network-related variance (%)",
+  "artifact": "results/metrics/network_population/data.json",
+  "path": [
+   "deep_share_MD_of_network_related"
+  ],
+  "format": "pct",
+  "printed": "46",
+  "produced_by": "src/evaluation/network_population.py"
+ },
+ {
+  "id": "eb.power_pct",
+  "description": "error budget: power (%)",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "power_pct"
+  ],
+  "format": ".0f",
+  "printed": "80",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.alpha_pct",
+  "description": "error budget: two-sided level (%)",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "alpha_pct"
+  ],
+  "format": ".0f",
+  "printed": "5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.true_sd",
+  "description": "error budget, S2: SD of the true difference of two networks",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "true_difference_sd"
+  ],
+  "format": ".1f",
+  "printed": "4.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.se_mean",
+  "description": "error budget, S2: SE of one network's dataset mean, 10 x 3",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "se_dataset_mean_10x3"
+  ],
+  "format": ".1f",
+  "printed": "3.7",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.seed_gain",
+  "description": "error budget, S2: noise SD saved by infinitely many seeds over 3 (%)",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "seed_gain_3_to_inf"
+  ],
+  "format": "pct",
+  "printed": "20",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.group_gain",
+  "description": "error budget, S2: noise SD saved by 20 test groups over 10 (%)",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "group_gain_10_to_20"
+  ],
+  "format": "pct",
+  "printed": "29",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.unpaired_1x1.noise_sd",
+  "description": "error budget, S2, unpaired_1x1: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "unpaired_1x1",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "17.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.unpaired_1x1.detectable_difference",
+  "description": "error budget, S2, unpaired_1x1: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "unpaired_1x1",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "47.9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.unpaired_1x1.reliability",
+  "description": "error budget, S2, unpaired_1x1: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "unpaired_1x1",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.06",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_1x1.noise_sd",
+  "description": "error budget, S2, paired_1x1: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_1x1",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "6.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_1x1.detectable_difference",
+  "description": "error budget, S2, paired_1x1: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_1x1",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "17.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_1x1.reliability",
+  "description": "error budget, S2, paired_1x1: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_1x1",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.32",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_10x1.noise_sd",
+  "description": "error budget, S2, paired_10x1: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_10x1",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "1.9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_10x1.detectable_difference",
+  "description": "error budget, S2, paired_10x1: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_10x1",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "5.4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_10x1.reliability",
+  "description": "error budget, S2, paired_10x1: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_10x1",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.82",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_10x3.noise_sd",
+  "description": "error budget, S2, paired_10x3: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_10x3",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "1.5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_10x3.detectable_difference",
+  "description": "error budget, S2, paired_10x3: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_10x3",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "4.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_10x3.reliability",
+  "description": "error budget, S2, paired_10x3: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_10x3",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.89",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_10xinf.noise_sd",
+  "description": "error budget, S2, paired_10xinf: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_10xinf",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "1.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_10xinf.detectable_difference",
+  "description": "error budget, S2, paired_10xinf: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_10xinf",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "3.3",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_10xinf.reliability",
+  "description": "error budget, S2, paired_10xinf: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_10xinf",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.93",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_20x3.noise_sd",
+  "description": "error budget, S2, paired_20x3: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_20x3",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "1.0",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_20x3.detectable_difference",
+  "description": "error budget, S2, paired_20x3: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_20x3",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "2.9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S2.paired_20x3.reliability",
+  "description": "error budget, S2, paired_20x3: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S2",
+   "designs",
+   "paired_20x3",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.94",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.true_sd",
+  "description": "error budget, S1: SD of the true difference of two networks",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "true_difference_sd"
+  ],
+  "format": ".1f",
+  "printed": "5.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.se_mean",
+  "description": "error budget, S1: SE of one network's dataset mean, 10 x 3",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "se_dataset_mean_10x3"
+  ],
+  "format": ".1f",
+  "printed": "2.8",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.seed_gain",
+  "description": "error budget, S1: noise SD saved by infinitely many seeds over 3 (%)",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "seed_gain_3_to_inf"
+  ],
+  "format": "pct",
+  "printed": "27",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.group_gain",
+  "description": "error budget, S1: noise SD saved by 20 test groups over 10 (%)",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "group_gain_10_to_20"
+  ],
+  "format": "pct",
+  "printed": "29",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.unpaired_1x1.noise_sd",
+  "description": "error budget, S1, unpaired_1x1: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "unpaired_1x1",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "13.5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.unpaired_1x1.detectable_difference",
+  "description": "error budget, S1, unpaired_1x1: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "unpaired_1x1",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "37.7",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.unpaired_1x1.reliability",
+  "description": "error budget, S1, unpaired_1x1: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "unpaired_1x1",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.13",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_1x1.noise_sd",
+  "description": "error budget, S1, paired_1x1: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_1x1",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "7.0",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_1x1.detectable_difference",
+  "description": "error budget, S1, paired_1x1: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_1x1",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "19.5",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_1x1.reliability",
+  "description": "error budget, S1, paired_1x1: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_1x1",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.36",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_10x1.noise_sd",
+  "description": "error budget, S1, paired_10x1: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_10x1",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "2.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_10x1.detectable_difference",
+  "description": "error budget, S1, paired_10x1: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_10x1",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "6.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_10x1.reliability",
+  "description": "error budget, S1, paired_10x1: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_10x1",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.85",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_10x3.noise_sd",
+  "description": "error budget, S1, paired_10x3: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_10x3",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "1.6",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_10x3.detectable_difference",
+  "description": "error budget, S1, paired_10x3: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_10x3",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "4.4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_10x3.reliability",
+  "description": "error budget, S1, paired_10x3: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_10x3",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.92",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_10xinf.noise_sd",
+  "description": "error budget, S1, paired_10xinf: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_10xinf",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "1.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_10xinf.detectable_difference",
+  "description": "error budget, S1, paired_10xinf: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_10xinf",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "3.2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_10xinf.reliability",
+  "description": "error budget, S1, paired_10xinf: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_10xinf",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.95",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_20x3.noise_sd",
+  "description": "error budget, S1, paired_20x3: noise sd",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_20x3",
+   "noise_sd"
+  ],
+  "format": ".1f",
+  "printed": "1.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_20x3.detectable_difference",
+  "description": "error budget, S1, paired_20x3: detectable difference",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_20x3",
+   "detectable_difference"
+  ],
+  "format": ".1f",
+  "printed": "3.1",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "eb.S1.paired_20x3.reliability",
+  "description": "error budget, S1, paired_20x3: reliability",
+  "artifact": "results/metrics/error_budget/data.json",
+  "path": [
+   "analyses",
+   "S1",
+   "designs",
+   "paired_20x3",
+   "reliability"
+  ],
+  "format": ".2f",
+  "printed": "0.96",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "valrel.n_datasets",
+  "description": "validation reliability: n datasets",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "n_datasets"
+  ],
+  "format": "d",
+  "printed": "13",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.median_rho_val_test",
+  "description": "validation reliability: median rho val test",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "median_rho_val_test"
+  ],
+  "format": "+.2f",
+  "printed": "+0.18",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.median_rho_test_seeds",
+  "description": "validation reliability: median rho test seeds",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "median_rho_test_seeds"
+  ],
+  "format": "+.2f",
+  "printed": "+0.80",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.median_rho_test_halves",
+  "description": "validation reliability: median rho test halves",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "median_rho_test_halves"
+  ],
+  "format": "+.2f",
+  "printed": "+0.80",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.datasets_val_below_halves",
+  "description": "validation reliability: datasets val below halves",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "datasets_val_below_halves"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.datasets_val_below_seeds",
+  "description": "validation reliability: datasets val below seeds",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "datasets_val_below_seeds"
+  ],
+  "format": "d",
+  "printed": "9",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.best_by_val_is_best_on_test",
+  "description": "validation reliability: best by val is best on test",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "best_by_val_is_best_on_test"
+  ],
+  "format": "d",
+  "printed": "3",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.best_on_seed0_is_best_on_seeds12",
+  "description": "validation reliability: best on seed0 is best on seeds12",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "best_on_seed0_is_best_on_seeds12"
+  ],
+  "format": "d",
+  "printed": "7",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.best_on_even_is_best_on_odd",
+  "description": "validation reliability: best on even is best on odd",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "best_on_even_is_best_on_odd"
+  ],
+  "format": "d",
+  "printed": "7",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.median_odd_loss_choosing_by_val",
+  "description": "validation reliability: median odd loss choosing by val",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "median_odd_loss_choosing_by_val"
+  ],
+  "format": ".1f",
+  "printed": "3.3",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "valrel.median_odd_loss_choosing_by_even",
+  "description": "validation reliability: median odd loss choosing by even",
+  "artifact": "results/metrics/validation_reliability/data.json",
+  "path": [
+   "median_odd_loss_choosing_by_even"
+  ],
+  "format": ".1f",
+  "printed": "0.0",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.validation_reliability)"
+ },
+ {
+  "id": "fm.n_tests",
+  "description": "30-dataset regressions: n tests",
+  "artifact": "results/metrics/factor_multiplicity/data.json",
+  "path": [
+   "n_tests"
+  ],
+  "format": "d",
+  "printed": "16",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "fm.n_significant_holm",
+  "description": "30-dataset regressions: n significant holm",
+  "artifact": "results/metrics/factor_multiplicity/data.json",
+  "path": [
+   "n_significant_holm"
+  ],
+  "format": "d",
+  "printed": "2",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "fm.n_significant_uncorrected",
+  "description": "30-dataset regressions: n significant uncorrected",
+  "artifact": "results/metrics/factor_multiplicity/data.json",
+  "path": [
+   "n_significant_uncorrected"
+  ],
+  "format": "d",
+  "printed": "4",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "fm.gap_subjects_p_holm",
+  "description": "30-dataset regressions: gap subjects p holm",
+  "artifact": "results/metrics/factor_multiplicity/data.json",
+  "path": [
+   "gap_subjects_p_holm"
+  ],
+  "format": "p3",
+  "printed": "= 0.058",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "fm.rf_channels_p_holm",
+  "description": "30-dataset regressions: rf channels p holm",
+  "artifact": "results/metrics/factor_multiplicity/data.json",
+  "path": [
+   "rf_channels_p_holm"
+  ],
+  "format": "p3",
+  "printed": "< 0.001",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "fm.spread_channels_p_holm",
+  "description": "30-dataset regressions: spread channels p holm",
+  "artifact": "results/metrics/factor_multiplicity/data.json",
+  "path": [
+   "spread_channels_p_holm"
+  ],
+  "format": "p3",
+  "printed": "= 0.025",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "fm.gap_spread.rho",
+  "description": "30 datasets: Spearman of best - median gap with mean split SD",
+  "artifact": "results/metrics/factor_multiplicity/data.json",
+  "path": [
+   "gap_vs_split_spread",
+   "rho"
+  ],
+  "format": "+.2f",
+  "printed": "+0.60",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
+ },
+ {
+  "id": "fm.gap_spread.p",
+  "description": "30 datasets: p of that Spearman correlation",
+  "artifact": "results/metrics/factor_multiplicity/data.json",
+  "path": [
+   "gap_vs_split_spread",
+   "p"
+  ],
+  "format": "p3",
+  "printed": "< 0.001",
+  "produced_by": "scripts/run_analyses.py (src.evaluation.error_budget)"
  }
 ]

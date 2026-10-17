@@ -44,6 +44,14 @@ S3's R is the conservative R′ = s2_P / (s2_M + s2_MD + s2_e) (one run per spli
   - best − median deep vs subjects: -1.5 per sd (p = 0.004), R² 0.39;
   - median deep F1 (difficulty): R² 0.03.
 
+## 3b. Exploratory, added after the review of 2026-10-17 (not pre-registered)
+
+- S3 by network population (networks ranked on the 26 Arena datasets outside S3): R′ above 1 up to the best 12 (best 5: 1.86 [0.36, 3.94]; best 12: 1.26 [0.32, 2.25]); intervals above 1: 0 of 15, below 1: 5; all 17: 0.21.
+- 14 deep networks: R′ 0.34 [0.10, 0.64]; components P 42.7, M 37.5, MD 56.4, e 29.9.
+- Error budget (S2 components): true difference SD 4.2; noise SD unpaired 1×1 17.1 (reliability 0.06), paired 1×1 6.1, paired 10×3 1.5 (detectable 4.1, reliability 0.89), floor 10×∞ 1.2; SE of a dataset mean 3.7.
+- Validation vs test (13 datasets): median ρ +0.18 against +0.80 (seeds) and +0.80 (split halves); best by validation = best on test in 3, even = odd in 7.
+- 30-dataset regressions: 2 of 16 tests survive Holm; subjects → best − median gap adjusted p = 0.058; the gap vs split spread ρ +0.60 (p < 0.001).
+
 ## 4. Anchors and verification
 
 - G3: Random Forest re-run vs Figure 6: utd_mhad 51.20 vs 51.20, uci_har 84.69 vs 84.69, unimib_shar 44.49 vs 44.49, actrectut_gestures 41.89 vs 41.89.
@@ -62,8 +70,8 @@ S3's R is the conservative R′ = s2_P / (s2_M + s2_MD + s2_e) (one run per spli
 
 - One protocol (WHAR Arena v1); 3 training seeds (template asks >= 5; user's decision); the 10 population models share one skeleton; the 30-dataset part re-analyses published single runs; data factors are correlational.
 - Re-execution covers the datasets with a cache on the cluster; runs without a checkpoint and datasets without a cache are verified by their stored records only (docs/verification_report.md).
-- The S2 per-dataset means were known before the pre-registration; no variance component of S2 was.
-- The manuscript was drafted with IEEEtran [journal,9pt] in place of IEEE_lsens.cls.
+- The S2 per-dataset means and paired network differences were known before the pre-registration; no variance component of S2 was.
+- The analyses marked (r) in the manuscript (S3 by network population, error budget, validation against the test, Holm correction) were added after the review of 2026-10-17 and are exploratory.
 
 ## 7. Pre-registration outcome
 

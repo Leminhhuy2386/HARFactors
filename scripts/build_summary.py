@@ -234,6 +234,75 @@ def detail_spec() -> list[dict]:
         add("emb.tsne.split", "t-SNE case: split", ts, ["case", "split"], "d")
         add("emb.tsne.train_windows", "t-SNE case: training windows shown", ts, ["train", "activity"], "len")
         add("emb.tsne.test_windows", "t-SNE case: test windows shown", ts, ["test", "activity"], "len")
+    s += review_spec()
+    return s
+
+
+def review_spec() -> list[dict]:
+    """Exploratory values added after the review of 2026-10-17: S3 by network population, the error budget of a
+    comparison (and Table IV), the reliability of the test ranking against validation, and the multiplicity check of
+    the 30-dataset regressions. Each artifact enters only once it exists."""
+    s = []
+    add = lambda i, d, a, p, f: s.append({"id": i, "description": d, "artifact": a, "path": p, "format": f})  # noqa: E731
+    have = lambda a: (ROOT / a).exists()  # noqa: E731
+    npop = "results/metrics/network_population/data.json"
+    if have(npop):
+        pops = json.loads((ROOT / npop).read_text())["populations"]
+        for pop in pops:
+            lab = "the deep networks" if pop == "deep" else f"the best {pop[3:]} networks"
+            base = ["populations", pop]
+            add(f"pop.{pop}.R", f"S3, {lab}: R'", npop, base + ["point", "R"], ".2f")
+            add(f"pop.{pop}.R_lo", f"S3, {lab}: R', 97.5 % lower bound", npop, base + ["bootstrap", "R_interval", 0], ".2f")
+            add(f"pop.{pop}.R_hi", f"S3, {lab}: R', 97.5 % upper bound", npop, base + ["bootstrap", "R_interval", 1], ".2f")
+            add(f"pop.{pop}.n_models", f"S3, {lab}: networks", npop, base + ["n_models"], "d")
+            add(f"pop.{pop}.runs", f"S3, {lab}: runs", npop, base + ["n_runs"], "d")
+            for c in ("P", "M", "MD", "e"):
+                add(f"pop.{pop}.s2_{c}", f"S3, {lab}: variance component {c}", npop, base + ["point", "components", c],
+                    ".1f")
+        add("pop.arena_datasets", "Arena datasets outside S3 used to rank the networks", npop,
+            ["ranking", "arena_datasets_used"], "len")
+        add("pop.largest_k_above_1", "largest best-k population with R' above 1", npop, ["largest_k_with_R_above_1"], "d")
+        add("pop.k_interval_above_1", "best-k populations whose interval lies above 1", npop,
+            ["top_k_with_interval_above_1"], "d")
+        add("pop.k_interval_below_1", "best-k populations whose interval lies below 1", npop,
+            ["top_k_with_interval_below_1"], "d")
+        add("pop.k_populations", "best-k populations fitted", npop, ["top_k_populations"], "d")
+        add("pop.deep.share_MD", "14 deep networks: network x dataset share of the network-related variance (%)",
+            npop, ["deep_share_MD_of_network_related"], "pct")
+    eb = "results/metrics/error_budget/data.json"
+    if have(eb):
+        add("eb.power_pct", "error budget: power (%)", eb, ["power_pct"], ".0f")
+        add("eb.alpha_pct", "error budget: two-sided level (%)", eb, ["alpha_pct"], ".0f")
+        for st_ in ("S2", "S1"):
+            a = ["analyses", st_]
+            add(f"eb.{st_}.true_sd", f"error budget, {st_}: SD of the true difference of two networks", eb,
+                a + ["true_difference_sd"], ".1f")
+            add(f"eb.{st_}.se_mean", f"error budget, {st_}: SE of one network's dataset mean, 10 x 3", eb,
+                a + ["se_dataset_mean_10x3"], ".1f")
+            add(f"eb.{st_}.seed_gain", f"error budget, {st_}: noise SD saved by infinitely many seeds over 3 (%)", eb,
+                a + ["seed_gain_3_to_inf"], "pct")
+            add(f"eb.{st_}.group_gain", f"error budget, {st_}: noise SD saved by 20 test groups over 10 (%)", eb,
+                a + ["group_gain_10_to_20"], "pct")
+            for d in ("unpaired_1x1", "paired_1x1", "paired_10x1", "paired_10x3", "paired_10xinf", "paired_20x3"):
+                for m, f in (("noise_sd", ".1f"), ("detectable_difference", ".1f"), ("reliability", ".2f")):
+                    add(f"eb.{st_}.{d}.{m}", f"error budget, {st_}, {d}: {m.replace('_', ' ')}", eb,
+                        a + ["designs", d, m], f)
+    vr = "results/metrics/validation_reliability/data.json"
+    if have(vr):
+        for k, f in (("n_datasets", "d"), ("median_rho_val_test", "+.2f"), ("median_rho_test_seeds", "+.2f"),
+                     ("median_rho_test_halves", "+.2f"), ("datasets_val_below_halves", "d"),
+                     ("datasets_val_below_seeds", "d"), ("best_by_val_is_best_on_test", "d"),
+                     ("best_on_seed0_is_best_on_seeds12", "d"), ("best_on_even_is_best_on_odd", "d"),
+                     ("median_odd_loss_choosing_by_val", ".1f"), ("median_odd_loss_choosing_by_even", ".1f")):
+            add(f"valrel.{k}", f"validation reliability: {k.replace('_', ' ')}", vr, [k], f)
+    fm = "results/metrics/factor_multiplicity/data.json"
+    if have(fm):
+        for k, f in (("n_tests", "d"), ("n_significant_holm", "d"), ("n_significant_uncorrected", "d"),
+                     ("gap_subjects_p_holm", "p3"), ("rf_channels_p_holm", "p3"), ("spread_channels_p_holm", "p3")):
+            add(f"fm.{k}", f"30-dataset regressions: {k.replace('_', ' ')}", fm, [k], f)
+        add("fm.gap_spread.rho", "30 datasets: Spearman of best - median gap with mean split SD", fm,
+            ["gap_vs_split_spread", "rho"], "+.2f")
+        add("fm.gap_spread.p", "30 datasets: p of that Spearman correlation", fm, ["gap_vs_split_spread", "p"], "p3")
     return s
 
 
@@ -308,8 +377,29 @@ def write_summary(v: dict, values: list) -> None:
           f"R² {v['ols.rf.r2']};",
           f"  - best − median deep vs subjects: {v['ols.gap.subjects.beta']} per sd (p {v['ols.gap.subjects.p']}), "
           f"R² {v['ols.gap.r2']};",
-          f"  - median deep F1 (difficulty): R² {v['ols.level.r2']}.", "",
-          "## 4. Anchors and verification", "",
+          f"  - median deep F1 (difficulty): R² {v['ols.level.r2']}.", ""]
+    if "pop.deep.R" in v and "eb.S2.true_sd" in v and "valrel.n_datasets" in v and "fm.n_tests" in v:
+        L += ["## 3b. Exploratory, added after the review of 2026-10-17 (not pre-registered)", "",
+              f"- S3 by network population (networks ranked on the {v['pop.arena_datasets']} Arena datasets outside S3): "
+              f"R′ above 1 up to the best {v['pop.largest_k_above_1']} (best 5: {v['pop.top5.R']} [{v['pop.top5.R_lo']}, "
+              f"{v['pop.top5.R_hi']}]; best 12: {v['pop.top12.R']} [{v['pop.top12.R_lo']}, {v['pop.top12.R_hi']}]); "
+              f"intervals above 1: {v['pop.k_interval_above_1']} of {v['pop.k_populations']}, below 1: "
+              f"{v['pop.k_interval_below_1']}; all 17: {v['pop.top17.R']}.",
+              f"- 14 deep networks: R′ {v['pop.deep.R']} [{v['pop.deep.R_lo']}, {v['pop.deep.R_hi']}]; components P "
+              f"{v['pop.deep.s2_P']}, M {v['pop.deep.s2_M']}, MD {v['pop.deep.s2_MD']}, e {v['pop.deep.s2_e']}.",
+              f"- Error budget (S2 components): true difference SD {v['eb.S2.true_sd']}; noise SD unpaired 1×1 "
+              f"{v['eb.S2.unpaired_1x1.noise_sd']} (reliability {v['eb.S2.unpaired_1x1.reliability']}), paired 1×1 "
+              f"{v['eb.S2.paired_1x1.noise_sd']}, paired 10×3 {v['eb.S2.paired_10x3.noise_sd']} (detectable "
+              f"{v['eb.S2.paired_10x3.detectable_difference']}, reliability {v['eb.S2.paired_10x3.reliability']}), floor "
+              f"10×∞ {v['eb.S2.paired_10xinf.noise_sd']}; SE of a dataset mean {v['eb.S2.se_mean']}.",
+              f"- Validation vs test ({v['valrel.n_datasets']} datasets): median ρ {v['valrel.median_rho_val_test']} against "
+              f"{v['valrel.median_rho_test_seeds']} (seeds) and {v['valrel.median_rho_test_halves']} (split halves); best by "
+              f"validation = best on test in {v['valrel.best_by_val_is_best_on_test']}, even = odd in "
+              f"{v['valrel.best_on_even_is_best_on_odd']}.",
+              f"- 30-dataset regressions: {v['fm.n_significant_holm']} of {v['fm.n_tests']} tests survive Holm; subjects → "
+              f"best − median gap adjusted p {v['fm.gap_subjects_p_holm']}; the gap vs split spread ρ "
+              f"{v['fm.gap_spread.rho']} (p {v['fm.gap_spread.p']}).", ""]
+    L += ["## 4. Anchors and verification", "",
           "- G3: Random Forest re-run vs Figure 6: " + ", ".join(
               f"{d} {v[f'g3.rf.{d}.rerun']} vs {v[f'g3.rf.{d}.figure6']}"
               for d in ["utd_mhad", "uci_har", "unimib_shar", "actrectut_gestures"]) + ".",
@@ -342,8 +432,10 @@ def write_summary(v: dict, values: list) -> None:
           "correlational.",
           "- Re-execution covers the datasets with a cache on the cluster; runs without a checkpoint and datasets "
           "without a cache are verified by their stored records only (docs/verification_report.md).",
-          "- The S2 per-dataset means were known before the pre-registration; no variance component of S2 was.",
-          "- The manuscript was drafted with IEEEtran [journal,9pt] in place of IEEE_lsens.cls.", "",
+          "- The S2 per-dataset means and paired network differences were known before the pre-registration; no variance "
+          "component of S2 was.",
+          "- The analyses marked (r) in the manuscript (S3 by network population, error budget, validation against the "
+          "test, Holm correction) were added after the review of 2026-10-17 and are exploratory.", "",
           "## 7. Pre-registration outcome", "",
           f"H1: {v['H1.decision']}. No deviation from docs/preregistration.md in the confirmatory analysis.", ""]
     (ROOT / "docs/summary.md").write_text("\n".join(L))

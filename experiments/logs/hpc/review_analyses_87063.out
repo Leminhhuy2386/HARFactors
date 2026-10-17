@@ -1,0 +1,71 @@
+node hpc02.local, job 87063, Sat Oct 17 06:18:00 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+== src.evaluation.validation_reliability
+{
+ "n_datasets": 13,
+ "n_datasets_with_halves": 13,
+ "median_rho_val_test": 0.17575757575757575,
+ "median_rho_test_seeds": 0.7999999999999999,
+ "median_rho_test_halves": 0.7999999999999999,
+ "median_rho_val_test_where_halves": 0.17575757575757575,
+ "datasets_val_below_halves": 9,
+ "datasets_val_below_seeds": 9,
+ "best_by_val_is_best_on_test": 3,
+ "best_on_seed0_is_best_on_seeds12": 7,
+ "best_on_even_is_best_on_odd": 7,
+ "median_odd_loss_choosing_by_val": 3.32482179005941,
+ "median_odd_loss_choosing_by_even": 0.0
+}
+uci_har              S1 n=10 val/test +0.70 seeds +0.88 halves +0.72
+opportunity          S1 n=10 val/test +0.18 seeds +0.07 halves -0.30
+sad                  S1 n=10 val/test +0.60 seeds +0.89 halves +0.83
+hapt                 S1 n=10 val/test +0.93 seeds +0.50 halves +0.72
+dsads                S1 n=10 val/test -0.55 seeds +0.85 halves +0.72
+wisdm                S1 n=10 val/test +0.44 seeds +0.94 halves +0.76
+pamap2               S2 n= 4 val/test -0.80 seeds +1.00 halves +1.00
+up_fall              S2 n= 4 val/test -0.40 seeds +0.80 halves +1.00
+uma_fall             S2 n= 4 val/test +0.00 seeds +1.00 halves +1.00
+usc_had              S2 n= 4 val/test +0.80 seeds +0.80 halves +0.60
+wear                 S2 n= 4 val/test -0.40 seeds +0.80 halves +0.80
+uca_ehar             S2 n= 4 val/test -0.20 seeds +0.80 halves +0.80
+w_har                S2 n= 4 val/test +0.80 seeds +0.80 halves +0.80
+== src.evaluation.factor_multiplicity
+{
+ "n_tests": 16,
+ "alpha": 0.05,
+ "n_significant_holm": 2,
+ "n_significant_uncorrected": 4,
+ "gap_subjects_p_holm": 0.057918721408406273,
+ "rf_channels_p_holm": 0.00017183989416380666,
+ "spread_channels_p_holm": 0.024747830647551403,
+ "gap_vs_split_spread": {
+  "datasets": 30,
+  "rho": 0.5968854282536151,
+  "p": 0.0004979726681510417
+ }
+}
+0.00001 -> 0.0002  RF − best deep (classical margin) | log2 channels
+0.00165 -> 0.0247  mean split sd of deep models (person spread) | log2 channels
+0.00414 -> 0.0579  best − median deep (does the model matter) | log2 subjects
+0.02673 -> 0.3475  RF − best deep (classical margin) | log2 subjects
+0.07298 -> 0.8758  RF − best deep (classical margin) | log2 classes
+== src.evaluation.error_budget
+S2 true sd 4.18 {'unpaired_1x1': (17.1, np.float64(47.9), 0.056), 'paired_1x1': (6.09, np.float64(17.06), 0.32), 'paired_10x1': (1.93, np.float64(5.39), 0.825), 'paired_10x3': (1.47, np.float64(4.11), 0.89), 'paired_10xinf': (1.17, np.float64(3.28), 0.927), 'paired_20x3': (1.04, np.float64(2.91), 0.942)} se mean 3.72
+S1 true sd 5.23 {'unpaired_1x1': (13.46, np.float64(37.7), 0.131), 'paired_1x1': (6.97, np.float64(19.52), 0.361), 'paired_10x1': (2.2, np.float64(6.17), 0.849), 'paired_10x3': (1.58, np.float64(4.44), 0.916), 'paired_10xinf': (1.15, np.float64(3.24), 0.954), 'paired_20x3': (1.12, np.float64(3.14), 0.956)} se mean 2.81
+deep    n=420 R'=0.34 [0.09575473141371271, 0.6397243029822102] chosen=numpy_reml {'P': 42.7, 'M': 37.5, 'MD': 56.4, 'e': 29.9}
+top3    n= 90 R'=2.69 [0.5442398131976877, 5.46696140292288] chosen=numpy_reml {'P': 55.3, 'M': 0.0, 'MD': 8.8, 'e': 11.8}
+top4    n=120 R'=2.52 [0.5685426431248171, 4.75921706525973] chosen=statsmodels {'M': 0.0, 'MD': 9.1, 'P': 52.6, 'e': 11.8}
+top5    n=150 R'=1.86 [0.355531994943278, 3.935446329744964] chosen=statsmodels {'M': 3.6, 'MD': 12.6, 'P': 53.5, 'e': 12.6}
+top6    n=180 R'=2.12 [0.41986872033913014, 4.444569889069493] chosen=numpy_reml {'P': 54.2, 'M': 2.8, 'MD': 9.9, 'e': 13.0}
+top7    n=210 R'=1.13 [0.24990593382847628, 2.18905961318336] chosen=numpy_reml {'P': 52.6, 'M': 23.5, 'MD': 8.4, 'e': 14.8}
+top8    n=240 R'=1.28 [0.2822534482501826, 2.4211779667753874] chosen=numpy_reml {'P': 55.2, 'M': 20.1, 'MD': 8.1, 'e': 15.2}
+top9    n=270 R'=1.10 [0.2719212298892975, 1.9675978075652623] chosen=numpy_reml {'P': 52.2, 'M': 19.9, 'MD': 12.6, 'e': 14.8}
+top10   n=300 R'=1.17 [0.2875647432136457, 2.121943945206184] chosen=numpy_reml {'P': 52.8, 'M': 17.3, 'MD': 13.1, 'e': 14.8}
+top11   n=330 R'=1.24 [0.3176633513702264, 2.2675489907145607] chosen=numpy_reml {'P': 54.3, 'M': 16.5, 'MD': 12.0, 'e': 15.4}
+top12   n=360 R'=1.26 [0.32417528730432876, 2.2532792707625964] chosen=numpy_reml {'P': 52.9, 'M': 14.5, 'MD': 13.0, 'e': 14.5}
+top13   n=390 R'=0.58 [0.15667597980644746, 0.9967676338036121] chosen=numpy_reml {'P': 48.5, 'M': 31.3, 'MD': 36.5, 'e': 15.3}
+top14   n=420 R'=0.36 [0.0988104718426824, 0.6871774856719381] chosen=numpy_reml {'P': 43.3, 'M': 38.9, 'MD': 50.7, 'e': 29.4}
+top15   n=450 R'=0.36 [0.09815924833392604, 0.6492318566528743] chosen=numpy_reml {'P': 42.9, 'M': 38.0, 'MD': 52.6, 'e': 29.5}
+top16   n=480 R'=0.24 [0.06865324936120527, 0.41871800304330536] chosen=numpy_reml {'P': 39.2, 'M': 78.8, 'MD': 53.2, 'e': 29.9}
+top17   n=510 R'=0.21 [0.058756963846634466, 0.35515777801854104] chosen=numpy_reml {'P': 37.5, 'M': 100.2, 'MD': 51.0, 'e': 29.2}

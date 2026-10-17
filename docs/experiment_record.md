@@ -544,3 +544,45 @@ The user asked that every result be reproducible and that every network have its
 4. **Audit.** `--reproduce` now re-generates a sampled prediction file on the cache its run used.
 5. **S3** (17 WHAR Arena models, 510 runs) stays records only; retraining it (10-20 GPU hours) was not approved.
 
+
+## HARFactors, 2026-10-17: revision after the novelty review (user request)
+
+The user asked to state the novelty and the significant contributions clearly and to fix the errors listed in
+`docs/review_novelty_2026-10-17.md` (page limits still waived). No network was trained; every new number comes from the
+stored runs, the confirmatory outputs or the Arena table. None of these analyses was pre-registered; the manuscript
+marks them (r).
+
+### Configurations run
+
+- `src/evaluation/network_population.py` (ledger `20261017_061812_network_population`, Slurm 87063): S3's model refitted
+  on the 14 deep networks and on the best k networks, k = 3-17, ranked by mean published macro-F1 on the 26 Arena
+  datasets outside S3 (the ranking reads no S3 score). Point estimates keep the better of statsmodels and the
+  independent REML (they agree within 0.8 % in R on every population); intervals use H1's bootstrap (1,000 resamples,
+  seed 20261015).
+- `scripts/run_analyses.py --only validation_reliability factor_multiplicity error_budget` (ledger
+  `20261017_061800_run_analyses`): the validation-vs-test reliability (S1 and S2, read logged in
+  `results/test_access.log`), Holm's correction over the 16 frozen OLS coefficient tests and the order-statistic check,
+  and the error budget from the point estimates of H1 and of S1's sensitivity analysis.
+- `src/visualization/contribution_figures.py`: Fig. 5 of the rendered letter (`figures/fig10_population_budget.pdf`) and
+  Table 4 (`tables/tab04_error_budget.tex`).
+
+### Results that changed the text
+
+1. The S3 reversal is caused by the weakest networks: R' stays above 1 (point estimate) for the best 3-12 networks
+   (no interval excludes 1) and every interval lies below 1 from the 13th on (DeepConvShallowLSTM, Guan-LSTM, SA-HAR,
+   then SVM, k-NN). The 14 deep networks alone give R' = 0.34, with network x dataset as the largest term. The review's
+   item 2 (that the "weak baseline" sentence was unsupported) was only half right: weak networks do cause the
+   reversal, but they are not only the classical baselines. The text now says exactly this.
+2. Validation ranks networks far worse than the test ranks itself: median Spearman +0.18 against +0.80 (seeds) and
+   +0.80 (split halves) on 13 datasets.
+3. Of the 16 OLS tests, 2 survive Holm (channels with the RF margin and with the split spread); the subjects-gap
+   association does not (adjusted p 0.058), and the gap tracks the split spread (rho +0.60).
+
+### Text corrections
+
+- S4D vs the no-memory control: no longer "the same network"; width, depth and size are stated.
+- S2 disclosure: paired network differences were known too.
+- P is the effect of the subject partition (mainly the test group); validation windows can overlap training windows.
+- The embedding result leads with the sensor-feature space; the embedding-space correlation is called partly circular.
+- New references (verified, `paper/references_verified.json`): Jordao et al. 2018, Barshan & Yurtman 2016, Varoquaux
+  2018, Iwasawa et al. 2017.
