@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 STEPS = [('src.visualization.build_factor_figures', []), ('src.visualization.letter_figures', []),
          ('src.visualization.detail_figures', []),
-         ('src.visualization.contribution_figures', [])]
+         ('src.visualization.contribution_figures', []), ('src.visualization.pptx_export', [])]
 
 if __name__ == "__main__":
     for mod, args in STEPS:

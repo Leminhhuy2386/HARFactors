@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript"] 1792209261.28958 "manuscript.aux" "manuscript.bbl" "manuscript" 1792209382.08569 0
+["bibtex manuscript"] 1792216841.02601 "manuscript.aux" "manuscript.bbl" "manuscript" 1792216842.00672 0
   "./references.bib" 1792209061 13185 bc6634c17b6956b55a4df45a0ab4a3ba ""
   "/home/huy.leminh/texlive/2026/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "manuscript.aux" 1792209381 11698 6f4ec145608f035dc94ebcb8bfddef75 "pdflatex"
+  "manuscript.aux" 1792216841 11990 53d27d5b2b5920fd92afa70b897dd948 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1792209381.11459 "manuscript.tex" "manuscript.pdf" "manuscript" 1792209382.08622 0
+["pdflatex"] 1792216841.1448 "manuscript.tex" "manuscript.pdf" "manuscript" 1792216842.00725 0
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/home/huy.leminh/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -120,19 +120,19 @@
   "IEEE_lsens.cls" 1792104099 214510 832b5a4695db10df88e7211f1c5ef489 ""
   "figures/fig01_variance_components.pdf" 1792209229 20827 ac9ba97c74b34c8004aea5a5983eceb2 ""
   "figures/fig02_channels.pdf" 1792209230 18078 325a2ac51a487507c5c91361678268b7 ""
-  "figures/fig03_design.pdf" 1792209231 46914 d7b91876c0a4e9c43f4a58be6a2df03f ""
+  "figures/fig03_design.pdf" 1792216835 33234 7a18a5ba86679889c2d656486c80cd44 ""
   "figures/fig04_sensors.pdf" 1792209232 37256 868e1209ba1efe0913c20bcb63aa5f2a ""
-  "figures/fig05_architecture.pdf" 1792209234 56378 3c56f03a38e7083469b0d55a9fbae912 ""
+  "figures/fig05_architecture.pdf" 1792216836 27413 6dbbfacedac45bf1b97ea90633999676 ""
   "figures/fig07_split_spread.pdf" 1792209237 46838 2c2bfe1547227a3021a2d8fb27268531 ""
   "figures/fig08_embedding.pdf" 1792209238 219096 a27276d8f5c2ee0d4ebf412d8824314c ""
   "figures/fig09_validation.pdf" 1792209239 30152 21be35e6922366f39fa7d32ee6d12ab3 ""
   "figures/fig10_population_budget.pdf" 1792209240 30082 16688ac09a7c3e02683b9fdad90aca29 ""
-  "manuscript.aux" 1792209381 11698 6f4ec145608f035dc94ebcb8bfddef75 "pdflatex"
-  "manuscript.bbl" 1792209261 8737 7ebb0d69e33b62a61d9d75e46a22ff18 "bibtex manuscript"
-  "manuscript.tex" 1792209380 42235 efad3f64e9da7c812e7279ddaf195e5b ""
+  "manuscript.aux" 1792216841 11990 53d27d5b2b5920fd92afa70b897dd948 "pdflatex"
+  "manuscript.bbl" 1792216841 8737 7ebb0d69e33b62a61d9d75e46a22ff18 "bibtex manuscript"
+  "manuscript.tex" 1792216836 42484 1917bd817f408ef6364e79783d20147f ""
   "tab01_variance_components.tex" 1792209230 652 e717c4cf5968f95c4401bdd7bb33ab68 ""
   "tab02_datasets.tex" 1792209233 1444 28786755c59b6d3bb5af3d3b6968eda2 ""
-  "tab03_models.tex" 1792209235 1115 ea7612b10c884b7fbd68679bf44ff7e7 ""
+  "tab03_models.tex" 1792216836 1115 ea7612b10c884b7fbd68679bf44ff7e7 ""
   "tab04_error_budget.tex" 1792209241 750 5dc7849be763ac7462285705984a195a ""
   (generated)
   "manuscript.aux"

@@ -1,0 +1,7 @@
+node hpc04.local, job 87112, Sat Oct 17 12:59:40 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+fig05 written
+run 20261017_125943_detail_figures

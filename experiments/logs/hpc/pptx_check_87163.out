@@ -1,0 +1,11 @@
+node hpc02.local, job 87163, Sat Oct 17 17:04:34 +07 2026
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+ppt/presProps.xml XSD ok
+ppt/presentation.xml XSD ok
+ppt/slideLayouts/slideLayout1.xml XSD ok
+ppt/slideMasters/slideMaster1.xml XSD ok
+ppt/slides/slide1.xml XSD ok
+ppt/slides/slide2.xml XSD ok
+ppt/viewProps.xml XSD ok
+PROBLEMS: 0

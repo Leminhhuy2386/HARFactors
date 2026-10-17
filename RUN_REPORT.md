@@ -15,7 +15,7 @@ verified. What blocks submission is listed under § Open items.
 | G4 seal | PASS | G4_test_seal.json | Pre-registration and code sealed at commit 761d6bd; prior reads of S2 means declared |
 | G5 authenticity | PASS | G5_results_authenticity_rerun6.json | 408 runs re-executed, 373 exactly; independent REML; 9/9 negative controls; permutation control on the better of two REML fits (since rerun 6); 50/50 sampled H1 bootstrap refits at the maximum; label-shuffle control collapsed (6/6). Rerun5 FAILed (optimizer, see below); rerun4 FAILed (rebuilt caches); the first run and rerun1 FAILed (auditor gap, float boundary, 7 imported files without provenance), fixed with the user's approval |
 | G6 traceability | PASS | G6_traceability_rerun9.json | 780 values re-derive (revision of 2026-10-17 with the S2 positioning values; re-run after Fig. 2 was reduced); the tampering control was caught |
-| G7 manuscript | PASS | G7_compile_citations_rerun14.json | Revision of 2026-10-17 (contributions, review errors, Fig. 5, Table 4, Section II-D, companion study cited, overlap removed): 12 pages, 9 figures, 4 tables, abstract 149 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
+| G7 manuscript | PASS | G7_compile_citations_rerun15.json | Revision of 2026-10-17 (contributions, review errors, Fig. 5, Table 4, Section II-D, companion study cited, overlap removed, Figs. 2-3 simplified): 11 pages, 9 figures, 4 tables, abstract 149 words, 0 problems (page and figure limits waived, `paper/format_limits.json`) |
 
 ### Results
 
@@ -63,6 +63,33 @@ the novelty and contributions clearly and to fix the errors found (page limits s
   - four references added (Jordao 2018, Barshan & Yurtman 2016, Varoquaux 2018, Iwasawa 2017).
 - **Gates:** G6 rerun7 PASS, G7 rerun10 PASS (12 pages, abstract 149 words), `audit --all` 10/10 PASS (Slurm 87069).
   G5 was not re-run: no run changed, and the new aggregates read verified runs.
+
+### Figures 2 and 3 as an editable PowerPoint deck (2026-10-17, user request)
+
+- **Exporter:** `src/visualization/pptx_export.py`, now a step of `scripts/make_figures.py`. It writes
+  `figures/fig02_fig03.pptx` with one figure per slide, all native PowerPoint shapes (566 and 25), from
+  `results/figure_data/fig03_design.json` and the fixed skeleton.
+- **No external library.** python-pptx, pptxgenjs and LibreOffice are not on the cluster, and HTTPS installs are
+  blocked, so the file is written as OOXML with the standard library only.
+- **Checks:**
+  - every part is well-formed, all relationships and content types resolve, and every PresentationML part passes
+    `xmllint` against the ISO 29500 `pml.xsd`;
+  - the layout was checked on preview PNGs (`figures/fig02_fig03_slide{1,2}.png`), drawn from the same shape list;
+  - the deck was not opened in PowerPoint here.
+
+### Figures 2 and 3 simplified (2026-10-17, user request)
+
+- **Fig. 2 (study design, `fig03_design`).**
+  - The five-box text pipeline and the per-cell counts were dropped.
+  - Panel (a) is now the run matrix, coloured by run set, with the run counts in the legend and the excluded datasets
+    hatched.
+  - Panel (b) shows UCI-HAR's person-disjoint splits. The script now checks that every subject is tested exactly once.
+- **Fig. 3 (networks, `fig05_architecture`).** It is one dataflow line: the skeleton, the residual blocks holding
+  each network's memory, the side path and the embedding. The residual-block panel and the table of memory update
+  rules were dropped; Table 2 lists the memory and side path of each network, and the companion study describes the
+  blocks.
+- **Captions** were rewritten for both figures.
+- **Gates:** G7 rerun15 PASS (11 pages) and `audit --all` 10/10 PASS (Slurm 87113).
 
 ### Companion-study citation and overlap (2026-10-17, user request)
 

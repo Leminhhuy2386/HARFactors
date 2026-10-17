@@ -151,10 +151,12 @@ the design, the runs analysed and how subjects are assigned to test groups.
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig03_design.pdf}
-\caption{Study design. (a) From the stored runs to the variance decomposition. (b) The runs: networks (rows) by
-datasets (columns), coloured by run set; each cell gives splits $\times$ seeds, and hatched cells are excluded by the
-inclusion rule. (c) The person-disjoint test groups of UCI-HAR: each split tests on three subjects that never enter its
-training or validation data.}
+\caption{Study design. (a) The stored runs: networks (rows) by datasets (columns), coloured by run set. S1, on the
+development datasets, serves the exploratory and sensitivity analyses; S2, on the held-out datasets, the
+pre-registered test H1; S3, the benchmark's networks, the check of how far the result extends. Each filled cell holds
+every split of the dataset, with three seeds in S1 and S2 and one run in S3; hatched datasets are excluded by the
+pre-registered inclusion rule. (b) Person-disjoint splits of UCI-HAR: each split tests one group of three subjects
+that never enters its training or validation data, and every subject is tested once.}
 \label{fig:design}
 \end{figure*}
 
@@ -182,11 +184,10 @@ companion study~\cite{le2026rila}, which describes these networks in full and co
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig05_architecture.pdf}
-\caption{The networks of S1 and S2 as a dataflow diagram. (a) The shared skeleton, with the tensor shapes on its
-edges ($C$ channels, $L$ samples, width $D$, $K$ classes); the embedding analysed in Section~\ref{sec:emb} is the
-head's input. (b) The residual block with its skip connection; the memory returns $F$ features per channel. (c) Each
-memory's update per channel and time step, the state it keeps, and the networks that use it (sizes in
-Table~\ref{tab:models}).}
+\caption{The shared skeleton of the ten networks of S1 and S2, with the tensor shapes on its edges ($C$ channels,
+$L$ samples, width $D$, $K$ classes; $D'=D$, or $D+32$ with a side path). The networks differ only in the memory
+inside the residual blocks and in the optional side path (Table~\ref{tab:models}); the embedding analysed in
+Section~\ref{sec:emb} is the head's input. The companion study~\cite{le2026rila} describes the blocks in full.}
 \label{fig:arch}
 \end{figure*}
 

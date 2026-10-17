@@ -1,291 +1,831 @@
 {
- "stages": [
-  [
-   "Data and networks",
-   "S1, development: 10 data-\nsets \u00d7 10 networks \u00d7 3 seeds\n= 2,460 runs\nS2, held-out: 8 datasets\n\u00d7 4 networks \u00d7 3 seeds\n= 948 runs\nS3: 4 datasets \u00d7 17 WHAR\nArena models \u00d7 1 run = 510"
-  ],
-  [
-   "Person-disjoint splits",
-   "subjects in k \u2264 10 groups\n(harness, LKSO); each\ngroup is the test set\nonce; training and\nvalidation windows from\nthe other subjects"
-  ],
-  [
-   "Training (stored runs)",
-   "3-s windows; z-score\nfitted on the training\nwindows; early stopping\non validation; the same\nsplits for every network\nand seed"
-  ],
-  [
-   "Outcome per run",
-   "macro-F1 over the test\ngroup's windows (absent\nclasses count 0);\nbalanced accuracy as a\nsensitivity outcome"
-  ],
-  [
-   "Variance model",
-   "crossed random effects\nwithin each dataset:\n$y=\\mu_d+P+M+MD+MP+e$\n$R=\\sigma^2_P/(\\sigma^2_M+\\sigma^2_{MD}+\\sigma^2_{MP})$\nH1 (confirmatory):\nR > 1 on S2"
-  ]
- ],
  "runs": {
   "S1": 2460,
   "S2": 948,
   "S3": 510
  },
- "analysed": {
-  "H1": 828,
-  "sens2_S1_macro_f1": 2160,
-  "sens4_S3_macro_f1": 510
+ "cells": [
+  {
+   "network": "recurrencenet",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "pamap2",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "up_fall",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "uma_fall",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "usc_had",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "motion_sense",
+   "set": "S2",
+   "excluded": true
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "wear",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "uca_ehar",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recurrencenet",
+   "dataset": "w_har",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "s4d",
+   "dataset": "pamap2",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "up_fall",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "uma_fall",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "usc_had",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "motion_sense",
+   "set": "S2",
+   "excluded": true
+  },
+  {
+   "network": "s4d",
+   "dataset": "wear",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "uca_ehar",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "s4d",
+   "dataset": "w_har",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_sel_clock",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "quantilenet",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "mamba",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "mamba",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "mamba",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "mamba",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "mamba",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "mamba",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "mamba",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "mamba",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "mamba",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "mamba",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "hystnet_nomem",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "pamap2",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "up_fall",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "uma_fall",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "usc_had",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "motion_sense",
+   "set": "S2",
+   "excluded": true
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "wear",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "uca_ehar",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "recstatnet",
+   "dataset": "w_har",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "pamap2",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "up_fall",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "uma_fall",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "usc_had",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "motion_sense",
+   "set": "S2",
+   "excluded": true
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "wear",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "uca_ehar",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "lawnet_rec",
+   "dataset": "w_har",
+   "set": "S2",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "lawnet",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "statnet",
+   "dataset": "utd_mhad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "statnet",
+   "dataset": "uci_har",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "statnet",
+   "dataset": "unimib_shar",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "statnet",
+   "dataset": "actrectut_gestures",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "statnet",
+   "dataset": "opportunity",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "statnet",
+   "dataset": "sad",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "statnet",
+   "dataset": "hapt",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "statnet",
+   "dataset": "dsads",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "statnet",
+   "dataset": "wisdm",
+   "set": "S1",
+   "excluded": false
+  },
+  {
+   "network": "statnet",
+   "dataset": "daphnet",
+   "set": "S1",
+   "excluded": true
+  },
+  {
+   "network": "whar17",
+   "dataset": "utd_mhad",
+   "set": "S3",
+   "excluded": false
+  },
+  {
+   "network": "whar17",
+   "dataset": "uci_har",
+   "set": "S3",
+   "excluded": false
+  },
+  {
+   "network": "whar17",
+   "dataset": "unimib_shar",
+   "set": "S3",
+   "excluded": false
+  },
+  {
+   "network": "whar17",
+   "dataset": "actrectut_gestures",
+   "set": "S3",
+   "excluded": false
+  }
+ ],
+ "excluded": {
+  "daphnet": "S1",
+  "motion_sense": "S2"
  },
- "grid_models": [
-  "recurrencenet",
-  "s4d",
-  "hystnet_sel_clock",
-  "quantilenet",
-  "mamba",
-  "hystnet_nomem",
-  "recstatnet",
-  "lawnet_rec",
-  "lawnet",
-  "statnet",
-  "whar17"
- ],
- "grid_datasets": [
-  "utd_mhad",
-  "uci_har",
-  "unimib_shar",
-  "actrectut_gestures",
-  "opportunity",
-  "sad",
-  "hapt",
-  "dsads",
-  "wisdm",
-  "daphnet",
-  "pamap2",
-  "up_fall",
-  "uma_fall",
-  "usc_had",
-  "motion_sense",
-  "wear",
-  "uca_ehar",
-  "w_har"
- ],
- "grid_set_code": [
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0
-  ],
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0
-  ],
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0
-  ],
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0
-  ],
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0
-  ],
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0
-  ],
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0
-  ],
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0,
-   2.0
-  ],
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0
-  ],
-  [
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   1.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0
-  ],
-  [
-   3.0,
-   3.0,
-   3.0,
-   3.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0,
-   0.0
-  ]
- ],
  "uci_har_test_subjects": {
   "split-00": [
    0,
@@ -337,5 +877,6 @@
    19,
    29
   ]
- }
+ },
+ "uci_har_every_subject_tested_once": true
 }
